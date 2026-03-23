@@ -46,6 +46,8 @@ RECIPIENT_EMAILS = [
     e.strip() for e in os.getenv("RECIPIENT_EMAILS", "").split(",") if e.strip()
 ]
 GOOGLE_SHEET_CSV_URL = os.getenv("GOOGLE_SHEET_CSV_URL", "")
+GOOGLE_VOTES_CSV_URL = os.getenv("GOOGLE_VOTES_CSV_URL", "")
+APPS_SCRIPT_URL = os.getenv("APPS_SCRIPT_URL", "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec")
 
 MODEL = "claude-sonnet-4-20250514"
 MAX_ARTICLES = 60
@@ -245,6 +247,35 @@ Return ONLY valid JSON, no markdown fences:
 }"""
 
 
+def fetch_engagement_signals() -> str:
+    if not GOOGLE_VOTES_CSV_URL:
+        return ""
+    try:
+        resp = httpx.get(GOOGLE_VOTES_CSV_URL, timeout=15, follow_redirects=True)
+        votes: dict[str, dict] = {}
+        for line in resp.text.strip().split("\n")[1:]:
+            parts = [p.strip().strip('"') for p in line.split(",")]
+            if len(parts) < 3:
+                continue
+            url, title, vote = parts[0], parts[1], parts[2]
+            if url not in votes:
+                votes[url] = {"title": title, "up": 0, "down": 0}
+            if vote == "up":
+                votes[url]["up"] += 1
+            elif vote == "down":
+                votes[url]["down"] += 1
+        if not votes:
+            return ""
+        ranked = sorted(votes.values(), key=lambda x: x["up"] - x["down"], reverse=True)
+        lines = ["## Reader Engagement Signals (use to refine curation)"]
+        for v in ranked[:10]:
+            lines.append(f"- {v['title']}: {v['up']} 👍 / {v['down']} 👎")
+        return "\n\n---\n" + "\n".join(lines)
+    except Exception as e:
+        print(f"  ⚠ Votes fetch failed: {e}")
+        return ""
+
+
 def load_editorial_memory() -> str:
     path = SCRIPT_DIR / "editorial_memory.md"
     if path.exists():
@@ -297,7 +328,7 @@ def curate_with_claude(articles: list[Article]) -> dict:
         f"Published: {a.published}\n    Preview: {a.summary[:400]}"
         for i, a in enumerate(articles)
     )
-    system = SYSTEM_PROMPT.replace("{max_per_section}", str(MAX_ITEMS_PER_SECTION)) + load_editorial_memory()
+    system = SYSTEM_PROMPT.replace("{max_per_section}", str(MAX_ITEMS_PER_SECTION)) + load_editorial_memory() + fetch_engagement_signals()
     resp = httpx.post(
         "https://api.anthropic.com/v1/messages",
         headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
@@ -404,7 +435,14 @@ def _web_article(item: dict) -> str:
         <a href="{item.get('url','#')}" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">{item.get('title','')}</a>
       </h3>
       <p class="text-outline text-[15px] leading-relaxed">{item.get('tldr','')}</p>
-      <div class="flex items-center gap-4 pt-2">{rt_html}<span class="h-px flex-1 bg-outline-variant/30"></span></div>
+      <div class="flex items-center gap-4 pt-2">
+        {rt_html}
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
     </article>"""
 
 def _web_section(title: str, items: list) -> str:
@@ -441,7 +479,25 @@ def render_issue_web(digest: dict, date_str: str, issue_num: int) -> str:
     <div><h1 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h1><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
     <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../">Subscribe</a></div>
   </div>
-</footer></body></html>"""
+</footer>
+<script>
+var APPS_SCRIPT_URL = "{APPS_SCRIPT_URL}";
+function castVote(btn) {{
+  var url = btn.dataset.url;
+  var vote = btn.dataset.vote;
+  var key = "voted_" + btoa(encodeURIComponent(url)).slice(0, 20);
+  if (localStorage.getItem(key)) return;
+  localStorage.setItem(key, vote);
+  var article = btn.closest("article");
+  article.querySelectorAll(".vote-btn").forEach(function(b) {{
+    b.disabled = true;
+    b.style.opacity = b.dataset.vote === vote ? "1" : "0.2";
+    if (b.dataset.vote === vote) b.style.color = vote === "up" ? "#abd600" : "#ff5555";
+  }});
+  fetch(APPS_SCRIPT_URL + "?type=vote&vote=" + vote + "&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(btn.dataset.title), {{ mode: "no-cors" }});
+}}
+</script>
+</body></html>"""
 
 
 # ---------------------------------------------------------------------------

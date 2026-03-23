@@ -35,4 +35,5 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
           GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
+          GOOGLE_VOTES_CSV_URL: ${{ secrets.GOOGLE_VOTES_CSV_URL }}
         run: cd scripts && python run.py --push
