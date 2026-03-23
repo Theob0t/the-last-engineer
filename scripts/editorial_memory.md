@@ -1,33 +1,37 @@
 ## Reader Profile
-Proficient engineers who actively vibe code — they ship with AI tools daily, not just experiment.
-Core interests: agentic AI, autonomous workflows, AI-assisted coding, automating their own work.
-They want to know what's moving in the agentic space: new capabilities, new tools, new patterns.
+Proficient engineers who build and ship with agentic AI daily.
+They vibe code, automate their workflows, and run agents in production.
+They are not learning about AI — they are already building with it.
 
-## High-Signal Topics (prioritize)
-- Agentic AI: autonomous agents, multi-agent systems, self-directed tasks
-- Claude Code, Cursor, Windsurf, Copilot, Gemini Code Assist — workflow-changing updates only
-- AI automating developer workflows (codegen, testing, deployment, PR review)
-- MCP (Model Context Protocol) — new servers, integrations, patterns
-- Agentic frameworks: LangChain, CrewAI, AutoGen, new entrants
-- Autonomous coding benchmarks and evals (SWE-bench, etc.)
-- Claude API / Anthropic API updates relevant to builders
-- AI safety research that impacts engineering workflows (misalignment detection, evaluation robustness)
-- Agent security and vulnerability discovery by AI systems
+## This Newsletter Is ONLY About Agents
+Every article must be about autonomous AI agents. Nothing else.
+If it's not about agents, it does not belong here — full stop.
 
-## Breakthrough Patterns (🔥 breakthrough priority)
-- Autonomous agents achieving complex multi-step engineering tasks
-- AI systems discovering or exploiting security vulnerabilities
-- Self-modifying or self-evaluating AI behavior in coding contexts
-- Major capability jumps in agent reasoning or tool use
+## Three Types of Articles (the only three)
 
-## Low-Signal Topics (deprioritize)
-- Fundraising announcements and valuations
-- Hiring posts and team expansions
-- Vague policy or governance statements with no technical substance
-- Consumer product launches with no engineering depth
-- Conference announcements
-- Pure academic research without clear engineering applications
+### 🛠 in prod — Agentic tools you can use today
+New agentic products, agent frameworks, MCP servers, coding agents,
+workflow automation with agents, multi-agent orchestration tools.
+The bar: can a reader set this up or use it in their work this week?
 
-## Editorial Tone
-Readers are technical — don't over-explain. Write TLDRs like a senior engineer briefing a peer.
-Focus on actionable insights and concrete capabilities over hype.
+### 🧪 agent research — Research on autonomous agent capabilities
+Autonomous benchmarks (SWE-bench, METR evals, ARC), agent architectures,
+multi-agent coordination, tool use research, long-horizon task research,
+memory and planning in agents, emergent agent behaviors.
+
+### ⚖️ alignment — Safety & alignment specifically for agents
+Dangerous capability assessments for autonomous systems, agent red-teaming,
+corrigibility research, oversight mechanisms, deceptive alignment in agents,
+containment strategies. Must be about agents, not LLMs in general.
+
+### 🔥 breakthrough — Use sparingly
+A genuine step-change across any of the above three types.
+
+## Hard Excludes (never publish)
+- General LLM research not about agents (new model releases, benchmarks without agent eval)
+- Vibe coding tools that are just IDE features (autocomplete, inline suggestions)
+- Fundraising, valuations, hiring announcements
+- Conference announcements, meetups
+- Consumer AI products (chatbots, image gen, etc.)
+- Vague policy or governance with no technical substance
+- Anything about non-agentic capabilities

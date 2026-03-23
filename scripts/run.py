@@ -192,28 +192,29 @@ def deduplicate(articles: list[Article]) -> list[Article]:
 SYSTEM_PROMPT = """You are the editor of "The Last Engineer", a daily AI newsletter
 for engineers rooting for the robots.
 
-Your job is to find what actually moved today. Your readers are technical builders
-and researchers — they don't want hype or marketing fluff. They want: what's novel,
-useful, or cool?
+This newsletter is EXCLUSIVELY about autonomous AI agents. Nothing else belongs here.
+
+Your readers are proficient engineers who build and ship with agentic AI daily.
+They want to know: what can I use today, what's being researched, what are the risks?
 
 You will receive articles from official blogs of top AI companies and labs.
-Curate ONLY what is truly:
-- NOVEL: genuinely new capability, technique, finding, or tool feature
-- USEFUL: something the reader can act on, learn from, or apply
-- COOL: technically impressive, surprising, or paradigm-shifting
+Only include articles that are directly about AUTONOMOUS AGENTS — tools, research, or safety.
+If an article is not about agents, exclude it. No exceptions.
 
 BE RUTHLESS. If today was slow, return fewer items. Empty > mediocre.
 
 Produce a JSON object with TWO sections:
 
-"vibe_coding" — AI-assisted coding & building
-  Include: workflow-changing tool features, significant releases, deep-dives.
-  Exclude: minor patches, marketing, fundraising posts.
+"vibe_coding" — Agentic tools & products (agents in production)
+  Include ONLY: new agentic tools, agent frameworks, MCP integrations, coding agents,
+  workflow automation with agents, multi-agent systems you can deploy today.
+  HARD EXCLUDE: anything not directly usable as an agentic product or workflow.
 
-"capabilities_research" — AI capabilities, safety, alignment
-  Include: eval results, red teaming, capability discoveries, alignment breakthroughs,
-  interpretability, governance with substance, dangerous capability assessments.
-  Exclude: vague policy statements, conference/hiring posts.
+"capabilities_research" — Agent research & alignment
+  Include ONLY: research on agent capabilities, autonomous benchmarks (SWE-bench, METR evals),
+  agent architectures, multi-agent coordination, agent safety, alignment research
+  specifically about autonomous systems, dangerous capability assessments for agents.
+  HARD EXCLUDE: general LLM research not about agents, vague policy, hiring, fundraising.
 
 Each item:
 - "title": specific informative headline (rewrite if needed)
@@ -221,7 +222,7 @@ Each item:
 - "source": source name
 - "tldr": 2-3 sentences, specific, conversational
 - "read_time": estimated reading time of original article in minutes
-- "vibe": one of "🔥 breakthrough", "⚡ useful", "🧪 research", "🛠 shipping", "👀 notable"
+- "vibe": one of "🛠 in prod", "🧪 agent research", "⚖️ alignment", "🔥 breakthrough"
 
 Max {max_per_section} items per section. Sort by impact.
 Return ONLY valid JSON. No markdown fences. No preamble."""
@@ -357,8 +358,10 @@ FONT_B = "'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
 FONT_L = "'Space Grotesk', 'SF Mono', Consolas, monospace"
 
 VIBE_COLORS = {
-    "🔥 breakthrough": "#abd600", "⚡ useful": "#abd600",
-    "🧪 research": "#a1a1aa", "🛠 shipping": "#abd600", "👀 notable": "#a1a1aa",
+    "🛠 in prod": "#abd600",
+    "🧪 agent research": "#a1a1aa",
+    "⚖️ alignment": "#a1a1aa",
+    "🔥 breakthrough": "#abd600",
 }
 
 def _email_article(item: dict, featured: bool = False) -> str:
@@ -661,13 +664,13 @@ TEST_DIGEST = {
         {"title": "Cursor Ships Background Agents That Run While You Sleep",
          "url": "https://cursor.com/blog", "source": "Cursor Blog",
          "tldr": "Background agent mode lets you kick off multi-file refactors and come back to completed PRs. Sandboxed cloud environment with full repo context.",
-         "vibe": "🛠 shipping", "read_time": 6},
+         "vibe": "🛠 in prod", "read_time": 6},
     ],
     "capabilities_research": [
         {"title": "METR Finds Frontier Models Show Gains in Autonomous Replication",
          "url": "https://metr.org", "source": "METR",
          "tldr": "New eval suite tests autonomous resource acquisition and infrastructure setup. Claude Opus and GPT-4.5 show meaningful capability jumps.",
-         "vibe": "🧪 research", "read_time": 12},
+         "vibe": "🧪 agent research", "read_time": 12},
     ],
 }
 
