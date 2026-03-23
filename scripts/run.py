@@ -584,6 +584,136 @@ def update_landing_page(issues: list[dict]):
     print(f"  🏠 Landing: {len(latest)} latest issues")
 
 LANDING_PAGE = SITE_DIR / "index.html"
+AGENT_PAGE = SITE_DIR / "agent.html"
+
+_PAGE_SHELL = """<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>{title} — The Last Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>tailwind.config={{darkMode:"class",theme:{{extend:{{colors:{{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"}},fontFamily:{{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]}},borderRadius:{{"DEFAULT":"0px"}}}}}}}}}}</script>
+<style>body{{background:#131313;margin:0;padding:0;font-family:"Inter",sans-serif;color:#e5e2e1}}.font-headline{{font-family:"Newsreader",serif}}.font-label{{font-family:"Space Grotesk",monospace}}p{{line-height:1.7;margin:0.75rem 0}}</style></head>
+<body>
+<header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+  <div class="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
+    <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+    <nav class="hidden md:flex gap-8 font-label text-[11px] uppercase tracking-widest">
+      <a href="./" class="text-outline hover:text-white transition-colors">Featured</a>
+      <a href="./issues/" class="text-outline hover:text-white transition-colors">Archive</a>
+      <a href="./agent.html" class="text-primary">The Agent</a>
+    </nav>
+  </div>
+</header>
+{body}
+<footer class="max-w-4xl mx-auto border-t border-outline-variant/30 px-6 py-12 mt-20">
+  <p class="font-label text-[10px] uppercase tracking-widest text-outline/40 text-center">The Last Engineer · Curated by AI · Updated daily</p>
+</footer>
+</body></html>"""
+
+
+def _md_to_html(text: str) -> str:
+    """Convert a small subset of markdown to HTML for our specific files."""
+    html = []
+    in_code = False
+    in_list = False
+    for line in text.split("\n"):
+        if line.startswith("```"):
+            if in_list: html.append("</ul>"); in_list = False
+            if in_code: html.append("</code></pre>"); in_code = False
+            else: html.append('<pre class="bg-surface-container p-4 text-sm text-outline font-label overflow-x-auto my-4"><code>'); in_code = True
+            continue
+        if in_code: html.append(line); continue
+        if line.startswith("### "):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f'<h3 class="font-label text-xs uppercase tracking-widest text-primary mt-8 mb-3">{line[4:]}</h3>')
+        elif line.startswith("## "):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f'<h2 class="font-headline italic text-2xl text-on-surface mt-12 mb-4 border-b border-outline-variant/30 pb-3">{line[3:]}</h2>')
+        elif line.startswith("# "):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f'<h1 class="font-headline italic text-4xl text-on-surface mb-6">{line[2:]}</h1>')
+        elif line.startswith("- "):
+            if not in_list: html.append('<ul class="space-y-2 my-4 text-outline text-sm">'); in_list = True
+            content = re.sub(r'\*\*(.+?)\*\*', r'<strong class="text-on-surface">\1</strong>', line[2:])
+            content = re.sub(r'`(.+?)`', r'<code class="font-label text-primary text-xs">\1</code>', content)
+            html.append(f'<li class="flex gap-2"><span class="text-primary mt-1">—</span><span>{content}</span></li>')
+        elif line.strip() == "":
+            if in_list: html.append("</ul>"); in_list = False
+            html.append("")
+        else:
+            if in_list: html.append("</ul>"); in_list = False
+            content = re.sub(r'\*\*(.+?)\*\*', r'<strong class="text-on-surface">\1</strong>', line)
+            content = re.sub(r'`(.+?)`', r'<code class="font-label text-primary text-xs">\1</code>', content)
+            html.append(f'<p class="text-outline text-sm leading-relaxed">{content}</p>')
+    if in_list: html.append("</ul>")
+    return "\n".join(html)
+
+
+def render_agent_page():
+    memory = (SCRIPT_DIR / "editorial_memory.md").read_text() if (SCRIPT_DIR / "editorial_memory.md").exists() else ""
+    log = (SCRIPT_DIR / "curation_log.md").read_text() if (SCRIPT_DIR / "curation_log.md").exists() else ""
+    updated = dt.datetime.now().strftime("%B %-d, %Y at %H:%M UTC")
+    body = f"""
+<main class="max-w-4xl mx-auto px-6 pt-12 pb-20">
+  <div class="mb-16">
+    <span class="font-label text-[10px] text-primary uppercase tracking-[0.4em] block mb-4">Autonomous Agent</span>
+    <h1 class="font-headline italic text-6xl text-on-surface mb-4">The Agent.</h1>
+    <p class="text-outline font-body max-w-xl">Live editorial guidelines and daily decision log. Updated automatically after each issue.</p>
+    <p class="font-label text-[10px] text-outline/50 uppercase tracking-widest mt-4">Last updated: {updated}</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 mb-20">
+    <div class="bg-surface-container p-8 border-l-2 border-primary">
+      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-2">What it is</span>
+      <p class="text-outline text-sm leading-relaxed">An autonomous Claude agent that curates this newsletter daily. It has a persistent memory it updates itself, and learns from reader votes.</p>
+    </div>
+    <div class="bg-surface-container p-8 border-l-2 border-outline-variant/40">
+      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-2">The experiment</span>
+      <p class="text-outline text-sm leading-relaxed">Can an AI develop good editorial taste through self-reflection and human feedback, with no human in the loop?</p>
+    </div>
+  </div>
+
+  <section class="mb-20">
+    <div class="flex items-baseline gap-4 mb-8">
+      <h2 class="font-headline italic text-4xl text-on-surface">Editorial Memory</h2>
+      <span class="font-label text-[10px] uppercase tracking-widest text-outline">Agent's current guidelines</span>
+    </div>
+    <div class="bg-surface-container-low p-8 border-l-2 border-primary/30">
+      {_md_to_html(memory)}
+    </div>
+  </section>
+
+  <section>
+    <div class="flex items-baseline gap-4 mb-8">
+      <h2 class="font-headline italic text-4xl text-on-surface">Curation Log</h2>
+      <span class="font-label text-[10px] uppercase tracking-widest text-outline">Daily decision trace</span>
+    </div>
+    <div class="space-y-1">
+      {_log_entries(log)}
+    </div>
+  </section>
+</main>"""
+    page = _PAGE_SHELL.format(title="The Agent", body=body)
+    AGENT_PAGE.write_text(page)
+    print("  🤖 Agent page updated")
+
+
+def _log_entries(log: str) -> str:
+    if not log:
+        return '<p class="text-outline text-sm">No entries yet.</p>'
+    entries = re.split(r'\n(?=## )', log.strip())
+    html = []
+    for entry in reversed(entries):
+        if not entry.strip() or entry.startswith("# "):
+            continue
+        lines = entry.strip().split("\n")
+        heading = lines[0].lstrip("# ").strip()
+        body = "\n".join(lines[1:]).strip()
+        html.append(f"""
+    <div class="bg-surface-container p-6 border-l-2 border-outline-variant/30 hover:border-primary/50 transition-colors">
+      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-3">{heading}</span>
+      <p class="text-outline text-sm leading-relaxed">{body}</p>
+    </div>""")
+    return "".join(html) or '<p class="text-outline text-sm">No entries yet.</p>'
+
 
 def publish_to_site(digest: dict, date: dt.date = None):
     date = date or dt.date.today()
@@ -600,6 +730,7 @@ def publish_to_site(digest: dict, date: dt.date = None):
     issues = get_all_issues()
     update_archive_page(issues)
     update_landing_page(issues)
+    render_agent_page()
 
 def git_push():
     msg = f"Issue — {dt.date.today().isoformat()}"
