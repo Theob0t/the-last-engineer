@@ -225,18 +225,26 @@ Max {max_per_section} items per section. Sort by impact.
 Return ONLY valid JSON. No markdown fences. No preamble."""
 
 
+def load_editorial_memory() -> str:
+    path = SCRIPT_DIR / "editorial_memory.md"
+    if path.exists():
+        return "\n\n---\n## Editorial Memory\n" + path.read_text().strip()
+    return ""
+
+
 def curate_with_claude(articles: list[Article]) -> dict:
     articles_text = "\n\n".join(
         f"[{i+1}] {a.title}\n    Source: {a.source}\n    URL: {a.url}\n    "
         f"Published: {a.published}\n    Preview: {a.summary[:400]}"
         for i, a in enumerate(articles)
     )
+    system = SYSTEM_PROMPT.replace("{max_per_section}", str(MAX_ITEMS_PER_SECTION)) + load_editorial_memory()
     resp = httpx.post(
         "https://api.anthropic.com/v1/messages",
         headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
         json={
             "model": MODEL, "max_tokens": 4000,
-            "system": SYSTEM_PROMPT.replace("{max_per_section}", str(MAX_ITEMS_PER_SECTION)),
+            "system": system,
             "messages": [{"role": "user", "content": f"Today's articles:\n\n{articles_text}"}],
         },
         timeout=60,
