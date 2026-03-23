@@ -599,6 +599,7 @@ _PAGE_SHELL = """<!DOCTYPE html><html class="dark" lang="en"><head><meta charset
       <a href="./" class="text-outline hover:text-white transition-colors">Featured</a>
       <a href="./issues/" class="text-outline hover:text-white transition-colors">Archive</a>
       <a href="./agent.html" class="text-primary">The Agent</a>
+      <a href="./sources.html" class="text-outline hover:text-white transition-colors">Sources</a>
     </nav>
   </div>
 </header>
