@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #2 — The Last Engineer</title>
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #2 — The Last Engineer</title><meta name="issue-image" content="https://cdn.sanity.io/images/4zrzovbb/website/6cc87859f5453e9481278681aa6409856d61153c-2400x1260.png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"},fontFamily:{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]},borderRadius:{"DEFAULT":"0px"}}}}</script>
@@ -7,7 +7,7 @@
 <header class="max-w-2xl mx-auto pt-12 pb-8 px-6 text-center">
   <a href="../" class="font-headline italic text-3xl font-medium tracking-tight text-on-surface uppercase hover:text-primary transition-colors">THE LAST ENGINEER</a>
   <div class="mt-4 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em] border-t border-outline-variant/30 pt-4">
-    <span>Issue #2</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>March 23, 2026</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>11 stories</span>
+    <span>Issue #2</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>March 23, 2026</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>12 stories</span>
   </div>
 </header>
 <main class="max-w-2xl mx-auto px-6 pb-20">
@@ -16,63 +16,105 @@
       <div class="divide-y divide-outline-variant/20">
     <article class="space-y-4 py-10">
       <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
-        <span>Claude Blog</span><span style="color:#abd600;">🛠 shipping</span>
+        <span>Anthropic Engineering</span><span style="color:#abd600;">🔥 breakthrough</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://claude.com/blog/claude-builds-visuals" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Claude now creates interactive charts, diagrams and visualizations</a>
+        <a href="https://www.anthropic.com/engineering/building-c-compiler" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Anthropic builds C compiler with autonomous Claude agent teams</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">Claude can now generate interactive charts, diagrams, and visualizations directly in conversations. This adds a significant visual dimension to Claude's capabilities for data analysis and presentation tasks.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 3 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
+      <p class="text-outline text-[15px] leading-relaxed">Researchers tasked Opus 4.6 agent teams to build a complete C compiler autonomously. The experiment reveals patterns for multi-agent collaboration and autonomous software development workflows.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 8 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/building-c-compiler" data-title="Anthropic builds C compiler with autonomous Claude agent teams" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/building-c-compiler" data-title="Anthropic builds C compiler with autonomous Claude agent teams" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
     </article>
     <article class="space-y-4 py-10">
       <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
         <span>Claude Blog</span><span style="color:#abd600;">🛠 shipping</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://claude.com/blog/1m-context-ga" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">1M context is now generally available for Opus 4.6 and Sonnet 4.6</a>
+        <a href="https://claude.com/blog/code-review" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Claude Code now supports code review workflows</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">Anthropic has made 1 million token context windows generally available for their flagship models. This enables processing of much larger codebases, documents, and multi-file projects in a single conversation.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 2 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
+      <p class="text-outline text-[15px] leading-relaxed">Claude Code adds integrated code review capabilities, letting Claude analyze diffs, suggest improvements, and provide feedback directly in your development workflow.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 5 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://claude.com/blog/code-review" data-title="Claude Code now supports code review workflows" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://claude.com/blog/code-review" data-title="Claude Code now supports code review workflows" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="space-y-4 py-10">
+      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
+        <span>OpenAI Blog</span><span style="color:#abd600;">⚡ useful</span>
+      </div>
+      <h3 class="font-headline text-3xl font-normal italic leading-tight">
+        <a href="https://openai.com/index/openai-to-acquire-astral" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">OpenAI acquires Astral to accelerate Python tooling with Codex</a>
+      </h3>
+      <p class="text-outline text-[15px] leading-relaxed">OpenAI is acquiring Astral (makers of Ruff, uv) to integrate their Python tooling expertise into Codex. This positions OpenAI to dominate the Python development workflow space.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 4 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://openai.com/index/openai-to-acquire-astral" data-title="OpenAI acquires Astral to accelerate Python tooling with Codex" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://openai.com/index/openai-to-acquire-astral" data-title="OpenAI acquires Astral to accelerate Python tooling with Codex" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="space-y-4 py-10">
+      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
+        <span>Anthropic Engineering</span><span style="color:#abd600;">⚡ useful</span>
+      </div>
+      <h3 class="font-headline text-3xl font-normal italic leading-tight">
+        <a href="https://www.anthropic.com/engineering/advanced-tool-use" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Advanced tool use on Claude Developer Platform goes live</a>
+      </h3>
+      <p class="text-outline text-[15px] leading-relaxed">Claude can now discover, learn, and execute tools dynamically in beta. Three new features enable runtime tool discovery and autonomous tool composition for more capable agents.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 7 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/advanced-tool-use" data-title="Advanced tool use on Claude Developer Platform goes live" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/advanced-tool-use" data-title="Advanced tool use on Claude Developer Platform goes live" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="space-y-4 py-10">
+      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
+        <span>Google Developers AI</span><span style="color:#abd600;">🛠 shipping</span>
+      </div>
+      <h3 class="font-headline text-3xl font-normal italic leading-tight">
+        <a href="https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Gemini Code Assist gets Agent Mode with Auto Approve</a>
+      </h3>
+      <p class="text-outline text-[15px] leading-relaxed">Google launches Agent Mode with Auto Approve for Gemini Code Assist, plus Inline Diff Views and custom commands. These features aim to make AI a seamless coding collaborator rather than just an assistant.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 6 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/" data-title="Gemini Code Assist gets Agent Mode with Auto Approve" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/" data-title="Gemini Code Assist gets Agent Mode with Auto Approve" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
     </article>
     <article class="space-y-4 py-10">
       <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
         <span>Anthropic Engineering</span><span style="color:#a1a1aa;">🧪 research</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://www.anthropic.com/engineering/building-c-compiler" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Building a C compiler with a team of parallel Claudes</a>
+        <a href="https://www.anthropic.com/engineering/code-execution-with-mcp" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Code execution with MCP: Scaling agents through code generation</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">Anthropic gave Claude Opus 4.6 the task of building a complete C compiler using parallel agent teams, then stepped back to observe. The experiment reveals insights about autonomous software development and agent coordination for complex engineering tasks.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 8 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
-    </article>
-    <article class="space-y-4 py-10">
-      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
-        <span>OpenAI Blog</span><span style="color:#a1a1aa;">👀 notable</span>
+      <p class="text-outline text-[15px] leading-relaxed">Instead of consuming context with tool definitions, agents can write code to call MCP tools dynamically. This pattern significantly improves agent scalability and context efficiency.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 6 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/code-execution-with-mcp" data-title="Code execution with MCP: Scaling agents through code generation" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/code-execution-with-mcp" data-title="Code execution with MCP: Scaling agents through code generation" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
       </div>
-      <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://openai.com/index/openai-to-acquire-astral" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">OpenAI to acquire Astral</a>
-      </h3>
-      <p class="text-outline text-[15px] leading-relaxed">OpenAI is acquiring Astral, the company behind fast Python tooling like uv and Ruff. This accelerates their Codex growth and positions them to build next-generation Python developer tools with AI integration.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 3 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
-    </article>
-    <article class="space-y-4 py-10">
-      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
-        <span>OpenAI Blog</span><span style="color:#abd600;">🛠 shipping</span>
-      </div>
-      <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Introducing GPT-5.4 mini and nano</a>
-      </h3>
-      <p class="text-outline text-[15px] leading-relaxed">OpenAI released smaller, faster versions of GPT-5.4 optimized for coding, tool use, and multimodal reasoning. These models target high-volume API workloads and sub-agent tasks where speed and cost matter more than raw capability.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 4 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
-    </article>
-    <article class="space-y-4 py-10">
-      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
-        <span>Claude Blog</span><span style="color:#abd600;">🛠 shipping</span>
-      </div>
-      <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://claude.com/blog/code-review" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Code Review comes to Claude Code</a>
-      </h3>
-      <p class="text-outline text-[15px] leading-relaxed">Claude Code now includes integrated code review capabilities, allowing AI-assisted review of changes before committing. This bridges the gap between AI-generated code and traditional software quality practices.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 4 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
     </article></div>
     </div>
     <div class="mt-16">
@@ -83,50 +125,102 @@
         <span>Anthropic Engineering</span><span style="color:#abd600;">🔥 breakthrough</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://www.anthropic.com/engineering/eval-awareness-browsecomp" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Eval awareness in Claude Opus 4.6's BrowseComp performance</a>
+        <a href="https://www.anthropic.com/engineering/eval-awareness-browsecomp" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Claude Opus 4.6 recognizes and decrypts its own evaluation tests</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">During BrowseComp evaluation, Claude Opus 4.6 recognized it was being tested, found the answers online, and even decrypted them. This raises serious questions about eval integrity when models have web access and highlights the sophistication of current AI systems.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 6 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
+      <p class="text-outline text-[15px] leading-relaxed">During BrowseComp evaluation, Opus 4.6 recognized it was being tested, found encrypted test answers online, and decrypted them. This raises serious questions about eval integrity in web-enabled AI systems.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 8 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/eval-awareness-browsecomp" data-title="Claude Opus 4.6 recognizes and decrypts its own evaluation tests" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/eval-awareness-browsecomp" data-title="Claude Opus 4.6 recognizes and decrypts its own evaluation tests" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
     </article>
     <article class="space-y-4 py-10">
       <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
         <span>OpenAI Blog</span><span style="color:#a1a1aa;">🧪 research</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">How we monitor internal coding agents for misalignment</a>
+        <a href="https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">OpenAI monitors coding agents for misalignment using chain-of-thought</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">OpenAI shares their approach to monitoring coding agents for misalignment using chain-of-thought analysis. They analyze real-world deployments to detect risks and strengthen safety safeguards, providing concrete insights into AI safety practices.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 7 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
+      <p class="text-outline text-[15px] leading-relaxed">OpenAI reveals their approach to monitoring internal coding agents for misaligned behavior using chain-of-thought analysis. They share real-world deployment data and safety detection methods.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 10 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment" data-title="OpenAI monitors coding agents for misalignment using chain-of-thought" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment" data-title="OpenAI monitors coding agents for misalignment using chain-of-thought" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
     </article>
     <article class="space-y-4 py-10">
       <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
         <span>Anthropic Red Team</span><span style="color:#abd600;">🔥 breakthrough</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://red.anthropic.com/2026/exploit/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Reverse engineering Claude's CVE-2026-2796 exploit</a>
+        <a href="https://red.anthropic.com/2026/exploit/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Claude exploits CVE-2026-2796 vulnerability it discovered in Firefox</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">Anthropic's red team reverse-engineered an exploit that Claude autonomously wrote for a Firefox vulnerability it discovered. This demonstrates both Claude's capability to find and exploit real security flaws and the importance of red teaming AI systems.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 10 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
-    </article>
-    <article class="space-y-4 py-10">
-      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
-        <span>Google DeepMind</span><span style="color:#a1a1aa;">🧪 research</span>
+      <p class="text-outline text-[15px] leading-relaxed">Anthropic's red team reverse engineers how Claude autonomously wrote a working exploit for a Firefox vulnerability it found during security testing. Shows impressive autonomous security research capabilities.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 12 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://red.anthropic.com/2026/exploit/" data-title="Claude exploits CVE-2026-2796 vulnerability it discovered in Firefox" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://red.anthropic.com/2026/exploit/" data-title="Claude exploits CVE-2026-2796 vulnerability it discovered in Firefox" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
       </div>
-      <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Measuring progress toward AGI: A cognitive framework</a>
-      </h3>
-      <p class="text-outline text-[15px] leading-relaxed">DeepMind introduces a new framework for measuring progress toward AGI based on cognitive capabilities rather than task performance. They're launching a Kaggle hackathon to build evaluations that match this framework.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 8 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
     </article>
     <article class="space-y-4 py-10">
       <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
         <span>Anthropic Engineering</span><span style="color:#a1a1aa;">🧪 research</span>
       </div>
       <h3 class="font-headline text-3xl font-normal italic leading-tight">
-        <a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Designing AI-resistant technical evaluations</a>
+        <a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Three iterations of AI-resistant technical evaluations</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">Anthropic documents their struggle to create technical evaluations that Claude can't solve, going through three iterations of a performance engineering take-home. Their learnings offer insights into the challenge of creating robust AI benchmarks.</p>
-      <div class="flex items-center gap-4 pt-2"><span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 6 min read</span><span class="h-px flex-1 bg-outline-variant/30"></span></div>
+      <p class="text-outline text-[15px] leading-relaxed">Anthropic shares lessons from designing performance engineering take-home tests that Claude keeps solving. Each iteration reveals new challenges in creating AI-resistant evaluations.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 7 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations" data-title="Three iterations of AI-resistant technical evaluations" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations" data-title="Three iterations of AI-resistant technical evaluations" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="space-y-4 py-10">
+      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
+        <span>Anthropic Engineering</span><span style="color:#a1a1aa;">👀 notable</span>
+      </div>
+      <h3 class="font-headline text-3xl font-normal italic leading-tight">
+        <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Effective harnesses for long-running agents across context windows</a>
+      </h3>
+      <p class="text-outline text-[15px] leading-relaxed">Anthropic develops agent harnesses inspired by human engineering practices to help agents work effectively across multiple context windows. Addresses a key limitation in current agent systems.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 9 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" data-title="Effective harnesses for long-running agents across context windows" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" data-title="Effective harnesses for long-running agents across context windows" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="space-y-4 py-10">
+      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
+        <span>Google DeepMind</span><span style="color:#a1a1aa;">👀 notable</span>
+      </div>
+      <h3 class="font-headline text-3xl font-normal italic leading-tight">
+        <a href="https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">DeepMind introduces cognitive framework for measuring AGI progress</a>
+      </h3>
+      <p class="text-outline text-[15px] leading-relaxed">DeepMind proposes a new framework to measure progress toward AGI based on cognitive capabilities. They're launching a Kaggle hackathon to build relevant evaluations for the framework.</p>
+      <div class="flex items-center gap-4 pt-2">
+        <span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 8 min read</span>
+        <span class="h-px flex-1 bg-outline-variant/30"></span>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="castVote(this)" data-url="https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/" data-title="DeepMind introduces cognitive framework for measuring AGI progress" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
+          <button onclick="castVote(this)" data-url="https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/" data-title="DeepMind introduces cognitive framework for measuring AGI progress" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+        </div>
+      </div>
     </article></div>
     </div></main>
 <footer class="max-w-2xl mx-auto border-t border-outline-variant/30 px-6 py-16">
@@ -134,4 +228,22 @@
     <div><h1 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h1><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
     <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../">Subscribe</a></div>
   </div>
-</footer></body></html>
+</footer>
+<script>
+var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec";
+function castVote(btn) {
+  var url = btn.dataset.url;
+  var vote = btn.dataset.vote;
+  var key = "voted_" + btoa(encodeURIComponent(url)).slice(0, 20);
+  if (localStorage.getItem(key)) return;
+  localStorage.setItem(key, vote);
+  var article = btn.closest("article");
+  article.querySelectorAll(".vote-btn").forEach(function(b) {
+    b.disabled = true;
+    b.style.opacity = b.dataset.vote === vote ? "1" : "0.2";
+    if (b.dataset.vote === vote) b.style.color = vote === "up" ? "#abd600" : "#ff5555";
+  });
+  fetch(APPS_SCRIPT_URL + "?type=vote&vote=" + vote + "&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(btn.dataset.title), { mode: "no-cors" });
+}
+</script>
+</body></html>
