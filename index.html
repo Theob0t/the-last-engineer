@@ -100,6 +100,7 @@
         <!-- Subscribe -->
         <div class="mt-12 w-full max-w-md mx-auto">
           <form id="subscribe-form" class="flex flex-col gap-0">
+            <input type="text" name="website" id="website" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" tabindex="-1" autocomplete="off"/>
             <div class="relative bg-surface-container-highest flex border-b-2 border-transparent focus-within:border-primary transition-all">
               <input id="email-input" class="bg-transparent border-none w-full py-5 px-6 font-label uppercase text-sm tracking-widest focus:ring-0 placeholder:text-outline/40" placeholder="ENTER_YOUR_EMAIL" required type="email"/>
               <button type="submit" id="subscribe-btn" class="bg-primary text-on-primary font-label font-bold text-xs tracking-[0.2em] px-8 hover:bg-primary-fixed transition-colors whitespace-nowrap active:scale-95 duration-150">
@@ -227,6 +228,64 @@
       <span class="font-space-grotesk uppercase text-[10px] tracking-tighter">Archive</span>
     </a>
   </nav>
+
+  <script>
+    (function() {
+      var APPS_SCRIPT_URL = "APPS_SCRIPT_URL_HERE";
+      var form = document.getElementById("subscribe-form");
+      var input = document.getElementById("email-input");
+      var btn = document.getElementById("subscribe-btn");
+      var status = document.getElementById("form-status");
+      var honeypot = document.getElementById("website");
+      var loadTime = Date.now();
+
+      var throwaway = ["mailinator.com","guerrillamail.com","tempmail.com","throwaway.email",
+        "yopmail.com","sharklasers.com","guerrillamailblock.com","grr.la","dispostable.com",
+        "temp-mail.org","fakeinbox.com","mailnesia.com","trashmail.com","10minutemail.com"];
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // honeypot — bots fill hidden fields
+        if (honeypot.value) return;
+
+        // timing — bots submit in under 2 seconds
+        if (Date.now() - loadTime < 2000) return;
+
+        var email = input.value.trim().toLowerCase();
+        if (!email) return;
+
+        // basic format check
+        var parts = email.split("@");
+        if (parts.length !== 2 || !parts[1].includes(".")) return;
+
+        // reject disposable domains
+        if (throwaway.indexOf(parts[1]) !== -1) {
+          status.textContent = "Please use a permanent email address.";
+          return;
+        }
+
+        btn.textContent = "JOINING...";
+        btn.disabled = true;
+
+        fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {"Content-Type": "application/x-www-form-urlencoded"},
+          body: "email=" + encodeURIComponent(email)
+        }).then(function() {
+          input.value = "";
+          btn.textContent = "YOU'RE IN";
+          status.textContent = "Welcome aboard. First issue drops tomorrow 7AM UTC.";
+          status.style.color = "#abd600";
+        }).catch(function() {
+          btn.textContent = "JOIN THE SIGNAL";
+          btn.disabled = false;
+          status.textContent = "Something went wrong. Try again.";
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>

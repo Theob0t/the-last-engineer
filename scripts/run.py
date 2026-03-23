@@ -45,6 +45,7 @@ GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD", "")
 RECIPIENT_EMAILS = [
     e.strip() for e in os.getenv("RECIPIENT_EMAILS", "").split(",") if e.strip()
 ]
+GOOGLE_SHEET_CSV_URL = os.getenv("GOOGLE_SHEET_CSV_URL", "")
 
 MODEL = "claude-sonnet-4-20250514"
 MAX_ARTICLES = 60
@@ -461,24 +462,40 @@ def git_push():
 # 7. SEND EMAIL (Gmail SMTP)
 # ---------------------------------------------------------------------------
 
+def fetch_subscribers() -> list[str]:
+    emails = set(RECIPIENT_EMAILS)
+    if GOOGLE_SHEET_CSV_URL:
+        try:
+            resp = httpx.get(GOOGLE_SHEET_CSV_URL, timeout=15, follow_redirects=True)
+            for line in resp.text.strip().split("\n")[1:]:  # skip header row
+                email = line.strip().strip('"').split(",")[0].strip().strip('"')
+                if "@" in email:
+                    emails.add(email)
+            print(f"  📋 {len(emails)} subscriber(s) from sheet")
+        except Exception as e:
+            print(f"  ⚠ Sheet fetch failed: {e}")
+    return list(emails)
+
+
 def send_email(html: str, subject: str):
     if not GMAIL_ADDRESS or not GMAIL_APP_PASSWORD:
         print("  ❌ Gmail not configured.")
         return
-    if not RECIPIENT_EMAILS:
+    recipients = fetch_subscribers()
+    if not recipients:
         print("  ❌ No recipients.")
         return
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = f"{NEWSLETTER_NAME} <{GMAIL_ADDRESS}>"
-    msg["To"] = ", ".join(RECIPIENT_EMAILS)
+    msg["To"] = ", ".join(recipients)
     msg.attach(MIMEText(html, "html"))
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as s:
             s.starttls()
             s.login(GMAIL_ADDRESS, GMAIL_APP_PASSWORD)
-            s.sendmail(GMAIL_ADDRESS, RECIPIENT_EMAILS, msg.as_string())
-        print(f"  ✅ Emailed {len(RECIPIENT_EMAILS)} recipient(s)")
+            s.sendmail(GMAIL_ADDRESS, recipients, msg.as_string())
+        print(f"  ✅ Emailed {len(recipients)} recipient(s)")
     except Exception as e:
         print(f"  ❌ Email failed: {e}")
 
