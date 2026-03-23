@@ -268,11 +268,8 @@
         btn.textContent = "JOINING...";
         btn.disabled = true;
 
-        fetch(APPS_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {"Content-Type": "application/x-www-form-urlencoded"},
-          body: "email=" + encodeURIComponent(email)
+        fetch(APPS_SCRIPT_URL + "?email=" + encodeURIComponent(email), {
+          mode: "no-cors"
         }).then(function() {
           input.value = "";
           btn.textContent = "YOU'RE IN";
