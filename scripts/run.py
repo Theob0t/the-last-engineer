@@ -54,7 +54,7 @@ LAUNCH_DATE = dt.date(2026, 3, 22)
 
 SCRIPT_DIR = Path(__file__).parent
 SEEN_FILE = SCRIPT_DIR / ".seen_hashes.json"
-SITE_DIR = SCRIPT_DIR.parent / "site"
+SITE_DIR = SCRIPT_DIR.parent
 ISSUES_DIR = SITE_DIR / "issues"
 
 # ---------------------------------------------------------------------------
