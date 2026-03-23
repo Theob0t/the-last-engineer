@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Last Engineer — A daily read for engineers rooting for the robots.</title>
+  <meta name="description" content="Daily AI digest curated from official blogs of Anthropic, OpenAI, DeepMind, Cursor, METR, and more. Vibe Coding + AI Capabilities & Alignment."/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#3a3939",
+            "surface-dim": "#131313",
+            "surface-container-high": "#2a2a2a",
+            "surface-container": "#201f1f",
+            "surface-container-low": "#1c1b1b",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-highest": "#353534",
+            "surface": "#131313",
+            "background": "#131313",
+            "primary": "#abd600",
+            "primary-fixed": "#c3f400",
+            "on-primary": "#283500",
+            "on-surface": "#e5e2e1",
+            "on-background": "#e5e2e1",
+            "outline": "#8e9192",
+            "outline-variant": "#444748",
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Space Grotesk", "monospace"]
+          },
+          borderRadius: {"DEFAULT": "0rem"},
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+    .font-newsreader { font-family: 'Newsreader', serif; }
+    .font-space-grotesk { font-family: 'Space Grotesk', monospace; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+  <!-- Header -->
+  <header class="bg-[#131313] sticky top-0 z-50">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-none">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-primary">terminal</span>
+        <h1 class="text-2xl font-newsreader italic text-primary uppercase tracking-widest">The Last Engineer</h1>
+      </div>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="font-newsreader italic tracking-tight text-primary hover:text-white transition-colors duration-300" href="/">Featured</a>
+        <a class="font-newsreader italic tracking-tight text-outline hover:text-white transition-colors duration-300" href="/issues/">Archive</a>
+      </nav>
+      <div class="md:hidden">
+        <span class="material-symbols-outlined text-outline">menu</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative min-h-screen overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <!-- Data strip -->
+    <div class="w-full bg-surface-container-lowest py-3">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-[10px] tracking-[0.2em] font-label uppercase text-outline">
+        <div class="flex gap-6">
+          <span>Sources: 35+ official blogs</span>
+          <span>Curator: Claude Sonnet</span>
+        </div>
+        <div class="flex gap-6">
+          <span>Frequency: Daily 7AM</span>
+          <span>Cost: Free</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="relative pt-24 pb-32 px-6 flex flex-col items-center justify-center text-center">
+      <div class="max-w-4xl space-y-8">
+        <h2 class="text-6xl md:text-8xl font-headline italic tracking-tighter leading-[0.9] text-on-surface">
+          A Daily Read for <br/> Engineers <span class="text-primary">Rooting for the Robots.</span>
+        </h2>
+        <p class="text-outline max-w-xl mx-auto font-body text-lg leading-relaxed">
+          Every morning we scan the official blogs of Anthropic, OpenAI, DeepMind, Cursor, Windsurf, METR, and 30+ other sources. Claude curates only what's truly novel, useful, or cool. Nothing else.
+        </p>
+
+        <!-- Subscribe -->
+        <div class="mt-12 w-full max-w-md mx-auto">
+          <form id="subscribe-form" class="flex flex-col gap-0">
+            <div class="relative bg-surface-container-highest flex border-b-2 border-transparent focus-within:border-primary transition-all">
+              <input id="email-input" class="bg-transparent border-none w-full py-5 px-6 font-label uppercase text-sm tracking-widest focus:ring-0 placeholder:text-outline/40" placeholder="ENTER_YOUR_EMAIL" required type="email"/>
+              <button type="submit" id="subscribe-btn" class="bg-primary text-on-primary font-label font-bold text-xs tracking-[0.2em] px-8 hover:bg-primary-fixed transition-colors whitespace-nowrap active:scale-95 duration-150">
+                JOIN THE SIGNAL
+              </button>
+            </div>
+            <p id="form-status" class="text-[10px] font-label text-outline/50 mt-4 text-left uppercase tracking-tighter">
+              One email per day. One-click unsubscribe. No ads, no fluff.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two tracks -->
+    <section class="py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          <div class="md:col-span-5 space-y-6">
+            <div class="h-[2px] w-12 bg-primary"></div>
+            <h3 class="text-4xl font-headline italic leading-tight text-on-surface">
+              Two Tracks.<br/> Zero Noise.
+            </h3>
+            <p class="text-outline font-body">
+              Each issue is split into two sections, curated by Claude from 35+ official AI company and lab blogs.
+            </p>
+          </div>
+          <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-surface-container p-8 border-l border-primary/20 hover:bg-surface-container-high transition-colors">
+              <div class="mb-4"><span class="material-symbols-outlined text-primary text-3xl">code</span></div>
+              <h4 class="font-label uppercase text-sm font-semibold mb-3 tracking-widest text-primary">⚡ Vibe Coding</h4>
+              <p class="text-sm text-outline leading-relaxed font-body">
+                Cursor, Windsurf, Claude Code, Copilot, Bolt, v0, Replit Agent. New features, workflow-changing releases, tool deep-dives. The stuff that makes you faster.
+              </p>
+            </div>
+            <div class="bg-surface-container p-8 border-l border-primary/20 hover:bg-surface-container-high transition-colors">
+              <div class="mb-4"><span class="material-symbols-outlined text-primary text-3xl">science</span></div>
+              <h4 class="font-label uppercase text-sm font-semibold mb-3 tracking-widest text-primary">🔬 Capabilities & Alignment</h4>
+              <p class="text-sm text-outline leading-relaxed font-body">
+                METR evals, ARC red-teaming, interpretability breakthroughs, alignment research, dangerous capability assessments. The stuff that matters.
+              </p>
+            </div>
+            <div class="md:col-span-2 bg-surface-container-highest p-8 flex flex-col md:flex-row gap-8 items-center border-l border-primary/20">
+              <div class="flex-shrink-0 w-24 h-24 bg-surface flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-5xl">auto_awesome</span>
+              </div>
+              <div>
+                <h4 class="font-label uppercase text-sm font-semibold mb-3 tracking-widest text-primary">Ruthless Curation</h4>
+                <p class="text-sm text-outline leading-relaxed font-body">
+                  Claude reads every post from every lab and only surfaces what's genuinely novel, useful, or cool. On slow days the newsletter says so — that's the point. Signal, not noise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest issues — injected by publish script -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div class="max-w-xl">
+          <span class="font-label text-[10px] text-primary uppercase tracking-[0.4em] block mb-4">Latest Issues</span>
+          <h3 class="text-5xl font-headline italic text-on-surface">From the Archive</h3>
+        </div>
+        <a class="font-label text-xs uppercase tracking-widest border-b border-primary pb-1 text-primary hover:text-white hover:border-white transition-all" href="/issues/">Browse All Issues →</a>
+      </div>
+      <div id="issue-grid" class="grid grid-cols-1 md:grid-cols-3 gap-1">
+        <!-- LATEST_ISSUES_PLACEHOLDER -->
+
+        <a href="/issues/2026-03-22.html" class="bg-surface-container-low p-12 aspect-[4/5] flex flex-col justify-end group hover:bg-surface-container transition-colors no-underline">
+          <span class="font-label text-[10px] uppercase text-primary mb-2 block">Issue #1 · MAR 22, 2026</span>
+          <h5 class="text-2xl font-headline italic text-white group-hover:text-primary transition-colors">Cursor Ships Background Agents That Run While You Sleep</h5>
+        </a>
+</div>
+    </section>
+
+    <!-- Sources -->
+    <section class="py-16 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-8">
+          <div class="h-[2px] w-12 bg-primary mb-6"></div>
+          <h3 class="text-3xl font-headline italic text-on-surface mb-4">Direct From the Source</h3>
+          <p class="text-outline font-body max-w-xl">We don't aggregate news about AI — we read the official blogs so you don't have to.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-8">
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">Anthropic</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">OpenAI</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">DeepMind</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">Meta AI</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">xAI</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">Mistral</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">Cursor</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">Windsurf</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">Replit</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">METR</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">ARC Evals</span></div>
+          <div class="bg-surface-container p-4 text-center"><span class="font-label text-[11px] uppercase tracking-wider text-outline">+ 25 more</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-32 pb-48 px-6 text-center">
+      <div class="max-w-2xl mx-auto space-y-8">
+        <span class="material-symbols-outlined text-primary/30 text-6xl">bolt</span>
+        <p class="font-label uppercase text-[10px] tracking-[0.5em] text-outline/40">
+          A daily read for engineers rooting for the robots.
+        </p>
+        <p class="font-label uppercase text-[10px] tracking-[0.3em] text-outline/20">
+          Curated by AI · Powered by Claude · Built by Theo
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Mobile nav -->
+  <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
+    <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="/">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+      <span class="font-space-grotesk uppercase text-[10px] tracking-tighter">Featured</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="/issues/">
+      <span class="material-symbols-outlined">inventory_2</span>
+      <span class="font-space-grotesk uppercase text-[10px] tracking-tighter">Archive</span>
+    </a>
+  </nav>
+
+</body>
+</html>

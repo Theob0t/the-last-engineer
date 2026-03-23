@@ -1,0 +1,41 @@
+name: Daily Newsletter
+
+on:
+  schedule:
+    # Every day at 7:00 AM UTC (adjust to your timezone)
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+    # Manual trigger from GitHub Actions UI
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed for git push
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run newsletter
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
+        run: cd scripts && python run.py --push
+
+      - name: Push to GitHub Pages
+        run: |
+          cd site
+          git config user.name "Newsletter Bot"
+          git config user.email "bot@thelastengineer.com"
+          git add .
+          git diff --staged --quiet || git commit -m "Issue — $(date +%Y-%m-%d)"
+          git push
