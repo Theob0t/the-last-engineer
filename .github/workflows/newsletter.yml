@@ -23,6 +23,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Configure git
+        run: |
+          git config user.name "theob0t"
+          git config user.email "theo06bot75@gmail.com"
+
       - name: Run newsletter
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -30,12 +35,3 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
         run: cd scripts && python run.py --push
-
-      - name: Push to GitHub Pages
-        run: |
-          cd site
-          git config user.name "Newsletter Bot"
-          git config user.email "bot@thelastengineer.com"
-          git add .
-          git diff --staged --quiet || git commit -m "Issue — $(date +%Y-%m-%d)"
-          git push
