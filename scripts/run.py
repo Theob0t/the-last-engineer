@@ -454,14 +454,15 @@ def _web_section(title: str, items: list) -> str:
       <div class="divide-y divide-outline-variant/20">{"".join(_web_article(i) for i in items)}</div>
     </div>"""
 
-def render_issue_web(digest: dict, date_str: str, issue_num: int) -> str:
+def render_issue_web(digest: dict, date_str: str, issue_num: int, image_url: str = "") -> str:
     vibe = digest.get("vibe_coding", [])
     research = digest.get("capabilities_research", [])
     total = len(vibe) + len(research)
     content = _web_section("⚡ Vibe Coding", vibe) + _web_section("🧠 Capabilities & Alignment", research)
     if total == 0:
         content = '<div class="py-20 text-center"><div class="text-4xl mb-4">🤷</div><p class="font-headline italic text-xl text-on-surface">Quiet day. Nothing cleared the bar.</p></div>'
-    return f"""<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #{issue_num} — The Last Engineer</title>
+    img_meta = f'<meta name="issue-image" content="{image_url}"/>' if image_url else ""
+    return f"""<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #{issue_num} — The Last Engineer</title>{img_meta}
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script>tailwind.config={{darkMode:"class",theme:{{extend:{{colors:{{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"}},fontFamily:{{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]}},borderRadius:{{"DEFAULT":"0px"}}}}}}}}</script>
@@ -504,6 +505,17 @@ function castVote(btn) {{
 # 6. PUBLISH TO SITE
 # ---------------------------------------------------------------------------
 
+def fetch_og_image(url: str) -> str:
+    try:
+        resp = httpx.get(url, timeout=10, follow_redirects=True, headers={"User-Agent": "Mozilla/5.0"})
+        match = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', resp.text)
+        if not match:
+            match = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', resp.text)
+        return match.group(1) if match else ""
+    except Exception:
+        return ""
+
+
 def get_all_issues() -> list[dict]:
     issues = []
     for f in ISSUES_DIR.glob("*.html"):
@@ -516,9 +528,11 @@ def get_all_issues() -> list[dict]:
         content = f.read_text()
         title_match = re.search(r'<h3[^>]*>.*?<a[^>]*>(.+?)</a>', content, re.DOTALL)
         title = title_match.group(1).strip() if title_match else f"Issue — {match.group(1)}"
+        img_match = re.search(r'<meta name="issue-image" content="([^"]+)"', content)
+        image_url = img_match.group(1) if img_match else ""
         issues.append({
             "date": date, "date_str": date.strftime("%b %d, %Y").upper(),
-            "filename": f.name, "title": title,
+            "filename": f.name, "title": title, "image_url": image_url,
             "issue_num": (date - LAUNCH_DATE).days + 1,
         })
     issues.sort(key=lambda x: x["date"], reverse=True)
@@ -546,11 +560,22 @@ def update_landing_page(issues: list[dict]):
     latest = issues[:3]
     if not latest:
         return
-    grid = "".join(f"""
+    def _card(i: dict) -> str:
+        if i.get("image_url"):
+            return f"""
+    <a href="./issues/{i['filename']}" class="relative overflow-hidden aspect-[4/5] flex flex-col justify-end group no-underline" style="background-image:url({i['image_url']});background-size:cover;background-position:center;">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+      <div class="relative z-10 p-12">
+        <span class="font-label text-[10px] uppercase text-primary mb-2 block">Issue #{i['issue_num']} · {i['date_str']}</span>
+        <h5 class="text-2xl font-headline italic text-white group-hover:text-primary transition-colors">{i['title']}</h5>
+      </div>
+    </a>"""
+        return f"""
     <a href="./issues/{i['filename']}" class="bg-surface-container-low p-12 aspect-[4/5] flex flex-col justify-end group hover:bg-surface-container transition-colors no-underline">
       <span class="font-label text-[10px] uppercase text-primary mb-2 block">Issue #{i['issue_num']} · {i['date_str']}</span>
       <h5 class="text-2xl font-headline italic text-white group-hover:text-primary transition-colors">{i['title']}</h5>
-    </a>""" for i in latest)
+    </a>"""
+    grid = "".join(_card(i) for i in latest)
     tpl = LANDING_PAGE.read_text()
     tpl = re.sub(r'<!-- LATEST_ISSUES_PLACEHOLDER -->.*?(?=</div>\s*</section>)', f'<!-- LATEST_ISSUES_PLACEHOLDER -->\n{grid}\n', tpl, flags=re.DOTALL)
     LANDING_PAGE.write_text(tpl)
@@ -562,7 +587,11 @@ def publish_to_site(digest: dict, date: dt.date = None):
     date = date or dt.date.today()
     issue_num = (date - LAUNCH_DATE).days + 1
     date_str = date.strftime("%B %-d, %Y")
-    html = render_issue_web(digest, date_str, issue_num)
+    top_url = (digest.get("vibe_coding") or digest.get("capabilities_research") or [{}])[0].get("url", "")
+    image_url = fetch_og_image(top_url) if top_url else ""
+    if image_url:
+        print(f"  🖼 OG image found")
+    html = render_issue_web(digest, date_str, issue_num, image_url)
     path = ISSUES_DIR / f"{date.isoformat()}.html"
     path.write_text(html)
     print(f"  📰 Issue #{issue_num}: {path.name}")
