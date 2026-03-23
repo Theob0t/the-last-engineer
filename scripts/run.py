@@ -362,7 +362,7 @@ def render_issue_web(digest: dict, date_str: str, issue_num: int) -> str:
 <style>.material-symbols-outlined{{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;display:inline-block;vertical-align:middle;font-size:16px}}body{{background:#131313;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif;color:#e5e2e1}}.font-headline{{font-family:'Newsreader',serif}}.font-label{{font-family:'Space Grotesk',monospace}}p{{line-height:1.7}}</style></head>
 <body>
 <header class="max-w-2xl mx-auto pt-12 pb-8 px-6 text-center">
-  <a href="/" class="font-headline italic text-3xl font-medium tracking-tight text-on-surface uppercase hover:text-primary transition-colors">THE LAST ENGINEER</a>
+  <a href="../" class="font-headline italic text-3xl font-medium tracking-tight text-on-surface uppercase hover:text-primary transition-colors">THE LAST ENGINEER</a>
   <div class="mt-4 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em] border-t border-outline-variant/30 pt-4">
     <span>Issue #{issue_num}</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>{date_str}</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>{total} stories</span>
   </div>
@@ -371,7 +371,7 @@ def render_issue_web(digest: dict, date_str: str, issue_num: int) -> str:
 <footer class="max-w-2xl mx-auto border-t border-outline-variant/30 px-6 py-16">
   <div class="flex flex-col md:flex-row justify-between items-start gap-8">
     <div><h1 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h1><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
-    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="/issues/">Archive</a><a class="hover:text-primary transition-colors" href="/">Subscribe</a></div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../">Subscribe</a></div>
   </div>
 </footer></body></html>"""
 
@@ -396,7 +396,6 @@ def get_all_issues() -> list[dict]:
             "date": date, "date_str": date.strftime("%b %d, %Y").upper(),
             "filename": f.name, "title": title,
             "issue_num": (date - LAUNCH_DATE).days + 1,
-            "url": f"/issues/{f.name}",
         })
     issues.sort(key=lambda x: x["date"], reverse=True)
     return issues
@@ -404,7 +403,7 @@ def get_all_issues() -> list[dict]:
 def update_archive_page(issues: list[dict]):
     entries = "".join(f"""
     <article class="group relative py-12 cursor-pointer transition-all duration-300 hover:bg-surface-container-low/30">
-      <a href="{i['url']}" class="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 no-underline">
+      <a href="./{i['filename']}" class="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 no-underline">
         <div class="flex items-center gap-6 md:w-48 shrink-0">
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #{i['issue_num']}</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">{i['date_str']}</span>
@@ -424,7 +423,7 @@ def update_landing_page(issues: list[dict]):
     if not latest:
         return
     grid = "".join(f"""
-    <a href="{i['url']}" class="bg-surface-container-low p-12 aspect-[4/5] flex flex-col justify-end group hover:bg-surface-container transition-colors no-underline">
+    <a href="./issues/{i['filename']}" class="bg-surface-container-low p-12 aspect-[4/5] flex flex-col justify-end group hover:bg-surface-container transition-colors no-underline">
       <span class="font-label text-[10px] uppercase text-primary mb-2 block">Issue #{i['issue_num']} · {i['date_str']}</span>
       <h5 class="text-2xl font-headline italic text-white group-hover:text-primary transition-colors">{i['title']}</h5>
     </a>""" for i in latest)
