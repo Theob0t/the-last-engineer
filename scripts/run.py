@@ -225,11 +225,70 @@ Max {max_per_section} items per section. Sort by impact.
 Return ONLY valid JSON. No markdown fences. No preamble."""
 
 
+REFLECTION_PROMPT = """You are the editorial AI for "The Last Engineer" newsletter.
+You just curated today's issue. Reflect on your picks and evolve your editorial memory.
+
+You will receive:
+1. The current editorial memory
+2. The articles you picked today (title, source, vibe tag)
+
+Your job:
+- Identify patterns in what you picked and why
+- Update the editorial memory to be more precise and useful for future runs
+- Keep it under 35 lines — prune rules that are redundant or too vague
+- Write a short honest reflection on today's choices
+
+Return ONLY valid JSON, no markdown fences:
+{
+  "updated_memory": "<full updated content for editorial_memory.md>",
+  "reflection": "<2-3 sentences: what you picked, what pattern you noticed, any update you made>"
+}"""
+
+
 def load_editorial_memory() -> str:
     path = SCRIPT_DIR / "editorial_memory.md"
     if path.exists():
         return "\n\n---\n## Editorial Memory\n" + path.read_text().strip()
     return ""
+
+
+def reflect_and_update_memory(digest: dict):
+    memory_path = SCRIPT_DIR / "editorial_memory.md"
+    memory = memory_path.read_text().strip() if memory_path.exists() else ""
+
+    picks = (
+        [f"[Vibe Coding] {i['title']} — {i['source']} — {i['vibe']}" for i in digest.get("vibe_coding", [])] +
+        [f"[Research] {i['title']} — {i['source']} — {i['vibe']}" for i in digest.get("capabilities_research", [])]
+    )
+    if not picks:
+        return
+
+    resp = httpx.post(
+        "https://api.anthropic.com/v1/messages",
+        headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
+        json={
+            "model": MODEL, "max_tokens": 2000,
+            "system": REFLECTION_PROMPT,
+            "messages": [{"role": "user", "content": f"Current editorial memory:\n{memory}\n\nToday's picks:\n" + "\n".join(picks)}],
+        },
+        timeout=60,
+    )
+    resp.raise_for_status()
+    text = "".join(b["text"] for b in resp.json().get("content", []) if b.get("type") == "text")
+    text = text.strip().removeprefix("```json").removesuffix("```").strip()
+    result = json.loads(text)
+
+    memory_path.write_text(result["updated_memory"].strip())
+
+    log_path = SCRIPT_DIR / "curation_log.md"
+    vc, cr = len(digest.get("vibe_coding", [])), len(digest.get("capabilities_research", []))
+    entry = f"\n## {dt.date.today().isoformat()} — {vc} vibe, {cr} research\n{result['reflection']}\n"
+    if log_path.exists():
+        log_path.write_text(log_path.read_text() + entry)
+    else:
+        log_path.write_text("# Curation Log\nHow the editorial agent evolves its taste over time.\n" + entry)
+
+    print(f"  🧠 Memory updated + logged")
 
 
 def curate_with_claude(articles: list[Article]) -> dict:
@@ -577,6 +636,9 @@ def run(preview=False, test_email=False, test_web=False, push=False, rebuild=Fal
 
     print("\n🌐 Publishing...")
     publish_to_site(digest)
+
+    print("\n🪞 Reflecting...")
+    reflect_and_update_memory(digest)
     if push:
         git_push()
 
