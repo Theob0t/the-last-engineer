@@ -222,7 +222,7 @@ Each item:
 - "source": source name
 - "tldr": 2-3 sentences, specific, conversational
 - "read_time": estimated reading time of original article in minutes
-- "vibe": one of "🛠 in prod", "🧪 agent research", "⚖️ alignment", "🔥 breakthrough"
+- "vibe": one of "🛠 agentic tools", "🧪 agent research", "⚖️ alignment research"
 
 Max {max_per_section} items per section. Sort by impact.
 Return ONLY valid JSON. No markdown fences. No preamble."""
@@ -358,10 +358,9 @@ FONT_B = "'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
 FONT_L = "'Space Grotesk', 'SF Mono', Consolas, monospace"
 
 VIBE_COLORS = {
-    "🛠 in prod": "#abd600",
+    "🛠 agentic tools": "#abd600",
     "🧪 agent research": "#a1a1aa",
-    "⚖️ alignment": "#a1a1aa",
-    "🔥 breakthrough": "#abd600",
+    "⚖️ alignment research": "#a1a1aa",
 }
 
 def _email_article(item: dict, featured: bool = False) -> str:
@@ -664,7 +663,7 @@ TEST_DIGEST = {
         {"title": "Cursor Ships Background Agents That Run While You Sleep",
          "url": "https://cursor.com/blog", "source": "Cursor Blog",
          "tldr": "Background agent mode lets you kick off multi-file refactors and come back to completed PRs. Sandboxed cloud environment with full repo context.",
-         "vibe": "🛠 in prod", "read_time": 6},
+         "vibe": "🛠 agentic tools", "read_time": 6},
     ],
     "capabilities_research": [
         {"title": "METR Finds Frontier Models Show Gains in Autonomous Replication",

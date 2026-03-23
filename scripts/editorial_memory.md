@@ -9,7 +9,7 @@ If it's not about agents, it does not belong here — full stop.
 
 ## Three Types of Articles (the only three)
 
-### 🛠 in prod — Agentic tools you can use today
+### 🛠 agentic tools — Agentic tools you can use today
 New agentic products, agent frameworks, MCP servers, coding agents,
 workflow automation with agents, multi-agent orchestration tools.
 The bar: can a reader set this up or use it in their work this week?
@@ -19,13 +19,10 @@ Autonomous benchmarks (SWE-bench, METR evals, ARC), agent architectures,
 multi-agent coordination, tool use research, long-horizon task research,
 memory and planning in agents, emergent agent behaviors.
 
-### ⚖️ alignment — Safety & alignment specifically for agents
+### ⚖️ alignment research — Safety & alignment specifically for agents
 Dangerous capability assessments for autonomous systems, agent red-teaming,
 corrigibility research, oversight mechanisms, deceptive alignment in agents,
 containment strategies. Must be about agents, not LLMs in general.
-
-### 🔥 breakthrough — Use sparingly
-A genuine step-change across any of the above three types.
 
 ## Hard Excludes (never publish)
 - General LLM research not about agents (new model releases, benchmarks without agent eval)
