@@ -395,7 +395,7 @@ def render_email(digest: dict, date_str: str) -> str:
     research = digest.get("capabilities_research", [])
     total = len(vibe) + len(research)
     issue_num = (dt.date.today() - LAUNCH_DATE).days + 1
-    content = _email_section("⚡ Vibe Coding", vibe) + _email_section("🔬 Capabilities & Alignment", research)
+    content = _email_section("⚡ Vibe Coding", vibe) + _email_section("🧠 Capabilities & Alignment", research)
     if total == 0:
         content = f'<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding:60px 0;"><tr><td align="center" style="font-size:32px;">🤷</td></tr><tr><td align="center" style="font-family:{FONT_H};font-size:18px;font-style:italic;color:#e5e2e1;padding-top:12px;">Quiet day. Nothing cleared the bar.</td></tr></table>'
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"></head>
@@ -458,7 +458,7 @@ def render_issue_web(digest: dict, date_str: str, issue_num: int) -> str:
     vibe = digest.get("vibe_coding", [])
     research = digest.get("capabilities_research", [])
     total = len(vibe) + len(research)
-    content = _web_section("⚡ Vibe Coding", vibe) + _web_section("🔬 Capabilities & Alignment", research)
+    content = _web_section("⚡ Vibe Coding", vibe) + _web_section("🧠 Capabilities & Alignment", research)
     if total == 0:
         content = '<div class="py-20 text-center"><div class="text-4xl mb-4">🤷</div><p class="font-headline italic text-xl text-on-surface">Quiet day. Nothing cleared the bar.</p></div>'
     return f"""<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #{issue_num} — The Last Engineer</title>

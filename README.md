@@ -14,7 +14,7 @@ Every morning, an autonomous agent scans 35+ official AI blogs (Anthropic, OpenA
 
 Two tracks, zero noise:
 - **⚡ Vibe Coding** — workflow-changing releases, tool deep-dives, agentic dev tools
-- **🔬 Capabilities & Alignment** — evals, interpretability, safety research, autonomous capability benchmarks
+- **🧠 Capabilities & Alignment** — evals, interpretability, safety research, autonomous capability benchmarks
 
 ---
 
