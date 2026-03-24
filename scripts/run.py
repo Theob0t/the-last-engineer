@@ -652,47 +652,224 @@ def render_agent_page():
     memory = (SCRIPT_DIR / "editorial_memory.md").read_text() if (SCRIPT_DIR / "editorial_memory.md").exists() else ""
     log = (SCRIPT_DIR / "curation_log.md").read_text() if (SCRIPT_DIR / "curation_log.md").exists() else ""
     updated = dt.datetime.now().strftime("%B %-d, %Y at %H:%M UTC")
-    body = f"""
-<main class="max-w-4xl mx-auto px-6 pt-12 pb-20">
-  <div class="mb-16">
-    <span class="font-label text-[10px] text-primary uppercase tracking-[0.4em] block mb-4">Autonomous Agent</span>
-    <h1 class="font-headline italic text-6xl text-on-surface mb-4">The Agent.</h1>
-    <p class="text-outline font-body max-w-xl">Live editorial guidelines and daily decision log. Updated automatically after each issue.</p>
-    <p class="font-label text-[10px] text-outline/50 uppercase tracking-widest mt-4">Last updated: {updated}</p>
-  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 mb-20">
-    <div class="bg-surface-container p-8 border-l-2 border-primary">
-      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-2">What it is</span>
-      <p class="text-outline text-sm leading-relaxed">An autonomous Claude agent that curates this newsletter daily. It has a persistent memory it updates itself, and learns from reader votes.</p>
-    </div>
-    <div class="bg-surface-container p-8 border-l-2 border-outline-variant/40">
-      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-2">The experiment</span>
-      <p class="text-outline text-sm leading-relaxed">Can an AI develop good editorial taste through self-reflection and human feedback, with no human in the loop?</p>
-    </div>
+    reader_profile = _mem_section(memory, "Reader Profile")
+    reader_profile_short = reader_profile.split("\n")[0] if reader_profile else "Engineers building with agentic AI daily."
+    article_types = _mem_subsections(memory)
+    excludes_raw = _mem_section(memory, "Hard Excludes (never publish)") or _mem_section(memory, "Hard Excludes")
+    excludes = _mem_list_items(excludes_raw)
+    log_rows = _parse_log_rows(log)
+
+    _NUMS = ["I", "II", "III", "IV", "V"]
+
+    sidebar_types = "".join(
+        f'\n              <li class="flex items-start gap-3 {"text-on-surface" if i == 0 else "text-outline"}">'
+        f'\n                <span class="{"text-primary" if i == 0 else "text-primary/40"} mt-0.5">{str(i+1).zfill(2)}</span>'
+        f"\n                <span>{_he(t['name'])}</span>"
+        f"\n              </li>"
+        for i, t in enumerate(article_types[:3])
+    )
+
+    types_items = "".join(
+        f'\n            <div class="flex gap-6 group">'
+        f'\n              <div class="font-label text-3xl text-primary/20 group-hover:text-primary transition-colors">{_NUMS[i] if i < len(_NUMS) else str(i+1)}</div>'
+        f"\n              <div>"
+        f'\n                <h4 class="font-headline text-2xl mb-2">{_he(t["name"])}</h4>'
+        f'\n                <p class="text-on-surface-variant text-sm leading-relaxed">{_he(t["body"].replace(chr(10), " ")[:160])}</p>'
+        f"\n              </div>"
+        f"\n            </div>"
+        for i, t in enumerate(article_types[:3])
+    )
+
+    excludes_items = "".join(
+        f'\n              <div class="flex items-center gap-3 text-sm font-label text-on-surface">'
+        f'\n                <span class="material-symbols-outlined text-[14px] text-outline">close</span>'
+        f"\n                {_he(item)}"
+        f"\n              </div>"
+        for item in excludes[:8]
+    )
+
+    if log_rows:
+        log_table_rows = "".join(
+            f"\n              <tr>"
+            f'\n                <td class="py-4">{_he(r["date"])}</td>'
+            f'\n                <td class="py-4 font-medium">{_he(r["ref"])}</td>'
+            f'\n                <td class="py-4">{_he(r["summary"])}</td>'
+            f'\n                <td class="py-4 text-right text-primary">{_he(r["stats"])}</td>'
+            f"\n              </tr>"
+            for r in log_rows
+        )
+    else:
+        log_table_rows = '\n              <tr><td colspan="4" class="py-8 text-center text-outline text-[11px] uppercase tracking-widest">No entries yet</td></tr>'
+
+    page = f"""<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Agent | The Last Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {{
+  darkMode: "class",
+  theme: {{
+    extend: {{
+      colors: {{
+        "surface-container-lowest": "#0e0e0e",
+        "surface-container-low": "#1c1b1b",
+        "surface-container": "#201f1f",
+        "surface-container-high": "#2a2a2a",
+        "surface-container-highest": "#353534",
+        "surface": "#131313",
+        "background": "#131313",
+        "primary": "#abd600",
+        "on-primary": "#283500",
+        "on-surface": "#e5e2e1",
+        "on-surface-variant": "#c4c7c7",
+        "on-background": "#e5e2e1",
+        "outline": "#8e9192",
+        "outline-variant": "#444748",
+      }},
+      fontFamily: {{
+        "headline": ["Newsreader", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Space Grotesk", "monospace"]
+      }},
+      borderRadius: {{"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"}},
+    }},
+  }},
+}}
+</script>
+<style>
+  .material-symbols-outlined {{ font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }}
+  body {{ background-color: #0A0A0A; color: #e5e2e1; min-height: max(884px, 100dvh); }}
+</style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+  <div class="flex items-center gap-3">
+    <span class="material-symbols-outlined text-primary">terminal</span>
+    <a href="./" class="text-2xl font-headline italic text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
   </div>
+  <nav class="hidden md:flex gap-8 font-label text-[12px] tracking-widest uppercase items-center">
+    <a class="text-outline hover:text-white transition-colors duration-300" href="./">Featured</a>
+    <a class="text-outline hover:text-white transition-colors duration-300" href="./issues/">Archive</a>
+    <a class="text-primary" href="./agent.html">The Agent</a>
+    <a class="text-outline hover:text-white transition-colors duration-300" href="./sources.html">Sources</a>
+  </nav>
+  <button class="md:hidden text-primary">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</header>
+
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
 
   <section class="mb-20">
-    <div class="flex items-baseline gap-4 mb-8">
-      <h2 class="font-headline italic text-4xl text-on-surface">Editorial Memory</h2>
-      <span class="font-label text-[10px] uppercase tracking-widest text-outline">Agent's current guidelines</span>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <h1 class="font-headline italic text-6xl md:text-8xl tracking-tighter leading-none">The Agent</h1>
+      <div class="font-label text-primary uppercase text-xs tracking-[0.2em] border-l border-primary/30 pl-4 py-1">
+        Last Updated<br/>{updated}
+      </div>
     </div>
-    <div class="bg-surface-container-low p-8 border-l-2 border-primary/30">
-      {_md_to_html(memory)}
+    <div class="w-full bg-surface-container-lowest flex flex-wrap gap-8 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase">
+      <div class="flex items-center gap-2"><span class="text-primary">●</span> Status: <span class="text-on-surface">Autonomous Operation</span></div>
+      <div class="flex items-center gap-2">Sources Monitored: <span class="text-on-surface">36 feeds</span></div>
+      <div class="flex items-center gap-2">Article Types: <span class="text-on-surface">3</span></div>
+      <div class="ml-auto opacity-50">Memory Synced</div>
     </div>
   </section>
 
-  <section>
-    <div class="flex items-baseline gap-4 mb-8">
-      <h2 class="font-headline italic text-4xl text-on-surface">Curation Log</h2>
-      <span class="font-label text-[10px] uppercase tracking-widest text-outline">Daily decision trace</span>
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+    <aside class="md:col-span-4 flex flex-col gap-12">
+      <div class="border-l border-outline-variant/20 pl-6 py-2">
+        <h3 class="font-label text-xs uppercase tracking-widest text-primary mb-4">Reader Profile</h3>
+        <p class="font-headline italic text-xl text-on-surface leading-snug">{_he(reader_profile_short)}</p>
+      </div>
+      <div class="bg-surface-container-low p-6">
+        <h3 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-6">Article Types</h3>
+        <ul class="font-label text-xs space-y-4">{sidebar_types}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="md:col-span-8">
+      <section class="mb-20">
+        <h2 class="font-headline text-3xl mb-8 border-b border-outline-variant/10 pb-4">This Newsletter Is <span class="italic text-primary">ONLY</span> About Agents</h2>
+        <div class="font-body text-lg text-on-surface-variant leading-relaxed space-y-6">
+          <p>In the noise of modern AI coverage, we define a sharp boundary. The Last Engineer does not cover general-purpose chatbots, new model releases, or high-level AI policy.</p>
+          <p class="font-headline italic text-2xl text-on-surface">"We focus exclusively on autonomous AI agents — entities that can reason, plan, use tools, and take actions."</p>
+        </div>
+      </section>
+
+      <section class="mb-20">
+        <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10">Three Types of Articles</h2>
+        <div class="space-y-12">{types_items}
+        </div>
+      </section>
+
+      <section class="mb-20">
+        <div class="bg-surface-container-low p-8 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+          <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-6">Hard Excludes</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">{excludes_items}
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="space-y-1">
-      {_log_entries(log)}
+  </div>
+
+  <section class="mt-32 pt-16 border-t border-outline-variant/10">
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="font-label text-xs uppercase tracking-widest text-outline flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-[16px]">history</span>
+        Curation Log
+      </h2>
+      <div class="h-[1px] flex-grow mx-8 bg-outline-variant/10"></div>
+      <div class="font-label text-[10px] text-primary">SYNC: OK</div>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left font-label text-[11px] tracking-tight uppercase">
+        <thead>
+          <tr class="text-outline border-b border-outline-variant/20">
+            <th class="pb-4 font-normal">Date</th>
+            <th class="pb-4 font-normal">Ref</th>
+            <th class="pb-4 font-normal">Summary</th>
+            <th class="pb-4 font-normal text-right">Articles</th>
+          </tr>
+        </thead>
+        <tbody class="text-on-surface divide-y divide-outline-variant/5">{log_table_rows}
+        </tbody>
+      </table>
     </div>
   </section>
-</main>"""
-    page = _PAGE_SHELL.format(title="The Agent", body=body)
+</main>
+
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl flex justify-around items-center px-4 pb-6">
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Featured</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
+    <span class="material-symbols-outlined">inventory_2</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Archive</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="./agent.html">
+    <span class="material-symbols-outlined">smart_toy</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Agent</span>
+  </a>
+</nav>
+
+<footer class="py-20 px-6 border-t border-outline-variant/10 bg-surface-container-lowest">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-40">
+    <div class="font-headline italic text-lg tracking-widest text-primary uppercase">The Last Engineer</div>
+    <div class="font-label text-[10px] tracking-widest uppercase">Curated by AI · Updated daily</div>
+  </div>
+</footer>
+
+</body></html>"""
     AGENT_PAGE.write_text(page)
     print("  🤖 Agent page updated")
 
@@ -714,6 +891,46 @@ def _log_entries(log: str) -> str:
       <p class="text-outline text-sm leading-relaxed">{body}</p>
     </div>""")
     return "".join(html) or '<p class="text-outline text-sm">No entries yet.</p>'
+
+
+def _he(s: str) -> str:
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+def _mem_section(memory: str, heading: str) -> str:
+    m = re.search(rf"## {re.escape(heading)}\n(.*?)(?=\n## |\Z)", memory, re.DOTALL)
+    return m.group(1).strip() if m else ""
+
+def _mem_subsections(memory: str) -> list:
+    results = []
+    for m in re.finditer(r"### (.+?)\n(.*?)(?=\n### |\n## |\Z)", memory, re.DOTALL):
+        raw_name = m.group(1).strip()
+        display = raw_name.split(" — ")[0].strip() if " — " in raw_name else raw_name
+        results.append({"name": display, "body": m.group(2).strip()})
+    return results
+
+def _mem_list_items(section_text: str) -> list:
+    return [line[2:].strip() for line in section_text.split("\n") if line.startswith("- ")]
+
+def _parse_log_rows(log: str) -> list:
+    rows, current = [], None
+    for line in log.split("\n"):
+        if line.startswith("## "):
+            if current:
+                rows.append(current)
+            header = line[3:].strip()
+            parts = header.split(" — ", 1)
+            date = parts[0].strip()
+            stats = parts[1].strip() if len(parts) > 1 else ""
+            ref = "TLE-" + date.replace("-", "")[-6:]
+            current = {"date": date, "stats": stats, "ref": ref, "body": []}
+        elif current and line.strip() and not line.startswith("#"):
+            current["body"].append(line.strip())
+    if current:
+        rows.append(current)
+    for row in rows:
+        body = " ".join(row["body"])
+        row["summary"] = (body[:75] + "…") if len(body) > 75 else body
+    return list(reversed(rows))
 
 
 def publish_to_site(digest: dict, date: dt.date = None):
