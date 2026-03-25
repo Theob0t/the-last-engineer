@@ -488,7 +488,7 @@ var APPS_SCRIPT_URL = "{APPS_SCRIPT_URL}";
 function castVote(btn) {{
   var url = btn.dataset.url;
   var vote = btn.dataset.vote;
-  var key = "voted_" + btoa(encodeURIComponent(url)).slice(0, 20);
+  var key = "voted_" + btoa(encodeURIComponent(url));
   if (localStorage.getItem(key)) return;
   localStorage.setItem(key, vote);
   var article = btn.closest("article");
