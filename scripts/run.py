@@ -50,8 +50,8 @@ GOOGLE_VOTES_CSV_URL = os.getenv("GOOGLE_VOTES_CSV_URL", "")
 APPS_SCRIPT_URL = os.getenv("APPS_SCRIPT_URL", "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec")
 
 MODEL = "claude-sonnet-4-20250514"
-MAX_ARTICLES = 60
-MAX_ITEMS_PER_SECTION = 6
+MAX_ARTICLES = 100
+MAX_ITEMS_PER_SECTION = 12
 NEWSLETTER_NAME = "The Last Engineer"
 LAUNCH_DATE = dt.date(2026, 3, 22)
 
@@ -220,7 +220,7 @@ Each item:
 - "title": specific informative headline (rewrite if needed)
 - "url": original URL
 - "source": source name
-- "tldr": 2-3 sentences, specific, conversational
+- "tldr": 1 sentence, specific, conversational
 - "read_time": estimated reading time of original article in minutes
 - "vibe": one of "🛠 agentic tools", "🧪 agent research", "⚖️ alignment research"
 
@@ -334,7 +334,7 @@ def curate_with_claude(articles: list[Article]) -> dict:
         "https://api.anthropic.com/v1/messages",
         headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
         json={
-            "model": MODEL, "max_tokens": 4000,
+            "model": MODEL, "max_tokens": 8000,
             "system": system,
             "messages": [{"role": "user", "content": f"Today's articles:\n\n{articles_text}"}],
         },
@@ -366,19 +366,18 @@ VIBE_COLORS = {
 def _email_article(item: dict, featured: bool = False) -> str:
     vibe_color = VIBE_COLORS.get(item.get("vibe", ""), "#a1a1aa")
     rt = item.get("read_time", "")
-    rt_html = f'<table cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;"><tr><td style="font-family:{FONT_L};font-size:9px;color:#a1a1aa;text-transform:uppercase;letter-spacing:0.15em;">⏱ {rt} min read</td></tr></table>' if rt else ""
-    size = "28px" if featured else "22px"
+    rt_html = f' &nbsp;·&nbsp; <span style="font-family:{FONT_L};font-size:9px;color:#a1a1aa;">⏱ {rt} min</span>' if rt else ""
+    size = "20px" if featured else "16px"
     return f"""
-    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding:28px 0;">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding:12px 0;">
       <tr><td>
         <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
-          <td style="font-family:{FONT_L};font-size:10px;letter-spacing:0.15em;color:#a1a1aa;text-transform:uppercase;">{item.get('source','')}</td>
-          <td align="right" style="font-family:{FONT_L};font-size:10px;color:{vibe_color};text-transform:uppercase;">{item.get('vibe','')}</td>
+          <td style="font-family:{FONT_L};font-size:9px;letter-spacing:0.12em;color:#a1a1aa;text-transform:uppercase;">{item.get('source','')}{rt_html}</td>
+          <td align="right" style="font-family:{FONT_L};font-size:9px;color:{vibe_color};text-transform:uppercase;">{item.get('vibe','')}</td>
         </tr></table>
-        <a href="{item.get('url','#')}" style="display:block;margin-top:10px;font-family:{FONT_H};font-size:{size};font-weight:400;font-style:italic;color:#e5e2e1;text-decoration:none;line-height:1.3;">{item.get('title','')}</a>
-        <p style="margin:10px 0 0;font-family:{FONT_B};font-size:15px;color:#a1a1aa;line-height:1.7;">{item.get('tldr','')}</p>
-        {rt_html}
-        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:28px;"><tr><td style="height:1px;background-color:#27272a;">&nbsp;</td></tr></table>
+        <a href="{item.get('url','#')}" style="display:block;margin-top:6px;font-family:{FONT_H};font-size:{size};font-weight:400;font-style:italic;color:#e5e2e1;text-decoration:none;line-height:1.3;">{item.get('title','')}</a>
+        <p style="margin:5px 0 0;font-family:{FONT_B};font-size:13px;color:#a1a1aa;line-height:1.6;">{item.get('tldr','')}</p>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:12px;"><tr><td style="height:1px;background-color:#27272a;">&nbsp;</td></tr></table>
       </td></tr>
     </table>"""
 
@@ -427,22 +426,20 @@ def render_email(digest: dict, date_str: str) -> str:
 def _web_article(item: dict) -> str:
     vibe_color = VIBE_COLORS.get(item.get("vibe", ""), "#a1a1aa")
     rt = item.get("read_time", "")
-    rt_html = f'<span class="font-label text-[9px] text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> {rt} min read</span>' if rt else ""
+    rt_html = f'<span class="font-label text-[9px] text-outline">⏱ {rt} min</span>' if rt else ""
     return f"""
-    <article class="space-y-4 py-10">
-      <div class="flex justify-between items-center font-label text-[10px] tracking-widest text-outline uppercase">
-        <span>{item.get('source','')}</span><span style="color:{vibe_color};">{item.get('vibe','')}</span>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">{item.get('source','')}{rt_html}</span><span style="color:{vibe_color};">{item.get('vibe','')}</span>
       </div>
-      <h3 class="font-headline text-3xl font-normal italic leading-tight">
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
         <a href="{item.get('url','#')}" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">{item.get('title','')}</a>
       </h3>
-      <p class="text-outline text-[15px] leading-relaxed">{item.get('tldr','')}</p>
-      <div class="flex items-center gap-4 pt-2">
-        {rt_html}
-        <span class="h-px flex-1 bg-outline-variant/30"></span>
-        <div class="flex items-center gap-2 shrink-0">
-          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-2 py-1 flex items-center gap-1">👍</button>
-          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-2 py-1 flex items-center gap-1">👎</button>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">{item.get('tldr','')}</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article>"""
