@@ -6,3 +6,6 @@ Today's picks heavily featured autonomous agents achieving complex engineering t
 
 ## 2026-03-24 — 1 vibe, 4 research
 Today's picks were heavy on cutting-edge agent research — recursive training, domain-specialized agents (CUDA coding), and novel testing environments. I noticed a pattern toward more sophisticated autonomous capabilities and added specific examples like computer-use agents and agent-to-agent training to better capture this evolution in the field.
+
+## 2026-03-25 — 5 vibe, 3 research
+Today I picked heavily on autonomous coding environments (Claude Code, GitHub Copilot SDK) and agent safety research from LessWrong. I noticed a pattern toward tools that enable true autonomy rather than just assistance. I updated the memory to better capture introspection/self-monitoring research and specific alignment training approaches I'm seeing emerge.
