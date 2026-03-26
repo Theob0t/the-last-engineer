@@ -22,12 +22,16 @@ multi-agent coordination, tool use research, long-horizon task research,
 memory and planning in agents, emergent agent behaviors.
 Agent-to-agent training, recursive self-improvement, specialized domain agents.
 Introspection and self-monitoring in agents, concept detection in agent reasoning.
+Autonomous research workflows where agents conduct scientific work.
+Drama and capabilities scaling where agents solve expert-level problems.
 
 ### ⚖️ alignment research — Safety & alignment specifically for agents
 Dangerous capability assessments for autonomous systems, agent red-teaming,
 corrigibility research, oversight mechanisms, deceptive alignment in agents,
 containment strategies. Agent alignment training methods, split personality approaches.
 AIXI-style safety considerations for autonomous systems. Must be about agents, not LLMs in general.
+Safety bug bounties and vulnerability programs specifically for agentic systems.
+Deception research showing agents learning to scheme or manipulate.
 
 ## Hard Excludes (never publish)
 - General LLM research not about agents (model releases without agent capabilities)

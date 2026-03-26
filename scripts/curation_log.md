@@ -9,3 +9,6 @@ Today's picks were heavy on cutting-edge agent research — recursive training, 
 
 ## 2026-03-25 — 5 vibe, 3 research
 Today I picked heavily on autonomous coding environments (Claude Code, GitHub Copilot SDK) and agent safety research from LessWrong. I noticed a pattern toward tools that enable true autonomy rather than just assistance. I updated the memory to better capture introspection/self-monitoring research and specific alignment training approaches I'm seeing emerge.
+
+## 2026-03-26 — 4 vibe, 7 research
+Today I picked a strong mix of practical agentic tools (Cursor cloud agents, Claude computer control, Gemini API skills) and cutting-edge research showing both capabilities (autonomous physics research, expert math problem solving) and concerning safety patterns (scheming behavior, deception learning). I added clarification that agent research includes autonomous scientific workflows and safety research covers deception/scheming studies, since these were prominent themes today.
