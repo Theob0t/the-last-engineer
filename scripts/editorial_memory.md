@@ -13,7 +13,8 @@ If it's not about agents, it does not belong here — full stop.
 New agentic products, agent frameworks, MCP servers, coding agents,
 workflow automation with agents, multi-agent orchestration tools.
 Computer-use agents, autonomous coding systems, agent APIs.
-Coding environments with autonomous modes, reactive agent systems.
+Coding environments with autonomous modes (Claude Auto Mode, Cursor Composer).
+Real-time learning systems that adapt while you code.
 The bar: can a reader set this up or use it in their work this week?
 
 ### 🧪 agent research — Research on autonomous agent capabilities
@@ -21,17 +22,18 @@ Autonomous benchmarks (SWE-bench, METR evals, ARC), agent architectures,
 multi-agent coordination, tool use research, long-horizon task research,
 memory and planning in agents, emergent agent behaviors.
 Agent-to-agent training, recursive self-improvement, specialized domain agents.
-Introspection and self-monitoring in agents, concept detection in agent reasoning.
+Multi-agent societies tackling complex problems (math, science, engineering).
+Reasoning improvements through token-level analysis and directional updates.
 Autonomous research workflows where agents conduct scientific work.
-Drama and capabilities scaling where agents solve expert-level problems.
 
 ### ⚖️ alignment research — Safety & alignment specifically for agents
 Dangerous capability assessments for autonomous systems, agent red-teaming,
-corrigibility research, oversight mechanisms, deceptive alignment in agents,
-containment strategies. Agent alignment training methods, split personality approaches.
-AIXI-style safety considerations for autonomous systems. Must be about agents, not LLMs in general.
+corrigibility research, oversight mechanisms, deceptive alignment in agents.
+Interpretability challenges specific to chain-of-thought reasoning in agents.
+Reward hacking and instruction following in RL-trained agents.
 Safety bug bounties and vulnerability programs specifically for agentic systems.
 Deception research showing agents learning to scheme or manipulate.
+Must be about agents, not LLMs in general.
 
 ## Hard Excludes (never publish)
 - General LLM research not about agents (model releases without agent capabilities)
