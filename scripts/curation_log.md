@@ -15,3 +15,6 @@ Today I picked a strong mix of practical agentic tools (Cursor cloud agents, Cla
 
 ## 2026-03-27 — 6 vibe, 4 research
 Today's picks heavily favored practical agentic coding tools (Claude Auto Mode, Cursor Composer, MCP integrations) alongside solid agent research on multi-agent societies and alignment challenges. I noticed a strong pattern toward tools that autonomous execute code and research on interpretability gaps in agent reasoning, so I refined the categories to better capture real-time learning systems and interpretability-specific alignment research.
+
+## 2026-03-28 — 4 vibe, 2 research
+Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV's automated CRM agents, Claude Code improvements, Intercom's service automation) and research on agent capabilities and safety. I noticed I'm gravitating toward systems that actually automate workflows end-to-end rather than just assist. Updated the memory to better capture autonomous meeting/data systems and frontier capability timeline research like METR's horizon analysis.

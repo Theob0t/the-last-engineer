@@ -14,7 +14,8 @@ New agentic products, agent frameworks, MCP servers, coding agents,
 workflow automation with agents, multi-agent orchestration tools.
 Computer-use agents, autonomous coding systems, agent APIs.
 Coding environments with autonomous modes (Claude Auto Mode, Cursor Composer).
-Real-time learning systems that adapt while you code.
+Real-time learning systems that adapt from user feedback while coding.
+Autonomous meeting/data ingestion systems, customer service automation.
 The bar: can a reader set this up or use it in their work this week?
 
 ### 🧪 agent research — Research on autonomous agent capabilities
@@ -25,6 +26,7 @@ Agent-to-agent training, recursive self-improvement, specialized domain agents.
 Multi-agent societies tackling complex problems (math, science, engineering).
 Reasoning improvements through token-level analysis and directional updates.
 Autonomous research workflows where agents conduct scientific work.
+Frontier capability timelines and autonomous task horizon analysis.
 
 ### ⚖️ alignment research — Safety & alignment specifically for agents
 Dangerous capability assessments for autonomous systems, agent red-teaming,
