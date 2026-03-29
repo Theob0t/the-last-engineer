@@ -1148,18 +1148,37 @@ def render_agent_page():
         </div>
       </section>"""
 
+    # Parse full log entries for expandable cards
+    log_cards_html = ""
     if log_rows:
-        log_table_rows = "".join(
-            f"\n              <tr>"
-            f'\n                <td class="py-4">{_he(r["date"])}</td>'
-            f'\n                <td class="py-4 font-medium">{_he(r["ref"])}</td>'
-            f'\n                <td class="py-4">{_he(r["summary"])}</td>'
-            f'\n                <td class="py-4 text-right text-primary">{_he(r["stats"])}</td>'
-            f"\n              </tr>"
-            for r in log_rows
-        )
+        cards = []
+        # Re-parse log to get full text per entry
+        log_entries_full = re.split(r'\n(?=## )', log.strip())
+        for entry_text in reversed(log_entries_full):
+            if not entry_text.strip() or entry_text.startswith("# "):
+                continue
+            lines = entry_text.strip().split("\n")
+            heading = lines[0].lstrip("# ").strip()
+            body = "\n".join(lines[1:]).strip()
+            # Parse heading: "2026-03-29 — 7 vibe, 6 big picture"
+            parts = heading.split(" — ", 1)
+            date = parts[0].strip()
+            stats = parts[1].strip() if len(parts) > 1 else ""
+            body_html = body.replace("\n", "<br/>")
+            cards.append(f"""
+    <details class="bg-surface-container border-l-2 border-outline-variant/30 hover:border-primary/50 transition-colors">
+      <summary class="cursor-pointer px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <span class="font-label text-[10px] text-primary uppercase tracking-widest">{_he(date)}</span>
+          <span class="font-label text-[10px] text-outline uppercase">{_he(stats)}</span>
+        </div>
+        <span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+      </summary>
+      <div class="px-6 pb-6 text-outline text-sm leading-relaxed">{body_html}</div>
+    </details>""")
+        log_cards_html = "\n".join(cards)
     else:
-        log_table_rows = '\n              <tr><td colspan="4" class="py-8 text-center text-outline text-[11px] uppercase tracking-widest">No entries yet</td></tr>'
+        log_cards_html = '<p class="text-outline text-sm text-center py-8">No entries yet.</p>'
 
     page = f"""<!DOCTYPE html>
 <html class="dark" lang="en">
@@ -1214,7 +1233,7 @@ tailwind.config = {{
     <a href="./" class="text-2xl font-headline italic text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
   </div>
   <nav class="hidden md:flex gap-8 font-label text-[12px] tracking-widest uppercase items-center">
-    <a class="text-outline hover:text-white transition-colors duration-300" href="./">Featured</a>
+    <a class="text-outline hover:text-white transition-colors duration-300" href="./">Today</a>
     <a class="text-outline hover:text-white transition-colors duration-300" href="./issues/">Archive</a>
     <a class="text-primary" href="./agent.html">The Agent</a>
     <a class="text-outline hover:text-white transition-colors duration-300" href="./sources.html">Sources</a>
@@ -1239,6 +1258,9 @@ tailwind.config = {{
       <div class="flex items-center gap-2">Journal: <span class="text-on-surface">{len(journal)} days</span></div>
       <div class="ml-auto opacity-50">Memory Synced</div>
     </div>
+    <p class="mt-6 font-body text-outline text-sm leading-relaxed max-w-2xl">
+      An AI editor that curates this newsletter daily, writes an editorial explaining its thinking, and evolves its beliefs through a tiered memory system. Its identity updates weekly based on accumulated observations and reader feedback.
+    </p>
   </section>
 
   <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
@@ -1291,19 +1313,7 @@ tailwind.config = {{
       <div class="h-[1px] flex-grow mx-8 bg-outline-variant/10"></div>
       <div class="font-label text-[10px] text-primary">SYNC: OK</div>
     </div>
-    <div class="overflow-x-auto">
-      <table class="w-full text-left font-label text-[11px] tracking-tight uppercase">
-        <thead>
-          <tr class="text-outline border-b border-outline-variant/20">
-            <th class="pb-4 font-normal">Date</th>
-            <th class="pb-4 font-normal">Ref</th>
-            <th class="pb-4 font-normal">Summary</th>
-            <th class="pb-4 font-normal text-right">Articles</th>
-          </tr>
-        </thead>
-        <tbody class="text-on-surface divide-y divide-outline-variant/5">{log_table_rows}
-        </tbody>
-      </table>
+    <div class="space-y-2">{log_cards_html}
     </div>
   </section>
 
@@ -1336,7 +1346,7 @@ tailwind.config = {{
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl flex justify-around items-center px-4 pb-6">
   <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
     <span class="material-symbols-outlined">auto_awesome</span>
-    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Featured</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Today</span>
   </a>
   <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
     <span class="material-symbols-outlined">inventory_2</span>
@@ -1508,10 +1518,36 @@ TEST_DIGEST = {
     ],
 }
 
-def run(preview=False, test_email=False, test_web=False, push=False, rebuild=False):
+def run(preview=False, test_email=False, test_web=False, push=False, rebuild=False, regenerate=False):
     today = dt.date.today()
     date_str = today.strftime("%A, %B %-d, %Y")
     subject = f"{NEWSLETTER_NAME} — {today.strftime('%b %-d, %Y')}"
+
+    if regenerate:
+        print("\n🔄 Regenerating site pages from existing data...")
+        # Load today's digest from daily_log
+        daily_log = load_daily_log()
+        today_entry = None
+        for e in reversed(daily_log):
+            if e.get("type") != "weekly_consolidation":
+                today_entry = e
+                break
+        digest = {}
+        editorial_text = ""
+        if today_entry:
+            editorial_text = today_entry.get("editorial", "")
+            # Reconstruct digest from selected_articles
+            vibe = [a for a in today_entry.get("selected_articles", []) if a.get("section") == "vibe_coding"]
+            research = [a for a in today_entry.get("selected_articles", []) if a.get("section") == "capabilities_research"]
+            digest = {"vibe_coding": vibe, "capabilities_research": research}
+        issues = get_all_issues()
+        update_archive_page(issues)
+        update_landing_page(issues, digest, editorial_text)
+        render_agent_page()
+        if push:
+            git_push()
+        print("✅ Site regenerated!")
+        return
 
     if rebuild:
         issues = get_all_issues()
@@ -1587,4 +1623,5 @@ if __name__ == "__main__":
         test_web="--test-web" in sys.argv,
         push="--push" in sys.argv,
         rebuild="--rebuild-archive" in sys.argv,
+        regenerate="--regenerate" in sys.argv,
     )
