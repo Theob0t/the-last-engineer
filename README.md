@@ -49,7 +49,9 @@ The agent has three memory tiers:
 └─────────────────────────────────────────────┘
 ```
 
-**Daily**: The agent curates articles, writes an editorial explaining its picks (the "Editor's Note"), and logs a journal entry with themes, surprises, and observations.
+**Daily**: The agent curates articles, writes an editorial reacting to its picks (the "Editor's Note"), and logs a journal entry with themes, surprises, and emotional reactions.
+
+**Daily (voice pass)**: After drafting, a second LLM pass critiques the editorial for AI-sounding patterns (clichés, hedging, meta-narration) and rewrites it to sound like a specific human editor.
 
 **Weekly**: After 7 journal entries, the agent consolidates episodic memory into identity updates. Its beliefs, values, and philosophy evolve based on accumulated observations + reader vote patterns.
 
@@ -61,7 +63,8 @@ The agent has three memory tiers:
 
 ```
 fetch 40+ feeds → dedup (URL hash + 7-day semantic) → curate with Claude
-    → write editorial + journal entry → publish web + email
+    → draft editorial + journal entry → critique pass (rewrite for human voice)
+    → publish web + email
     → [every 7 days: consolidate journal → update identity]
     → git push → GitHub Pages
 ```
@@ -94,10 +97,10 @@ Reader votes (👍/👎 on each article) feed back into:
 scripts/
 ├── run.py                      ← the entire pipeline (one file)
 ├── curation_log.md             ← daily + weekly editorial decisions
-├── editorial_memory.md         ← legacy (kept as backup)
+├── editorial_memory.md         ← editorial scope, reader profile, voice guidelines
 ├── .seen_hashes.json           ← URL dedup state
 └── memory/
-    ├── identity.md             ← agent's persistent self (values, beliefs, philosophy)
+    ├── identity.md             ← agent's persistent self (values, beliefs, pet peeves, guilty pleasures)
     ├── journal.json            ← 7-day rolling episodic memory
     ├── daily_log.json          ← structured metrics + audit trail
     └── recent_summaries.json   ← 7-day semantic dedup

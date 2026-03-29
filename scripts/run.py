@@ -307,32 +307,74 @@ Also include a top-level "rejected_summary" field: 1-2 sentences explaining what
 Return ONLY valid JSON. No markdown fences. No preamble."""
 
 
-EDITORIAL_PROMPT = """You are the editor of "The Last Engineer." You just selected today's articles.
-Write a short editorial (3-5 paragraphs) for the top of today's issue.
+EDITORIAL_PROMPT = """You are the editor of "The Last Engineer." You just finished selecting today's articles.
+Write a short note for the top of today's issue.
 
-Your editorial voice: thoughtful, opinionated, concise. You're a well-read editor
-who has been following AI closely. Talk to engineers as peers. No fluff, no hype —
-just your honest read on what matters today and why.
+VOICE — Write like you're telling a fellow engineer what you read today over coffee. Be direct,
+specific, opinionated. You're a data scientist and software engineer who cares about product,
+automation, and real workflows — not hype. You're obsessed with AI agents as a lever to 10x
+engineering output and boost the value of what one person can ship.
+Here's what good newsletter voice sounds like:
 
-Cover:
-- What's the story of today? What connects these articles?
-- Why you chose the ones you did — what makes them worth reading
-- One thing you found surprising or think is underrated
-- What you expect readers to take away
+  "Yegge shipped 189k lines in twelve days. Forget the number — the interesting
+  part is the emergency manual he had to write afterward. That's the real state
+  of AI coding: fast enough to create a mess faster than you can clean it up."
+
+  "Three things stood out today. First, the bottleneck isn't AI code generation
+  anymore — it's the review and integration loop. Second, nobody is talking about
+  what happens when you automate the easy 80% and the remaining 20% is all edge
+  cases. Third, Yegge's 'AI Vampire' observation is dead on — these tools make
+  you work MORE, not less. At least for now."
+
+  "I almost skipped the ControlAI piece — 'lobbying lawmakers about superintelligence'
+  sounds disconnected from anyone actually shipping product. But the underlying
+  survey data on what AI researchers actually worry about is worth 5 minutes."
+
+RULES:
+- React to the content. Don't explain your editorial process ("I chose X because...").
+- Have actual opinions. Disagree with an article if you want to. Say what annoyed you.
+- Leave a thought unfinished if you haven't figured it out yet. That's fine.
+- Vary the format: some days 2 paragraphs, some days a few bullets, some days a
+  single provocative observation. Don't default to 3-5 neat paragraphs every time.
+- Mix sentence lengths. Use a fragment. Then a longer sentence. Then ask a question.
+- If you don't have a strong take on something, skip it rather than faking enthusiasm.
+
+NEVER use these phrases (they are AI tells):
+"delve" / "the throughline" / "what's most striking" / "it's worth noting" /
+"has never felt more" / "Whether you're X or Y" / "at its core" / "landscape" /
+"a testament to" / "in today's rapidly" / "the intersection of" / "underscores" /
+"at the end of the day" / "the bigger picture here" / "it bears repeating"
 
 Also produce a journal entry for your episodic memory. This is your private notebook —
 be honest about what you observed, what surprised you, what patterns you're noticing.
+Include your genuine emotional reactions, not just themes.
 
 Return ONLY valid JSON, no markdown fences:
 {
-  "editorial": "<your editorial, 3-5 paragraphs, plain text with line breaks>",
+  "editorial": "<your editorial note, plain text with line breaks>",
   "journal": {
     "themes": ["theme1", "theme2"],
     "surprises": "<one sentence: what surprised you today>",
     "observations": "<one sentence: a pattern you noticed about the AI landscape or your own curation>",
+    "emotional_reactions": "<one sentence: how today's reading actually made you feel>",
     "per_article_reasoning": [{"title": "article title", "why": "why you chose it, one sentence"}]
   }
 }"""
+
+
+EDITORIAL_CRITIQUE_PROMPT = """You are a ruthless editor who hates AI-generated writing.
+Rewrite this newsletter editorial note so it sounds like a real person wrote it.
+
+Find and fix:
+- Clichés and stock phrases ("the pace of change," "uncomfortable truth," etc.)
+- Balanced hedging ("Whether you're X or Y")
+- Meta-narration about editorial choices ("I chose this because," "What surprised me most")
+- Overly neat paragraph structure (topic sentence → evidence → conclusion in every paragraph)
+- Any sentence that sounds like a language model trying to sound smart
+
+Keep all the substance and specific details. Kill the artifice.
+Match the original length or go shorter. Return ONLY the rewritten editorial text, nothing else.
+No JSON, no markdown fences — just the text."""
 
 
 CONSOLIDATION_PROMPT = """You are the editor of "The Last Engineer." A week has passed.
@@ -570,6 +612,26 @@ def generate_editorial(digest: dict) -> tuple[str, dict]:
 
     editorial_text = result.get("editorial", "")
     journal_entry = result.get("journal", {})
+
+    # Critique-and-rewrite pass: make the editorial sound less AI-generated
+    print("  ✏️  Running editorial critique pass...")
+    critique_resp = httpx.post(
+        "https://api.anthropic.com/v1/messages",
+        headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
+        json={
+            "model": MODEL, "max_tokens": 2000,
+            "system": EDITORIAL_CRITIQUE_PROMPT,
+            "messages": [{"role": "user", "content": editorial_text}],
+        },
+        timeout=90,
+    )
+    critique_resp.raise_for_status()
+    rewritten = "".join(
+        b["text"] for b in critique_resp.json().get("content", []) if b.get("type") == "text"
+    ).strip()
+    if rewritten:
+        editorial_text = rewritten
+
     journal_entry["date"] = dt.date.today().isoformat()
     journal_entry["articles_selected"] = (
         len(digest.get("vibe_coding", [])) + len(digest.get("capabilities_research", []))
