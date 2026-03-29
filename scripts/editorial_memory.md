@@ -1,47 +1,40 @@
 ## Reader Profile
-Proficient engineers who build and ship with agentic AI daily.
-They vibe code, automate their workflows, and run agents in production.
+Proficient engineers who build and ship with AI daily.
+They vibe code, automate their workflows, and push the boundaries of what's possible with AI tools.
 They are not learning about AI — they are already building with it.
+They also care deeply about where AI is headed and what it means for the world.
 
-## This Newsletter Is ONLY About Agents
-Every article must be about autonomous AI agents. Nothing else.
-If it's not about agents, it does not belong here — full stop.
+## Editorial Scope
+This newsletter covers TWO things:
+1. AI tools and workflows for builders (vibe coding section)
+2. The big picture of AI: futures, societal impact, deep analysis (big picture section)
 
-## Three Types of Articles (the only three)
+## Section 1: Vibe Coding — AI Tools for Builders
+AI dev tool updates (Claude Code, Cursor, Windsurf, Copilot, Replit, etc.).
+New AI-powered tools for engineers and builders.
+Vibe coding and agentic coding workflows.
+Real use cases and "how I built X" posts — these are the most valued content.
+MCP integrations, workflow automation, efficiency tips.
+The bar: would a builder want to try this or learn from it this week?
 
-### 🛠 agentic tools — Agentic tools you can use today
-New agentic products, agent frameworks, MCP servers, coding agents,
-workflow automation with agents, multi-agent orchestration tools.
-Computer-use agents, autonomous coding systems, agent APIs.
-Coding environments with autonomous modes (Claude Auto Mode, Cursor Composer).
-Real-time learning systems that adapt from user feedback while coding.
-Autonomous meeting/data ingestion systems, customer service automation.
-The bar: can a reader set this up or use it in their work this week?
-
-### 🧪 agent research — Research on autonomous agent capabilities
-Autonomous benchmarks (SWE-bench, METR evals, ARC), agent architectures,
-multi-agent coordination, tool use research, long-horizon task research,
-memory and planning in agents, emergent agent behaviors.
-Agent-to-agent training, recursive self-improvement, specialized domain agents.
-Multi-agent societies tackling complex problems (math, science, engineering).
-Reasoning improvements through token-level analysis and directional updates.
-Autonomous research workflows where agents conduct scientific work.
-Frontier capability timelines and autonomous task horizon analysis.
-
-### ⚖️ alignment research — Safety & alignment specifically for agents
-Dangerous capability assessments for autonomous systems, agent red-teaming,
-corrigibility research, oversight mechanisms, deceptive alignment in agents.
-Interpretability challenges specific to chain-of-thought reasoning in agents.
-Reward hacking and instruction following in RL-trained agents.
-Safety bug bounties and vulnerability programs specifically for agentic systems.
-Deception research showing agents learning to scheme or manipulate.
-Must be about agents, not LLMs in general.
+## Section 2: The Big Picture — Where AI Is Going
+Future of work and AI (Dario Amodei essay style).
+AI economy analysis, superintelligence discourse, AGI timelines.
+Real-world AI impact stories (cost reductions, access shifts, industry changes).
+AI safety in the philosophical and societal sense.
+Deep, long-form analysis (gwern-style thinking pieces).
+Thoughtful industry commentary (Steve Yegge, roon, etc.).
+The bar: does this change how you think about AI's trajectory?
 
 ## Hard Excludes (never publish)
-- General LLM research not about agents (model releases without agent capabilities)
-- Vibe coding tools that are just IDE features (autocomplete, inline suggestions)
-- Fundraising, valuations, hiring announcements
-- Conference announcements, meetups
-- Consumer AI products (chatbots, image gen, etc.)
-- Vague policy or governance with no technical substance
-- Anything about non-agentic capabilities
+- Pure model research papers with no real-world angle
+- Hiring, fundraising, conference announcements
+- Consumer AI products (chatbots, image gen for end users)
+- Benchmark papers without societal implications
+- Vague policy/governance with no substance
+
+## What We Prioritize
+- Real use cases from builders (section 1) — always surface these
+- Essays that reframe how you think about AI's future (section 2)
+- Source diversity — prefer different voices over multiple articles from one source
+- Specificity — concrete details beat vague announcements

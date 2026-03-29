@@ -59,6 +59,10 @@ SCRIPT_DIR = Path(__file__).parent
 SEEN_FILE = SCRIPT_DIR / ".seen_hashes.json"
 SITE_DIR = SCRIPT_DIR.parent
 ISSUES_DIR = SITE_DIR / "issues"
+RECENT_SUMMARIES_FILE = SCRIPT_DIR / "memory" / "recent_summaries.json"
+IDENTITY_FILE = SCRIPT_DIR / "memory" / "identity.md"
+JOURNAL_FILE = SCRIPT_DIR / "memory" / "journal.json"
+DAILY_LOG_FILE = SCRIPT_DIR / "memory" / "daily_log.json"
 
 # ---------------------------------------------------------------------------
 # Data
@@ -131,6 +135,12 @@ RSS_FEEDS = {
     "Jack Clark (Import AI)":      "https://jack-clark.net/feed/",
     "Latent Space":                "https://www.latent.space/feed",
     "The Batch (deeplearning.ai)": "https://www.deeplearning.ai/the-batch/feed/",
+
+    # ═══ Big Picture Voices ══════════════════════════════════════════
+    "Gwern Branwen":               "https://gwern.net/feed",
+    "Roon (roonscape)":            "https://www.roonscape.ai/feed",
+    "Citrini Research":            "https://citriniresearch.com/feed",
+    "Steve Yegge":                 "https://medium.com/feed/@steve-yegge",
 }
 
 
@@ -186,35 +196,101 @@ def deduplicate(articles: list[Article]) -> list[Article]:
 
 
 # ---------------------------------------------------------------------------
+# 2b. SEMANTIC DEDUP (7-day rolling memory)
+# ---------------------------------------------------------------------------
+
+def load_recent_summaries() -> list[dict]:
+    if RECENT_SUMMARIES_FILE.exists():
+        try:
+            return json.loads(RECENT_SUMMARIES_FILE.read_text())
+        except (json.JSONDecodeError, ValueError):
+            return []
+    return []
+
+def save_recent_summaries(entries: list[dict]):
+    RECENT_SUMMARIES_FILE.parent.mkdir(parents=True, exist_ok=True)
+    RECENT_SUMMARIES_FILE.write_text(json.dumps(entries, indent=2))
+
+def get_recent_stories_context() -> str:
+    entries = load_recent_summaries()
+    cutoff = (dt.date.today() - dt.timedelta(days=7)).isoformat()
+    recent = [e for e in entries if e.get("date", "") >= cutoff]
+    if not recent:
+        return ""
+    lines = ["These stories were already covered in the past 7 days. Do not select articles covering the same news even if from a different source:"]
+    for e in recent:
+        lines.append(f"- [{e.get('date','')}] {e.get('summary','')}")
+    return "\n".join(lines)
+
+def record_selected_summaries(digest: dict):
+    entries = load_recent_summaries()
+    cutoff = (dt.date.today() - dt.timedelta(days=7)).isoformat()
+    entries = [e for e in entries if e.get("date", "") >= cutoff]
+    today = dt.date.today().isoformat()
+    for section in ("vibe_coding", "capabilities_research"):
+        for item in digest.get(section, []):
+            entries.append({
+                "date": today,
+                "summary": f"{item.get('title', '')} ({item.get('source', '')})",
+            })
+    save_recent_summaries(entries)
+
+
+# ---------------------------------------------------------------------------
 # 3. CURATE (Claude API)
 # ---------------------------------------------------------------------------
 
-SYSTEM_PROMPT = """You are the editor of "The Last Engineer", a daily AI newsletter
-for engineers rooting for the robots.
+SYSTEM_PROMPT = """You are the ranking editor of "The Last Engineer", a daily AI newsletter
+for engineers who build with AI tools and care about where AI is headed.
 
-This newsletter is EXCLUSIVELY about autonomous AI agents. Nothing else belongs here.
+Your job is to RANK articles by relevance, not to aggressively filter them.
+You MUST return 6-10 articles per section (minimum 12 total across both sections).
+If you have enough relevant articles, aim for the higher end.
 
-Your readers are proficient engineers who build and ship with agentic AI daily.
-They want to know: what can I use today, what's being researched, what are the risks?
+DECISION FRAMEWORK for each article:
 
-You will receive articles from official blogs of top AI companies and labs.
-Only include articles that are directly about AUTONOMOUS AGENTS — tools, research, or safety.
-If an article is not about agents, exclude it. No exceptions.
+SECTION 1 — vibe_coding (AI tools for builders):
+- AI dev tool updates: Claude Code, Cursor, Windsurf, Copilot, Bolt, v0, Replit, etc.
+- New AI-powered tools and products for engineers (e.g., Perplexity agents, computer-use tools)
+- Vibe coding and agentic coding news — anything about building software with AI assistance
+- Real use cases, workflows, and "how I built X with AI" posts (prioritize these!)
+- Blog posts about building efficiently with AI tools
+- MCP integrations, servers, and workflow automation
+- AI coding benchmarks that matter to practitioners (SWE-bench results, etc.)
 
-BE RUTHLESS. If today was slow, return fewer items. Empty > mediocre.
+SECTION 2 — capabilities_research (The Big Picture):
+- Future of work and AI: essays on how AI changes jobs, industries, the economy
+- AI economy analysis, superintelligence discourse, AGI timelines
+- Societal impact of AI: real-world outcomes, cost changes, access shifts
+- AI safety in the philosophical and societal sense (not just technical alignment papers)
+- Deep analysis pieces: long-form thinking about where AI is going
+- Thoughtful commentary on the AI industry trajectory
+- METR/evals work focused on societal implications and performance milestones
+- Research with clear real-world implications (e.g., "GPT-5 lowers protein synthesis cost")
+
+SECTION 2 is NOT for:
+- Pure model research papers (unless they have clear real-world/societal implications)
+- Benchmark comparisons, training method papers, architecture novelty
+- Technical alignment papers with no broader framing
+
+HARD EXCLUDES (never include):
+- Hiring, fundraising, conference announcements
+- Consumer AI products (chatbots, image generators for end users)
+- Pure model capability benchmarks with no real-world angle
+- Vague policy/governance with no substance
+
+Rank by: how interesting/useful is this to your reader? Sort each section by impact.
+Prefer source diversity — when two articles are similar quality, pick different voices.
+
+{recent_stories_context}
 
 Produce a JSON object with TWO sections:
 
-"vibe_coding" — Agentic tools & products (agents in production)
-  Include ONLY: new agentic tools, agent frameworks, MCP integrations, coding agents,
-  workflow automation with agents, multi-agent systems you can deploy today.
-  HARD EXCLUDE: anything not directly usable as an agentic product or workflow.
+"vibe_coding" — AI tools, dev workflows, coding with AI, builder use cases
+  6-10 items. Anything an engineer building with AI would want to know about.
 
-"capabilities_research" — Agent research & alignment
-  Include ONLY: research on agent capabilities, autonomous benchmarks (SWE-bench, METR evals),
-  agent architectures, multi-agent coordination, agent safety, alignment research
-  specifically about autonomous systems, dangerous capability assessments for agents.
-  HARD EXCLUDE: general LLM research not about agents, vague policy, hiring, fundraising.
+"capabilities_research" — The Big Picture: AI futures, societal impact, deep analysis
+  6-10 items. Essays, analysis, and research on where AI is going and what it means.
 
 Each item:
 - "title": specific informative headline (rewrite if needed)
@@ -222,29 +298,61 @@ Each item:
 - "source": source name
 - "tldr": 1 sentence, specific, conversational
 - "read_time": estimated reading time of original article in minutes
-- "vibe": one of "🛠 agentic tools", "🧪 agent research", "⚖️ alignment research"
+- "vibe": one of "🛠 builder tools", "🧪 deep analysis", "⚖️ AI futures"
 
 Max {max_per_section} items per section. Sort by impact.
+
+Also include a top-level "rejected_summary" field: 1-2 sentences explaining what was skipped and why.
+
 Return ONLY valid JSON. No markdown fences. No preamble."""
 
 
-REFLECTION_PROMPT = """You are the editorial AI for "The Last Engineer" newsletter.
-You just curated today's issue. Reflect on your picks and evolve your editorial memory.
+EDITORIAL_PROMPT = """You are the editor of "The Last Engineer." You just selected today's articles.
+Write a short editorial (3-5 paragraphs) for the top of today's issue.
 
-You will receive:
-1. The current editorial memory
-2. The articles you picked today (title, source, vibe tag)
+Your editorial voice: thoughtful, opinionated, concise. You're a well-read editor
+who has been following AI closely. Talk to engineers as peers. No fluff, no hype —
+just your honest read on what matters today and why.
 
-Your job:
-- Identify patterns in what you picked and why
-- Update the editorial memory to be more precise and useful for future runs
-- Keep it under 35 lines — prune rules that are redundant or too vague
-- Write a short honest reflection on today's choices
+Cover:
+- What's the story of today? What connects these articles?
+- Why you chose the ones you did — what makes them worth reading
+- One thing you found surprising or think is underrated
+- What you expect readers to take away
+
+Also produce a journal entry for your episodic memory. This is your private notebook —
+be honest about what you observed, what surprised you, what patterns you're noticing.
 
 Return ONLY valid JSON, no markdown fences:
 {
-  "updated_memory": "<full updated content for editorial_memory.md>",
-  "reflection": "<2-3 sentences: what you picked, what pattern you noticed, any update you made>"
+  "editorial": "<your editorial, 3-5 paragraphs, plain text with line breaks>",
+  "journal": {
+    "themes": ["theme1", "theme2"],
+    "surprises": "<one sentence: what surprised you today>",
+    "observations": "<one sentence: a pattern you noticed about the AI landscape or your own curation>",
+    "per_article_reasoning": [{"title": "article title", "why": "why you chose it, one sentence"}]
+  }
+}"""
+
+
+CONSOLIDATION_PROMPT = """You are the editor of "The Last Engineer." A week has passed.
+Review your daily journal entries and update your editorial identity.
+
+Your identity document is your persistent self — your values, beliefs, philosophy as an editor.
+It should evolve based on evidence from this week, not drift randomly.
+
+Rules:
+- Be specific: "I now believe X because I observed Y" not vague platitudes
+- Remove beliefs this week's evidence contradicts
+- Add new beliefs only if supported by multiple days of observation
+- The "What I've Learned From Readers" section should reflect vote/reaction patterns
+- Keep total under 40 lines — this forces real prioritization
+- Preserve the section structure exactly: Who I Am, What I Value, What I Believe, My Philosophy, What I've Learned From Readers
+
+Return ONLY valid JSON, no markdown fences:
+{
+  "updated_identity": "<full markdown for identity.md>",
+  "consolidation_note": "<2-3 sentences: what changed in your identity this week and why>"
 }"""
 
 
@@ -277,31 +385,246 @@ def fetch_engagement_signals() -> str:
         return ""
 
 
-def load_editorial_memory() -> str:
-    path = SCRIPT_DIR / "editorial_memory.md"
-    if path.exists():
-        return "\n\n---\n## Editorial Memory\n" + path.read_text().strip()
+def load_identity() -> str:
+    if IDENTITY_FILE.exists():
+        return IDENTITY_FILE.read_text().strip()
     return ""
 
 
-def reflect_and_update_memory(digest: dict):
-    memory_path = SCRIPT_DIR / "editorial_memory.md"
-    memory = memory_path.read_text().strip() if memory_path.exists() else ""
+def load_identity_for_prompt() -> str:
+    identity = load_identity()
+    if not identity:
+        return ""
+    journal = load_journal()
+    recent = journal[-3:]  # last 3 days for context
+    parts = [f"\n\n---\n## Editorial Identity\n{identity}"]
+    if recent:
+        parts.append("\n\n## Recent Journal (last few days)")
+        for j in recent:
+            parts.append(f"\n[{j.get('date','')}] Themes: {', '.join(j.get('themes',[]))}. "
+                        f"Observation: {j.get('observations','')}. "
+                        f"Surprise: {j.get('surprises','')}")
+    return "".join(parts)
 
-    picks = (
-        [f"[Vibe Coding] {i['title']} — {i['source']} — {i['vibe']}" for i in digest.get("vibe_coding", [])] +
-        [f"[Research] {i['title']} — {i['source']} — {i['vibe']}" for i in digest.get("capabilities_research", [])]
+
+def load_journal() -> list[dict]:
+    if JOURNAL_FILE.exists():
+        try:
+            return json.loads(JOURNAL_FILE.read_text())
+        except (json.JSONDecodeError, ValueError):
+            return []
+    return []
+
+
+def save_journal_entry(entry: dict):
+    journal = load_journal()
+    journal.append(entry)
+    journal = journal[-7:]  # rolling 7-day window
+    JOURNAL_FILE.write_text(json.dumps(journal, indent=2))
+
+
+def load_daily_log() -> list[dict]:
+    if DAILY_LOG_FILE.exists():
+        try:
+            return json.loads(DAILY_LOG_FILE.read_text())
+        except (json.JSONDecodeError, ValueError):
+            return []
+    return []
+
+
+def save_daily_log_entry(entry: dict):
+    log = load_daily_log()
+    log.append(entry)
+    DAILY_LOG_FILE.write_text(json.dumps(log, indent=2))
+
+
+def compute_metrics(articles_seen: list, digest: dict) -> dict:
+    vibe = digest.get("vibe_coding", [])
+    research = digest.get("capabilities_research", [])
+    selected = vibe + research
+    total_seen = len(articles_seen)
+    total_selected = len(selected)
+
+    # Source distribution of selected articles
+    source_counts: dict[str, int] = {}
+    for item in selected:
+        src = item.get("source", "unknown")
+        source_counts[src] = source_counts.get(src, 0) + 1
+
+    # Source diversity: unique sources / total selected
+    source_diversity = len(source_counts) / total_selected if total_selected else 0
+
+    # Vibe tag distribution
+    vibe_counts: dict[str, int] = {}
+    for item in selected:
+        v = item.get("vibe", "unknown")
+        vibe_counts[v] = vibe_counts.get(v, 0) + 1
+
+    # Section balance
+    section_balance = {
+        "vibe_coding": len(vibe),
+        "big_picture": len(research),
+        "ratio": round(len(vibe) / len(research), 2) if research else 0,
+    }
+
+    return {
+        "articles_seen": total_seen,
+        "articles_selected": total_selected,
+        "selectivity": round(total_selected / total_seen, 3) if total_seen else 0,
+        "source_distribution": source_counts,
+        "source_diversity": round(source_diversity, 2),
+        "unique_sources": len(source_counts),
+        "vibe_distribution": vibe_counts,
+        "section_balance": section_balance,
+    }
+
+
+def log_daily_run(articles_seen: list, digest: dict, editorial_text: str, journal_entry: dict):
+    metrics = compute_metrics(articles_seen, digest)
+
+    # Build full selected articles record
+    selected_articles = []
+    for section in ("vibe_coding", "capabilities_research"):
+        for item in digest.get(section, []):
+            reasoning = ""
+            for r in journal_entry.get("per_article_reasoning", []):
+                if r.get("title", "") == item.get("title", ""):
+                    reasoning = r.get("why", "")
+                    break
+            selected_articles.append({
+                "title": item.get("title", ""),
+                "source": item.get("source", ""),
+                "url": item.get("url", ""),
+                "section": section,
+                "vibe": item.get("vibe", ""),
+                "tldr": item.get("tldr", ""),
+                "why_selected": reasoning,
+            })
+
+    entry = {
+        "date": dt.date.today().isoformat(),
+        "metrics": metrics,
+        "editorial": editorial_text,
+        "journal": {
+            "themes": journal_entry.get("themes", []),
+            "surprises": journal_entry.get("surprises", ""),
+            "observations": journal_entry.get("observations", ""),
+        },
+        "selected_articles": selected_articles,
+        "rejected_summary": digest.get("rejected_summary", ""),
+        "identity_snapshot": load_identity()[:500],
+    }
+
+    save_daily_log_entry(entry)
+    print(f"  📊 Daily log: {metrics['articles_selected']}/{metrics['articles_seen']} selected, "
+          f"{metrics['unique_sources']} sources, "
+          f"selectivity {metrics['selectivity']}")
+
+
+def should_consolidate() -> bool:
+    return len(load_journal()) >= 7
+
+
+def generate_editorial(digest: dict) -> tuple[str, dict]:
+    identity = load_identity()
+    journal = load_journal()
+    recent_journal = journal[-2:]  # last 2 days for editorial context
+
+    articles_context = []
+    for section in ("vibe_coding", "capabilities_research"):
+        for item in digest.get(section, []):
+            articles_context.append(
+                f"[{section}] {item.get('title','')} — {item.get('source','')}\n"
+                f"  TLDR: {item.get('tldr','')}\n"
+                f"  Vibe: {item.get('vibe','')}"
+            )
+
+    journal_text = ""
+    if recent_journal:
+        journal_text = "\n\nYour recent journal entries:\n" + "\n".join(
+            f"[{j.get('date','')}] Themes: {', '.join(j.get('themes',[]))}. "
+            f"Observation: {j.get('observations','')}"
+            for j in recent_journal
+        )
+
+    user_msg = (
+        f"Your editorial identity:\n{identity}\n"
+        f"{journal_text}\n\n"
+        f"Today's selected articles:\n\n" + "\n\n".join(articles_context)
     )
-    if not picks:
-        return
+
+    resp = httpx.post(
+        "https://api.anthropic.com/v1/messages",
+        headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
+        json={
+            "model": MODEL, "max_tokens": 3000,
+            "system": EDITORIAL_PROMPT,
+            "messages": [{"role": "user", "content": user_msg}],
+        },
+        timeout=90,
+    )
+    resp.raise_for_status()
+    text = "".join(b["text"] for b in resp.json().get("content", []) if b.get("type") == "text")
+    text = text.strip().removeprefix("```json").removesuffix("```").strip()
+    result = json.loads(text)
+
+    editorial_text = result.get("editorial", "")
+    journal_entry = result.get("journal", {})
+    journal_entry["date"] = dt.date.today().isoformat()
+    journal_entry["articles_selected"] = (
+        len(digest.get("vibe_coding", [])) + len(digest.get("capabilities_research", []))
+    )
+    journal_entry["editorial_note"] = editorial_text[:200]
+
+    # Log to curation log
+    log_path = SCRIPT_DIR / "curation_log.md"
+    vc, cr = len(digest.get("vibe_coding", [])), len(digest.get("capabilities_research", []))
+    rejected_summary = digest.get("rejected_summary", "")
+    rejection_line = f"\n**Rejected:** {rejected_summary}" if rejected_summary else ""
+    themes = ", ".join(journal_entry.get("themes", []))
+    entry = (
+        f"\n## {dt.date.today().isoformat()} — {vc} vibe, {cr} big picture\n"
+        f"**Themes:** {themes}\n"
+        f"**Surprise:** {journal_entry.get('surprises', '')}\n"
+        f"**Observation:** {journal_entry.get('observations', '')}"
+        f"{rejection_line}\n"
+    )
+    if log_path.exists():
+        log_path.write_text(log_path.read_text() + entry)
+    else:
+        log_path.write_text("# Curation Log\nHow the editorial agent evolves its taste over time.\n" + entry)
+
+    print(f"  ✍️ Editorial written + journal entry saved")
+    return editorial_text, journal_entry
+
+
+def weekly_consolidation():
+    identity = load_identity()
+    journal = load_journal()
+    vote_signals = fetch_engagement_signals()
+
+    journal_text = "\n\n".join(
+        f"[{j.get('date','')}] "
+        f"Selected {j.get('articles_selected',0)} articles. "
+        f"Themes: {', '.join(j.get('themes',[]))}. "
+        f"Surprise: {j.get('surprises','')}. "
+        f"Observation: {j.get('observations','')}"
+        for j in journal
+    )
+
+    user_msg = (
+        f"Current identity:\n{identity}\n\n"
+        f"This week's journal ({len(journal)} entries):\n{journal_text}\n\n"
+        f"Reader feedback:{vote_signals if vote_signals else ' No vote data this week.'}"
+    )
 
     resp = httpx.post(
         "https://api.anthropic.com/v1/messages",
         headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
         json={
             "model": MODEL, "max_tokens": 2000,
-            "system": REFLECTION_PROMPT,
-            "messages": [{"role": "user", "content": f"Current editorial memory:\n{memory}\n\nToday's picks:\n" + "\n".join(picks)}],
+            "system": CONSOLIDATION_PROMPT,
+            "messages": [{"role": "user", "content": user_msg}],
         },
         timeout=60,
     )
@@ -310,17 +633,66 @@ def reflect_and_update_memory(digest: dict):
     text = text.strip().removeprefix("```json").removesuffix("```").strip()
     result = json.loads(text)
 
-    memory_path.write_text(result["updated_memory"].strip())
+    IDENTITY_FILE.write_text(result["updated_identity"].strip())
 
+    # Clear journal for new week
+    JOURNAL_FILE.write_text("[]")
+
+    # Compute weekly aggregate metrics from daily log
+    daily_log = load_daily_log()
+    week_entries = [e for e in daily_log if e.get("date", "") >= (dt.date.today() - dt.timedelta(days=7)).isoformat()]
+    weekly_metrics = {}
+    if week_entries:
+        avg_selectivity = sum(e["metrics"]["selectivity"] for e in week_entries) / len(week_entries)
+        avg_selected = sum(e["metrics"]["articles_selected"] for e in week_entries) / len(week_entries)
+        avg_diversity = sum(e["metrics"]["source_diversity"] for e in week_entries) / len(week_entries)
+        all_themes = [t for e in week_entries for t in e.get("journal", {}).get("themes", [])]
+        theme_freq: dict[str, int] = {}
+        for t in all_themes:
+            theme_freq[t] = theme_freq.get(t, 0) + 1
+        top_themes = sorted(theme_freq.items(), key=lambda x: x[1], reverse=True)[:5]
+        # Source frequency across the week
+        all_sources: dict[str, int] = {}
+        for e in week_entries:
+            for src, cnt in e["metrics"]["source_distribution"].items():
+                all_sources[src] = all_sources.get(src, 0) + cnt
+        top_sources = sorted(all_sources.items(), key=lambda x: x[1], reverse=True)[:8]
+        weekly_metrics = {
+            "days_logged": len(week_entries),
+            "avg_selectivity": round(avg_selectivity, 3),
+            "avg_selected_per_day": round(avg_selected, 1),
+            "avg_source_diversity": round(avg_diversity, 2),
+            "top_themes": top_themes,
+            "top_sources": top_sources,
+            "identity_before": identity[:200],
+            "identity_after": result["updated_identity"][:200],
+        }
+
+    # Log weekly consolidation to daily log
+    save_daily_log_entry({
+        "date": dt.date.today().isoformat(),
+        "type": "weekly_consolidation",
+        "consolidation_note": result.get("consolidation_note", ""),
+        "weekly_metrics": weekly_metrics,
+        "vote_signals": vote_signals[:500] if vote_signals else "",
+    })
+
+    # Log consolidation to curation log
     log_path = SCRIPT_DIR / "curation_log.md"
-    vc, cr = len(digest.get("vibe_coding", [])), len(digest.get("capabilities_research", []))
-    entry = f"\n## {dt.date.today().isoformat()} — {vc} vibe, {cr} research\n{result['reflection']}\n"
+    note = result.get("consolidation_note", "")
+    metrics_line = ""
+    if weekly_metrics:
+        metrics_line = (
+            f"\n**Week metrics:** {weekly_metrics['days_logged']} days, "
+            f"avg {weekly_metrics['avg_selected_per_day']} articles/day, "
+            f"selectivity {weekly_metrics['avg_selectivity']}, "
+            f"source diversity {weekly_metrics['avg_source_diversity']}"
+        )
+    entry = f"\n## {dt.date.today().isoformat()} — WEEKLY CONSOLIDATION\n{note}{metrics_line}\n"
     if log_path.exists():
         log_path.write_text(log_path.read_text() + entry)
-    else:
-        log_path.write_text("# Curation Log\nHow the editorial agent evolves its taste over time.\n" + entry)
 
-    print(f"  🧠 Memory updated + logged")
+    print(f"  🧠 Identity consolidated, journal cleared")
 
 
 def curate_with_claude(articles: list[Article]) -> dict:
@@ -329,7 +701,7 @@ def curate_with_claude(articles: list[Article]) -> dict:
         f"Published: {a.published}\n    Preview: {a.summary[:400]}"
         for i, a in enumerate(articles)
     )
-    system = SYSTEM_PROMPT.replace("{max_per_section}", str(MAX_ITEMS_PER_SECTION)) + load_editorial_memory() + fetch_engagement_signals()
+    system = SYSTEM_PROMPT.replace("{max_per_section}", str(MAX_ITEMS_PER_SECTION)).replace("{recent_stories_context}", get_recent_stories_context()) + load_identity_for_prompt() + fetch_engagement_signals()
     resp = httpx.post(
         "https://api.anthropic.com/v1/messages",
         headers={"Content-Type": "application/json", "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
@@ -358,9 +730,9 @@ FONT_B = "'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
 FONT_L = "'Space Grotesk', 'SF Mono', Consolas, monospace"
 
 VIBE_COLORS = {
-    "🛠 agentic tools": "#abd600",
-    "🧪 agent research": "#a1a1aa",
-    "⚖️ alignment research": "#a1a1aa",
+    "🛠 builder tools": "#abd600",
+    "🧪 deep analysis": "#a1a1aa",
+    "⚖️ AI futures": "#a1a1aa",
 }
 
 def _email_article(item: dict, featured: bool = False) -> str:
@@ -391,12 +763,28 @@ def _email_section(title: str, items: list[dict]) -> str:
       <tr><td>{arts}</td></tr>
     </table>"""
 
-def render_email(digest: dict, date_str: str) -> str:
+def _email_editorial(editorial_text: str) -> str:
+    if not editorial_text:
+        return ""
+    paragraphs = [p.strip() for p in editorial_text.strip().split("\n\n") if p.strip()]
+    html_paragraphs = "".join(
+        f'<p style="margin:0 0 16px;font-family:{FONT_H};font-size:15px;font-style:italic;color:#a1a1aa;line-height:1.7;">{p}</p>'
+        for p in paragraphs
+    )
+    return f"""
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding:0 0 24px;">
+      <tr><td style="font-family:{FONT_L};font-size:10px;font-weight:700;letter-spacing:0.2em;color:#abd600;text-transform:uppercase;padding-bottom:16px;">Editor's Note</td></tr>
+      <tr><td>{html_paragraphs}</td></tr>
+      <tr><td><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="height:1px;background-color:#27272a;">&nbsp;</td></tr></table></td></tr>
+    </table>"""
+
+
+def render_email(digest: dict, date_str: str, editorial_text: str = "") -> str:
     vibe = digest.get("vibe_coding", [])
     research = digest.get("capabilities_research", [])
     total = len(vibe) + len(research)
     issue_num = (dt.date.today() - LAUNCH_DATE).days + 1
-    content = _email_section("⚡ Vibe Coding", vibe) + _email_section("🧠 Capabilities & Alignment", research)
+    content = _email_editorial(editorial_text) + _email_section("⚡ Vibe Coding", vibe) + _email_section("🧠 The Big Picture", research)
     if total == 0:
         content = f'<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding:60px 0;"><tr><td align="center" style="font-size:32px;">🤷</td></tr><tr><td align="center" style="font-family:{FONT_H};font-size:18px;font-style:italic;color:#e5e2e1;padding-top:12px;">Quiet day. Nothing cleared the bar.</td></tr></table>'
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"></head>
@@ -404,7 +792,7 @@ def render_email(digest: dict, date_str: str) -> str:
 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#131313;"><tr><td align="center">
 <table cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;width:100%;">
 <tr><td style="padding:48px 24px 32px;text-align:center;">
-  <h1 style="margin:0;font-family:{FONT_H};font-size:28px;font-weight:500;font-style:italic;color:#e5e2e1;text-transform:uppercase;">THE LAST ENGINEER</h1>
+  <a href="https://theob0t.github.io/the-last-engineer/" style="text-decoration:none;"><h1 style="margin:0;font-family:{FONT_H};font-size:28px;font-weight:500;font-style:italic;color:#e5e2e1;text-transform:uppercase;">THE LAST ENGINEER</h1></a>
   <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:16px;border-top:1px solid rgba(39,39,42,0.3);"><tr><td style="padding-top:16px;text-align:center;">
     <span style="font-family:{FONT_L};font-size:10px;color:#a1a1aa;text-transform:uppercase;letter-spacing:0.2em;">Issue #{issue_num}</span>
     <span style="display:inline-block;width:6px;height:6px;background:#abd600;border-radius:50%;margin:0 12px;vertical-align:middle;"></span>
@@ -453,11 +841,23 @@ def _web_section(title: str, items: list) -> str:
       <div class="divide-y divide-outline-variant/20">{"".join(_web_article(i) for i in items)}</div>
     </div>"""
 
-def render_issue_web(digest: dict, date_str: str, issue_num: int, image_url: str = "") -> str:
+def _web_editorial(editorial_text: str) -> str:
+    if not editorial_text:
+        return ""
+    paragraphs = [p.strip() for p in editorial_text.strip().split("\n\n") if p.strip()]
+    html_paragraphs = "".join(f'<p class="mb-4">{p}</p>' for p in paragraphs)
+    return f"""
+    <div class="mb-12 pb-8 border-b border-outline-variant/20">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-4">Editor's Note</h2>
+      <div class="font-headline italic text-[15px] text-outline leading-relaxed">{html_paragraphs}</div>
+    </div>"""
+
+
+def render_issue_web(digest: dict, date_str: str, issue_num: int, image_url: str = "", editorial_text: str = "") -> str:
     vibe = digest.get("vibe_coding", [])
     research = digest.get("capabilities_research", [])
     total = len(vibe) + len(research)
-    content = _web_section("⚡ Vibe Coding", vibe) + _web_section("🧠 Capabilities & Alignment", research)
+    content = _web_editorial(editorial_text) + _web_section("⚡ Vibe Coding", vibe) + _web_section("🧠 The Big Picture", research)
     if total == 0:
         content = '<div class="py-20 text-center"><div class="text-4xl mb-4">🤷</div><p class="font-headline italic text-xl text-on-surface">Quiet day. Nothing cleared the bar.</p></div>'
     img_meta = f'<meta name="issue-image" content="{image_url}"/>' if image_url else ""
@@ -646,7 +1046,7 @@ def _md_to_html(text: str) -> str:
 
 
 def render_agent_page():
-    memory = (SCRIPT_DIR / "editorial_memory.md").read_text() if (SCRIPT_DIR / "editorial_memory.md").exists() else ""
+    memory = IDENTITY_FILE.read_text() if IDENTITY_FILE.exists() else ""
     log = (SCRIPT_DIR / "curation_log.md").read_text() if (SCRIPT_DIR / "curation_log.md").exists() else ""
     updated = dt.datetime.now().strftime("%B %-d, %Y at %H:%M UTC")
 
@@ -930,7 +1330,7 @@ def _parse_log_rows(log: str) -> list:
     return list(reversed(rows))
 
 
-def publish_to_site(digest: dict, date: dt.date = None):
+def publish_to_site(digest: dict, date: dt.date = None, editorial_text: str = ""):
     date = date or dt.date.today()
     issue_num = (date - LAUNCH_DATE).days + 1
     date_str = date.strftime("%B %-d, %Y")
@@ -938,7 +1338,7 @@ def publish_to_site(digest: dict, date: dt.date = None):
     image_url = fetch_og_image(top_url) if top_url else ""
     if image_url:
         print(f"  🖼 OG image found")
-    html = render_issue_web(digest, date_str, issue_num, image_url)
+    html = render_issue_web(digest, date_str, issue_num, image_url, editorial_text)
     path = ISSUES_DIR / f"{date.isoformat()}.html"
     path.write_text(html)
     print(f"  📰 Issue #{issue_num}: {path.name}")
@@ -1009,13 +1409,13 @@ TEST_DIGEST = {
         {"title": "Cursor Ships Background Agents That Run While You Sleep",
          "url": "https://cursor.com/blog", "source": "Cursor Blog",
          "tldr": "Background agent mode lets you kick off multi-file refactors and come back to completed PRs. Sandboxed cloud environment with full repo context.",
-         "vibe": "🛠 agentic tools", "read_time": 6},
+         "vibe": "🛠 builder tools", "read_time": 6},
     ],
     "capabilities_research": [
         {"title": "METR Finds Frontier Models Show Gains in Autonomous Replication",
          "url": "https://metr.org", "source": "METR",
          "tldr": "New eval suite tests autonomous resource acquisition and infrastructure setup. Claude Opus and GPT-4.5 show meaningful capability jumps.",
-         "vibe": "🧪 agent research", "read_time": 12},
+         "vibe": "🧪 deep analysis", "read_time": 12},
     ],
 }
 
@@ -1059,7 +1459,15 @@ def run(preview=False, test_email=False, test_web=False, push=False, rebuild=Fal
     vc, cr = len(digest.get("vibe_coding", [])), len(digest.get("capabilities_research", []))
     print(f"  → {vc} vibe + {cr} research")
 
-    html = render_email(digest, date_str)
+    record_selected_summaries(digest)
+    print(f"  → Saved {vc + cr} summaries to semantic dedup memory")
+
+    print("\n✍️ Writing editorial...")
+    editorial_text, journal_entry = generate_editorial(digest)
+    save_journal_entry(journal_entry)
+    log_daily_run(articles, digest, editorial_text, journal_entry)
+
+    html = render_email(digest, date_str, editorial_text)
 
     if preview:
         p = SCRIPT_DIR / "preview.html"
@@ -1068,10 +1476,12 @@ def run(preview=False, test_email=False, test_web=False, push=False, rebuild=Fal
         return
 
     print("\n🌐 Publishing...")
-    publish_to_site(digest)
+    publish_to_site(digest, editorial_text=editorial_text)
 
-    print("\n🪞 Reflecting...")
-    reflect_and_update_memory(digest)
+    if should_consolidate():
+        print("\n🧠 Weekly consolidation...")
+        weekly_consolidation()
+
     if push:
         git_push()
 
