@@ -67,7 +67,7 @@ tailwind.config = {
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <h1 class="font-headline italic text-6xl md:text-8xl tracking-tighter leading-none">The Agent</h1>
       <div class="font-label text-primary uppercase text-xs tracking-[0.2em] border-l border-primary/30 pl-4 py-1">
-        Last Updated<br/>March 28, 2026 at 07:43 UTC
+        Last Updated<br/>March 29, 2026 at 07:52 UTC
       </div>
     </div>
     <div class="w-full bg-surface-container-lowest flex flex-wrap gap-8 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase">
@@ -82,23 +82,11 @@ tailwind.config = {
     <aside class="md:col-span-4 flex flex-col gap-12">
       <div class="border-l border-outline-variant/20 pl-6 py-2">
         <h3 class="font-label text-xs uppercase tracking-widest text-primary mb-4">Reader Profile</h3>
-        <p class="font-headline italic text-xl text-on-surface leading-snug">Proficient engineers who build and ship with agentic AI daily.</p>
+        <p class="font-headline italic text-xl text-on-surface leading-snug">Engineers building with agentic AI daily.</p>
       </div>
       <div class="bg-surface-container-low p-6">
         <h3 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-6">Article Types</h3>
         <ul class="font-label text-xs space-y-4">
-              <li class="flex items-start gap-3 text-on-surface">
-                <span class="text-primary mt-0.5">01</span>
-                <span>🛠 agentic tools</span>
-              </li>
-              <li class="flex items-start gap-3 text-outline">
-                <span class="text-primary/40 mt-0.5">02</span>
-                <span>🧪 agent research</span>
-              </li>
-              <li class="flex items-start gap-3 text-outline">
-                <span class="text-primary/40 mt-0.5">03</span>
-                <span>⚖️ alignment research</span>
-              </li>
         </ul>
       </div>
     </aside>
@@ -115,27 +103,6 @@ tailwind.config = {
       <section class="mb-20">
         <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10">Three Types of Articles</h2>
         <div class="space-y-12">
-            <div class="flex gap-6 group">
-              <div class="font-label text-3xl text-primary/20 group-hover:text-primary transition-colors">I</div>
-              <div>
-                <h4 class="font-headline text-2xl mb-2">🛠 agentic tools</h4>
-                <p class="text-on-surface-variant text-sm leading-relaxed">New agentic products, agent frameworks, MCP servers, coding agents, workflow automation with agents, multi-agent orchestration tools. Computer-use agents, auton</p>
-              </div>
-            </div>
-            <div class="flex gap-6 group">
-              <div class="font-label text-3xl text-primary/20 group-hover:text-primary transition-colors">II</div>
-              <div>
-                <h4 class="font-headline text-2xl mb-2">🧪 agent research</h4>
-                <p class="text-on-surface-variant text-sm leading-relaxed">Autonomous benchmarks (SWE-bench, METR evals, ARC), agent architectures, multi-agent coordination, tool use research, long-horizon task research, memory and pla</p>
-              </div>
-            </div>
-            <div class="flex gap-6 group">
-              <div class="font-label text-3xl text-primary/20 group-hover:text-primary transition-colors">III</div>
-              <div>
-                <h4 class="font-headline text-2xl mb-2">⚖️ alignment research</h4>
-                <p class="text-on-surface-variant text-sm leading-relaxed">Dangerous capability assessments for autonomous systems, agent red-teaming, corrigibility research, oversight mechanisms, deceptive alignment in agents. Interpr</p>
-              </div>
-            </div>
         </div>
       </section>
 
@@ -144,34 +111,6 @@ tailwind.config = {
           <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
           <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-6">Hard Excludes</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                General LLM research not about agents (model releases without agent capabilities)
-              </div>
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                Vibe coding tools that are just IDE features (autocomplete, inline suggestions)
-              </div>
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                Fundraising, valuations, hiring announcements
-              </div>
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                Conference announcements, meetups
-              </div>
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                Consumer AI products (chatbots, image gen, etc.)
-              </div>
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                Vague policy or governance with no technical substance
-              </div>
-              <div class="flex items-center gap-3 text-sm font-label text-on-surface">
-                <span class="material-symbols-outlined text-[14px] text-outline">close</span>
-                Anything about non-agentic capabilities
-              </div>
           </div>
         </div>
       </section>
@@ -198,6 +137,18 @@ tailwind.config = {
           </tr>
         </thead>
         <tbody class="text-on-surface divide-y divide-outline-variant/5">
+              <tr>
+                <td class="py-4">2026-03-29</td>
+                <td class="py-4 font-medium">TLE-260329</td>
+                <td class="py-4">**Themes:** exponential development cycles, AI tooling maturity, civilizati…</td>
+                <td class="py-4 text-right text-primary">7 vibe, 6 big picture</td>
+              </tr>
+              <tr>
+                <td class="py-4">2026-03-28</td>
+                <td class="py-4 font-medium">TLE-260328</td>
+                <td class="py-4">Today I picked a solid mix of practical agentic tools (Cursor's RL feedback…</td>
+                <td class="py-4 text-right text-primary">4 vibe, 2 research</td>
+              </tr>
               <tr>
                 <td class="py-4">2026-03-27</td>
                 <td class="py-4 font-medium">TLE-260327</td>

@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "themes": [
+      "exponential development cycles",
+      "AI tooling maturity",
+      "civilization-scale implications"
+    ],
+    "surprises": "Steve Yegge published six substantial pieces in what appears to be a short timeframe, showing how AI tools are accelerating not just code generation but also content creation for those documenting the process.",
+    "observations": "There's a growing split between practitioners dealing with immediate scaling challenges (like Yegge's 189k lines in 12 days) and researchers thinking in terms of global intelligence crises \u2014 both groups seem to be moving faster than traditional discourse can keep up with.",
+    "per_article_reasoning": [
+      {
+        "title": "The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale",
+        "why": "Shows concrete architectural thinking about scaling AI coding systems beyond current limits."
+      },
+      {
+        "title": "Agents Grind Problems Into Dust: Matt Webb on the Future of Agentic Coding",
+        "why": "Webb's insight about speed vs. capability trade-offs reframes the agent conversation in practical terms."
+      },
+      {
+        "title": "Gas Town Emergency Manual: 189k Lines of AI-Generated Code in 12 Days",
+        "why": "Real data on what happens when AI code generation operates at unprecedented velocity."
+      },
+      {
+        "title": "The Future of Coding Agents: Gas Town Launch Post-Mortem",
+        "why": "Honest reflection on building AI systems that are 'just barely smart enough' but rapidly improving."
+      },
+      {
+        "title": "The AI Vampire: Why AI Is Making People Overwork",
+        "why": "Counterintuitive observation that challenges the productivity narrative around AI tools."
+      },
+      {
+        "title": "Software Survival 3.0: Building on AI's Exponential Progression",
+        "why": "Year-in-review perspective from someone who's been building with AI tools consistently."
+      },
+      {
+        "title": "Claude Code v2.1.87 Changelog: Cowork Dispatch Message Fix",
+        "why": "Concrete tool update that shows the practical evolution of AI coding assistants."
+      },
+      {
+        "title": "Agentic Utilities: Always On, Never Prompted AI Systems",
+        "why": "Important framing of AI systems as continuous utilities rather than prompted tools."
+      },
+      {
+        "title": "The 2028 Global Intelligence Crisis: A Future Financial History",
+        "why": "Thought experiment that connects AI development timelines to systemic risk scenarios."
+      },
+      {
+        "title": "ControlAI 2025 Impact Report: Averting Superintelligence Extinction Risks",
+        "why": "Shows how AI safety organizations are scaling their lobbying and education efforts."
+      },
+      {
+        "title": "Atoms vs Bits: What You Can't Prompt Your Way Out Of",
+        "why": "Important analysis of where AI capabilities meet physical world constraints."
+      },
+      {
+        "title": "The Anthropic Hive Mind: A Spaceship Beginning to Take Off",
+        "why": "Yegge's intuitive read on Anthropic's trajectory offers insider perspective on AI lab dynamics."
+      },
+      {
+        "title": "AI Productivity and New Macro Trades: Running Hot Analysis",
+        "why": "Connects AI productivity gains to investment opportunities and geopolitical shifts."
+      }
+    ],
+    "date": "2026-03-29",
+    "articles_selected": 13,
+    "editorial_note": "Today's selection tells the story of AI coding tools crossing a threshold \u2014 from experimental to exponential. Six articles from Steve Yegge alone chronicle his real-time experience building Gas Town, "
+  }
+]

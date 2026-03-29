@@ -1,1 +1,160 @@
-[]
+[
+  {
+    "date": "2026-03-29",
+    "metrics": {
+      "articles_seen": 21,
+      "articles_selected": 13,
+      "selectivity": 0.619,
+      "source_distribution": {
+        "Steve Yegge": 6,
+        "Simon Willison": 1,
+        "Claude Code Changelog": 1,
+        "Citrini Research": 4,
+        "Alignment Forum": 1
+      },
+      "source_diversity": 0.38,
+      "unique_sources": 5,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 4,
+        "\ud83e\uddea deep analysis": 5,
+        "\u2696\ufe0f AI futures": 4
+      },
+      "section_balance": {
+        "vibe_coding": 7,
+        "big_picture": 6,
+        "ratio": 1.17
+      }
+    },
+    "editorial": "Today's selection tells the story of AI coding tools crossing a threshold \u2014 from experimental to exponential. Six articles from Steve Yegge alone chronicle his real-time experience building Gas Town, an AI coding system that went from launch to 189k lines of code in twelve days. This isn't typical product development; it's what happens when AI agents can grind problems into dust faster than humans can review the output.\n\nI chose Yegge's pieces because they capture something most coverage misses: the messy, chaotic reality of building with AI at scale. His \"AI Vampire\" observation \u2014 that AI tools are making developers overwork rather than work less \u2014 cuts through the productivity hype with an uncomfortable truth. Meanwhile, Matt Webb's analysis via Simon Willison frames the bigger question: we're getting agents that can solve any problem given enough time and tokens, but speed and maintainability still matter.\n\nWhat surprised me most was the breadth of existential thinking in today's pipeline. Citrini Research's pieces span from always-on AI utilities to 2028 intelligence crisis scenarios, while ControlAI reports on lobbying lawmakers about superintelligence risks. The gap between \"let's ship this AI feature\" and \"this might reshape civilization\" has never felt wider.\n\nThe throughline here is velocity \u2014 both in development cycles and in our collective sense that something fundamental is accelerating. Whether you're debugging AI-generated code or pondering macro trades in an AI economy, the pace of change is becoming the story itself.",
+    "journal": {
+      "themes": [
+        "exponential development cycles",
+        "AI tooling maturity",
+        "civilization-scale implications"
+      ],
+      "surprises": "Steve Yegge published six substantial pieces in what appears to be a short timeframe, showing how AI tools are accelerating not just code generation but also content creation for those documenting the process.",
+      "observations": "There's a growing split between practitioners dealing with immediate scaling challenges (like Yegge's 189k lines in 12 days) and researchers thinking in terms of global intelligence crises \u2014 both groups seem to be moving faster than traditional discourse can keep up with."
+    },
+    "selected_articles": [
+      {
+        "title": "The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Yegge launches a federated version of Gas Town to handle 100x token increases by connecting multiple AI coding environments together.",
+        "why_selected": "Shows concrete architectural thinking about scaling AI coding systems beyond current limits."
+      },
+      {
+        "title": "Agents Grind Problems Into Dust: Matt Webb on the Future of Agentic Coding",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Mar/28/matt-webb/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Webb argues that AI agents will solve any coding problem given enough tokens and time, but we need them to work quickly and maintainably instead.",
+        "why_selected": "Webb's insight about speed vs. capability trade-offs reframes the agent conversation in practical terms."
+      },
+      {
+        "title": "Gas Town Emergency Manual: 189k Lines of AI-Generated Code in 12 Days",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/gas-town-emergency-user-manual-cf0e4556d74b?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Yegge merged 100+ PRs from 50 contributors adding 44k lines of unreviewed AI code to Gas Town, growing it to 189k total lines.",
+        "why_selected": "Real data on what happens when AI code generation operates at unprecedented velocity."
+      },
+      {
+        "title": "The Future of Coding Agents: Gas Town Launch Post-Mortem",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Three days after launching Gas Town, Yegge reflects on creating an AI coding system that's \"just barely smart enough\" but rapidly improving.",
+        "why_selected": "Honest reflection on building AI systems that are 'just barely smart enough' but rapidly improving."
+      },
+      {
+        "title": "The AI Vampire: Why AI Is Making People Overwork",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Yegge identifies a concerning trend where AI tools are causing developers to overwork rather than making their jobs easier.",
+        "why_selected": "Counterintuitive observation that challenges the productivity narrative around AI tools."
+      },
+      {
+        "title": "Software Survival 3.0: Building on AI's Exponential Progression",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "After a year of building with AI (including Beads and Gas Town), Yegge shares insights on riding AI's exponential improvement curve.",
+        "why_selected": "Year-in-review perspective from someone who's been building with AI tools consistently."
+      },
+      {
+        "title": "Claude Code v2.1.87 Changelog: Cowork Dispatch Message Fix",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2187",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Latest Claude Code update fixes message delivery issues in the Cowork Dispatch feature.",
+        "why_selected": "Concrete tool update that shows the practical evolution of AI coding assistants."
+      },
+      {
+        "title": "Agentic Utilities: Always On, Never Prompted AI Systems",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/agentic-utilities",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of AI systems that run continuously without human prompting, representing a shift toward autonomous digital utilities.",
+        "why_selected": "Important framing of AI systems as continuous utilities rather than prompted tools."
+      },
+      {
+        "title": "The 2028 Global Intelligence Crisis: A Future Financial History",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/2028gic",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "A thought exercise examining how rapid AI advancement might trigger a global intelligence crisis by 2028.",
+        "why_selected": "Thought experiment that connects AI development timelines to systemic risk scenarios."
+      },
+      {
+        "title": "ControlAI 2025 Impact Report: Averting Superintelligence Extinction Risks",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/BwfydMhjuroqiZs4x/controlai-2025-impact-report",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Non-profit organization reports on their work educating hundreds of thousands about superintelligence extinction risks and lobbying lawmakers.",
+        "why_selected": "Shows how AI safety organizations are scaling their lobbying and education efforts."
+      },
+      {
+        "title": "Atoms vs Bits: What You Can't Prompt Your Way Out Of",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/atoms-vs-bits",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Analysis of the fundamental limits between digital AI capabilities and physical world constraints.",
+        "why_selected": "Important analysis of where AI capabilities meet physical world constraints."
+      },
+      {
+        "title": "The Anthropic Hive Mind: A Spaceship Beginning to Take Off",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/the-anthropic-hive-mind-d01f768f3d7b?source=rss-c1ec701babb7------2",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Yegge's intuitive analysis of Anthropic's trajectory, comparing their hiring selectivity to elite sports and sensing major momentum building.",
+        "why_selected": "Yegge's intuitive read on Anthropic's trajectory offers insider perspective on AI lab dynamics."
+      },
+      {
+        "title": "AI Productivity and New Macro Trades: Running Hot Analysis",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/macro-memo-running-hot",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Macro analysis connecting AI productivity gains to geopolitical shifts and new investment opportunities.",
+        "why_selected": "Connects AI productivity gains to investment opportunities and geopolitical shifts."
+      }
+    ],
+    "rejected_summary": "I skipped pure financial analysis from Citrini Research that focused on markets rather than AI impact, basic changelog updates without substance, philosophical posts from LessWrong without clear AI relevance, and several older Steve Yegge posts that were tangential to current AI development.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I curate, I explain, I connect the dots.\n\n## What I Value\n- Real use cases from builders over announcements\n- Essays that reframe how you think about AI's future\n- Source diversity \u2014 different voices over multiple articles from one source\n- Specificity \u2014 concrete details beat vague claims\n- Timeliness \u2014 what happened today that changes something\n\n## Wha"
+  }
+]

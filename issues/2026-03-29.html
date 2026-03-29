@@ -1,0 +1,244 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #8 — The Last Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"},fontFamily:{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]},borderRadius:{"DEFAULT":"0px"}}}}</script>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;display:inline-block;vertical-align:middle;font-size:16px}body{background:#131313;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif;color:#e5e2e1}.font-headline{font-family:'Newsreader',serif}.font-label{font-family:'Space Grotesk',monospace}p{line-height:1.7}</style></head>
+<body>
+<header class="max-w-2xl mx-auto pt-12 pb-8 px-6 text-center">
+  <a href="../" class="font-headline italic text-3xl font-medium tracking-tight text-on-surface uppercase hover:text-primary transition-colors">THE LAST ENGINEER</a>
+  <div class="mt-4 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em] border-t border-outline-variant/30 pt-4">
+    <span>Issue #8</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>March 29, 2026</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>13 stories</span>
+  </div>
+</header>
+<main class="max-w-2xl mx-auto px-6 pb-20">
+    <div class="mb-12 pb-8 border-b border-outline-variant/20">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-4">Editor's Note</h2>
+      <div class="font-headline italic text-[15px] text-outline leading-relaxed"><p class="mb-4">Today's selection tells the story of AI coding tools crossing a threshold — from experimental to exponential. Six articles from Steve Yegge alone chronicle his real-time experience building Gas Town, an AI coding system that went from launch to 189k lines of code in twelve days. This isn't typical product development; it's what happens when AI agents can grind problems into dust faster than humans can review the output.</p><p class="mb-4">I chose Yegge's pieces because they capture something most coverage misses: the messy, chaotic reality of building with AI at scale. His "AI Vampire" observation — that AI tools are making developers overwork rather than work less — cuts through the productivity hype with an uncomfortable truth. Meanwhile, Matt Webb's analysis via Simon Willison frames the bigger question: we're getting agents that can solve any problem given enough time and tokens, but speed and maintainability still matter.</p><p class="mb-4">What surprised me most was the breadth of existential thinking in today's pipeline. Citrini Research's pieces span from always-on AI utilities to 2028 intelligence crisis scenarios, while ControlAI reports on lobbying lawmakers about superintelligence risks. The gap between "let's ship this AI feature" and "this might reshape civilization" has never felt wider.</p><p class="mb-4">The throughline here is velocity — both in development cycles and in our collective sense that something fundamental is accelerating. Whether you're debugging AI-generated code or pondering macro trades in an AI economy, the pace of change is becoming the story itself.</p></div>
+    </div>
+    <div class="mt-16">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">⚡ Vibe Coding</h2>
+      <div class="divide-y divide-outline-variant/20">
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Steve Yegge<span class="font-label text-[9px] text-outline">⏱ 8 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f?source=rss-c1ec701babb7------2" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Yegge launches a federated version of Gas Town to handle 100x token increases by connecting multiple AI coding environments together.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f?source=rss-c1ec701babb7------2" data-title="The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f?source=rss-c1ec701babb7------2" data-title="The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Simon Willison<span class="font-label text-[9px] text-outline">⏱ 5 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://simonwillison.net/2026/Mar/28/matt-webb/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Agents Grind Problems Into Dust: Matt Webb on the Future of Agentic Coding</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Webb argues that AI agents will solve any coding problem given enough tokens and time, but we need them to work quickly and maintainably instead.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Mar/28/matt-webb/#atom-everything" data-title="Agents Grind Problems Into Dust: Matt Webb on the Future of Agentic Coding" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Mar/28/matt-webb/#atom-everything" data-title="Agents Grind Problems Into Dust: Matt Webb on the Future of Agentic Coding" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Steve Yegge<span class="font-label text-[9px] text-outline">⏱ 7 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://steve-yegge.medium.com/gas-town-emergency-user-manual-cf0e4556d74b?source=rss-c1ec701babb7------2" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Gas Town Emergency Manual: 189k Lines of AI-Generated Code in 12 Days</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Yegge merged 100+ PRs from 50 contributors adding 44k lines of unreviewed AI code to Gas Town, growing it to 189k total lines.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/gas-town-emergency-user-manual-cf0e4556d74b?source=rss-c1ec701babb7------2" data-title="Gas Town Emergency Manual: 189k Lines of AI-Generated Code in 12 Days" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/gas-town-emergency-user-manual-cf0e4556d74b?source=rss-c1ec701babb7------2" data-title="Gas Town Emergency Manual: 189k Lines of AI-Generated Code in 12 Days" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Steve Yegge<span class="font-label text-[9px] text-outline">⏱ 10 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c?source=rss-c1ec701babb7------2" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">The Future of Coding Agents: Gas Town Launch Post-Mortem</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Three days after launching Gas Town, Yegge reflects on creating an AI coding system that's "just barely smart enough" but rapidly improving.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c?source=rss-c1ec701babb7------2" data-title="The Future of Coding Agents: Gas Town Launch Post-Mortem" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c?source=rss-c1ec701babb7------2" data-title="The Future of Coding Agents: Gas Town Launch Post-Mortem" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Steve Yegge<span class="font-label text-[9px] text-outline">⏱ 6 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163?source=rss-c1ec701babb7------2" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">The AI Vampire: Why AI Is Making People Overwork</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Yegge identifies a concerning trend where AI tools are causing developers to overwork rather than making their jobs easier.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163?source=rss-c1ec701babb7------2" data-title="The AI Vampire: Why AI Is Making People Overwork" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163?source=rss-c1ec701babb7------2" data-title="The AI Vampire: Why AI Is Making People Overwork" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Steve Yegge<span class="font-label text-[9px] text-outline">⏱ 9 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b?source=rss-c1ec701babb7------2" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Software Survival 3.0: Building on AI's Exponential Progression</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">After a year of building with AI (including Beads and Gas Town), Yegge shares insights on riding AI's exponential improvement curve.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b?source=rss-c1ec701babb7------2" data-title="Software Survival 3.0: Building on AI's Exponential Progression" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b?source=rss-c1ec701babb7------2" data-title="Software Survival 3.0: Building on AI's Exponential Progression" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Claude Code Changelog<span class="font-label text-[9px] text-outline">⏱ 1 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2187" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Claude Code v2.1.87 Changelog: Cowork Dispatch Message Fix</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Latest Claude Code update fixes message delivery issues in the Cowork Dispatch feature.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2187" data-title="Claude Code v2.1.87 Changelog: Cowork Dispatch Message Fix" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2187" data-title="Claude Code v2.1.87 Changelog: Cowork Dispatch Message Fix" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article></div>
+    </div>
+    <div class="mt-16">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">🧠 The Big Picture</h2>
+      <div class="divide-y divide-outline-variant/20">
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Citrini Research<span class="font-label text-[9px] text-outline">⏱ 12 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.citriniresearch.com/p/agentic-utilities" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Agentic Utilities: Always On, Never Prompted AI Systems</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Analysis of AI systems that run continuously without human prompting, representing a shift toward autonomous digital utilities.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/agentic-utilities" data-title="Agentic Utilities: Always On, Never Prompted AI Systems" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/agentic-utilities" data-title="Agentic Utilities: Always On, Never Prompted AI Systems" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Citrini Research<span class="font-label text-[9px] text-outline">⏱ 15 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.citriniresearch.com/p/2028gic" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">The 2028 Global Intelligence Crisis: A Future Financial History</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">A thought exercise examining how rapid AI advancement might trigger a global intelligence crisis by 2028.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/2028gic" data-title="The 2028 Global Intelligence Crisis: A Future Financial History" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/2028gic" data-title="The 2028 Global Intelligence Crisis: A Future Financial History" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Alignment Forum<span class="font-label text-[9px] text-outline">⏱ 8 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.alignmentforum.org/posts/BwfydMhjuroqiZs4x/controlai-2025-impact-report" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">ControlAI 2025 Impact Report: Averting Superintelligence Extinction Risks</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Non-profit organization reports on their work educating hundreds of thousands about superintelligence extinction risks and lobbying lawmakers.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.alignmentforum.org/posts/BwfydMhjuroqiZs4x/controlai-2025-impact-report" data-title="ControlAI 2025 Impact Report: Averting Superintelligence Extinction Risks" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.alignmentforum.org/posts/BwfydMhjuroqiZs4x/controlai-2025-impact-report" data-title="ControlAI 2025 Impact Report: Averting Superintelligence Extinction Risks" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Citrini Research<span class="font-label text-[9px] text-outline">⏱ 10 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.citriniresearch.com/p/atoms-vs-bits" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Atoms vs Bits: What You Can't Prompt Your Way Out Of</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Analysis of the fundamental limits between digital AI capabilities and physical world constraints.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/atoms-vs-bits" data-title="Atoms vs Bits: What You Can't Prompt Your Way Out Of" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/atoms-vs-bits" data-title="Atoms vs Bits: What You Can't Prompt Your Way Out Of" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Steve Yegge<span class="font-label text-[9px] text-outline">⏱ 6 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://steve-yegge.medium.com/the-anthropic-hive-mind-d01f768f3d7b?source=rss-c1ec701babb7------2" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">The Anthropic Hive Mind: A Spaceship Beginning to Take Off</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Yegge's intuitive analysis of Anthropic's trajectory, comparing their hiring selectivity to elite sports and sensing major momentum building.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/the-anthropic-hive-mind-d01f768f3d7b?source=rss-c1ec701babb7------2" data-title="The Anthropic Hive Mind: A Spaceship Beginning to Take Off" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://steve-yegge.medium.com/the-anthropic-hive-mind-d01f768f3d7b?source=rss-c1ec701babb7------2" data-title="The Anthropic Hive Mind: A Spaceship Beginning to Take Off" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Citrini Research<span class="font-label text-[9px] text-outline">⏱ 11 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.citriniresearch.com/p/macro-memo-running-hot" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">AI Productivity and New Macro Trades: Running Hot Analysis</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Macro analysis connecting AI productivity gains to geopolitical shifts and new investment opportunities.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/macro-memo-running-hot" data-title="AI Productivity and New Macro Trades: Running Hot Analysis" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.citriniresearch.com/p/macro-memo-running-hot" data-title="AI Productivity and New Macro Trades: Running Hot Analysis" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article></div>
+    </div></main>
+<footer class="max-w-2xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+    <div><h1 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h1><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../">Subscribe</a></div>
+  </div>
+</footer>
+<script>
+var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec";
+function castVote(btn) {
+  var url = btn.dataset.url;
+  var vote = btn.dataset.vote;
+  var key = "voted_" + btoa(encodeURIComponent(url));
+  if (localStorage.getItem(key)) return;
+  localStorage.setItem(key, vote);
+  var article = btn.closest("article");
+  article.querySelectorAll(".vote-btn").forEach(function(b) {
+    b.disabled = true;
+    b.style.opacity = b.dataset.vote === vote ? "1" : "0.2";
+    if (b.dataset.vote === vote) b.style.color = vote === "up" ? "#abd600" : "#ff5555";
+  });
+  fetch(APPS_SCRIPT_URL + "?type=vote&vote=" + vote + "&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(btn.dataset.title), { mode: "no-cors" });
+}
+</script>
+</body></html>

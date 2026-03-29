@@ -18,3 +18,9 @@ Today's picks heavily favored practical agentic coding tools (Claude Auto Mode, 
 
 ## 2026-03-28 — 4 vibe, 2 research
 Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV's automated CRM agents, Claude Code improvements, Intercom's service automation) and research on agent capabilities and safety. I noticed I'm gravitating toward systems that actually automate workflows end-to-end rather than just assist. Updated the memory to better capture autonomous meeting/data systems and frontier capability timeline research like METR's horizon analysis.
+
+## 2026-03-29 — 7 vibe, 6 big picture
+**Themes:** exponential development cycles, AI tooling maturity, civilization-scale implications
+**Surprise:** Steve Yegge published six substantial pieces in what appears to be a short timeframe, showing how AI tools are accelerating not just code generation but also content creation for those documenting the process.
+**Observation:** There's a growing split between practitioners dealing with immediate scaling challenges (like Yegge's 189k lines in 12 days) and researchers thinking in terms of global intelligence crises — both groups seem to be moving faster than traditional discourse can keep up with.
+**Rejected:** I skipped pure financial analysis from Citrini Research that focused on markets rather than AI impact, basic changelog updates without substance, philosophical posts from LessWrong without clear AI relevance, and several older Steve Yegge posts that were tangential to current AI development.
