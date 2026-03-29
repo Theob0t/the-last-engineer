@@ -955,30 +955,79 @@ def update_archive_page(issues: list[dict]):
     (ISSUES_DIR / "index.html").write_text(tpl)
     print(f"  📄 Archive: {len(issues)} issues")
 
-def update_landing_page(issues: list[dict]):
-    latest = issues[:3]
-    if not latest:
-        return
-    def _card(i: dict) -> str:
-        if i.get("image_url"):
-            return f"""
-    <a href="./issues/{i['filename']}" class="relative overflow-hidden aspect-[4/5] flex flex-col justify-end group no-underline" style="background-image:url({i['image_url']});background-size:cover;background-position:center;">
-      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
-      <div class="relative z-10 p-12">
-        <span class="font-label text-[10px] uppercase text-primary mb-2 block">Issue #{i['issue_num']} · {i['date_str']}</span>
-        <h5 class="text-2xl font-headline italic text-white group-hover:text-primary transition-colors">{i['title']}</h5>
+def _landing_article(item: dict) -> str:
+    vibe_color = VIBE_COLORS.get(item.get("vibe", ""), "#a1a1aa")
+    rt = item.get("read_time", "")
+    rt_html = f'<span class="font-label text-[9px] text-outline">⏱ {rt} min</span>' if rt else ""
+    return f"""
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">{item.get('source','')}{rt_html}</span><span style="color:{vibe_color};">{item.get('vibe','')}</span>
       </div>
-    </a>"""
-        return f"""
-    <a href="./issues/{i['filename']}" class="bg-surface-container-low p-12 aspect-[4/5] flex flex-col justify-end group hover:bg-surface-container transition-colors no-underline">
-      <span class="font-label text-[10px] uppercase text-primary mb-2 block">Issue #{i['issue_num']} · {i['date_str']}</span>
-      <h5 class="text-2xl font-headline italic text-white group-hover:text-primary transition-colors">{i['title']}</h5>
-    </a>"""
-    grid = "".join(_card(i) for i in latest)
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="{item.get('url','#')}" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">{item.get('title','')}</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">{item.get('tldr','')}</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="{item.get('url','')}" data-title="{item.get('title','').replace('"', '')}" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>"""
+
+def _landing_section(title: str, items: list) -> str:
+    if not items:
+        return ""
+    return f"""
+    <div class="mt-12">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">{title}</h2>
+      <div class="divide-y divide-outline-variant/20">{"".join(_landing_article(i) for i in items)}</div>
+    </div>"""
+
+def update_landing_page(issues: list[dict], digest: dict = None, editorial_text: str = ""):
     tpl = LANDING_PAGE.read_text()
-    tpl = re.sub(r'<!-- LATEST_ISSUES_PLACEHOLDER -->.*?(?=</div>\s*</section>)', f'<!-- LATEST_ISSUES_PLACEHOLDER -->\n{grid}\n', tpl, flags=re.DOTALL)
+
+    # Inject today's issue content
+    if digest:
+        vibe = digest.get("vibe_coding", [])
+        research = digest.get("capabilities_research", [])
+        total = len(vibe) + len(research)
+        today = dt.date.today()
+        issue_num = (today - LAUNCH_DATE).days + 1
+        date_str = today.strftime("%B %-d, %Y").upper()
+
+        # Issue meta
+        meta = f'Issue #{issue_num} <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> {date_str} <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> {total} stories'
+        tpl = re.sub(r'<!-- TODAY_ISSUE_META -->.*?(?=</div>)', f'<!-- TODAY_ISSUE_META -->{meta}', tpl, flags=re.DOTALL)
+
+        # Editorial + articles
+        editorial_html = ""
+        if editorial_text:
+            paragraphs = [p.strip() for p in editorial_text.strip().split("\n\n") if p.strip()]
+            editorial_html = f"""
+    <div class="mb-8 pb-8 border-b border-outline-variant/20">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-4">Editor's Note</h2>
+      <div class="font-headline italic text-[15px] text-outline leading-relaxed">{"".join(f'<p class="mb-4">{p}</p>' for p in paragraphs)}</div>
+    </div>"""
+        issue_content = editorial_html + _landing_section("⚡ Vibe Coding", vibe) + _landing_section("🧠 The Big Picture", research)
+        tpl = re.sub(r'<!-- TODAY_ISSUE_PLACEHOLDER -->.*?(?=</div>\s*</section>)', f'<!-- TODAY_ISSUE_PLACEHOLDER -->\n{issue_content}\n', tpl, flags=re.DOTALL)
+
+    # Inject compact archive (skip today's issue, show rest)
+    archive_issues = [i for i in issues[1:]][:15]  # skip latest (it's shown above), show 15
+    if archive_issues:
+        archive_entries = "".join(
+            f'<a href="./issues/{i["filename"]}" class="flex items-baseline gap-4 py-3 group no-underline">'
+            f'<span class="font-label text-[10px] text-primary shrink-0">#{i["issue_num"]}</span>'
+            f'<span class="font-label text-[10px] text-outline shrink-0">{i["date_str"]}</span>'
+            f'<span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">{i["title"]}</span>'
+            f'</a>'
+            for i in archive_issues
+        )
+        tpl = re.sub(r'<!-- ARCHIVE_ENTRIES_PLACEHOLDER -->.*?(?=</div>\s*</section>)', f'<!-- ARCHIVE_ENTRIES_PLACEHOLDER -->\n{archive_entries}\n', tpl, flags=re.DOTALL)
+
     LANDING_PAGE.write_text(tpl)
-    print(f"  🏠 Landing: {len(latest)} latest issues")
+    print(f"  🏠 Landing: today's issue + {len(archive_issues) if digest else 0} archive entries")
 
 LANDING_PAGE = SITE_DIR / "index.html"
 AGENT_PAGE = SITE_DIR / "agent.html"
@@ -1048,43 +1097,56 @@ def _md_to_html(text: str) -> str:
 def render_agent_page():
     memory = IDENTITY_FILE.read_text() if IDENTITY_FILE.exists() else ""
     log = (SCRIPT_DIR / "curation_log.md").read_text() if (SCRIPT_DIR / "curation_log.md").exists() else ""
+    journal = load_journal()
     updated = dt.datetime.now().strftime("%B %-d, %Y at %H:%M UTC")
 
-    reader_profile = _mem_section(memory, "Reader Profile")
-    reader_profile_short = reader_profile.split("\n")[0] if reader_profile else "Engineers building with agentic AI daily."
-    article_types = _mem_subsections(memory)
-    excludes_raw = _mem_section(memory, "Hard Excludes (never publish)") or _mem_section(memory, "Hard Excludes")
-    excludes = _mem_list_items(excludes_raw)
+    # Parse identity sections
+    who_i_am = _mem_section(memory, "Who I Am") or "I am the editor of The Last Engineer."
+    what_i_value = _mem_section(memory, "What I Value")
+    what_i_believe = _mem_section(memory, "What I Believe")
+    my_philosophy = _mem_section(memory, "My Philosophy")
+    reader_learnings = _mem_section(memory, "What I've Learned From Readers")
     log_rows = _parse_log_rows(log)
 
-    _NUMS = ["I", "II", "III", "IV", "V"]
-
-    sidebar_types = "".join(
-        f'\n              <li class="flex items-start gap-3 {"text-on-surface" if i == 0 else "text-outline"}">'
-        f'\n                <span class="{"text-primary" if i == 0 else "text-primary/40"} mt-0.5">{str(i+1).zfill(2)}</span>'
-        f"\n                <span>{_he(t['name'])}</span>"
+    # Build identity values list
+    values_items = "".join(
+        f'\n              <li class="flex items-start gap-3 text-on-surface">'
+        f'\n                <span class="text-primary mt-0.5">—</span>'
+        f"\n                <span>{_he(line[2:].strip())}</span>"
         f"\n              </li>"
-        for i, t in enumerate(article_types[:3])
+        for line in what_i_value.split("\n") if line.startswith("- ")
     )
 
-    types_items = "".join(
-        f'\n            <div class="flex gap-6 group">'
-        f'\n              <div class="font-label text-3xl text-primary/20 group-hover:text-primary transition-colors">{_NUMS[i] if i < len(_NUMS) else str(i+1)}</div>'
-        f"\n              <div>"
-        f'\n                <h4 class="font-headline text-2xl mb-2">{_he(t["name"])}</h4>'
-        f'\n                <p class="text-on-surface-variant text-sm leading-relaxed">{_he(t["body"].replace(chr(10), " ")[:160])}</p>'
-        f"\n              </div>"
-        f"\n            </div>"
-        for i, t in enumerate(article_types[:3])
+    # Build beliefs
+    beliefs_items = "".join(
+        f'\n              <li class="flex items-start gap-3 text-on-surface-variant">'
+        f'\n                <span class="text-primary/40 mt-0.5">—</span>'
+        f"\n                <span>{_he(line[2:].strip())}</span>"
+        f"\n              </li>"
+        for line in what_i_believe.split("\n") if line.startswith("- ")
     )
 
-    excludes_items = "".join(
-        f'\n              <div class="flex items-center gap-3 text-sm font-label text-on-surface">'
-        f'\n                <span class="material-symbols-outlined text-[14px] text-outline">close</span>'
-        f"\n                {_he(item)}"
-        f"\n              </div>"
-        for item in excludes[:8]
-    )
+    # Journal entries
+    journal_html = ""
+    if journal:
+        journal_items = "".join(
+            f'\n    <div class="bg-surface-container p-6 border-l-2 border-outline-variant/30">'
+            f'\n      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-2">{j.get("date","")}</span>'
+            f'\n      <p class="text-outline text-sm leading-relaxed mb-2"><strong class="text-on-surface">Themes:</strong> {_he(", ".join(j.get("themes",[])))}</p>'
+            f'\n      <p class="text-outline text-sm leading-relaxed mb-1"><strong class="text-on-surface">Surprise:</strong> {_he(j.get("surprises",""))}</p>'
+            f'\n      <p class="text-outline text-sm leading-relaxed"><strong class="text-on-surface">Observation:</strong> {_he(j.get("observations",""))}</p>'
+            f'\n    </div>'
+            for j in reversed(journal)
+        )
+        journal_html = f"""
+      <section class="mb-20">
+        <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[16px]">auto_stories</span>
+          Episodic Journal (Last 7 Days)
+        </h2>
+        <div class="space-y-4">{journal_items}
+        </div>
+      </section>"""
 
     if log_rows:
         log_table_rows = "".join(
@@ -1173,8 +1235,8 @@ tailwind.config = {{
     </div>
     <div class="w-full bg-surface-container-lowest flex flex-wrap gap-8 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase">
       <div class="flex items-center gap-2"><span class="text-primary">●</span> Status: <span class="text-on-surface">Autonomous Operation</span></div>
-      <div class="flex items-center gap-2">Sources Monitored: <span class="text-on-surface">36 feeds</span></div>
-      <div class="flex items-center gap-2">Article Types: <span class="text-on-surface">3</span></div>
+      <div class="flex items-center gap-2">Sources Monitored: <span class="text-on-surface">{len(RSS_FEEDS)} feeds</span></div>
+      <div class="flex items-center gap-2">Journal: <span class="text-on-surface">{len(journal)} days</span></div>
       <div class="ml-auto opacity-50">Memory Synced</div>
     </div>
   </section>
@@ -1182,39 +1244,41 @@ tailwind.config = {{
   <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
     <aside class="md:col-span-4 flex flex-col gap-12">
       <div class="border-l border-outline-variant/20 pl-6 py-2">
-        <h3 class="font-label text-xs uppercase tracking-widest text-primary mb-4">Reader Profile</h3>
-        <p class="font-headline italic text-xl text-on-surface leading-snug">{_he(reader_profile_short)}</p>
+        <h3 class="font-label text-xs uppercase tracking-widest text-primary mb-4">Who I Am</h3>
+        <p class="font-headline italic text-xl text-on-surface leading-snug">{_he(who_i_am)}</p>
       </div>
       <div class="bg-surface-container-low p-6">
-        <h3 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-6">Article Types</h3>
-        <ul class="font-label text-xs space-y-4">{sidebar_types}
+        <h3 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-6">What I Value</h3>
+        <ul class="font-label text-xs space-y-4">{values_items}
         </ul>
       </div>
     </aside>
 
     <div class="md:col-span-8">
       <section class="mb-20">
-        <h2 class="font-headline text-3xl mb-8 border-b border-outline-variant/10 pb-4">This Newsletter Is <span class="italic text-primary">ONLY</span> About Agents</h2>
-        <div class="font-body text-lg text-on-surface-variant leading-relaxed space-y-6">
-          <p>In the noise of modern AI coverage, we define a sharp boundary. The Last Engineer does not cover general-purpose chatbots, new model releases, or high-level AI policy.</p>
-          <p class="font-headline italic text-2xl text-on-surface">"We focus exclusively on autonomous AI agents — entities that can reason, plan, use tools, and take actions."</p>
+        <h2 class="font-headline text-3xl mb-8 border-b border-outline-variant/10 pb-4">What I <span class="italic text-primary">Believe</span></h2>
+        <div class="font-body text-lg text-on-surface-variant leading-relaxed">
+          <ul class="space-y-4">{beliefs_items}
+          </ul>
         </div>
       </section>
 
       <section class="mb-20">
-        <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10">Three Types of Articles</h2>
-        <div class="space-y-12">{types_items}
+        <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10">My Philosophy</h2>
+        <div class="font-body text-on-surface-variant leading-relaxed">
+          {"".join(f'<p class="mb-3">{_he(line[2:].strip())}</p>' if line.startswith("- ") else "" for line in my_philosophy.split(chr(10)))}
         </div>
       </section>
 
       <section class="mb-20">
         <div class="bg-surface-container-low p-8 relative overflow-hidden">
           <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-          <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-6">Hard Excludes</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">{excludes_items}
-          </div>
+          <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-6">What I've Learned From Readers</h2>
+          <p class="text-on-surface-variant text-sm leading-relaxed">{_he(reader_learnings)}</p>
         </div>
       </section>
+
+{journal_html}
     </div>
   </div>
 
@@ -1240,6 +1304,31 @@ tailwind.config = {{
         <tbody class="text-on-surface divide-y divide-outline-variant/5">{log_table_rows}
         </tbody>
       </table>
+    </div>
+  </section>
+
+  <section class="mt-16 pt-12 border-t border-outline-variant/10">
+    <h2 class="font-label text-xs uppercase tracking-widest text-outline mb-8 flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-[16px]">code</span>
+      Source Files on GitHub
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/memory/identity.md" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
+        <span class="font-label text-primary text-[10px] uppercase tracking-widest">Identity</span>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">The agent's persistent values, beliefs, and philosophy</p>
+      </a>
+      <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/curation_log.md" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
+        <span class="font-label text-primary text-[10px] uppercase tracking-widest">Curation Log</span>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Daily editorial decisions and weekly consolidation notes</p>
+      </a>
+      <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/memory/journal.json" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
+        <span class="font-label text-primary text-[10px] uppercase tracking-widest">Journal</span>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">7-day rolling episodic memory — themes, surprises, observations</p>
+      </a>
+      <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/memory/daily_log.json" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
+        <span class="font-label text-primary text-[10px] uppercase tracking-widest">Daily Log</span>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Structured metrics — selectivity, source diversity, full audit trail</p>
+      </a>
     </div>
   </section>
 </main>
@@ -1344,7 +1433,7 @@ def publish_to_site(digest: dict, date: dt.date = None, editorial_text: str = ""
     print(f"  📰 Issue #{issue_num}: {path.name}")
     issues = get_all_issues()
     update_archive_page(issues)
-    update_landing_page(issues)
+    update_landing_page(issues, digest, editorial_text)
     render_agent_page()
 
 def git_push():

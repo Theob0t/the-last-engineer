@@ -8,72 +8,99 @@
 
 ## What is this?
 
-A daily newsletter about autonomous AI agents — and a live experiment in agentic self-improvement.
+A daily newsletter curated by an AI editor with a tiered memory system. Every morning it scans 40+ official AI blogs, selects what matters, writes an editorial explaining its thinking, and delivers it to your inbox.
 
-Every morning, an autonomous agent scans 35+ official AI blogs (Anthropic, OpenAI, DeepMind, METR, Cursor, and more), decides what's worth reading, and delivers it to your inbox. No human editor. No curation team. Just an AI making editorial decisions at 7 AM UTC.
+Two sections:
+- **⚡ Vibe Coding** — AI dev tool updates, vibe coding news, real builder use cases, MCP integrations, workflows
+- **🧠 The Big Picture** — AI futures, societal impact, deep analysis essays, AI economy, safety in the philosophical sense
 
-Three types of content, nothing else:
-- **🛠 agentic tools** — frameworks, products, MCP integrations, coding agents you can use this week
-- **🧪 agent research** — benchmarks, architectures, capabilities, long-horizon task research
-- **⚖️ alignment research** — safety, red-teaming, oversight, corrigibility — agents only
+Three vibe tags: `🛠 builder tools` · `🧪 deep analysis` · `⚖️ AI futures`
 
 ---
 
 ## The Experiment
 
-This isn't just a newsletter. It's a live experiment in **agentic editorial intelligence**.
+This is a live experiment in **tiered agent memory architecture**, inspired by [Generative Agents](https://arxiv.org/abs/2304.03442) (Park et al.) and [MemGPT/Letta](https://arxiv.org/abs/2310.08560).
 
-The agent doesn't just curate — it learns. After each issue, it reflects on its own picks, updates its editorial memory, and refines its selection criteria. Reader feedback (👍/👎 on each article) is aggregated into engagement signals that feed back into the next curation cycle.
+The agent has three memory tiers:
 
 ```
-fetch → deduplicate → curate → publish → reflect → update memory → commit
-                                            ↑
-                              reader engagement signals (👍/👎)
+┌─────────────────────────────────────────────┐
+│  SEMANTIC MEMORY (persistent identity)       │
+│  memory/identity.md                          │
+│  Updated: weekly (consolidation)             │
+│  Contains: values, beliefs, philosophy       │
+└──────────────────────┬──────────────────────┘
+                       │ weekly consolidation
+┌──────────────────────▼──────────────────────┐
+│  EPISODIC MEMORY (daily journal)             │
+│  memory/journal.json                         │
+│  Updated: daily                              │
+│  Contains: themes, surprises, observations,  │
+│  per-article reasoning                       │
+│  Rolling: 7 days → consolidated → purged     │
+└──────────────────────┬──────────────────────┘
+                       │ assembled per-run
+┌──────────────────────▼──────────────────────┐
+│  WORKING MEMORY (ephemeral)                  │
+│  Not persisted                               │
+│  Contains: today's articles, identity,       │
+│  recent journal, dedup, vote signals         │
+└─────────────────────────────────────────────┘
 ```
 
-This is an early attempt at **RLHF-style feedback** applied to editorial curation:
-- `editorial_memory.md` — the agent's evolving editorial guidelines, updated daily
-- `curation_log.md` — an interpretable trace of every editorial decision the agent makes
-- Reader votes are aggregated and injected into Claude's system prompt as preference signals
-- Everything is version-controlled — the agent's taste evolution is fully auditable in git history
+**Daily**: The agent curates articles, writes an editorial explaining its picks (the "Editor's Note"), and logs a journal entry with themes, surprises, and observations.
 
-**The question:** can an AI agent develop genuinely good editorial taste through self-reflection and human feedback, with no human in the loop?
+**Weekly**: After 7 journal entries, the agent consolidates episodic memory into identity updates. Its beliefs, values, and philosophy evolve based on accumulated observations + reader vote patterns.
+
+**The question:** can an AI agent develop genuine editorial taste through structured memory consolidation and community feedback, with no human in the loop?
+
+---
+
+## Pipeline
+
+```
+fetch 40+ feeds → dedup (URL hash + 7-day semantic) → curate with Claude
+    → write editorial + journal entry → publish web + email
+    → [every 7 days: consolidate journal → update identity]
+    → git push → GitHub Pages
+```
+
+Reader votes (👍/👎 on each article) feed back into:
+1. The curation prompt as engagement signals
+2. The weekly consolidation as reader preference data
 
 ---
 
 ## How to participate
 
-**Read and vote** — every article on the web issues has a 👍/👎. Your votes directly influence what the agent picks tomorrow.
+**Read and vote** — every article has 👍/👎 buttons. Your votes shape the agent's identity during weekly consolidation.
 
-**Watch the agent learn** — `editorial_memory.md` and `curation_log.md` are updated daily and committed to this repo. You can read the agent's reasoning and see how its editorial guidelines change over time.
+**Watch the agent think** — the [Agent page](https://theob0t.github.io/the-last-engineer/agent.html) shows the agent's current identity, journal, and links to all source files on GitHub.
 
-**Fork and run your own** — this is fully open source. Fork the repo, point it at different feeds, change the editorial mandate, and run your own agentic newsletter for ~$1/month.
+**Read the source files:**
+- [`memory/identity.md`](scripts/memory/identity.md) — the agent's persistent self
+- [`memory/journal.json`](scripts/memory/journal.json) — 7-day episodic memory
+- [`memory/daily_log.json`](scripts/memory/daily_log.json) — structured metrics + full audit trail
+- [`curation_log.md`](scripts/curation_log.md) — editorial decisions + weekly consolidation notes
 
-**Open issues** — if you think the agent made a bad call (wrong pick, missed something important), open a GitHub issue. We may use community feedback to manually correct the editorial memory.
+**Fork and run your own** — see below.
 
 ---
 
-## How it works
+## Key files
 
-```
-GitHub Actions (7 AM UTC daily) → scripts/run.py
-  ├── Fetch 35+ RSS feeds
-  ├── Deduplicate (URL hashing, persistent across runs)
-  ├── Curate with Claude (system prompt + editorial memory + engagement signals)
-  ├── Render email + web issue
-  ├── Publish → issues/YYYY-MM-DD.html + update landing page
-  ├── Reflect → update editorial_memory.md + curation_log.md
-  ├── Git push → GitHub Pages rebuilds
-  └── Send email via Gmail SMTP
-```
-
-**Key files:**
 ```
 scripts/
-├── run.py                  ← the entire pipeline (one file)
-├── editorial_memory.md     ← agent's evolving editorial guidelines
-├── curation_log.md         ← daily trace of editorial decisions
-└── .seen_hashes.json       ← dedup state (persisted in git)
+├── run.py                      ← the entire pipeline (one file)
+├── curation_log.md             ← daily + weekly editorial decisions
+├── editorial_memory.md         ← legacy (kept as backup)
+├── .seen_hashes.json           ← URL dedup state
+└── memory/
+    ├── identity.md             ← agent's persistent self (values, beliefs, philosophy)
+    ├── journal.json            ← 7-day rolling episodic memory
+    ├── daily_log.json          ← structured metrics + audit trail
+    └── recent_summaries.json   ← 7-day semantic dedup
 ```
 
 ---
