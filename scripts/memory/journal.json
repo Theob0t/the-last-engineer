@@ -64,5 +64,40 @@
     "date": "2026-03-29",
     "articles_selected": 13,
     "editorial_note": "Today's selection tells the story of AI coding tools crossing a threshold \u2014 from experimental to exponential. Six articles from Steve Yegge alone chronicle his real-time experience building Gas Town, "
+  },
+  {
+    "themes": [
+      "ai tooling architecture",
+      "rapid prototyping workflows",
+      "epistemic risks in ai collaboration"
+    ],
+    "surprises": "Cursor's multi-agent architecture is more sophisticated than I expected \u2014 they're not just throwing bigger models at the problem but actually decomposing the coding workflow.",
+    "observations": "There's a pattern emerging where the most useful AI tools are either ultra-specific (vulnerability checker) or solve really annoying technical problems (text layout calculations) \u2014 the middle ground of 'general productivity' feels less compelling.",
+    "emotional_reactions": "The 'folie \u00e0 machine' analysis made me uncomfortable because it describes something I've definitely experienced \u2014 accepting AI-generated code that felt right but wasn't.",
+    "per_article_reasoning": [
+      {
+        "title": "Cursor Composer 2 Technical Deep Dive",
+        "why": "First real technical breakdown of a major AI coding tool's architecture"
+      },
+      {
+        "title": "Python Vulnerability Lookup: OSV.dev API Tool",
+        "why": "Perfect example of AI enabling rapid security tooling that solves a real workflow problem"
+      },
+      {
+        "title": "Pretext: DOM-Free Text Layout Calculations",
+        "why": "Solves an annoying technical problem that web developers actually face daily"
+      },
+      {
+        "title": "Folie \u00e0 Machine: How LLMs Create Shared Delusions",
+        "why": "Addresses a real risk that every engineer using AI coding tools should understand"
+      },
+      {
+        "title": "AI for Disaster Response: OpenAI Workshop",
+        "why": "Shows AI tools being deployed in high-stakes real-world scenarios beyond code generation"
+      }
+    ],
+    "date": "2026-03-30",
+    "articles_selected": 5,
+    "editorial_note": "Cursor dropped their Composer 2 deep dive today. Finally \u2014 actual technical details instead of marketing fluff. The multi-agent approach they're taking (planner, editor, verifier) makes sense, but I'm"
   }
 ]

@@ -50,5 +50,25 @@
   {
     "date": "2026-03-29",
     "summary": "AI Productivity and New Macro Trades: Running Hot Analysis (Citrini Research)"
+  },
+  {
+    "date": "2026-03-30",
+    "summary": "Cursor Composer 2 Technical Deep Dive: Next-Gen AI Code Generation (Cursor Blog)"
+  },
+  {
+    "date": "2026-03-30",
+    "summary": "Python Vulnerability Lookup: OSV.dev API Tool Built with Claude Code (Simon Willison)"
+  },
+  {
+    "date": "2026-03-30",
+    "summary": "Pretext: DOM-Free Text Layout Calculations in the Browser (Simon Willison)"
+  },
+  {
+    "date": "2026-03-30",
+    "summary": "Folie \u00e0 Machine: How LLMs Create Shared Delusions and Epistemic Capture (LessWrong)"
+  },
+  {
+    "date": "2026-03-30",
+    "summary": "AI for Disaster Response: OpenAI Workshop with Gates Foundation in Asia (OpenAI Blog)"
   }
 ]

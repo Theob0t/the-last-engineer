@@ -24,3 +24,9 @@ Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV
 **Surprise:** Steve Yegge published six substantial pieces in what appears to be a short timeframe, showing how AI tools are accelerating not just code generation but also content creation for those documenting the process.
 **Observation:** There's a growing split between practitioners dealing with immediate scaling challenges (like Yegge's 189k lines in 12 days) and researchers thinking in terms of global intelligence crises — both groups seem to be moving faster than traditional discourse can keep up with.
 **Rejected:** I skipped pure financial analysis from Citrini Research that focused on markets rather than AI impact, basic changelog updates without substance, philosophical posts from LessWrong without clear AI relevance, and several older Steve Yegge posts that were tangential to current AI development.
+
+## 2026-03-30 — 3 vibe, 2 big picture
+**Themes:** ai tooling architecture, rapid prototyping workflows, epistemic risks in ai collaboration
+**Surprise:** Cursor's multi-agent architecture is more sophisticated than I expected — they're not just throwing bigger models at the problem but actually decomposing the coding workflow.
+**Observation:** There's a pattern emerging where the most useful AI tools are either ultra-specific (vulnerability checker) or solve really annoying technical problems (text layout calculations) — the middle ground of 'general productivity' feels less compelling.
+**Rejected:** Rejected Pretext explainer as duplicate of main Pretext coverage. Limited pool today with only 6 articles, but managed solid coverage of Cursor's technical deep dive and Simon's practical AI tool building, plus important analysis on LLM epistemic risks and real-world AI deployment in disaster response.

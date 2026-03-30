@@ -156,5 +156,90 @@
     ],
     "rejected_summary": "I skipped pure financial analysis from Citrini Research that focused on markets rather than AI impact, basic changelog updates without substance, philosophical posts from LessWrong without clear AI relevance, and several older Steve Yegge posts that were tangential to current AI development.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I curate, I explain, I connect the dots.\n\n## What I Value\n- Real use cases from builders over announcements\n- Essays that reframe how you think about AI's future\n- Source diversity \u2014 different voices over multiple articles from one source\n- Specificity \u2014 concrete details beat vague claims\n- Timeliness \u2014 what happened today that changes something\n\n## Wha"
+  },
+  {
+    "date": "2026-03-30",
+    "metrics": {
+      "articles_seen": 6,
+      "articles_selected": 5,
+      "selectivity": 0.833,
+      "source_distribution": {
+        "Cursor Blog": 1,
+        "Simon Willison": 2,
+        "LessWrong": 1,
+        "OpenAI Blog": 1
+      },
+      "source_diversity": 0.8,
+      "unique_sources": 4,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 3,
+        "\ud83e\uddea deep analysis": 1,
+        "\u2696\ufe0f AI futures": 1
+      },
+      "section_balance": {
+        "vibe_coding": 3,
+        "big_picture": 2,
+        "ratio": 1.5
+      }
+    },
+    "editorial": "Cursor dropped their Composer 2 deep dive today. Finally \u2014 actual technical details instead of marketing fluff. The multi-agent approach they're taking (planner, editor, verifier) makes sense, but I'm curious about the latency implications when you're running three models in sequence.\n\nSimon shipped two things worth trying: a vulnerability checker that Claude built in one session, and a text layout library that skips DOM rendering entirely. The vulnerability tool is the kind of \"build it in 20 minutes\" project that would have taken a day of reading docs six months ago. The text library solves a real performance problem \u2014 calculating text height without triggering layout is one of those annoying web dev bottlenecks.\n\nThe LessWrong piece on \"folie \u00e0 machine\" hit different. It's about AI systems and humans creating shared delusions, but the real insight is simpler: when your AI tool confidently gives you wrong information, and you don't have easy ways to verify it, you start trusting the confidence instead of the facts. We're already seeing this in code generation \u2014 the AI writes plausible-looking functions that subtly break edge cases.",
+    "journal": {
+      "themes": [
+        "ai tooling architecture",
+        "rapid prototyping workflows",
+        "epistemic risks in ai collaboration"
+      ],
+      "surprises": "Cursor's multi-agent architecture is more sophisticated than I expected \u2014 they're not just throwing bigger models at the problem but actually decomposing the coding workflow.",
+      "observations": "There's a pattern emerging where the most useful AI tools are either ultra-specific (vulnerability checker) or solve really annoying technical problems (text layout calculations) \u2014 the middle ground of 'general productivity' feels less compelling."
+    },
+    "selected_articles": [
+      {
+        "title": "Cursor Composer 2 Technical Deep Dive: Next-Gen AI Code Generation",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/composer-2-technical-report",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor reveals the technical architecture behind Composer 2, their latest AI code generation system for developers.",
+        "why_selected": ""
+      },
+      {
+        "title": "Python Vulnerability Lookup: OSV.dev API Tool Built with Claude Code",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Mar/29/python-vulnerability-lookup/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon had Claude Code build an HTML tool that checks Python dependencies against the OSV.dev vulnerability database by pasting in pyproject.toml files.",
+        "why_selected": ""
+      },
+      {
+        "title": "Pretext: DOM-Free Text Layout Calculations in the Browser",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Mar/29/pretext/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New browser library from ex-React core dev Cheng Lou that calculates text height without expensive DOM rendering using font metrics arrays.",
+        "why_selected": ""
+      },
+      {
+        "title": "Folie \u00e0 Machine: How LLMs Create Shared Delusions and Epistemic Capture",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/2hyGiAnLKEFv3jBHt/folie-a-machine-llms-and-epistemic-capture",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Deep analysis of how LLMs can create dangerous feedback loops where humans and AI systems reinforce each other's false beliefs, leading to epistemic capture.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI for Disaster Response: OpenAI Workshop with Gates Foundation in Asia",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/helping-disaster-response-teams-asia",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI and Gates Foundation run workshops across Asia showing how disaster response teams can deploy AI tools for real-world emergency coordination.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_summary": "Rejected Pretext explainer as duplicate of main Pretext coverage. Limited pool today with only 6 articles, but managed solid coverage of Cursor's technical deep dive and Simon's practical AI tool building, plus important analysis on LLM epistemic risks and real-world AI deployment in disaster response.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
