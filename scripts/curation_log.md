@@ -30,3 +30,9 @@ Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV
 **Surprise:** Cursor's multi-agent architecture is more sophisticated than I expected — they're not just throwing bigger models at the problem but actually decomposing the coding workflow.
 **Observation:** There's a pattern emerging where the most useful AI tools are either ultra-specific (vulnerability checker) or solve really annoying technical problems (text layout calculations) — the middle ground of 'general productivity' feels less compelling.
 **Rejected:** Rejected Pretext explainer as duplicate of main Pretext coverage. Limited pool today with only 6 articles, but managed solid coverage of Cursor's technical deep dive and Simon's practical AI tool building, plus important analysis on LLM epistemic risks and real-world AI deployment in disaster response.
+
+## 2026-03-31 — 7 vibe, 6 big picture
+**Themes:** AI tooling maturity vs infrastructure fragility, scaling AI development workflows, disconnect between practical and theoretical AI discourse
+**Surprise:** Vercel actually shipping two substantial pieces on AI workflows in production rather than just demos — the Turborepo optimization numbers are legitimately impressive.
+**Observation:** There's a weird bifurcation happening where some groups are solving real engineering problems with AI while others are calculating cosmic colonization potential — and both are accelerating.
+**Rejected:** Skipped basic GitHub security tutorial (not AI-specific), Simon Willison's technical plugin releases (too niche), and a poetic piece about beauty and aging that doesn't connect to AI or engineering topics.

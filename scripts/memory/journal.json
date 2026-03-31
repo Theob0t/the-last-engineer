@@ -99,5 +99,48 @@
     "date": "2026-03-30",
     "articles_selected": 5,
     "editorial_note": "Cursor dropped their Composer 2 deep dive today. Finally \u2014 actual technical details instead of marketing fluff. The multi-agent approach they're taking (planner, editor, verifier) makes sense, but I'm"
+  },
+  {
+    "themes": [
+      "AI tooling maturity vs infrastructure fragility",
+      "scaling AI development workflows",
+      "disconnect between practical and theoretical AI discourse"
+    ],
+    "surprises": "Vercel actually shipping two substantial pieces on AI workflows in production rather than just demos \u2014 the Turborepo optimization numbers are legitimately impressive.",
+    "observations": "There's a weird bifurcation happening where some groups are solving real engineering problems with AI while others are calculating cosmic colonization potential \u2014 and both are accelerating.",
+    "emotional_reactions": "Frustrated by the gap between Gerganov saying local inference is still broken and people theorizing about superintelligent space travel \u2014 we need more focus on the basics.",
+    "per_article_reasoning": [
+      {
+        "title": "Vibe Maintainer: What It's Like When AI Slop Floods Your OSS Project",
+        "why": "Real maintainer experience with AI-generated PRs that builders need to understand"
+      },
+      {
+        "title": "Agent Responsibly: Vercel's Framework for Shipping Code Agents Without Breaking Things",
+        "why": "Actual production framework for AI coding workflows, not theoretical"
+      },
+      {
+        "title": "Making Turborepo 96% Faster with Agents, Sandboxes, and Humans",
+        "why": "Concrete performance numbers showing AI agents optimizing real infrastructure"
+      },
+      {
+        "title": "Local Model Infrastructure Is Still Fragile: Georgi Gerganov's Reality Check",
+        "why": "llama.cpp creator explaining why the basics are still broken"
+      },
+      {
+        "title": "The Last 4 Jobs in Tech: A Mental Model for AI's Labor Impact",
+        "why": "Practical career planning framework for engineers"
+      },
+      {
+        "title": "AI Safety in Four Fake Graphs: Where We Stand in Early 2026",
+        "why": "Visual intuitions on capability growth that affect engineering timelines"
+      },
+      {
+        "title": "The Cosmic Endowment: How Much of the Universe Could Superintelligence Reach?",
+        "why": "Example of how theoretical AI discourse has lost touch with practical reality"
+      }
+    ],
+    "date": "2026-03-31",
+    "articles_selected": 13,
+    "editorial_note": "Yegge's OSS maintainer post hits different when you've actually had to review AI-generated PRs. The code looks right until you trace through the edge cases \u2014 then you realize the contributor didn't un"
   }
 ]

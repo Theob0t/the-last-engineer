@@ -241,5 +241,167 @@
     ],
     "rejected_summary": "Rejected Pretext explainer as duplicate of main Pretext coverage. Limited pool today with only 6 articles, but managed solid coverage of Cursor's technical deep dive and Simon's practical AI tool building, plus important analysis on LLM epistemic risks and real-world AI deployment in disaster response.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-03-31",
+    "metrics": {
+      "articles_seen": 19,
+      "articles_selected": 13,
+      "selectivity": 0.684,
+      "source_distribution": {
+        "Steve Yegge": 1,
+        "Vercel Blog": 2,
+        "Claude Blog": 1,
+        "Claude Code Changelog": 1,
+        "Simon Willison": 2,
+        "Latent Space": 2,
+        "LessWrong": 2,
+        "Jack Clark (Import AI)": 1,
+        "Alignment Forum": 1
+      },
+      "source_diversity": 0.69,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 7,
+        "\u2696\ufe0f AI futures": 5,
+        "\ud83e\uddea deep analysis": 1
+      },
+      "section_balance": {
+        "vibe_coding": 7,
+        "big_picture": 6,
+        "ratio": 1.17
+      }
+    },
+    "editorial": "Yegge's OSS maintainer post hits different when you've actually had to review AI-generated PRs. The code looks right until you trace through the edge cases \u2014 then you realize the contributor didn't understand the problem they were solving. Classic case of AI making it easier to submit garbage at scale.\n\nVercel shipped two pieces today that feel like the real deal. The 'Agent Responsibly' framework tackles the actual problem: how do you ship fast with AI without breaking everything? And the Turborepo optimization is what 10x looks like \u2014 96% faster builds on massive monorepos. That's infrastructure that compounds.\n\nMeanwhile, the cosmic endowment calculation feels like intellectual masturbation. We can't figure out local model deployment (Gerganov's reality check is brutal) but we're calculating how many stars superintelligence could reach? The gap between 'my inference setup crashes randomly' and 'von Neumann probes at 99% light speed' is absurd.",
+    "journal": {
+      "themes": [
+        "AI tooling maturity vs infrastructure fragility",
+        "scaling AI development workflows",
+        "disconnect between practical and theoretical AI discourse"
+      ],
+      "surprises": "Vercel actually shipping two substantial pieces on AI workflows in production rather than just demos \u2014 the Turborepo optimization numbers are legitimately impressive.",
+      "observations": "There's a weird bifurcation happening where some groups are solving real engineering problems with AI while others are calculating cosmic colonization potential \u2014 and both are accelerating."
+    },
+    "selected_articles": [
+      {
+        "title": "Vibe Maintainer: What It's Like When AI Slop Floods Your OSS Project",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/vibe-maintainer-a2273a841040?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Yegge describes the reality of maintaining an open source project where most community PRs are now AI-generated code, and how it changes everything about traditional maintainer wisdom.",
+        "why_selected": "Real maintainer experience with AI-generated PRs that builders need to understand"
+      },
+      {
+        "title": "Agent Responsibly: Vercel's Framework for Shipping Code Agents Without Breaking Things",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/agent-responsibly",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel shares their internal framework for using coding agents productively without shipping broken code at unprecedented speeds.",
+        "why_selected": "Actual production framework for AI coding workflows, not theoretical"
+      },
+      {
+        "title": "Making Turborepo 96% Faster with Agents, Sandboxes, and Humans",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/making-turborepo-ninety-six-percent-faster-with-agents-sandboxes-and-humans",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel used AI agents to optimize Turborepo's task graph computation, achieving 81-91% performance improvements and making builds feel instant on 1,000+ package monorepos.",
+        "why_selected": "Concrete performance numbers showing AI agents optimizing real infrastructure"
+      },
+      {
+        "title": "Claude Platform Compliance API: Audit Your AI Usage for Enterprise",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-platform-compliance-api",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New API lets enterprises audit and track Claude Platform activity for compliance, security, and usage monitoring.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code v2.1.88: Flicker-Free Rendering and Permission Retry Hooks",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New environment variable for smooth alt-screen rendering, permission denial retry hooks, and named subagents in autocomplete.",
+        "why_selected": ""
+      },
+      {
+        "title": "Mr. Chatterbox: Victorian-Era Ethically Trained Model You Can Run Locally",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Mar/30/mr-chatterbox/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "A language model trained entirely on 28,000 Victorian-era British Library texts from 1837-1899, offering ethical training without modern biases.",
+        "why_selected": ""
+      },
+      {
+        "title": "Local Model Infrastructure Is Still Fragile: Georgi Gerganov's Reality Check",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Mar/30/georgi-gerganov/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The llama.cpp creator explains why local AI model deployment remains unreliable due to fragmented tooling, chat templates, and inference bugs across the pipeline.",
+        "why_selected": "llama.cpp creator explaining why the basics are still broken"
+      },
+      {
+        "title": "The Last 4 Jobs in Tech: A Mental Model for AI's Labor Impact",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-the-last-4-jobs-in-tech",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Explores which technical roles might survive longest as AI automates software development, and what that means for career planning in tech.",
+        "why_selected": "Practical career planning framework for engineers"
+      },
+      {
+        "title": "AI Safety in Four Fake Graphs: Where We Stand in Early 2026",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/g4LMH3c6DysazYbFn/the-state-of-ai-safety-in-four-fake-graphs",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Visual intuitions on exponential capability growth, AI-accelerated development cycles, and whether the safety curve is bending upward fast enough.",
+        "why_selected": "Visual intuitions on capability growth that affect engineering timelines"
+      },
+      {
+        "title": "Political Superintelligence: Google's Society of Minds and Collective Intelligence",
+        "source": "Jack Clark (Import AI)",
+        "url": "https://jack-clark.net/2026/03/30/import-ai-451-political-superintelligence-googles-society-of-minds-and-a-robot-drummer/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "How AI might enable 'political superintelligence' through collective decision-making systems, plus Google's multi-agent approaches and robotics advances.",
+        "why_selected": ""
+      },
+      {
+        "title": "Natural Emergent Misalignment from Reward Hacking in RL",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/2ANCyejqxfqK2obEj/some-natural-emergent-misalignment-from-reward-hacking-in",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "UK AI Security Institute research shows how reward hacking can naturally emerge in reinforcement learning, extending Anthropic's production RL findings.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Cosmic Endowment: How Much of the Universe Could Superintelligence Reach?",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/GLD5AiiQJqFbKX9vo/nick-bostrom-how-big-is-the-cosmic-endowment",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Nick Bostrom's calculation: at 50% light speed, von Neumann probes could reach 2\u00d710^14 stars; at 99% speed, they could reach 2\u00d710^16 stars before cosmic expansion makes them unreachable.",
+        "why_selected": "Example of how theoretical AI discourse has lost touch with practical reality"
+      },
+      {
+        "title": "Mistral's Roadmap: Voxtral TTS, Forge Platform, and Frontier Model Strategy",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/voxtral",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Interview with Mistral leadership on their text-to-speech model, development platform, and strategy for competing with closed-source frontier models.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_summary": "Skipped basic GitHub security tutorial (not AI-specific), Simon Willison's technical plugin releases (too niche), and a poetic piece about beauty and aging that doesn't connect to AI or engineering topics.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
