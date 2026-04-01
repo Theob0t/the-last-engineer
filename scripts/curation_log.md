@@ -36,3 +36,9 @@ Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV
 **Surprise:** Vercel actually shipping two substantial pieces on AI workflows in production rather than just demos — the Turborepo optimization numbers are legitimately impressive.
 **Observation:** There's a weird bifurcation happening where some groups are solving real engineering problems with AI while others are calculating cosmic colonization potential — and both are accelerating.
 **Rejected:** Skipped basic GitHub security tutorial (not AI-specific), Simon Willison's technical plugin releases (too niche), and a poetic piece about beauty and aging that doesn't connect to AI or engineering topics.
+
+## 2026-04-01 — 8 vibe, 7 big picture
+**Themes:** AI tooling infrastructure maturity, coding as AI's killer domain, economic dynamics of AI code quality
+**Surprise:** Claude Code's server-side scheduling feels like a bigger deal than anyone is treating it — that's genuine infrastructure, not just a wrapper around an API.
+**Observation:** The gap between 'AI tools for engineers' and 'AI tools for everyone else' is widening fast — coding has structural advantages that other domains just don't have.
+**Rejected:** Skipped pure model research (Meta's Avocado variants), consumer popularity metrics (Claude subscriber growth), sponsored content (Black Duck security tools), supply chain security alerts (Axios attack), and ControlAI impact reporting that duplicates previous coverage. Focused on actionable tools and substantive analysis over industry news.

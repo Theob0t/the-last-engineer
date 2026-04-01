@@ -403,5 +403,185 @@
     ],
     "rejected_summary": "Skipped basic GitHub security tutorial (not AI-specific), Simon Willison's technical plugin releases (too niche), and a poetic piece about beauty and aging that doesn't connect to AI or engineering topics.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-01",
+    "metrics": {
+      "articles_seen": 26,
+      "articles_selected": 15,
+      "selectivity": 0.577,
+      "source_distribution": {
+        "Claude Code Changelog": 1,
+        "Google Developers AI": 1,
+        "GitHub Blog": 1,
+        "Replit Blog": 1,
+        "TLDR AI": 5,
+        "Vercel Blog": 1,
+        "Simon Willison": 2,
+        "LessWrong": 2,
+        "OpenAI Blog": 1
+      },
+      "source_diversity": 0.6,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\u2696\ufe0f AI futures": 1,
+        "\ud83e\uddea deep analysis": 6
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 7,
+        "ratio": 1.14
+      }
+    },
+    "editorial": "Three things jumped out today. First, the tooling is getting serious \u2014 Claude Code now schedules tasks that keep running on Anthropic's infrastructure. This isn't a demo feature anymore. This is \"I can actually automate my weekend PR reviews\" territory.\n\nSecond, the capability overhang piece nails something I've been thinking about: coding agents work because codebases are self-contained. Your enterprise knowledge work is scattered across Slack threads, email chains, legacy systems, and whatever's in Jim's head from 2019. Code lives in a repo. No wonder agents crush coding first.\n\nThird, Willison's economic argument about code quality is fascinating but wrong. Sure, competition might favor maintainable code generation \u2014 if the people buying AI coding tools could tell good code from garbage. Most can't. They just know it compiles.",
+    "journal": {
+      "themes": [
+        "AI tooling infrastructure maturity",
+        "coding as AI's killer domain",
+        "economic dynamics of AI code quality"
+      ],
+      "surprises": "Claude Code's server-side scheduling feels like a bigger deal than anyone is treating it \u2014 that's genuine infrastructure, not just a wrapper around an API.",
+      "observations": "The gap between 'AI tools for engineers' and 'AI tools for everyone else' is widening fast \u2014 coding has structural advantages that other domains just don't have."
+    },
+    "selected_articles": [
+      {
+        "title": "Claude Code v2.1.89: Defer Permissions and Flicker-Free Alt-Screen Rendering",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New permission deferral system lets headless sessions pause on tool calls and resume interactively, plus opt-in flicker-free rendering.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google ADK for Java 1.0: Agent Development Kit with Maps Grounding and Cross-Framework Collaboration",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Production-ready Java SDK for AI agents with Google Maps integration, URL fetching, and standardized Agent2Agent protocol for multi-framework workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Agent-Driven Development at GitHub: Building Agents to Automate My Job",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub engineer shares hands-on experience using coding agents to build automation agents for their own workflow.",
+        "why_selected": ""
+      },
+      {
+        "title": "Product Manager's Guide to AI Prototyping: From Weeks to Days",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/pm-guide-using-ai-to-build-prototypes",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Part 2 of PM series shows how AI eliminates traditional handoff delays and translation loss in prototyping workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code Web Scheduling: Tasks That Run on Anthropic Infrastructure",
+        "source": "TLDR AI",
+        "url": "https://code.claude.com/docs/en/web-scheduled-tasks",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Schedule recurring tasks like PR reviews and CI analysis that keep running on Anthropic's servers even when your device is off.",
+        "why_selected": ""
+      },
+      {
+        "title": "AutoBe Function Calling: Boosting Model Success Rate from 7% to 100%",
+        "source": "TLDR AI",
+        "url": "https://autobe.dev/blog/function-calling-harness-qwen-meetup-korea/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Open-source agent uses type schemas, compiler verification, and structured feedback to transform qwen3-coder from 6.75% to 99.8% function calling success.",
+        "why_selected": ""
+      },
+      {
+        "title": "FLORA's Creative Agent on Vercel: 50+ Image Models Orchestrated",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-flora-shipped-a-creative-agent-on-vercels-ai-stack",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Fashion company shipped creative generation system 2x faster using Vercel's AI stack to orchestrate 50+ image models for seasonal campaigns.",
+        "why_selected": ""
+      },
+      {
+        "title": "Simon Willison's Datasette LLM Plugin Updates: Model Configuration and Usage Tracking",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/1/datasette-llm/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New datasette-llm releases enable purpose-specific API key configuration and tool call loop tracking for LLM workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Product Alignment vs Superintelligence Alignment: Why Friendly Claude \u2260 Safe AGI",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/mrwYCNocXCP2hrWt8/product-alignment-is-not-superintelligence-alignment-and-we",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Progress on making current AI systems friendly doesn't solve the technical problem of building godlike superintelligence safely \u2014 we need to track this crucial distinction.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Costs Haven't Risen Despite Capability Improvements",
+        "source": "TLDR AI",
+        "url": "https://www.lesswrong.com/posts/E6ELHguZFNF3Czp55/ai-s-capability-improvements-haven-t-come-from-it-getting",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Frontier AI models achieve tasks at 3% of human costs with no upward cost trend, suggesting capability advances can continue under strict economic constraints.",
+        "why_selected": "Flat costs despite capability gains suggests sustainable scaling trajectory for AI deployment."
+      },
+      {
+        "title": "The Capability Overhang: Why Coding Agents Win First",
+        "source": "TLDR AI",
+        "url": "https://x.com/levie/status/2037928306977509601",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Coding agents outperform other domains because codebases provide self-contained context, unlike fragmented enterprise knowledge work across calls and legacy systems.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Raises $122 Billion to Expand Frontier AI Globally",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/accelerating-the-next-phase-ai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Massive funding round signals unprecedented investment in next-generation compute and global AI expansion as demand for enterprise AI accelerates.",
+        "why_selected": ""
+      },
+      {
+        "title": "Movie Review: The AI Doc \u2014 When Documentary Meets Existential Reality",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/ppC6geY4FxGYifrWx/movie-review-the-ai-doc",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Review of documentary that captures the real human experience of grappling with AI timelines and existential risk through marriage, parenthood, and apocaloptimism.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Mythos: Anthropic's Next-Generation Model Tier",
+        "source": "TLDR AI",
+        "url": "https://m1astra-mythos.pages.dev/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Leaked details on 'Mythos' \u2014 Anthropic's larger, more intelligent successor to Opus with dramatic improvements in coding and reasoning, but expensive to serve.",
+        "why_selected": ""
+      },
+      {
+        "title": "Economic Incentives Will Make AI Code Better",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/1/soohoon-choi/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Competition between AI models will favor those generating maintainable code because good code is cheaper to generate and maintain in the long run.",
+        "why_selected": "Willison's argument about competition favoring maintainable code generation is provocative but needs scrutiny."
+      }
+    ],
+    "rejected_summary": "Skipped pure model research (Meta's Avocado variants), consumer popularity metrics (Claude subscriber growth), sponsored content (Black Duck security tools), supply chain security alerts (Axios attack), and ControlAI impact reporting that duplicates previous coverage. Focused on actionable tools and substantive analysis over industry news.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

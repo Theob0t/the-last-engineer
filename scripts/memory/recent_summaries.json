@@ -122,5 +122,65 @@
   {
     "date": "2026-03-31",
     "summary": "Mistral's Roadmap: Voxtral TTS, Forge Platform, and Frontier Model Strategy (Latent Space)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Claude Code v2.1.89: Defer Permissions and Flicker-Free Alt-Screen Rendering (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Google ADK for Java 1.0: Agent Development Kit with Maps Grounding and Cross-Framework Collaboration (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Agent-Driven Development at GitHub: Building Agents to Automate My Job (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Product Manager's Guide to AI Prototyping: From Weeks to Days (Replit Blog)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Claude Code Web Scheduling: Tasks That Run on Anthropic Infrastructure (TLDR AI)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "AutoBe Function Calling: Boosting Model Success Rate from 7% to 100% (TLDR AI)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "FLORA's Creative Agent on Vercel: 50+ Image Models Orchestrated (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Simon Willison's Datasette LLM Plugin Updates: Model Configuration and Usage Tracking (Simon Willison)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Product Alignment vs Superintelligence Alignment: Why Friendly Claude \u2260 Safe AGI (LessWrong)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "AI Costs Haven't Risen Despite Capability Improvements (TLDR AI)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "The Capability Overhang: Why Coding Agents Win First (TLDR AI)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "OpenAI Raises $122 Billion to Expand Frontier AI Globally (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Movie Review: The AI Doc \u2014 When Documentary Meets Existential Reality (LessWrong)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Claude Mythos: Anthropic's Next-Generation Model Tier (TLDR AI)"
+  },
+  {
+    "date": "2026-04-01",
+    "summary": "Economic Incentives Will Make AI Code Better (Simon Willison)"
   }
 ]

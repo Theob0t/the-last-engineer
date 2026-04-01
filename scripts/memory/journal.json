@@ -142,5 +142,80 @@
     "date": "2026-03-31",
     "articles_selected": 13,
     "editorial_note": "Yegge's OSS maintainer post hits different when you've actually had to review AI-generated PRs. The code looks right until you trace through the edge cases \u2014 then you realize the contributor didn't un"
+  },
+  {
+    "themes": [
+      "AI tooling infrastructure maturity",
+      "coding as AI's killer domain",
+      "economic dynamics of AI code quality"
+    ],
+    "surprises": "Claude Code's server-side scheduling feels like a bigger deal than anyone is treating it \u2014 that's genuine infrastructure, not just a wrapper around an API.",
+    "observations": "The gap between 'AI tools for engineers' and 'AI tools for everyone else' is widening fast \u2014 coding has structural advantages that other domains just don't have.",
+    "emotional_reactions": "Genuinely excited about the server-side scheduling but skeptical about whether economic incentives will actually drive better code quality in practice.",
+    "per_article_reasoning": [
+      {
+        "title": "Claude Code v2.1.89",
+        "why": "Server-side task scheduling is a real infrastructure leap that changes what's possible with AI automation."
+      },
+      {
+        "title": "Google ADK for Java 1.0",
+        "why": "Production-ready agent development kit with Maps integration shows enterprise AI tooling is getting serious."
+      },
+      {
+        "title": "Agent-Driven Development at GitHub",
+        "why": "GitHub engineer using agents to build agents for their own workflow is exactly the meta-automation story readers want."
+      },
+      {
+        "title": "Product Manager's Guide to AI Prototyping",
+        "why": "Eliminating handoff delays in prototyping workflows addresses a real product development pain point."
+      },
+      {
+        "title": "Claude Code Web Scheduling",
+        "why": "Persistent task execution on Anthropic infrastructure is a genuine workflow game-changer."
+      },
+      {
+        "title": "AutoBe Function Calling",
+        "why": "Going from 7% to 100% function calling success with structured feedback shows how to actually make agents reliable."
+      },
+      {
+        "title": "FLORA's Creative Agent on Vercel",
+        "why": "Real company shipping creative generation 2x faster with orchestrated models is a concrete business impact story."
+      },
+      {
+        "title": "Simon Willison's Datasette LLM Plugin Updates",
+        "why": "Purpose-specific API configuration and tool call tracking are practical workflow improvements from someone who actually uses these tools."
+      },
+      {
+        "title": "Product Alignment vs Superintelligence Alignment",
+        "why": "Important distinction between making current AI friendly vs building safe superintelligence that most people are conflating."
+      },
+      {
+        "title": "AI Costs Haven't Risen Despite Capability Improvements",
+        "why": "Flat costs despite capability gains suggests sustainable scaling trajectory for AI deployment."
+      },
+      {
+        "title": "The Capability Overhang",
+        "why": "Self-contained codebases vs fragmented enterprise context explains why coding agents dominate other domains."
+      },
+      {
+        "title": "OpenAI Raises $122 Billion",
+        "why": "Unprecedented funding scale signals major shift in AI infrastructure investment priorities."
+      },
+      {
+        "title": "Movie Review: The AI Doc",
+        "why": "Human experience of grappling with AI timelines through personal life decisions adds emotional context to technical discussions."
+      },
+      {
+        "title": "Claude Mythos",
+        "why": "Leaked details on Anthropic's next major model tier indicate significant capability jumps coming."
+      },
+      {
+        "title": "Economic Incentives Will Make AI Code Better",
+        "why": "Willison's argument about competition favoring maintainable code generation is provocative but needs scrutiny."
+      }
+    ],
+    "date": "2026-04-01",
+    "articles_selected": 15,
+    "editorial_note": "Three things jumped out today. First, the tooling is getting serious \u2014 Claude Code now schedules tasks that keep running on Anthropic's infrastructure. This isn't a demo feature anymore. This is \"I ca"
   }
 ]
