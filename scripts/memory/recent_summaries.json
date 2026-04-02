@@ -182,5 +182,61 @@
   {
     "date": "2026-04-01",
     "summary": "Economic Incentives Will Make AI Code Better (Simon Willison)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "GitHub Copilot CLI /fleet: Run Multiple Agents in Parallel (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Google ADK Go 1.0: Production-Ready Agent Development Kit (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Codex Plugin for Claude Code: Adversarial Reviews and Agent Handoffs (TLDR AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Claude Code v2.1.90: Interactive /powerup Lessons and Offline Support (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Microsoft 365 Copilot Critique and Council Modes: Dual-Model Research (TLDR AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "AI Code Review at Scale: From Manual to Automated Verification (TLDR AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Simon Willison's March 2026: Agentic Engineering Patterns and More (Simon Willison)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Anthropic's Pause: The Most Expensive Corporate Alarm in History (LessWrong)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Anthropic RSP v3: Abandoning Safety Commitments for Competitive Reasons (LessWrong)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Predicting When RL Training Breaks Chain-of-Thought Monitoring (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "AI Infrastructure Roadmap: Five Frontiers Beyond Scale (TLDR AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "The Mirror Test for LLMs: Can AI Recognize Its Own Output? (TLDR AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "AI Applications Going Full-Stack: Vertical Integration Strategies (TLDR AI)"
+  },
+  {
+    "date": "2026-04-02",
+    "summary": "Research Advice for Junior AI Safety Researchers (Alignment Forum)"
   }
 ]

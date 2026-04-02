@@ -583,5 +583,174 @@
     ],
     "rejected_summary": "Skipped pure model research (Meta's Avocado variants), consumer popularity metrics (Claude subscriber growth), sponsored content (Black Duck security tools), supply chain security alerts (Axios attack), and ControlAI impact reporting that duplicates previous coverage. Focused on actionable tools and substantive analysis over industry news.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-02",
+    "metrics": {
+      "articles_seen": 26,
+      "articles_selected": 14,
+      "selectivity": 0.538,
+      "source_distribution": {
+        "GitHub Blog": 1,
+        "Google Developers AI": 1,
+        "TLDR AI": 6,
+        "Claude Code Changelog": 1,
+        "Simon Willison": 1,
+        "LessWrong": 2,
+        "Alignment Forum": 2
+      },
+      "source_diversity": 0.5,
+      "unique_sources": 7,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 7,
+        "\u2696\ufe0f AI futures": 2,
+        "\ud83e\uddea deep analysis": 5
+      },
+      "section_balance": {
+        "vibe_coding": 7,
+        "big_picture": 7,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "GitHub's /fleet command for parallel agents caught my attention \u2014 finally, coordination tooling that doesn't make you babysit individual agents. But the real story today is in the verification layer.\n\nThat AI code review piece hit something I've been seeing: 96% of devs don't trust AI output, 61% report build breaks. We're generating code faster than we can validate it. The bottleneck shifted from 'can AI write this?' to 'is this AI code actually safe to ship?'\n\nMeanwhile, Anthropic paused development and everyone's calling it unprecedented corporate responsibility. Maybe. Or maybe they hit a wall where the next capability jump requires infrastructure we don't have yet. That AI infrastructure roadmap piece suggests we're moving beyond pure scale \u2014 need grounding in operational contexts, not just bigger weights.\n\nThe mirror test results are weird though. Opus recognizing its own output while GPT fails? That's either a fascinating glimpse at model self-awareness or a really good party trick. Haven't decided which.",
+    "journal": {
+      "themes": [
+        "AI code verification bottlenecks",
+        "Agent coordination tooling",
+        "Corporate AI responsibility"
+      ],
+      "surprises": "The mirror test showing such stark differences between models in self-recognition \u2014 didn't expect that capability gap.",
+      "observations": "There's a clear pattern of tooling catching up to generation speed \u2014 everyone's building verification and coordination layers because raw AI output isn't enough anymore."
+    },
+    "selected_articles": [
+      {
+        "title": "GitHub Copilot CLI /fleet: Run Multiple Agents in Parallel",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Copilot CLI's new /fleet command lets you dispatch multiple agents in parallel across files with dependency management \u2014 basically turn your CLI into a coordinated swarm.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google ADK Go 1.0: Production-Ready Agent Development Kit",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/adk-go-10-arrives/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's Agent Development Kit for Go hits 1.0 with OpenTelemetry tracing, plugin system for self-healing logic, and human-in-the-loop confirmations for sensitive operations.",
+        "why_selected": ""
+      },
+      {
+        "title": "Codex Plugin for Claude Code: Adversarial Reviews and Agent Handoffs",
+        "source": "TLDR AI",
+        "url": "https://x.com/reach_vb/status/2038670509768839458?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New plugin lets you pull Codex into Claude Code workflows for adversarial code reviews and handing work between different agents using your existing local auth.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code v2.1.90: Interactive /powerup Lessons and Offline Support",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Added interactive /powerup command with animated demos to teach features, plus better offline environment handling and infinite loop fixes.",
+        "why_selected": ""
+      },
+      {
+        "title": "Microsoft 365 Copilot Critique and Council Modes: Dual-Model Research",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/microsoft-365-copilot-gets-critique-and-council-modes/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New modes use dual-model systems for research drafts (13.88% better than single models) and parallel report generation across Anthropic and OpenAI models.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Code Review at Scale: From Manual to Automated Verification",
+        "source": "TLDR AI",
+        "url": "https://www.sonarsource.com/resources/safeguarding-ai-code/?utm_medium=paid&utm_source=tldr&utm_campaign=ss-ai-code-quality26&utm_content=newsletter-tldr-primary-aiatscale-260331-x&utm_term=ww-psp-utm_term%3Dww-psp-x&s_category=Paid&s_source=Paid+Other&s_origin=tldr",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "With 96% of devs distrusting AI output and 61% reporting build breaks, teams need automated verification layers to handle the speed mismatch between AI generation and human review.",
+        "why_selected": ""
+      },
+      {
+        "title": "Simon Willison's March 2026: Agentic Engineering Patterns and More",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/2/march-newsletter/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "His monthly roundup covers agentic engineering patterns, streaming MoE models on Mac, vibe porting techniques, and supply chain attacks \u2014 the good stuff behind his paywall.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic's Pause: The Most Expensive Corporate Alarm in History",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/d8bZFuYba4KPtzzRY/anthropic-s-pause-is-the-most-expensive-alarm-in-corporate",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of Anthropic's decision to pause development as unprecedented corporate responsibility \u2014 like Apple stopping iPhone production over teen suicide studies or Pfizer pulling Lipitor proactively.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic RSP v3: Abandoning Safety Commitments for Competitive Reasons",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/AkzauoTt2Lwn2yAvj/anthropic-responsible-scaling-policy-v3-a-matter-of-trust",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic revised their safety policy, dropping the commitment to not move ahead if dangerous, citing competitive pressure \u2014 Holden Karnofsky advocated for the changes.",
+        "why_selected": ""
+      },
+      {
+        "title": "Predicting When RL Training Breaks Chain-of-Thought Monitoring",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/SvxaKP5KdkksZPcG7/predicting-when-rl-training-breaks-chain-of-thought",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "DeepMind research shows you can predict when reinforcement learning will break the ability to monitor AI reasoning through intermediate steps \u2014 critical for AI oversight.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Infrastructure Roadmap: Five Frontiers Beyond Scale",
+        "source": "TLDR AI",
+        "url": "https://nextbigteng.substack.com/p/ai-infrastructure-roadmap-five-frontiers-for-2026?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "The next phase of AI requires infrastructure for grounding in operational contexts and real-world experiences, not just bigger weights and more data.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Mirror Test for LLMs: Can AI Recognize Its Own Output?",
+        "source": "TLDR AI",
+        "url": "https://www.lesswrong.com/posts/TfKM9PgztxieEcKiv/a-mirror-test-for-llms?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Testing LLM self-awareness by having models identify their own outputs \u2014 Opus 4.6 shows notable self-recognition while GPT models fail, with implications for AI consciousness.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Applications Going Full-Stack: Vertical Integration Strategies",
+        "source": "TLDR AI",
+        "url": "https://www.tanayj.com/p/ai-applications-and-vertical-integration?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Companies like Cursor build proprietary models while others like Crosby AI focus on end-to-end services \u2014 vertical integration becoming key for AI application differentiation.",
+        "why_selected": ""
+      },
+      {
+        "title": "Research Advice for Junior AI Safety Researchers",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/dYHFtEnKc4BdJEYY4/my-most-common-advice-for-junior-researchers",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Three key pieces of feedback for new AI safety researchers: do quick sanity checks, say precisely what you want to say, and ask 'why' one more time.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_summary": "Skipped 8 items: pure supply chain security post without AI angle, 2 release notes for Simon's datasette plugins (too incremental), OpenAI banking case study (consumer AI), multiple April Fools posts from LessWrong (comedy/parody), generic infrastructure and vertical integration pieces without specific new insights, and a very short AI news roundup with minimal content.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

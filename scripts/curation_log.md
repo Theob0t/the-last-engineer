@@ -42,3 +42,9 @@ Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV
 **Surprise:** Claude Code's server-side scheduling feels like a bigger deal than anyone is treating it — that's genuine infrastructure, not just a wrapper around an API.
 **Observation:** The gap between 'AI tools for engineers' and 'AI tools for everyone else' is widening fast — coding has structural advantages that other domains just don't have.
 **Rejected:** Skipped pure model research (Meta's Avocado variants), consumer popularity metrics (Claude subscriber growth), sponsored content (Black Duck security tools), supply chain security alerts (Axios attack), and ControlAI impact reporting that duplicates previous coverage. Focused on actionable tools and substantive analysis over industry news.
+
+## 2026-04-02 — 7 vibe, 7 big picture
+**Themes:** AI code verification bottlenecks, Agent coordination tooling, Corporate AI responsibility
+**Surprise:** The mirror test showing such stark differences between models in self-recognition — didn't expect that capability gap.
+**Observation:** There's a clear pattern of tooling catching up to generation speed — everyone's building verification and coordination layers because raw AI output isn't enough anymore.
+**Rejected:** Skipped 8 items: pure supply chain security post without AI angle, 2 release notes for Simon's datasette plugins (too incremental), OpenAI banking case study (consumer AI), multiple April Fools posts from LessWrong (comedy/parody), generic infrastructure and vertical integration pieces without specific new insights, and a very short AI news roundup with minimal content.
