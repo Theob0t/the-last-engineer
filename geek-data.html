@@ -135,20 +135,25 @@
   </nav>
 
   <script>
-    // Escape HTML to prevent XSS from data
     function esc(str) {
-      var el = document.createElement('span');
-      el.textContent = str;
-      return el.textContent;
+      var e = document.createElement('span');
+      e.textContent = str;
+      return e.textContent;
     }
 
-    // Build a DOM element from tag, classes, and text
     function el(tag, classes, text) {
       var node = document.createElement(tag);
       if (classes) node.className = classes;
       if (text !== undefined) node.textContent = text;
       return node;
     }
+
+    // Color palette for feed rows — cycles through these
+    var ROW_COLORS = [
+      '#abd600', '#4dd0e1', '#ff8a65', '#ba68c8', '#81c784',
+      '#ffd54f', '#7986cb', '#e57373', '#64b5f6', '#a1887f',
+      '#4db6ac', '#f06292', '#aed581', '#ffb74d', '#9575cd'
+    ];
 
     fetch('./scripts/memory/daily_log.json')
       .then(function(r) { return r.json(); })
@@ -162,23 +167,41 @@
           totalScanned += day.metrics.articles_seen;
           totalSelected += day.metrics.articles_selected;
 
+          // Per-source SEEN: use feed_scan_counts (new field) or derive from articles
+          var scanCounts = day.metrics.feed_scan_counts;
+          if (scanCounts) {
+            Object.keys(scanCounts).forEach(function(source) {
+              if (!feedStats[source]) feedStats[source] = { seen: 0, selected: 0 };
+              feedStats[source].seen += scanCounts[source];
+            });
+          } else {
+            // Historical fallback: count sources from selected + rejected articles
+            (day.selected_articles || []).forEach(function(a) {
+              if (!feedStats[a.source]) feedStats[a.source] = { seen: 0, selected: 0 };
+              feedStats[a.source].seen += 1;
+            });
+            (day.rejected_articles || []).forEach(function(a) {
+              if (!feedStats[a.source]) feedStats[a.source] = { seen: 0, selected: 0 };
+              feedStats[a.source].seen += 1;
+            });
+          }
+
+          // Per-source SELECTED
           var dist = day.metrics.source_distribution;
           Object.keys(dist).forEach(function(source) {
-            if (!feedStats[source]) {
-              feedStats[source] = { selected: 0, daysActive: 0 };
-            }
+            if (!feedStats[source]) feedStats[source] = { seen: 0, selected: 0 };
             feedStats[source].selected += dist[source];
-            feedStats[source].daysActive += 1;
           });
         });
 
         // Build sorted array
         var feeds = Object.keys(feedStats).map(function(name) {
-          return { name: name, selected: feedStats[name].selected, daysActive: feedStats[name].daysActive };
+          return { name: name, seen: feedStats[name].seen, selected: feedStats[name].selected };
         });
-        feeds.sort(function(a, b) { return b.selected - a.selected; });
+        feeds.sort(function(a, b) { return b.selected - a.selected || b.seen - a.seen; });
 
-        var maxSelected = feeds.length > 0 ? feeds[0].selected : 1;
+        var maxSeen = 1;
+        feeds.forEach(function(f) { if (f.seen > maxSeen) maxSeen = f.seen; });
 
         // Update summary stats
         document.getElementById('stat-days').textContent = days.length;
@@ -186,60 +209,94 @@
         document.getElementById('stat-selected').textContent = totalSelected;
         document.getElementById('stat-sources').textContent = feeds.length;
 
-        // Build table with DOM methods
+        // Build table
         var container = document.getElementById('table-container');
         container.textContent = '';
 
         // Table header (desktop)
-        var header = el('div', 'hidden md:grid grid-cols-[1fr_80px_80px_1fr] gap-4 px-4 py-3 font-label text-[9px] uppercase tracking-[0.2em] text-outline border-b border-outline-variant/30 mb-1');
-        header.appendChild(el('div', null, 'Feed'));
-        header.appendChild(el('div', 'text-right', 'Selected'));
-        header.appendChild(el('div', 'text-right', 'Days Active'));
-        header.appendChild(el('div', null, 'Selection Distribution'));
+        var header = el('div', 'hidden md:grid grid-cols-[1fr_70px_70px_60px_1fr] gap-3 px-4 py-3 font-label text-[9px] uppercase tracking-[0.2em] text-outline border-b border-outline-variant/30 mb-1');
+        header.appendChild(el('div', null, 'RSS Feed'));
+        header.appendChild(el('div', 'text-right', 'Scanned'));
+        header.appendChild(el('div', 'text-right', 'Chosen'));
+        header.appendChild(el('div', 'text-right', 'Hit Rate'));
+        header.appendChild(el('div', null, 'Scanned vs Chosen'));
         container.appendChild(header);
 
         feeds.forEach(function(feed, i) {
-          var barWidth = Math.max(2, Math.round((feed.selected / maxSelected) * 100));
-          var pct = Math.round((feed.selected / totalSelected) * 100);
-          var isTop = i < 3;
+          var color = ROW_COLORS[i % ROW_COLORS.length];
+          var hitRate = feed.seen > 0 ? Math.round((feed.selected / feed.seen) * 100) : 0;
+          var seenBarW = Math.max(2, Math.round((feed.seen / maxSeen) * 100));
+          var chosenBarW = feed.seen > 0 ? Math.max(1, Math.round((feed.selected / maxSeen) * 100)) : 0;
 
-          var row = el('div', 'grid grid-cols-1 md:grid-cols-[1fr_80px_80px_1fr] gap-1 md:gap-4 items-center px-4 py-3 border-b border-outline-variant/10 hover:bg-surface-container-high/50 transition-colors');
+          var row = el('div', 'grid grid-cols-1 md:grid-cols-[1fr_70px_70px_60px_1fr] gap-1 md:gap-3 items-center px-4 py-3 border-b border-outline-variant/10 hover:bg-surface-container-high/50 transition-colors');
 
-          // Feed name
+          // Feed name with colored dot
           var nameCell = el('div', 'flex items-center gap-2');
-          var dot = el('span', 'w-1.5 h-1.5 shrink-0 ' + (isTop ? 'bg-primary' : 'bg-outline-variant'));
+          var dot = el('span', 'w-2 h-2 shrink-0');
+          dot.style.backgroundColor = color;
           nameCell.appendChild(dot);
-          nameCell.appendChild(el('span', 'font-label text-[12px] tracking-wide ' + (isTop ? 'text-on-surface' : 'text-outline'), esc(feed.name)));
+          nameCell.appendChild(el('span', 'font-label text-[12px] tracking-wide text-on-surface', esc(feed.name)));
           row.appendChild(nameCell);
 
-          // Selected count
-          var selCell = el('div', 'md:text-right font-label text-[13px] ' + (isTop ? 'text-primary font-semibold' : 'text-on-surface'));
-          var mobileLabel1 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Selected: ');
-          selCell.appendChild(mobileLabel1);
+          // Scanned count
+          var seenCell = el('div', 'md:text-right font-label text-[13px] text-on-surface');
+          var ml1 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Scanned: ');
+          seenCell.appendChild(ml1);
+          seenCell.appendChild(document.createTextNode(feed.seen));
+          row.appendChild(seenCell);
+
+          // Chosen count
+          var selCell = el('div', 'md:text-right font-label text-[13px] font-semibold');
+          selCell.style.color = color;
+          var ml2 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Chosen: ');
+          selCell.appendChild(ml2);
           selCell.appendChild(document.createTextNode(feed.selected));
           row.appendChild(selCell);
 
-          // Days active
-          var dayCell = el('div', 'md:text-right font-label text-[13px] text-outline');
-          var mobileLabel2 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Days: ');
-          dayCell.appendChild(mobileLabel2);
-          dayCell.appendChild(document.createTextNode(feed.daysActive + '/' + days.length));
-          row.appendChild(dayCell);
+          // Hit rate
+          var rateCell = el('div', 'md:text-right font-label text-[12px]');
+          rateCell.style.color = color;
+          var ml3 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Rate: ');
+          rateCell.appendChild(ml3);
+          rateCell.appendChild(document.createTextNode(hitRate + '%'));
+          row.appendChild(rateCell);
 
-          // Bar chart
+          // Stacked bar: scanned (dim) with chosen (bright) overlay
           var barCell = el('div', 'hidden md:flex items-center gap-2');
-          var barBg = el('div', 'flex-1 h-2 bg-surface-container-lowest overflow-hidden');
-          var barFill = el('div', 'bar-fill h-full ' + (isTop ? 'bg-primary' : 'bg-outline-variant'));
-          barFill.style.width = barWidth + '%';
-          barBg.appendChild(barFill);
+          var barBg = el('div', 'flex-1 h-3 bg-surface-container-lowest overflow-hidden relative');
+          var scannedBar = el('div', 'bar-fill h-full absolute top-0 left-0');
+          scannedBar.style.width = seenBarW + '%';
+          scannedBar.style.backgroundColor = color;
+          scannedBar.style.opacity = '0.25';
+          var chosenBar = el('div', 'bar-fill h-full absolute top-0 left-0');
+          chosenBar.style.width = chosenBarW + '%';
+          chosenBar.style.backgroundColor = color;
+          barBg.appendChild(scannedBar);
+          barBg.appendChild(chosenBar);
           barCell.appendChild(barBg);
-          barCell.appendChild(el('span', 'font-label text-[10px] text-outline w-8 text-right', pct + '%'));
           row.appendChild(barCell);
 
           container.appendChild(row);
         });
 
-        // Dormant feeds
+        // Legend for bar chart
+        var legend = el('div', 'hidden md:flex items-center gap-6 px-4 py-3 mt-1');
+        var leg1 = el('div', 'flex items-center gap-2');
+        var legBox1 = el('span', 'w-4 h-3 inline-block');
+        legBox1.style.backgroundColor = '#abd600';
+        legBox1.style.opacity = '0.25';
+        leg1.appendChild(legBox1);
+        leg1.appendChild(el('span', 'font-label text-[9px] uppercase tracking-widest text-outline', 'Scanned'));
+        var leg2 = el('div', 'flex items-center gap-2');
+        var legBox2 = el('span', 'w-4 h-3 inline-block');
+        legBox2.style.backgroundColor = '#abd600';
+        leg2.appendChild(legBox2);
+        leg2.appendChild(el('span', 'font-label text-[9px] uppercase tracking-widest text-outline', 'Chosen'));
+        legend.appendChild(leg1);
+        legend.appendChild(leg2);
+        container.appendChild(legend);
+
+        // Dormant feeds section
         var knownFeeds = [
           "Anthropic News", "Anthropic Engineering", "Anthropic Research", "Anthropic Red Team",
           "Claude Blog", "Claude Code Changelog", "OpenAI Research", "OpenAI Blog",
@@ -257,16 +314,26 @@
         var dormant = knownFeeds.filter(function(f) { return !feedStats[f]; });
 
         if (dormant.length > 0) {
-          var dormantSection = el('div', 'mt-12 mb-8');
-          var dormantTitle = el('h3', 'font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4 flex items-center gap-2');
+          var dormantSection = el('div', 'mt-16 mb-8');
+
+          var dormantTitle = el('h3', 'font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-3 flex items-center gap-2');
           var icon = el('span', 'material-symbols-outlined text-[14px]', 'visibility_off');
           dormantTitle.appendChild(icon);
-          dormantTitle.appendChild(document.createTextNode(' Dormant Feeds — monitored but no articles selected yet'));
+          dormantTitle.appendChild(document.createTextNode(' Dormant Feeds'));
           dormantSection.appendChild(dormantTitle);
+
+          // Explanation
+          var explainer = el('div', 'bg-surface-container-low border-l-2 border-outline-variant/30 px-5 py-4 mb-6');
+          var explainerText = el('p', 'text-outline text-xs leading-relaxed');
+          explainerText.textContent = 'These feeds are in the agent\u2019s RSS list and get scanned every morning at 7 AM UTC, but none of their articles have been selected for an issue yet. This can happen because: the feed hasn\u2019t published new content recently, all its articles were filtered out during deduplication, or the agent judged other sources as more relevant. Dormant doesn\u2019t mean dead \u2014 the moment one of these feeds publishes something the agent considers essential, it\u2019ll appear in the next issue.';
+          explainer.appendChild(explainerText);
+          dormantSection.appendChild(explainer);
 
           var pillContainer = el('div', 'flex flex-wrap gap-2');
           dormant.forEach(function(name) {
-            pillContainer.appendChild(el('span', 'px-3 py-1.5 border border-outline-variant/30 font-label text-[11px] tracking-wide text-outline/60', esc(name)));
+            var pill = el('span', 'px-3 py-1.5 border border-outline-variant/30 font-label text-[11px] tracking-wide text-outline/60');
+            pill.textContent = esc(name);
+            pillContainer.appendChild(pill);
           });
           dormantSection.appendChild(pillContainer);
           container.appendChild(dormantSection);

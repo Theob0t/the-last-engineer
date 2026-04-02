@@ -509,11 +509,18 @@ def compute_metrics(articles_seen: list, digest: dict) -> dict:
         "ratio": round(len(vibe) / len(research), 2) if research else 0,
     }
 
+    # Per-feed scan counts (how many articles seen from each source)
+    feed_scan_counts: dict[str, int] = {}
+    for article in articles_seen:
+        src = article.source if hasattr(article, "source") else article.get("source", "unknown")
+        feed_scan_counts[src] = feed_scan_counts.get(src, 0) + 1
+
     return {
         "articles_seen": total_seen,
         "articles_selected": total_selected,
         "selectivity": round(total_selected / total_seen, 3) if total_seen else 0,
         "source_distribution": source_counts,
+        "feed_scan_counts": feed_scan_counts,
         "source_diversity": round(source_diversity, 2),
         "unique_sources": len(source_counts),
         "vibe_distribution": vibe_counts,
