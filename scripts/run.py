@@ -543,6 +543,19 @@ def log_daily_run(articles_seen: list, digest: dict, editorial_text: str, journa
                 "why_selected": reasoning,
             })
 
+    # Build rejected articles record
+    selected_urls = {a["url"] for a in selected_articles}
+    rejected_articles = []
+    for article in articles_seen:
+        url = article.url if hasattr(article, "url") else article.get("url", "")
+        if url not in selected_urls:
+            rejected_articles.append({
+                "title": article.title if hasattr(article, "title") else article.get("title", ""),
+                "source": article.source if hasattr(article, "source") else article.get("source", ""),
+                "url": url,
+                "summary": article.summary if hasattr(article, "summary") else article.get("summary", ""),
+            })
+
     entry = {
         "date": dt.date.today().isoformat(),
         "metrics": metrics,
@@ -553,6 +566,7 @@ def log_daily_run(articles_seen: list, digest: dict, editorial_text: str, journa
             "observations": journal_entry.get("observations", ""),
         },
         "selected_articles": selected_articles,
+        "rejected_articles": rejected_articles,
         "rejected_summary": digest.get("rejected_summary", ""),
         "identity_snapshot": load_identity()[:500],
     }

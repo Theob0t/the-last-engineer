@@ -44,6 +44,7 @@
     .font-headline { font-family: 'Newsreader', serif; }
     .font-label { font-family: 'Space Grotesk', monospace; }
     p { line-height: 1.7; }
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   </style>
 </head>
 <body class="bg-surface text-on-surface">
@@ -190,6 +191,18 @@
       if (e.key === "Enter") submitMissed();
     });
 
+    function voteUp(btn) {
+      var url = btn.dataset.url;
+      var title = btn.dataset.title;
+      var key = "voted_" + btoa(encodeURIComponent(url));
+      if (localStorage.getItem(key)) return;
+      localStorage.setItem(key, "up");
+      btn.style.color = "#abd600";
+      btn.style.opacity = "1";
+      btn.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+      fetch(APPS_SCRIPT_URL + "?type=missed&vote=up&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(title), { mode: "no-cors" });
+    }
+
     fetch('./scripts/memory/daily_log.json')
       .then(function(r) { return r.json(); })
       .then(function(days) {
@@ -211,76 +224,108 @@
         days.forEach(function(day) {
           var seen = day.metrics.articles_seen;
           var selected = day.metrics.articles_selected;
-          var rejected = seen - selected;
+          var rejectedCount = seen - selected;
+          var rejectedArticles = day.rejected_articles || [];
 
           var dateStr = new Date(day.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
-          // Build day block using DOM methods
           var block = document.createElement('div');
-          block.className = 'mb-12';
+          block.className = 'mb-16';
 
-          // Date header row
+          // Date header
           var header = document.createElement('div');
           header.className = 'flex items-end justify-between gap-4 mb-4 border-b border-outline-variant/20 pb-3';
-
           var title = document.createElement('h2');
           title.className = 'font-headline italic text-2xl text-on-surface';
           title.textContent = dateStr;
-
           var stats = document.createElement('div');
           stats.className = 'flex gap-4 font-label text-[10px] uppercase tracking-widest text-outline shrink-0';
-          stats.textContent = seen + ' seen · ' + selected + ' picked · ' + rejected + ' cut';
-
+          stats.textContent = seen + ' seen · ' + selected + ' picked · ' + rejectedCount + ' cut';
           header.appendChild(title);
           header.appendChild(stats);
           block.appendChild(header);
 
-          // Rejection reasoning
+          // Agent's rejection reasoning
           if (day.rejected_summary) {
-            var rejBox = document.createElement('div');
-            rejBox.className = 'bg-surface-container p-5 border-l-2 border-outline-variant/30';
-
-            var rejHeader = document.createElement('div');
-            rejHeader.className = 'flex items-center gap-2 mb-3';
-
-            var rejIcon = document.createElement('span');
-            rejIcon.className = 'material-symbols-outlined text-outline text-[16px]';
-            rejIcon.textContent = 'content_cut';
-
-            var rejLabel = document.createElement('h3');
-            rejLabel.className = 'font-label text-[10px] uppercase tracking-[0.2em] text-outline';
-            rejLabel.textContent = 'Why these were cut';
-
-            rejHeader.appendChild(rejIcon);
-            rejHeader.appendChild(rejLabel);
-
-            var rejText = document.createElement('p');
-            rejText.className = 'text-on-surface text-sm leading-relaxed';
-            rejText.textContent = day.rejected_summary;
-
-            rejBox.appendChild(rejHeader);
-            rejBox.appendChild(rejText);
-            block.appendChild(rejBox);
+            var reasonBox = document.createElement('div');
+            reasonBox.className = 'bg-surface-container-low px-5 py-3 mb-4 border-l-2 border-outline-variant/20';
+            var reasonIcon = document.createElement('span');
+            reasonIcon.className = 'material-symbols-outlined text-outline text-[14px] align-middle mr-1';
+            reasonIcon.textContent = 'content_cut';
+            var reasonText = document.createElement('span');
+            reasonText.className = 'text-outline text-xs leading-relaxed';
+            reasonText.textContent = day.rejected_summary;
+            reasonBox.appendChild(reasonIcon);
+            reasonBox.appendChild(reasonText);
+            block.appendChild(reasonBox);
           }
 
-          // Source pills
-          var sources = day.metrics.source_distribution;
-          var sourceKeys = Object.keys(sources);
-          var pillRow = document.createElement('div');
-          pillRow.className = 'flex flex-wrap gap-2 mt-4';
+          // Individual rejected articles
+          if (rejectedArticles.length > 0) {
+            rejectedArticles.forEach(function(article) {
+              var row = document.createElement('div');
+              row.className = 'flex items-start gap-3 py-3 border-b border-outline-variant/10 group';
 
-          sourceKeys.forEach(function(src) {
-            var pill = document.createElement('span');
-            pill.className = 'font-label text-[9px] uppercase tracking-wider text-outline bg-surface-container-low px-3 py-1';
-            pill.textContent = src + ' ';
-            var count = document.createElement('span');
-            count.className = 'text-primary';
-            count.textContent = sources[src];
-            pill.appendChild(count);
-            pillRow.appendChild(pill);
-          });
+              // Vote button
+              var voteBtn = document.createElement('button');
+              voteBtn.className = 'text-outline/40 hover:text-primary transition-colors shrink-0 mt-0.5';
+              voteBtn.dataset.url = article.url;
+              voteBtn.dataset.title = article.title;
+              voteBtn.onclick = function() { voteUp(this); };
+              var voteIcon = document.createElement('span');
+              voteIcon.className = 'material-symbols-outlined text-[18px]';
+              voteIcon.textContent = 'thumb_up';
+              voteBtn.appendChild(voteIcon);
+              // Restore vote state
+              var key = "voted_" + btoa(encodeURIComponent(article.url));
+              if (localStorage.getItem(key)) {
+                voteBtn.style.color = "#abd600";
+                voteBtn.style.opacity = "1";
+                voteIcon.style.fontVariationSettings = "'FILL' 1";
+              }
 
-          block.appendChild(pillRow);
+              // Article content
+              var content = document.createElement('div');
+              content.className = 'flex-grow min-w-0';
+
+              var link = document.createElement('a');
+              link.href = article.url;
+              link.target = '_blank';
+              link.rel = 'noopener';
+              link.className = 'text-on-surface text-sm hover:text-primary transition-colors no-underline';
+              link.textContent = article.title;
+
+              var meta = document.createElement('div');
+              meta.className = 'flex items-center gap-2 mt-1';
+              var sourceName = document.createElement('span');
+              sourceName.className = 'font-label text-[9px] uppercase tracking-widest text-outline';
+              sourceName.textContent = article.source;
+              meta.appendChild(sourceName);
+
+              if (article.summary) {
+                var summary = document.createElement('p');
+                summary.className = 'text-outline/60 text-xs mt-1 leading-relaxed line-clamp-2';
+                summary.textContent = article.summary;
+                content.appendChild(link);
+                content.appendChild(meta);
+                content.appendChild(summary);
+              } else {
+                content.appendChild(link);
+                content.appendChild(meta);
+              }
+
+              row.appendChild(voteBtn);
+              row.appendChild(content);
+              block.appendChild(row);
+            });
+          } else if (!rejectedArticles.length && day.rejected_summary) {
+            // Fallback for old data without individual rejected articles
+            var note = document.createElement('p');
+            note.className = 'text-outline/40 text-xs font-label uppercase tracking-wider mt-4';
+            note.textContent = 'Individual article data not available for this day.';
+            block.appendChild(note);
+          }
+
           container.appendChild(block);
         });
       });
