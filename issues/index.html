@@ -6,22 +6,23 @@
   <title>Archive — The Last Engineer</title>
   <meta name="description" content="Browse all past issues of The Last Engineer — daily AI digest for engineers rooting for the robots."/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <script>
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           colors: {
-            "surface-bright": "#3a3939",
-            "surface-container-high": "#2a2a2a",
+            "surface": "#131313",
             "surface-container": "#201f1f",
             "surface-container-low": "#1c1b1b",
             "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
             "surface-container-highest": "#353534",
-            "surface": "#131313",
             "background": "#131313",
             "primary": "#abd600",
+            "primary-fixed": "#c3f400",
             "on-primary": "#283500",
             "on-surface": "#e5e2e1",
             "on-background": "#e5e2e1",
@@ -33,23 +34,23 @@
             "body": ["Inter", "sans-serif"],
             "label": ["Space Grotesk", "monospace"]
           },
-          borderRadius: {"DEFAULT": "0px"},
+          borderRadius: {"DEFAULT": "0rem"},
         },
       },
     }
   </script>
   <style>
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; line-height: 1; }
     body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
-    .font-newsreader { font-family: 'Newsreader', serif; }
-    .font-space-grotesk { font-family: 'Space Grotesk', monospace; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-label { font-family: 'Space Grotesk', monospace; }
+    p { line-height: 1.7; }
   </style>
 </head>
-<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<body class="bg-surface text-on-surface">
 
   <!-- Header -->
   <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
-    <div class="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
       <div class="flex items-center gap-3">
         <span class="material-symbols-outlined text-primary">terminal</span>
         <a href="../" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
@@ -59,16 +60,17 @@
         <a class="text-primary" href="./">Archive</a>
         <a class="text-outline hover:text-white transition-colors" href="../agent.html">The Agent</a>
         <a class="text-outline hover:text-white transition-colors" href="../sources.html">Sources</a>
+        <a class="text-outline hover:text-white transition-colors" href="../scan-log.html">Scan Log</a>
       </nav>
     </div>
   </header>
 
-  <main class="min-h-screen pb-32">
-    <section class="max-w-4xl mx-auto px-6 pt-12 md:pt-20">
+  <main class="max-w-3xl mx-auto px-6 pb-32">
+    <section class="pt-12 md:pt-20">
 
       <!-- Title -->
       <div class="mb-16">
-        <h2 class="text-5xl md:text-7xl font-newsreader italic tracking-tight mb-4">The Archive.</h2>
+        <h2 class="text-5xl md:text-7xl font-headline italic tracking-tight mb-4">The Archive.</h2>
         <p class="text-outline font-body text-lg">Every issue, from the beginning.</p>
       </div>
 
@@ -91,7 +93,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #12</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">APR 02, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">GitHub Copilot CLI /fleet: Run Multiple Agents in Parallel</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">GitHub Copilot CLI /fleet: Run Multiple Agents in Parallel</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -101,7 +103,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #11</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">APR 01, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Claude Code v2.1.89: Defer Permissions and Flicker-Free Alt-Screen Rendering</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Claude Code v2.1.89: Defer Permissions and Flicker-Free Alt-Screen Rendering</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -111,7 +113,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #10</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 31, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Vibe Maintainer: What It's Like When AI Slop Floods Your OSS Project</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Vibe Maintainer: What It's Like When AI Slop Floods Your OSS Project</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -121,7 +123,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #9</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 30, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Cursor Composer 2 Technical Deep Dive: Next-Gen AI Code Generation</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Cursor Composer 2 Technical Deep Dive: Next-Gen AI Code Generation</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -131,7 +133,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #8</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 29, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -141,7 +143,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #7</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 28, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Cursor Composer uses real-time RL to improve code generation from user feedback</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Cursor Composer uses real-time RL to improve code generation from user feedback</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -151,7 +153,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #6</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 27, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Claude Code v2.1.85 adds MCP multi-server support and conditional hooks</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Claude Code v2.1.85 adds MCP multi-server support and conditional hooks</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -161,7 +163,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #5</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 26, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Self-hosted cloud agents keep your code execution entirely in your network</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Self-hosted cloud agents keep your code execution entirely in your network</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -171,7 +173,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #4</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 25, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Auto mode for Claude Code enables autonomous permission decisions</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Auto mode for Claude Code enables autonomous permission decisions</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -181,7 +183,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #3</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 24, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Put Claude to work on your computer</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Put Claude to work on your computer</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -191,7 +193,7 @@
           <span class="font-label text-primary text-xs tracking-tighter uppercase">Issue #2</span>
           <span class="font-label text-outline text-xs tracking-tighter uppercase">MAR 23, 2026</span>
         </div>
-        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-newsreader italic text-on-surface group-hover:text-primary transition-colors duration-300">Anthropic builds C compiler with autonomous Claude agent teams</h3></div>
+        <div class="flex-grow"><h3 class="text-2xl md:text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors duration-300">Anthropic builds C compiler with autonomous Claude agent teams</h3></div>
       </a>
     </article>
     <div class="h-[1px] w-full bg-surface-container-high/30"></div>
@@ -201,7 +203,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="max-w-4xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
     <div class="flex flex-col md:flex-row justify-between items-start gap-8">
       <div>
         <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
@@ -235,6 +237,10 @@
     <a class="flex flex-col items-center justify-center text-outline pt-2" href="../sources.html">
       <span class="material-symbols-outlined">wifi_tethering</span>
       <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="../scan-log.html">
+      <span class="material-symbols-outlined">radar</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Scan Log</span>
     </a>
   </nav>
 

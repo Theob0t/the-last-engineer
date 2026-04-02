@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Scan Log — The Last Engineer</title>
+  <meta name="description" content="Every article the agent scanned, selected, or rejected — full transparency into the curation process."/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131313",
+            "surface-container": "#201f1f",
+            "surface-container-low": "#1c1b1b",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "background": "#131313",
+            "primary": "#abd600",
+            "primary-fixed": "#c3f400",
+            "on-primary": "#283500",
+            "on-surface": "#e5e2e1",
+            "on-background": "#e5e2e1",
+            "outline": "#8e9192",
+            "outline-variant": "#444748",
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Space Grotesk", "monospace"]
+          },
+          borderRadius: {"DEFAULT": "0rem"},
+        },
+      },
+    }
+  </script>
+  <style>
+    body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-label { font-family: 'Space Grotesk', monospace; }
+    p { line-height: 1.7; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+  <!-- Header -->
+  <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+    <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-primary">terminal</span>
+        <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+      </div>
+      <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+        <a class="text-outline hover:text-white transition-colors" href="./">Today</a>
+        <a class="text-outline hover:text-white transition-colors" href="./issues/">Archive</a>
+        <a class="text-outline hover:text-white transition-colors" href="./agent.html">The Agent</a>
+        <a class="text-outline hover:text-white transition-colors" href="./sources.html">Sources</a>
+        <a class="text-primary" href="./scan-log.html">Scan Log</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 pb-32">
+    <section class="pt-12 md:pt-20">
+
+      <!-- Title -->
+      <div class="mb-12">
+        <h1 class="text-5xl md:text-7xl font-headline italic tracking-tight mb-4">Scan Log.</h1>
+        <p class="text-outline font-body text-sm leading-relaxed max-w-2xl">Every morning at 7 AM UTC, the agent scans 33+ feeds and decides what makes the cut. This is the full audit trail — every article it saw, what it picked, what it skipped, and why. No curation happens behind closed doors.</p>
+      </div>
+
+      <!-- Summary strip -->
+      <div class="w-full bg-surface-container-lowest flex flex-wrap gap-6 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase mb-12">
+        <div class="flex items-center gap-2">Total Scanned: <span class="text-on-surface" id="total-scanned">—</span></div>
+        <div class="flex items-center gap-2">Selected: <span class="text-primary" id="total-selected">—</span></div>
+        <div class="flex items-center gap-2">Rejected: <span class="text-outline" id="total-rejected">—</span></div>
+        <div class="flex items-center gap-2">Avg Selectivity: <span class="text-on-surface" id="avg-selectivity">—</span></div>
+      </div>
+
+      <!-- Days rendered by JS -->
+      <div id="log-container"></div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+      <div>
+        <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
+        <p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p>
+      </div>
+      <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+        <a class="hover:text-primary transition-colors" href="./issues/">Archive</a>
+        <a class="hover:text-primary transition-colors" href="./agent.html">The Agent</a>
+        <a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">
+      Curated by AI · Powered by Claude · Built by Theo
+    </p>
+  </footer>
+
+  <!-- Mobile nav -->
+  <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
+      <span class="material-symbols-outlined">auto_awesome</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
+      <span class="material-symbols-outlined">inventory_2</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./agent.html">
+      <span class="material-symbols-outlined">smart_toy</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="./scan-log.html">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">radar</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Scan Log</span>
+    </a>
+  </nav>
+
+  <script>
+    fetch('./scripts/memory/daily_log.json')
+      .then(function(r) { return r.json(); })
+      .then(function(days) {
+        // Sort newest first
+        days.sort(function(a, b) { return b.date.localeCompare(a.date); });
+
+        // Summary stats
+        var totalSeen = 0, totalSelected = 0;
+        days.forEach(function(d) {
+          totalSeen += d.metrics.articles_seen;
+          totalSelected += d.metrics.articles_selected;
+        });
+        document.getElementById('total-scanned').textContent = totalSeen;
+        document.getElementById('total-selected').textContent = totalSelected;
+        document.getElementById('total-rejected').textContent = totalSeen - totalSelected;
+        document.getElementById('avg-selectivity').textContent = Math.round((totalSelected / totalSeen) * 100) + '%';
+
+        var container = document.getElementById('log-container');
+
+        days.forEach(function(day) {
+          var seen = day.metrics.articles_seen;
+          var selected = day.metrics.articles_selected;
+          var rejected = seen - selected;
+          var selectivity = Math.round(day.metrics.selectivity * 100);
+
+          // Date header
+          var dateStr = new Date(day.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+          var html = '';
+          html += '<div class="mb-16">';
+          html += '<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 border-b border-outline-variant/20 pb-4">';
+          html += '<div>';
+          html += '<h2 class="font-headline italic text-3xl text-on-surface">' + dateStr + '</h2>';
+          html += '<div class="flex gap-6 mt-2 font-label text-[10px] uppercase tracking-widest text-outline">';
+          html += '<span>' + seen + ' scanned</span>';
+          html += '<span class="text-primary">' + selected + ' selected</span>';
+          html += '<span>' + rejected + ' rejected</span>';
+          html += '<span>selectivity: ' + selectivity + '%</span>';
+          html += '</div>';
+          html += '</div>';
+
+          // Source diversity
+          var sources = day.metrics.source_distribution;
+          var sourceKeys = Object.keys(sources);
+          html += '<div class="font-label text-[10px] text-outline uppercase tracking-wider text-right">';
+          html += sourceKeys.length + ' unique sources';
+          html += '</div>';
+          html += '</div>';
+
+          // Selected articles
+          html += '<div class="mb-6">';
+          html += '<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">check_circle</span> Selected</h3>';
+
+          day.selected_articles.forEach(function(article) {
+            var section = article.section === 'vibe_coding' ? 'Vibe Coding' : 'Big Picture';
+            html += '<a href="' + article.url + '" target="_blank" rel="noopener" class="block bg-surface-container p-4 mb-2 hover:bg-surface-container-high transition-colors no-underline group">';
+            html += '<div class="flex items-start justify-between gap-4">';
+            html += '<div class="flex-grow">';
+            html += '<div class="flex items-center gap-3 mb-1">';
+            html += '<span class="font-label text-[9px] uppercase tracking-widest text-outline">' + article.source + '</span>';
+            html += '<span class="font-label text-[9px] uppercase tracking-widest ' + (article.section === 'vibe_coding' ? 'text-primary' : 'text-outline') + '">' + section + '</span>';
+            if (article.vibe) {
+              html += '<span class="text-[9px]">' + article.vibe + '</span>';
+            }
+            html += '</div>';
+            html += '<h4 class="text-on-surface text-sm font-medium group-hover:text-primary transition-colors">' + article.title + '</h4>';
+            if (article.tldr) {
+              html += '<p class="text-outline text-xs mt-1 leading-relaxed">' + article.tldr + '</p>';
+            }
+            html += '</div>';
+            html += '<span class="material-symbols-outlined text-outline/30 text-[14px] shrink-0 mt-1 group-hover:text-primary transition-colors">open_in_new</span>';
+            html += '</div>';
+            html += '</a>';
+          });
+
+          html += '</div>';
+
+          // Rejected summary
+          if (day.rejected_summary) {
+            html += '<div class="bg-surface-container-low p-4 border-l-2 border-outline-variant/30">';
+            html += '<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">block</span> Rejected</h3>';
+            html += '<p class="text-outline text-xs leading-relaxed">' + day.rejected_summary + '</p>';
+            html += '</div>';
+          }
+
+          html += '</div>';
+          container.insertAdjacentHTML('beforeend', html);
+        });
+      });
+  </script>
+
+</body>
+</html>
