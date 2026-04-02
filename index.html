@@ -50,9 +50,13 @@
 
   <!-- Header -->
   <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
-    <div class="max-w-2xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="font-headline italic text-xl text-primary uppercase tracking-widest">The Last Engineer</h1>
+    <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-primary">terminal</span>
+        <h1 class="font-headline italic text-xl text-primary uppercase tracking-widest">The Last Engineer</h1>
+      </div>
       <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+        <a class="text-primary" href="./">Today</a>
         <a class="text-outline hover:text-white transition-colors" href="./issues/">Archive</a>
         <a class="text-outline hover:text-white transition-colors" href="./agent.html">The Agent</a>
         <a class="text-outline hover:text-white transition-colors" href="./sources.html">Sources</a>
@@ -60,7 +64,11 @@
     </div>
   </header>
 
-  <main class="max-w-2xl mx-auto px-6">
+  <main class="max-w-3xl mx-auto px-6">
+
+    <div class="py-6 border-b border-outline-variant/20">
+      <p class="font-headline italic text-outline text-sm">A daily read for engineers rooting for the robots.</p>
+    </div>
 
     <!-- Subscribe bar -->
     <div class="py-6 border-b border-outline-variant/20">
@@ -325,7 +333,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="max-w-2xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
     <div class="flex flex-col md:flex-row justify-between items-start gap-8">
       <div>
         <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
@@ -355,6 +363,10 @@
     <a class="flex flex-col items-center justify-center text-outline pt-2" href="./agent.html">
       <span class="material-symbols-outlined">smart_toy</span>
       <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./sources.html">
+      <span class="material-symbols-outlined">wifi_tethering</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
     </a>
   </nav>
 

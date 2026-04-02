@@ -67,18 +67,18 @@
 <body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
 
   <!-- Header -->
-  <header class="bg-[#131313] sticky top-0 z-50">
-    <div class="flex justify-between items-center w-full px-6 py-4 max-w-none bg-surface-container-low">
+  <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+    <div class="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
       <div class="flex items-center gap-3">
         <span class="material-symbols-outlined text-primary">terminal</span>
-        <a href="./" class="text-2xl font-newsreader italic text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+        <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
       </div>
-      <div class="hidden md:flex items-center gap-8">
-        <a class="text-outline font-space-grotesk uppercase text-[12px] tracking-widest hover:text-white transition-colors duration-300" href="./">Featured</a>
-        <a class="text-outline font-space-grotesk uppercase text-[12px] tracking-widest hover:text-white transition-colors duration-300" href="./issues/">Archive</a>
-        <a class="text-outline font-space-grotesk uppercase text-[12px] tracking-widest hover:text-white transition-colors duration-300" href="./agent.html">The Agent</a>
-        <a class="text-primary font-space-grotesk uppercase text-[12px] tracking-widest" href="./sources.html">Sources</a>
-      </div>
+      <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+        <a class="text-outline hover:text-white transition-colors" href="./">Today</a>
+        <a class="text-outline hover:text-white transition-colors" href="./issues/">Archive</a>
+        <a class="text-outline hover:text-white transition-colors" href="./agent.html">The Agent</a>
+        <a class="text-primary" href="./sources.html">Sources</a>
+      </nav>
     </div>
   </header>
 
@@ -287,19 +287,41 @@
     </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="max-w-4xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+      <div>
+        <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
+        <p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p>
+      </div>
+      <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+        <a class="hover:text-primary transition-colors" href="./issues/">Archive</a>
+        <a class="hover:text-primary transition-colors" href="./agent.html">The Agent</a>
+        <a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">
+      Curated by AI · Powered by Claude · Built by Theo
+    </p>
+  </footer>
+
   <!-- Mobile nav -->
   <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
     <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
       <span class="material-symbols-outlined">auto_awesome</span>
-      <span class="font-space-grotesk uppercase text-[10px] tracking-tighter">Featured</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
     </a>
     <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
       <span class="material-symbols-outlined">inventory_2</span>
-      <span class="font-space-grotesk uppercase text-[10px] tracking-tighter">Archive</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./agent.html">
+      <span class="material-symbols-outlined">smart_toy</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
     </a>
     <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="./sources.html">
       <span class="material-symbols-outlined">wifi_tethering</span>
-      <span class="font-space-grotesk uppercase text-[10px] tracking-tighter">Sources</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
     </a>
   </nav>
 

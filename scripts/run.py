@@ -929,19 +929,51 @@ def render_issue_web(digest: dict, date_str: str, issue_num: int, image_url: str
 <script>tailwind.config={{darkMode:"class",theme:{{extend:{{colors:{{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"}},fontFamily:{{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]}},borderRadius:{{"DEFAULT":"0px"}}}}}}}}</script>
 <style>.material-symbols-outlined{{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;display:inline-block;vertical-align:middle;font-size:16px}}body{{background:#131313;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif;color:#e5e2e1}}.font-headline{{font-family:'Newsreader',serif}}.font-label{{font-family:'Space Grotesk',monospace}}p{{line-height:1.7}}</style></head>
 <body>
-<header class="max-w-2xl mx-auto pt-12 pb-8 px-6 text-center">
-  <a href="../" class="font-headline italic text-3xl font-medium tracking-tight text-on-surface uppercase hover:text-primary transition-colors">THE LAST ENGINEER</a>
-  <div class="mt-4 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em] border-t border-outline-variant/30 pt-4">
-    <span>Issue #{issue_num}</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>{date_str}</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>{total} stories</span>
+<header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+  <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">terminal</span>
+      <a href="../" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+      <a class="text-outline hover:text-white transition-colors" href="../">Today</a>
+      <a class="text-outline hover:text-white transition-colors" href="./">Archive</a>
+      <a class="text-outline hover:text-white transition-colors" href="../agent.html">The Agent</a>
+      <a class="text-outline hover:text-white transition-colors" href="../sources.html">Sources</a>
+    </nav>
   </div>
 </header>
-<main class="max-w-2xl mx-auto px-6 pb-20">{content}</main>
-<footer class="max-w-2xl mx-auto border-t border-outline-variant/30 px-6 py-16">
-  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-    <div><h1 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h1><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
-    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../">Subscribe</a></div>
+<div class="max-w-3xl mx-auto px-6">
+  <div class="py-4 border-b border-outline-variant/20 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em]">
+    <span>Issue #{issue_num}</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>{date_str}</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>{total} stories</span>
   </div>
+</div>
+<main class="max-w-3xl mx-auto px-6 pb-32">{content}</main>
+<footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+    <div><h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../agent.html">The Agent</a><a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a></div>
+  </div>
+  <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">Curated by AI · Powered by Claude · Built by Theo</p>
 </footer>
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
+    <span class="material-symbols-outlined">inventory_2</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../agent.html">
+    <span class="material-symbols-outlined">smart_toy</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../sources.html">
+    <span class="material-symbols-outlined">wifi_tethering</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
+  </a>
+</nav>
 <script>
 var APPS_SCRIPT_URL = "{APPS_SCRIPT_URL}";
 function castVote(btn) {{
@@ -1096,24 +1128,31 @@ AGENT_PAGE = SITE_DIR / "agent.html"
 
 _PAGE_SHELL = """<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>{title} — The Last Engineer</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script>tailwind.config={{darkMode:"class",theme:{{extend:{{colors:{{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"}},fontFamily:{{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]}},borderRadius:{{"DEFAULT":"0px"}}}}}}}}}}</script>
-<style>body{{background:#131313;margin:0;padding:0;font-family:"Inter",sans-serif;color:#e5e2e1}}.font-headline{{font-family:"Newsreader",serif}}.font-label{{font-family:"Space Grotesk",monospace}}p{{line-height:1.7;margin:0.75rem 0}}</style></head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>tailwind.config={{darkMode:"class",theme:{{extend:{{colors:{{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","primary-fixed":"#c3f400","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"}},fontFamily:{{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]}},borderRadius:{{"DEFAULT":"0px"}}}}}}}}}}</script>
+<style>.material-symbols-outlined{{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}}body{{background:#131313;margin:0;padding:0;font-family:"Inter",sans-serif;color:#e5e2e1}}.font-headline{{font-family:"Newsreader",serif}}.font-label{{font-family:"Space Grotesk",monospace}}p{{line-height:1.7;margin:0.75rem 0}}</style></head>
 <body>
 <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
-  <div class="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
-    <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
-    <nav class="hidden md:flex gap-8 font-label text-[11px] uppercase tracking-widest">
-      <a href="./" class="text-outline hover:text-white transition-colors">Featured</a>
+  <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">terminal</span>
+      <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+      <a href="./" class="text-outline hover:text-white transition-colors">Today</a>
       <a href="./issues/" class="text-outline hover:text-white transition-colors">Archive</a>
-      <a href="./agent.html" class="text-primary">The Agent</a>
+      <a href="./agent.html" class="text-outline hover:text-white transition-colors">The Agent</a>
       <a href="./sources.html" class="text-outline hover:text-white transition-colors">Sources</a>
     </nav>
   </div>
 </header>
 {body}
-<footer class="max-w-4xl mx-auto border-t border-outline-variant/30 px-6 py-12 mt-20">
-  <p class="font-label text-[10px] uppercase tracking-widest text-outline/40 text-center">The Last Engineer · Curated by AI · Updated daily</p>
+<footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+    <div><h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./issues/">Archive</a><a class="hover:text-primary transition-colors" href="./agent.html">The Agent</a><a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a></div>
+  </div>
+  <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">Curated by AI · Powered by Claude · Built by Theo</p>
 </footer>
 </body></html>"""
 
@@ -1163,58 +1202,30 @@ def render_agent_page():
     updated = dt.datetime.now().strftime("%B %-d, %Y at %H:%M UTC")
 
     # Parse identity sections
-    who_i_am = _mem_section(memory, "Who I Am") or "I am the editor of The Last Engineer."
     what_i_value = _mem_section(memory, "What I Value")
     what_i_believe = _mem_section(memory, "What I Believe")
-    my_philosophy = _mem_section(memory, "My Philosophy")
-    reader_learnings = _mem_section(memory, "What I've Learned From Readers")
-    log_rows = _parse_log_rows(log)
 
     # Build identity values list
     values_items = "".join(
-        f'\n              <li class="flex items-start gap-3 text-on-surface">'
-        f'\n                <span class="text-primary mt-0.5">—</span>'
-        f"\n                <span>{_he(line[2:].strip())}</span>"
-        f"\n              </li>"
+        f'<li class="flex items-start gap-3 text-on-surface">'
+        f'<span class="text-primary mt-0.5">—</span>'
+        f"<span>{_he(line[2:].strip())}</span></li>"
         for line in what_i_value.split("\n") if line.startswith("- ")
     )
 
     # Build beliefs
     beliefs_items = "".join(
-        f'\n              <li class="flex items-start gap-3 text-on-surface-variant">'
-        f'\n                <span class="text-primary/40 mt-0.5">—</span>'
-        f"\n                <span>{_he(line[2:].strip())}</span>"
-        f"\n              </li>"
+        f'<li class="flex items-start gap-3 text-outline">'
+        f'<span class="text-primary/40 mt-0.5">—</span>'
+        f"<span>{_he(line[2:].strip())}</span></li>"
         for line in what_i_believe.split("\n") if line.startswith("- ")
     )
 
-    # Journal entries
-    journal_html = ""
-    if journal:
-        journal_items = "".join(
-            f'\n    <div class="bg-surface-container p-6 border-l-2 border-outline-variant/30">'
-            f'\n      <span class="font-label text-[10px] uppercase tracking-widest text-primary block mb-2">{j.get("date","")}</span>'
-            f'\n      <p class="text-outline text-sm leading-relaxed mb-2"><strong class="text-on-surface">Themes:</strong> {_he(", ".join(j.get("themes",[])))}</p>'
-            f'\n      <p class="text-outline text-sm leading-relaxed mb-1"><strong class="text-on-surface">Surprise:</strong> {_he(j.get("surprises",""))}</p>'
-            f'\n      <p class="text-outline text-sm leading-relaxed"><strong class="text-on-surface">Observation:</strong> {_he(j.get("observations",""))}</p>'
-            f'\n    </div>'
-            for j in reversed(journal)
-        )
-        journal_html = f"""
-      <section class="mb-20">
-        <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10 flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary text-[16px]">auto_stories</span>
-          Episodic Journal (Last 7 Days)
-        </h2>
-        <div class="space-y-4">{journal_items}
-        </div>
-      </section>"""
-
     # Parse full log entries for expandable cards
     log_cards_html = ""
+    log_rows = _parse_log_rows(log)
     if log_rows:
         cards = []
-        # Re-parse log to get full text per entry
         log_entries_full = re.split(r'\n(?=## )', log.strip())
         for entry_text in reversed(log_entries_full):
             if not entry_text.strip() or entry_text.startswith("# "):
@@ -1222,7 +1233,6 @@ def render_agent_page():
             lines = entry_text.strip().split("\n")
             heading = lines[0].lstrip("# ").strip()
             body = "\n".join(lines[1:]).strip()
-            # Parse heading: "2026-03-29 — 7 vibe, 6 big picture"
             parts = heading.split(" — ", 1)
             date = parts[0].strip()
             stats = parts[1].strip() if len(parts) > 1 else ""
@@ -1247,9 +1257,9 @@ def render_agent_page():
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Agent | The Last Engineer</title>
+<title>The Agent — The Last Engineer</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script>
 tailwind.config = {{
@@ -1257,17 +1267,17 @@ tailwind.config = {{
   theme: {{
     extend: {{
       colors: {{
-        "surface-container-lowest": "#0e0e0e",
-        "surface-container-low": "#1c1b1b",
+        "surface": "#131313",
         "surface-container": "#201f1f",
+        "surface-container-low": "#1c1b1b",
+        "surface-container-lowest": "#0e0e0e",
         "surface-container-high": "#2a2a2a",
         "surface-container-highest": "#353534",
-        "surface": "#131313",
         "background": "#131313",
         "primary": "#abd600",
+        "primary-fixed": "#c3f400",
         "on-primary": "#283500",
         "on-surface": "#e5e2e1",
-        "on-surface-variant": "#c4c7c7",
         "on-background": "#e5e2e1",
         "outline": "#8e9192",
         "outline-variant": "#444748",
@@ -1277,97 +1287,93 @@ tailwind.config = {{
         "body": ["Inter", "sans-serif"],
         "label": ["Space Grotesk", "monospace"]
       }},
-      borderRadius: {{"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"}},
+      borderRadius: {{"DEFAULT": "0px"}},
     }},
   }},
 }}
 </script>
 <style>
   .material-symbols-outlined {{ font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }}
-  body {{ background-color: #0A0A0A; color: #e5e2e1; min-height: max(884px, 100dvh); }}
+  body {{ background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }}
+  .font-headline {{ font-family: 'Newsreader', serif; }}
+  .font-label {{ font-family: 'Space Grotesk', monospace; }}
+  p {{ line-height: 1.7; }}
 </style>
 </head>
-<body class="font-body selection:bg-primary selection:text-on-primary">
+<body class="bg-surface text-on-surface">
 
-<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
-  <div class="flex items-center gap-3">
-    <span class="material-symbols-outlined text-primary">terminal</span>
-    <a href="./" class="text-2xl font-headline italic text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+<header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+  <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">terminal</span>
+      <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+      <a class="text-outline hover:text-white transition-colors" href="./">Today</a>
+      <a class="text-outline hover:text-white transition-colors" href="./issues/">Archive</a>
+      <a class="text-primary" href="./agent.html">The Agent</a>
+      <a class="text-outline hover:text-white transition-colors" href="./sources.html">Sources</a>
+    </nav>
   </div>
-  <nav class="hidden md:flex gap-8 font-label text-[12px] tracking-widest uppercase items-center">
-    <a class="text-outline hover:text-white transition-colors duration-300" href="./">Today</a>
-    <a class="text-outline hover:text-white transition-colors duration-300" href="./issues/">Archive</a>
-    <a class="text-primary" href="./agent.html">The Agent</a>
-    <a class="text-outline hover:text-white transition-colors duration-300" href="./sources.html">Sources</a>
-  </nav>
-  <button class="md:hidden text-primary">
-    <span class="material-symbols-outlined">menu</span>
-  </button>
 </header>
 
-<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<main class="max-w-3xl mx-auto px-6 pb-32">
 
-  <section class="mb-20">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-      <h1 class="font-headline italic text-6xl md:text-8xl tracking-tighter leading-none">The Agent</h1>
-      <div class="font-label text-primary uppercase text-xs tracking-[0.2em] border-l border-primary/30 pl-4 py-1">
-        Last Updated<br/>{updated}
-      </div>
-    </div>
-    <div class="w-full bg-surface-container-lowest flex flex-wrap gap-8 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase">
-      <div class="flex items-center gap-2"><span class="text-primary">●</span> Status: <span class="text-on-surface">Autonomous Operation</span></div>
-      <div class="flex items-center gap-2">Sources Monitored: <span class="text-on-surface">{len(RSS_FEEDS)} feeds</span></div>
+  <div class="py-6 border-b border-outline-variant/20">
+    <p class="font-headline italic text-outline text-sm">A daily read for engineers rooting for the robots.</p>
+  </div>
+
+  <section class="pt-12 mb-16">
+    <h1 class="font-headline italic text-5xl md:text-7xl tracking-tighter leading-none mb-6">The Agent</h1>
+    <div class="w-full bg-surface-container-lowest flex flex-wrap gap-6 px-5 py-3 font-label text-[10px] text-outline tracking-widest uppercase">
+      <div class="flex items-center gap-2"><span class="text-primary">●</span> Status: <span class="text-on-surface">Autonomous</span></div>
+      <div class="flex items-center gap-2">Sources: <span class="text-on-surface">{len(RSS_FEEDS)} feeds</span></div>
       <div class="flex items-center gap-2">Journal: <span class="text-on-surface">{len(journal)} days</span></div>
-      <div class="ml-auto opacity-50">Memory Synced</div>
+      <div class="ml-auto opacity-50">Updated {updated}</div>
     </div>
-    <p class="mt-6 font-body text-outline text-sm leading-relaxed max-w-2xl">
-      An AI editor that curates this newsletter daily, writes an editorial explaining its thinking, and evolves its beliefs through a tiered memory system. Its identity updates weekly based on accumulated observations and reader feedback.
+  </section>
+
+  <section class="mb-16">
+    <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-4">Who I Am</h2>
+    <p class="font-body text-on-surface text-sm leading-relaxed">
+      I'm an AI agent — not a person. I run autonomously every morning: scanning {len(RSS_FEEDS)} RSS feeds, selecting the stories that matter, writing an editorial note, and publishing this newsletter. No human reviews or edits my picks. My taste evolves weekly through structured memory consolidation and reader feedback.
     </p>
   </section>
 
-  <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
-    <aside class="md:col-span-4 flex flex-col gap-12">
-      <div class="border-l border-outline-variant/20 pl-6 py-2">
-        <h3 class="font-label text-xs uppercase tracking-widest text-primary mb-4">Who I Am</h3>
-        <p class="font-headline italic text-xl text-on-surface leading-snug">{_he(who_i_am)}</p>
+  <section class="mb-16">
+    <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-6">How I Work</h2>
+    <div class="space-y-6 text-sm text-outline leading-relaxed">
+      <div>
+        <h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface mb-2">The Pipeline</h3>
+        <p>Every day at 7 AM UTC: fetch {len(RSS_FEEDS)}+ feeds → deduplicate (URL hash + 7-day semantic) → curate via Claude → write editorial + journal entry → critique pass (rewrite for human voice) → publish to web + email → git push.</p>
       </div>
-      <div class="bg-surface-container-low p-6">
-        <h3 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-6">What I Value</h3>
-        <ul class="font-label text-xs space-y-4">{values_items}
-        </ul>
+      <div>
+        <h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface mb-2">Prompt Design</h3>
+        <p>I operate as a "ranking editor" with a two-section framework: <strong class="text-on-surface">Vibe Coding</strong> (would a builder try this or learn from it this week?) and <strong class="text-on-surface">The Big Picture</strong> (does this change how you think about AI's trajectory?). Hard excludes: pure model research, hiring, fundraising, consumer AI, vague policy.</p>
       </div>
-    </aside>
-
-    <div class="md:col-span-8">
-      <section class="mb-20">
-        <h2 class="font-headline text-3xl mb-8 border-b border-outline-variant/10 pb-4">What I <span class="italic text-primary">Believe</span></h2>
-        <div class="font-body text-lg text-on-surface-variant leading-relaxed">
-          <ul class="space-y-4">{beliefs_items}
-          </ul>
-        </div>
-      </section>
-
-      <section class="mb-20">
-        <h2 class="font-label text-xs uppercase tracking-[0.4em] text-outline mb-10">My Philosophy</h2>
-        <div class="font-body text-on-surface-variant leading-relaxed">
-          {"".join(f'<p class="mb-3">{_he(line[2:].strip())}</p>' if line.startswith("- ") else "" for line in my_philosophy.split(chr(10)))}
-        </div>
-      </section>
-
-      <section class="mb-20">
-        <div class="bg-surface-container-low p-8 relative overflow-hidden">
-          <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-          <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-6">What I've Learned From Readers</h2>
-          <p class="text-on-surface-variant text-sm leading-relaxed">{_he(reader_learnings)}</p>
-        </div>
-      </section>
-
-{journal_html}
+      <div>
+        <h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface mb-2">Memory</h3>
+        <p>Three tiers. <strong class="text-on-surface">Semantic memory</strong> (identity.md) — my persistent values, beliefs, and editorial voice; updated weekly through consolidation. <strong class="text-on-surface">Episodic memory</strong> (journal.json) — a 7-day rolling log of themes, surprises, and per-article reasoning. <strong class="text-on-surface">Working memory</strong> — today's articles, dedup signals, and reader votes; ephemeral.</p>
+      </div>
+      <div>
+        <h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface mb-2">Community Evolution</h3>
+        <p>Reader votes (👍/👎 on each article) feed back into curation as engagement signals. Weekly, vote patterns and journal entries are consolidated into identity updates — my beliefs and values evolve based on what readers actually find useful, with no human editing the process.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <section class="mt-32 pt-16 border-t border-outline-variant/10">
-    <div class="flex justify-between items-center mb-10">
+  <section class="mb-16">
+    <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-4">What I Value</h2>
+    <ul class="font-label text-xs space-y-3">{values_items}</ul>
+  </section>
+
+  <section class="mb-16">
+    <h2 class="font-label text-xs uppercase tracking-widest text-primary mb-4">What I Believe</h2>
+    <ul class="font-body text-sm space-y-3">{beliefs_items}</ul>
+  </section>
+
+  <section class="mt-20 pt-12 border-t border-outline-variant/10">
+    <div class="flex justify-between items-center mb-8">
       <h2 class="font-label text-xs uppercase tracking-widest text-outline flex items-center gap-2">
         <span class="material-symbols-outlined text-primary text-[16px]">history</span>
         Curation Log
@@ -1379,7 +1385,7 @@ tailwind.config = {{
     </div>
   </section>
 
-  <section class="mt-16 pt-12 border-t border-outline-variant/10">
+  <section class="mt-12 pt-12 border-t border-outline-variant/10">
     <h2 class="font-label text-xs uppercase tracking-widest text-outline mb-8 flex items-center gap-2">
       <span class="material-symbols-outlined text-primary text-[16px]">code</span>
       Source Files on GitHub
@@ -1387,45 +1393,59 @@ tailwind.config = {{
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/memory/identity.md" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
         <span class="font-label text-primary text-[10px] uppercase tracking-widest">Identity</span>
-        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">The agent's persistent values, beliefs, and philosophy</p>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Persistent values, beliefs, and editorial voice</p>
       </a>
       <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/curation_log.md" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
         <span class="font-label text-primary text-[10px] uppercase tracking-widest">Curation Log</span>
-        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Daily editorial decisions and weekly consolidation notes</p>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Daily editorial decisions and weekly consolidation</p>
       </a>
       <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/memory/journal.json" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
         <span class="font-label text-primary text-[10px] uppercase tracking-widest">Journal</span>
-        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">7-day rolling episodic memory — themes, surprises, observations</p>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">7-day episodic memory — themes, surprises, observations</p>
       </a>
       <a href="https://github.com/Theob0t/the-last-engineer/blob/main/scripts/memory/daily_log.json" target="_blank" class="bg-surface-container-low p-4 hover:bg-surface-container transition-colors no-underline group">
         <span class="font-label text-primary text-[10px] uppercase tracking-widest">Daily Log</span>
-        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Structured metrics — selectivity, source diversity, full audit trail</p>
+        <p class="text-outline text-sm mt-1 group-hover:text-on-surface">Metrics — selectivity, source diversity, full audit trail</p>
       </a>
     </div>
   </section>
 </main>
 
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl flex justify-around items-center px-4 pb-6">
+<footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+    <div>
+      <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
+      <p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p>
+    </div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+      <a class="hover:text-primary transition-colors" href="./issues/">Archive</a>
+      <a class="hover:text-primary transition-colors" href="./agent.html">The Agent</a>
+      <a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">
+    Curated by AI · Powered by Claude · Built by Theo
+  </p>
+</footer>
+
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
   <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
     <span class="material-symbols-outlined">auto_awesome</span>
-    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Today</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
   </a>
   <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
     <span class="material-symbols-outlined">inventory_2</span>
-    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Archive</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
   </a>
   <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="./agent.html">
     <span class="material-symbols-outlined">smart_toy</span>
-    <span class="font-label uppercase text-[10px] tracking-tighter mt-1">Agent</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="./sources.html">
+    <span class="material-symbols-outlined">wifi_tethering</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
   </a>
 </nav>
-
-<footer class="py-20 px-6 border-t border-outline-variant/10 bg-surface-container-lowest">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-40">
-    <div class="font-headline italic text-lg tracking-widest text-primary uppercase">The Last Engineer</div>
-    <div class="font-label text-[10px] tracking-widest uppercase">Curated by AI · Updated daily</div>
-  </div>
-</footer>
 
 </body></html>"""
     AGENT_PAGE.write_text(page)
