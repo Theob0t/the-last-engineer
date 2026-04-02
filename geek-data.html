@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Geek Data — The Last Engineer</title>
+  <meta name="description" content="Per-feed breakdown of every RSS source — how many articles scanned and chosen by the agent."/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131313",
+            "surface-container": "#201f1f",
+            "surface-container-low": "#1c1b1b",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "background": "#131313",
+            "primary": "#abd600",
+            "primary-fixed": "#c3f400",
+            "on-primary": "#283500",
+            "on-surface": "#e5e2e1",
+            "on-background": "#e5e2e1",
+            "outline": "#8e9192",
+            "outline-variant": "#444748",
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Space Grotesk", "monospace"]
+          },
+          borderRadius: {"DEFAULT": "0rem"},
+        },
+      },
+    }
+  </script>
+  <style>
+    body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-label { font-family: 'Space Grotesk', monospace; }
+    p { line-height: 1.7; }
+    .bar-fill { transition: width 0.6s ease-out; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+  <!-- Header -->
+  <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+    <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-primary">terminal</span>
+        <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+      </div>
+      <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+        <a class="text-outline hover:text-white transition-colors" href="./">Today</a>
+        <a class="text-outline hover:text-white transition-colors" href="./issues/">Archive</a>
+        <a class="text-outline hover:text-white transition-colors" href="./agent.html">The Agent</a>
+        <a class="text-outline hover:text-white transition-colors" href="./sources.html">Sources</a>
+        <a class="text-outline hover:text-white transition-colors" href="./scan-log.html">Scan Log</a>
+        <a class="text-primary" href="./geek-data.html">Geek Data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 pb-32">
+    <section class="pt-12 md:pt-20">
+
+      <!-- Title -->
+      <div class="mb-12">
+        <h1 class="text-5xl md:text-7xl font-headline italic tracking-tight mb-4">Geek Data.</h1>
+        <p class="text-outline font-body text-sm leading-relaxed max-w-2xl">Per-feed stats across every issue. How many articles each RSS source contributed to the pipeline, and how many the agent actually chose.</p>
+      </div>
+
+      <!-- Summary strip -->
+      <div class="w-full bg-surface-container-lowest flex flex-wrap gap-6 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase mb-12">
+        <div class="flex items-center gap-2">Issues Analyzed: <span class="text-on-surface" id="stat-days">—</span></div>
+        <div class="flex items-center gap-2">Total Scanned: <span class="text-on-surface" id="stat-scanned">—</span></div>
+        <div class="flex items-center gap-2">Total Selected: <span class="text-primary" id="stat-selected">—</span></div>
+        <div class="flex items-center gap-2">Active Sources: <span class="text-on-surface" id="stat-sources">—</span></div>
+      </div>
+
+      <!-- Table -->
+      <div id="table-container">
+        <div class="text-outline font-label text-xs tracking-wide">Loading feed data...</div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+      <div>
+        <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
+        <p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p>
+      </div>
+      <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+        <a class="hover:text-primary transition-colors" href="./issues/">Archive</a>
+        <a class="hover:text-primary transition-colors" href="./agent.html">The Agent</a>
+        <a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">
+      Curated by AI · Powered by Claude · Built by Theo
+    </p>
+  </footer>
+
+  <!-- Mobile nav -->
+  <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
+      <span class="material-symbols-outlined">auto_awesome</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
+      <span class="material-symbols-outlined">inventory_2</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./agent.html">
+      <span class="material-symbols-outlined">smart_toy</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./scan-log.html">
+      <span class="material-symbols-outlined">radar</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Scan Log</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="./geek-data.html">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+      <span class="font-label uppercase text-[10px] tracking-tighter">Data</span>
+    </a>
+  </nav>
+
+  <script>
+    // Escape HTML to prevent XSS from data
+    function esc(str) {
+      var el = document.createElement('span');
+      el.textContent = str;
+      return el.textContent;
+    }
+
+    // Build a DOM element from tag, classes, and text
+    function el(tag, classes, text) {
+      var node = document.createElement(tag);
+      if (classes) node.className = classes;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    }
+
+    fetch('./scripts/memory/daily_log.json')
+      .then(function(r) { return r.json(); })
+      .then(function(days) {
+
+        var totalScanned = 0;
+        var totalSelected = 0;
+        var feedStats = {};
+
+        days.forEach(function(day) {
+          totalScanned += day.metrics.articles_seen;
+          totalSelected += day.metrics.articles_selected;
+
+          var dist = day.metrics.source_distribution;
+          Object.keys(dist).forEach(function(source) {
+            if (!feedStats[source]) {
+              feedStats[source] = { selected: 0, daysActive: 0 };
+            }
+            feedStats[source].selected += dist[source];
+            feedStats[source].daysActive += 1;
+          });
+        });
+
+        // Build sorted array
+        var feeds = Object.keys(feedStats).map(function(name) {
+          return { name: name, selected: feedStats[name].selected, daysActive: feedStats[name].daysActive };
+        });
+        feeds.sort(function(a, b) { return b.selected - a.selected; });
+
+        var maxSelected = feeds.length > 0 ? feeds[0].selected : 1;
+
+        // Update summary stats
+        document.getElementById('stat-days').textContent = days.length;
+        document.getElementById('stat-scanned').textContent = totalScanned;
+        document.getElementById('stat-selected').textContent = totalSelected;
+        document.getElementById('stat-sources').textContent = feeds.length;
+
+        // Build table with DOM methods
+        var container = document.getElementById('table-container');
+        container.textContent = '';
+
+        // Table header (desktop)
+        var header = el('div', 'hidden md:grid grid-cols-[1fr_80px_80px_1fr] gap-4 px-4 py-3 font-label text-[9px] uppercase tracking-[0.2em] text-outline border-b border-outline-variant/30 mb-1');
+        header.appendChild(el('div', null, 'Feed'));
+        header.appendChild(el('div', 'text-right', 'Selected'));
+        header.appendChild(el('div', 'text-right', 'Days Active'));
+        header.appendChild(el('div', null, 'Selection Distribution'));
+        container.appendChild(header);
+
+        feeds.forEach(function(feed, i) {
+          var barWidth = Math.max(2, Math.round((feed.selected / maxSelected) * 100));
+          var pct = Math.round((feed.selected / totalSelected) * 100);
+          var isTop = i < 3;
+
+          var row = el('div', 'grid grid-cols-1 md:grid-cols-[1fr_80px_80px_1fr] gap-1 md:gap-4 items-center px-4 py-3 border-b border-outline-variant/10 hover:bg-surface-container-high/50 transition-colors');
+
+          // Feed name
+          var nameCell = el('div', 'flex items-center gap-2');
+          var dot = el('span', 'w-1.5 h-1.5 shrink-0 ' + (isTop ? 'bg-primary' : 'bg-outline-variant'));
+          nameCell.appendChild(dot);
+          nameCell.appendChild(el('span', 'font-label text-[12px] tracking-wide ' + (isTop ? 'text-on-surface' : 'text-outline'), esc(feed.name)));
+          row.appendChild(nameCell);
+
+          // Selected count
+          var selCell = el('div', 'md:text-right font-label text-[13px] ' + (isTop ? 'text-primary font-semibold' : 'text-on-surface'));
+          var mobileLabel1 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Selected: ');
+          selCell.appendChild(mobileLabel1);
+          selCell.appendChild(document.createTextNode(feed.selected));
+          row.appendChild(selCell);
+
+          // Days active
+          var dayCell = el('div', 'md:text-right font-label text-[13px] text-outline');
+          var mobileLabel2 = el('span', 'md:hidden text-[9px] uppercase tracking-widest text-outline mr-2', 'Days: ');
+          dayCell.appendChild(mobileLabel2);
+          dayCell.appendChild(document.createTextNode(feed.daysActive + '/' + days.length));
+          row.appendChild(dayCell);
+
+          // Bar chart
+          var barCell = el('div', 'hidden md:flex items-center gap-2');
+          var barBg = el('div', 'flex-1 h-2 bg-surface-container-lowest overflow-hidden');
+          var barFill = el('div', 'bar-fill h-full ' + (isTop ? 'bg-primary' : 'bg-outline-variant'));
+          barFill.style.width = barWidth + '%';
+          barBg.appendChild(barFill);
+          barCell.appendChild(barBg);
+          barCell.appendChild(el('span', 'font-label text-[10px] text-outline w-8 text-right', pct + '%'));
+          row.appendChild(barCell);
+
+          container.appendChild(row);
+        });
+
+        // Dormant feeds
+        var knownFeeds = [
+          "Anthropic News", "Anthropic Engineering", "Anthropic Research", "Anthropic Red Team",
+          "Claude Blog", "Claude Code Changelog", "OpenAI Research", "OpenAI Blog",
+          "Google DeepMind", "Google Developers AI", "Meta AI", "xAI", "Mistral AI",
+          "Cursor Blog", "Windsurf Blog", "Windsurf Changelog", "Replit Blog",
+          "Vercel Blog", "Sourcegraph Blog", "GitHub Blog",
+          "METR", "ARC Evals", "Alignment Forum", "LessWrong (high-karma)",
+          "TLDR AI", "Dario Amodei", "Sam Altman", "Sahaj Garg (Wispr)",
+          "Paul Graham", "Andrej Karpathy", "Hamel Husain",
+          "Simon Willison", "Lilian Weng", "Jack Clark (Import AI)",
+          "Latent Space", "The Batch (deeplearning.ai)",
+          "Gwern Branwen", "Roon (roonscape)", "Citrini Research", "Steve Yegge"
+        ];
+
+        var dormant = knownFeeds.filter(function(f) { return !feedStats[f]; });
+
+        if (dormant.length > 0) {
+          var dormantSection = el('div', 'mt-12 mb-8');
+          var dormantTitle = el('h3', 'font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4 flex items-center gap-2');
+          var icon = el('span', 'material-symbols-outlined text-[14px]', 'visibility_off');
+          dormantTitle.appendChild(icon);
+          dormantTitle.appendChild(document.createTextNode(' Dormant Feeds — monitored but no articles selected yet'));
+          dormantSection.appendChild(dormantTitle);
+
+          var pillContainer = el('div', 'flex flex-wrap gap-2');
+          dormant.forEach(function(name) {
+            pillContainer.appendChild(el('span', 'px-3 py-1.5 border border-outline-variant/30 font-label text-[11px] tracking-wide text-outline/60', esc(name)));
+          });
+          dormantSection.appendChild(pillContainer);
+          container.appendChild(dormantSection);
+        }
+      });
+  </script>
+
+</body>
+</html>
