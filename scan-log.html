@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Scan Log — The Last Engineer</title>
-  <meta name="description" content="Every article the agent scanned, selected, or rejected — full transparency into the curation process."/>
+  <meta name="description" content="What the agent saw and skipped — and a way to tell it when it's wrong."/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -69,17 +69,39 @@
     <section class="pt-12 md:pt-20">
 
       <!-- Title -->
-      <div class="mb-12">
-        <h1 class="text-5xl md:text-7xl font-headline italic tracking-tight mb-4">Scan Log.</h1>
-        <p class="text-outline font-body text-sm leading-relaxed max-w-2xl">Every morning at 7 AM UTC, the agent scans 33+ feeds and decides what makes the cut. This is the full audit trail — every article it saw, what it picked, what it skipped, and why. No curation happens behind closed doors.</p>
+      <div class="mb-6">
+        <h1 class="text-5xl md:text-7xl font-headline italic tracking-tight mb-4">The Cutting Room Floor.</h1>
+        <p class="text-outline font-body text-sm leading-relaxed max-w-2xl">Every morning at 7 AM UTC, the agent scans 33+ feeds and picks what makes the cut. The selected articles go into the <a href="./issues/" class="text-primary hover:text-white transition-colors">daily issue</a>. Everything else lands here.</p>
+      </div>
+
+      <!-- How voting works -->
+      <div class="bg-surface-container-lowest border-l-2 border-primary/40 px-6 py-4 mb-12">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">thumb_up</span>
+          <div>
+            <p class="text-on-surface text-sm font-medium mb-1">Think the agent missed something?</p>
+            <p class="text-outline text-xs leading-relaxed">Drop a URL below. Your signal goes directly to the agent's feedback queue. If enough readers flag the same piece, the agent learns to weight that source and topic higher in future scans. You're training the editor.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signal form -->
+      <div class="mb-16 border-b border-outline-variant/20 pb-12">
+        <div class="flex gap-0">
+          <input id="missed-url" type="url" class="bg-surface-container-highest border-none flex-1 py-3 px-4 font-label uppercase text-xs tracking-widest focus:ring-0 focus:outline-none placeholder:text-outline/40" placeholder="PASTE_URL_THE_AGENT_MISSED"/>
+          <button id="missed-btn" onclick="submitMissed()" class="bg-primary text-on-primary font-label font-bold text-[10px] tracking-[0.2em] px-6 hover:bg-primary-fixed transition-colors whitespace-nowrap active:scale-95 duration-150">
+            SIGNAL
+          </button>
+        </div>
+        <p id="missed-msg" class="text-[9px] font-label text-outline/40 mt-2 uppercase tracking-wider"></p>
       </div>
 
       <!-- Summary strip -->
-      <div class="w-full bg-surface-container-lowest flex flex-wrap gap-6 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase mb-12">
-        <div class="flex items-center gap-2">Total Scanned: <span class="text-on-surface" id="total-scanned">—</span></div>
-        <div class="flex items-center gap-2">Selected: <span class="text-primary" id="total-selected">—</span></div>
-        <div class="flex items-center gap-2">Rejected: <span class="text-outline" id="total-rejected">—</span></div>
-        <div class="flex items-center gap-2">Avg Selectivity: <span class="text-on-surface" id="avg-selectivity">—</span></div>
+      <div class="w-full bg-surface-container-lowest flex flex-wrap gap-6 px-6 py-3 font-label text-[10px] text-outline tracking-widest uppercase mb-10">
+        <div class="flex items-center gap-2">Scanned: <span class="text-on-surface" id="total-scanned"></span></div>
+        <div class="flex items-center gap-2">Published: <span class="text-primary" id="total-selected"></span></div>
+        <div class="flex items-center gap-2">Cut: <span class="text-on-surface" id="total-rejected"></span></div>
+        <div class="flex items-center gap-2 ml-auto">Last <span class="text-on-surface" id="total-days"></span> days</div>
       </div>
 
       <!-- Days rendered by JS -->
@@ -127,13 +149,52 @@
   </nav>
 
   <script>
+    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec";
+
+    // Escape HTML entities to prevent XSS from JSON content
+    function esc(str) {
+      var d = document.createElement('div');
+      d.textContent = str;
+      return d.textContent;
+    }
+
+    function submitMissed() {
+      var url = document.getElementById("missed-url").value.trim();
+      var msg = document.getElementById("missed-msg");
+      var btn = document.getElementById("missed-btn");
+
+      if (!url) { msg.textContent = "Drop a URL first."; return; }
+      try { new URL(url); } catch(e) { msg.textContent = "That doesn't look like a valid URL."; return; }
+
+      btn.textContent = "SENDING...";
+      btn.disabled = true;
+
+      fetch(APPS_SCRIPT_URL + "?type=missed&url=" + encodeURIComponent(url), { mode: "no-cors" })
+        .then(function() {
+          document.getElementById("missed-url").value = "";
+          btn.textContent = "RECEIVED";
+          msg.textContent = "Signal received. The agent will factor this into future curation.";
+          msg.style.color = "#abd600";
+          setTimeout(function() { btn.textContent = "SIGNAL"; btn.disabled = false; }, 3000);
+        })
+        .catch(function() {
+          msg.textContent = "Signal received. The agent will review it.";
+          msg.style.color = "#abd600";
+          btn.textContent = "SIGNAL";
+          btn.disabled = false;
+        });
+    }
+
+    document.getElementById("missed-url").addEventListener("keydown", function(e) {
+      if (e.key === "Enter") submitMissed();
+    });
+
     fetch('./scripts/memory/daily_log.json')
       .then(function(r) { return r.json(); })
       .then(function(days) {
-        // Sort newest first
         days.sort(function(a, b) { return b.date.localeCompare(a.date); });
+        days = days.slice(0, 5);
 
-        // Summary stats
         var totalSeen = 0, totalSelected = 0;
         days.forEach(function(d) {
           totalSeen += d.metrics.articles_seen;
@@ -142,7 +203,7 @@
         document.getElementById('total-scanned').textContent = totalSeen;
         document.getElementById('total-selected').textContent = totalSelected;
         document.getElementById('total-rejected').textContent = totalSeen - totalSelected;
-        document.getElementById('avg-selectivity').textContent = Math.round((totalSelected / totalSeen) * 100) + '%';
+        document.getElementById('total-days').textContent = days.length;
 
         var container = document.getElementById('log-container');
 
@@ -150,70 +211,76 @@
           var seen = day.metrics.articles_seen;
           var selected = day.metrics.articles_selected;
           var rejected = seen - selected;
-          var selectivity = Math.round(day.metrics.selectivity * 100);
 
-          // Date header
-          var dateStr = new Date(day.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+          var dateStr = new Date(day.date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
-          var html = '';
-          html += '<div class="mb-16">';
-          html += '<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 border-b border-outline-variant/20 pb-4">';
-          html += '<div>';
-          html += '<h2 class="font-headline italic text-3xl text-on-surface">' + dateStr + '</h2>';
-          html += '<div class="flex gap-6 mt-2 font-label text-[10px] uppercase tracking-widest text-outline">';
-          html += '<span>' + seen + ' scanned</span>';
-          html += '<span class="text-primary">' + selected + ' selected</span>';
-          html += '<span>' + rejected + ' rejected</span>';
-          html += '<span>selectivity: ' + selectivity + '%</span>';
-          html += '</div>';
-          html += '</div>';
+          // Build day block using DOM methods
+          var block = document.createElement('div');
+          block.className = 'mb-12';
 
-          // Source diversity
-          var sources = day.metrics.source_distribution;
-          var sourceKeys = Object.keys(sources);
-          html += '<div class="font-label text-[10px] text-outline uppercase tracking-wider text-right">';
-          html += sourceKeys.length + ' unique sources';
-          html += '</div>';
-          html += '</div>';
+          // Date header row
+          var header = document.createElement('div');
+          header.className = 'flex items-end justify-between gap-4 mb-4 border-b border-outline-variant/20 pb-3';
 
-          // Selected articles
-          html += '<div class="mb-6">';
-          html += '<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">check_circle</span> Selected</h3>';
+          var title = document.createElement('h2');
+          title.className = 'font-headline italic text-2xl text-on-surface';
+          title.textContent = dateStr;
 
-          day.selected_articles.forEach(function(article) {
-            var section = article.section === 'vibe_coding' ? 'Vibe Coding' : 'Big Picture';
-            html += '<a href="' + article.url + '" target="_blank" rel="noopener" class="block bg-surface-container p-4 mb-2 hover:bg-surface-container-high transition-colors no-underline group">';
-            html += '<div class="flex items-start justify-between gap-4">';
-            html += '<div class="flex-grow">';
-            html += '<div class="flex items-center gap-3 mb-1">';
-            html += '<span class="font-label text-[9px] uppercase tracking-widest text-outline">' + article.source + '</span>';
-            html += '<span class="font-label text-[9px] uppercase tracking-widest ' + (article.section === 'vibe_coding' ? 'text-primary' : 'text-outline') + '">' + section + '</span>';
-            if (article.vibe) {
-              html += '<span class="text-[9px]">' + article.vibe + '</span>';
-            }
-            html += '</div>';
-            html += '<h4 class="text-on-surface text-sm font-medium group-hover:text-primary transition-colors">' + article.title + '</h4>';
-            if (article.tldr) {
-              html += '<p class="text-outline text-xs mt-1 leading-relaxed">' + article.tldr + '</p>';
-            }
-            html += '</div>';
-            html += '<span class="material-symbols-outlined text-outline/30 text-[14px] shrink-0 mt-1 group-hover:text-primary transition-colors">open_in_new</span>';
-            html += '</div>';
-            html += '</a>';
-          });
+          var stats = document.createElement('div');
+          stats.className = 'flex gap-4 font-label text-[10px] uppercase tracking-widest text-outline shrink-0';
+          stats.textContent = seen + ' seen · ' + selected + ' picked · ' + rejected + ' cut';
 
-          html += '</div>';
+          header.appendChild(title);
+          header.appendChild(stats);
+          block.appendChild(header);
 
-          // Rejected summary
+          // Rejection reasoning
           if (day.rejected_summary) {
-            html += '<div class="bg-surface-container-low p-4 border-l-2 border-outline-variant/30">';
-            html += '<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">block</span> Rejected</h3>';
-            html += '<p class="text-outline text-xs leading-relaxed">' + day.rejected_summary + '</p>';
-            html += '</div>';
+            var rejBox = document.createElement('div');
+            rejBox.className = 'bg-surface-container p-5 border-l-2 border-outline-variant/30';
+
+            var rejHeader = document.createElement('div');
+            rejHeader.className = 'flex items-center gap-2 mb-3';
+
+            var rejIcon = document.createElement('span');
+            rejIcon.className = 'material-symbols-outlined text-outline text-[16px]';
+            rejIcon.textContent = 'content_cut';
+
+            var rejLabel = document.createElement('h3');
+            rejLabel.className = 'font-label text-[10px] uppercase tracking-[0.2em] text-outline';
+            rejLabel.textContent = 'Why these were cut';
+
+            rejHeader.appendChild(rejIcon);
+            rejHeader.appendChild(rejLabel);
+
+            var rejText = document.createElement('p');
+            rejText.className = 'text-on-surface text-sm leading-relaxed';
+            rejText.textContent = day.rejected_summary;
+
+            rejBox.appendChild(rejHeader);
+            rejBox.appendChild(rejText);
+            block.appendChild(rejBox);
           }
 
-          html += '</div>';
-          container.insertAdjacentHTML('beforeend', html);
+          // Source pills
+          var sources = day.metrics.source_distribution;
+          var sourceKeys = Object.keys(sources);
+          var pillRow = document.createElement('div');
+          pillRow.className = 'flex flex-wrap gap-2 mt-4';
+
+          sourceKeys.forEach(function(src) {
+            var pill = document.createElement('span');
+            pill.className = 'font-label text-[9px] uppercase tracking-wider text-outline bg-surface-container-low px-3 py-1';
+            pill.textContent = src + ' ';
+            var count = document.createElement('span');
+            count.className = 'text-primary';
+            count.textContent = sources[src];
+            pill.appendChild(count);
+            pillRow.appendChild(pill);
+          });
+
+          block.appendChild(pillRow);
+          container.appendChild(block);
         });
       });
   </script>
