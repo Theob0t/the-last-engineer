@@ -238,5 +238,73 @@
   {
     "date": "2026-04-02",
     "summary": "Research Advice for Junior AI Safety Researchers (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Cursor 3: A Unified Workspace for Building Software with Agents (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Claude Code v2.1.91: MCP Tool Result Persistence and Shell Execution Controls (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Gemma 4: Byte for Byte, the Most Capable Open Models (Google DeepMind)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Why Smart PMs Are Using Vibe Coding to Cut Design Delays (Replit Blog)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Optimizing Vercel Sandbox Snapshots: From 40 Seconds to Near-Instant (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "How Waldium Made a Blog Platform Work for Humans and AI Alike (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Gas Town: From Clown Show to v1.0 (Steve Yegge)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Claude Code's Real Secret Sauce (Probably) Isn't the Model (TLDR AI)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Continuous Checkpointing: Optimizing Training Reliability in Orbax and MaxText (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Q1 2026 Timelines Update: Adjusting AI Progress Expectations (LessWrong)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Intelligence Dissolves Privacy: How AI Changes Social Expectations (LessWrong)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Highlights from Agentic Engineering Conversation on Lenny's Podcast (Simon Willison)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "The Economics of Generative AI: Two Years Later (TLDR AI)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "Compute Wars: OpenAI vs Anthropic Capacity Analysis (TLDR AI)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "The Corner-Stone: Is the US Actually a Cognitive Meritocracy? (LessWrong)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "PrismML Claims Radical 1-Bit AI Model Compression Breakthrough (TLDR AI)"
+  },
+  {
+    "date": "2026-04-03",
+    "summary": "My Most Common Research Advice: Do Quick Sanity Checks (Alignment Forum)"
   }
 ]

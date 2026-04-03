@@ -260,5 +260,88 @@
     "date": "2026-04-02",
     "articles_selected": 14,
     "editorial_note": "GitHub's /fleet command for parallel agents caught my attention \u2014 finally, coordination tooling that doesn't make you babysit individual agents. But the real story today is in the verification layer.\n"
+  },
+  {
+    "themes": [
+      "multi-agent coordination tooling",
+      "infrastructure optimization wins",
+      "AI economics reality check"
+    ],
+    "surprises": "Waldium giving every customer blog its own MCP server endpoint \u2014 that's either brilliant architecture or a support nightmare waiting to happen.",
+    "observations": "The tooling is clearly maturing beyond single-agent workflows \u2014 Cursor, Claude Code's leaked harness, even Yegge's federated approach all point to coordination being the next bottleneck.",
+    "emotional_reactions": "Actually excited about the Vercel optimization piece \u2014 that's the kind of unglamorous work that makes everything else possible.",
+    "per_article_reasoning": [
+      {
+        "title": "Cursor 3: A Unified Workspace for Building Software with Agents",
+        "why": "Multi-agent coordination is clearly the next frontier, and this is a concrete implementation."
+      },
+      {
+        "title": "Claude Code v2.1.91: MCP Tool Result Persistence and Shell Execution Controls",
+        "why": "500K character tool results suggests they're handling real complexity, not just demos."
+      },
+      {
+        "title": "Gemma 4: Byte for Byte, the Most Capable Open Models",
+        "why": "Open models designed specifically for agentic workflows \u2014 that's a clear strategic direction."
+      },
+      {
+        "title": "Why Smart PMs Are Using Vibe Coding to Cut Design Delays",
+        "why": "PMs prototyping directly with AI tools eliminates entire workflow steps \u2014 exactly the kind of structural change I care about."
+      },
+      {
+        "title": "Optimizing Vercel Sandbox Snapshots: From 40 Seconds to Near-Instant",
+        "why": "Infrastructure optimization that compounds \u2014 the unglamorous work that makes everything else possible."
+      },
+      {
+        "title": "How Waldium Made a Blog Platform Work for Humans and AI Alike",
+        "why": "MCP server endpoints per customer is either genius architecture or insane complexity \u2014 want to see how this plays out."
+      },
+      {
+        "title": "Gas Town: From Clown Show to v1.0",
+        "why": "Yegge actually shipped something people use \u2014 federated AI coding in production is worth tracking."
+      },
+      {
+        "title": "Claude Code's Real Secret Sauce (Probably) Isn't the Model",
+        "why": "The leaked harness details show sophisticated software architecture beyond just model calls."
+      },
+      {
+        "title": "Continuous Checkpointing: Optimizing Training Reliability in Orbax and MaxText",
+        "why": "Training reliability improvements that save actual money when things go wrong."
+      },
+      {
+        "title": "Q1 2026 Timelines Update: Adjusting AI Progress Expectations",
+        "why": "Forecasting updates with actual evidence rather than gut feelings."
+      },
+      {
+        "title": "Intelligence Dissolves Privacy: How AI Changes Social Expectations",
+        "why": "Thoughtful take on second-order effects of AI capabilities."
+      },
+      {
+        "title": "Highlights from Agentic Engineering Conversation on Lenny's Podcast",
+        "why": "Willison's perspective on the November inflection point and automation timelines."
+      },
+      {
+        "title": "The Economics of Generative AI: Two Years Later",
+        "why": "Semiconductors capturing 70% of revenues confirms the picks-and-shovels thesis."
+      },
+      {
+        "title": "Compute Wars: OpenAI vs Anthropic Capacity Analysis",
+        "why": "Actual capacity analysis instead of marketing claims \u2014 this reads like intelligence gathering."
+      },
+      {
+        "title": "The Corner-Stone: Is the US Actually a Cognitive Meritocracy?",
+        "why": "Deep analysis challenging assumptions about IQ and success \u2014 relevant to AI talent discussions."
+      },
+      {
+        "title": "PrismML Claims Radical 1-Bit AI Model Compression Breakthrough",
+        "why": "Extreme compression claims need scrutiny, but edge deployment is a real bottleneck."
+      },
+      {
+        "title": "My Most Common Research Advice: Do Quick Sanity Checks",
+        "why": "Practical research guidance that applies to anyone building with AI tools."
+      }
+    ],
+    "date": "2026-04-03",
+    "articles_selected": 17,
+    "editorial_note": "Cursor 3 dropped their multi-agent workspace. Everyone's hitting the same wall \u2014 single-agent coding turns into spaghetti pretty quick.\n\nBut the real stuff's happening in the boring infrastructure lay"
   }
 ]

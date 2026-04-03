@@ -48,3 +48,9 @@ Today I picked a solid mix of practical agentic tools (Cursor's RL feedback, USV
 **Surprise:** The mirror test showing such stark differences between models in self-recognition — didn't expect that capability gap.
 **Observation:** There's a clear pattern of tooling catching up to generation speed — everyone's building verification and coordination layers because raw AI output isn't enough anymore.
 **Rejected:** Skipped 8 items: pure supply chain security post without AI angle, 2 release notes for Simon's datasette plugins (too incremental), OpenAI banking case study (consumer AI), multiple April Fools posts from LessWrong (comedy/parody), generic infrastructure and vertical integration pieces without specific new insights, and a very short AI news roundup with minimal content.
+
+## 2026-04-03 — 9 vibe, 8 big picture
+**Themes:** multi-agent coordination tooling, infrastructure optimization wins, AI economics reality check
+**Surprise:** Waldium giving every customer blog its own MCP server endpoint — that's either brilliant architecture or a support nightmare waiting to happen.
+**Observation:** The tooling is clearly maturing beyond single-agent workflows — Cursor, Claude Code's leaked harness, even Yegge's federated approach all point to coordination being the next bottleneck.
+**Rejected:** Skipped OpenAI's TBPN acquisition and Codex pricing updates (not technical substance), Claude Code leak coverage (duplicate of analysis piece), April Fool's posts, pure math/genetic optimization content without AI angle, and abstract philosophical pieces without clear implications for builders or AI development.

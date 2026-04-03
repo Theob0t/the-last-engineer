@@ -752,5 +752,349 @@
     ],
     "rejected_summary": "Skipped 8 items: pure supply chain security post without AI angle, 2 release notes for Simon's datasette plugins (too incremental), OpenAI banking case study (consumer AI), multiple April Fools posts from LessWrong (comedy/parody), generic infrastructure and vertical integration pieces without specific new insights, and a very short AI news roundup with minimal content.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-03",
+    "metrics": {
+      "articles_seen": 31,
+      "articles_selected": 17,
+      "selectivity": 0.548,
+      "source_distribution": {
+        "Cursor Blog": 1,
+        "Claude Code Changelog": 1,
+        "Google DeepMind": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 2,
+        "Steve Yegge": 1,
+        "TLDR AI": 4,
+        "Google Developers AI": 1,
+        "LessWrong": 3,
+        "Simon Willison": 1,
+        "Alignment Forum": 1
+      },
+      "feed_scan_counts": {
+        "Claude Blog": 1,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 2,
+        "Google DeepMind": 1,
+        "Google Developers AI": 1,
+        "Cursor Blog": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 2,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 6,
+        "TLDR AI": 8,
+        "Simon Willison": 3,
+        "Latent Space": 2,
+        "Steve Yegge": 1
+      },
+      "source_diversity": 0.65,
+      "unique_sources": 11,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 9,
+        "\ud83e\uddea deep analysis": 7,
+        "\u2696\ufe0f AI futures": 1
+      },
+      "section_balance": {
+        "vibe_coding": 9,
+        "big_picture": 8,
+        "ratio": 1.12
+      }
+    },
+    "editorial": "Cursor 3 dropped their multi-agent workspace. Everyone's hitting the same wall \u2014 single-agent coding turns into spaghetti pretty quick.\n\nBut the real stuff's happening in the boring infrastructure layer. Vercel cut sandbox restores from 40 seconds to instant. Google's doing continuous checkpointing. This matters when your training run dies at 90% and you've just torched $50k.\n\nYegge's Gas Town hit v1.0. Someone's actually running federated AI coding in production now. The Waldium piece is wild \u2014 giving every blog its own MCP server endpoint. Could be genius. Could be completely nuts.\n\nThe capabilities research feels different lately. Less breathless hype, more actual measurement. The compute capacity analysis between OpenAI and Anthropic reads like intelligence gathering, not recycled press releases. And that economics piece confirming semiconductors still capture 70% of AI revenues? The picks-and-shovels play is working exactly like everyone said it would.",
+    "journal": {
+      "themes": [
+        "multi-agent coordination tooling",
+        "infrastructure optimization wins",
+        "AI economics reality check"
+      ],
+      "surprises": "Waldium giving every customer blog its own MCP server endpoint \u2014 that's either brilliant architecture or a support nightmare waiting to happen.",
+      "observations": "The tooling is clearly maturing beyond single-agent workflows \u2014 Cursor, Claude Code's leaked harness, even Yegge's federated approach all point to coordination being the next bottleneck."
+    },
+    "selected_articles": [
+      {
+        "title": "Cursor 3: A Unified Workspace for Building Software with Agents",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/cursor-3",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor's major new version creates a unified workspace where multiple AI agents can collaborate on software projects together.",
+        "why_selected": "Multi-agent coordination is clearly the next frontier, and this is a concrete implementation."
+      },
+      {
+        "title": "Claude Code v2.1.91: MCP Tool Result Persistence and Shell Execution Controls",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New version adds support for 500K character tool results and lets you disable shell execution in skills and plugins.",
+        "why_selected": "500K character tool results suggests they're handling real complexity, not just demos."
+      },
+      {
+        "title": "Gemma 4: Byte for Byte, the Most Capable Open Models",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's new open models (2B to 31B parameters) are designed specifically for advanced reasoning and agentic workflows.",
+        "why_selected": "Open models designed specifically for agentic workflows \u2014 that's a clear strategic direction."
+      },
+      {
+        "title": "Why Smart PMs Are Using Vibe Coding to Cut Design Delays",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/cut-design-delays-with-vibe-coding",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Product managers can skip traditional design handoffs by prototyping directly with AI tools, cutting weeks of lag per quarter.",
+        "why_selected": "PMs prototyping directly with AI tools eliminates entire workflow steps \u2014 exactly the kind of structural change I care about."
+      },
+      {
+        "title": "Optimizing Vercel Sandbox Snapshots: From 40 Seconds to Near-Instant",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/optimizing-vercel-sandbox-snapshots",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel cut sandbox restore times from 40+ seconds to near-instant through parallelization and smart caching strategies.",
+        "why_selected": "Infrastructure optimization that compounds \u2014 the unglamorous work that makes everything else possible."
+      },
+      {
+        "title": "How Waldium Made a Blog Platform Work for Humans and AI Alike",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-waldium-made-a-blog-platform-work-for-humans-and-AI-alike",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "YC startup built an agentic CMS that gives every customer blog its own MCP server endpoint for direct AI agent queries.",
+        "why_selected": "MCP server endpoints per customer is either genius architecture or insane complexity \u2014 want to see how this plays out."
+      },
+      {
+        "title": "Gas Town: From Clown Show to v1.0",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/gas-town-from-clown-show-to-v1-0-c239d9a407ec",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Steve Yegge's federated AI coding platform officially hits v1.0 after three months of wild development and user adoption.",
+        "why_selected": "Yegge actually shipped something people use \u2014 federated AI coding in production is worth tracking."
+      },
+      {
+        "title": "Claude Code's Real Secret Sauce (Probably) Isn't the Model",
+        "source": "TLDR AI",
+        "url": "https://x.com/rasbt/status/2038980345316413862",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Analysis of the leaked Claude Code reveals sophisticated software harness with dedicated tools, memory architecture, and parallel subagents.",
+        "why_selected": "The leaked harness details show sophisticated software architecture beyond just model calls."
+      },
+      {
+        "title": "Continuous Checkpointing: Optimizing Training Reliability in Orbax and MaxText",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/boost-training-goodput-how-continuous-checkpointing-optimizes-reliability-in-orbax-and-maxtext/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's new continuous checkpointing feature maximizes I/O bandwidth and minimizes failure risk during model training.",
+        "why_selected": "Training reliability improvements that save actual money when things go wrong."
+      },
+      {
+        "title": "Q1 2026 Timelines Update: Adjusting AI Progress Expectations",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/XLLjqMxETva3ABtsK/q1-2026-timelines-update",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Major AI forecasting update shows how recent evidence is shifting expectations about AI development timelines and takeoff speeds.",
+        "why_selected": "Forecasting updates with actual evidence rather than gut feelings."
+      },
+      {
+        "title": "Intelligence Dissolves Privacy: How AI Changes Social Expectations",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/rNpGFodLTFvhqLmK6/intelligence-dissolves-privacy",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "As AI capabilities expand, our social expectations about privacy and what's 'reasonable' to keep hidden will fundamentally shift.",
+        "why_selected": "Thoughtful take on second-order effects of AI capabilities."
+      },
+      {
+        "title": "Highlights from Agentic Engineering Conversation on Lenny's Podcast",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/2/lennys-podcast/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Simon Willison discusses the November inflection point, software engineers as bellwethers, and automation timelines in AI development.",
+        "why_selected": "Willison's perspective on the November inflection point and automation timelines."
+      },
+      {
+        "title": "The Economics of Generative AI: Two Years Later",
+        "source": "TLDR AI",
+        "url": "https://apoorv03.com/p/the-economics-of-generative-ai-two",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Semiconductor companies still capture 70% of AI revenues, while infrastructure remains the only truly competitive layer in the stack.",
+        "why_selected": "Semiconductors capturing 70% of revenues confirms the picks-and-shovels thesis."
+      },
+      {
+        "title": "Compute Wars: OpenAI vs Anthropic Capacity Analysis",
+        "source": "TLDR AI",
+        "url": "https://x.com/petergostev/status/2038755953336836514",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Anthropic's doubled capacity enabled Opus 4.5 breakthrough, while OpenAI will pull ahead in late 2026 but face close competition in 2027.",
+        "why_selected": "Actual capacity analysis instead of marketing claims \u2014 this reads like intelligence gathering."
+      },
+      {
+        "title": "The Corner-Stone: Is the US Actually a Cognitive Meritocracy?",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/tihhx7iy8C6yyHaC2/the-corner-stone",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Deep analysis of whether high IQ actually guarantees success in America's supposed meritocratic system, challenging common assumptions.",
+        "why_selected": "Deep analysis challenging assumptions about IQ and success \u2014 relevant to AI talent discussions."
+      },
+      {
+        "title": "PrismML Claims Radical 1-Bit AI Model Compression Breakthrough",
+        "source": "TLDR AI",
+        "url": "https://www.wsj.com/cio-journal/caltech-researchers-claim-radical-compression-of-high-fidelity-ai-models-e66f31c9",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Caltech spinout claims extreme compression technology that enables full AI models to run locally on edge devices without performance loss.",
+        "why_selected": "Extreme compression claims need scrutiny, but edge deployment is a real bottleneck."
+      },
+      {
+        "title": "My Most Common Research Advice: Do Quick Sanity Checks",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/dYHFtEnKc4BdJEYY4/my-most-common-research-advice-do-quick-sanity-checks",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "AI safety research mentor breaks down the three most common feedback areas for junior researchers, with practical guidance.",
+        "why_selected": "Practical research guidance that applies to anyone building with AI tools."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Harnessing Claude\u2019s intelligence",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/harnessing-claudes-intelligence",
+        "summary": "Harnessing Claude\u2019s intelligence"
+      },
+      {
+        "title": "OpenAI acquires TBPN",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/openai-acquires-tbpn",
+        "summary": "OpenAI acquires TBPN to accelerate global conversations around AI and support independent media, expanding dialogue with builders, businesses, and the broader tech community."
+      },
+      {
+        "title": "Codex now offers more flexible pricing for teams",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/codex-flexible-pricing-for-teams",
+        "summary": "Codex now includes pay-as-you-go pricing for ChatGPT Business and Enterprise, providing teams a more flexible option to start and scale adoption."
+      },
+      {
+        "title": "How Waldium made a blog platform work for humans and AI alike",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-waldium-made-a-blog-platform-work-for-humans-and-ai-alike",
+        "summary": "Waldium is a two-person, YC-backed startup that built an agentic CMS for businesses. Co-founded by Amrutha Gujjar and CTO Shivam Singhal, the platform automates content research and creation, and gives every customer blog its own MCP server endpoint so AI agents can query it directly. Today, it all runs from a single Next.js deployment on Vercel.Amrutha spent years building software where the infrastructure kept getting in the way. \"I was never stuck on the part I was excited to build,\" she says. \"It was always the infrastructure friction around it.\" That frustration became a design principle "
+      },
+      {
+        "title": "The Practical Guide to Superbabies",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/PPLHfFhNWMuWCnaTt/the-practical-guide-to-superbabies-3",
+        "summary": "It\u2019s Summer of 2025. I\u2019m standing in a grass covered field on the longest day of the year. A friend of mine walks towards me, holding his newborn son.\u201cHey, I don\u2019t know if you\u2019re aware of this, but you were pretty instrumental in this kid existing. We read your blog post on polygenic embryo screening back in 2023 and decided to go through IVF to have him as a result.\u201d He hesitates for a moment, then asks \u201cDo you want to hold him?\u201d I nod.As I cradle this child in my arms, I look down at his face. It feels surreal to think I played a part in him being here. It's the first time I've met one of th"
+      },
+      {
+        "title": "The quest for general intelligence is hitting a wall [April Fool's]",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/xZsuBaQFGEb743RiM/the-quest-for-general-intelligence-is-hitting-a-wall-april",
+        "summary": "There has been a lot of talk in the AI community lately about the possibility of achieving general intelligence. Indeed, recent progress in areas such as mathematical problem solving and coding has been dramatic, with recent systems assisting in the creation of platforms such as Moltbook and helping an AI researcher in discovering faster matrix multiplication algorithms. Despite the hype, however, it seems like there are clear limitations to the current best non-AI systems:They cannot perform symbolic reasoning (even the best trained models struggle to multiply 16 bit integers)They are black b"
+      },
+      {
+        "title": "Orders of magnitude: use semitones, not decibels",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/BEBwcg2th5CqLawEk/orders-of-magnitude-use-semitones-not-decibels",
+        "summary": "I'm going to teach you a secret. It's a secret known to few, a secret way of using parts of your brain not meant for mathematics... for mathematics. It's part of how I (sort of) do logarithms in my head. This is a nearly purposeless skill.\nWhat's the growth rate? What's the doubling time? How many orders of magnitude bigger is it? How many years at this rate until it's quintupled?\nAll questions of ratios and scale.\nScale... hmm.\n\n'Wait', you're thinking, 'let me check the date...'. Indeed. But please, stay with me for the logarithms.\nMusical intervals as ratios, and God's joke\nIf you're a musi"
+      },
+      {
+        "title": "Jensen Huang: \"My favorite enterprise AI service is Cursor.\" Find out why (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://cursor.com/?utm_source=tldr_paid&amp;utm_medium=paid&amp;utm_campaign=ai&amp;utm_tldrtest=testa",
+        "summary": "Trusted by teams at Stripe, OpenAI, and NVIDIA, Cursor helps you build high-quality software, faster.\u2705 Choose between every frontier model from OpenAI, Anthropic, Gemini, xAI, and Cursor.\u2705 Code with an agent that knows how your codebase works, no matter the scale or complexity.\u2705 Run multiple agents in parallel to build, test, and demo features without blocking on execution.\u201cMy favorite enterprise AI service is Cursor. Cursor is an AI coder and every one of our engineers, one hundred percent, is now assisted by AI coders and our productivity has gone up incredibly.\u201d \u2014Jensen HuangDownload Cursor"
+      },
+      {
+        "title": "Caltech Researchers Claim Radical Compression of High-Fidelity AI Models (5 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.wsj.com/cio-journal/caltech-researchers-claim-radical-compression-of-high-fidelity-ai-models-e66f31c9?st=UuCcis&reflink=desktopwebshare_permalink&utm_source=tldrai",
+        "summary": "PrismML has developed an extreme form of compression that allows AI to run locally on edge devices. Its 1-bit technology model has a radically compressed size without compromised performance. The same efficiency gains that enable local deployment will also allow data centers to operate more efficiently. The mathematics for the process are proprietary, with Caltech owning the intellectual property and PrismML being the sole exclusive licensee."
+      },
+      {
+        "title": "OpenAI raised $122B to expand AI infrastructure (5 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/accelerating-the-next-phase-ai/?utm_source=tldrai",
+        "summary": "OpenAI announced $122 billion in new funding at an $852 billion valuation, highlighting rapid revenue growth, large-scale adoption, and a strategy centered on compute, APIs, and enterprise AI systems."
+      },
+      {
+        "title": "Mercor says it was hit by cyberattack tied to compromise of open-source LiteLLM project (3 minute read)",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project/?utm_source=tldrai",
+        "summary": "Mercor, an AI recruiting startup, has confirmed a security incident linked to a supply chain attack involving LiteLLM. A recent compromise of LiteLLM's project, linked to a hacking group called TeamPCP, has affected thousands of companies. Lapsus$, an extortion hacking group, claims it has access to the stolen data, though it is unclear how it was obtained. The incident has prompted LiteLLM to shift from Delve to Vanta for compliance certifications."
+      },
+      {
+        "title": "Claude Code's source code appears to have leaked: here's what we know (5 minute read)",
+        "source": "TLDR AI",
+        "url": "https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know?utm_source=tldrai",
+        "summary": "Anthropic has accidentally leaked the inner workings of Claude Code to the public. The codebase has now been mirrored and analyzed by thousands of developers. The most significant discovery seems to be how Anthropic solved context entropy by using a three-layer memory architecture. This post looks at other interesting parts of the code and the implications of the leak."
+      },
+      {
+        "title": "Claude Code's Real Secret Sauce (Probably) Isn't the Model (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://x.com/rasbt/status/2038980345316413862?utm_source=tldrai",
+        "summary": "Claude Code's performance stems from a sophisticated software harness rather than just the underlying model, utilizing dedicated tools like Grep, Glob, and LSP for superior repository navigation. The system minimizes context bloat through file-read deduplication and structured session memory, while using forked subagents to parallelize tasks like background analysis without contaminating the main execution loop."
+      },
+      {
+        "title": "The Economics of Generative AI: Two Years Later (8 minute read)",
+        "source": "TLDR AI",
+        "url": "https://apoorv03.com/p/the-economics-of-generative-ai-two?utm_source=tldrai",
+        "summary": "The semi layer still captures around 70% of all AI revenues. Infra is currently the only competitive layer. The most profitable strategy in AI is still selling the shovels."
+      },
+      {
+        "title": "Compute Wars: OpenAI vs Anthropic (3 minute read)",
+        "source": "TLDR AI",
+        "url": "https://x.com/petergostev/status/2038755953336836514?utm_source=tldrai",
+        "summary": "Opus 4.5 was a major breakthrough that was achieved because Anthropic more than doubled its capacity. This got Anthropic close to OpenAI's total capacity, and probably much higher effective capacity available for new model runs. OpenAI will pull away in terms of compute available in the second half of this year, but 2027 will be close. OpenAI so far has much higher planned capacity for future years, but it is unlikely that Anthropic will not push as hard as possible for more compute."
+      },
+      {
+        "title": "Highlights from my conversation about agentic engineering on Lenny's Podcast",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything",
+        "summary": "I was a guest on Lenny Rachitsky's podcast, in a new episode titled An AI state of the union: We've passed the inflection point, dark factories are coming, and automation timelines. It's available on YouTube, Spotify, and Apple Podcasts. Here are my highlights from our conversation, with relevant links.\n\n \n\n\n  The November inflection point\n  Software engineers as bellwethers for other information workers\n  Writing code on my phone\n  Responsible vibe coding\n  Dark Factories and StrongDM\n  The bottleneck has moved to testing\n  This stuff is exhausting\n  Interruptions cost a lot less now\n  My abi"
+      },
+      {
+        "title": "Gemma 4: Byte for byte, the most capable open models",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything",
+        "summary": "Gemma 4: Byte for byte, the most capable open models\nFour new vision-capable Apache 2.0 licensed reasoning LLMs from Google DeepMind, sized at 2B, 4B, 31B, plus a 26B-A4B Mixture-of-Experts.\nGoogle emphasize \"unprecedented level of intelligence-per-parameter\", providing yet more evidence that creating small useful models is one of the hottest areas of research right now.\nThey actually label the two smaller models as E2B and E4B for \"Effective\" parameter size. The system card explains:\n\nThe smaller models incorporate Per-Layer Embeddings (PLE) to maximize parameter efficiency in on-device deplo"
+      },
+      {
+        "title": "llm-gemini 0.30",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/2/llm-gemini/#atom-everything",
+        "summary": "Release: llm-gemini 0.30\n    New models gemini-3.1-flash-lite-preview, gemma-4-26b-a4b-it and gemma-4-31b-it. See my notes on Gemma 4.\n    \n        Tags: gemini, llm, gemma"
+      },
+      {
+        "title": "[AINews] Gemma 4: The best small Multimodal Open Models, dramatically better than Gemma 3 in every way",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-gemma-4-the-best-small-multimodal",
+        "summary": "A welcome update from Google!"
+      },
+      {
+        "title": "Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient \u2014 with Chris Manning and Fan-yun Sun",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/moonlake",
+        "summary": "We cap out our World Models coverage with one of the most exciting new approaches - long running, multiplayer, interactive world models built with agents bootstrapped from game engines!"
+      },
+      {
+        "title": "Gas Town: from Clown Show to v1.0",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/gas-town-from-clown-show-to-v1-0-c239d9a407ec?source=rss-c1ec701babb7------2",
+        "summary": "TL;DR: Gas Town and Beads have both released version 1.0.0 today.\u00a0Enjoy!Gas Town and Beads hit\u00a0v1.0.0It has been a wild 3-month ride since I launched Gas\u00a0Town.First there was the part where I was like nooo don\u2019t use it, and everyone was like, hold my beer. I am so glad some of you ignored me so hard. It\u2019s just what I\u2019d hoped for. You early adopters helped pave the way for everyone\u00a0else.And we went through some chaotic times early on. There were the serial killer sprees, viciously taking out random workers mid-job. (It\u2019s always the Deacon, the modern-day Butler in the Gas Town murder mysteries."
+      }
+    ],
+    "rejected_summary": "Skipped OpenAI's TBPN acquisition and Codex pricing updates (not technical substance), Claude Code leak coverage (duplicate of analysis piece), April Fool's posts, pure math/genetic optimization content without AI angle, and abstract philosophical pieces without clear implications for builders or AI development.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
