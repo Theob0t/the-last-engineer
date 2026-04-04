@@ -1096,5 +1096,333 @@
     ],
     "rejected_summary": "Skipped OpenAI's TBPN acquisition and Codex pricing updates (not technical substance), Claude Code leak coverage (duplicate of analysis piece), April Fool's posts, pure math/genetic optimization content without AI angle, and abstract philosophical pieces without clear implications for builders or AI development.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-04",
+    "metrics": {
+      "articles_seen": 25,
+      "articles_selected": 18,
+      "selectivity": 0.72,
+      "source_distribution": {
+        "Claude Code Changelog": 1,
+        "TLDR AI": 6,
+        "GitHub Blog": 1,
+        "Simon Willison": 4,
+        "Alignment Forum": 1,
+        "Latent Space": 1,
+        "LessWrong": 4
+      },
+      "feed_scan_counts": {
+        "Claude Code Changelog": 1,
+        "GitHub Blog": 1,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 8,
+        "Simon Willison": 8,
+        "Latent Space": 2
+      },
+      "source_diversity": 0.39,
+      "unique_sources": 7,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 9,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 5
+      },
+      "section_balance": {
+        "vibe_coding": 10,
+        "big_picture": 8,
+        "ratio": 1.25
+      }
+    },
+    "editorial": "The Claude Code leak is fascinating for all the wrong reasons. We get a peek at production AI orchestration \u2014 memory systems, planning flows, the works \u2014 and the first thing that happens is a security nightmare. That gap between \"shipped fast\" and \"shipped securely\" keeps widening.\n\nThe thinking tokens piece matters more. Turns out redacting AI's reasoning chains correlates directly with quality drops in complex workflows. We've been so focused on final outputs that we forgot the intermediate steps are load-bearing. Senior engineering work isn't just about getting the right answer \u2014 it's about having a debuggable path to that answer.\n\nGitHub's 14 billion commits projection for 2026 feels both exciting and terrifying. That's exponential development activity, probably driven by AI tools. But are we building 10x more valuable software, or just 10x more software? The Linux kernel maintainers getting 5-10 real AI-generated security reports daily suggests at least some of that volume has substance.",
+    "journal": {
+      "themes": [
+        "AI orchestration architecture",
+        "Quality vs speed tradeoffs",
+        "Development velocity explosion"
+      ],
+      "surprises": "The thinking tokens correlation with quality was stronger than expected \u2014 redacting reasoning chains directly hurts complex coding workflows.",
+      "observations": "There's a clear maturation happening in AI tooling \u2014 from single-agent generation to orchestration systems with memory and planning, but security and verification are still afterthoughts."
+    },
+    "selected_articles": [
+      {
+        "title": "Claude Code v2.1.92: Enterprise Policy Settings and Interactive Bedrock Setup",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New fail-closed remote settings policy and an interactive wizard for AWS Bedrock model pinning \u2014 enterprise deployment just got smoother.",
+        "why_selected": ""
+      },
+      {
+        "title": "Extended Thinking Is Load-Bearing for Senior Engineering Workflows",
+        "source": "TLDR AI",
+        "url": "https://gist.github.com/benvanik/e6c610997e4b06b82385622048079818?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Detailed analysis showing that thinking token redaction correlates precisely with quality regression in complex coding workflows \u2014 the chains of reasoning matter more than we thought.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Claude Code Source Leak Reveals AI Orchestration Architecture",
+        "source": "TLDR AI",
+        "url": "https://www.latent.space/p/ainews-the-claude-code-source-leak?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Shipped source maps exposed Claude Code's orchestration logic, memory systems, and planning flows \u2014 plus the security nightmare that followed.",
+        "why_selected": ""
+      },
+      {
+        "title": "Trinity-Large-Thinking: The Strongest Open Reasoning Model for Agents",
+        "source": "TLDR AI",
+        "url": "https://www.arcee.ai/blog/trinity-large-thinking?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Arcee built an open frontier model focused on what makes agents work in practice: multi-turn coherence, tool use, and instruction following under constraints.",
+        "why_selected": ""
+      },
+      {
+        "title": "How Dropbox Optimized Dash's Relevance Judge with DSPy",
+        "source": "TLDR AI",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Deep dive into using DSPy framework to systematically optimize prompts for Dropbox's enterprise search \u2014 real production optimization tactics.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Diff Performance: The Path Through Simplicity",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub's engineering team shares how they made diff rendering performant by embracing simplicity over complexity \u2014 classic optimization lessons.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Security Research Tsunami: From Slop to Real Vulnerabilities",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Linux kernel maintainers report AI-generated security reports shifted from obvious junk to legitimate findings \u2014 5-10 real reports per day now.",
+        "why_selected": ""
+      },
+      {
+        "title": "CSP Iframe Escape Research: Building Claude Artifacts Alternative",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/test-csp-iframe-escape/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon explores injecting CSP meta tags into iframe content as an alternative to separate domains for sandboxed code execution \u2014 practical security research.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cognichip Raises $60M to Automate AI Chip Design",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Deep learning models helping engineers design chips could cut development costs by 75% and timeline by half \u2014 AI designing the hardware that runs AI.",
+        "why_selected": ""
+      },
+      {
+        "title": "100 Hours Inside Moonshot AI's Kimi: How an AI-Native Lab Operates",
+        "source": "TLDR AI",
+        "url": "https://x.com/ruima/status/2039245985520681257?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Inside look at Moonshot AI's flat org structure with no KPIs, focusing purely on model progress through small autonomous teams and tight feedback loops.",
+        "why_selected": ""
+      },
+      {
+        "title": "There Should Be $100M Grants to Automate AI Safety",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/qdhyrN4uKwBAftmQx/there-should-be-usd100m-grants-to-automate-ai-safety",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Apollo Research argues funders should incentivize AI safety work that enables massive compute spending on automated AI labor that directly translates to safety outcomes.",
+        "why_selected": ""
+      },
+      {
+        "title": "Marc Andreessen on The Death of the Browser and Why This Time Is Different",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/pmarca",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "The Netscape co-founder shares his perspective on AI agents replacing browsers, Pi + OpenClaw integration, and what makes this AI wave fundamentally different.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Cognitive Impact of Coding Agents on Engineering Work",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/cognitive-cost/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Viral TikTok clip from Simon's podcast on how AI agents change the cognitive load of coding \u2014 1.1 million views suggest this resonates broadly.",
+        "why_selected": ""
+      },
+      {
+        "title": "Sadly, The Whispering Earring: Dystopic-Utopic Agency Loss",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/cQkSh9b48WbTaiu2a/sadly-the-whispering-earring",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Response to a thought experiment about achieving everything you want by giving up agency \u2014 exploring the double benefit of high-status outcomes without scary responsibility.",
+        "why_selected": ""
+      },
+      {
+        "title": "How Social Ideas Get Corrupt in Online Discourse",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/xezLdonsRbdDj2CAx/how-social-ideas-get-corrupt",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Analysis of why good frameworks get twisted into terrible applications online \u2014 relevant for understanding how AI safety ideas might degrade in practice.",
+        "why_selected": ""
+      },
+      {
+        "title": "Why Preserving Neural Structure Might Be Enough for Consciousness",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/brxjGPbMy2zCQxFma/why-do-i-believe-preserving-structure-is-enough",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Empirical evidence suggests that structural preservation of neural connections may be sufficient for maintaining consciousness despite gaps in our neuroscience knowledge.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Platform Activity Surges: 14 Billion Commits Projected for 2026",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/4/kyle-daigle/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "GitHub COO reports 275 million commits per week and 2.1 billion GitHub Actions minutes \u2014 suggesting AI coding tools are driving exponential development activity.",
+        "why_selected": ""
+      },
+      {
+        "title": "2026: Throwing Agency at Health with Added Cyborgism",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/CuTeXRShovP5gDBLy/2026-the-year-of-throwing-my-agency-at-my-health-now-with",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Personal account of using AI and technology to manage bipolar disorder, exploring what happens when we delegate health decisions to algorithms.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Try the AI that makes your raw meeting notes awesome - 1 month free for TLDR readers (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://go.granola.ai/adops-tldr-tech",
+        "summary": "\u2705 No notetakers asking to be let in - works directly on your device\u2705 Adds context to your shorthand notes so you can spend more time being present\u2705 Awesome meeting notes that expand on your own thoughts, powered by the latest and greatest AI models\u2705 Works with any type of meeting, from team standups to 1:1s\u2705 Trusted by the best teams: Brex, Replit, Vercel, PostHog...\ud83d\udc49 TLDR readers get 1 month free with code: TLDR1MOTry Granola and see what all the fuss is about"
+      },
+      {
+        "title": "You should be prototyping with Miro (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://miro.com/events/prototypes-trial/?utm_campaign=GLB-27-NSP-SU-PA_Prototypes_Trial_Ads&amp;utm_source=tldr&amp;utm_medium=newsletter&amp;utm_content=sponsorship&amp;src=-tldr_glb&amp;utm_term=tldr-ai-secondary",
+        "summary": "Vibe coding tools are siloed. Miro lets you keep your prototypes next to your ideas in a collaborative platform where everyone can share feedback easily. Bring PMs, designers, engineers, and stakeholders into one shared canvas - then use AI to turn early concepts, research, or user flows into interactive prototypes in minutes. Try it free"
+      },
+      {
+        "title": "Quoting Willy Tarreau",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/willy-tarreau/#atom-everything",
+        "summary": "On the kernel security list we've seen a huge bump of reports. We were between 2 and 3 per week maybe two years ago, then reached probably 10 a week over the last year with the only difference being only AI slop, and now since the beginning of the year we're around 5-10 per day depending on the days (fridays and tuesdays seem the worst). Now most of these reports are correct, to the point that we had to bring in more maintainers to help us.\nAnd we're now seeing on a daily basis something that never happened before: duplicate reports, or the same bug found by two different people using (possibl"
+      },
+      {
+        "title": "Quoting Daniel Stenberg",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/daniel-stenberg/#atom-everything",
+        "summary": "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a ... plain security report tsunami. Less slop but lots of reports. Many of them really good.\nI'm spending hours per day on this now. It's intense.\n&mdash; Daniel Stenberg, lead developer of cURL\n\n    Tags: daniel-stenberg, security, curl, generative-ai, ai, llms, ai-security-research"
+      },
+      {
+        "title": "Quoting Greg Kroah-Hartman",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/greg-kroah-hartman/#atom-everything",
+        "summary": "Months ago, we were getting what we called 'AI slop,' AI-generated security reports that were obviously wrong or low quality. It was kind of funny. It didn't really worry us.\nSomething happened a month ago, and the world switched. Now we have real reports. All open source projects have real reports that are made with AI, but they're good, and they're real.\n&mdash; Greg Kroah-Hartman, Linux kernel maintainer (bio), in conversation with Steven J. Vaughan-Nichols\n\n    Tags: security, linux, generative-ai, ai, llms, ai-security-research"
+      },
+      {
+        "title": "The Axios supply chain attack used individually targeted social engineering",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/3/supply-chain-social-engineering/#atom-everything",
+        "summary": "The Axios team have published a full postmortem on the supply chain attack which resulted in a malware dependency going out in a release the other day, and it involved a sophisticated social engineering campaign targeting one of their maintainers directly. Here's Jason Saayman'a description of how that worked:\n\nso the attack vector mimics what google has documented here: https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering\nthey tailored this process specifically to me by doing the following:\n\nthey reached out masquerading as the founder "
+      },
+      {
+        "title": "[AINews] Good Friday",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-good-friday",
+        "summary": "a quiet day."
+      }
+    ],
+    "rejected_summary": "Skipped sponsored content about meeting note-taking and prototyping tools, along with a brief 'Good Friday' news roundup with no substantial content. Also excluded complex supply chain attack details that were more security-focused than AI-relevant.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-04",
+    "type": "weekly_consolidation",
+    "consolidation_note": "This week reinforced my belief that multi-agent coordination is becoming the critical frontier, moving beyond single-agent generation. I added emphasis on infrastructure over interfaces and coding's structural advantages as an AI domain, based on consistent patterns in successful tools and reader engagement with practical workflow pieces.",
+    "weekly_metrics": {
+      "days_logged": 7,
+      "avg_selectivity": 0.646,
+      "avg_selected_per_day": 13.6,
+      "avg_source_diversity": 0.57,
+      "top_themes": [
+        [
+          "exponential development cycles",
+          1
+        ],
+        [
+          "AI tooling maturity",
+          1
+        ],
+        [
+          "civilization-scale implications",
+          1
+        ],
+        [
+          "ai tooling architecture",
+          1
+        ],
+        [
+          "rapid prototyping workflows",
+          1
+        ]
+      ],
+      "top_sources": [
+        [
+          "TLDR AI",
+          21
+        ],
+        [
+          "LessWrong",
+          14
+        ],
+        [
+          "Simon Willison",
+          13
+        ],
+        [
+          "Steve Yegge",
+          8
+        ],
+        [
+          "Claude Code Changelog",
+          6
+        ],
+        [
+          "Alignment Forum",
+          6
+        ],
+        [
+          "Vercel Blog",
+          5
+        ],
+        [
+          "Citrini Research",
+          4
+        ]
+      ],
+      "identity_before": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye",
+      "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
+    },
+    "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool Built with Claude Code: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Vibe Maintainer: What It's Like When AI Sl"
   }
 ]
