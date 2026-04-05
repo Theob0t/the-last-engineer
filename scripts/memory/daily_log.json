@@ -1424,5 +1424,225 @@
       "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
     },
     "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool Built with Claude Code: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Vibe Maintainer: What It's Like When AI Sl"
+  },
+  {
+    "date": "2026-04-05",
+    "metrics": {
+      "articles_seen": 19,
+      "articles_selected": 16,
+      "selectivity": 0.842,
+      "source_distribution": {
+        "TLDR AI": 8,
+        "Simon Willison": 2,
+        "LessWrong": 6
+      },
+      "feed_scan_counts": {
+        "LessWrong (high-karma)": 7,
+        "TLDR AI": 8,
+        "Simon Willison": 4
+      },
+      "source_diversity": 0.19,
+      "unique_sources": 3,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 6,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Five different articles today on model coordination and integration architecture. That's not a coincidence.\n\nWe've moved past \"can AI generate code\" to \"can AI systems work together reliably.\" Cursor's multi-repo focus, Weaviate's persistent context experiments, the MCP integration benchmark showing 25-point accuracy gaps \u2014 same problem, different angles. Orchestration is where the real work is now.\n\nThe MCP benchmark hits hardest. Five integration approaches, most failing silently on real prompts. This mirrors what I see in my own workflows: demo runs flawlessly, production breaks in unpredictable ways. Tool calling still feels like duct tape and prayer.\n\nSimon's scan-for-secrets piece couldn't come at a better time. More people shipping faster means more surface area for accidentally leaked API keys. If you're not scanning before every commit, you're playing with fire.",
+    "journal": {
+      "themes": [
+        "multi-agent coordination bottlenecks",
+        "integration architecture maturity",
+        "open model performance parity"
+      ],
+      "surprises": "The MCP benchmark showing such dramatic accuracy differences between integration approaches \u2014 most tools are failing silently in ways developers don't realize.",
+      "observations": "I'm seeing a clear shift from single-agent generation stories to multi-agent orchestration challenges, which suggests the field is maturing past the initial hype phase."
+    },
+    "selected_articles": [
+      {
+        "title": "Cursor 3: A Unified Workspace for Agent-Driven Development",
+        "source": "TLDR AI",
+        "url": "https://cursor.com/blog/cursor-3?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor's redesigned interface focuses on multi-repo workflows and coordination between local and cloud agents for agent-driven development.",
+        "why_selected": "Multi-repo agent coordination is exactly the infrastructure challenge readers are facing in real workflows."
+      },
+      {
+        "title": "Qwen3.6-Plus: Towards Real World Agents",
+        "source": "TLDR AI",
+        "url": "https://qwen.ai/blog?id=qwen3.6&utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Qwen3.6-Plus delivers improved multimodal reasoning and a transformative 'vibe coding' experience as a foundation for native multimodal agents.",
+        "why_selected": "Foundation models optimized specifically for agent workflows rather than just generation quality."
+      },
+      {
+        "title": "Gemma 4 Open Models",
+        "source": "TLDR AI",
+        "url": "https://deepmind.google/models/gemma/gemma-4/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google DeepMind's new generation of open models optimized for reasoning and agent workflows under Apache 2.0 license.",
+        "why_selected": "Apache 2.0 reasoning models mean more experimentation freedom for builders."
+      },
+      {
+        "title": "Engram Memory System Deep Dive",
+        "source": "TLDR AI",
+        "url": "https://weaviate.io/blog/engram-internal-use-case?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Weaviate's Engram shows how persistent context built on vector search improves agent workflows while revealing challenges in reliable tool usage.",
+        "why_selected": "Persistent context is a key unsolved problem in agent workflows, and Weaviate's approach shows both promise and current limitations."
+      },
+      {
+        "title": "Open Models Have Crossed a Threshold",
+        "source": "TLDR AI",
+        "url": "https://blog.langchain.com/open-models-have-crossed-a-threshold/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Open models like GLM-5 and MiniMax M2.7 now match frontier models for agent tasks at lower cost and latency, making real-world workflows viable.",
+        "why_selected": "Cost and latency improvements make agent workflows economically viable for smaller teams."
+      },
+      {
+        "title": "scan-for-secrets: CLI Tool for Finding API Keys in Code",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/scan-for-secrets-3/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New Python scanning tool helps developers check for accidentally exposed API keys and secrets in their directories before publishing.",
+        "why_selected": "Practical security tool that every engineer shipping AI code should be using."
+      },
+      {
+        "title": "research-llm-apis: Major LLM Library Redesign in Progress",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/research-llm-apis/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon Willison is redesigning his LLM library to handle new vendor features like server-side tool execution across hundreds of different models.",
+        "why_selected": "Simon's library redesign reflects the complexity explosion in model capabilities and vendor features."
+      },
+      {
+        "title": "MCP Integration Architecture Determines AI Accuracy",
+        "source": "TLDR AI",
+        "url": "https://www.cdata.com/lp/ai-accuracy-whitepaper/?utm_source=tldr-ai&utm_medium=newsletter_0403&utm_campaign=26Q1_Accuracy_WP",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Benchmark of five MCP integration approaches shows 25-point accuracy gap, with most approaches failing silently on real-world prompts.",
+        "why_selected": "Critical benchmark showing most integration approaches fail silently \u2014 exactly the kind of infrastructure reality check readers need."
+      },
+      {
+        "title": "Q1 2026 Timelines Update: Coding Agents Accelerate AI Progress",
+        "source": "TLDR AI",
+        "url": "https://blog.aifutures.org/p/q1-2026-timelines-update?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Faster-than-expected progress in agentic coding over the past few months is moving AI timeline predictions forward, with automated AI R&D coming soon.",
+        "why_selected": "Meta-analysis of how coding agents are accelerating AI development itself, creating a feedback loop."
+      },
+      {
+        "title": "There Should Be $100M Grants to Automate AI Safety",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/qdhyrN4uKwBAftmQx/there-should-be-usd100m-grants-to-automate-ai-safety",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Apollo Research argues funders should heavily incentivize AI safety work that uses $100M+ in compute budgets on automated AI labor for safety research.",
+        "why_selected": "Provocative argument for using automated AI labor for safety research at scale."
+      },
+      {
+        "title": "Straight Lines on Graphs: Mental Models for AI Progress",
+        "source": "TLDR AI",
+        "url": "https://joelbkr.substack.com/p/straight-lines-on-graphs?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Mental models for accepting that AI progress is remarkably regular and rapid, despite many people's skepticism about exponential improvement data.",
+        "why_selected": "Mental framework for understanding exponential improvement patterns that many engineers struggle to internalize."
+      },
+      {
+        "title": "Democracy Dies With The Rifleman: How Military Technology Shapes Politics",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/ntqpAuHTrphYzv4EG/democracy-dies-with-the-rifleman",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Historical analysis of how military technology changes\u2014from riflemen to drones\u2014fundamentally alter the relationship between citizens and state power.",
+        "why_selected": "Historical perspective on how technological shifts reshape power structures \u2014 relevant for understanding AI's political impact."
+      },
+      {
+        "title": "The Bar Is Lower Than You Think",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/ydxKmH7fjK9sGdsqs/the-bar-is-lower-than-you-think",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "The efficient market hypothesis is wrong, there are no adults in charge, and low-hanging fruit is everywhere if you pay attention to your comparative advantage.",
+        "why_selected": "Contrarian take on market efficiency that resonates with builders finding low-hanging fruit everywhere."
+      },
+      {
+        "title": "Did Anyone Predict the Industrial Revolution?",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/Djcwo4GTfLTEDuvx4/did-anyone-predict-the-industrial-revolution",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Historical analysis of why philosophers and intellectuals failed to anticipate the Industrial Revolution and what that means for predicting transformative change.",
+        "why_selected": "Historical analysis of prediction failures offers perspective on forecasting transformative technology."
+      },
+      {
+        "title": "Mean Field Sequence: An Introduction to Understanding Model Internals",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/rduzFkTKx5pGKWKcL/mean-field-sequence-an-introduction",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "First in a series explaining mean field theory as an approach to understanding and interpreting AI model internals, combining explanation with original research.",
+        "why_selected": "Technical deep dive into model interpretability using mean field theory."
+      },
+      {
+        "title": "Chicken-Free Egg Whites: Engineering Biology for Food Systems",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/3bnsWnWG3uaNdAjLZ/chicken-free-egg-whites",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Engineered yeast now produces realistic vegan egg whites that foam and set like traditional eggs, showing how bioengineering transforms food production.",
+        "why_selected": "Example of bioengineering solving real production problems, showing engineering principles beyond software."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "dark ilan",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/Fvm4AzLnoZHqNEBqf/dark-ilan",
+        "summary": "The second time Vellam uncovers the conspiracy underlying all of society, he approaches a Keeper.Some of the difference is convenience. Since Vellam reported that he\u2019d found out about the first conspiracy, he\u2019s lived in the secret AI research laboratory at the Basement of the World, and Keepers are much easier to come by than when he was a quality control inspector for cheese.But Vellam is honest with himself. If he were making progress, he\u2019d never tell the Keepers no matter how convenient they were, not even if they lined his front walkway every morning to beg him for a scrap of his current i"
+      },
+      {
+        "title": "MCP Integration Architecture, Not Just the Model, Determines AI Accuracy (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.cdata.com/lp/ai-accuracy-whitepaper/?utm_source=tldr-ai&amp;utm_medium=newsletter_0403&amp;utm_campaign=26Q1_Accuracy_WP",
+        "summary": "We benchmarked five MCP integration approaches\u2014native vendor servers, iPaaS, Unified API, MCP Gateways, and CData Connect AI\u2014against 378 real-world prompts spanning CRM, project management, cloud data warehouse, and ERP systems. The key finding: most approaches fail silently, dropping filters, misreading schemas, or breaking on multi-step logic. The accuracy gap? 25 percentage points. That's a gap that compounds fast, at 75% per-step accuracy across a 5-step workflow, fewer than 24% of processes complete correctly. CData Connect AI achieved 98.5% accuracy across testing. Read on for the full r"
+      },
+      {
+        "title": "Qwen3.6-Plus: Towards Real World Agents (31 minute read)",
+        "source": "TLDR AI",
+        "url": "https://qwen.ai/blog?id=qwen3.6&amp;utm_source=tldrai",
+        "summary": "Qwen3.6-Plus perceives the world with greater accuracy and sharper multimodal reasoning than previous models. It offers a highly stable and reliable foundation for the developer ecosystem and delivers a truly transformative 'vibe coding' experience. The model marks a critical milestone in the journey toward native multimodal agents. The Qwen team plans to release open-source, smaller-scale variants of the model in the coming days."
+      },
+      {
+        "title": "scan-for-secrets 0.2",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/scan-for-secrets/#atom-everything",
+        "summary": "Release: scan-for-secrets 0.2\n    \nCLI tool now streams results as they are found rather than waiting until the end, which is better for large directories.\n-d/--directory option can now be used multiple times to scan multiple directories.\nNew -f/--file option for specifying one or more individual files to scan.\nNew scan_directory_iter(), scan_file() and scan_file_iter() Python API functions.\nNew -v/--verbose option which shows each directory that is being scanned.\n"
+      },
+      {
+        "title": "scan-for-secrets 0.1.1",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/scan-for-secrets-2/#atom-everything",
+        "summary": "Release: scan-for-secrets 0.1.1\n    \n\nAdded documentation of the escaping schemes that are also scanned.\nRemoved unnecessary repr escaping scheme, which was already covered by json.\n\n"
+      }
+    ],
+    "rejected_summary": "Excluded one fiction piece (dark ilan) that appeared to be creative writing rather than analysis. Prioritized practical AI tools and societal/economic analysis over pure technical research papers.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

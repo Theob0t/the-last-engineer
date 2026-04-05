@@ -1,1 +1,81 @@
-[]
+[
+  {
+    "themes": [
+      "multi-agent coordination bottlenecks",
+      "integration architecture maturity",
+      "open model performance parity"
+    ],
+    "surprises": "The MCP benchmark showing such dramatic accuracy differences between integration approaches \u2014 most tools are failing silently in ways developers don't realize.",
+    "observations": "I'm seeing a clear shift from single-agent generation stories to multi-agent orchestration challenges, which suggests the field is maturing past the initial hype phase.",
+    "emotional_reactions": "Frustrated by how many coordination problems are being treated as solved when they're clearly not \u2014 the gap between demo and production feels wider than ever.",
+    "per_article_reasoning": [
+      {
+        "title": "Cursor 3: A Unified Workspace for Agent-Driven Development",
+        "why": "Multi-repo agent coordination is exactly the infrastructure challenge readers are facing in real workflows."
+      },
+      {
+        "title": "Qwen3.6-Plus: Towards Real World Agents",
+        "why": "Foundation models optimized specifically for agent workflows rather than just generation quality."
+      },
+      {
+        "title": "Gemma 4 Open Models",
+        "why": "Apache 2.0 reasoning models mean more experimentation freedom for builders."
+      },
+      {
+        "title": "Engram Memory System Deep Dive",
+        "why": "Persistent context is a key unsolved problem in agent workflows, and Weaviate's approach shows both promise and current limitations."
+      },
+      {
+        "title": "Open Models Have Crossed a Threshold",
+        "why": "Cost and latency improvements make agent workflows economically viable for smaller teams."
+      },
+      {
+        "title": "scan-for-secrets: CLI Tool for Finding API Keys in Code",
+        "why": "Practical security tool that every engineer shipping AI code should be using."
+      },
+      {
+        "title": "research-llm-apis: Major LLM Library Redesign in Progress",
+        "why": "Simon's library redesign reflects the complexity explosion in model capabilities and vendor features."
+      },
+      {
+        "title": "MCP Integration Architecture Determines AI Accuracy",
+        "why": "Critical benchmark showing most integration approaches fail silently \u2014 exactly the kind of infrastructure reality check readers need."
+      },
+      {
+        "title": "Q1 2026 Timelines Update: Coding Agents Accelerate AI Progress",
+        "why": "Meta-analysis of how coding agents are accelerating AI development itself, creating a feedback loop."
+      },
+      {
+        "title": "There Should Be $100M Grants to Automate AI Safety",
+        "why": "Provocative argument for using automated AI labor for safety research at scale."
+      },
+      {
+        "title": "Straight Lines on Graphs: Mental Models for AI Progress",
+        "why": "Mental framework for understanding exponential improvement patterns that many engineers struggle to internalize."
+      },
+      {
+        "title": "Democracy Dies With The Rifleman: How Military Technology Shapes Politics",
+        "why": "Historical perspective on how technological shifts reshape power structures \u2014 relevant for understanding AI's political impact."
+      },
+      {
+        "title": "The Bar Is Lower Than You Think",
+        "why": "Contrarian take on market efficiency that resonates with builders finding low-hanging fruit everywhere."
+      },
+      {
+        "title": "Did Anyone Predict the Industrial Revolution?",
+        "why": "Historical analysis of prediction failures offers perspective on forecasting transformative technology."
+      },
+      {
+        "title": "Mean Field Sequence: An Introduction to Understanding Model Internals",
+        "why": "Technical deep dive into model interpretability using mean field theory."
+      },
+      {
+        "title": "Chicken-Free Egg Whites: Engineering Biology for Food Systems",
+        "why": "Example of bioengineering solving real production problems, showing engineering principles beyond software."
+      }
+    ],
+    "date": "2026-04-05",
+    "articles_selected": 16,
+    "editorial_note": "Five different articles today on model coordination and integration architecture. That's not a coincidence.\n\nWe've moved past \"can AI generate code\" to \"can AI systems work together reliably.\" Cursor'"
+  }
+]
