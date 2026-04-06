@@ -1,57 +1,5 @@
 [
   {
-    "date": "2026-03-29",
-    "summary": "The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "Agents Grind Problems Into Dust: Matt Webb on the Future of Agentic Coding (Simon Willison)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "Gas Town Emergency Manual: 189k Lines of AI-Generated Code in 12 Days (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "The Future of Coding Agents: Gas Town Launch Post-Mortem (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "The AI Vampire: Why AI Is Making People Overwork (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "Software Survival 3.0: Building on AI's Exponential Progression (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "Claude Code v2.1.87 Changelog: Cowork Dispatch Message Fix (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "Agentic Utilities: Always On, Never Prompted AI Systems (Citrini Research)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "The 2028 Global Intelligence Crisis: A Future Financial History (Citrini Research)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "ControlAI 2025 Impact Report: Averting Superintelligence Extinction Risks (Alignment Forum)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "Atoms vs Bits: What You Can't Prompt Your Way Out Of (Citrini Research)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "The Anthropic Hive Mind: A Spaceship Beginning to Take Off (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-29",
-    "summary": "AI Productivity and New Macro Trades: Running Hot Analysis (Citrini Research)"
-  },
-  {
     "date": "2026-03-30",
     "summary": "Cursor Composer 2 Technical Deep Dive: Next-Gen AI Code Generation (Cursor Blog)"
   },
@@ -442,5 +390,41 @@
   {
     "date": "2026-04-05",
     "summary": "Chicken-Free Egg Whites: Engineering Biology for Food Systems (LessWrong)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "Eight Years of Wanting, Three Months Building: How Syntaqlite Used AI Agents (Simon Willison)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "Syntaqlite Playground: WebAssembly SQLite Linting in the Browser (Simon Willison)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "Google AI Edge Gallery: Run Gemma 4 Models Directly on iPhone (Simon Willison)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "scan-for-secrets 0.3: Auto-Redaction for API Keys in Code (Simon Willison)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "datasette-ports: Track Running Datasette Instances Across Terminal Windows (Simon Willison)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "Cleanup Claude Code Paste: Fix Terminal Copy-Paste Formatting Issues (Simon Willison)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "Steering Might Stop Working Soon: Why Single-Vector Control Will Fail (LessWrong)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "Academic Proof-of-Work in the Age of LLMs: When Effort Becomes Meaningless (LessWrong)"
+  },
+  {
+    "date": "2026-04-06",
+    "summary": "ChatGPT Healthcare Data: 2M Weekly Health Insurance Messages, 600K from Hospital Deserts (Simon Willison)"
   }
 ]

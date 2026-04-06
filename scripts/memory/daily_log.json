@@ -1644,5 +1644,149 @@
     ],
     "rejected_summary": "Excluded one fiction piece (dark ilan) that appeared to be creative writing rather than analysis. Prioritized practical AI tools and societal/economic analysis over pure technical research papers.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-06",
+    "metrics": {
+      "articles_seen": 12,
+      "articles_selected": 9,
+      "selectivity": 0.75,
+      "source_distribution": {
+        "Simon Willison": 7,
+        "LessWrong": 2
+      },
+      "feed_scan_counts": {
+        "LessWrong (high-karma)": 3,
+        "Simon Willison": 8,
+        "Citrini Research": 1
+      },
+      "source_diversity": 0.22,
+      "unique_sources": 2,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 6,
+        "\ud83e\uddea deep analysis": 1,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 6,
+        "big_picture": 3,
+        "ratio": 2.0
+      }
+    },
+    "editorial": "Simon Willison had a good week. Eight years of wanting SQLite dev tools, three months of building them with AI agents, and now they're shipping. That's the pattern I keep seeing \u2014 not \"AI wrote my code\" but \"AI compressed years of procrastination into months of focused building.\"\n\nThe healthcare data caught my attention too. 2 million weekly health insurance messages through ChatGPT, 600k from hospital deserts. We're past the point where AI in healthcare is theoretical \u2014 people are already using it for medical advice at massive scale, whether we're ready or not.\n\nMeanwhile, the steering research suggests we're about to hit another capabilities cliff. Single-vector control methods that work today might fail completely as models get more sophisticated. Safety researchers are playing catch-up again.",
+    "journal": {
+      "themes": [
+        "AI-accelerated development cycles",
+        "on-device model deployment",
+        "workflow automation tools"
+      ],
+      "surprises": "The healthcare usage numbers were staggering \u2014 2M weekly queries suggests ChatGPT is already functioning as informal healthcare infrastructure.",
+      "observations": "Simon Willison dominated my feed today, showing how one prolific builder can demonstrate multiple facets of the AI tooling ecosystem in a single day."
+    },
+    "selected_articles": [
+      {
+        "title": "Eight Years of Wanting, Three Months Building: How Syntaqlite Used AI Agents",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Deep dive into building SQLite devtools with AI agents \u2014 real case study showing 8 years of manual struggle compressed into 3 months of agentic engineering.",
+        "why_selected": ""
+      },
+      {
+        "title": "Syntaqlite Playground: WebAssembly SQLite Linting in the Browser",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/syntaqlite/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Compiled SQLite linting tool to WebAssembly for browser-based SQL validation \u2014 another example of AI-built dev tooling making it to production.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google AI Edge Gallery: Run Gemma 4 Models Directly on iPhone",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's official iOS app for running Gemma 4 models locally \u2014 2.54GB download gives you fast on-device AI with image analysis and transcription.",
+        "why_selected": ""
+      },
+      {
+        "title": "scan-for-secrets 0.3: Auto-Redaction for API Keys in Code",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/6/scan-for-secrets/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "CLI tool now auto-redacts found secrets with confirmation prompt \u2014 practical security automation that every developer should have in their workflow.",
+        "why_selected": ""
+      },
+      {
+        "title": "datasette-ports: Track Running Datasette Instances Across Terminal Windows",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/6/datasette-ports/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Solves the \"lost my dev server\" problem by tracking all running Datasette instances \u2014 built with README-driven development approach.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cleanup Claude Code Paste: Fix Terminal Copy-Paste Formatting Issues",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/6/cleanup-claude-code-paste/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Super-niche tool to clean up weird whitespace when copying prompts from Claude Code terminal \u2014 the kind of workflow friction AI builders actually face.",
+        "why_selected": ""
+      },
+      {
+        "title": "Steering Might Stop Working Soon: Why Single-Vector Control Will Fail",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/fuzfbz8TbuLcskGCx/steering-might-stop-working-soon",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Warning that current LLM steering methods will break down as models advance \u2014 critical implications for AI safety and alignment research timelines.",
+        "why_selected": ""
+      },
+      {
+        "title": "Academic Proof-of-Work in the Age of LLMs: When Effort Becomes Meaningless",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/Tfixo2RhNXgHzLwZx/academic-proof-of-work-in-the-age-of-llms",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "How AI tools break academia's reliance on effort-as-proxy-for-quality, forcing a rethink of how we evaluate intellectual work.",
+        "why_selected": ""
+      },
+      {
+        "title": "ChatGPT Healthcare Data: 2M Weekly Health Insurance Messages, 600K from Hospital Deserts",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/5/chengpeng-mou/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI data reveals massive healthcare usage: 70% of medical queries happen outside clinic hours, with heavy usage in underserved areas.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "11 pieces of advice for children",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/cqriGHCwmKZa2v862/11-pieces-of-advice-for-children",
+        "summary": "I came up with these principles when I was a child myself.Don\u2019t be a sheep \ud83d\udc11. Avoid mindlessly copying others. Resist the urge towards conformity. Think for yourself whether something is worth doing and useful for your goals. If\u00a0appearing to conform\u00a0is useful for your goals, think about ways to do the bare minimum. Others are making very many mistakes you don\u2019t want to make, and things can be done much better and more effectively than most people do them. (Be extra aware of this point if you are a girl, girls are naturally drawn towards conformity. Girls must practice not conforming, standing "
+      },
+      {
+        "title": "datasette-ports 0.2",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/6/datasette-ports-2/#atom-everything",
+        "summary": "Release: datasette-ports 0.2\n    \n\nNo longer requires Datasette - running uvx datasette-ports now works as well.\nInstalling it as a Datasette plugin continues to provide the datasette ports command.\n\n\n    \n        Tags: datasette"
+      },
+      {
+        "title": "Strait of Hormuz: A Citrini Field Trip",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/strait-of-hormuz-a-citrini-field",
+        "summary": "Analyst #3 on Assignment"
+      }
+    ],
+    "rejected_summary": "Excluded general life advice for children (not relevant to engineers), Strait of Hormuz geopolitical analysis (off-topic), and various minor tool releases without significant impact. Most rejections were due to lack of relevance to AI tooling or broader AI implications for engineering work.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
