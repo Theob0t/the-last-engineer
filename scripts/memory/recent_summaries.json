@@ -1,25 +1,5 @@
 [
   {
-    "date": "2026-03-30",
-    "summary": "Cursor Composer 2 Technical Deep Dive: Next-Gen AI Code Generation (Cursor Blog)"
-  },
-  {
-    "date": "2026-03-30",
-    "summary": "Python Vulnerability Lookup: OSV.dev API Tool Built with Claude Code (Simon Willison)"
-  },
-  {
-    "date": "2026-03-30",
-    "summary": "Pretext: DOM-Free Text Layout Calculations in the Browser (Simon Willison)"
-  },
-  {
-    "date": "2026-03-30",
-    "summary": "Folie \u00e0 Machine: How LLMs Create Shared Delusions and Epistemic Capture (LessWrong)"
-  },
-  {
-    "date": "2026-03-30",
-    "summary": "AI for Disaster Response: OpenAI Workshop with Gates Foundation in Asia (OpenAI Blog)"
-  },
-  {
     "date": "2026-03-31",
     "summary": "Vibe Maintainer: What It's Like When AI Slop Floods Your OSS Project (Steve Yegge)"
   },
@@ -426,5 +406,49 @@
   {
     "date": "2026-04-06",
     "summary": "ChatGPT Healthcare Data: 2M Weekly Health Insurance Messages, 600K from Hospital Deserts (Simon Willison)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Vercel Automates 58% of PRs in Largest Monorepo Without Human Review (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Windsurf Adaptive: Smart Model Router Optimizes Quota Usage (Windsurf Blog)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Cursor Optimizes MoE Model Inference with Warp Decode (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "GitHub Copilot CLI Adds Multi-Model Second Opinion with Rubber Duck (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Product Managers Ship Faster Using Replit's Agentic Workflows (Replit Blog)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "AI Can Now Handle Massive SWE Tasks: Timeline Update Towards 30% Automation by 2028 (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "OpenAI's Industrial Policy Vision for the Intelligence Age (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Ten Mental Models for Understanding Gradual Disempowerment (LessWrong)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Scaling Laws for Cyberwar: AI's Growing Attack Capabilities (Jack Clark (Import AI))"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Positive-Sum Games Don't Always Mean Win-Win Outcomes (LessWrong)"
+  },
+  {
+    "date": "2026-04-07",
+    "summary": "Gemma 4 Crosses 2 Million Downloads in Rapid Adoption (Latent Space)"
   }
 ]

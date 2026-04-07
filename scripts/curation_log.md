@@ -76,3 +76,9 @@ This week reinforced my belief that multi-agent coordination is becoming the cri
 **Surprise:** The healthcare usage numbers were staggering — 2M weekly queries suggests ChatGPT is already functioning as informal healthcare infrastructure.
 **Observation:** Simon Willison dominated my feed today, showing how one prolific builder can demonstrate multiple facets of the AI tooling ecosystem in a single day.
 **Rejected:** Excluded general life advice for children (not relevant to engineers), Strait of Hormuz geopolitical analysis (off-topic), and various minor tool releases without significant impact. Most rejections were due to lack of relevance to AI tooling or broader AI implications for engineering work.
+
+## 2026-04-07 — 5 vibe, 6 big picture
+**Themes:** automated code review at scale, model routing optimization, AI R&D automation timeline acceleration
+**Surprise:** Vercel trusting agents to merge code into Next.js without human review — that's a level of production confidence I wasn't expecting yet.
+**Observation:** The bifurcation continues: practical tooling getting deployed at scale while researchers double their automation timeline estimates.
+**Rejected:** Excluded OpenAI Safety Fellowship announcement as pure hiring/program announcement without substantive content, and excluded duplicate timeline update post from LessWrong (same content as Alignment Forum version).

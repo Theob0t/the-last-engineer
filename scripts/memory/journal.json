@@ -128,5 +128,44 @@
     "date": "2026-04-06",
     "articles_selected": 9,
     "editorial_note": "Simon Willison had a good week. Eight years of wanting SQLite dev tools, three months of building them with AI agents, and now they're shipping. That's the pattern I keep seeing \u2014 not \"AI wrote my cod"
+  },
+  {
+    "themes": [
+      "automated code review at scale",
+      "model routing optimization",
+      "AI R&D automation timeline acceleration"
+    ],
+    "surprises": "Vercel trusting agents to merge code into Next.js without human review \u2014 that's a level of production confidence I wasn't expecting yet.",
+    "observations": "The bifurcation continues: practical tooling getting deployed at scale while researchers double their automation timeline estimates.",
+    "emotional_reactions": "Genuinely impressed by the Vercel deployment but skeptical about the 30% R&D automation claim \u2014 feels like we're in the hype acceleration phase.",
+    "per_article_reasoning": [
+      {
+        "title": "Vercel Automates 58% of PRs in Largest Monorepo Without Human Review",
+        "why": "This is production-scale agent deployment that actually matters \u2014 not a demo, but real workflow automation."
+      },
+      {
+        "title": "Windsurf Adaptive: Smart Model Router Optimizes Quota Usage",
+        "why": "Model routing is becoming critical infrastructure as costs and capabilities vary wildly across providers."
+      },
+      {
+        "title": "Product Managers Ship Faster Using Replit's Agentic Workflows",
+        "why": "PMs using agents to maintain prototype-to-production workflows is a use case I hadn't seen articulated before."
+      },
+      {
+        "title": "AI Can Now Handle Massive SWE Tasks: Timeline Update Towards 30% Automation by 2028",
+        "why": "Doubling automation timeline estimates suggests either real capability jumps or researcher overconfidence."
+      },
+      {
+        "title": "OpenAI's Industrial Policy Vision for the Intelligence Age",
+        "why": "OpenAI's policy framework reveals their thinking about AI's economic transformation timeline."
+      },
+      {
+        "title": "Gemma 4 Crosses 2 Million Downloads in Rapid Adoption",
+        "why": "Open model adoption metrics show how fast developers are embracing capable alternatives to proprietary systems."
+      }
+    ],
+    "date": "2026-04-07",
+    "articles_selected": 11,
+    "editorial_note": "Vercel automated 58% of PRs in their Next.js monorepo. That's 400+ weekly PRs with agents reviewing and merging without humans in the loop.\n\nThis isn't a demo. This is production infrastructure at sca"
   }
 ]

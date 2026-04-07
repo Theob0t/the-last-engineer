@@ -1788,5 +1788,189 @@
     ],
     "rejected_summary": "Excluded general life advice for children (not relevant to engineers), Strait of Hormuz geopolitical analysis (off-topic), and various minor tool releases without significant impact. Most rejections were due to lack of relevance to AI tooling or broader AI implications for engineering work.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-07",
+    "metrics": {
+      "articles_seen": 15,
+      "articles_selected": 11,
+      "selectivity": 0.733,
+      "source_distribution": {
+        "Vercel Blog": 1,
+        "Windsurf Blog": 1,
+        "Cursor Blog": 1,
+        "GitHub Blog": 1,
+        "Replit Blog": 1,
+        "Alignment Forum": 1,
+        "OpenAI Blog": 1,
+        "LessWrong": 2,
+        "Jack Clark (Import AI)": 1,
+        "Latent Space": 1
+      },
+      "feed_scan_counts": {
+        "OpenAI Blog": 2,
+        "Cursor Blog": 1,
+        "Windsurf Blog": 1,
+        "Windsurf Changelog": 2,
+        "Replit Blog": 1,
+        "Vercel Blog": 1,
+        "GitHub Blog": 1,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 3,
+        "Jack Clark (Import AI)": 1,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.91,
+      "unique_sources": 10,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 5,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 5,
+        "big_picture": 6,
+        "ratio": 0.83
+      }
+    },
+    "editorial": "Vercel automated 58% of PRs in their Next.js monorepo. That's 400+ weekly PRs with agents reviewing and merging without humans in the loop.\n\nThis isn't a demo. This is production infrastructure at scale, and it's working. What gets me isn't the percentage \u2014 it's that they trust agents enough to merge code into one of the most-used JavaScript frameworks on earth.\n\nThe tooling layer is exploding. Smarter model routers (Windsurf), faster inference (Cursor), multi-model validation (GitHub). But the Replit piece hit different: PMs using agents to keep prototypes as source of truth. I'd never thought about using AI to make throwaway code less throwaway.\n\nThe timeline estimates are getting nuts. 30% full AI R&D automation by 2028? Six months ago that number was 15%. Either this researcher is drunk on hype, or we're accelerating way faster than anyone expected.",
+    "journal": {
+      "themes": [
+        "automated code review at scale",
+        "model routing optimization",
+        "AI R&D automation timeline acceleration"
+      ],
+      "surprises": "Vercel trusting agents to merge code into Next.js without human review \u2014 that's a level of production confidence I wasn't expecting yet.",
+      "observations": "The bifurcation continues: practical tooling getting deployed at scale while researchers double their automation timeline estimates."
+    },
+    "selected_articles": [
+      {
+        "title": "Vercel Automates 58% of PRs in Largest Monorepo Without Human Review",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/58-percent-of-prs-in-our-largest-monorepo-merge-without-human-review",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel's Next.js monorepo with 400+ weekly PRs now has agents automatically reviewing and merging over half without human intervention.",
+        "why_selected": "This is production-scale agent deployment that actually matters \u2014 not a demo, but real workflow automation."
+      },
+      {
+        "title": "Windsurf Adaptive: Smart Model Router Optimizes Quota Usage",
+        "source": "Windsurf Blog",
+        "url": "https://windsurf.com/blog/windsurf-adaptive",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Windsurf's new Adaptive feature intelligently selects the best model for each task to extend quota life by avoiding premium model overuse.",
+        "why_selected": "Model routing is becoming critical infrastructure as costs and capabilities vary wildly across providers."
+      },
+      {
+        "title": "Cursor Optimizes MoE Model Inference with Warp Decode",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/warp-decode",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor introduces warp decode to improve inference performance for mixture-of-experts models in their AI coding assistant.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Copilot CLI Adds Multi-Model Second Opinion with Rubber Duck",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub Copilot CLI now combines different model families to provide alternative perspectives on code suggestions and commands.",
+        "why_selected": ""
+      },
+      {
+        "title": "Product Managers Ship Faster Using Replit's Agentic Workflows",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/product-managers-ship-faster-with-replit",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "PMs are using Replit's AI agents to keep prototypes as source of truth, automatically updating docs and tickets instead of manual maintenance.",
+        "why_selected": "PMs using agents to maintain prototype-to-production workflows is a use case I hadn't seen articulated before."
+      },
+      {
+        "title": "AI Can Now Handle Massive SWE Tasks: Timeline Update Towards 30% Automation by 2028",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/dKpC6wHFqDrGZwnah/ais-can-now-often-do-massive-easy-to-verify-swe-tasks-and-i",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "AI researcher nearly doubles their estimate of full AI R&D automation by 2028 to 30% after seeing current models handle large, verifiable software engineering tasks.",
+        "why_selected": "Doubling automation timeline estimates suggests either real capability jumps or researcher overconfidence."
+      },
+      {
+        "title": "OpenAI's Industrial Policy Vision for the Intelligence Age",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/industrial-policy-for-the-intelligence-age",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI outlines comprehensive policy framework for AI era focused on expanding opportunity and sharing prosperity as advanced intelligence evolves.",
+        "why_selected": "OpenAI's policy framework reveals their thinking about AI's economic transformation timeline."
+      },
+      {
+        "title": "Ten Mental Models for Understanding Gradual Disempowerment",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/W9XQ9CcMTbZQa33eP/ten-different-ways-of-thinking-about-gradual-disempowerment",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Follow-up to the influential paper that coined 'Gradual Disempowerment' explores different frameworks for thinking about slow loss of human agency to AI systems.",
+        "why_selected": ""
+      },
+      {
+        "title": "Scaling Laws for Cyberwar: AI's Growing Attack Capabilities",
+        "source": "Jack Clark (Import AI)",
+        "url": "https://jack-clark.net/2026/04/06/import-ai-452-scaling-laws-for-cyberwar-rising-tides-of-ai-automation-and-a-puzzle-over-gdp-forecasting/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Research shows AI systems' cyberattack capabilities scale with intelligence, revealing concerning implications for automated warfare and security.",
+        "why_selected": ""
+      },
+      {
+        "title": "Positive-Sum Games Don't Always Mean Win-Win Outcomes",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/pCB5SoDmkNxdeTsBH/positive-sum-doesn-t-mean-win-win",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Common misconception debunked: positive-sum games can still have losers, challenging assumptions about AI's economic impact distribution.",
+        "why_selected": ""
+      },
+      {
+        "title": "Gemma 4 Crosses 2 Million Downloads in Rapid Adoption",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-gemma-4-crosses-2-million",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Google's open-source Gemma 4 models hit 2 million downloads, signaling massive adoption of capable open models by developers.",
+        "why_selected": "Open model adoption metrics show how fast developers are embracing capable alternatives to proprietary systems."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Announcing the OpenAI Safety Fellowship",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+        "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent"
+      },
+      {
+        "title": "Windsurf 1.9600.38",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#1.9600.38",
+        "summary": "Introducing AdaptiveWe've made several model packaging changes, with more infohere.Adaptive Model RouterA newAdaptivemodel option is now available in the model picker. Adaptive intelligently selects the best model for each task, helping you make your quota last longer by avoiding overuse of premium models.Availability: Now available to all self-serve users on Pro, Max, and Teams plans.Dynamic model selection- Automatically chooses the right underlying model for your task while drawing down quota at a fixed per-token rate.Extra usage promo- Beyond your quota, extra usage is offered at 0.50 USD "
+      },
+      {
+        "title": "Windsurf 1.9600.40",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#1.9600.40",
+        "summary": "Adaptive Model VisibilityWe've improved the visibility of the adaptive model in the model picker."
+      },
+      {
+        "title": "AIs can now often do massive easy-to-verify SWE tasks and I've updated towards shorter timelines",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/ais-can-now-often-do-massive-easy-to-verify-swe-tasks-and-i",
+        "summary": "I've recently updated towards substantially shorter AI timelines and much faster progress in some areas.\n      [1]\n     The largest updates I've made are (1) an almost 2x higher probability of full AI R&amp;D automation by EOY 2028 (I'm now a bit below 30%\n      [2]\n     while I was previously expecting around 15%; my guesses are pretty reflectively unstable) and (2) I expect much stronger short-term performance on massive and pretty difficult but easy-and-cheap-to-verify software engineering (SWE) tasks that don't require that much novel ideation\n      [3]\n    . For instance, I expect that by"
+      }
+    ],
+    "rejected_summary": "Excluded OpenAI Safety Fellowship announcement as pure hiring/program announcement without substantive content, and excluded duplicate timeline update post from LessWrong (same content as Alignment Forum version).",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
