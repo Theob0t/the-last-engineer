@@ -1,57 +1,5 @@
 [
   {
-    "date": "2026-03-31",
-    "summary": "Vibe Maintainer: What It's Like When AI Slop Floods Your OSS Project (Steve Yegge)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Agent Responsibly: Vercel's Framework for Shipping Code Agents Without Breaking Things (Vercel Blog)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Making Turborepo 96% Faster with Agents, Sandboxes, and Humans (Vercel Blog)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Claude Platform Compliance API: Audit Your AI Usage for Enterprise (Claude Blog)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Claude Code v2.1.88: Flicker-Free Rendering and Permission Retry Hooks (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Mr. Chatterbox: Victorian-Era Ethically Trained Model You Can Run Locally (Simon Willison)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Local Model Infrastructure Is Still Fragile: Georgi Gerganov's Reality Check (Simon Willison)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "The Last 4 Jobs in Tech: A Mental Model for AI's Labor Impact (Latent Space)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "AI Safety in Four Fake Graphs: Where We Stand in Early 2026 (LessWrong)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Political Superintelligence: Google's Society of Minds and Collective Intelligence (Jack Clark (Import AI))"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Natural Emergent Misalignment from Reward Hacking in RL (Alignment Forum)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "The Cosmic Endowment: How Much of the Universe Could Superintelligence Reach? (LessWrong)"
-  },
-  {
-    "date": "2026-03-31",
-    "summary": "Mistral's Roadmap: Voxtral TTS, Forge Platform, and Frontier Model Strategy (Latent Space)"
-  },
-  {
     "date": "2026-04-01",
     "summary": "Claude Code v2.1.89: Defer Permissions and Flicker-Free Alt-Screen Rendering (Claude Code Changelog)"
   },
@@ -450,5 +398,69 @@
   {
     "date": "2026-04-07",
     "summary": "Gemma 4 Crosses 2 Million Downloads in Rapid Adoption (Latent Space)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "How and When to Use Subagents in Claude Code (Claude Blog)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Claude Code v2.1.94: Default High Effort + Bedrock Mantle Support (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Google ADK SkillToolset: 90% Token Reduction Through Progressive Disclosure (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "I Still Prefer MCP Over Skills: Why Architecture Matters (TLDR AI)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "LLM Wiki Pattern: Build Persistent Knowledge Bases with Agents (TLDR AI)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Continual Learning for AI Agents: Model, Harness, or Context? (TLDR AI)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "GLM-5.1: 754B Parameter MIT-Licensed Model via OpenRouter (Simon Willison)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "SQLite WAL Mode Works Fine Across Docker Containers (Simon Willison)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Project Glasswing: Claude Mythos Too Dangerous for Public Release (Simon Willison)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Claude Mythos Preview System Card: Unprecedented Reliability and Alignment (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "My Picture of the Present in AI: April 2026 Scenario Forecast (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "We're Actually Running Out of Benchmarks to Upper Bound AI (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Extreme Harness Engineering: OpenAI's Dark Factory Revealed (Latent Space)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Anthropic Hits $30B ARR as Claude Mythos Stays Under Wraps (Latent Space)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Anthropic Acquires Biotech Startup Coefficient Bio for $400M (TLDR AI)"
+  },
+  {
+    "date": "2026-04-08",
+    "summary": "Assessing Claude Mythos Preview's Cybersecurity Capabilities (Anthropic Red Team)"
   }
 ]

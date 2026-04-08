@@ -82,3 +82,9 @@ This week reinforced my belief that multi-agent coordination is becoming the cri
 **Surprise:** Vercel trusting agents to merge code into Next.js without human review — that's a level of production confidence I wasn't expecting yet.
 **Observation:** The bifurcation continues: practical tooling getting deployed at scale while researchers double their automation timeline estimates.
 **Rejected:** Excluded OpenAI Safety Fellowship announcement as pure hiring/program announcement without substantive content, and excluded duplicate timeline update post from LessWrong (same content as Alignment Forum version).
+
+## 2026-04-08 — 8 vibe, 8 big picture
+**Themes:** model capability restrictions, progressive context loading, automated development workflows, agent architecture patterns
+**Surprise:** Anthropic restricting Claude Mythos feels like the first major capability gatekeeping decision since GPT-2, but they're doing it while scaling to massive revenue.
+**Observation:** The split between practical tooling (subagents, progressive disclosure) and capability concerns (Mythos restrictions, benchmark saturation) is becoming the defining tension in AI development.
+**Rejected:** Skipped pure academic papers on stringology and emotion concepts, government partnership announcements, Azure migration marketing, and parenting advice debates. Also excluded the unsupervised elicitation challenge as it's more of a research puzzle than actionable content.

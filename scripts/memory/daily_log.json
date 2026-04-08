@@ -1972,5 +1972,301 @@
     ],
     "rejected_summary": "Excluded OpenAI Safety Fellowship announcement as pure hiring/program announcement without substantive content, and excluded duplicate timeline update post from LessWrong (same content as Alignment Forum version).",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-08",
+    "metrics": {
+      "articles_seen": 31,
+      "articles_selected": 16,
+      "selectivity": 0.516,
+      "source_distribution": {
+        "Claude Blog": 1,
+        "Claude Code Changelog": 1,
+        "Google Developers AI": 1,
+        "TLDR AI": 4,
+        "Simon Willison": 3,
+        "LessWrong (high-karma)": 2,
+        "Alignment Forum": 1,
+        "Latent Space": 2,
+        "Anthropic Red Team": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 2,
+        "Anthropic Research": 2,
+        "Anthropic Red Team": 1,
+        "Claude Blog": 1,
+        "Claude Code Changelog": 2,
+        "Google Developers AI": 1,
+        "Windsurf Changelog": 1,
+        "Alignment Forum": 3,
+        "LessWrong (high-karma)": 5,
+        "TLDR AI": 8,
+        "Simon Willison": 3,
+        "Latent Space": 2
+      },
+      "source_diversity": 0.56,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\u2696\ufe0f AI futures": 4,
+        "\ud83e\uddea deep analysis": 4
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Claude is having a moment. Anthropic shipped subagents, high-effort mode, and then immediately locked down their best model because it's too good at hacking.\n\nThe Glasswing restriction is fascinating. They built Claude Mythos, tested it, and decided \"nope, this one stays internal.\" Meanwhile they're hitting $30B ARR and buying biotech companies. Companies that are scrambling don't shelve their best products.\n\nGoogle's 90% token reduction through progressive disclosure actually matters. Loading expertise on-demand instead of cramming everything into context \u2014 someone finally figured this out.\n\nOpenAI's \"dark factory\" is running 1B tokens per day with zero human review. That's not automation. That's software writing software at scale we've never seen before.",
+    "journal": {
+      "themes": [
+        "model capability restrictions",
+        "progressive context loading",
+        "automated development workflows",
+        "agent architecture patterns"
+      ],
+      "surprises": "Anthropic restricting Claude Mythos feels like the first major capability gatekeeping decision since GPT-2, but they're doing it while scaling to massive revenue.",
+      "observations": "The split between practical tooling (subagents, progressive disclosure) and capability concerns (Mythos restrictions, benchmark saturation) is becoming the defining tension in AI development."
+    },
+    "selected_articles": [
+      {
+        "title": "How and When to Use Subagents in Claude Code",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/subagents-in-claude-code",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic explains when to spawn multiple specialized agents in Claude Code for complex workflows.",
+        "why_selected": "Practical orchestration guidance that engineers can use this week."
+      },
+      {
+        "title": "Claude Code v2.1.94: Default High Effort + Bedrock Mantle Support",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Code now defaults to high effort mode for paid users and adds Amazon Bedrock support via Mantle.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google ADK SkillToolset: 90% Token Reduction Through Progressive Disclosure",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's new architecture loads domain expertise on-demand, cutting token usage by 90% compared to monolithic prompts.",
+        "why_selected": ""
+      },
+      {
+        "title": "I Still Prefer MCP Over Skills: Why Architecture Matters",
+        "source": "TLDR AI",
+        "url": "https://david.coffee/i-still-prefer-mcp-over-skills/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "A developer argues Model Context Protocol beats Skills for giving LLMs actual service access, not just knowledge.",
+        "why_selected": ""
+      },
+      {
+        "title": "LLM Wiki Pattern: Build Persistent Knowledge Bases with Agents",
+        "source": "TLDR AI",
+        "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Karpathy shares a copy-paste pattern for LLMs to incrementally build and maintain persistent wikis.",
+        "why_selected": ""
+      },
+      {
+        "title": "Continual Learning for AI Agents: Model, Harness, or Context?",
+        "source": "TLDR AI",
+        "url": "https://blog.langchain.com/continual-learning-for-ai-agents/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "LangChain breaks down the three layers where agents can learn and improve over time.",
+        "why_selected": ""
+      },
+      {
+        "title": "GLM-5.1: 754B Parameter MIT-Licensed Model via OpenRouter",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Chinese lab Z.ai releases a massive 1.5TB open model that you can actually use through OpenRouter.",
+        "why_selected": ""
+      },
+      {
+        "title": "SQLite WAL Mode Works Fine Across Docker Containers",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/7/sqlite-wal-docker-containers/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Willison tests and confirms SQLite's WAL mode handles shared memory correctly across Docker containers on the same host.",
+        "why_selected": ""
+      },
+      {
+        "title": "Project Glasswing: Claude Mythos Too Dangerous for Public Release",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic restricts their strongest cybersecurity model to select security researchers, echoing GPT-2's limited release.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Mythos Preview System Card: Unprecedented Reliability and Alignment",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/xtnSzhA3TvExN4ZhG/claude-mythos-preview-system-card",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic's system card reveals they're using Mythos internally with greater affordances due to its reliability.",
+        "why_selected": ""
+      },
+      {
+        "title": "My Picture of the Present in AI: April 2026 Scenario Forecast",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "A comprehensive snapshot of where AI capabilities, deployment, and safety stand right now.",
+        "why_selected": ""
+      },
+      {
+        "title": "We're Actually Running Out of Benchmarks to Upper Bound AI",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/gfkJp8Mr9sBm83Rcz/we-re-actually-running-out-of-benchmarks-to-upper-bound-ai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "METR researcher explains how benchmark saturation is making it harder to measure AI capability limits.",
+        "why_selected": ""
+      },
+      {
+        "title": "Extreme Harness Engineering: OpenAI's Dark Factory Revealed",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/harness-eng",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "First look inside OpenAI's fully automated development workflow: 1M lines of code, 1B tokens/day, zero human review.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Hits $30B ARR as Claude Mythos Stays Under Wraps",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-anthropic-30b-arr-project",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic's massive revenue growth comes as they restrict their most capable model due to security concerns.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Acquires Biotech Startup Coefficient Bio for $400M",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic expands into healthcare with acquisition of AI drug discovery startup founded by ex-Genentech researchers.",
+        "why_selected": ""
+      },
+      {
+        "title": "Assessing Claude Mythos Preview's Cybersecurity Capabilities",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2026/mythos-preview/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Anthropic's red team details why Claude Mythos is so capable at cybersecurity tasks that they restricted its release.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+        "summary": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute"
+      },
+      {
+        "title": "Australian government and Anthropic sign MOU for AI safety and research",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/australia-MOU",
+        "summary": "Australian government and Anthropic sign MOU for AI safety and research"
+      },
+      {
+        "title": "Apr 2, 2026InterpretabilityEmotion concepts and their function in a large language model",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/emotion-concepts-function",
+        "summary": "Apr 2, 2026InterpretabilityEmotion concepts and their function in a large language model"
+      },
+      {
+        "title": "Mar 31, 2026Economic ResearchHow Australia Uses Claude: Findings from the Anthropic Economic Index",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/how-australia-uses-claude",
+        "summary": "Mar 31, 2026Economic ResearchHow Australia Uses Claude: Findings from the Anthropic Economic Index"
+      },
+      {
+        "title": "v2.1.96",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2196",
+        "summary": "Fixed Bedrock requests failing with `403 \"Authorization header is missing\"` when using `AWS_BEARER_TOKEN_BEDROCK` or `CLAUDE_CODE_SKIP_BEDROCK_AUTH` (regression in 2.1.94)"
+      },
+      {
+        "title": "Windsurf 1.9600.41",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#1.9600.41",
+        "summary": "Adaptive FixWe fixed a bug with the adaptive model router which prevented switching models after the first request.All users who encountered the bug have had quota reset and overage restored."
+      },
+      {
+        "title": "My unsupervised elicitation challenge",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge",
+        "summary": "Note: you are ineligible to complete this challenge if you\u2019ve studied Ancient or Modern Greek, or if you natively speak Modern Greek, or if for other reasons you know what mistakes I\u2019m claiming Opus 4.6 makes. If you\u2019re ineligible, please don\u2019t help other people complete the challenge.\n\nI have recently started using Claude Opus 4.6 to start studying Ancient Greek. Specifically, I initially used it to grade problem sets at the end of the textbook I\u2019ve been using, but then I got worried about it being sycophantic towards my answers, so started having it just write out the answers itself.\n\nI rece"
+      },
+      {
+        "title": "[Paper] Stringological sequence prediction I",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/EEvHYKLsq92LmQ78a/paper-stringological-sequence-prediction-i-1",
+        "summary": "TLDR: The first in a planned series of three or more papers, which constitute the first major in-road in the compositional learning programme, and a substantial step towards bridging agent foundations theory with practical algorithms.Official Abstract: We propose novel algorithms for sequence prediction based on ideas from stringology. These algorithms are time and space efficient and satisfy mistake bounds related to particular stringological complexity measures of the sequence. In this work (the first in a series) we focus on two such measures: (i) the size of the smallest straight-line prog"
+      },
+      {
+        "title": "My picture of the present in AI",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
+        "summary": "In this post, I'll go through some of my best guesses for the current situation in AI as of the start of April 2026.\nYou can think of this as a scenario forecast, but for the present (which is already uncertain!) rather than the future.\nI will generally state my best guess without argumentation and without explaining my level of confidence: some of these claims are highly speculative while others are better grounded, certainly some will be wrong.\nI tried to make it clear which claims are relatively speculative by saying something like \"I guess\", \"I expect\", etc. (but I may have missed some).\nY"
+      },
+      {
+        "title": "[Paper] Stringological sequence prediction I",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/EEvHYKLsq92LmQ78a/paper-stringological-sequence-prediction-i-1",
+        "summary": "TLDR: The first in a planned series of three or more papers, which constitute the first major in-road in the compositional learning programme, and a substantial step towards bridging agent foundations theory with practical algorithms.Official Abstract: We propose novel algorithms for sequence prediction based on ideas from stringology. These algorithms are time and space efficient and satisfy mistake bounds related to particular stringological complexity measures of the sequence. In this work (the first in a series) we focus on two such measures: (i) the size of the smallest straight-line prog"
+      },
+      {
+        "title": "Contra Nina Panickssery on advice for children",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/B6PFgvy2hz9wKfq94/contra-nina-panickssery-on-advice-for-children",
+        "summary": "I recently read this post by Nina Panickssery on advice for children. I felt that several of the recommendations are actively harmful to the children they are aimed at. I am going to assume that this advice is targeted at children who are significantly more intelligent than average and maybe 7-12 years of age? It may be worth reading the original post beforehand, or maybe having it open in another tab while you read through this one.We'll go through the points one by one: \"Don't be a sheep.\" There's a difference between noticing when other people are wrong and actively assuming everyone else i"
+      },
+      {
+        "title": "Azure Copilot Migration Agent is Here, from Microsoft Azure (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://fandf.co/47vcvw0?utm_source=tldrit",
+        "summary": "The new Microsoft Azure Copilot Migration Agent turns complex migration data into clear answers. Through natural language prompts, you can evaluate readiness, risk, ROI, and automate landing zone requirements to make confident decisions. It streamlines planning and analysis, so migrations are better scoped, better justified, and far less error\u2011prone. Download the playbook for free"
+      },
+      {
+        "title": "Anthropic Ended Subscription-Based OpenClaw Usage (3 minute read)",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/?utm_source=tldrai",
+        "summary": "Anthropic announced that Claude Code subscribers can no longer use subscription limits for tools like OpenClaw, shifting to separate pay-as-you-go pricing for third-party integrations."
+      },
+      {
+        "title": "A Taxonomy of RL Environments for LLM Agents (17 minute read)",
+        "source": "TLDR AI",
+        "url": "https://leehanchung.github.io/blogs/2026/03/21/rl-environments-for-llm-agents/?utm_source=tldrai",
+        "summary": "RL environments are training grounds for agents. Task distribution determines what skills agents develop, and harnesses control how they interact. Verifiers define what 'good' means. The state and configuration determine how realistic the training is."
+      },
+      {
+        "title": "Inside Deterministic AI Infrastructure With Cisco (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://techfieldday.com/appearance/cisco-data-center-networking-presents-at-networking-field-day-40/?utm_source=tldrai",
+        "summary": "Is seamless data movement the new AI bottleneck? At Networking Field Day 40, Cisco engineers will discuss the architectural design and key building blocks for scalable, high-performance AI deployments - built on ethernet-based, deterministic networking. Watch the session (live or recorded) or learn more about Cisco AI Networking."
+      }
+    ],
+    "rejected_summary": "Skipped pure academic papers on stringology and emotion concepts, government partnership announcements, Azure migration marketing, and parenting advice debates. Also excluded the unsupervised elicitation challenge as it's more of a research puzzle than actionable content.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

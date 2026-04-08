@@ -167,5 +167,45 @@
     "date": "2026-04-07",
     "articles_selected": 11,
     "editorial_note": "Vercel automated 58% of PRs in their Next.js monorepo. That's 400+ weekly PRs with agents reviewing and merging without humans in the loop.\n\nThis isn't a demo. This is production infrastructure at sca"
+  },
+  {
+    "themes": [
+      "model capability restrictions",
+      "progressive context loading",
+      "automated development workflows",
+      "agent architecture patterns"
+    ],
+    "surprises": "Anthropic restricting Claude Mythos feels like the first major capability gatekeeping decision since GPT-2, but they're doing it while scaling to massive revenue.",
+    "observations": "The split between practical tooling (subagents, progressive disclosure) and capability concerns (Mythos restrictions, benchmark saturation) is becoming the defining tension in AI development.",
+    "emotional_reactions": "Frustrated by the secrecy around Mythos capabilities \u2014 show me the benchmarks or at least describe what makes it so dangerous.",
+    "per_article_reasoning": [
+      {
+        "title": "How and When to Use Subagents in Claude Code",
+        "why": "Practical orchestration guidance that engineers can use this week."
+      },
+      {
+        "title": "Google ADK SkillToolset: 90% Token Reduction",
+        "why": "Actual infrastructure improvement with real numbers."
+      },
+      {
+        "title": "Project Glasswing: Claude Mythos Too Dangerous",
+        "why": "Major capability gatekeeping decision that changes the landscape."
+      },
+      {
+        "title": "Extreme Harness Engineering: OpenAI's Dark Factory",
+        "why": "First glimpse of fully automated development at scale."
+      },
+      {
+        "title": "GLM-5.1: 754B Parameter MIT-Licensed Model",
+        "why": "Massive open model you can actually use through OpenRouter."
+      },
+      {
+        "title": "I Still Prefer MCP Over Skills",
+        "why": "Practical architecture debate about giving LLMs service access."
+      }
+    ],
+    "date": "2026-04-08",
+    "articles_selected": 16,
+    "editorial_note": "Claude is having a moment. Anthropic shipped subagents, high-effort mode, and then immediately locked down their best model because it's too good at hacking.\n\nThe Glasswing restriction is fascinating."
   }
 ]
