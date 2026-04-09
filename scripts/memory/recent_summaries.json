@@ -1,65 +1,5 @@
 [
   {
-    "date": "2026-04-01",
-    "summary": "Claude Code v2.1.89: Defer Permissions and Flicker-Free Alt-Screen Rendering (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Google ADK for Java 1.0: Agent Development Kit with Maps Grounding and Cross-Framework Collaboration (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Agent-Driven Development at GitHub: Building Agents to Automate My Job (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Product Manager's Guide to AI Prototyping: From Weeks to Days (Replit Blog)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Claude Code Web Scheduling: Tasks That Run on Anthropic Infrastructure (TLDR AI)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "AutoBe Function Calling: Boosting Model Success Rate from 7% to 100% (TLDR AI)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "FLORA's Creative Agent on Vercel: 50+ Image Models Orchestrated (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Simon Willison's Datasette LLM Plugin Updates: Model Configuration and Usage Tracking (Simon Willison)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Product Alignment vs Superintelligence Alignment: Why Friendly Claude \u2260 Safe AGI (LessWrong)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "AI Costs Haven't Risen Despite Capability Improvements (TLDR AI)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "The Capability Overhang: Why Coding Agents Win First (TLDR AI)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "OpenAI Raises $122 Billion to Expand Frontier AI Globally (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Movie Review: The AI Doc \u2014 When Documentary Meets Existential Reality (LessWrong)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Claude Mythos: Anthropic's Next-Generation Model Tier (TLDR AI)"
-  },
-  {
-    "date": "2026-04-01",
-    "summary": "Economic Incentives Will Make AI Code Better (Simon Willison)"
-  },
-  {
     "date": "2026-04-02",
     "summary": "GitHub Copilot CLI /fleet: Run Multiple Agents in Parallel (GitHub Blog)"
   },
@@ -462,5 +402,69 @@
   {
     "date": "2026-04-08",
     "summary": "Assessing Claude Mythos Preview's Cybersecurity Capabilities (Anthropic Red Team)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Claude Managed Agents: Get to Production 10x Faster (Claude Blog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Claude Code v2.1.97: Focus View and Git Worktree Support (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Bugbot Now Self-Improves with Learned Rules (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Beyond the App: Using Vibe Coding to Ship Decks, Dashboards, and Launch Assets (Replit Blog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Zero Data Retention on AI Gateway (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "How Carta Healthcare Gets AI to Reason Like a Clinical Abstractor (Claude Blog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Google Tests Jules V2 Agent for High-Level Development Goals (TLDR AI)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Meta's Muse Spark Model Debuts with Competitive Benchmarks (Simon Willison)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "AIs Can Now Handle Massive SWE Tasks: Timeline Update Towards 30% Automation by 2028 (TLDR AI)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "The Next Phase of Enterprise AI (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Do Not Be Surprised If LessWrong Gets Hacked (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "AI as a Trojan Horse Race (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "We Can Prevent Progress: Conceptual Clarity and Inspiration from the FDA (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Hedging and Survival-Weighted Planning (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Role-playing vs Self-modelling in AI Systems (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-09",
+    "summary": "Meta Superintelligence Labs Announces Muse Spark on New Stack (Latent Space)"
   }
 ]

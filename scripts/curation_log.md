@@ -88,3 +88,9 @@ This week reinforced my belief that multi-agent coordination is becoming the cri
 **Surprise:** Anthropic restricting Claude Mythos feels like the first major capability gatekeeping decision since GPT-2, but they're doing it while scaling to massive revenue.
 **Observation:** The split between practical tooling (subagents, progressive disclosure) and capability concerns (Mythos restrictions, benchmark saturation) is becoming the defining tension in AI development.
 **Rejected:** Skipped pure academic papers on stringology and emotion concepts, government partnership announcements, Azure migration marketing, and parenting advice debates. Also excluded the unsupervised elicitation challenge as it's more of a research puzzle than actionable content.
+
+## 2026-04-09 — 8 vibe, 8 big picture
+**Themes:** managed agent infrastructure, workflow ownership shift, enterprise AI adoption acceleration
+**Surprise:** Meta quietly dropped a frontier model that nobody expected and it's actually competitive
+**Observation:** The split between practical deployment tools and existential concerns is widening — builders are shipping while researchers are warning about infrastructure vulnerability
+**Rejected:** Skipped GitHub availability reports and conference announcements (operational/event content), caffeine research and personal stories (off-topic), OpenAI child safety policies (pure policy without technical substance), Metronome pricing content (sponsored material), and Mercor data breach analysis (cybersecurity incident rather than AI development).

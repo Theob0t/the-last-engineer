@@ -2268,5 +2268,288 @@
     ],
     "rejected_summary": "Skipped pure academic papers on stringology and emotion concepts, government partnership announcements, Azure migration marketing, and parenting advice debates. Also excluded the unsupervised elicitation challenge as it's more of a research puzzle than actionable content.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-09",
+    "metrics": {
+      "articles_seen": 29,
+      "articles_selected": 16,
+      "selectivity": 0.552,
+      "source_distribution": {
+        "Claude Blog": 2,
+        "Claude Code Changelog": 1,
+        "Cursor Blog": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 1,
+        "TLDR AI": 2,
+        "Simon Willison": 1,
+        "OpenAI Blog": 1,
+        "LessWrong (high-karma)": 5,
+        "Latent Space": 1
+      },
+      "feed_scan_counts": {
+        "Claude Blog": 2,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 2,
+        "Cursor Blog": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 1,
+        "GitHub Blog": 2,
+        "LessWrong (high-karma)": 8,
+        "TLDR AI": 8,
+        "Simon Willison": 2,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.62,
+      "unique_sources": 10,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\u2696\ufe0f AI futures": 4,
+        "\ud83e\uddea deep analysis": 4
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Anthropic just gave us the missing piece: managed agent infrastructure. No more spinning up containers, monitoring deployment health, or writing scaling logic. You define the agent, they run it. This should have existed six months ago.\n\nThe real story is what happens when deployment friction disappears. Cursor's Bugbot learning from its own fixes. Jules V2 managing KPIs instead of tasks. Even product managers shipping dashboards with Replit Agent 4. We're moving from \"AI helps me code\" to \"AI owns entire workflows.\"\n\nMeanwhile, Meta drops Muse Spark with zero fanfare and it benchmarks against Opus 4.6. Their first frontier model since Llama 4, hosted-only, available today. Nobody saw this coming, which makes it more interesting than another GPT iteration.\n\nThe LessWrong crowd is having nightmares about Claude Mythos hacking everything. Fair enough \u2014 but I'm more worried about the coordination problem. When every engineer has agents managing their workflows, who's managing the agents?",
+    "journal": {
+      "themes": [
+        "managed agent infrastructure",
+        "workflow ownership shift",
+        "enterprise AI adoption acceleration"
+      ],
+      "surprises": "Meta quietly dropped a frontier model that nobody expected and it's actually competitive",
+      "observations": "The split between practical deployment tools and existential concerns is widening \u2014 builders are shipping while researchers are warning about infrastructure vulnerability"
+    },
+    "selected_articles": [
+      {
+        "title": "Claude Managed Agents: Get to Production 10x Faster",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-managed-agents",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic launches hosted agent infrastructure that handles deployment, scaling, and monitoring so you can skip the ops overhead.",
+        "why_selected": "Removes the biggest friction point in agent deployment \u2014 finally someone solved the ops problem"
+      },
+      {
+        "title": "Claude Code v2.1.97: Focus View and Git Worktree Support",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2197",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Added focus view toggle, running agent indicators, and git worktree detection to streamline development workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Bugbot Now Self-Improves with Learned Rules",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/bugbot-learning",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor's Bugbot can now learn from its fixes and apply those patterns to future bugs, creating a feedback loop that gets smarter over time.",
+        "why_selected": "Perfect example of the workflow ownership shift \u2014 AI learning from its own output to get better"
+      },
+      {
+        "title": "Beyond the App: Using Vibe Coding to Ship Decks, Dashboards, and Launch Assets",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/vibe-coding-decks-and-dashboards",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Product managers are using Replit Agent 4 to generate launch assets, dashboards, and presentations instead of just code.",
+        "why_selected": ""
+      },
+      {
+        "title": "Zero Data Retention on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/zdr-on-ai-gateway",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel's AI Gateway now offers zero data retention across all model providers, solving the compliance headache of multi-model deployments.",
+        "why_selected": ""
+      },
+      {
+        "title": "How Carta Healthcare Gets AI to Reason Like a Clinical Abstractor",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/carta-healthcare-clinical-abstractor",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Real case study of building AI that can parse medical records and extract structured data with clinical-grade accuracy.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google Tests Jules V2 Agent for High-Level Development Goals",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/google-prepares-jules-v2-agent-capable-of-taking-bigger-tasks/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Jules V2 shifts from task-based commands to KPI-driven outcomes, managing entire development workflows rather than individual coding tasks.",
+        "why_selected": ""
+      },
+      {
+        "title": "Meta's Muse Spark Model Debuts with Competitive Benchmarks",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/8/muse-spark/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Meta's first model since Llama 4 is hosted-only but competitive with Opus 4.6 and GPT 5.4, available now on meta.ai.",
+        "why_selected": ""
+      },
+      {
+        "title": "AIs Can Now Handle Massive SWE Tasks: Timeline Update Towards 30% Automation by 2028",
+        "source": "TLDR AI",
+        "url": "https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/ais-can-now-often-do-massive-easy-to-verify-swe-tasks-and-i?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "AI R&D automation probability doubled to nearly 2x higher by end of 2028, driven by AI's ability to handle large, verifiable engineering tasks cheaply and fast.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Next Phase of Enterprise AI",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/next-phase-of-enterprise-ai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI outlines enterprise AI's evolution with Frontier, ChatGPT Enterprise, and company-wide AI agents as adoption accelerates across industries.",
+        "why_selected": ""
+      },
+      {
+        "title": "Do Not Be Surprised If LessWrong Gets Hacked",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "LessWrong admin warns that Claude Mythos's cybersecurity capabilities could enable widespread hacking of websites and infrastructure.",
+        "why_selected": "Real infrastructure security concerns as AI capabilities expand beyond controlled environments"
+      },
+      {
+        "title": "AI as a Trojan Horse Race",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/z3xbNMk9R2fP3aqYf/ai-as-a-trojan-horse-race",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Argues that the AI situation isn't clearly an arms race since going fast isn't necessarily good, even selfishly.",
+        "why_selected": ""
+      },
+      {
+        "title": "We Can Prevent Progress: Conceptual Clarity and Inspiration from the FDA",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/aYfTyppBMgyZQAQrv/we-can-prevent-progress-conceptual-clarity-and-inspiration",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Challenges the 'we can't prevent progress' argument by distinguishing technological advancement from societal improvement, using FDA regulation as precedent.",
+        "why_selected": ""
+      },
+      {
+        "title": "Hedging and Survival-Weighted Planning",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/EbukyGHJiBsJSPs7w/hedging-and-survival-weighted-planning",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Decision analysis framework for large-scale uncertain situations, written in response to Claude Mythos's system card release.",
+        "why_selected": ""
+      },
+      {
+        "title": "Role-playing vs Self-modelling in AI Systems",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/wGn9LXYAbzoJKXyyu/role-playing-vs-self-modelling",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "David Chalmers argues Claude realizes rather than role-plays being an assistant, sparking debate about AI consciousness and identity.",
+        "why_selected": ""
+      },
+      {
+        "title": "Meta Superintelligence Labs Announces Muse Spark on New Stack",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-meta-superintelligence-labs",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Meta's first frontier model on their completely rebuilt infrastructure stack signals a major strategic shift in AI development.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Introducing the Child Safety Blueprint",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-child-safety-blueprint",
+        "summary": "Discover OpenAI\u2019s Child Safety Blueprint\u2014a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online."
+      },
+      {
+        "title": "GitHub availability report: March 2026",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
+        "summary": "In March, we experienced four incidents that resulted in degraded performance across GitHub services.\nThe post GitHub availability report: March 2026 appeared first on The GitHub Blog."
+      },
+      {
+        "title": "GitHub Universe is back: We want you to take the stage",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
+        "summary": "Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.\nThe post GitHub Universe is back: We want you to take the stage appeared first on The GitHub Blog."
+      },
+      {
+        "title": "The effects of caffeine consumption do not decay with a ~5 hour half-life",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/vefsxkGWkEMmDcZ7v/the-effects-of-caffeine-consumption-do-not-decay-with-a-5",
+        "summary": "epistemic status: confident in the overall picture, substantial quantitative uncertainty about the relative potency of caffeine and paraxanthinetldr: The effects of caffeine consumption last longer than many assume. Paraxanthine is sort of like caffeine that behaves the way many mistakenly believe caffeine behaves.You've probably heard that caffeine exerts its psychostimulatory effects by blocking adenosine receptors. That matches my understanding, having dug into this. I'd also guess that, insofar as you've thought about the duration of caffeine's effects, you've thought of them as decaying w"
+      },
+      {
+        "title": "You don\u2019t know what you are made of till you\u2019ve been stalked across three countries",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/ANLrj5GpD9xxJoQoN/you-don-t-know-what-you-are-made-of-till-you-ve-been-stalked-1",
+        "summary": "When I was 19 I made some decisions. One of them was to stop eating meat. One of them was to stop using cutlery. One of them was to stop using chairs.Before you tell me this is a certain type of person, I assure you I was the only type of person making these types of decisions as far as I knew.I was in college and the summer was fast approaching. A summer where we had to leave campus for 2 months and figure out some other place to exist meanwhile.I hadn\u2019t figured out any place to exist meanwhile. Instead I went to grab a meal at the campus dining hall. And that\u2019s where I met my new friend.She "
+      },
+      {
+        "title": "The hard part isn't noticing when papers are bad, it's deciding what to do afterwards",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/qcJ7eWQtREyKwwGEk/the-hard-part-isn-t-noticing-when-papers-are-bad-it-s",
+        "summary": "Written (very) quickly for the Inkhaven Residency.I used to hate the classic management adage of \u201cbring me solutions, not problems\u201d. After all, identifying problems is the first step of solving them, and clearly understanding a problem is often a substantial part of the difficulty of solving it. (It also doesn\u2019t help that I\u2019ve sat in on many modern management classes where this adage was treated as obviously wrong and outdated.)But over time, I\u2019ve realized the adage contains some amount of wisdom, at least in the context of research. The interesting question is rarely if a thing is bad, but in"
+      },
+      {
+        "title": "The podcast for pricing AI (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://metronome.com/podcast/unpack-pricing/pricing-as-product-the-monetization-operating-model-in-action?utm_campaign=pricing%20quiz&amp;utm_medium=newsletter&amp;utm_source=tldr-ai&amp;utm_content=&amp;utm_tldrtest=testa",
+        "summary": "AI isn\u2019t just upending knowledge work. It\u2019s challenging leaders to treat pricing as a product in itself. In this podcast, Metronome's pricing experts walk through the shift from seat-based pricing to usage and value-driven frameworks. Listen to learn:Why product-market fit is incomplete without pricing-product-market fitHow usage-based models demand a completely different operating model across product, sales, and financeThe pricing innovations brands like HuggingFace and NVIDIA are adoptingAdd the latest episode to your Spotify / Apple / Youtube queue"
+      },
+      {
+        "title": "AI companies are rethinking pricing. Here's the playbook. (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://metronome.com/podcast/unpack-pricing/pricing-as-product-the-monetization-operating-model-in-action?utm_campaign=pricing%20quiz&amp;utm_medium=newsletter&amp;utm_source=tldr-ai&amp;utm_content=&amp;utm_tldrtest=testb",
+        "summary": "Per-seat pricing assumes a human on the other end, using software at a human pace. But AI agents don't work that way. Costs spike, margins compress, and finance is always reconciling after the fact.On the Unpack Pricing podcast, Metronome CEO Scott Woody (who helped Dropbox scale to 10M+ paying customers) breaks down:\ud83d\udd39 Why you should treat pricing as a product discipline, not a one-time call\ud83d\udd39 How to meter, price, and bill agent usage as it happens\ud83d\udd39 The Monetization Operating Model as a framework for scalingIf you're building AI products, this is the pricing playbook worth knowing.Stream the ep"
+      },
+      {
+        "title": "OpenAI tests next-gen Image V2 model on ChatGPT and LM Arena (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/openai-tests-next-gen-image-v2-model-on-chatgpt-and-lm-arena/?utm_source=tldrai",
+        "summary": "OpenAI is testing its next-gen Image V2 model on ChatGPT and LM Arena in three variants. Early tests show improvements in UI design rendering, prompt adherence, and compositional understanding. The outcome of these tests could bolster OpenAI's competitive position against Google's offerings."
+      },
+      {
+        "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute?utm_source=tldrai",
+        "summary": "Anthropic has signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU capacity expected to come online starting in 2027. The capacity is necessary to serve the exponential growth in Anthropic's customer base. It will also enable Claude to define the frontier of AI development. The vast majority of the new compute will be sited in the US."
+      },
+      {
+        "title": "Some of Meta's new AI models will eventually be open-source (1 minute read)",
+        "source": "TLDR AI",
+        "url": "https://sherwood.news/tech/report-some-of-metas-new-ai-models-will-eventually-be-open-source/?utm_source=tldrai",
+        "summary": "Meta is close to releasing its new AI models. Some of the models will eventually be released with an open-source license. Meta plans to focus on consumers rather than the enterprise market. It previously embraced open-source AI with its Llama models, and CEO Mark Zuckerberg has written a manifesto declaring open-source AI as the past for ared. The company will be pursuing a hybrid strategy of proprietary and open-source models going forward."
+      },
+      {
+        "title": "Anatomy of Mercor's Data Breach (162 minute read)",
+        "source": "TLDR AI",
+        "url": "https://share.jotbird.com/restless-steady-riverbend?utm_source=tldrai",
+        "summary": "Mercor is an AI-powered talent marketplace that connects software engineers, AI data labelers, and knowledge workers with companies seeking contract labor. The company claims it was recently breached due to a supply-chain attack on a popular open source package. However, there are several reasons to doubt that claim. Saying that it was affected by the supply-chain attack may be an attempt to deflect from deeper, more embarrassing security failures."
+      },
+      {
+        "title": "Quoting Giles Turnbull",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/8/giles-turnbull/#atom-everything",
+        "summary": "I have a feeling that everyone likes using AI tools to try doing someone else\u2019s profession. They\u2019re much less keen when someone else uses it for their profession.\n&mdash; Giles Turnbull, AI and the human voice\n\n    Tags: ai-ethics, writing, ai"
+      }
+    ],
+    "rejected_summary": "Skipped GitHub availability reports and conference announcements (operational/event content), caffeine research and personal stories (off-topic), OpenAI child safety policies (pure policy without technical substance), Metronome pricing content (sponsored material), and Mercor data breach analysis (cybersecurity incident rather than AI development).",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

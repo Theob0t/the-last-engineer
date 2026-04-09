@@ -207,5 +207,44 @@
     "date": "2026-04-08",
     "articles_selected": 16,
     "editorial_note": "Claude is having a moment. Anthropic shipped subagents, high-effort mode, and then immediately locked down their best model because it's too good at hacking.\n\nThe Glasswing restriction is fascinating."
+  },
+  {
+    "themes": [
+      "managed agent infrastructure",
+      "workflow ownership shift",
+      "enterprise AI adoption acceleration"
+    ],
+    "surprises": "Meta quietly dropped a frontier model that nobody expected and it's actually competitive",
+    "observations": "The split between practical deployment tools and existential concerns is widening \u2014 builders are shipping while researchers are warning about infrastructure vulnerability",
+    "emotional_reactions": "Genuinely excited about managed agents removing ops overhead, but frustrated that it took this long",
+    "per_article_reasoning": [
+      {
+        "title": "Claude Managed Agents: Get to Production 10x Faster",
+        "why": "Removes the biggest friction point in agent deployment \u2014 finally someone solved the ops problem"
+      },
+      {
+        "title": "Bugbot Now Self-Improves with Learned Rules",
+        "why": "Perfect example of the workflow ownership shift \u2014 AI learning from its own output to get better"
+      },
+      {
+        "title": "Jules V2 Agent for High-Level Development Goals",
+        "why": "KPI-driven development is the next phase beyond task automation"
+      },
+      {
+        "title": "Meta's Muse Spark Model Debuts",
+        "why": "Completely unexpected competitive model drop from Meta signals major strategic shift"
+      },
+      {
+        "title": "AIs Can Now Handle Massive SWE Tasks",
+        "why": "R&D automation timeline acceleration is the most important capability development for engineering"
+      },
+      {
+        "title": "Do Not Be Surprised If LessWrong Gets Hacked",
+        "why": "Real infrastructure security concerns as AI capabilities expand beyond controlled environments"
+      }
+    ],
+    "date": "2026-04-09",
+    "articles_selected": 16,
+    "editorial_note": "Anthropic just gave us the missing piece: managed agent infrastructure. No more spinning up containers, monitoring deployment health, or writing scaling logic. You define the agent, they run it. This "
   }
 ]
