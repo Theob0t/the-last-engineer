@@ -246,5 +246,85 @@
     "date": "2026-04-09",
     "articles_selected": 16,
     "editorial_note": "Anthropic just gave us the missing piece: managed agent infrastructure. No more spinning up containers, monitoring deployment health, or writing scaling logic. You define the agent, they run it. This "
+  },
+  {
+    "themes": [
+      "capability restrictions",
+      "enterprise AI adoption",
+      "agent coordination patterns",
+      "security implications"
+    ],
+    "surprises": "Anthropic's Mythos restriction feels like a genuine inflection point \u2014 first time a major lab has held back a model for capability reasons rather than safety theater.",
+    "observations": "The bifurcation is accelerating: practical deployment tools are shipping faster while the most capable models are being restricted, creating a strange dynamic where infrastructure races ahead of available capability.",
+    "emotional_reactions": "Frustrated by the Claude Mythos situation \u2014 it's simultaneously validating (capabilities are real) and maddening (we can't actually use them to secure our own systems).",
+    "per_article_reasoning": [
+      {
+        "title": "The Advisor Strategy",
+        "why": "Concrete delegation pattern that addresses real coordination bottlenecks in agent workflows"
+      },
+      {
+        "title": "GLM-5.1",
+        "why": "SOTA agent performance with actual benchmark numbers, not just marketing claims"
+      },
+      {
+        "title": "Agentic Infrastructure",
+        "why": "Vercel's deployment doubling shows infrastructure responding to real AI coding adoption"
+      },
+      {
+        "title": "Claude Code v2.1.98",
+        "why": "Perforce integration shows enterprise tooling catching up to AI workflows"
+      },
+      {
+        "title": "Making Claude Cowork Ready",
+        "why": "Enterprise multi-agent collaboration moving from demo to production"
+      },
+      {
+        "title": "CyberAgent",
+        "why": "Large-scale enterprise adoption case study with actual business impact"
+      },
+      {
+        "title": "GitHub Repo Size",
+        "why": "Simple utility that solves an annoying gap in GitHub's UI"
+      },
+      {
+        "title": "Meta AI Scales RL",
+        "why": "13x cost reduction for training ML engineering agents shows infrastructure scaling up"
+      },
+      {
+        "title": "Claude Mythos System Card",
+        "why": "First detailed analysis of why Anthropic is restricting their most capable model"
+      },
+      {
+        "title": "Project Glasswing",
+        "why": "Mythos finding thousands of zero-days autonomously represents a security inflection point"
+      },
+      {
+        "title": "Present in AI Forecast",
+        "why": "Greenblatt's scenario analysis provides grounded predictions from someone actually building"
+      },
+      {
+        "title": "Have We Already Lost?",
+        "why": "Direct question about whether AGI development has passed a point of no return"
+      },
+      {
+        "title": "Anthropic RSP Violation",
+        "why": "Community holding major labs accountable to their own safety commitments"
+      },
+      {
+        "title": "Slightly-Super Persuasion",
+        "why": "Analysis of why modest persuasion improvements could be transformative"
+      },
+      {
+        "title": "Trustworthy Agents",
+        "why": "Anthropic's practical approach to agent alignment and oversight"
+      },
+      {
+        "title": "Financial Document Processing",
+        "why": "Reality check showing where current models still fail on complex visual reasoning"
+      }
+    ],
+    "date": "2026-04-10",
+    "articles_selected": 16,
+    "editorial_note": "Anthropic is sitting on their best model.\n\nClaude Mythos finds zero-days on its own, but it's locked away. First model since GPT-2 that's supposedly too dangerous to ship. Meanwhile Anthropic keeps re"
   }
 ]

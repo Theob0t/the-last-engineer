@@ -2551,5 +2551,242 @@
     ],
     "rejected_summary": "Skipped GitHub availability reports and conference announcements (operational/event content), caffeine research and personal stories (off-topic), OpenAI child safety policies (pure policy without technical substance), Metronome pricing content (sponsored material), and Mercor data breach analysis (cybersecurity incident rather than AI development).",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-10",
+    "metrics": {
+      "articles_seen": 22,
+      "articles_selected": 16,
+      "selectivity": 0.727,
+      "source_distribution": {
+        "Claude Blog": 2,
+        "TLDR AI": 5,
+        "Vercel Blog": 1,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 1,
+        "Simon Willison": 1,
+        "LessWrong (high-karma)": 4,
+        "Anthropic Research": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic Research": 1,
+        "Claude Blog": 2,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 2,
+        "Vercel Blog": 1,
+        "LessWrong (high-karma)": 5,
+        "TLDR AI": 8,
+        "Simon Willison": 2
+      },
+      "source_diversity": 0.5,
+      "unique_sources": 8,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\u2696\ufe0f AI futures": 6,
+        "\ud83e\uddea deep analysis": 2
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Anthropic is sitting on their best model.\n\nClaude Mythos finds zero-days on its own, but it's locked away. First model since GPT-2 that's supposedly too dangerous to ship. Meanwhile Anthropic keeps releasing enterprise features and advisor patterns for their weaker models.\n\nThe gap between what exists and what we can use keeps growing. Mythos hacks operating systems. We get repo size limits.\n\nThe advisor approach makes sense from an engineering standpoint. Breaking tasks into smaller pieces works better than trying to solve everything at once. But while everyone argues about how to coordinate AI agents, the actual breakthrough is stuck in a lab because it breaks too many things.\n\nLook at Vercel's numbers: weekly deployments doubled in three months. AI isn't transforming coding in the future\u2014it's happening now. Deployments are spiking and infrastructure teams are struggling to keep up. The models we can't touch find security vulnerabilities. The models we can use are already changing how we ship software.\n\nThis split isn't temporary.",
+    "journal": {
+      "themes": [
+        "capability restrictions",
+        "enterprise AI adoption",
+        "agent coordination patterns",
+        "security implications"
+      ],
+      "surprises": "Anthropic's Mythos restriction feels like a genuine inflection point \u2014 first time a major lab has held back a model for capability reasons rather than safety theater.",
+      "observations": "The bifurcation is accelerating: practical deployment tools are shipping faster while the most capable models are being restricted, creating a strange dynamic where infrastructure races ahead of available capability."
+    },
+    "selected_articles": [
+      {
+        "title": "The Advisor Strategy: Give Agents an Intelligence Boost",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/the-advisor-strategy",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic shows how to make agents smarter by having them delegate complex reasoning to advisor agents that specialize in planning and problem decomposition.",
+        "why_selected": ""
+      },
+      {
+        "title": "GLM-5.1: 754B Parameter Model Built for Long-Horizon Agent Tasks",
+        "source": "TLDR AI",
+        "url": "https://z.ai/blog/glm-5.1?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Z.ai's flagship model achieves SOTA on SWE-Bench Pro and can sustain optimization over hundreds of rounds and thousands of tool calls for complex agent workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Agentic Infrastructure: Every Generation of Software Demands New Infrastructure",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/agentic-infrastructure",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel sees weekly deployments double in three months as coding agents drive infrastructure derived from applications, not just configured for them.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code v2.1.98: Interactive Google Vertex AI Setup and Perforce Mode",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New GCP authentication wizard and Perforce mode that blocks edits on read-only files with helpful hints instead of silently overwriting.",
+        "why_selected": ""
+      },
+      {
+        "title": "Making Claude Cowork Ready for Enterprise",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/cowork-for-enterprise",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic adds enterprise security controls to Claude Cowork, making multi-agent collaboration ready for production business environments.",
+        "why_selected": ""
+      },
+      {
+        "title": "CyberAgent Moves Faster with ChatGPT Enterprise and Codex",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/cyberagent",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Japanese advertising and gaming giant scales AI adoption securely across advertising, media, and gaming operations using ChatGPT Enterprise.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/9/github-repo-size/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simple tool that uses GitHub's API to show repository sizes that aren't displayed in the GitHub UI \u2014 paste any repo URL to see the size.",
+        "why_selected": ""
+      },
+      {
+        "title": "Meta AI Scales RL for ML Engineering Agents",
+        "source": "TLDR AI",
+        "url": "https://arxiv.org/abs/2604.04872?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "SandMLE framework cuts execution costs 13x for training RL agents on ML engineering tasks by building small but realistic environments.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Mythos: The System Card",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/EDQhwLTyTnNmaxRGq/claude-mythos-the-system-card",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "First detailed analysis of why Anthropic is restricting Claude Mythos from public release \u2014 the first model other than GPT-2 deemed too capable for immediate deployment.",
+        "why_selected": ""
+      },
+      {
+        "title": "Project Glasswing: Securing Critical Software for the AI Era",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/glasswing?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Claude Mythos Preview autonomously found thousands of zero-days across major OSes and browsers, launching industry-wide security partnership to fix vulnerabilities at AI scale.",
+        "why_selected": ""
+      },
+      {
+        "title": "My Picture of the Present in AI: April 2026 Scenario Forecast",
+        "source": "TLDR AI",
+        "url": "https://www.greaterwrong.com/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Redwood Research's chief scientist Ryan Greenblatt gives his best guesses on R&D regulations, engineering capabilities, misalignment risks, and economic impacts right now.",
+        "why_selected": ""
+      },
+      {
+        "title": "Have We Already Lost? Part 1: The Plan in 2024",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/tjZWbmuCE9tjYQsrf/have-we-already-lost-part-1-the-plan-in-2024",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "AI safety researcher asks whether we've passed the point of no return where AGI becomes likely and effectively outside our control.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Did Not Publish Required Risk Discussion for Mythos",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/F5uxhFrNHLzmNgyqg/anthropic-did-not-publish-a-risk-discussion-of-mythos-when",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Community analysis finds Anthropic may have violated their own Responsible Scaling Policy by not publishing required risk assessment within 30 days of Mythos deployment.",
+        "why_selected": ""
+      },
+      {
+        "title": "Slightly-Super Persuasion Will Do",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/JcavsPku6RR9hcujz/slightly-super-persuasion-will-do",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of why even modest improvements in AI persuasion could be transformative, despite humans and society's adaptive resistance to new exploits.",
+        "why_selected": ""
+      },
+      {
+        "title": "Trustworthy Agents in Practice",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/trustworthy-agents",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic's research on making AI agents reliable and safe for real-world deployment, focusing on practical alignment and oversight mechanisms.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Can't Read an Investor Deck: Financial Document Processing Fails",
+        "source": "TLDR AI",
+        "url": "https://www.mercor.com/blog/Finance-tasks-ai-failures-modes/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "GPT-5.4, Gemini 3.1 Pro, and Claude Opus 4.6 only achieve 56-64% accuracy on complex financial documents with charts, highlighting major gaps in visual reasoning.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "OpenAI Full Fan Mode Contest: Terms & Conditions",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/full-fan-mode-contest-terms-conditions",
+        "summary": "Explore the official terms and conditions for the OpenAI Full Fan Mode Contest, including eligibility, entry steps, judging criteria, and prize details. Learn how to participate, submit your entry on Instagram, and win IPL match tickets."
+      },
+      {
+        "title": "Help me launch Obsolete: a book aimed at building a new movement for AI reform",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/2HfuvYzRZgHpLAgpe/help-me-launch-obsolete-a-book-aimed-at-building-a-new",
+        "summary": "I wrote a book! It\u2019s called\u00a0Obsolete: The AI Industry's Trillion-Dollar Race to Replace You\u2014and How to Stop It, and it\u2019ll be available in May if you\u00a0preorder through my publisher (OR Books+The\u00a0Nation).With it, I took on a dual mission: get anyone up to speed on the state of AI and its risks (especially skeptics and lefties) AND write something people working in the space will enjoy and learn from. An unbiased panel of early reviewers (i.e. people I know) think it succeeds. For instance, here\u2019s a review from a skeptical friend:\u00a0It felt like I was being drawn into this profound vision I had mana"
+      },
+      {
+        "title": "Close the sim-to-real gap: Your guide to advancing physical AI (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://wandb.ai/site/resources/whitepapers/advancing-physical-ai/?utm_source=tldr-ai&amp;utm_medium=cpc&amp;utm_campaign=industry-campaign&amp;utm_content=physical-ai",
+        "summary": "Physical AI and robotics are the next frontier, but complex real-world variables and specialized multimodal experimentation make building embodied systems challenging.Weights & Biases' new guide, Advancing physical AI: From learning to embodied intelligence, offers the strategies you need to optimize your physical AI workflow, including:Why a full-stack solution is essential to design, test, and deploy physical AI systemsHow to train and fine-tune multimodal modelsTechniques to close the sim-to-real gap through real-time iterationTools to govern your physical AI systemsGet the guide to Advanci"
+      },
+      {
+        "title": "Claude Mythos (31 minute read)",
+        "source": "TLDR AI",
+        "url": "https://red.anthropic.com/2026/mythos-preview/?utm_source=tldrai",
+        "summary": "Anthropic detailed early evaluations of Claude Mythos Preview, highlighting strong performance in discovering zero-day vulnerabilities and reverse-engineering exploits, prompting a coordinated security initiative called Project Glasswing."
+      },
+      {
+        "title": "AI inference conference in SF + $5K in credits if you attend (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.digitalocean.com/deploy?utm_source=tldr-newsletter&amp;utm_medium=sponsorship&amp;utm_campaign=deploy_2026_offer&amp;utm_content=ai-nl-2nd-april-8",
+        "summary": "DigitalOcean Deploy is April 28 in SF. One day of technical deep dives on production inference infrastructure, from serverless to dedicated GPUs. Qualifying in-person attendees can receive up to $5,000 in inference credits*. Free to attend, limited spots. Register now!"
+      },
+      {
+        "title": "asgi-gzip 0.3",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/9/asgi-gzip/#atom-everything",
+        "summary": "Release: asgi-gzip 0.3\n    I ran into trouble deploying a new feature using SSE to a production Datasette instance, and it turned out that instance was using datasette-gzip which uses asgi-gzip which was incorrectly compressing event/text-stream responses.\nasgi-gzip was extracted from Starlette, and has a GitHub Actions scheduled workflow to check Starlette for updates that need to be ported to the library... but that action had stopped running and hence had missed Starlette's own fix for this issue.\nI ran the workflow and integrated the new fix, and now datasette-gzip and asgi-gzip both corre"
+      }
+    ],
+    "rejected_summary": "Excluded the book launch post (promotional content), contest terms (not substantive), SSE compression bug fix (too technical/niche), and physical AI sponsor content (advertorial). Also skipped asgi-gzip release details as too implementation-specific.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

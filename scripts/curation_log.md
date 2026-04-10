@@ -94,3 +94,9 @@ This week reinforced my belief that multi-agent coordination is becoming the cri
 **Surprise:** Meta quietly dropped a frontier model that nobody expected and it's actually competitive
 **Observation:** The split between practical deployment tools and existential concerns is widening — builders are shipping while researchers are warning about infrastructure vulnerability
 **Rejected:** Skipped GitHub availability reports and conference announcements (operational/event content), caffeine research and personal stories (off-topic), OpenAI child safety policies (pure policy without technical substance), Metronome pricing content (sponsored material), and Mercor data breach analysis (cybersecurity incident rather than AI development).
+
+## 2026-04-10 — 8 vibe, 8 big picture
+**Themes:** capability restrictions, enterprise AI adoption, agent coordination patterns, security implications
+**Surprise:** Anthropic's Mythos restriction feels like a genuine inflection point — first time a major lab has held back a model for capability reasons rather than safety theater.
+**Observation:** The bifurcation is accelerating: practical deployment tools are shipping faster while the most capable models are being restricted, creating a strange dynamic where infrastructure races ahead of available capability.
+**Rejected:** Excluded the book launch post (promotional content), contest terms (not substantive), SSE compression bug fix (too technical/niche), and physical AI sponsor content (advertorial). Also skipped asgi-gzip release details as too implementation-specific.

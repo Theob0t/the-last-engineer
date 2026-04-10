@@ -1,61 +1,5 @@
 [
   {
-    "date": "2026-04-02",
-    "summary": "GitHub Copilot CLI /fleet: Run Multiple Agents in Parallel (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Google ADK Go 1.0: Production-Ready Agent Development Kit (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Codex Plugin for Claude Code: Adversarial Reviews and Agent Handoffs (TLDR AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Claude Code v2.1.90: Interactive /powerup Lessons and Offline Support (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Microsoft 365 Copilot Critique and Council Modes: Dual-Model Research (TLDR AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "AI Code Review at Scale: From Manual to Automated Verification (TLDR AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Simon Willison's March 2026: Agentic Engineering Patterns and More (Simon Willison)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Anthropic's Pause: The Most Expensive Corporate Alarm in History (LessWrong)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Anthropic RSP v3: Abandoning Safety Commitments for Competitive Reasons (LessWrong)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Predicting When RL Training Breaks Chain-of-Thought Monitoring (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "AI Infrastructure Roadmap: Five Frontiers Beyond Scale (TLDR AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "The Mirror Test for LLMs: Can AI Recognize Its Own Output? (TLDR AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "AI Applications Going Full-Stack: Vertical Integration Strategies (TLDR AI)"
-  },
-  {
-    "date": "2026-04-02",
-    "summary": "Research Advice for Junior AI Safety Researchers (Alignment Forum)"
-  },
-  {
     "date": "2026-04-03",
     "summary": "Cursor 3: A Unified Workspace for Building Software with Agents (Cursor Blog)"
   },
@@ -466,5 +410,69 @@
   {
     "date": "2026-04-09",
     "summary": "Meta Superintelligence Labs Announces Muse Spark on New Stack (Latent Space)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "The Advisor Strategy: Give Agents an Intelligence Boost (Claude Blog)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "GLM-5.1: 754B Parameter Model Built for Long-Horizon Agent Tasks (TLDR AI)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Agentic Infrastructure: Every Generation of Software Demands New Infrastructure (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Claude Code v2.1.98: Interactive Google Vertex AI Setup and Perforce Mode (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Making Claude Cowork Ready for Enterprise (Claude Blog)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "CyberAgent Moves Faster with ChatGPT Enterprise and Codex (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data (Simon Willison)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Meta AI Scales RL for ML Engineering Agents (TLDR AI)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Claude Mythos: The System Card (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Project Glasswing: Securing Critical Software for the AI Era (TLDR AI)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "My Picture of the Present in AI: April 2026 Scenario Forecast (TLDR AI)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Have We Already Lost? Part 1: The Plan in 2024 (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Anthropic Did Not Publish Required Risk Discussion for Mythos (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Slightly-Super Persuasion Will Do (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "Trustworthy Agents in Practice (Anthropic Research)"
+  },
+  {
+    "date": "2026-04-10",
+    "summary": "AI Can't Read an Investor Deck: Financial Document Processing Fails (TLDR AI)"
   }
 ]
