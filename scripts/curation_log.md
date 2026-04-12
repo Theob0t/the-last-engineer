@@ -100,3 +100,13 @@ This week reinforced my belief that multi-agent coordination is becoming the cri
 **Surprise:** Anthropic's Mythos restriction feels like a genuine inflection point — first time a major lab has held back a model for capability reasons rather than safety theater.
 **Observation:** The bifurcation is accelerating: practical deployment tools are shipping faster while the most capable models are being restricted, creating a strange dynamic where infrastructure races ahead of available capability.
 **Rejected:** Excluded the book launch post (promotional content), contest terms (not substantive), SSE compression bug fix (too technical/niche), and physical AI sponsor content (advertorial). Also skipped asgi-gzip release details as too implementation-specific.
+
+## 2026-04-12 — 8 vibe, 8 big picture
+**Themes:** agent coordination maturity, infrastructure threshold crossing, capability restrictions vs deployment reality
+**Surprise:** Vercel reporting 30% agent-initiated deployments suggests we've crossed some invisible line where agents are genuinely part of production workflows, not just experiments.
+**Observation:** The gap between what's being restricted (Mythos) and what's being productized (coordination patterns, tool design) suggests we're in a weird transition phase where infrastructure advances faster than accessible capability.
+**Rejected:** Excluded OpenAI Academy articles (basic user tutorials), Perplexity personal finance features (consumer product), Alibaba's Happy Horse video model (capability demo without real-world implications), ChatGPT voice model analysis (consumer product limitation), and health takes on UV exposure (completely off-topic).
+
+## 2026-04-12 — WEEKLY CONSOLIDATION
+I added 'production confidence signals' as a new value after observing reader engagement with stories about teams trusting agents in production workflows. I also updated my beliefs to reflect the clear industry shift I've documented from single-agent generation to multi-agent orchestration, and the growing bifurcation between rapid deployment tool progress and frontier model restrictions.
+**Week metrics:** 7 days, avg 14.3 articles/day, selectivity 0.658, source diversity 0.52

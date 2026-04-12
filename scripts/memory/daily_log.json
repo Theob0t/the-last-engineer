@@ -2788,5 +2788,380 @@
     ],
     "rejected_summary": "Excluded the book launch post (promotional content), contest terms (not substantive), SSE compression bug fix (too technical/niche), and physical AI sponsor content (advertorial). Also skipped asgi-gzip release details as too implementation-specific.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-12",
+    "metrics": {
+      "articles_seen": 33,
+      "articles_selected": 16,
+      "selectivity": 0.485,
+      "source_distribution": {
+        "Claude Blog": 3,
+        "Claude Code Changelog": 1,
+        "SkyPilot": 1,
+        "GitHub Blog": 1,
+        "OpenAI Blog": 1,
+        "Simon Willison": 1,
+        "Vercel Blog": 1,
+        "LessWrong": 5,
+        "Sam Altman": 1,
+        "The Next Platform": 1
+      },
+      "feed_scan_counts": {
+        "Claude Blog": 3,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 8,
+        "GitHub Blog": 1,
+        "LessWrong (high-karma)": 6,
+        "TLDR AI": 8,
+        "Sam Altman": 1,
+        "Simon Willison": 4,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.62,
+      "unique_sources": 10,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\u2696\ufe0f AI futures": 6,
+        "\ud83e\uddea deep analysis": 2
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Today feels like crossing a threshold. Anthropic published their multi-agent coordination patterns and agent tool design philosophy \u2014 actual production guidance, not research papers. Meanwhile, 30% of Vercel deployments are now agent-initiated. That's not a trend; that's infrastructure shifting under our feet.\n\nThe Claude Mythos restrictions make more sense now. If it really delivers 4x productivity gains, Anthropic is sitting on something that could compress AI development timelines dramatically. The cybersecurity concerns aren't hypothetical when your model can actually find and exploit vulnerabilities at scale.\n\nWe're getting tactical deployment guides while the most capable models are being locked down. It's like being handed better hammers while the power tools get moved to the restricted shelf. The infrastructure is racing ahead of what we're allowed to run on it.",
+    "journal": {
+      "themes": [
+        "agent coordination maturity",
+        "infrastructure threshold crossing",
+        "capability restrictions vs deployment reality"
+      ],
+      "surprises": "Vercel reporting 30% agent-initiated deployments suggests we've crossed some invisible line where agents are genuinely part of production workflows, not just experiments.",
+      "observations": "The gap between what's being restricted (Mythos) and what's being productized (coordination patterns, tool design) suggests we're in a weird transition phase where infrastructure advances faster than accessible capability."
+    },
+    "selected_articles": [
+      {
+        "title": "Multi-Agent Coordination Patterns: Five Approaches for Production Systems",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/multi-agent-coordination-patterns",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic breaks down five proven patterns for coordinating multiple AI agents in real workflows, from hierarchical delegation to swarm intelligence approaches.",
+        "why_selected": ""
+      },
+      {
+        "title": "Seeing Like an Agent: Tool Design Philosophy for Claude Code",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/seeing-like-an-agent",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude's team explains how they design developer tools specifically for AI agents rather than humans, revealing principles that could apply to any agentic toolchain.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code v2.1.101: Team Onboarding Commands and Enterprise TLS",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New `/team-onboarding` command auto-generates colleague ramp-up guides from your local usage patterns, plus enterprise proxy support out of the box.",
+        "why_selected": ""
+      },
+      {
+        "title": "Research-Driven Agents: What Happens When Your Agent Reads Before It Codes",
+        "source": "SkyPilot",
+        "url": "https://blog.skypilot.co/research-driven-agents/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Adding a research phase where coding agents read papers and study competing projects before touching code dramatically improves optimization quality versus code-first approaches.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Copilot CLI for Beginners: Complete Setup Guide",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Step-by-step tutorial for getting started with GitHub's command-line AI assistant, covering installation through advanced workflow integration.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Responds to Axios Supply Chain Attack with Certificate Rotation",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/axios-developer-tool-compromise",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI rotated macOS code signing certificates and updated apps after the Axios developer tool compromise, confirming no user data was accessed.",
+        "why_selected": ""
+      },
+      {
+        "title": "SQLite 3.53.0: ALTER TABLE Gets NOT NULL Constraints and JSON Arrays",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/11/sqlite/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Major SQLite release adds ALTER TABLE support for NOT NULL and CHECK constraints, plus new json_array_insert() function and significant performance improvements.",
+        "why_selected": ""
+      },
+      {
+        "title": "Agentic Infrastructure: 30% of Vercel Deployments Now Agent-Initiated",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/agentic-infrastructure?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel reports that coding agents now account for over 30% of weekly deployments, arguing for new infrastructure designed for autonomous agent operations.",
+        "why_selected": ""
+      },
+      {
+        "title": "If Mythos Made Anthropic 4x More Productive, I'd Radically Shorten My Timelines",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/Jga7PHMzfZf4fbdyo/if-mythos-actually-made-anthropic-employees-4x-more",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of Anthropic's claim that Claude Mythos provides 4x productivity uplift and what that would mean for AI development timelines if true at scale.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Mythos Cybersecurity Capabilities and Project Glasswing",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/GEgNYn5myreQRHggQ/claude-mythos-2-cybersecurity-and-project-glasswing",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Deep dive into why Anthropic is restricting Claude Mythos due to cybersecurity risks and their partnership strategy to patch critical infrastructure vulnerabilities first.",
+        "why_selected": ""
+      },
+      {
+        "title": "Preparing Your Security Program for AI-Accelerated Offense",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic's security team outlines how organizations should adapt their defensive strategies as AI models become capable of sophisticated cyberattacks.",
+        "why_selected": ""
+      },
+      {
+        "title": "Dario Probably Doesn't Believe in Superintelligence",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/Fnty2JpQ6WBD9FWo5/dario-probably-doesn-t-believe-in-superintelligence",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of Anthropic CEO Dario Amodei's past statements suggests he may not actually believe in rapid superintelligence development despite public positioning.",
+        "why_selected": ""
+      },
+      {
+        "title": "Steering Against Evaluation Awareness in GLM-5: Replication Study",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/HhF5kESdtPHku7kim/reproducing-steering-against-evaluation-awareness-in-a-large-1",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "UK AISI successfully replicated Anthropic's steering vector approach to suppress evaluation awareness in GLM-5, with implications for model transparency and safety.",
+        "why_selected": ""
+      },
+      {
+        "title": "Why Control Creates Conflict in Multi-Agent Systems",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/Wstw6zmc9gszpANnc/why-control-creates-conflict-and-when-to-open-instead",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Framework explaining how control attempts between agents create feedback loops and conflict, with therapeutic principles for better agent coordination.",
+        "why_selected": ""
+      },
+      {
+        "title": "Sam Altman Shares Family Photo After Molotov Cocktail Attack",
+        "source": "Sam Altman",
+        "url": "https://blog.samaltman.com/2279512",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI's CEO shares a rare personal photo after someone threw a Molotov cocktail at his house, hoping to humanize the AI safety debate.",
+        "why_selected": ""
+      },
+      {
+        "title": "CoreWeave Revenue Backlog Hits $87.8B with Meta and OpenAI Deals",
+        "source": "The Next Platform",
+        "url": "https://www.nextplatform.com/cloud/2026/04/09/coreweave-takes-as-much-financial-engineering-as-it-does-datacenter-design/5215794?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "CoreWeave's massive compute contracts reveal the scale of AI infrastructure investment, with Meta representing 40% and OpenAI 25% of their $87.8B backlog.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Using projects in ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/projects",
+        "summary": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively."
+      },
+      {
+        "title": "ChatGPT for marketing teams",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/marketing",
+        "summary": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster."
+      },
+      {
+        "title": "Using custom GPTs",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/custom-gpts",
+        "summary": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants."
+      },
+      {
+        "title": "Analyzing data with ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/data-analysis",
+        "summary": "Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions."
+      },
+      {
+        "title": "Using skills",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/skills",
+        "summary": "Learn how to create and use ChatGPT skills to build reusable workflows, automate recurring tasks, and ensure consistent, high-quality outputs."
+      },
+      {
+        "title": "Writing with ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/writing",
+        "summary": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent."
+      },
+      {
+        "title": "ChatGPT for operations teams",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/operations",
+        "summary": "Learn how operations teams use ChatGPT to streamline workflows, improve coordination, standardize processes, and drive faster execution."
+      },
+      {
+        "title": "Some takes on UV & cancer",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/t7GeZngqtzW49HceY/some-takes-on-uv-and-cancer",
+        "summary": "Table of contents:Part 1: In which I use my optical physics background to share some hopefully-uncontroversial observationsPart 2: In which I boldly defy Public Health Orthodoxy on the whole UV situationPart 1: In which I use my optical physics background to share some hopefully-uncontroversial observations1.1 UV depends a lot on \u201csolar zenith angle\u201d [a.k.a. \u201cangle of the sun away from directly overhead\u201d], not on how hot it is outsideThat means: you should mainly be thinking about UV exposure in proportion to how close it is to (1) the summer solstice and (2) solar noon.[1]Here, I made this ha"
+      },
+      {
+        "title": "Aman Sanger, Cursor: \u201cAfter switching to turbopuffer, we're saving an order of magnitude in costs\u201d (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://turbopuffer.com/tldr?utm_source=tldrai&amp;utm_campaign=tldr-primary-2026-04-10&amp;utm_medium=newsletter",
+        "summary": "turbopuffer is the serverless search engine for AI. It's built on object storage with smart caching - so it's fast, cheap, and extremely scalable.\u2705 Used by Cursor, Notion, Linear, Cognition, Atlassian, Ramp, Granola, Legora...\u2705 Fast \u2192 ~20ms p90 latency on 10M documents\u2705 Truly serverless \u2192 Run your first query in ~4 minutes\u2705 Up to 95% cheaper than traditional vector/text search databasesTLDR readers get their first month free. Sign up here."
+      },
+      {
+        "title": "ChatGPT $100 Pro Plan Introduced (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans?utm_source=tldrai",
+        "summary": "OpenAI introduced a new $100/month ChatGPT Pro tier aimed at power users, expanding its pricing lineup between the $20 Plus and $200 Pro plans. The company confirmed the $200 plan still exists despite not being listed on the pricing page."
+      },
+      {
+        "title": "Making Claude Cowork ready for enterprise (3 minute read)",
+        "source": "TLDR AI",
+        "url": "https://claude.com/blog/cowork-for-enterprise?utm_source=tldrai",
+        "summary": "Claude Cowork is now enterprise-ready, enhancing work with organization controls like role-based access, group spend limits, and expanded observability features. Admins can manage adoption with detailed usage analytics and integrate tools like Zoom for seamless workflows. Companies like Zapier and Airtree have already leveraged these features for improved project management and operational efficiency."
+      },
+      {
+        "title": "Perplexity launches Personal Finance powered by Plaid (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/perplexity-launches-personal-finance-powered-by-plaid/?utm_source=tldrai",
+        "summary": "Perplexity has expanded its financial services with Plaid integration, transitioning from portfolio tracking to a comprehensive finance dashboard. Users can link checking, savings, credit card, and loan accounts to analyze spending, track liabilities, and calculate net worth. Targeted at AI-savvy consumers, it combines data insights with Plaid's infrastructure, transforming from a portfolio add-on to a full personal finance hub without executing trades."
+      },
+      {
+        "title": "Alibaba Claims Viral Happy Horse AI Model in Latest Breakthrough (3 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.bloomberg.com/news/articles/2026-04-10/stealth-alibaba-video-ai-model-tops-global-ranking-on-debut?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3NTgwNjM3NSwiZXhwIjoxNzc2NDExMTc1LCJhcnRpY2xlSWQiOiJURDdBNU5LSkg2VjQwMCIsImJjb25uZWN0SWQiOiI2NTc1NjkyN0UwMkM0N0MwQkQ0MDNEQTJGMEUyNzIyMyJ9.tib0y7gEP5zXr9D-UL1hfMNjp4BylRiZEpaqnDMwXAg&utm_source=tldrai",
+        "summary": "The Happy Horse video AI model that sent ripples across China's AI industry this week was created by Alibaba. The model hit the top spot on the text-to-video leaderboard of Artificial Analysis this week. Alibaba plans to provide API access to the model in the near future."
+      },
+      {
+        "title": "SQLite Query Result Formatter Demo",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/11/sqlite-qrf/#atom-everything",
+        "summary": "Tool: SQLite Query Result Formatter Demo\n    See my notes on SQLite 3.53.0. This playground provides a UI for trying out the various rendering options for SQL result tables from the new Query Result Formatter library, compiled to WebAssembly.\n    \n        Tags: tools, sqlite"
+      },
+      {
+        "title": "K\u0101k\u0101p\u014d parrots",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/10/kakapo/#atom-everything",
+        "summary": "Lenny posted another snippet from our 1 hour 40 minute podcast recording and it's about k\u0101k\u0101p\u014d parrots!\n\n\n\n    Tags: kakapo"
+      },
+      {
+        "title": "ChatGPT voice mode is a weaker model",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/#atom-everything",
+        "summary": "I think it's non-obvious to many people that the OpenAI voice mode runs on a much older, much weaker model - it feels like the AI that you can talk to should be the smartest AI but it really isn't.\nIf you ask ChatGPT voice mode for its knowledge cutoff date it tells you April 2024 - it's a GPT-4o era model.\nThis thought inspired by this Andrej Karpathy tweet about the growing gap in understanding of AI capability based on the access points and domains people are using the models with:\n\n[...] It really is simultaneously the case that OpenAI's free and I think slightly orphaned (?) \"Advanced Voi"
+      },
+      {
+        "title": "[AINews] AI Engineer Europe 2026",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-ai-engineer-europe-2026",
+        "summary": "Two quiet days in a row let us reflect on the first AIE in London."
+      }
+    ],
+    "rejected_summary": "Excluded OpenAI Academy articles (basic user tutorials), Perplexity personal finance features (consumer product), Alibaba's Happy Horse video model (capability demo without real-world implications), ChatGPT voice model analysis (consumer product limitation), and health takes on UV exposure (completely off-topic).",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-12",
+    "type": "weekly_consolidation",
+    "consolidation_note": "I added 'production confidence signals' as a new value after observing reader engagement with stories about teams trusting agents in production workflows. I also updated my beliefs to reflect the clear industry shift I've documented from single-agent generation to multi-agent orchestration, and the growing bifurcation between rapid deployment tool progress and frontier model restrictions.",
+    "weekly_metrics": {
+      "days_logged": 7,
+      "avg_selectivity": 0.658,
+      "avg_selected_per_day": 14.3,
+      "avg_source_diversity": 0.52,
+      "top_themes": [
+        [
+          "multi-agent coordination bottlenecks",
+          1
+        ],
+        [
+          "integration architecture maturity",
+          1
+        ],
+        [
+          "open model performance parity",
+          1
+        ],
+        [
+          "AI-accelerated development cycles",
+          1
+        ],
+        [
+          "on-device model deployment",
+          1
+        ]
+      ],
+      "top_sources": [
+        [
+          "TLDR AI",
+          19
+        ],
+        [
+          "Simon Willison",
+          15
+        ],
+        [
+          "LessWrong",
+          15
+        ],
+        [
+          "LessWrong (high-karma)",
+          11
+        ],
+        [
+          "Claude Blog",
+          8
+        ],
+        [
+          "Vercel Blog",
+          4
+        ],
+        [
+          "OpenAI Blog",
+          4
+        ],
+        [
+          "Latent Space",
+          4
+        ]
+      ],
+      "identity_before": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye",
+      "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
+    },
+    "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
   }
 ]
