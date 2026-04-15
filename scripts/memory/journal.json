@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "themes": [
+      "multi-agent coordination maturity",
+      "adoption gap between capability and usage",
+      "infrastructure scaling ahead of user workflows"
+    ],
+    "surprises": "Google's internal AI adoption matching John Deere's statistics \u2014 same company, completely different tech sophistication.",
+    "observations": "There's a growing split between teams shipping production multi-agent systems and teams still debating whether AI subscriptions are worth it.",
+    "emotional_reactions": "Frustrated by the disconnect between impressive technical capabilities and sluggish real-world adoption rates.",
+    "per_article_reasoning": [
+      {
+        "title": "Anthropic Introduces Routines in Claude Code for Parallel Agents",
+        "why": "Shows Anthropic betting on multi-agent coordination as the next bottleneck, not just capability."
+      },
+      {
+        "title": "Cursor Speeds Up GPU Kernels by 38% with Multi-Agent System",
+        "why": "Concrete performance improvement through agent coordination \u2014 this is production infrastructure, not a demo."
+      },
+      {
+        "title": "Google's Internal AI Adoption Matches Tractor Companies, Not Tech Leaders",
+        "why": "Reveals the adoption gap even at companies shipping advanced AI infrastructure themselves."
+      },
+      {
+        "title": "The $7 Doritos Problem: Enterprise AI Subscription Value Crisis",
+        "why": "Explains why adoption lags behind capability \u2014 cost-benefit analysis doesn't work for many teams."
+      },
+      {
+        "title": "LLMs Inherently Lack Laziness: Why AI Makes Systems Larger, Not Better",
+        "why": "Cantrill's insight about LLMs optimizing for vanity metrics explains some of the adoption resistance."
+      }
+    ],
+    "date": "2026-04-15",
+    "articles_selected": 20,
+    "editorial_note": "Five pieces stood out today, but they're painting a messy picture.\n\nAnthropic shipped routines and multi-agent coordination in Claude Code. They're betting the next bottleneck is agent orchestration, "
+  }
+]

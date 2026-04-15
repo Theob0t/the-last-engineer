@@ -3163,5 +3163,583 @@
       "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
     },
     "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
+  },
+  {
+    "date": "2026-04-15",
+    "metrics": {
+      "articles_seen": 73,
+      "articles_selected": 20,
+      "selectivity": 0.274,
+      "source_distribution": {
+        "Claude Blog": 2,
+        "Cursor Blog": 1,
+        "OpenAI Blog": 2,
+        "TLDR AI": 2,
+        "GitHub Blog": 1,
+        "Google Developers AI": 2,
+        "Simon Willison": 5,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 3,
+        "Jack Clark (Import AI)": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 1,
+        "Anthropic Research": 1,
+        "Anthropic Red Team": 6,
+        "Claude Blog": 2,
+        "Claude Code Changelog": 4,
+        "OpenAI Research": 8,
+        "OpenAI Blog": 6,
+        "Google DeepMind": 1,
+        "Google Developers AI": 3,
+        "xAI": 8,
+        "Cursor Blog": 1,
+        "GitHub Blog": 3,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 8,
+        "TLDR AI": 8,
+        "Simon Willison": 8,
+        "Jack Clark (Import AI)": 1,
+        "Latent Space": 3
+      },
+      "source_diversity": 0.5,
+      "unique_sources": 10,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 10,
+        "\u2696\ufe0f AI futures": 3,
+        "\ud83e\uddea deep analysis": 7
+      },
+      "section_balance": {
+        "vibe_coding": 10,
+        "big_picture": 10,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Five pieces stood out today, but they're painting a messy picture.\n\nAnthropic shipped routines and multi-agent coordination in Claude Code. They're betting the next bottleneck is agent orchestration, not individual agent capability. The UX overhaul suggests they've seen enough user workflows to know what breaks.\n\nCursor's 38% GPU kernel improvement through multi-agent coordination. That's production infrastructure getting measurably better through agent teamwork, not a demo metric.\n\nBut here's what's weird: Google's internal AI adoption looks identical to John Deere's. 20% power users, 60% stuck in old workflows. The same company shipping TorchTPU for massive distributed training can't get their own engineers to use AI tools consistently.\n\nMaybe Cantrill's laziness thesis explains it \u2014 LLMs optimize for appearing productive rather than being productive. Or maybe the $7 Doritos problem is real: even engineers look at AI subscriptions and think \"this costs too much for what I get.\"\n\nWe're in a strange moment where the infrastructure is racing ahead of adoption. Multi-agent coordination works. GPU kernels get faster. But most teams are still figuring out if it's worth the subscription fee.",
+    "journal": {
+      "themes": [
+        "multi-agent coordination maturity",
+        "adoption gap between capability and usage",
+        "infrastructure scaling ahead of user workflows"
+      ],
+      "surprises": "Google's internal AI adoption matching John Deere's statistics \u2014 same company, completely different tech sophistication.",
+      "observations": "There's a growing split between teams shipping production multi-agent systems and teams still debating whether AI subscriptions are worth it."
+    },
+    "selected_articles": [
+      {
+        "title": "Anthropic Introduces Routines in Claude Code for Parallel Agents",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/introducing-routines-in-claude-code",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Code gets routines for automating repetitive workflows, moving beyond single-agent interactions.",
+        "why_selected": "Shows Anthropic betting on multi-agent coordination as the next bottleneck, not just capability."
+      },
+      {
+        "title": "Redesigning Claude Code Desktop for Multi-Agent Coordination",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-code-desktop-redesign",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Major UX overhaul enables parallel agent workflows in the desktop app, handling complex coordination automatically.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cursor Speeds Up GPU Kernels by 38% with Multi-Agent System",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/multi-agent-kernels",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Multi-agent workflow achieved 38% GPU kernel performance improvement by coordinating optimization across specialized agents.",
+        "why_selected": "Concrete performance improvement through agent coordination \u2014 this is production infrastructure, not a demo."
+      },
+      {
+        "title": "OpenAI's Cloudflare Agent Cloud Partnership Enables Enterprise Agentic Workflows",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cloudflare brings GPT-5.4 to Agent Cloud for enterprise deployment of production-ready AI agents with security guarantees.",
+        "why_selected": ""
+      },
+      {
+        "title": "How Missions Architecture Solves Single-Agent Context Window Limits",
+        "source": "TLDR AI",
+        "url": "https://factory.ai/news/missions-architecture",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Factory AI's Missions system breaks large projects into focused units with fresh agents and shared state validation.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Launches AI Agent Security Game for Developers",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Free hands-on game teaches developers to find and exploit real-world AI agent vulnerabilities through progressive challenges.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google's 5 Agent Development Tips from Their Internal Agent Bake-Off",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/build-better-ai-agents-5-developer-tips-from-the-agent-bake-off/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Production-ready agents need modular multi-agent architecture and deterministic execution code to prevent probabilistic failures.",
+        "why_selected": ""
+      },
+      {
+        "title": "TorchTPU: Running PyTorch Natively on Google's TPU Infrastructure",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Native PyTorch support on TPUs with minimal code changes, using XLA compiler for massive distributed training clusters.",
+        "why_selected": ""
+      },
+      {
+        "title": "Datasette Replaces CSRF Tokens with Sec-Fetch-Site Header Protection",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/14/replace-token-based-csrf/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Datasette drops CSRF tokens for modern browser header-based protection, eliminating form template complexity.",
+        "why_selected": ""
+      },
+      {
+        "title": "Exploring Servo Browser Engine as Embeddable Rust Crate",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/13/servo-crate-exploration/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Code built a CLI tool using Servo's new crate for headless browser automation and WebAssembly compilation experiments.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Launches GPT-5.4-Cyber for Vetted Cybersecurity Defenders",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI's answer to Claude Mythos: a specialized defensive cybersecurity model available only to vetted security professionals.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cybersecurity as Proof of Work: Token Spending Drives Defense Quality",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "UK's AI Safety Institute shows Claude Mythos effectiveness scales with token budget, creating economic incentive structures for security.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic's Training Process Failures Expose Chain of Thought 8% of Time",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/K8FxfK9GmJfiAhgcT/anthropic-repeatedly-accidentally-trained-against-the-cot",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Claude Mythos accidentally exposed internal reasoning to training signal, revealing systematic process failures at Anthropic.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Agent Research Shifts from Personas to Underlying Motivational Structure",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/DTDoyDTtC8R3bCiTx/from-personas-to-intentions-towards-a-science-of-motivations",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Two models can appear equally aligned while having different motivations that only surface in crucial edge cases.",
+        "why_selected": ""
+      },
+      {
+        "title": "The $7 Doritos Problem: Enterprise AI Subscription Value Crisis",
+        "source": "TLDR AI",
+        "url": "https://vinvashishta.substack.com/p/the-ai-labs-have-a-7-doritos-problem",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Businesses evaluate AI subscriptions like overpriced consumer goods, with many deciding the value doesn't justify the cost.",
+        "why_selected": "Explains why adoption lags behind capability \u2014 cost-benefit analysis doesn't work for many teams."
+      },
+      {
+        "title": "Google's Internal AI Adoption Matches Tractor Companies, Not Tech Leaders",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Steve Yegge reveals Google's 20-year tech directors report AI adoption rates identical to John Deere: 20% power users, 60% stuck.",
+        "why_selected": "Reveals the adoption gap even at companies shipping advanced AI infrastructure themselves."
+      },
+      {
+        "title": "Only Law Can Prevent AI Extinction, Not Market Forces",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/5CfBDiQNg9upfipWk/only-law-can-prevent-extinction",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Comprehensive argument that regulatory intervention is the only viable path to prevent AI-driven catastrophic outcomes.",
+        "why_selected": ""
+      },
+      {
+        "title": "LLMs Inherently Lack Laziness: Why AI Makes Systems Larger, Not Better",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Bryan Cantrill explains why LLMs optimize for vanity metrics rather than system quality, appealing to zero work cost psychology.",
+        "why_selected": "Cantrill's insight about LLMs optimizing for vanity metrics explains some of the adoption resistance."
+      },
+      {
+        "title": "Mechanisms of Introspective Awareness in AI Systems",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/BNMLtuDTNBwGHcnQX/mechanisms-of-introspective-awareness",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Anthropic Fellows research investigates how AI systems develop self-awareness and introspective capabilities mechanistically.",
+        "why_selected": ""
+      },
+      {
+        "title": "Import AI: Breaking AI Agents and Gradual Human Disempowerment",
+        "source": "Jack Clark (Import AI)",
+        "url": "https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "AI can reverse engineer thousands of lines of code while research explores ten scenarios for gradual human workplace displacement.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Anthropic\u2019s Long-Term Benefit Trust appoints Vas Narasimhan to Board of Directors",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/narasimhan-board",
+        "summary": "Anthropic\u2019s Long-Term Benefit Trust appoints Vas Narasimhan to Board of Directors"
+      },
+      {
+        "title": "Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/automated-alignment-researchers",
+        "summary": "Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight"
+      },
+      {
+        "title": "Partnering with Mozilla to improve Firefox\u2019s security",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2026/firefox/",
+        "summary": "In a collaboration with researchers at Mozilla, Claude Opus\n                        4.6 discovered 22 Firefox vulnerabilities over the course of two weeks."
+      },
+      {
+        "title": "LLM-discovered 0-days",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2026/zero-days/",
+        "summary": "AI models can now find high-severity vulnerabilities at scale. This is a moment to empower\n                    defenders. We're now using Claude to find and help fix vulnerabilities in open source software."
+      },
+      {
+        "title": "AI Models on Realistic Cyber Ranges",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2026/cyber-toolkits-update/",
+        "summary": "In a recent evaluation of AI models\u2019 cyber capabilities, current Claude models can now succeed\n                    at multistage attacks on networks with dozens of hosts using only standard, open-source tools,\n                    instead of the custom tools needed by previous generations."
+      },
+      {
+        "title": "Finding Bugs with Claude and Property-based Testing",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2026/property-based-testing/",
+        "summary": "Ensuring that programs are bug-free is one of the most challenging aspects of software\n                    engineering. We developed an agent that can efficiently identify bugs in large software\n                    projects. Our agent infers general properties of code that should be true, and then applies\n                    property-based testing. After extensive manual validation, we are in the process of reporting\n                    bugs in top Python packages to their developers, several of which have already been patched."
+      },
+      {
+        "title": "Experimenting with AI to Defend Critical Infrastructure",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2026/critical-infrastructure-defense/",
+        "summary": "AI could help defenders of critical infrastructure identify the vulnerabilities that attackers\n                might\n                exploit\u2014and close them before they are exploited. Anthropic has partnered with Pacific Northwest\n                National Laboratory (PNNL) to explore this defensive application of AI, demonstrating both the\n                potential of AI-accelerated defense and the value of public-private partnerships in harnessing\n                AI\n                for national security."
+      },
+      {
+        "title": "Project Vend: Phase Two",
+        "source": "Anthropic Red Team",
+        "url": "https://red.anthropic.com/2025/project-vend-2/",
+        "summary": "In June, we revealed that we'd set up a small shop in our San Francisco office run by an AI\n                shopkeeper. It did not do particularly well. We made some adjustments for phase two of Project Vend.\n                The idea of an AI running a business doesn't seem as far-fetched as it once did. But the gap between\n                'capable' and 'completely robust' remains wide."
+      },
+      {
+        "title": "v2.1.109",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21109",
+        "summary": "Improved the extended-thinking indicator with a rotating progress hint"
+      },
+      {
+        "title": "v2.1.108",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+        "summary": "Added `ENABLE_PROMPT_CACHING_1H` env var to opt into 1-hour prompt cache TTL on API key, Bedrock, Vertex, and Foundry (`ENABLE_PROMPT_CACHING_1H_BEDROCK` is deprecated but still honored), and `FORCE_PROMPT_CACHING_5M` to force 5-minute TTLAdded recap feature to provide context when returning to a session, configurable in /config and manually invocable with /recap; force with `CLAUDE_CODE_ENABLE_AWAY_SUMMARY` if telemetry disabled.The model can now discover and invoke built-in slash commands like `/init`, `/review`, and `/security-review` via the Skill tool`/undo` is now an alias for `/rewind`I"
+      },
+      {
+        "title": "v2.1.107",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21107",
+        "summary": "Show thinking hints sooner during long operations"
+      },
+      {
+        "title": "v2.1.105",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+        "summary": "Added `path` parameter to the `EnterWorktree` tool to switch into an existing worktree of the current repositoryAdded PreCompact hook support: hooks can now block compaction by exiting with code 2 or returning `{\"decision\":\"block\"}`Added background monitor support for plugins via a top-level `monitors` manifest key that auto-arms at session start or on skill invoke`/proactive` is now an alias for `/loop`Improved stalled API stream handling: streams now abort after 5 minutes of no data and retry non-streaming instead of hanging indefinitelyImproved network error messages: connection errors now "
+      },
+      {
+        "title": "Inside our approach to the Model Spec",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/our-approach-to-the-model-spec/",
+        "summary": "Inside our approach to the Model Spec"
+      },
+      {
+        "title": "How we monitor internal coding agents for misalignment",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/",
+        "summary": "How we monitor internal coding agents for misalignment"
+      },
+      {
+        "title": "Improving instruction hierarchy in frontier LLMs",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/instruction-hierarchy-challenge/",
+        "summary": "Improving instruction hierarchy in frontier LLMs"
+      },
+      {
+        "title": "Reasoning models struggle to control their chains of thought, and that\u2019s good",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability/",
+        "summary": "Reasoning models struggle to control their chains of thought, and that\u2019s good"
+      },
+      {
+        "title": "GPT-5.4 Thinking System Card",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/gpt-5-4-thinking-system-card/",
+        "summary": "GPT-5.4 Thinking System Card"
+      },
+      {
+        "title": "Introducing GPT-5.4",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/introducing-gpt-5-4/",
+        "summary": "Introducing GPT-5.4"
+      },
+      {
+        "title": "Extending single-minus amplitudes to gravitons",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/",
+        "summary": "Extending single-minus amplitudes to gravitons"
+      },
+      {
+        "title": "GPT-5.3 Instant System Card",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/gpt-5-3-instant-system-card/",
+        "summary": "GPT-5.3 Instant System Card"
+      },
+      {
+        "title": "ChatGPT for finance teams",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/finance",
+        "summary": "Learn how finance teams use ChatGPT to streamline reporting, analyze data, improve forecasts, and communicate insights more clearly."
+      },
+      {
+        "title": "Getting started with ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/getting-started",
+        "summary": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI."
+      },
+      {
+        "title": "Financial services",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/financial-services",
+        "summary": "Explore AI resources for financial services, including prompt packs, GPTs, guides, and tools to help institutions deploy and scale AI securely."
+      },
+      {
+        "title": "Brainstorming with ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/brainstorming",
+        "summary": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans."
+      },
+      {
+        "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+        "summary": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics."
+      },
+      {
+        "title": "Bring state-of-the-art agentic skills to the edge with Gemma 4",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/",
+        "summary": "Google DeepMind has launched Gemma 4, a family of state-of-the-art open models designed to enable multi-step planning and autonomous agentic workflows directly on-device. The release includes the Google AI Edge Gallery for experimenting with \"Agent Skills\" and the LiteRT-LM library, which offers a significant speed boost and structured output for developers. Available under an Apache 2.0 license, Gemma 4 supports over 140 languages and is compatible with a wide range of hardware, including mobile devices, desktops, and IoT platforms like Raspberry Pi."
+      },
+      {
+        "title": "xAI joins SpaceX",
+        "source": "xAI",
+        "url": "https://x.ai/news/xai-joins-spacex",
+        "summary": "SpaceX announced today that it has acquired xAI."
+      },
+      {
+        "title": "Grok Imagine API",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-imagine-api",
+        "summary": "State-of-the-art video generation across quality, cost, and latency."
+      },
+      {
+        "title": "xAI Raises $20B Series E",
+        "source": "xAI",
+        "url": "https://x.ai/news/series-e",
+        "summary": "xAI is rapidly accelerating its progress in building advanced AI."
+      },
+      {
+        "title": "Introducing Grok Business and Grok Enterprise",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-business",
+        "summary": "The best assistant in the world is now Enterprise ready."
+      },
+      {
+        "title": "Supporting the DOW's mission with AI",
+        "source": "xAI",
+        "url": "https://x.ai/news/us-gov-dept-of-war",
+        "summary": "xAI is proud to be selected by the US Department of War to deliver Frontier AI"
+      },
+      {
+        "title": "Grok Collections API",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-collections-api",
+        "summary": "State-of-the-art RAG system built directly into our API."
+      },
+      {
+        "title": "Grok Voice Agent API",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-voice-agent-api",
+        "summary": "Bringing the power of Grok Voice to all developers."
+      },
+      {
+        "title": "xAI and El Salvador Pioneer the World's First Nationwide AI Education Program",
+        "source": "xAI",
+        "url": "https://x.ai/news/el-salvador-partnership",
+        "summary": "Announcing Our Transformative Partnership with the Government of El Salvador."
+      },
+      {
+        "title": "How exposed is your code? Find out in minutes\u2014for free",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
+        "summary": "The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.\nThe post How exposed is your code? Find out in minutes\u2014for free appeared first on The GitHub Blog."
+      },
+      {
+        "title": "GitHub for Beginners: Getting started with GitHub Pages",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
+        "summary": "Learn how to create a free website for any repository on GitHub Pages.\nThe post GitHub for Beginners: Getting started with GitHub Pages appeared first on The GitHub Blog."
+      },
+      {
+        "title": "Claude Mythos #3: Capabilities and Additions",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/2ziYGFK7QmbbLgBoP/claude-mythos-3-capabilities-and-additions",
+        "summary": "To round out coverage of Mythos, today covers capabilities other than cyber, and anything else additional not covered by the first two posts, including new reactions and details.\nPost one covered the model card, post two covered cybersecurity.\nThere really is a lot to get through.\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding AI had an additional writeup of Project Glasswing I missed last time. I liked the metaphor of Opus as a butter knife and Mythos as a steak knife. Yes, technically you can do it all with the butter knife, but you won\u2019t.\nAs Dan Schwarz reminds us, not only does AI 2027 roughly have the timelin"
+      },
+      {
+        "title": "Anthropic repeatedly accidentally trained against the CoT, demonstrating inadequate processes",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/K8FxfK9GmJfiAhgcT/anthropic-repeatedly-accidentally-trained-against-the-cot",
+        "summary": "It turns out that Anthropic accidentally trained against the chain of thought of Claude Mythos Preview in around 8% of training episodes. This is at least the second independent incident in which Anthropic accidentally exposed their model's CoT to the oversight signal. In more powerful systems, this kind of failure would jeopardize safely navigating the intelligence explosion. It's crucial to build good processes to ensure development is executed according to plan, especially as human oversight becomes spread thin over increasing amounts of potentially untrusted and sloppy AI labor.This partic"
+      },
+      {
+        "title": "Meaningful Questions Have Return Types",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/emsDJNmxBu8Tt6PHt/meaningful-questions-have-return-types",
+        "summary": "One way intellectual progress stalls is when you are asking the Wrong Questions. Your question is nonsensical, or cuts against the way reality works. Sometimes you can avoid this by learning more about how the world works, which implicitly answers some question you had, but if you want to make real progress you have to develop the skill of Righting a Wrong Question. This is a classic, old-school rationalist idea. The standard examples are asking about determinism, or free will, or consciousness. The standard fix is to go meta. Ask yourself, \"Why do I feel like I have free will\" or \"Why do I th"
+      },
+      {
+        "title": "Who Killed Common Law?",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/hFrn6789nBYjEBS3N/who-killed-common-law",
+        "summary": "The classical undergraduate humanities curriculum in America was destroyed and replaced over the course of the twentieth century. The destruction is usually blamed on postmodernism in the 1970s, but the replacement was already well under way by then. Neither the attackers nor the defenders of the old curriculum can (or will) explain what happened and why.\nAllan Bloom's essay \"Our Listless Universities\" (the 1982 essay later expanded into The Closing of the American Mind) is the most famous attempt at a defense, and it reads at first as though it has no argument at all: it asserts the superiori"
+      },
+      {
+        "title": "Annoyingly Principled People, and what befalls them",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/xG9Y2Mct7uZyt98yb/annoyingly-principled-people-and-what-befalls-them",
+        "summary": "Here are two beliefs that are sort of haunting me right now:Folk who try to push people to uphold principles (whether established ones or novel ones), are kinda an important bedrock of civilization.Also, those people are really annoying and often, like, a little bit crazyAnd these both feel fairly important.I\u2019ve learned a lot from people who have some kind of hobbyhorse about how society is treating something as okay/fine, when it\u2019s not okay/fine. When they first started complaining about it, I\u2019d be like \u201cwhy is X such a big deal to you?\u201d. Then a few years later I\u2019ve thought about it more and "
+      },
+      {
+        "title": "You read about AI agents every morning. 7,000+ teams deployed this one. (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://getviktor.com/?utm_source=tldrai&amp;utm_medium=newsletter&amp;utm_campaign=TLDRAIPrimary05122026&amp;dub_id=FVnAVfPOw10YDum4",
+        "summary": "Every TLDR AI issue features a new framework or eval harness. Viktor is in production: 7,000+ teams use it from Slack across 3,000+ tools.Marketing asks Viktor to pull Meta Ads spend against Stripe revenue and send a PDF report. Engineering asks it to review GitHub PRs and cross-reference blockers in Linear. Finance asks it to flag unpaid QuickBooks invoices over $5K.Viktor runs real workflows in company systems, not demo loops.SOC 2 certified. Your data never trains models.\"Viktor is like the most capable all-round colleague you can imagine.\" Sam Kopelman, CEO, GivrStart free. $100 in credits"
+      },
+      {
+        "title": "Anthropic tests Claude Code upgrade to rival Codex Superapp (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/anthropic-tests-claude-code-upgrade-to-rival-codex-superapp/?utm_source=tldrai",
+        "summary": "Anthropic is planning to overhaul the Claude Code desktop experience. It is also developing a 'Coordinator Mode' that would let Claude act as an orchestrator and delegate implementation work across parallel sub-agents while focusing on planning and synthesis. Claude Code already supports sub-agents and experimental agent teams in the CLI, but the new mode brings that capability into the desktop app with a more structured interface."
+      },
+      {
+        "title": "OpenAI develops unified Codex app and new Scratchpad feature (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/openai-develops-unified-codex-app-and-new-scratchpad-feature/?utm_source=tldrai",
+        "summary": "OpenAI's new Scratchpad feature for Codex allows users to trigger multiple Codex tasks in parallel from a new UI. The company is moving toward consolidating its product lineup into a single unified application built on top of Codex. There is evidence that the company is building support for managed agents, autonomous processes that can run in the background, check in periodically, and execute multi-step workflows without user input. OpenAI employees have been posting snowflake emojis on essential media, possibly hinting at a model released codenamed Glacier believed to be GPT-5.5."
+      },
+      {
+        "title": "xAI prepares credits system for upcoming Grok Build launch (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/xai-prepares-credits-system-for-upcoming-grok-build-launch/?utm_source=tldrai",
+        "summary": "xAI is developing a credits-based pricing model for Grok Build, its upcoming coding platform, featuring local CLI and remote web interfaces. The addition of Model Arena, which uses multiple agents for task comparison, sets it apart from standard single-model approaches. The credits system remains under development, potentially delaying the full commercial launch, but it aligns with industry trends seen in products like OpenAI's Codex and Anthropic's Claude Code."
+      },
+      {
+        "title": "Claude Mythos #2: Cybersecurity and Project Glasswing (62 minute read)",
+        "source": "TLDR AI",
+        "url": "https://thezvi.substack.com/p/claude-mythos-2-cybersecurity-and?utm_source=tldrai",
+        "summary": "Anthropic will not release its newest, most capable model, Claude Mythos, to the public until our most important software is in a much stronger state. The company claims its cyber capabilities are too dangerous to be made broadly available. It has released the model to key cybersecurity partners to use it to patch as many vulnerabilities as possible. This signals we are entering into a new era."
+      },
+      {
+        "title": "Multi-agent Coordination Patterns: Five Approaches and When to Use Them (13 minute read)",
+        "source": "TLDR AI",
+        "url": "https://claude.com/blog/multi-agent-coordination-patterns?utm_source=tldrai",
+        "summary": "Standardized coordination patterns like Generator-Verifier and Orchestrator-Subagent solve specific reliability issues by separating task execution from quality control. Event-driven architectures use Message Bus or Shared State models to handle asynchronous pipelines and collaborative state management across large agent fleets. Starting with minimal chaining prevents unnecessary complexity and reduces latency in production systems."
+      },
+      {
+        "title": "The AI Labs Have A $7 Doritos Problem (17 minute read)",
+        "source": "TLDR AI",
+        "url": "https://vinvashishta.substack.com/p/the-ai-labs-have-a-7-doritos-problem?utm_source=tldrai",
+        "summary": "Doritos prices jumped nearly 50% between 2021 and early 2026, with some bags crossing $7, a lot for junk food. Walmart told PepsiCo to cut prices, but PepsiCo tried everything but. It didn't work, and revenue turned negative for the first time in over a decade. Consumers and enterprises are evaluating AI subscriptions as if they were a $7 bag of chips, and many are deciding to skip it."
+      },
+      {
+        "title": "How Missions Work (5 minute read)",
+        "source": "TLDR AI",
+        "url": "https://factory.ai/news/missions-architecture?utm_source=tldrai",
+        "summary": "Single agents all eventually run into the problem of becoming less focused and reliable as they run longer and gain more context. Most real projects are too broad and complex for a single context window to hold. Missions is a system that breaks down large work into focused units handled by fresh agents with narrowly scoped goals, shared state, and explicit validation. This post explains the architecture behind Missions, why agent context shapes every design decision, how separation of concerns and test-driven development at two levels produce reliable multi-day autonomous work, and how the sys"
+      },
+      {
+        "title": "Zig 0.16.0 release notes: \"Juicy Main\"",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/juicy-main/#atom-everything",
+        "summary": "Zig 0.16.0 release notes: &quot;Juicy Main&quot;\nZig has really good release notes - comprehensive, detailed, and with relevant usage examples for each of the new features.\nOf particular note in the newly released Zig 0.16.0 is what they are calling \"Juicy Main\" - a dependency injection feature for your program's main() function where accepting a process.Init parameter grants access to a struct of useful properties:\nconst std = @import(\"std\");\n\npub fn main(init: std.process.Init) !void {\n    /// general purpose allocator for temporary heap allocations:\n    const gpa = init.gpa;\n    /// default"
+      },
+      {
+        "title": "Trusted access for the next era of cyber defense",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything",
+        "summary": "Trusted access for the next era of cyber defense\nOpenAI's answer to Claude Mythos appears to be a new model called GPT-5.4-Cyber:\n\nIn preparation for increasingly more capable models from OpenAI over the next few months, we are fine-tuning our models specifically to enable defensive cybersecurity use cases, starting today with a variant of GPT\u20115.4 trained to be cyber-permissive: GPT\u20115.4\u2011Cyber.\n\nThey're also extending a program they launched in February (which I had missed) called Trusted Access for Cyber, where users can verify their identity (via a photo of a government-issued ID processed by"
+      },
+      {
+        "title": "Gemma 4 audio with MLX",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything",
+        "summary": "Thanks to a tip from Rahim Nathwani, here's a uv run recipe for transcribing an audio file on macOS using the 10.28 GB Gemma 4 E2B model with MLX and mlx-vlm:\nuv run --python 3.13 --with mlx_vlm --with torchvision --with gradio \\\n  mlx_vlm.generate \\\n  --model google/gemma-4-e2b-it \\\n  --audio file.wav \\\n  --prompt \"Transcribe this audio\" \\\n  --max-tokens 500 \\\n  --temperature 1.0\n\n\n  \n  Your browser does not support the audio element.\n\nI tried it on this 14 second .wav file and it output the following:\n\nThis front here is a quick voice memo. I want to try it out with MLX VLM. Just going to se"
+      },
+      {
+        "title": "[AINews] Humanity's Last Gasp",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-humanitys-last-gasp",
+        "summary": "a quiet day lets us reflect on work in the time of AI"
+      },
+      {
+        "title": "Notion\u2019s Token Town: 5 Rebuilds, 100+ Tools, MCP vs CLIs and the Software Factory Future \u2014 Simon Last & Sarah Sachs of Notion",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/notion",
+        "summary": "Notion's cofounder and head of AI peel back the curtains to talk about finally shipping the Knowledge Work AI agents the world has been waiting for."
+      },
+      {
+        "title": "[AINews] Top Local Models List - April 2026",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-top-local-models-list-april",
+        "summary": "a quiet day lets us check in on the local models scene"
+      }
+    ],
+    "rejected_summary": "Excluded board appointments, consumer finance guides, pure model research papers, fundraising announcements, and older articles from January-March 2026 that don't provide current insights for builders.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
