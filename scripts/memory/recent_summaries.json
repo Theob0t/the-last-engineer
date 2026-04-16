@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-08",
-    "summary": "How and When to Use Subagents in Claude Code (Claude Blog)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Claude Code v2.1.94: Default High Effort + Bedrock Mantle Support (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Google ADK SkillToolset: 90% Token Reduction Through Progressive Disclosure (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "I Still Prefer MCP Over Skills: Why Architecture Matters (TLDR AI)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "LLM Wiki Pattern: Build Persistent Knowledge Bases with Agents (TLDR AI)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Continual Learning for AI Agents: Model, Harness, or Context? (TLDR AI)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "GLM-5.1: 754B Parameter MIT-Licensed Model via OpenRouter (Simon Willison)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "SQLite WAL Mode Works Fine Across Docker Containers (Simon Willison)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Project Glasswing: Claude Mythos Too Dangerous for Public Release (Simon Willison)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Claude Mythos Preview System Card: Unprecedented Reliability and Alignment (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "My Picture of the Present in AI: April 2026 Scenario Forecast (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "We're Actually Running Out of Benchmarks to Upper Bound AI (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Extreme Harness Engineering: OpenAI's Dark Factory Revealed (Latent Space)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Anthropic Hits $30B ARR as Claude Mythos Stays Under Wraps (Latent Space)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Anthropic Acquires Biotech Startup Coefficient Bio for $400M (TLDR AI)"
-  },
-  {
-    "date": "2026-04-08",
-    "summary": "Assessing Claude Mythos Preview's Cybersecurity Capabilities (Anthropic Red Team)"
-  },
-  {
     "date": "2026-04-09",
     "summary": "Claude Managed Agents: Get to Production 10x Faster (Claude Blog)"
   },
@@ -334,5 +270,73 @@
   {
     "date": "2026-04-15",
     "summary": "Import AI: Breaking AI Agents and Gradual Human Disempowerment (Jack Clark (Import AI))"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Claude Code Gets Session Management and 1M Context Window (Claude Blog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Claude Code v2.1.110: TUI Mode and Mobile Push Notifications (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "OpenAI Agents SDK Gets Native Sandbox Execution (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Windsurf 2.0: Local and Cloud Agents Working Together (Windsurf Blog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Gemini CLI Introduces Subagents for Task Specialization (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Cursor Adds Interactive Visualizations in Canvas Mode (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Building a Personal Command Center with GitHub Copilot CLI (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Cursor's Growth Team: 5% PLG Increase Through Vercel Experimentation (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Build Agents That Never Forget with Structured Memory (TLDR AI)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Gemini 3.1 Flash TTS: Prompt-Directed Speech Generation (Simon Willison)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Current AIs Seem Pretty Misaligned to Me (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "RIP Pull Requests (2005-2026) (Latent Space)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Measuring Scientific Discovery Agents (TLDR AI)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Defeating Nondeterminism in LLM Inference (TLDR AI)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Kyle Kingsbury on AI Accountability: Humans as Meat Shields (Simon Willison)"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "Do Not Conquer What You Cannot Defend (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-16",
+    "summary": "John Gruber: Apple's App Store Edge Is Waning (Simon Willison)"
   }
 ]

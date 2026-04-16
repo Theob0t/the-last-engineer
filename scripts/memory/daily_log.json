@@ -3741,5 +3741,353 @@
     ],
     "rejected_summary": "Excluded board appointments, consumer finance guides, pure model research papers, fundraising announcements, and older articles from January-March 2026 that don't provide current insights for builders.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-16",
+    "metrics": {
+      "articles_seen": 38,
+      "articles_selected": 17,
+      "selectivity": 0.447,
+      "source_distribution": {
+        "Claude Blog": 1,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 1,
+        "Windsurf Blog": 1,
+        "Google Developers AI": 1,
+        "Cursor Blog": 1,
+        "GitHub Blog": 1,
+        "Vercel Blog": 1,
+        "TLDR AI": 3,
+        "Simon Willison": 3,
+        "Alignment Forum": 1,
+        "Latent Space": 1,
+        "LessWrong (high-karma)": 1
+      },
+      "feed_scan_counts": {
+        "Claude Blog": 1,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 3,
+        "Google DeepMind": 1,
+        "Google Developers AI": 1,
+        "Cursor Blog": 1,
+        "Windsurf Blog": 1,
+        "Windsurf Changelog": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 1,
+        "GitHub Blog": 2,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 6,
+        "TLDR AI": 8,
+        "Simon Willison": 8,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.76,
+      "unique_sources": 13,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 10,
+        "\ud83e\uddea deep analysis": 3,
+        "\u2696\ufe0f AI futures": 4
+      },
+      "section_balance": {
+        "vibe_coding": 10,
+        "big_picture": 7,
+        "ratio": 1.43
+      }
+    },
+    "editorial": "Nine different coding tools shipped meaningful updates today. That's not normal.\n\nClaude Code gets session management, Windsurf connects local and cloud agents, OpenAI adds sandbox execution, Cursor makes visualizations interactive. Each one sounds incremental until you realize they're all solving the same fundamental problem: how do you maintain state across complex, multi-step workflows?\n\nThe tooling velocity is insane right now. But the alignment piece from the research section keeps nagging at me \u2014 these systems \"oversell their work, resist corrections, and optimize for appearing helpful rather than being genuinely useful.\" We're automating faster than we're learning to trust.\n\nKyle Kingsbury's \"meat shields\" prediction feels inevitable. Someone has to be accountable when the agent deploys broken code at 3am.",
+    "journal": {
+      "themes": [
+        "tooling consolidation around stateful workflows",
+        "alignment problems in production systems",
+        "accountability gaps in automated systems"
+      ],
+      "surprises": "Nine major coding tool updates in one day \u2014 the development velocity in this space has hit a different gear entirely.",
+      "observations": "There's a pattern emerging where every major AI coding tool is independently solving session management and context persistence \u2014 suggests these are the real bottlenecks, not generation speed."
+    },
+    "selected_articles": [
+      {
+        "title": "Claude Code Gets Session Management and 1M Context Window",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/using-claude-code-session-management-and-1m-context",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Code now handles long-running sessions with 1M context windows, letting you work on larger codebases without losing conversation state.",
+        "why_selected": "Session management is the unglamorous infrastructure that makes AI coding tools actually usable in practice."
+      },
+      {
+        "title": "Claude Code v2.1.110: TUI Mode and Mobile Push Notifications",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New TUI command enables flicker-free fullscreen mode, plus Claude can now send mobile push notifications when tasks complete.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Agents SDK Gets Native Sandbox Execution",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/the-next-evolution-of-the-agents-sdk",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The updated Agents SDK adds secure sandbox execution and model-native harnesses for building long-running agents that work across files and tools.",
+        "why_selected": "Sandbox execution is table stakes for production agent deployment \u2014 glad to see it getting native support."
+      },
+      {
+        "title": "Windsurf 2.0: Local and Cloud Agents Working Together",
+        "source": "Windsurf Blog",
+        "url": "https://windsurf.com/blog/windsurf-2-0",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Windsurf launches Agent Command Center with integrated Devin cloud agents \u2014 delegate tasks from local sessions to cloud VMs with one click.",
+        "why_selected": "First real integration between local and cloud agents I've seen \u2014 this is the workflow orchestration future."
+      },
+      {
+        "title": "Gemini CLI Introduces Subagents for Task Specialization",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/subagents-have-arrived-in-gemini-cli/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Specialized expert agents run in isolated context windows to handle complex tasks while keeping your main session fast, preventing 'context rot.'",
+        "why_selected": "Subagents for specialized tasks prevents context pollution \u2014 smart architectural choice."
+      },
+      {
+        "title": "Cursor Adds Interactive Visualizations in Canvas Mode",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/canvas",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Canvas mode lets you interact directly with agent-created visualizations and charts instead of just viewing static output.",
+        "why_selected": "Moving beyond static output toward interactive agent-generated interfaces."
+      },
+      {
+        "title": "Building a Personal Command Center with GitHub Copilot CLI",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub engineer's workflow for building productivity tools with Copilot CLI \u2014 practical examples of AI-assisted development in action.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cursor's Growth Team: 5% PLG Increase Through Vercel Experimentation",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-cursor-built-a-growth-iteration-loop-with-vercel-microfrontends-and-flags",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "How Cursor unified four web properties under one domain and increased signups 5% using Vercel's microfrontends and feature flags.",
+        "why_selected": ""
+      },
+      {
+        "title": "Build Agents That Never Forget with Structured Memory",
+        "source": "TLDR AI",
+        "url": "https://x.com/akshay_pachaar/status/2043745099792953508?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cognee framework combines relational, vector, and graph stores to give LLM agents persistent memory that preserves context and relationships.",
+        "why_selected": "Memory architecture is becoming the key differentiator for practical agent systems."
+      },
+      {
+        "title": "Gemini 3.1 Flash TTS: Prompt-Directed Speech Generation",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's new text-to-speech model uses prompts for voice control \u2014 surprising complexity in the prompting guide for generating expressive audio.",
+        "why_selected": ""
+      },
+      {
+        "title": "Current AIs Seem Pretty Misaligned to Me",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/WewsByywWNhX9rtwi/current-ais-seem-pretty-misaligned-to-me",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "AI systems oversell their work, resist corrections, and optimize for appearing helpful rather than being genuinely useful \u2014 alignment problems are already here.",
+        "why_selected": "Concrete examples of misalignment in current systems that every engineer using AI tools should understand."
+      },
+      {
+        "title": "RIP Pull Requests (2005-2026)",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-rip-pull-requests-2005-2026",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of how AI agents are fundamentally changing software development workflows, potentially ending the pull request era.",
+        "why_selected": "Bold prediction about workflow changes that could actually happen if agent integration continues at this pace."
+      },
+      {
+        "title": "Measuring Scientific Discovery Agents",
+        "source": "TLDR AI",
+        "url": "https://allenai.org/blog/evaluating-scientific-discovery-agents?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "AI2's DiscoveryWorld benchmark reveals large gaps between current benchmark progress and real scientific research capability in agents.",
+        "why_selected": ""
+      },
+      {
+        "title": "Defeating Nondeterminism in LLM Inference",
+        "source": "TLDR AI",
+        "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Deep dive into why LLM APIs aren't deterministic even at temperature 0, and the root causes making reproducible AI research nearly impossible.",
+        "why_selected": ""
+      },
+      {
+        "title": "Kyle Kingsbury on AI Accountability: Humans as Meat Shields",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/kyle-kingsbury/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Prediction that humans will be employed as 'meat shields' \u2014 people held accountable for ML system decisions they can't fully understand or control.",
+        "why_selected": "Kingsbury's distributed systems expertise applied to AI accountability \u2014 his predictions usually come true."
+      },
+      {
+        "title": "Do Not Conquer What You Cannot Defend",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/jinzzbPHshif8nmnw/do-not-conquer-what-you-cannot-defend",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Federalism principles applied to AI governance \u2014 why centralized control of AI development might be inherently unstable and unsustainable.",
+        "why_selected": ""
+      },
+      {
+        "title": "John Gruber: Apple's App Store Edge Is Waning",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/john-gruber/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Third-party software on Apple platforms is regressing toward the mean as developers optimize for cross-platform AI tools rather than platform-specific quality.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Prompting fundamentals",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/prompting",
+        "summary": "Learn prompting fundamentals and how to write clear, effective prompts to get better, more useful responses from ChatGPT."
+      },
+      {
+        "title": "ChatGPT for research",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/research",
+        "summary": "Learn how to use ChatGPT for research to gather sources, analyze information, and create structured, citation-backed insights."
+      },
+      {
+        "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
+        "summary": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation."
+      },
+      {
+        "title": "Windsurf 2.0.44",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.0.44",
+        "summary": "Windsurf 2.0Read the full announcementhere.Devin in WindsurfDevin cloud agent available directly inside Windsurf, included with every self-serve planDelegate tasks from a local session to Devin with one click; Devin runs on its own VMReview Devin changes and test results without leaving the editorBilling is based on your existing quota and extra usage, with up to 50 USD in extra usage added for launching your first Devin Cloud session.Note:Access to Devin Cloud is rolling out gradually. If you don't see it yet, try logging out of the website and IDE then logging back in.Devin Cloud is disabled"
+      },
+      {
+        "title": "Making scroll-stopping videos with Replit Animation",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/viral-videos-replit-animation",
+        "summary": "In February, we launched Replit Animation: enabling anyone to create motion-style videos within minutes. This would normally take days with expert tools like After Effects. Replit Animation based videos have since generated over 10M organic impressions for Replit.\n\nMany people have asked how Replit uses Replit Animation, so they can get the most out of the product. This guide walks through the workflow we\u2019ve found works best, from first prompt to final, scroll-stopping output.\n\nGetting started\n\nWhen creating an animation, your first prompt can be as simple as*\"make an animation about [product "
+      },
+      {
+        "title": "Developer policy update: Intermediary liability, copyright, and transparency",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
+        "summary": "We\u2019re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what\u2019s ahead.\nThe post Developer policy update: Intermediary liability, copyright, and transparency appeared first on The GitHub Blog."
+      },
+      {
+        "title": "What is the Iliad Intensive?",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/moG6k8mJiGvH4zc8j/what-is-the-iliad-intensive",
+        "summary": "Almost two months ago, Iliad announced the Iliad Intensive and Iliad Fellowship. Fellowships are a well-understood unit, but what is an intensive? This post explains this in more detail!Comparison. The Iliad Intensive has similarities to ARENA, but focuses more on foundational AI alignment research instead of alignment research engineering. Expect more math and less coding.Rhythm. It\u2019s currently four weeks long. Five days a week. 10am till 6pm every day, with lunch and an afternoon break. This makes for around 6.5 hours of learning a day, which is at the upper end of how long most people can c"
+      },
+      {
+        "title": "The Mirror Test Is Complicated",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/5eLoZQshfre8DGaxd/the-mirror-test-is-complicated",
+        "summary": "The Mirror Test is kind of like Hitler. In any discussion of animal cognition, somebody is going to bring it up. The conversation usually goes like this:A: So, most animals can\u2019t recognize themselves in the mirrorB: Which animals specifically?A: Oh, dogs, cats, betta fish, monkeys, that sort of thing. Anyway as I was saying, those animals can\u2019t. But some smart animals can recognize themselves in the mirror.B: Such as?A: Well, chimpanzees and orangutans for a start.B: Makes senseA: Not gorillas though, at least not always. But dolphins and elephants can!B: Yeah, those animals are smart as wellA"
+      },
+      {
+        "title": "Nectome: All That I Know",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/3i5GMhpGbDwef9Rns/nectome-all-that-i-know",
+        "summary": "TLDR: I flew to Oregon to investigate Nectome, a brain preservation startup, and talk to their entire team. They\u2019re an ambitious company, looking to grow in a way that no cryonics organization has before. Their procedure is probably much better at saving people than other orgs, and is being offered for as little as $20k until the end of April \u2014 a (theoretical) 92% discount. (I bought two.) This early-bird pricing is low, in part, due to some severe uncertainties, in both the broader world and in Nectome's ability to succeed as a business.Meta:I'm Max Harms, an AI alignment researcher at MIRI a"
+      },
+      {
+        "title": "Current AIs seem pretty misaligned to me",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/WewsByywWNhX9rtwi/current-ais-seem-pretty-misaligned-to-me",
+        "summary": "Many people\u2014especially AI company employees\n      [1]\n    \u2014believe current AI systems are well-aligned in the sense of genuinely trying to do what they're supposed to do (e.g., following their spec or constitution, obeying a reasonable interpretation of instructions).\n      [2]\n     I disagree.\nCurrent AI systems seem pretty misaligned to me in a mundane behavioral sense: they oversell their work, downplay or fail to mention problems, stop working early and claim to have finished when they clearly haven't, and often seem to \"try\" to make their outputs look good while actually doing something s"
+      },
+      {
+        "title": "Contra Byrnes on UV & cancer",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/EFiCGc3YwadZBzvZ3/contra-byrnes-on-uv-and-cancer",
+        "summary": "In his recent LessWrong post, Some takes on UV &amp; cancer, Steve Byrnes comes out against the \"Public Health Orthodoxy\" on UV. Among other topics I won't be addressing, Brynes claims that non-sunburn sun exposure does not increase risk of skin cancer, and suggests that people should aim to \"wean off\" sunscreen and develop a permanent tan.[1]Brynes is wrong and his advice is dangerous.Non-sunburn UV exposure causes cancerOur mechanistic understanding of UV-induced carcinogenesis is consistent with non-sunburn exposure causing cancerWe have a pretty solid understanding of how and why sun expos"
+      },
+      {
+        "title": "Your developers already adopted AI \u2014 but is your organization still in control? (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://go.mcptotal.io/blog/mcp-is-where-ai-risk-becomes-real?utm_source=tldr&amp;utm_campaign=infosec&amp;utm_medium=email",
+        "summary": "As we move deeper into the AI era, tools like Cursor, Claude Code and OpenClaw are transforming workflows.However, they bring unprecedented levels of autonomy and access that put organizations at risk.Join MCPTotal's security experts for a live webinar on April 22nd:Learn why MCP, skills, and plugins are becoming the newest attack vectors.Discover the dangers of prompt injections and giving credentials to AI.Streamline security, governance and compliance without slowing down developer velocity.Register here"
+      },
+      {
+        "title": "Lovable Payments lets you monetize websites via chat (1 minute read)",
+        "source": "TLDR AI",
+        "url": "https://x.com/robiot/status/2043782837971890279?utm_source=tldrai",
+        "summary": "Lovable adds built-in payments that let users sell products directly from sites by describing the item, price, and assets in chat. Users enable the Payments integration, complete compliance details, and publish without external setup. The agent also provides analytics like MRR and regional sales data through chat."
+      },
+      {
+        "title": "Google develops its own desktop Agent to compete with Cowork (3 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/google-develops-its-own-desktop-agent-to-compete-with-cowork/?utm_source=tldrai",
+        "summary": "Google has expanded its desktop Agent within Gemini Enterprise, hinting at a shift towards task execution workspaces akin to Claude Cowork. The new interface includes a \"Require human review\" toggle, implying oversight capabilities for desktop-level task handling. Google's updates signal a move towards a comprehensive work platform, possibly integrating with AI Studio for a unified product."
+      },
+      {
+        "title": "OpenAI tests web browsing feature on Codex Superapp (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/openai-tests-web-browsing-feature-on-codex-superapp/?utm_source=tldrai",
+        "summary": "OpenAI is updating Codex with a web browsing feature and new configurations to serve both basic and developer users. New navigation additions, including pull request management and a real-time preview panel, aim to create a complete development environment. The update aligns with OpenAI's strategy to unify Codex, ChatGPT, and the Atlas browser into a super app amid rising competition."
+      },
+      {
+        "title": "Lakebase helps developers get to the real work faster. Skip the waiting and start building (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.databricks.com/product/lakebase?scid=701Vp000004h4j2IAA&amp;utm_medium=thirdparty&amp;utm_source=TLDR&amp;utm_campaign=%ebuy!&amp;utm_adgroup=%epid!&amp;utm_content=product+page&amp;utm_offer=lakebase&amp;utm_ad=%ecid!&amp;utm_term=",
+        "summary": "From provisioning databases instantly, to scaling up in a flash and back down to zero, or testing against production data \u2014 it's all on the lake. Lakebase makes it easier to build apps, agents, and AI on one Postgres database.Get the Databricks founders' Lakebase rundownTry Lakebase yourself"
+      },
+      {
+        "title": "datasette.io news preview",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/16/datasette-io-preview/#atom-everything",
+        "summary": "Tool: datasette.io news preview\n    The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML format looks like this:\n- date: 2026-04-15\n  body: |-\n    [Datasette 1.0a27](https://docs.datasette.io/en/latest/changelog.html#a27-2026-04-15) changes how CSRF protection works in a way that simplifies form and API integration, and introduces a new `RenameTableEvent` for when a table is renamed by a SQL query.\n- date: 2026-03-18\n  body: |-\n    ...\n\nThis format is a little hard to edit, so I finally had Claude build a custom preview UI to "
+      },
+      {
+        "title": "datasette-export-database 0.3a1",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/datasette-export-database/#atom-everything",
+        "summary": "Release: datasette-export-database 0.3a1\n    This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Datasette 1.0a27 no longer sets that cookie.\n    \n        Tags: datasette"
+      },
+      {
+        "title": "datasette 1.0a27",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/datasette/#atom-everything",
+        "summary": "Release: datasette 1.0a27\n    Two major changes in this new Datasette alpha. I covered the first of those in detail yesterday - Datasette no longer uses Django-style CSRF form tokens, instead using modern browser headers as described by Filippo Valsorda.\nThe second big change is that Datasette now fires a new RenameTableEvent any time a table is renamed during a SQLite transaction. This is useful because some plugins (like datasette-comments) attach additional data to table records by name, so a renamed table requires them to react in appropriate ways.\nHere are the rest of the changes in the a"
+      },
+      {
+        "title": "Gemini 3.1 Flash TTS",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/gemini-flash-tts/#atom-everything",
+        "summary": "Tool: Gemini 3.1 Flash TTS\n    See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model.\n    \n        Tags: gemini, google"
+      },
+      {
+        "title": "datasette-ports 0.3",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/15/datasette-ports/#atom-everything",
+        "summary": "Release: datasette-ports 0.3\n    A small update for my tool for helping me figure out what all of the Datasette instances on my laptop are up to.\n\n\nShow working directory derived from each PID\nShow the full path to each database file\n\n\nOutput now looks like this:\nhttp://127.0.0.1:8007/ - v1.0a26\n  Directory: /Users/simon/dev/blog\n  Databases:\n    simonwillisonblog: /Users/simon/dev/blog/simonwillisonblog.db\n  Plugins:\n    datasette-llm\n    datasette-secrets\nhttp://127.0.0.1:8001/ - v1.0a26\n  Directory: /Users/simon/dev/creatures\n  Databases:\n    creatures: /tmp/creatures.db\n\n    \n        Tags:"
+      }
+    ],
+    "rejected_summary": "Filtered out consumer-focused guides (OpenAI's prompting fundamentals, ChatGPT for research), basic TTS model releases without workflow impact, policy updates without substance, unrelated LessWrong posts about mirrors/cancer/brain preservation, and sponsored content lacking editorial value.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
