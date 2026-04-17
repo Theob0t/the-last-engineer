@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-09",
-    "summary": "Claude Managed Agents: Get to Production 10x Faster (Claude Blog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Claude Code v2.1.97: Focus View and Git Worktree Support (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Bugbot Now Self-Improves with Learned Rules (Cursor Blog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Beyond the App: Using Vibe Coding to Ship Decks, Dashboards, and Launch Assets (Replit Blog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Zero Data Retention on AI Gateway (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "How Carta Healthcare Gets AI to Reason Like a Clinical Abstractor (Claude Blog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Google Tests Jules V2 Agent for High-Level Development Goals (TLDR AI)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Meta's Muse Spark Model Debuts with Competitive Benchmarks (Simon Willison)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "AIs Can Now Handle Massive SWE Tasks: Timeline Update Towards 30% Automation by 2028 (TLDR AI)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "The Next Phase of Enterprise AI (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Do Not Be Surprised If LessWrong Gets Hacked (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "AI as a Trojan Horse Race (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "We Can Prevent Progress: Conceptual Clarity and Inspiration from the FDA (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Hedging and Survival-Weighted Planning (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Role-playing vs Self-modelling in AI Systems (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-09",
-    "summary": "Meta Superintelligence Labs Announces Muse Spark on New Stack (Latent Space)"
-  },
-  {
     "date": "2026-04-10",
     "summary": "The Advisor Strategy: Give Agents an Intelligence Boost (Claude Blog)"
   },
@@ -338,5 +274,69 @@
   {
     "date": "2026-04-16",
     "summary": "John Gruber: Apple's App Store Edge Is Waning (Simon Willison)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Claude Opus 4.7: New SOTA Model with xhigh Effort Level in Claude Code (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Best Practices for Using Claude Opus 4.7 with Claude Code (Claude Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Codex for (Almost) Everything: Computer Use and In-App Browsing (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Multi-Agent Kernel Optimization: 38% CUDA Performance Gains (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Better AI Models Enable More Ambitious Work (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "MaxText Expands to SFT and RL on Single-Host TPUs (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Google Skills in Chrome: Save and Reuse AI Prompts Across Websites (Google (via TLDR AI))"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "A New Programming Model for Durable Execution (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "How GitBook Serves 30,000 Sites with Sub-Second Content Updates (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "You Can Only Build Safe ASI if ASI is Globally Banned (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Before He Wrote AI 2027, He Predicted 2026: How Accurate Were His Forecasts? (Asterisk Magazine (via TLDR AI))"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Five Hyperscalers Now Own Over Two-Thirds of Global AI Compute (Epoch AI (via TLDR AI))"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "GPT-Rosalind: OpenAI's Frontier Reasoning Model for Life Sciences (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Accelerating the Cyber Defense Ecosystem with $10M in API Grants (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "You Aren't in Charge of the Overton Window: Politics Is Not Interior Design (LessWrong)"
+  },
+  {
+    "date": "2026-04-17",
+    "summary": "Specialization is a Driver of Natural Ontology (LessWrong)"
   }
 ]

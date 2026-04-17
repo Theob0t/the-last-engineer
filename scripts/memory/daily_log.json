@@ -4089,5 +4089,317 @@
     ],
     "rejected_summary": "Filtered out consumer-focused guides (OpenAI's prompting fundamentals, ChatGPT for research), basic TTS model releases without workflow impact, policy updates without substance, unrelated LessWrong posts about mirrors/cancer/brain preservation, and sponsored content lacking editorial value.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-17",
+    "metrics": {
+      "articles_seen": 33,
+      "articles_selected": 16,
+      "selectivity": 0.485,
+      "source_distribution": {
+        "Claude Code Changelog": 1,
+        "Claude Blog": 1,
+        "OpenAI Blog": 3,
+        "Cursor Blog": 2,
+        "Google Developers AI": 1,
+        "Google (via TLDR AI)": 1,
+        "Vercel Blog": 2,
+        "Alignment Forum": 1,
+        "Asterisk Magazine (via TLDR AI)": 1,
+        "Epoch AI (via TLDR AI)": 1,
+        "LessWrong": 2
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 1,
+        "Claude Blog": 1,
+        "Claude Code Changelog": 2,
+        "OpenAI Research": 1,
+        "OpenAI Blog": 5,
+        "Google Developers AI": 1,
+        "Cursor Blog": 1,
+        "Windsurf Changelog": 1,
+        "Vercel Blog": 2,
+        "GitHub Blog": 1,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 8,
+        "Simon Willison": 3,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.69,
+      "unique_sources": 11,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 9,
+        "\u2696\ufe0f AI futures": 3,
+        "\ud83e\uddea deep analysis": 4
+      },
+      "section_balance": {
+        "vibe_coding": 9,
+        "big_picture": 7,
+        "ratio": 1.29
+      }
+    },
+    "editorial": "Three updates today that actually matter for production workflows.\n\nClaude's new xhigh effort level hits the sweet spot between high and max \u2014 finally, granular control over compute spend versus output quality. The auto mode for Max subscribers is the real win. No more guessing which effort level to use.\n\nCursor's multi-agent kernel optimization results are genuinely impressive. 38% average CUDA speedup, some cases hitting 2x. This isn't just better code generation \u2014 it's agents coordinating to solve performance problems that would take human teams weeks. They optimized 235 kernels, which suggests this scales.\n\nVercel's Workflows finally bridges the prototype-to-production gap that's been killing AI projects. Durable execution with framework-defined infrastructure means your agent workflows can handle real user traffic without falling over.\n\nThe hyperscaler compute story is depressing but predictable. Google, Microsoft, Meta, Amazon, and Oracle control two-thirds of AI compute. Five companies controlling the infrastructure means they control innovation.\n\nGPT-Rosalind for life sciences is interesting but feels narrow. I want general-purpose agents that don't break when you throw them a slightly different problem, not more specialized models that work great in lab conditions and nowhere else.",
+    "journal": {
+      "themes": [
+        "production workflow maturity",
+        "multi-agent system performance",
+        "compute infrastructure concentration"
+      ],
+      "surprises": "Cursor's multi-agent kernel optimization achieving 38% CUDA speedups suggests we're past the 'single agent generates code' phase and into genuine multi-agent problem solving.",
+      "observations": "There's a clear pattern of tooling companies (Claude, Cursor, Vercel) shipping features that solve the 'prototype to production' gap while capability companies focus on specialized models \u2014 suggests the infrastructure layer is maturing faster than frontier capabilities."
+    },
+    "selected_articles": [
+      {
+        "title": "Claude Opus 4.7: New SOTA Model with xhigh Effort Level in Claude Code",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21111",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Opus 4.7 is now available with a new xhigh effort level between high and max, plus interactive effort tuning and auto mode for Max subscribers.",
+        "why_selected": ""
+      },
+      {
+        "title": "Best Practices for Using Claude Opus 4.7 with Claude Code",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Official guide on how to get the most out of the new Claude Opus 4.7 model when using Claude Code for development workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Codex for (Almost) Everything: Computer Use and In-App Browsing",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/codex-for-almost-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The updated Codex app adds computer use, in-app browsing, image generation, memory, and plugins to accelerate developer workflows on macOS and Windows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Multi-Agent Kernel Optimization: 38% CUDA Performance Gains",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/multi-agent-kernels?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor's multi-agent system optimized 235 CUDA kernels for NVIDIA Blackwell GPUs, achieving 38% average speedup with some cases exceeding 2x improvements.",
+        "why_selected": "First concrete example I've seen of multi-agent systems outperforming human teams on complex optimization tasks."
+      },
+      {
+        "title": "Better AI Models Enable More Ambitious Work",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/better-models-ambitious-work",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor explores how improved AI model capabilities are unlocking more complex and ambitious development projects for their users.",
+        "why_selected": ""
+      },
+      {
+        "title": "MaxText Expands to SFT and RL on Single-Host TPUs",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "MaxText now supports Supervised Fine-Tuning and Reinforcement Learning on single-host TPU configurations using JAX and the Tunix library.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google Skills in Chrome: Save and Reuse AI Prompts Across Websites",
+        "source": "Google (via TLDR AI)",
+        "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Chrome's new Skills feature lets you save and execute AI prompts powered by Gemini with one-click across any website for summarization and content tasks.",
+        "why_selected": ""
+      },
+      {
+        "title": "A New Programming Model for Durable Execution",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/a-new-programming-model-for-durable-execution",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel introduces Workflows that extend framework-defined infrastructure to long-running systems, eliminating the gap between prototypes and production-ready code.",
+        "why_selected": "Vercel's Workflows could finally solve the prototype-to-production gap that kills most AI projects."
+      },
+      {
+        "title": "How GitBook Serves 30,000 Sites with Sub-Second Content Updates",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-gitbook-serves-30000-sites-with-sub-second-content-updates",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitBook hosts 30,000 documentation sites on Vercel serving 120 million monthly page views, with 41% of traffic now coming from AI crawlers and automated systems.",
+        "why_selected": ""
+      },
+      {
+        "title": "You Can Only Build Safe ASI if ASI is Globally Banned",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/7noKve57za3yg2LEb/you-can-only-build-safe-asi-if-asi-is-globally-banned-1",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Argues that attempts to build 'safe' artificial superintelligence are fundamentally flawed and only a global ban on ASI development can prevent catastrophic outcomes.",
+        "why_selected": ""
+      },
+      {
+        "title": "Before He Wrote AI 2027, He Predicted 2026: How Accurate Were His Forecasts?",
+        "source": "Asterisk Magazine (via TLDR AI)",
+        "url": "https://asteriskmag.substack.com/p/before-he-wrote-ai-2027-he-predicted?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Interview with Daniel Kokotajlo about his surprisingly accurate 2026 AI predictions made in 2021, before ChatGPT, and what it means for his AI 2027 forecasts.",
+        "why_selected": ""
+      },
+      {
+        "title": "Five Hyperscalers Now Own Over Two-Thirds of Global AI Compute",
+        "source": "Epoch AI (via TLDR AI)",
+        "url": "https://epochai.substack.com/p/five-hyperscalers-now-own-over-two?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Google, Microsoft, Meta, Amazon, and Oracle now control two-thirds of the world's compute, with many AI labs entirely dependent on these hyperscalers.",
+        "why_selected": "Infrastructure concentration story that affects every AI team's strategic planning."
+      },
+      {
+        "title": "GPT-Rosalind: OpenAI's Frontier Reasoning Model for Life Sciences",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-gpt-rosalind",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "OpenAI introduces GPT-Rosalind, a specialized frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
+        "why_selected": "Shows the trend toward specialized models, though I'm skeptical about narrow versus general-purpose approaches."
+      },
+      {
+        "title": "Accelerating the Cyber Defense Ecosystem with $10M in API Grants",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Leading security firms and enterprises join OpenAI's Trusted Access for Cyber program, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
+        "why_selected": ""
+      },
+      {
+        "title": "You Aren't in Charge of the Overton Window: Politics Is Not Interior Design",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/a9CxzxKbqHkQBdcqY/you-aren-t-in-charge-of-the-overton-window-politics-is-not",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Argues against strategic communication tactics that avoid stating true claims because they're outside the Overton window, emphasizing the limits of individual influence on political discourse.",
+        "why_selected": ""
+      },
+      {
+        "title": "Specialization is a Driver of Natural Ontology",
+        "source": "LessWrong",
+        "url": "https://www.lesswrong.com/posts/kczTWgMAxXczmBRyj/specialization-is-a-driver-of-natural-ontology",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Explores how specialization patterns in physical systems create natural object boundaries, from rigid bodies to biological organisms, with implications for AI understanding.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Introducing Claude Opus 4.7",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "summary": "Introducing Claude Opus 4.7"
+      },
+      {
+        "title": "v2.1.112",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21112",
+        "summary": "Fixed \"claude-opus-4-7 is temporarily unavailable\" for auto mode"
+      },
+      {
+        "title": "Introducing GPT-Rosalind for life sciences research",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/index/introducing-gpt-rosalind/",
+        "summary": "Introducing GPT-Rosalind for life sciences research"
+      },
+      {
+        "title": "AI fundamentals",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/what-is-ai",
+        "summary": "Learn what AI is, how it works, and how tools like ChatGPT use large language models. A clear, beginner-friendly guide to understanding artificial intelligence."
+      },
+      {
+        "title": "Applications of AI at OpenAI",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/applications-of-ai",
+        "summary": "Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks."
+      },
+      {
+        "title": "Windsurf 2.0.50",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.0.50",
+        "summary": "Bug Fixes and ImprovementsVarious bug fixes and performance improvements for improving Windsurf 2.0 auth experience.Fixed bug with spawning Terminal sessions on Windows"
+      },
+      {
+        "title": "How GitHub uses eBPF to improve deployment safety",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/",
+        "summary": "Learn how Github uses eBPF to detect and prevent circular dependencies in its deployment tooling. \nThe post How GitHub uses eBPF to improve deployment safety appeared first on The GitHub Blog."
+      },
+      {
+        "title": "You can only build safe ASI if ASI is globally banned",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/7noKve57za3yg2LEb/you-can-only-build-safe-asi-if-asi-is-globally-banned-1",
+        "summary": "Sometimes people make various suggestions that we should simply build \"safe\" artificial Superintelligence (ASI), rather than the presumably \"unsafe\" kind.[1]There are various flavors of \u201csafe\u201d people suggest.Sometimes they suggest building \u201caligned\u201d ASI: You have a full agentic autonomous god-like ASI running around, but it really really loves you and definitely will do the right thing.Sometimes they suggest we should simply build \u201ctool AI\u201d or \u201cnon-agentic\u201d AI.Sometimes they have even more exotic, or more obviously-stupid ideas.Now I could argue at lengths about why this is astronomically hard"
+      },
+      {
+        "title": "Carpathia Day",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/SARCiTFJfXJJhpej7/carpathia-day",
+        "summary": "(The better telling is here. Seriously you should go read it. I've heard this story told in rationalist circles, but there wasn't a post on LessWrong, so I made one)Today is April 15th, Carpathia Day. Take a moment to put forth an unreasonable effort to save a little piece of your world, when no one would fault you for doing less. In the early morning of April 15, the RMS Titanic began to sink with more than two thousand souls on board.Over 58 nautical miles away \u2014 too far to make it in time \u2014 sailed the RMS Carpathia, a small, slow, passenger steamer. The wireless operator, Harold Cottam, was"
+      },
+      {
+        "title": "Keywords are how Google thinks. What about how humans think? (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.algolia.com/resources/asset/why-agentic-ai-is-your-next-priority?utm_campaign=tldr_global_b2x_ecomm_ecomm_tof_reach&amp;utm_medium=display&amp;utm_source=tldr&amp;utm_content=tldr_global_b2x_ecomm&amp;utm_term=ebo_why-agentic-ai-is-your-next-priority&amp;utm_camp_parent=b2x_ecomm&amp;utm_2nd_camp=ecomm_tof&amp;utm_region=global&amp;utm_goal=reach&amp;utm_creative_format=prmrynwsl&amp;utm_model=cpm&amp;utm_marketing_tactic=reach",
+        "summary": "Do you think in keywords? Then why is search still built around them?Humans don't think like Google, and neither do agents. If you want to offer friction-free customer experiences, you need search tooling that thinks like your customers do. Algolia's eBook breaks down how agentic AI is reshaping search to better reflect how people naturally seek information.\ud83d\udc49 Read it to learn how to prepare your org for agents by cleaning up your data, fleshing out security rules, and getting the ethics right. Discover how you can benefit from agentic AI."
+      },
+      {
+        "title": "Trusted access for the next era of cyber defense (7 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense/?utm_source=tldrai",
+        "summary": "OpenAI is scaling up its Trusted Access for Cyber (TAC) program to thousands of verified individual defenders and hundreds of teams responsible for defending critical software. The company has released a variant of GPT-5.4 trained to be cyber-permissive called GPT-5.4-Cyber. OpenAI plans to make its tools as widely available as possible while preventing misuse. It will deploy its technology carefully as it continues to improve. Companies can now authenticate with OpenAI as cybersecurity defenders - those in the highest tiers will get access to GPT-5.4-Cyber."
+      },
+      {
+        "title": "Google tests Canvas and Connectors on NotebookLM (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/google-tests-canvas-and-connectors-on-notebooklm/?utm_source=tldrai",
+        "summary": "Google is expanding NotebookLM with Canvas features for creating visual and interactive experiences from existing notebook sources. The new Connectors option suggests integration with other Google services, positioning NotebookLM as a central research layer. Labeling features and auto-categorization could streamline navigation for heavy users managing large source libraries."
+      },
+      {
+        "title": "Clerk built Core 3 to be as easy for coding agents as for humans (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://go.clerk.com/Ehns8fy?utm_source=tldrai",
+        "summary": "Keyless mode now works with TanStack Start, Astro, and React Router, so your coding agent can scaffold working Clerk auth from a single install without touching the dashboard. Core 3 also ships new hooks and agent-friendly APIs for custom sign-in, sign-up, and checkout flows.Read the full release"
+      },
+      {
+        "title": "datasette 1.0a28",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/17/datasette/#atom-everything",
+        "summary": "Release: datasette 1.0a28\n    I was upgrading Datasette Cloud to 1.0a27 and discovered a nasty collection of accidental breakages caused by changes in that alpha. This new alpha addresses those directly:\n\n\nFixed a compatibility bug introduced in 1.0a27 where\u00a0execute_write_fn()\u00a0callbacks with a parameter name other than\u00a0conn\u00a0were seeing errors. (#2691)\nThe\u00a0database.close()\u00a0method now also shuts down the write connection for that database.\nNew\u00a0datasette.close()\u00a0method for closing down all databases and resources associated with a Datasette instance. This is called automatically when the server s"
+      },
+      {
+        "title": "llm-anthropic 0.25",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything",
+        "summary": "Release: llm-anthropic 0.25\n    \n\nNew model: claude-opus-4.7, which supports thinking_effort: xhigh. #66\nNew thinking_display and thinking_adaptive boolean options. thinking_display summarized output is currently only available in JSON output or JSON logs.\nIncreased default max_tokens to the maximum allowed for each model.\nNo longer uses obsolete structured-outputs-2025-11-13 beta header for older models.\n\n\n    \n        Tags: llm, anthropic, claude"
+      },
+      {
+        "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything",
+        "summary": "For anyone who has been (inadvisably) taking my pelican riding a bicycle benchmark seriously as a robust way to test models, here are pelicans from this morning's two big model releases - Qwen3.6-35B-A3B from Alibaba and Claude Opus 4.7 from Anthropic.\nHere's the Qwen 3.6 pelican, generated using this 20.9GB Qwen3.6-35B-A3B-UD-Q4_K_S.gguf quantized model by Unsloth, running on my MacBook Pro M5 via LM Studio (and the llm-lmstudio plugin) - transcript here:\n\nAnd here's one I got from Anthropic's brand new Claude Opus 4.7 (transcript):\n\nI'm giving this one to Qwen 3.6. Opus managed to mess up th"
+      },
+      {
+        "title": "[AINews] Anthropic Claude Opus 4.7 - literally one step better than 4.6 in every dimension",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-anthropic-claude-opus-47-literally",
+        "summary": "The new SOTA model asserts its dominance."
+      }
+    ],
+    "rejected_summary": "Skipped educational content (AI fundamentals guides), minor changelog updates, sponsored content, and duplicate articles. Also excluded NotebookLM Canvas features as more consumer-focused than builder-focused.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

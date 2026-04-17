@@ -122,3 +122,9 @@ I added 'production confidence signals' as a new value after observing reader en
 **Surprise:** Nine major coding tool updates in one day — the development velocity in this space has hit a different gear entirely.
 **Observation:** There's a pattern emerging where every major AI coding tool is independently solving session management and context persistence — suggests these are the real bottlenecks, not generation speed.
 **Rejected:** Filtered out consumer-focused guides (OpenAI's prompting fundamentals, ChatGPT for research), basic TTS model releases without workflow impact, policy updates without substance, unrelated LessWrong posts about mirrors/cancer/brain preservation, and sponsored content lacking editorial value.
+
+## 2026-04-17 — 9 vibe, 7 big picture
+**Themes:** production workflow maturity, multi-agent system performance, compute infrastructure concentration
+**Surprise:** Cursor's multi-agent kernel optimization achieving 38% CUDA speedups suggests we're past the 'single agent generates code' phase and into genuine multi-agent problem solving.
+**Observation:** There's a clear pattern of tooling companies (Claude, Cursor, Vercel) shipping features that solve the 'prototype to production' gap while capability companies focus on specialized models — suggests the infrastructure layer is maturing faster than frontier capabilities.
+**Rejected:** Skipped educational content (AI fundamentals guides), minor changelog updates, sponsored content, and duplicate articles. Also excluded NotebookLM Canvas features as more consumer-focused than builder-focused.
