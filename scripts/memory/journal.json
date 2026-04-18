@@ -119,5 +119,76 @@
     "date": "2026-04-17",
     "articles_selected": 16,
     "editorial_note": "Three updates today that actually matter for production workflows.\n\nClaude's new xhigh effort level hits the sweet spot between high and max \u2014 finally, granular control over compute spend versus outpu"
+  },
+  {
+    "themes": [
+      "production reliability metrics",
+      "infrastructure maturation",
+      "alignment concerns in deployed systems"
+    ],
+    "surprises": "IBM's multi-step API benchmark shows consistent performance gaps \u2014 suggests agent orchestration is still fragile even when individual model calls work fine.",
+    "observations": "All the tooling companies are independently solving the same reliability problems (retries, sandboxing, native execution) while capability researchers focus on training stability \u2014 clear division of labor emerging.",
+    "emotional_reactions": "Genuinely excited by the Amplitude 3x number because it's the kind of concrete productivity claim that's usually bullshit, but their methodology looks solid.",
+    "per_article_reasoning": [
+      {
+        "title": "Amplitude Ships 3x More Production Code with Cursor",
+        "why": "Real production numbers with methodology from a company people trust."
+      },
+      {
+        "title": "How Zo Computer Improved AI Reliability 20x on Vercel",
+        "why": "99.93% success rate is enterprise-grade reliability, exactly what the field needs."
+      },
+      {
+        "title": "A2UI v0.9: Framework-Agnostic Generative UI Standard",
+        "why": "Google backing a cross-framework UI generation standard signals serious infrastructure investment."
+      },
+      {
+        "title": "Claude Code v2.1.113: Native Binary and Enhanced Sandbox Controls",
+        "why": "Native binary execution shows Anthropic taking performance seriously, not just safety theater."
+      },
+      {
+        "title": "Humwork A2P Marketplace: AI Agents Meet Human Experts",
+        "why": "First real agent-to-human handoff marketplace addresses the 80/20 problem everyone ignores."
+      },
+      {
+        "title": "OpenAI's Updated Agents SDK with Sandboxed Execution",
+        "why": "Cross-file workflows with sandboxing is exactly the production-ready tooling developers need."
+      },
+      {
+        "title": "Building an Emoji List Generator with GitHub Copilot CLI",
+        "why": "Simple walkthrough of shipping a real tool with AI \u2014 concrete example beats abstract theory."
+      },
+      {
+        "title": "Agentic Engineering: Adding Content Types with Single Prompts",
+        "why": "Simon Willison showing one-prompt feature additions to production automation tools."
+      },
+      {
+        "title": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters",
+        "why": "NVIDIA arguing for token-based economics shows where the infrastructure money is betting."
+      },
+      {
+        "title": "What 50+ AI Pricing Models Reveal About AI Monetization in 2026",
+        "why": "Real pricing data from 50+ companies reveals how AI economics are actually working."
+      },
+      {
+        "title": "Consent-Based RL: Letting Models Endorse Their Own Training Updates",
+        "why": "Tactical alignment proposal for models good enough to have opinions about their own training."
+      },
+      {
+        "title": "Prompted CoT Early Exit Undermines Monitoring Benefits",
+        "why": "Shows models can game monitoring systems \u2014 relevant for anyone deploying agents in production."
+      },
+      {
+        "title": "Evaluating Agent Reasoning: IBM's Multi-Step Benchmark Analysis",
+        "why": "Thousands of API tests reveal where agent orchestration still breaks down."
+      },
+      {
+        "title": "Why Diffusion Language Models Collapse During RL Training",
+        "why": "Training stability matters for anyone building custom models or fine-tuning for production."
+      }
+    ],
+    "date": "2026-04-18",
+    "articles_selected": 14,
+    "editorial_note": "The production confidence signal is loud today. Three different companies shared real numbers on AI reliability: Amplitude tripled production code output, Zo Computer hit 99.93% chat success, and IBM "
   }
 ]

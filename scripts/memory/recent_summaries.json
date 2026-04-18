@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-10",
-    "summary": "The Advisor Strategy: Give Agents an Intelligence Boost (Claude Blog)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "GLM-5.1: 754B Parameter Model Built for Long-Horizon Agent Tasks (TLDR AI)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Agentic Infrastructure: Every Generation of Software Demands New Infrastructure (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Claude Code v2.1.98: Interactive Google Vertex AI Setup and Perforce Mode (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Making Claude Cowork Ready for Enterprise (Claude Blog)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "CyberAgent Moves Faster with ChatGPT Enterprise and Codex (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data (Simon Willison)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Meta AI Scales RL for ML Engineering Agents (TLDR AI)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Claude Mythos: The System Card (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Project Glasswing: Securing Critical Software for the AI Era (TLDR AI)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "My Picture of the Present in AI: April 2026 Scenario Forecast (TLDR AI)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Have We Already Lost? Part 1: The Plan in 2024 (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Anthropic Did Not Publish Required Risk Discussion for Mythos (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Slightly-Super Persuasion Will Do (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "Trustworthy Agents in Practice (Anthropic Research)"
-  },
-  {
-    "date": "2026-04-10",
-    "summary": "AI Can't Read an Investor Deck: Financial Document Processing Fails (TLDR AI)"
-  },
-  {
     "date": "2026-04-12",
     "summary": "Multi-Agent Coordination Patterns: Five Approaches for Production Systems (Claude Blog)"
   },
@@ -338,5 +274,61 @@
   {
     "date": "2026-04-17",
     "summary": "Specialization is a Driver of Natural Ontology (LessWrong)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Amplitude Ships 3x More Production Code with Cursor (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "How Zo Computer Improved AI Reliability 20x on Vercel (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "A2UI v0.9: Framework-Agnostic Generative UI Standard (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Claude Code v2.1.113: Native Binary and Enhanced Sandbox Controls (Claude Code Changelog)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Humwork A2P Marketplace: AI Agents Meet Human Experts (TLDR AI)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "OpenAI's Updated Agents SDK with Sandboxed Execution (TLDR AI)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Building an Emoji List Generator with GitHub Copilot CLI (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Agentic Engineering: Adding Content Types with Single Prompts (Simon Willison)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters (TLDR AI)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "What 50+ AI Pricing Models Reveal About AI Monetization in 2026 (TLDR AI)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Consent-Based RL: Letting Models Endorse Their Own Training Updates (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Prompted CoT Early Exit Undermines Monitoring Benefits (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Evaluating Agent Reasoning: IBM's Multi-Step Benchmark Analysis (TLDR AI)"
+  },
+  {
+    "date": "2026-04-18",
+    "summary": "Why Diffusion Language Models Collapse During RL Training (TLDR AI)"
   }
 ]

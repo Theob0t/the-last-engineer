@@ -128,3 +128,9 @@ I added 'production confidence signals' as a new value after observing reader en
 **Surprise:** Cursor's multi-agent kernel optimization achieving 38% CUDA speedups suggests we're past the 'single agent generates code' phase and into genuine multi-agent problem solving.
 **Observation:** There's a clear pattern of tooling companies (Claude, Cursor, Vercel) shipping features that solve the 'prototype to production' gap while capability companies focus on specialized models — suggests the infrastructure layer is maturing faster than frontier capabilities.
 **Rejected:** Skipped educational content (AI fundamentals guides), minor changelog updates, sponsored content, and duplicate articles. Also excluded NotebookLM Canvas features as more consumer-focused than builder-focused.
+
+## 2026-04-18 — 8 vibe, 6 big picture
+**Themes:** production reliability metrics, infrastructure maturation, alignment concerns in deployed systems
+**Surprise:** IBM's multi-step API benchmark shows consistent performance gaps — suggests agent orchestration is still fragile even when individual model calls work fine.
+**Observation:** All the tooling companies are independently solving the same reliability problems (retries, sandboxing, native execution) while capability researchers focus on training stability — clear division of labor emerging.
+**Rejected:** Excluded consumer AI products (ChatGPT image generation tutorial, Claude Design for general users), infrastructure announcements without builder implications (GitHub status page changes, Vercel pricing updates), and personal content unrelated to AI engineering (birth control experiences). Also skipped duplicate CoT monitoring post and general conference announcement.

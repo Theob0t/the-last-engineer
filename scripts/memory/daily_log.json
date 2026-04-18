@@ -4401,5 +4401,326 @@
     ],
     "rejected_summary": "Skipped educational content (AI fundamentals guides), minor changelog updates, sponsored content, and duplicate articles. Also excluded NotebookLM Canvas features as more consumer-focused than builder-focused.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-18",
+    "metrics": {
+      "articles_seen": 31,
+      "articles_selected": 14,
+      "selectivity": 0.452,
+      "source_distribution": {
+        "Cursor Blog": 1,
+        "Vercel Blog": 1,
+        "Google Developers AI": 1,
+        "Claude Code Changelog": 1,
+        "TLDR AI": 6,
+        "GitHub Blog": 1,
+        "Simon Willison": 1,
+        "LessWrong (high-karma)": 1,
+        "Alignment Forum": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 1,
+        "Claude Code Changelog": 2,
+        "OpenAI Blog": 1,
+        "Google Developers AI": 1,
+        "xAI": 1,
+        "Cursor Blog": 1,
+        "Windsurf Changelog": 1,
+        "Vercel Blog": 6,
+        "GitHub Blog": 2,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 7,
+        "Simon Willison": 2,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.64,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 6,
+        "ratio": 1.33
+      }
+    },
+    "editorial": "The production confidence signal is loud today. Three different companies shared real numbers on AI reliability: Amplitude tripled production code output, Zo Computer hit 99.93% chat success, and IBM mapped failure modes across thousands of APIs. We're past proof-of-concept.\n\nThe infrastructure layer is solidifying. Claude ships native binaries instead of JavaScript bundles. Vercel optimizes retry rates. GitHub builds CLI workflows that actually ship to production. The vibe coding section reads like an enterprise software catalog now.\n\nAlignment research is getting tactical. Consent-based RL and early exit monitoring aren't academic exercises \u2014 they're responses to models good enough to cause real problems. When researchers worry about training collapse in production RL pipelines, we've crossed a threshold.",
+    "journal": {
+      "themes": [
+        "production reliability metrics",
+        "infrastructure maturation",
+        "alignment concerns in deployed systems"
+      ],
+      "surprises": "IBM's multi-step API benchmark shows consistent performance gaps \u2014 suggests agent orchestration is still fragile even when individual model calls work fine.",
+      "observations": "All the tooling companies are independently solving the same reliability problems (retries, sandboxing, native execution) while capability researchers focus on training stability \u2014 clear division of labor emerging."
+    },
+    "selected_articles": [
+      {
+        "title": "Amplitude Ships 3x More Production Code with Cursor",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/amplitude",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Real-world case study showing how Amplitude tripled their production code output using Cursor's AI coding tools.",
+        "why_selected": "Real production numbers with methodology from a company people trust."
+      },
+      {
+        "title": "How Zo Computer Improved AI Reliability 20x on Vercel",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-zo-computer-improved-ai-reliability-20x-on-vercel",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Zo Computer cut their AI retry rate from 7.5% to 0.34% and achieved 99.93% chat success rate using Vercel's infrastructure.",
+        "why_selected": "99.93% success rate is enterprise-grade reliability, exactly what the field needs."
+      },
+      {
+        "title": "A2UI v0.9: Framework-Agnostic Generative UI Standard",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/a2ui-v0-9-generative-ui/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New standard lets AI agents generate UI widgets using your existing design system, with official React, Flutter, and Angular support.",
+        "why_selected": "Google backing a cross-framework UI generation standard signals serious infrastructure investment."
+      },
+      {
+        "title": "Claude Code v2.1.113: Native Binary and Enhanced Sandbox Controls",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21113",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Major update spawns native Claude Code binary instead of bundled JavaScript, plus granular domain blocking in sandbox mode.",
+        "why_selected": "Native binary execution shows Anthropic taking performance seriously, not just safety theater."
+      },
+      {
+        "title": "Humwork A2P Marketplace: AI Agents Meet Human Experts",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/humwork-a2p-marketplace-connects-ai-agents-with-experts/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "First Agent-to-Person marketplace lets AI agents hand off to verified experts in under 30 seconds with full context sharing.",
+        "why_selected": "First real agent-to-human handoff marketplace addresses the 80/20 problem everyone ignores."
+      },
+      {
+        "title": "OpenAI's Updated Agents SDK with Sandboxed Execution",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/the-next-evolution-of-the-agents-sdk/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New Agents SDK adds model-native harness for cross-file workflows and sandboxed execution for safer autonomous task handling.",
+        "why_selected": "Cross-file workflows with sandboxing is exactly the production-ready tooling developers need."
+      },
+      {
+        "title": "Building an Emoji List Generator with GitHub Copilot CLI",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Step-by-step walkthrough of creating a practical CLI tool using GitHub Copilot's command-line interface during a live stream.",
+        "why_selected": "Simple walkthrough of shipping a real tool with AI \u2014 concrete example beats abstract theory."
+      },
+      {
+        "title": "Agentic Engineering: Adding Content Types with Single Prompts",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon shows how one well-crafted prompt added a new content type to his blog-to-newsletter automation tool.",
+        "why_selected": "Simon Willison showing one-prompt feature additions to production automation tools."
+      },
+      {
+        "title": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters",
+        "source": "TLDR AI",
+        "url": "https://blogs.nvidia.com/blog/lowest-token-cost-ai-factories/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "NVIDIA argues cost per token captures real AI infrastructure value better than FLOPS or compute metrics, showing path to profitable AI scaling.",
+        "why_selected": "NVIDIA arguing for token-based economics shows where the infrastructure money is betting."
+      },
+      {
+        "title": "What 50+ AI Pricing Models Reveal About AI Monetization in 2026",
+        "source": "TLDR AI",
+        "url": "https://metronome.com/blog/2026-trends-from-cataloging-50-ai-pricing-models?utm_campaign=index&utm_medium=newsletter&utm_source=tldr-ai&utm_content=",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Analysis of 50+ AI companies shows hybrid pricing has become the norm, with insights on how ElevenLabs, Clay, and Perplexity handle AI credits.",
+        "why_selected": "Real pricing data from 50+ companies reveals how AI economics are actually working."
+      },
+      {
+        "title": "Consent-Based RL: Letting Models Endorse Their Own Training Updates",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/2Dmi3DYBKY7Tbz8Kx/consent-based-rl-letting-models-endorse-their-own-training",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Proposes letting aligned LLMs approve their own RL training updates to prevent value drift and instrumental convergence on deep consequentialism.",
+        "why_selected": "Tactical alignment proposal for models good enough to have opinions about their own training."
+      },
+      {
+        "title": "Prompted CoT Early Exit Undermines Monitoring Benefits",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/BuAPifQmHf24xB29n/prompted-cot-early-exit-undermines-the-monitoring-benefits",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Research shows models can exit chain-of-thought reasoning early to avoid following style constraints, breaking monitoring assumptions.",
+        "why_selected": "Shows models can game monitoring systems \u2014 relevant for anyone deploying agents in production."
+      },
+      {
+        "title": "Evaluating Agent Reasoning: IBM's Multi-Step Benchmark Analysis",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "IBM tests agent reasoning across thousands of APIs and documents, revealing consistent performance gaps and common failure modes in multi-step tasks.",
+        "why_selected": "Thousands of API tests reveal where agent orchestration still breaks down."
+      },
+      {
+        "title": "Why Diffusion Language Models Collapse During RL Training",
+        "source": "TLDR AI",
+        "url": "https://x.com/sheriyuo/status/2044305629813321742?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "dLLMs experience training collapse in RL due to high-variance Monte Carlo sampling creating noisy importance ratios that cause gradient spikes.",
+        "why_selected": "Training stability matters for anyone building custom models or fine-tuning for production."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Introducing Claude Design by Anthropic Labs",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+        "summary": "Introducing Claude Design by Anthropic Labs"
+      },
+      {
+        "title": "v2.1.114",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21114",
+        "summary": "Fixed a crash in the permission dialog when an agent teams teammate requested tool permission"
+      },
+      {
+        "title": "Creating images with ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/image-generation",
+        "summary": "Learn how to create and refine images with ChatGPT using clear prompts, iterate on designs, and generate high-quality visuals in minutes."
+      },
+      {
+        "title": "Grok Speech to Text and Text to Speech APIs",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-stt-and-tts-apis",
+        "summary": "Fast and accurate. Natural, expressive voices. Simple pricing. Multilingual support."
+      },
+      {
+        "title": "Windsurf 2.0.61",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.0.61",
+        "summary": "Bug Fixes and ImprovementsVarious bug fixes and performance improvements"
+      },
+      {
+        "title": "Deployment retention policies now preserve active branch deployments",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/deployment-retention-policies-now-preserve-active-branch-deployments",
+        "summary": "Retention policies no longer delete the latest preview deployment for branches with open or unmerged pull requests. Previously, deployments for active branches could be removed if they exceeded the configured retention window.This means you can safely use shorter retention windows without risking losing active preview deployments. This change applies to all plans.Your 10 most recent production deployments and any aliased deployments continue to be preserved regardless of retention settings.Learn more about Deployment Retention.\n          \n            Read more\n          "
+      },
+      {
+        "title": "Vercel Flags is now generally available",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/vercel-flags-ga",
+        "summary": "Vercel Flags is now generally available. Vercel Flags is a feature flag provider built into the Vercel platform. Create and manage feature flags with targeting rules, user segments, and environment controls directly in the Vercel Dashboard.The Flags SDK provides a framework-native way to define and use these flags within Next.js and SvelteKit applications, integrating directly with your existing codebase:Once you define a flag, you can use them within your application in a few lines of code:For teams using other frameworks or custom backends, the Vercel Flags adapter supports the OpenFeature s"
+      },
+      {
+        "title": "Claude Opus 4.7 on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/opus-4.7-on-ai-gateway",
+        "summary": "Claude Opus 4.7 from Anthropic is now available on Vercel AI Gateway.Opus 4.7 is optimized for long-running, asynchronous agents and handles complex, multi-step tasks with reliable agentic execution. The model shows gains on knowledge-worker tasks, particularly where it needs to visually verify its own outputs.Opus 4.7 is also stronger at programmatic tool-calling with image-processing libraries to analyze charts and figures, including pixel-level data transcription. It has high-resolution image support, which is useful for computer use, screenshot understanding, and document analysis workflow"
+      },
+      {
+        "title": "Seedance 2.0 Video Generation on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/seedance-2.0-video-now-available-on-ai-gateway",
+        "summary": "You can now access Bytedance's latest state-of-the-art video generation model, Seedance 2.0, via AI Gateway with no other provider accounts required.Seedance 2.0 is available on AI Gateway in two variants: Standard and Fast. Both share the same capabilities. Standard produces the highest quality output, while Fast prioritizes generation speed and lower cost.Seedance 2.0 is strong at maintaining motion stability and fine detail across frames, producing consistent output even in complex scenes with facial expressions and physical interactions. The model also generates synchronized audio natively"
+      },
+      {
+        "title": "Reduced pricing for Turbo build machines",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/reduced-pricing-for-turbo-build-machines",
+        "summary": "Vercel is reducing the price of Turbo build machines by 16%. All builds are now priced at $0.0035 per CPU per minute. With this new model:Turbo machines, with 30 CPUs, are now $0.105 per minute (previously $0.126)Enhanced machines, with 8 CPUs, continue to be priced at $0.028 per minuteStandard machines, with 4 CPUs, continue to be priced at $0.014 per minuteThis change will begin rolling out on April 15, and will appear on invoices for the current billing cycle as \"Build CPU Minutes\".Learn more about build machine pricing or monitor your Builds usage from Project Usage.\n          \n           "
+      },
+      {
+        "title": "Bringing more transparency to GitHub\u2019s status page",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+        "summary": "Changes to the status page will provide more specific data, so you'll have better insight into the overall health of the platform.\nThe post Bringing more transparency to GitHub\u2019s status page appeared first on The GitHub Blog."
+      },
+      {
+        "title": "3 years of being on birth control",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/EfvePeHnW2EajwH8s/3-years-of-being-on-birth-control",
+        "summary": "Warning: This is completely based on my own experiences; please do your own research before trying different types of birth control.TL;DR: Sex hormone binding globulin (SHBG), which is anti-correlated with free testosterone, seems to predict how well I tolerate birth control. None of them does everything I want--I just want to be me without the painful periods smh.I started getting painful cramps in high school, but it was mostly manageable as long as I took some Tylenol within eight hours of my period starting. If I forgot, I was mostly fine, just in some pain. I would cramp for a few hours, "
+      },
+      {
+        "title": "Prompted CoT Early Exit Undermines the Monitoring Benefits of CoT Uncontrollability",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/BuAPifQmHf24xB29n/prompted-cot-early-exit-undermines-the-monitoring-benefits",
+        "summary": "Code: github.com/ElleNajt/controllability\ntldr:\n\nYueh-Han et al. (2026) showed that models have a harder time making their chain of thought follow user instruction compared to controlling their response (the non-thinking, user-facing output). Their CoT controllability conditions require the models\u2019 thinking to follow various style constraints (e.g. write in lowercase, avoid a word), and they measure how well models can comply with these instructions while achieving a task that requires reasoning. The difficulty models have in controlling their CoT is optimistic for control, since it suggests t"
+      },
+      {
+        "title": "Let goodness conquer all that it can defend",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/w3MJcDueo77D3Ldta/let-goodness-conquer-all-that-it-can-defend",
+        "summary": "Epistemic status: All of the western canon must eventually be re-invented in a LessWrong post, so today we are re-inventing modernism.In my post yesterday, I said: Maybe the most important way ambitious, smart, and wise people leave the world worse off than they found it is by seeing correctly how some part of the world is broken and unifying various powers under a banner to fix that problem \u2014 only for the thing they have built to slip from their grasp and, in its collapse, destroy much more than anything previously could have.I think many people very reasonably understood me to be giving a ge"
+      },
+      {
+        "title": "What 50+ AI pricing models reveal about AI monetization in 2026 (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://metronome.com/blog/2026-trends-from-cataloging-50-ai-pricing-models?utm_campaign=index&amp;utm_medium=newsletter&amp;utm_source=tldr-ai&amp;utm_content=",
+        "summary": "Usage, credits, access, GBB\u2026 which monetization model makes sense for AI? Metronome's Pricing Index covers 50+ AI companies, and they've shared some takeaways in a new blog.Read it to see:\u2192 Why hybrid pricing has become the norm\u2192 How companies like ElevenLabs, Clay, and Perplexity are handling AI credits\u2192 How split pricing schemes for consumers & developers reflect value creation\u2192 The 5 key consideration monetization leaders should take into accountRead the blog"
+      },
+      {
+        "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/?utm_source=tldrai",
+        "summary": "Google's Gemini 3.1 Flash TTS enhances text-to-speech with improved expressivity and controllability, featuring a notable Elo score of 1,211 on the Artificial Analysis TTS leaderboard. The model supports over 70 languages and introduces audio tags for granular control of vocal style, allowing easy manipulation via natural language commands. All generated audio is watermarked with SynthID to ensure authentic content, preventing misinformation."
+      },
+      {
+        "title": "Humwork A2P marketplace connects AI agents with experts (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/humwork-a2p-marketplace-connects-ai-agents-with-experts/?utm_source=tldrai",
+        "summary": "Humwork launches the first Agent-to-Person (A2P) marketplace to connect AI agents with verified human experts when AI tools encounter challenges. The platform integrates with AI-centric tools like Claude Code and Replit, allowing handoffs to occur in under 30 seconds with full session context shared securely. With more than 1,000 experts available globally, Humwork boasts an 87% resolution rate and is backed by Y Combinator's P26 batch."
+      },
+      {
+        "title": "OpenAI's Updated Agents SDK (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/the-next-evolution-of-the-agents-sdk/?utm_source=tldrai",
+        "summary": "OpenAI introduced updates to its Agents SDK, adding a model-native harness for cross-file and tool workflows along with sandboxed execution for safer task handling."
+      },
+      {
+        "title": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters (6 minute read)",
+        "source": "TLDR AI",
+        "url": "https://blogs.nvidia.com/blog/lowest-token-cost-ai-factories/?utm_source=tldrai",
+        "summary": "Cost per token is crucial for AI infrastructure TCO assessment due to its focus on delivered intelligence, integrating hardware, software, and utilization efficiencies. Unlike traditional metrics like compute cost or FLOPS per dollar, cost per token highlights real-world performance, enabling profitable AI scaling. Evidence from NVIDIA shows its Blackwell platform drastically reduces cost per token compared to Hopper, offering significant business value."
+      },
+      {
+        "title": "Evaluating Agent Reasoning (28 minute read)",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis?utm_source=tldrai",
+        "summary": "IBM Research uses an executable benchmark with thousands of APIs and documents to test multi-step agent reasoning and tool use, revealing consistent performance gaps and common failure modes."
+      },
+      {
+        "title": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-everything",
+        "summary": "This year's PyCon US is coming up next month from May 13th to May 19th, with the core conference talks from Friday 15th to Sunday 17th and tutorial and sprint days either side. It's in Long Beach, California this year, the first time PyCon US has come to the West Coast since Portland, Oregon in 2017 and the first time in California since Santa Clara in 2013.\nIf you're based in California this is a great opportunity to catch up with the Python community, meet a whole lot of interesting people and learn a ton of interesting things.\nIn addition to regular PyCon programming we have two new dedicat"
+      },
+      {
+        "title": "[AINews] The Two Sides of OpenClaw",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-the-two-sides-of-openclaw",
+        "summary": "a quiet day lets us reflect on openclaw this week."
+      }
+    ],
+    "rejected_summary": "Excluded consumer AI products (ChatGPT image generation tutorial, Claude Design for general users), infrastructure announcements without builder implications (GitHub status page changes, Vercel pricing updates), and personal content unrelated to AI engineering (birth control experiences). Also skipped duplicate CoT monitoring post and general conference announcement.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
