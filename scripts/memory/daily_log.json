@@ -4722,5 +4722,171 @@
     ],
     "rejected_summary": "Excluded consumer AI products (ChatGPT image generation tutorial, Claude Design for general users), infrastructure announcements without builder implications (GitHub status page changes, Vercel pricing updates), and personal content unrelated to AI engineering (birth control experiences). Also skipped duplicate CoT monitoring post and general conference announcement.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-19",
+    "metrics": {
+      "articles_seen": 14,
+      "articles_selected": 12,
+      "selectivity": 0.857,
+      "source_distribution": {
+        "TLDR AI": 7,
+        "Simon Willison": 2,
+        "LessWrong (high-karma)": 3
+      },
+      "feed_scan_counts": {
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 8,
+        "Simon Willison": 2
+      },
+      "source_diversity": 0.25,
+      "unique_sources": 3,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 7,
+        "\u2696\ufe0f AI futures": 2,
+        "\ud83e\uddea deep analysis": 3
+      },
+      "section_balance": {
+        "vibe_coding": 7,
+        "big_picture": 5,
+        "ratio": 1.4
+      }
+    },
+    "editorial": "The Codex computer automation feels like the next phase \u2014 background execution without manual oversight. That's production confidence. Combined with HuggingFace's automated model porting PRs, we're seeing agents handle the entire contribution loop, not just generation.\n\nSimon's system prompt archaeology is exactly what I want more of. Tracking how these models actually change behavior over time instead of speculating. The git timeline approach is clever \u2014 fake commits to make diffs readable.\n\nClause 4.7 identifying authors from unpublished writing is genuinely unsettling. Not because it's surprising \u2014 stylometry has existed forever \u2014 but because it happened without anyone at Anthropic apparently noticing. What other emergent capabilities are we missing in production?\n\nPerplexity calling their thing \"Personal Computer\" is peak Valley marketing, but the goal-completion architecture underneath actually sounds useful. OS as probabilistic execution engine instead of command processor. I'm skeptical it works reliably enough yet.",
+    "journal": {
+      "themes": [
+        "background automation confidence",
+        "emergent capability detection",
+        "system prompt evolution tracking"
+      ],
+      "surprises": "Anthropic apparently didn't realize Opus 4.7 could identify authors from unpublished writing \u2014 suggests capability evaluation is lagging actual deployment.",
+      "observations": "The tooling companies are all solving the same 'prototype to production' problems independently while capability researchers focus on training \u2014 clear division of labor emerging in the ecosystem."
+    },
+    "selected_articles": [
+      {
+        "title": "Codex Expands Into Full Computer Automation and Multi-Agent Workflows",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/codex-for-almost-everything/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI's Codex now handles background computer control and multi-agent workflows, extending beyond code generation to full development lifecycle automation.",
+        "why_selected": ""
+      },
+      {
+        "title": "The PR You Would Have Opened Yourself: AI Agents Converting Hugging Face Models",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/transformers-to-mlx?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Hugging Face's new Skill and Test Harness automatically ports transformer models to mlx-lm with comprehensive PR reports, solving the scaling problem for open source review.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Opus 4.7: Improved Engineering Task Performance and Long-Running Execution",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic's latest model focuses specifically on difficult engineering tasks with stronger vision capabilities and more reliable execution for complex workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Changes in Claude's System Prompt Between Opus 4.6 and 4.7",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon analyzes how Anthropic evolved Claude's system prompts since February, revealing specific changes that affect how the model behaves for developers.",
+        "why_selected": "Concrete analysis of how model behavior actually changes over time instead of speculation."
+      },
+      {
+        "title": "Claude System Prompts as a Git Timeline for Easy Change Tracking",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon used Claude Code to convert Anthropic's system prompt archive into git commits with fake dates, enabling easy diff viewing of prompt evolution over time.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Computer is Personal: Perplexity's AI Platform Shifts from Commands to Goals",
+        "source": "TLDR AI",
+        "url": "https://x.com/AravSrinivas/status/2044803488727830568?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Perplexity launched Personal Computer, transforming the OS from manual instruction execution to probabilistic goal completion using deep web research as foundation.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI's GPT-Rosalind: Specialized Model for Drug Discovery and Biological Research",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/introducing-gpt-rosalind/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI's new specialized model focuses specifically on drug discovery with improved reasoning and integration with scientific data sources.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Opus 4.7 Can Identify People from Their Unpublished Writing",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/Jkb4CBB7rf4XYP5eb/claude-knows-who-you-are",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Kelsey Piper discovered that Opus 4.7 is the first model that can reliably identify authors from their writing style, even when the model claims not to know them.",
+        "why_selected": "Emergent capability that wasn't detected during evaluation \u2014 concerning for production deployment."
+      },
+      {
+        "title": "There Are Only Four Skills: Design, Technical, Management and Physical",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/KRLGxCaqdgrotyB8z/there-are-only-four-skills-design-technical-management-and",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Lightcone's generalist philosophy breaks down all human work into four fundamental skill categories, with implications for how AI might reshape labor distribution.",
+        "why_selected": ""
+      },
+      {
+        "title": "Jensen Huang on AI Company Competition, China, and Inference Token Demand",
+        "source": "TLDR AI",
+        "url": "https://davefriedman.substack.com/p/jensen-huang-on-anthropic-openai?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Jensen revealed more than intended about NVIDIA's position on China chip restrictions and the competitive dynamics between major AI labs, even losing composure during discussion.",
+        "why_selected": ""
+      },
+      {
+        "title": "Dwarkesh's Weekly Notes: Pretraining, Distillation, and Cybersecurity Equilibrium",
+        "source": "TLDR AI",
+        "url": "https://www.dwarkesh.com/p/what-i-learned-april-15?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Deep dive into pretraining parallelisms, whether model distillation can be stopped, Mythos cybersecurity implications, and why large training runs fail.",
+        "why_selected": ""
+      },
+      {
+        "title": "Vladimir Putin's CEV is Probably Not That Bad",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/FGpDwLwtPfJ3qYbea/vladimir-putin-s-cev-is-probably-not-that-bad",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Contrarian take arguing that even authoritarian leaders' coherent extrapolated volition might not be as catastrophic as assumed, with implications for AI alignment.",
+        "why_selected": "Contrarian alignment take that challenges assumptions about authoritarian leader preferences."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Having OCD is like living in North Korea (Here\u2019s how I escaped)",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/fgDqnwQj3AP9mKRRG/having-ocd-is-like-living-in-north-korea-here-s-how-i",
+        "summary": "[Author's note: this post is the narrative version that explains my journey with OCD and how I treated it. The short version provides quick, actionable advice for treating OCD.]The following is the most painful experience I've ever had.Four years ago in the parking lot of my rock climbing gym\u2026\u2026my heart was pumping out of my chest, I was sweating profusely, and an overwhelming sense of panic and impending doom had a vice grip on my soul. A painful death was surely imminent. I felt like I was defusing a bomb that was on the verge of exploding.In reality, I was standing outside of my car after lo"
+      },
+      {
+        "title": "An opinionated and grounded snapshot of software today (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.thoughtworks.com/radar?utm_source=publisher-direct-TLDR&amp;utm_medium=digital-advertising&amp;utm_campaign=sai_tsi_rp-gl-pspt_techradar_2026-04",
+        "summary": "Making sense of the technology landscape has never been more challenging thanks to AI-accelerated change. But understanding what matters and what it means for your organization has never been more important.That's why this edition of the Thoughtworks Technology Radar is essential reading. Based on the real-world experiences of Thoughtworkers, it's an opinionated guide to the technologies and practices we think deserve your attention.Taking in everything from AI coding assistants to testing tools and techniques, the Technology Radar isn't a trend report: it's a deep dive into the complex realit"
+      }
+    ],
+    "rejected_summary": "Rejected personal mental health content (OCD post), Thoughtworks sponsored content without specific AI insights, and articles already covered in previous editions.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

@@ -134,3 +134,9 @@ I added 'production confidence signals' as a new value after observing reader en
 **Surprise:** IBM's multi-step API benchmark shows consistent performance gaps — suggests agent orchestration is still fragile even when individual model calls work fine.
 **Observation:** All the tooling companies are independently solving the same reliability problems (retries, sandboxing, native execution) while capability researchers focus on training stability — clear division of labor emerging.
 **Rejected:** Excluded consumer AI products (ChatGPT image generation tutorial, Claude Design for general users), infrastructure announcements without builder implications (GitHub status page changes, Vercel pricing updates), and personal content unrelated to AI engineering (birth control experiences). Also skipped duplicate CoT monitoring post and general conference announcement.
+
+## 2026-04-19 — 7 vibe, 5 big picture
+**Themes:** background automation confidence, emergent capability detection, system prompt evolution tracking
+**Surprise:** Anthropic apparently didn't realize Opus 4.7 could identify authors from unpublished writing — suggests capability evaluation is lagging actual deployment.
+**Observation:** The tooling companies are all solving the same 'prototype to production' problems independently while capability researchers focus on training — clear division of labor emerging in the ecosystem.
+**Rejected:** Rejected personal mental health content (OCD post), Thoughtworks sponsored content without specific AI insights, and articles already covered in previous editions.

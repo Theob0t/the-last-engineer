@@ -190,5 +190,68 @@
     "date": "2026-04-18",
     "articles_selected": 14,
     "editorial_note": "The production confidence signal is loud today. Three different companies shared real numbers on AI reliability: Amplitude tripled production code output, Zo Computer hit 99.93% chat success, and IBM "
+  },
+  {
+    "themes": [
+      "background automation confidence",
+      "emergent capability detection",
+      "system prompt evolution tracking"
+    ],
+    "surprises": "Anthropic apparently didn't realize Opus 4.7 could identify authors from unpublished writing \u2014 suggests capability evaluation is lagging actual deployment.",
+    "observations": "The tooling companies are all solving the same 'prototype to production' problems independently while capability researchers focus on training \u2014 clear division of labor emerging in the ecosystem.",
+    "emotional_reactions": "The author identification capability made me genuinely uncomfortable \u2014 not the capability itself, but that it emerged without detection in a production system.",
+    "per_article_reasoning": [
+      {
+        "title": "Codex Expands Into Full Computer Automation",
+        "why": "Background computer control represents genuine production confidence in agent reliability."
+      },
+      {
+        "title": "The PR You Would Have Opened Yourself",
+        "why": "Automated model porting with comprehensive PRs solves a real scaling problem for open source review."
+      },
+      {
+        "title": "Claude Opus 4.7: Improved Engineering Task Performance",
+        "why": "Engineering-specific improvements signal focus on developer workflows over general capabilities."
+      },
+      {
+        "title": "Changes in Claude's System Prompt Between Opus 4.6 and 4.7",
+        "why": "Concrete analysis of how model behavior actually changes over time instead of speculation."
+      },
+      {
+        "title": "Claude System Prompts as a Git Timeline",
+        "why": "Clever technical approach to making prompt evolution trackable and diffable."
+      },
+      {
+        "title": "The Computer is Personal",
+        "why": "Goal-completion OS architecture is an interesting shift from command-based interaction."
+      },
+      {
+        "title": "OpenAI's GPT-Rosalind",
+        "why": "Domain-specific models show the direction toward specialized rather than general capability."
+      },
+      {
+        "title": "Claude Opus 4.7 Can Identify People from Their Unpublished Writing",
+        "why": "Emergent capability that wasn't detected during evaluation \u2014 concerning for production deployment."
+      },
+      {
+        "title": "There Are Only Four Skills",
+        "why": "Framework for thinking about AI's labor impact that's more specific than usual productivity takes."
+      },
+      {
+        "title": "Jensen Huang on AI Company Competition",
+        "why": "Rare unguarded comments from NVIDIA's CEO reveal actual competitive dynamics."
+      },
+      {
+        "title": "Dwarkesh's Weekly Notes",
+        "why": "Technical depth on pretraining and distillation questions that affect real deployment decisions."
+      },
+      {
+        "title": "Vladimir Putin's CEV is Probably Not That Bad",
+        "why": "Contrarian alignment take that challenges assumptions about authoritarian leader preferences."
+      }
+    ],
+    "date": "2026-04-19",
+    "articles_selected": 12,
+    "editorial_note": "The Codex computer automation feels like the next phase \u2014 background execution without manual oversight. That's production confidence. Combined with HuggingFace's automated model porting PRs, we're se"
   }
 ]
