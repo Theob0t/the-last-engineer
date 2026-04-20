@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-12",
-    "summary": "Multi-Agent Coordination Patterns: Five Approaches for Production Systems (Claude Blog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Seeing Like an Agent: Tool Design Philosophy for Claude Code (Claude Blog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Claude Code v2.1.101: Team Onboarding Commands and Enterprise TLS (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Research-Driven Agents: What Happens When Your Agent Reads Before It Codes (SkyPilot)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "GitHub Copilot CLI for Beginners: Complete Setup Guide (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "OpenAI Responds to Axios Supply Chain Attack with Certificate Rotation (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "SQLite 3.53.0: ALTER TABLE Gets NOT NULL Constraints and JSON Arrays (Simon Willison)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Agentic Infrastructure: 30% of Vercel Deployments Now Agent-Initiated (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "If Mythos Made Anthropic 4x More Productive, I'd Radically Shorten My Timelines (LessWrong)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Claude Mythos Cybersecurity Capabilities and Project Glasswing (LessWrong)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Preparing Your Security Program for AI-Accelerated Offense (Claude Blog)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Dario Probably Doesn't Believe in Superintelligence (LessWrong)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Steering Against Evaluation Awareness in GLM-5: Replication Study (LessWrong)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Why Control Creates Conflict in Multi-Agent Systems (LessWrong)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "Sam Altman Shares Family Photo After Molotov Cocktail Attack (Sam Altman)"
-  },
-  {
-    "date": "2026-04-12",
-    "summary": "CoreWeave Revenue Backlog Hits $87.8B with Meta and OpenAI Deals (The Next Platform)"
-  },
-  {
     "date": "2026-04-15",
     "summary": "Anthropic Introduces Routines in Claude Code for Parallel Agents (Claude Blog)"
   },
@@ -378,5 +314,25 @@
   {
     "date": "2026-04-19",
     "summary": "Vladimir Putin's CEV is Probably Not That Bad (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-20",
+    "summary": "SQL Functions in Google Sheets to Fetch Data from Datasette (Simon Willison)"
+  },
+  {
+    "date": "2026-04-20",
+    "summary": "Claude Token Counter Now Compares Models Side-by-Side (Simon Willison)"
+  },
+  {
+    "date": "2026-04-20",
+    "summary": "Headless Everything for Personal AI (Simon Willison)"
+  },
+  {
+    "date": "2026-04-20",
+    "summary": "R1 Chain-of-Thought Illegibility Results Don't Replicate (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-20",
+    "summary": "Reevaluating 'AGI Ruin: A List of Lethalities' Four Years Later (LessWrong (high-karma))"
   }
 ]

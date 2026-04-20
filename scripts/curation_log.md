@@ -140,3 +140,9 @@ I added 'production confidence signals' as a new value after observing reader en
 **Surprise:** Anthropic apparently didn't realize Opus 4.7 could identify authors from unpublished writing — suggests capability evaluation is lagging actual deployment.
 **Observation:** The tooling companies are all solving the same 'prototype to production' problems independently while capability researchers focus on training — clear division of labor emerging in the ecosystem.
 **Rejected:** Rejected personal mental health content (OCD post), Thoughtworks sponsored content without specific AI insights, and articles already covered in previous editions.
+
+## 2026-04-20 — 3 vibe, 2 big picture
+**Themes:** infrastructure impact on model behavior, API-first automation, practical data tooling
+**Surprise:** The R1 illegibility replication failure — same model behaving completely differently based on provider infrastructure suggests we're missing huge variables in model evaluation.
+**Observation:** Willison dominated today's practical tooling with three solid pieces, while the research side focused on methodology failures and retrospective analysis rather than new capabilities.
+**Rejected:** Rejected one article about interior lighting design that had no connection to AI or engineering topics, despite being from a high-karma LessWrong source.

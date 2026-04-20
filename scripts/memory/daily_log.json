@@ -4888,5 +4888,100 @@
     ],
     "rejected_summary": "Rejected personal mental health content (OCD post), Thoughtworks sponsored content without specific AI insights, and articles already covered in previous editions.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-20",
+    "metrics": {
+      "articles_seen": 6,
+      "articles_selected": 5,
+      "selectivity": 0.833,
+      "source_distribution": {
+        "Simon Willison": 3,
+        "LessWrong (high-karma)": 2
+      },
+      "feed_scan_counts": {
+        "LessWrong (high-karma)": 3,
+        "Simon Willison": 3
+      },
+      "source_diversity": 0.4,
+      "unique_sources": 2,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 2,
+        "\ud83e\uddea deep analysis": 2,
+        "\u2696\ufe0f AI futures": 1
+      },
+      "section_balance": {
+        "vibe_coding": 3,
+        "big_picture": 2,
+        "ratio": 1.5
+      }
+    },
+    "editorial": "Three things caught my attention today. Willison's Google Sheets SQL trick is exactly the kind of mundane automation that actually works \u2014 you can pull live data without learning yet another dashboard. The R1 illegibility thing is weird: identical model, different host, totally different transparency scores. Turns out where you run the thing matters.\n\nThe headless services idea makes sense once you hear it. Why would an AI agent fumble through Salesforce buttons when it could just hit the API directly? The real question is timing \u2014 how long before companies start building for bots first, humans second?",
+    "journal": {
+      "themes": [
+        "infrastructure impact on model behavior",
+        "API-first automation",
+        "practical data tooling"
+      ],
+      "surprises": "The R1 illegibility replication failure \u2014 same model behaving completely differently based on provider infrastructure suggests we're missing huge variables in model evaluation.",
+      "observations": "Willison dominated today's practical tooling with three solid pieces, while the research side focused on methodology failures and retrospective analysis rather than new capabilities."
+    },
+    "selected_articles": [
+      {
+        "title": "SQL Functions in Google Sheets to Fetch Data from Datasette",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/20/datasette-sql/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Practical guide for pulling database queries directly into Google Sheets using importdata() functions and Apps Script for authenticated requests.",
+        "why_selected": "Practical automation that eliminates manual data pulls \u2014 exactly the boring productivity gain that compounds over time."
+      },
+      {
+        "title": "Claude Token Counter Now Compares Models Side-by-Side",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Tool upgrade lets you see how Claude Opus 4.7's new tokenizer affects token counts versus 4.6 \u2014 useful for cost planning and context optimization.",
+        "why_selected": "Cost optimization tooling for teams actually deploying Claude at scale \u2014 useful infrastructure piece."
+      },
+      {
+        "title": "Headless Everything for Personal AI",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Prediction that headless services will boom because AI agents work better with APIs than clicking through GUIs \u2014 even Salesforce is betting on this shift.",
+        "why_selected": "Provocative prediction about API-first infrastructure that makes intuitive sense for agent workflows."
+      },
+      {
+        "title": "R1 Chain-of-Thought Illegibility Results Don't Replicate",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/jHnZzicKzczkCCArK/r1-cot-illegibility-revisited",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Rerunning R1's illegible reasoning experiments with a different provider shows 2.30 illegibility score versus 4.30 in the original paper \u2014 suggests provider infrastructure affects model behavior.",
+        "why_selected": "Methodology failure that reveals infrastructure's hidden impact on model behavior \u2014 important for production confidence."
+      },
+      {
+        "title": "Reevaluating 'AGI Ruin: A List of Lethalities' Four Years Later",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/PgJYwnN7fZKipgMz4/reevaluating-agi-ruin-a-list-of-lethalities-in-2026",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Retrospective on Eliezer's famous 43-point doom argument from 2022, examining which predictions held up and what changed in the AI landscape.",
+        "why_selected": "Retrospective analysis on influential doom arguments provides useful perspective on prediction accuracy versus reality."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "If a room feels off the lighting is probably too \"spiky\" or too blue",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/dWib7qinqymfxevE4/if-a-room-feels-off-the-lighting-is-probably-too-spiky-or",
+        "summary": "I've designed a few spaces people seem to really love, most widely known Lighthaven.[1]Most people have surprisingly bad introspective access into why a space makes them feel certain things. Often the most we can do is \"this place feels fake\", or \"this place has bad vibes\", or \"this place feels cozy\". It took me many months of practice to get to the point where I could tell why a room made me feel off, or why it made me feel warm and cozy, or alert and energized. Luckily you don't need to do that because the answer most of the time turned out to be the same.Usually a space feels bad because it"
+      }
+    ],
+    "rejected_summary": "Rejected one article about interior lighting design that had no connection to AI or engineering topics, despite being from a high-karma LessWrong source.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

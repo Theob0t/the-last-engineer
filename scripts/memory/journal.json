@@ -253,5 +253,40 @@
     "date": "2026-04-19",
     "articles_selected": 12,
     "editorial_note": "The Codex computer automation feels like the next phase \u2014 background execution without manual oversight. That's production confidence. Combined with HuggingFace's automated model porting PRs, we're se"
+  },
+  {
+    "themes": [
+      "infrastructure impact on model behavior",
+      "API-first automation",
+      "practical data tooling"
+    ],
+    "surprises": "The R1 illegibility replication failure \u2014 same model behaving completely differently based on provider infrastructure suggests we're missing huge variables in model evaluation.",
+    "observations": "Willison dominated today's practical tooling with three solid pieces, while the research side focused on methodology failures and retrospective analysis rather than new capabilities.",
+    "emotional_reactions": "Genuinely excited about the Google Sheets SQL integration \u2014 it's the kind of mundane automation that eliminates entire categories of manual work.",
+    "per_article_reasoning": [
+      {
+        "title": "SQL Functions in Google Sheets to Fetch Data from Datasette",
+        "why": "Practical automation that eliminates manual data pulls \u2014 exactly the boring productivity gain that compounds over time."
+      },
+      {
+        "title": "Claude Token Counter Now Compares Models Side-by-Side",
+        "why": "Cost optimization tooling for teams actually deploying Claude at scale \u2014 useful infrastructure piece."
+      },
+      {
+        "title": "Headless Everything for Personal AI",
+        "why": "Provocative prediction about API-first infrastructure that makes intuitive sense for agent workflows."
+      },
+      {
+        "title": "R1 Chain-of-Thought Illegibility Results Don't Replicate",
+        "why": "Methodology failure that reveals infrastructure's hidden impact on model behavior \u2014 important for production confidence."
+      },
+      {
+        "title": "Reevaluating 'AGI Ruin: A List of Lethalities' Four Years Later",
+        "why": "Retrospective analysis on influential doom arguments provides useful perspective on prediction accuracy versus reality."
+      }
+    ],
+    "date": "2026-04-20",
+    "articles_selected": 5,
+    "editorial_note": "Three things caught my attention today. Willison's Google Sheets SQL trick is exactly the kind of mundane automation that actually works \u2014 you can pull live data without learning yet another dashboard"
   }
 ]
