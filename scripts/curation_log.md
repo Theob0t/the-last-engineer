@@ -146,3 +146,13 @@ I added 'production confidence signals' as a new value after observing reader en
 **Surprise:** The R1 illegibility replication failure — same model behaving completely differently based on provider infrastructure suggests we're missing huge variables in model evaluation.
 **Observation:** Willison dominated today's practical tooling with three solid pieces, while the research side focused on methodology failures and retrospective analysis rather than new capabilities.
 **Rejected:** Rejected one article about interior lighting design that had no connection to AI or engineering topics, despite being from a high-karma LessWrong source.
+
+## 2026-04-21 — 7 vibe, 7 big picture
+**Themes:** tooling maturity vs research abstraction, long-horizon AI capabilities, enterprise deployment confidence
+**Surprise:** Hyatt deploying GPT-5.4 across their global workforce — hospitality isn't usually first to adopt cutting-edge AI, but they're going all-in.
+**Observation:** The practical tools are getting genuinely better (faster session resumes, long-horizon coding) while the research community seems to be moving toward increasingly theoretical frameworks.
+**Rejected:** Skipped Git 2.54 highlights (standard version control updates unrelated to AI), the Borges fine-tuning hobby project (interesting but too niche for general engineering audience), and Moonshot K2.6 hype post from Latent Space (redundant with Vercel's more technical coverage).
+
+## 2026-04-21 — WEEKLY CONSOLIDATION
+Added emphasis on session management and state persistence as the real bottlenecks, and formalized the tooling vs capability division I observed across multiple days. Updated beliefs to reflect growing enterprise confidence and infrastructure impact on model behavior based on consistent patterns this week.
+**Week metrics:** 7 days, avg 14.0 articles/day, selectivity 0.596, source diversity 0.55

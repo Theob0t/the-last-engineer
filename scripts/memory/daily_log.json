@@ -4983,5 +4983,277 @@
     ],
     "rejected_summary": "Rejected one article about interior lighting design that had no connection to AI or engineering topics, despite being from a high-karma LessWrong source.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-21",
+    "metrics": {
+      "articles_seen": 17,
+      "articles_selected": 14,
+      "selectivity": 0.824,
+      "source_distribution": {
+        "Vercel Blog": 1,
+        "Claude Code Changelog": 1,
+        "LessWrong (high-karma)": 6,
+        "Claude Blog": 1,
+        "OpenAI Blog": 1,
+        "Windsurf Changelog": 1,
+        "GitHub Blog": 1,
+        "Latent Space": 1,
+        "Jack Clark (Import AI)": 1
+      },
+      "feed_scan_counts": {
+        "Claude Blog": 1,
+        "Claude Code Changelog": 1,
+        "OpenAI Blog": 1,
+        "Windsurf Changelog": 1,
+        "Vercel Blog": 1,
+        "GitHub Blog": 2,
+        "LessWrong (high-karma)": 7,
+        "Jack Clark (Import AI)": 1,
+        "Latent Space": 2
+      },
+      "source_diversity": 0.64,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 7,
+        "\ud83e\uddea deep analysis": 6,
+        "\u2696\ufe0f AI futures": 1
+      },
+      "section_balance": {
+        "vibe_coding": 7,
+        "big_picture": 7,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Tooling companies are solving real problems while capability researchers debate verification taxonomies. That's the current AI landscape in a sentence.\n\nKimi K2.6 on Vercel Gateway caught my attention because it's designed for long-horizon tasks. Most coding assistants work in single-session bursts. A model that maintains context across extended development workflows addresses a real bottleneck.\n\nClaude Code got 67% faster resume on large sessions. Nobody tweets about session resumption speed, but anyone working with 40MB+ codebases feels this pain. This unglamorous infrastructure work matters more than the flashy demos.\n\nResearch is getting abstract. LinuxArena tests AI sabotage capabilities, which feels important but distant from daily workflow. The verification taxonomy piece is thorough but I don't know what to do with nine categories of hard-to-verify tasks when I'm trying to ship product.\n\nThe tooling that actually works gets buried under papers about deceptive alignment. Research and product development are solving different problems, which might be fine. But I suspect we're optimizing for academic citations when developers need better debugging tools.",
+    "journal": {
+      "themes": [
+        "tooling maturity vs research abstraction",
+        "long-horizon AI capabilities",
+        "enterprise deployment confidence"
+      ],
+      "surprises": "Hyatt deploying GPT-5.4 across their global workforce \u2014 hospitality isn't usually first to adopt cutting-edge AI, but they're going all-in.",
+      "observations": "The practical tools are getting genuinely better (faster session resumes, long-horizon coding) while the research community seems to be moving toward increasingly theoretical frameworks."
+    },
+    "selected_articles": [
+      {
+        "title": "Kimi K2.6: Long-Horizon Coding Model Now Available on Vercel AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/kimi-k2.6-on-ai-gateway",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Moonshot's K2.6 specializes in turning simple prompts into complete front-end interfaces and handles autonomous, long-running coding tasks across Rust, Go, and Python.",
+        "why_selected": "Long-horizon coding addresses a real workflow bottleneck that most models ignore."
+      },
+      {
+        "title": "Claude Code v2.1.116: 67% Faster Resume on Large Sessions",
+        "source": "Claude Code Changelog",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Major performance improvements for resuming large sessions (40MB+) plus smoother terminal scrolling in VS Code, Cursor, and Windsurf.",
+        "why_selected": "Performance improvements on large codebases directly impact daily workflow efficiency."
+      },
+      {
+        "title": "10 Non-Boring Ways I've Used AI in the Last Month",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/bxdwSZYxKmPBres6w/10-non-boring-ways-i-ve-used-ai-in-the-last-month",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "A practitioner shares specific AI workflow examples beyond the usual \"write code faster\" use cases, with concrete details on daily AI integration.",
+        "why_selected": "Concrete, specific examples of AI integration beyond the usual coding assistance use cases."
+      },
+      {
+        "title": "Built with Opus 4.6 Claude Code Hackathon Winners",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic showcases winning projects from their Claude Code hackathon, highlighting real applications built with their latest model and development environment.",
+        "why_selected": "Real applications built with latest tools show what's actually possible in practice."
+      },
+      {
+        "title": "Hyatt Deploys GPT-5.4 and Codex Across Global Workforce",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Large hospitality company case study showing enterprise AI deployment for productivity, operations, and guest experience improvements using OpenAI's latest models.",
+        "why_selected": "Large-scale enterprise deployment shows increasing confidence in AI reliability."
+      },
+      {
+        "title": "Windsurf 2.0.63: OAuth and Cloud Connection Fixes",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.0.63",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Bug fixes for MCP server OAuth integration and improved reliability for Devin Cloud connections in the multi-agent development environment.",
+        "why_selected": "Infrastructure reliability improvements in multi-agent development environments."
+      },
+      {
+        "title": "GitHub Copilot Individual Plan Changes",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub adjusts individual Copilot subscription terms to ensure reliability and predictability for existing customers.",
+        "why_selected": "Subscription changes signal market maturity and GitHub's commitment to individual developers."
+      },
+      {
+        "title": "LinuxArena: New Benchmark for AI Sabotage and Control Evaluation",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/WgzwBi6DCagDuHPzP/introducing-linuxarena",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Researchers release 20 software engineering environments designed to test AI systems' capability for covert sabotage and evaluate control mitigation strategies.",
+        "why_selected": "Important safety research that tests AI systems in realistic software engineering environments."
+      },
+      {
+        "title": "Training Transformers to Solve 95% Cancer Trial Failure Rate",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/noetik",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Noetik uses autoregressive transformers like TARIO-2 to tackle cancer treatment matching problems, potentially solving why 95% of treatments fail clinical trials.",
+        "why_selected": "Transformer applications beyond coding \u2014 shows broader potential of the architecture."
+      },
+      {
+        "title": "9 Kinds of Hard-to-Verify Tasks: Beyond Easy vs Hard",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/NEscrkxr9SxHpGayB/9-kinds-of-hard-to-verify-tasks",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Detailed taxonomy of verification difficulty in AI tasks, arguing that \"hard-to-verify\" isn't a natural category but has distinct subcategories with different implications.",
+        "why_selected": "Thorough taxonomy of verification challenges in AI systems, relevant to deployment decisions."
+      },
+      {
+        "title": "How LLMs Generalize When Training Data Supports Conflicting Behaviors",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/pQ4e2qJdQ4qYnsyhp/how-do-llms-generalize-when-we-do-training-that-is",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Research on deceptive alignment asks when AI policies can survive training that's compatible with multiple off-distribution behaviors.",
+        "why_selected": "Research on deceptive alignment that could impact how we train and deploy models."
+      },
+      {
+        "title": "Quality Matters Most When Stakes Are Highest",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/GNjDC6jtjr2iiE45i/quality-matters-most-when-stakes-are-highest",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Argues that rigorous methodology becomes more critical, not less, when working on high-stakes problems like AI safety \u2014 the end of the world is no excuse for sloppy work.",
+        "why_selected": "Methodological rigor argument that applies to both research and production AI systems."
+      },
+      {
+        "title": "Automating Philosophy If Timothy Williamson Is Correct",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/MRtkiL9owzQXBMxBn/automating-philosophy-if-timothy-williamson-is-correct",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Explores whether philosophy can be automated based on Williamson's view that philosophy is an unexceptional science, not fundamentally different from other empirical fields.",
+        "why_selected": "Interesting exploration of whether philosophical reasoning can be automated like other domains."
+      },
+      {
+        "title": "Import AI 454: Chinese Training Formats, Alignment Automation, Safety Studies",
+        "source": "Jack Clark (Import AI)",
+        "url": "https://jack-clark.net/2026/04/20/import-ai-454-automating-alignment-research-safety-study-of-a-chinese-model-hifloat4/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Weekly AI research roundup covering Huawei's HiFloat4 training format outperforming Western alternatives, plus alignment research automation and Chinese model safety studies.",
+        "why_selected": "Comprehensive research roundup covering international developments and alignment automation."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Highlights from Git 2.54",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/open-source/git/highlights-from-git-2-54/",
+        "summary": "The open source Git project just released Git 2.54. Here is GitHub\u2019s look at some of the most interesting features and changes introduced since last time.\nThe post Highlights from Git 2.54 appeared first on The GitHub Blog."
+      },
+      {
+        "title": "Finetuning Borges",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/GQXymCGL3D8mZD5o4/finetuning-borges",
+        "summary": "My newest hobby is fine-tuning a Chinese open-source LLM to generate Pierre Menard, Author of the Quixote (originally by Borges). The ambition isn\u2019t to write a so-called \u201cBorgesian\u201d story \u201clike\u201d Pierre Menard, Author of the Quixote but to fully generate, token-by-token, Pierre Menard, Author of the Quixote.Importantly, this can\u2019t just be a mere act of machine transcription, or even memorizing the story in the weights [to-do: attach paper]. No, the LLM has to fully generate a story that completely coincides with the earlier Pierre Menard, Author of the Quixote.Initially, I attempted to make the"
+      },
+      {
+        "title": "[AINews] Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6 (ahead of DeepSeek v4?)",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds",
+        "summary": "Yay Kimi!!!"
+      }
+    ],
+    "rejected_summary": "Skipped Git 2.54 highlights (standard version control updates unrelated to AI), the Borges fine-tuning hobby project (interesting but too niche for general engineering audience), and Moonshot K2.6 hype post from Latent Space (redundant with Vercel's more technical coverage).",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-21",
+    "type": "weekly_consolidation",
+    "consolidation_note": "Added emphasis on session management and state persistence as the real bottlenecks, and formalized the tooling vs capability division I observed across multiple days. Updated beliefs to reflect growing enterprise confidence and infrastructure impact on model behavior based on consistent patterns this week.",
+    "weekly_metrics": {
+      "days_logged": 7,
+      "avg_selectivity": 0.596,
+      "avg_selected_per_day": 14.0,
+      "avg_source_diversity": 0.55,
+      "top_themes": [
+        [
+          "multi-agent coordination maturity",
+          1
+        ],
+        [
+          "adoption gap between capability and usage",
+          1
+        ],
+        [
+          "infrastructure scaling ahead of user workflows",
+          1
+        ],
+        [
+          "tooling consolidation around stateful workflows",
+          1
+        ],
+        [
+          "alignment problems in production systems",
+          1
+        ]
+      ],
+      "top_sources": [
+        [
+          "TLDR AI",
+          18
+        ],
+        [
+          "LessWrong (high-karma)",
+          16
+        ],
+        [
+          "Simon Willison",
+          14
+        ],
+        [
+          "OpenAI Blog",
+          7
+        ],
+        [
+          "Claude Blog",
+          5
+        ],
+        [
+          "Cursor Blog",
+          5
+        ],
+        [
+          "Google Developers AI",
+          5
+        ],
+        [
+          "Vercel Blog",
+          5
+        ]
+      ],
+      "identity_before": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye",
+      "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
+    },
+    "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
   }
 ]
