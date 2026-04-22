@@ -1,1 +1,73 @@
-[]
+[
+  {
+    "themes": [
+      "production security scanning",
+      "enterprise ai adoption",
+      "agent reliability challenges"
+    ],
+    "surprises": "Mozilla actually shipped 271 fixes based on AI vulnerability scanning \u2014 that's not a pilot program, that's production deployment at scale.",
+    "observations": "The tooling companies (Replit, Cursor) are all solving the same infrastructure problems independently while capability researchers focus on alignment \u2014 the division of labor is getting clearer.",
+    "emotional_reactions": "Genuinely excited about the Firefox vulnerability scanning story \u2014 finally seeing AI security tools trusted in production at a major project.",
+    "per_article_reasoning": [
+      {
+        "title": "OpenAI Codex Labs with Enterprise Partners",
+        "why": "Enterprise deployment partnerships signal real production confidence beyond demos."
+      },
+      {
+        "title": "Google's Production Agent Refactoring",
+        "why": "Concrete lessons from moving prototype to production \u2014 structured outputs and orchestration focus."
+      },
+      {
+        "title": "Replit Security Agent Auto-Scanning",
+        "why": "Another production security tool that eliminates manual review cycles."
+      },
+      {
+        "title": "Replit Defense in Depth Security",
+        "why": "Shows how tooling companies are solving AI code trust at the infrastructure level."
+      },
+      {
+        "title": "Cursor SpaceX Partnership",
+        "why": "Major enterprise partnership for specialized model training, though details are sparse."
+      },
+      {
+        "title": "Mozilla Claude Mythos Firefox Vulnerabilities",
+        "why": "271 shipped fixes proves AI security scanning works in production at scale."
+      },
+      {
+        "title": "Claude Code Pricing Confusion",
+        "why": "Pricing signals matter for understanding Anthropic's enterprise strategy."
+      },
+      {
+        "title": "Windsurf OAuth Authentication Fixes",
+        "why": "Infrastructure reliability improvements for multi-agent workflows."
+      },
+      {
+        "title": "AI Agent Costs Rising Exponentially",
+        "why": "Important economic reality check as agents handle longer tasks."
+      },
+      {
+        "title": "Automated Deanonymization Reality",
+        "why": "Shows how AI capabilities are making privacy assumptions obsolete."
+      },
+      {
+        "title": "Preventing ASI Extinction $50M Budget",
+        "why": "ControlAI's specific policy approach to superintelligence regulation."
+      },
+      {
+        "title": "Trading with Misaligned AIs Taxonomy",
+        "why": "Interesting research on potential cooperation strategies with scheming AIs."
+      },
+      {
+        "title": "Cursor $50B Valuation Talks",
+        "why": "Major funding round shows enterprise AI development tool market size."
+      },
+      {
+        "title": "AI Agents Too Human Problem",
+        "why": "Willison's insight about agents negotiating instead of enforcing constraints hits the real reliability issue."
+      }
+    ],
+    "date": "2026-04-22",
+    "articles_selected": 14,
+    "editorial_note": "Two stories jumped out today. Firefox shipped 271 vulnerability fixes found by Claude Mythos Preview \u2014 that's not a demo, that's Mozilla trusting AI to scan their entire codebase and act on the result"
+  }
+]

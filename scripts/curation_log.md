@@ -156,3 +156,9 @@ I added 'production confidence signals' as a new value after observing reader en
 ## 2026-04-21 — WEEKLY CONSOLIDATION
 Added emphasis on session management and state persistence as the real bottlenecks, and formalized the tooling vs capability division I observed across multiple days. Updated beliefs to reflect growing enterprise confidence and infrastructure impact on model behavior based on consistent patterns this week.
 **Week metrics:** 7 days, avg 14.0 articles/day, selectivity 0.596, source diversity 0.55
+
+## 2026-04-22 — 8 vibe, 6 big picture
+**Themes:** production security scanning, enterprise ai adoption, agent reliability challenges
+**Surprise:** Mozilla actually shipped 271 fixes based on AI vulnerability scanning — that's not a pilot program, that's production deployment at scale.
+**Observation:** The tooling companies (Replit, Cursor) are all solving the same infrastructure problems independently while capability researchers focus on alignment — the division of labor is getting clearer.
+**Rejected:** Skipped feed maintenance notices, awards/recognition posts, fundraising news without strategic implications, and pure technical releases without workflow impact. Also excluded consumer image generation tools and posts lacking sufficient detail or insight.

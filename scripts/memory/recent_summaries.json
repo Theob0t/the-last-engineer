@@ -390,5 +390,61 @@
   {
     "date": "2026-04-21",
     "summary": "Import AI 454: Chinese Training Formats, Alignment Automation, Safety Studies (Jack Clark (Import AI))"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Scaling Codex to Enterprise Worldwide: OpenAI Hits 4M WAU (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Production-Ready AI Agents: 5 Lessons from Refactoring a Monolith (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Replit Security Agent: Auto-Scanning and Vulnerability Fixes (Replit Blog)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Defense in Depth: How Replit Secures Every Layer of the Vibe Coding Stack (Replit Blog)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Cursor Partners with SpaceX on Model Training (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Mozilla Uses Claude Mythos Preview to Find 271 Firefox Vulnerabilities (Simon Willison)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Claude Code Pricing Confusion: $100/Month or Not? (Simon Willison)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Windsurf 2.0.67: OAuth Authentication Fixes for MCP Servers (Windsurf Changelog)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Are AI Agent Costs Rising Exponentially? Hourly Rates Approach Human Level (TLDR AI)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Automated Deanonymization is Here: Privacy's New Reality (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Preventing Extinction from ASI on a $50M Yearly Budget (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Trading with Early Misaligned AIs: A Taxonomy of Barriers (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "Cursor in Talks for $2B Raise at $50B Valuation as Enterprise Growth Surges (TLDR AI)"
+  },
+  {
+    "date": "2026-04-22",
+    "summary": "AI Agents Are Already Too Human: The Frustrating Reality (Simon Willison)"
   }
 ]

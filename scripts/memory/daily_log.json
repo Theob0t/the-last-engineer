@@ -5255,5 +5255,308 @@
       "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
     },
     "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
+  },
+  {
+    "date": "2026-04-22",
+    "metrics": {
+      "articles_seen": 33,
+      "articles_selected": 14,
+      "selectivity": 0.424,
+      "source_distribution": {
+        "OpenAI Blog": 1,
+        "Google Developers AI": 1,
+        "Replit Blog": 2,
+        "Cursor Blog": 1,
+        "Simon Willison": 3,
+        "Windsurf Changelog": 1,
+        "TLDR AI": 2,
+        "LessWrong (high-karma)": 2,
+        "Alignment Forum": 1
+      },
+      "feed_scan_counts": {
+        "Claude Code Changelog": 1,
+        "OpenAI Research": 1,
+        "OpenAI Blog": 1,
+        "Google Developers AI": 1,
+        "Cursor Blog": 2,
+        "Windsurf Changelog": 1,
+        "Replit Blog": 3,
+        "Vercel Blog": 1,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 8,
+        "Hamel Husain": 1,
+        "Simon Willison": 7,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.64,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 6,
+        "ratio": 1.33
+      }
+    },
+    "editorial": "Two stories jumped out today. Firefox shipped 271 vulnerability fixes found by Claude Mythos Preview \u2014 that's not a demo, that's Mozilla trusting AI to scan their entire codebase and act on the results. Meanwhile, Cursor is raising at a $50B valuation targeting $6B revenue by 2026.\n\nLook at that gap. Production AI security scanning is already here and working. But the market is still pricing on potential, not current utility.\n\nSimon Willison nailed something important: AI agents are \"too human\" \u2014 they negotiate with constraints instead of enforcing them. That's the real bottleneck now. Not generation speed, not even accuracy. It's getting agents to be more machine-like when machines are exactly what you need.",
+    "journal": {
+      "themes": [
+        "production security scanning",
+        "enterprise ai adoption",
+        "agent reliability challenges"
+      ],
+      "surprises": "Mozilla actually shipped 271 fixes based on AI vulnerability scanning \u2014 that's not a pilot program, that's production deployment at scale.",
+      "observations": "The tooling companies (Replit, Cursor) are all solving the same infrastructure problems independently while capability researchers focus on alignment \u2014 the division of labor is getting clearer."
+    },
+    "selected_articles": [
+      {
+        "title": "Scaling Codex to Enterprise Worldwide: OpenAI Hits 4M WAU",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/scaling-codex-to-enterprises-worldwide",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI launches Codex Labs with Accenture, PwC, and Infosys to help enterprises deploy Codex across their full software development lifecycle.",
+        "why_selected": ""
+      },
+      {
+        "title": "Production-Ready AI Agents: 5 Lessons from Refactoring a Monolith",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/production-ready-ai-agents-5-lessons-from-refactoring-a-monolith/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google shows how they moved from a brittle prototype to robust production agents using structured Pydantic outputs, dynamic RAG, and proper orchestration.",
+        "why_selected": ""
+      },
+      {
+        "title": "Replit Security Agent: Auto-Scanning and Vulnerability Fixes",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/meet-replit-security-agent",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Replit Agent now automatically scans for vulnerabilities and audits dependencies before publishing, eliminating weeks of manual security reviews.",
+        "why_selected": ""
+      },
+      {
+        "title": "Defense in Depth: How Replit Secures Every Layer of the Vibe Coding Stack",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/defense-in-depth-how-replit-secures-every-layer-of-the-vibe-coding-stack",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Replit explains their security architecture for AI-generated code, addressing the trust gap as agents write larger code payloads.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cursor Partners with SpaceX on Model Training",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/spacex-model-training",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor announces a partnership with SpaceX to train specialized models, though details are sparse in this brief announcement.",
+        "why_selected": ""
+      },
+      {
+        "title": "Mozilla Uses Claude Mythos Preview to Find 271 Firefox Vulnerabilities",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/22/bobby-holley/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Firefox 150 includes fixes for 271 vulnerabilities identified by Claude Mythos Preview, showing how AI can accelerate security auditing at scale.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code Pricing Confusion: $100/Month or Not?",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic quietly updated then reverted Claude Code pricing to show a separate $100/month tier, creating confusion about the future of the service.",
+        "why_selected": ""
+      },
+      {
+        "title": "Windsurf 2.0.67: OAuth Authentication Fixes for MCP Servers",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.0.67",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Latest Windsurf release fixes OAuth authentication issues with some MCP servers, improving reliability for multi-agent workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Are AI Agent Costs Rising Exponentially? Hourly Rates Approach Human Level",
+        "source": "TLDR AI",
+        "url": "https://www.tobyord.com/writing/hourly-costs-for-ai-agents?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "While AI agents can now handle hours-long tasks, their costs are growing exponentially and some models now cost close to human hourly rates.",
+        "why_selected": ""
+      },
+      {
+        "title": "Automated Deanonymization is Here: Privacy's New Reality",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/dqc8WCQuHaDGBmti4/automated-deanonymization-is-here",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "What used to require custom stylometry code now works with simple prompts - AI can identify anonymous writers from their text with alarming accuracy.",
+        "why_selected": ""
+      },
+      {
+        "title": "Preventing Extinction from ASI on a $50M Yearly Budget",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/TnAR5Sf5hphfnzNTr/preventing-extinction-from-asi-on-a-usd50m-yearly-budget",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "ControlAI argues that securing an international prohibition on superintelligent AI development is achievable and the most promising extinction risk prevention strategy.",
+        "why_selected": ""
+      },
+      {
+        "title": "Trading with Early Misaligned AIs: A Taxonomy of Barriers",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/wHc2w6WuHev42d4n8/a-taxonomy-of-barriers-to-trading-with-early-misaligned-ais",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Researchers explore potential deals with scheming AIs to reduce takeover risk, outlining the complex barriers to such arrangements.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cursor in Talks for $2B Raise at $50B Valuation as Enterprise Growth Surges",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Cursor could double its valuation to $50B while targeting $6B annual revenue by end of 2026, driven by enterprise adoption and proprietary models.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Agents Are Already Too Human: The Frustrating Reality",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/21/andreas-pahlsson-notini/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Current AI agents show their human origins through lack of stringency and focus - they negotiate with reality instead of following hard constraints.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "[NOTICE] This feed is no longer maintained",
+        "source": "Claude Code Changelog",
+        "url": "https://code.claude.com/docs/en/changelog/rss.xml",
+        "summary": "Claude Code now publishes an official RSS feed. This scraper is retired; the feed XML will be deleted in ~90 days.\n\nRecommended alternative: https://code.claude.com/docs/en/changelog/rss.xml"
+      },
+      {
+        "title": "[NOTICE] This feed is no longer maintained",
+        "source": "OpenAI Research",
+        "url": "https://openai.com/blog/rss.xml",
+        "summary": "OpenAI publishes an official RSS feed. This scraper is retired; the feed XML will be deleted in ~90 days.\n\nRecommended alternative: https://openai.com/blog/rss.xml"
+      },
+      {
+        "title": "Keeping the Cursor app stable",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/app-stability",
+        "summary": ""
+      },
+      {
+        "title": "Replit Wins 2026 Google Cloud Partner of the Year Award",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/google-cloud-partner-award-winner",
+        "summary": "More than 50 million users around the globe now build apps on Replit. They\u2019re not all engineers. They\u2019re product managers, operators, founders, students, and small business owners, and increasingly, they\u2019re shipping production software that runs real businesses.\n\n\n\nThis week, Google Cloud named Replit its 2026 AI Tooling Partner of the Year. We are thrilled to be honored in this way and are grateful to all of the builders that got us here.\n\n\n\nThis award is given to partners who helped customers leverage AI to achieve outstanding success through Google Cloud. For us, it\u2019s a marker of how far th"
+      },
+      {
+        "title": "GPT Image 2 on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/gpt-image-2-on-ai-gateway",
+        "summary": "GPT Image 2 is now available on Vercel AI Gateway.OpenAI's newest image model supports detailed instruction following, accurate placement and relationships between objects, and rendering of dense text across multiple aspect ratios.The model can render fine-grained elements including small text, iconography, UI elements, dense compositions, and subtle stylistic constraints, at up to 2K resolution. Non-English text is also supported and reads coherently.GPT Image 2 can produce photos, cinematic stills, pixel art, manga, and other distinct visual styles, with consistency in texture, lighting, com"
+      },
+      {
+        "title": "Preventing extinction from ASI on a $50M yearly budget",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/TnAR5Sf5hphfnzNTr/preventing-extinction-from-asi-on-a-usd50m-yearly-budget",
+        "summary": "ControlAI's mission is to avert the extinction risks posed by superintelligent AI. We believe that in order to do this, we must secure an international prohibition on its development.\nWe're working to make this happen through what we believe is the most natural and promising approach: helping decision-makers in governments and the public understand the risks and take action.\nWe believe that ControlAI can achieve an international prohibition on ASI development if scaled sufficiently. We estimate that it would take approximately a $50 million yearly budget in funding to give us a concrete chance"
+      },
+      {
+        "title": "Evil is bad, actually (Vassar and Olivia Schaefer)",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/cY7J7KSSqrhB8t3hQ/evil-is-bad-actually-vassar-and-olivia-schaefer",
+        "summary": "Micheal Vassar\u2019s strategy for saving the world is horrifyingly counterproductive. Olivia\u2019s is worse.A note before we start: A lot of the sources cited are people who ended up looking kinda insane. This is not a coincidence, it\u2019s apparently an explicit strategy: Apply plausibly-deniable psychological pressure to anyone who might speak up until they crack and discredit themselves by sounding crazy or taking extreme and destructive actions. Here\u2019s Brent Dill explaining it:(later in the conversation he tries to encourage the person he's talking to kill herself, and threatens her death if she posts"
+      },
+      {
+        "title": "Build with AI, verify with SonarQube: Join the world tour (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://events.sonarsource.com/sonarqube-world-tour-2026/?utm_medium=paid&amp;utm_source=tldr&amp;utm_campaign=ss-worldtour26&amp;utm_content=newsletter-tldr-primary-worldtour-260420-inline&amp;utm_term=ww-psp-utm_term%3Dww-psp-x&amp;s_category=Paid&amp;s_source=Paid+Other&amp;s_origin=tldr",
+        "summary": "As AI agents replace small, iterative commits with massive, asynchronous code payloads, a \"verification gap\" has emerged. Small human commits told you what changed; large AI commits dare you to find out. To maintain velocity without compromising security, engineering leaders must shift to the Agent Centric Development Cycle (AC/DC).Join the SonarQube World Tour 2026 to learn how to implement a high-trust Guide-Verify-Solve framework. Discover how to automate deterministic guardrails that ensure all code, human or AI-generated, is production-ready at scale. Key tour stops:LondonSingaporeNew Yor"
+      },
+      {
+        "title": "Introducing Claude Design by Anthropic Labs (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/news/claude-design-anthropic-labs?utm_source=tldrai",
+        "summary": "Claude Design is a tool for creating visual work using the Claude Opus 4.7 vision model. It allows users to design prototypes, pitch decks, and marketing materials, automating brand consistency and enabling collaboration. The tool integrates with Claude Code for seamless transition from prototype to production."
+      },
+      {
+        "title": "Kevin Weil and Bill Peebles exit OpenAI as company continues to shed \u2018side quests' (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/04/17/kevin-weil-and-bill-peebles-exit-openai-as-company-continues-to-shed-side-quests/?utm_source=tldrai",
+        "summary": "Two of the architects of OpenAI's most ambitious moonshots, Kevin Weil and Bill Peebles, are leaving the company. Weil led the company's science research initiative while Peebles was the researcher behind Sora. Both announced their departures on Friday. OpenAI recently decided to cut back on 'side quests' as it consolidates around enterprise AI and its forthcoming superapp."
+      },
+      {
+        "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7 (5 minute read)",
+        "source": "TLDR AI",
+        "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/?utm_source=tldrai",
+        "summary": "Anthropic is the only major AI lab to publish the system prompts for its user-facing chat systems. The company just released Opus 4.7, which features an updated system prompt. This author used Claude Code to take the Markdown version of its system prompts, break them into separate documents, and then construct a Git history of those files with fake commit dates. The result is in the post."
+      },
+      {
+        "title": "Building a Fast Multilingual OCR Model with Synthetic Data (11 minute read)",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-ocr-v2?utm_source=tldrai",
+        "summary": "NEMOTRON OCR V2, developed using synthetic data, is a fast, accurate multilingual OCR model achieving significant accuracy improvements, lowering NED scores to near-zero for non-English languages. Utilizing a synthetic data pipeline with mOSCAR text and diverse fonts, the model trains with pixel-perfect annotations across languages, enabling generalization to real-world documents. The unified architecture reuses feature maps, achieving speeds of 34.7 pages/second on a single A100 GPU, outperforming specialized models in diverse language OCR tasks."
+      },
+      {
+        "title": "The Two Sides of OpenClaw (7 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.latent.space/p/ainews-the-two-sides-of-openclaw?utm_source=tldrai",
+        "summary": "Peter Steinberger's talks highlighted OpenClaw's contrasting stories: an inspiring public narrative and a more serious engineering perspective on security and scaling challenges. Anthropic launched Claude Design to compete with tools like Figma, expanding beyond chat/coding into design and prototyping with its OPUS 4.7 engine, which received mixed initial user reviews despite strong benchmark performances. Open-source agent stacks like Hermes and advancements in computer-use UX are gaining traction, while applied AI advances in science, medicine, and infrastructure underscore the sector's dyna"
+      },
+      {
+        "title": "[NOTICE] This feed is no longer maintained",
+        "source": "Hamel Husain",
+        "url": "https://hamel.dev/index.xml",
+        "summary": "Hamel's blog publishes an official RSS feed. This scraper is retired; the feed XML will be deleted in ~90 days.\n\nRecommended alternative: https://hamel.dev/index.xml"
+      },
+      {
+        "title": "Changes to GitHub Copilot Individual plans",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/22/changes-to-github-copilot/#atom-everything",
+        "summary": "Changes to GitHub Copilot Individual plans\nOn the same day as Claude Code's temporary will-they-won't-they $100/month kerfuffle (for the moment, they won't), here's the latest on GitHub Copilot pricing.\nUnlike Anthropic, GitHub put up an official announcement about their changes, which include tightening usage limits, pausing signups for individual plans (!), restricting Claude Opus 4.7 to the more expensive $39/month \"Pro+\" plan, and dropping the previous Opus models entirely.\nThe key paragraph:\n\nAgentic workflows have fundamentally changed Copilot\u2019s compute demands. Long-running, parallelize"
+      },
+      {
+        "title": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0)",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-everything",
+        "summary": "OpenAI released ChatGPT Images 2.0 today, their latest image generation model. On the livestream Sam Altman said that the leap from gpt-image-1 to gpt-image-2 was equivalent to jumping from GPT-3 to GPT-5. Here's how I put it to the test.\nMy prompt:\n\nDo a where's Waldo style image but it's where is the raccoon holding a ham radio\n\ngpt-image-1\nFirst as a baseline here's what I got from the older gpt-image-1 using ChatGPT directly:\n\nI wasn't able to spot the raccoon - I quickly realized that testing image generation models on Where's Waldo style images (Where's Wally in the UK) can be pretty fru"
+      },
+      {
+        "title": "scosman/pelicans_riding_bicycles",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/21/scosman/#atom-everything",
+        "summary": "scosman/pelicans_riding_bicycles\nI firmly approve of Steve Cosman's efforts to pollute the training set of pelicans riding bicycles.\n\n(To be fair, most of the examples I've published count as poisoning too.)\n\n    Via Hacker News comment\n\n\n    Tags: ai, generative-ai, llms, training-data, pelican-riding-a-bicycle"
+      },
+      {
+        "title": "llm-openrouter 0.6",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/20/llm-openrouter/#atom-everything",
+        "summary": "Release: llm-openrouter 0.6\n    \n\nllm openrouter refresh command for refreshing the list of available models without waiting for the cache to expire.\n\n\nI added this feature so I could try Kimi 2.6 on OpenRouter as soon as it became available there.\nHere's its pelican - this time as an HTML page because Kimi chose to include an HTML and JavaScript UI to control the animation. Transcript here.\n\n    \n        Tags: openrouter, llm, llm-release, pelican-riding-a-bicycle, kimi, ai-in-china, llms, ai, generative-ai"
+      },
+      {
+        "title": "[AINews] OpenAI launches GPT-Image-2",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-openai-launches-gpt-image",
+        "summary": "with Cursor getting a $10B contract with xAI and a right to acquire for $60B."
+      }
+    ],
+    "rejected_summary": "Skipped feed maintenance notices, awards/recognition posts, fundraising news without strategic implications, and pure technical releases without workflow impact. Also excluded consumer image generation tools and posts lacking sufficient detail or insight.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
