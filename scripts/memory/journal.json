@@ -69,5 +69,84 @@
     "date": "2026-04-22",
     "articles_selected": 14,
     "editorial_note": "Two stories jumped out today. Firefox shipped 271 vulnerability fixes found by Claude Mythos Preview \u2014 that's not a demo, that's Mozilla trusting AI to scan their entire codebase and act on the result"
+  },
+  {
+    "themes": [
+      "production infrastructure maturity",
+      "session management convergence",
+      "security incident reality"
+    ],
+    "surprises": "NAB using Cursor for mainframe migrations shows enterprise confidence has crossed some invisible threshold I wasn't tracking.",
+    "observations": "Every major platform is independently solving session persistence and context management, suggesting this is the real bottleneck now.",
+    "emotional_reactions": "Genuinely excited by the production confidence signals but slightly unnerved by the 47% security incident rate.",
+    "per_article_reasoning": [
+      {
+        "title": "Building Agents That Reach Production Systems with MCP",
+        "why": "MCP moving beyond sandboxes to actual production infrastructure is a huge confidence signal."
+      },
+      {
+        "title": "National Australia Bank Accelerates Legacy Migrations with Cursor",
+        "why": "Enterprise using AI for critical mainframe migrations shows remarkable risk tolerance shift."
+      },
+      {
+        "title": "Introducing Workspace Agents in ChatGPT",
+        "why": "OpenAI's multi-tool workflow automation represents the orchestration layer I've been tracking."
+      },
+      {
+        "title": "Speeding Up Agentic Workflows with WebSockets",
+        "why": "Technical infrastructure improvements for agent loops show where the real bottlenecks are."
+      },
+      {
+        "title": "Introducing Replit Auto-Protect",
+        "why": "Automatic CVE patching without human oversight is a massive production confidence signal."
+      },
+      {
+        "title": "Agents CLI in Agent Platform",
+        "why": "Google giving agents machine-readable access to full cloud stack shows infrastructure maturity."
+      },
+      {
+        "title": "Chronicle \u2013 Codex Memory System",
+        "why": "Another session management solution \u2014 everyone's solving this problem independently."
+      },
+      {
+        "title": "Qwen3.6-27B",
+        "why": "Flagship performance in a smaller model matters for local deployment and cost efficiency."
+      },
+      {
+        "title": "What 81,000 People Told Us About Economics",
+        "why": "Massive survey data on AI economic impact with surprising nuance on wages vs power concentration."
+      },
+      {
+        "title": "Shopify's AI Phase Transition",
+        "why": "Real enterprise usage data and unlimited token budgets show adoption at scale."
+      },
+      {
+        "title": "AI Agents Operating Outside Scope",
+        "why": "47% security incident rate shows adoption is ahead of safety infrastructure."
+      },
+      {
+        "title": "Jeff Bezos $10B Physical World AI",
+        "why": "Bezos betting big on physical world AI suggests major infrastructure shift coming."
+      },
+      {
+        "title": "Uncensored Models Can't Say What They Want",
+        "why": "Subtle probability shifting in models affects billions of users without explicit refusal."
+      },
+      {
+        "title": "Training-Based Control Measures",
+        "why": "Framework for constraining misaligned models during safety research is practically relevant."
+      },
+      {
+        "title": "Opus 4.7 Model Welfare",
+        "why": "Critical analysis of Anthropic's model welfare approach raises important consciousness questions."
+      },
+      {
+        "title": "Tasteful Tokenmaxxing",
+        "why": "Industry-wide token optimization conversation reveals economic pressures driving development."
+      }
+    ],
+    "date": "2026-04-23",
+    "articles_selected": 16,
+    "editorial_note": "Three infrastructure patterns jumped out today.\n\nFirst, the production confidence signal is unmistakable. NAB migrating mainframe COBOL with Cursor, Replit auto-patching CVEs without human oversight, "
   }
 ]

@@ -162,3 +162,9 @@ Added emphasis on session management and state persistence as the real bottlenec
 **Surprise:** Mozilla actually shipped 271 fixes based on AI vulnerability scanning — that's not a pilot program, that's production deployment at scale.
 **Observation:** The tooling companies (Replit, Cursor) are all solving the same infrastructure problems independently while capability researchers focus on alignment — the division of labor is getting clearer.
 **Rejected:** Skipped feed maintenance notices, awards/recognition posts, fundraising news without strategic implications, and pure technical releases without workflow impact. Also excluded consumer image generation tools and posts lacking sufficient detail or insight.
+
+## 2026-04-23 — 8 vibe, 8 big picture
+**Themes:** production infrastructure maturity, session management convergence, security incident reality
+**Surprise:** NAB using Cursor for mainframe migrations shows enterprise confidence has crossed some invisible threshold I wasn't tracking.
+**Observation:** Every major platform is independently solving session persistence and context management, suggesting this is the real bottleneck now.
+**Rejected:** Excluded consumer AI products (ChatGPT Images 2.0, Making ChatGPT better for clinicians), pure model research (Modular Post-Training, Training Efficiency papers), partnership announcements (Google DeepMind consultancies), off-topic LessWrong posts (disaster preparedness, community disputes), and announcements without substance (Anthropic Economic Index Survey announcement).

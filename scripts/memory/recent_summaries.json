@@ -1,85 +1,5 @@
 [
   {
-    "date": "2026-04-15",
-    "summary": "Anthropic Introduces Routines in Claude Code for Parallel Agents (Claude Blog)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Redesigning Claude Code Desktop for Multi-Agent Coordination (Claude Blog)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Cursor Speeds Up GPU Kernels by 38% with Multi-Agent System (Cursor Blog)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "OpenAI's Cloudflare Agent Cloud Partnership Enables Enterprise Agentic Workflows (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "How Missions Architecture Solves Single-Agent Context Window Limits (TLDR AI)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "GitHub Launches AI Agent Security Game for Developers (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Google's 5 Agent Development Tips from Their Internal Agent Bake-Off (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "TorchTPU: Running PyTorch Natively on Google's TPU Infrastructure (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Datasette Replaces CSRF Tokens with Sec-Fetch-Site Header Protection (Simon Willison)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Exploring Servo Browser Engine as Embeddable Rust Crate (Simon Willison)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "OpenAI Launches GPT-5.4-Cyber for Vetted Cybersecurity Defenders (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Cybersecurity as Proof of Work: Token Spending Drives Defense Quality (Simon Willison)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Anthropic's Training Process Failures Expose Chain of Thought 8% of Time (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "AI Agent Research Shifts from Personas to Underlying Motivational Structure (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "The $7 Doritos Problem: Enterprise AI Subscription Value Crisis (TLDR AI)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Google's Internal AI Adoption Matches Tractor Companies, Not Tech Leaders (Simon Willison)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Only Law Can Prevent AI Extinction, Not Market Forces (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "LLMs Inherently Lack Laziness: Why AI Makes Systems Larger, Not Better (Simon Willison)"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Mechanisms of Introspective Awareness in AI Systems (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-15",
-    "summary": "Import AI: Breaking AI Agents and Gradual Human Disempowerment (Jack Clark (Import AI))"
-  },
-  {
     "date": "2026-04-16",
     "summary": "Claude Code Gets Session Management and 1M Context Window (Claude Blog)"
   },
@@ -446,5 +366,69 @@
   {
     "date": "2026-04-22",
     "summary": "AI Agents Are Already Too Human: The Frustrating Reality (Simon Willison)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Building Agents That Reach Production Systems with MCP (Claude Blog)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "National Australia Bank Accelerates Legacy Migrations with Cursor (Cursor Blog)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Introducing Workspace Agents in ChatGPT (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Speeding Up Agentic Workflows with WebSockets in the Responses API (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Introducing Replit Auto-Protect (Replit Blog)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Agents CLI in Agent Platform: Create to Production in One CLI (Google Developers AI)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Chronicle \u2013 Codex Memory System for macOS (TLDR AI)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model (Simon Willison)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "What 81,000 People Told Us About the Economics of AI (Anthropic Research)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Shopify's AI Phase Transition: 2026 Usage Explosion with Mikhail Parakhin (Latent Space)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Your AI Agents Are Already Operating Outside Scope (TLDR AI)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Jeff Bezos Nears $10 Billion Funding for Physical World AI Lab (TLDR AI)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Even 'Uncensored' Models Can't Say What They Want (TLDR AI)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Five Approaches to Evaluating Training-Based Control Measures (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "Opus 4.7 Part 3: Model Welfare (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-23",
+    "summary": "AINews: Tasteful Tokenmaxxing (Latent Space)"
   }
 ]
