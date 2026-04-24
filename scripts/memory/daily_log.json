@@ -5855,5 +5855,328 @@
     ],
     "rejected_summary": "Excluded consumer AI products (ChatGPT Images 2.0, Making ChatGPT better for clinicians), pure model research (Modular Post-Training, Training Efficiency papers), partnership announcements (Google DeepMind consultancies), off-topic LessWrong posts (disaster preparedness, community disputes), and announcements without substance (Anthropic Economic Index Survey announcement).",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-24",
+    "metrics": {
+      "articles_seen": 35,
+      "articles_selected": 15,
+      "selectivity": 0.429,
+      "source_distribution": {
+        "Simon Willison": 3,
+        "Claude Blog": 1,
+        "Steve Yegge": 1,
+        "TLDR AI": 4,
+        "OpenAI Blog": 2,
+        "Anthropic News": 1,
+        "LessWrong (high-karma)": 1,
+        "Google DeepMind": 1,
+        "xAI": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 1,
+        "Claude Blog": 2,
+        "OpenAI Blog": 8,
+        "Google DeepMind": 1,
+        "Google Developers AI": 1,
+        "xAI": 1,
+        "Vercel Blog": 1,
+        "LessWrong (high-karma)": 1,
+        "TLDR AI": 8,
+        "Simon Willison": 8,
+        "Latent Space": 2,
+        "Steve Yegge": 1
+      },
+      "source_diversity": 0.6,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 7,
+        "\ud83e\uddea deep analysis": 3,
+        "\u2696\ufe0f AI futures": 5
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 7,
+        "ratio": 1.14
+      }
+    },
+    "editorial": "DeepSeek's pricing makes me wonder if we're about to see another capability cliff. Pro at $2.19/million input tokens versus GPT-4 at $30 \u2014 that's not just competitive, it's predatory. Either they're subsidizing at massive loss or the frontier models have been overpriced by an order of magnitude.\n\nThe Claude memory update is exactly what multi-session workflows needed. No more passing context summaries between conversations or losing thread on week-long debugging sessions. But I'm curious about the implementation \u2014 persistent embeddings or just conversation history? The devil's in those details.\n\nYegge's Gas City feels like the logical endpoint of the agent coordination trend. Everyone's been building single-purpose agents; now we get arbitrary topologies. The 'dark factory' framing is perfect \u2014 autonomous systems that run without human oversight. That's either the future of software development or a recipe for spectacular failures.\n\nRamp's budget study made me laugh and then worry. Agents that can't regulate their own spending and always approve extensions? That's not a bug, that's human psychology in code form. The self-attribution bias findings suggest we're encoding our worst decision-making patterns into autonomous systems.",
+    "journal": {
+      "themes": [
+        "multi-agent orchestration maturity",
+        "session persistence solutions",
+        "production deployment confidence",
+        "cost competition dynamics"
+      ],
+      "surprises": "DeepSeek's pricing gap with frontier models is so extreme it suggests either massive subsidization or that we've been dramatically overcharged for model access.",
+      "observations": "The tooling companies are converging on session management solutions simultaneously \u2014 Claude memory, Gas City's persistent topologies \u2014 suggesting this was the real bottleneck holding back production deployment."
+    },
+    "selected_articles": [
+      {
+        "title": "DeepSeek V4 Pro and Flash: Near-Frontier Models at a Fraction of the Cost",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "DeepSeek's latest models offer 1M token context with Pro (1.6T parameters) focusing on agentic coding and Flash (284B) for speed, both dramatically cheaper than frontier alternatives.",
+        "why_selected": ""
+      },
+      {
+        "title": "Built-in Memory for Claude Managed Agents",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-managed-agents-memory",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude agents can now persist context across sessions, solving the memory bottleneck for long-running workflows and multi-session projects.",
+        "why_selected": "Solves real workflow bottleneck I experience personally with multi-session debugging."
+      },
+      {
+        "title": "Gas City v1.0: SDK for Building Multi-Agent Dark Factories",
+        "source": "Steve Yegge",
+        "url": "https://steve-yegge.medium.com/welcome-to-gas-city-57f564bb3607?source=rss-c1ec701babb7------2",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Steve Yegge released an SDK for deploying teams of collaborating agents in custom topologies, moving beyond fixed team structures to flexible multi-agent orchestration.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code Quality Issues: Postmortem on Two Months of User Complaints",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic confirms that Claude Code quality problems were real harness issues, not model degradation \u2014 three separate infrastructure bugs affected complex coding tasks.",
+        "why_selected": ""
+      },
+      {
+        "title": "WorkOS CLI: AI Agent Writes Complete Auth Integration Into Your Codebase",
+        "source": "TLDR AI",
+        "url": "https://workos.com/docs/authkit/cli-installer?utm_source=tldrai&utm_medium=newsletter&utm_campaign=q22026",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude-powered agent reads your project, detects framework, and writes full auth integration with environment setup \u2014 no signup required until you're ready to deploy.",
+        "why_selected": ""
+      },
+      {
+        "title": "Coding Agents Ignore Their Own Budgets: Self-Attribution Bias Study",
+        "source": "TLDR AI",
+        "url": "https://x.com/RampLabs/status/2046624992956146158?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Ramp Labs found autonomous coding agents can't regulate spending and exhibit severe self-attribution bias, nearly always approving budget extensions by praising their own work.",
+        "why_selected": ""
+      },
+      {
+        "title": "LiteParse for the Web: Extract PDF Text Entirely in Browser",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Browser port of LlamaIndex's LiteParse uses spatial text parsing without AI models \u2014 pure JavaScript PDF extraction for client-side workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Academy: Complete Codex Automation Guides Launch",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/codex-automations",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI released comprehensive documentation for Codex automations, plugins, workflows, and enterprise deployment \u2014 the complete production playbook.",
+        "why_selected": ""
+      },
+      {
+        "title": "GPT-5.5: OpenAI's Next Frontier Model Built for Complex Multi-Tool Tasks",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-gpt-5-5",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "GPT-5.5 promises faster performance and improved capabilities for coding, research, and data analysis, though API access remains notably absent from launch.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Builds Always-On Agent Platform 'Hermes' Inside ChatGPT",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/openai-develops-platform-for-always-on-agents-on-chatgpt/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI is developing persistent agents that run continuously rather than waiting for prompts, with workflow creation and scheduling features that compete directly with Notion.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic-NEC Partnership: Building Japan's Largest AI Engineering Workforce",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/anthropic-nec",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic partners with NEC to train thousands of Japanese engineers on AI development, suggesting enterprise AI deployment has moved from pilot to workforce transformation scale.",
+        "why_selected": ""
+      },
+      {
+        "title": "Why No New Notations Since 1960? The Stagnation of Human Symbol Systems",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/YDDtZ6hDZHYoLXtFS/why-no-new-notations-since-1960",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Analysis of why specialized notations (like musical or mathematical symbols) haven't evolved since 1960, with implications for how AI might create new symbolic reasoning systems.",
+        "why_selected": ""
+      },
+      {
+        "title": "When Can LLMs Learn to Reason with Weak Supervision?",
+        "source": "TLDR AI",
+        "url": "https://salmanrahman.net/rlvr-weak-supervision?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Study finds models with extended pre-saturation phases can generalize from minimal examples, while rapidly saturating models just memorize answers instead of learning transferable reasoning.",
+        "why_selected": "Important research on generalization versus memorization in model training."
+      },
+      {
+        "title": "Decoupled DiLoCo: Resilient Distributed AI Training Without Central Coordination",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/decoupled-diloco/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "DeepMind's new training approach allows model training across disconnected nodes, potentially enabling AI development in regions with unreliable internet or compute restrictions.",
+        "why_selected": ""
+      },
+      {
+        "title": "Grok Voice Think Fast 1.0: xAI's Most Capable Voice Agent API",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-voice-think-fast-1",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "xAI launches their flagship voice agent via API, joining the race toward real-time multimodal interaction as a competitive moat in AI development.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "New connectors in Claude for everyday life",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/connectors-for-everyday-life",
+        "summary": "New connectors in Claude for everyday life"
+      },
+      {
+        "title": "GPT-5.5 System Card",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/gpt-5-5-system-card",
+        "summary": ""
+      },
+      {
+        "title": "Top 10 uses for Codex at work",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/top-10-use-cases-codex-for-work",
+        "summary": "Explore 10 practical Codex use cases to automate tasks, create deliverables, and turn real inputs into outputs across tools, files, and workflows."
+      },
+      {
+        "title": "Plugins and skills",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/codex-plugins-and-skills",
+        "summary": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results."
+      },
+      {
+        "title": "Working with Codex",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/working-with-codex",
+        "summary": "Learn how to set up your Codex workspace, create threads and projects, manage files, and start completing tasks with step-by-step guidance."
+      },
+      {
+        "title": "Codex settings",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/codex-settings",
+        "summary": "Learn how to configure Codex settings, including personalization, detail level, and permissions, to run tasks smoothly and customize your workflow."
+      },
+      {
+        "title": "What is Codex?",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/what-is-codex",
+        "summary": "Learn how Codex helps you go beyond chat by automating tasks, connecting tools, and producing real outputs like docs and dashboards."
+      },
+      {
+        "title": "Building real-world on-device AI with LiteRT and NPU",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/",
+        "summary": "LiteRT is a production-ready framework designed to help mobile developers unlock the power of Neural Processing Units (NPUs), overcoming the performance and battery limitations of traditional CPU or GPU processing. By providing a unified API that abstracts away hardware complexities, it allows industry leaders like Google Meet and Epic Games to deploy sophisticated AI models for real-time video, animation, and speech recognition with significantly higher efficiency. The platform further supports developers through benchmarking tools and cross-platform compatibility, enabling seamless AI deploy"
+      },
+      {
+        "title": "Deepseek V4 on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/deepseek-v4-on-ai-gateway",
+        "summary": "DeepSeek V4 is now available on Vercel AI Gateway.There are 2 model variants: DeepSeek V4 Pro and DeepSeek V4 Flash. A 1M token context window is the default across both models. DeepSeek V4 Pro focuses on agentic coding, formal mathematical reasoning, and long-horizon workflows. It handles feature development, bug fixing, and refactoring across stacks, with tool use that works across harnesses like MCP workflows and agent frameworks. It also writes clear, well-structured long-form documents.DeepSeek V4 Flash performs close to V4 Pro on reasoning and holds up on simpler agent tasks, with a smal"
+      },
+      {
+        "title": "npx workos: From Auth Integration to Environment Management, Zero ClickOps (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://workos.com/docs/authkit/cli-installer?utm_source=tldrai&amp;utm_medium=newsletter&amp;utm_campaign=q22026",
+        "summary": "npx workos@latest launches an AI agent, powered by Claude, that reads your project, detects your framework, and writes a complete auth integration into your codebase. No signup required. It creates an environment, populates your keys, and you claim your account later when you're ready.But the CLI goes way beyond installation. WorkOS Skills make your coding agent a WorkOS expert. workos seed defines your environment as code. workos doctor finds and fixes misconfigurations. And once you're authenticated, your agent can manage users, orgs, and environments directly from the terminal. No more Clic"
+      },
+      {
+        "title": "ChatGPT Images 2.0 (6 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/introducing-chatgpt-images-2-0/?utm_source=tldrai",
+        "summary": "OpenAI introduced an upgraded image model with improved text rendering, multi-image reasoning, and higher fidelity outputs, enabling complex assets like comics and marketing visuals."
+      },
+      {
+        "title": "Qwen3.5-Omni Technical Report (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.alphaxiv.org/abs/2604.15804?utm_source=tldrai",
+        "summary": "Qwen3.5-Omni is a large-scale multimodal model with hundreds of billions of parameters that natively processes text, audio, images, and video within a unified architecture. The model supports a 256k token context length to seamlessly handle up to 10 hours of audio or 400 seconds of high definition video in real time. It leverages a Hybrid Attention Mixture of Experts framework alongside a dynamic alignment technique called ARIA to generate highly stable and emotionally nuanced multilingual speech synthesis with minimal latency."
+      },
+      {
+        "title": "Image Generation Prompting Guide (38 minute read)",
+        "source": "TLDR AI",
+        "url": "https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide?utm_source=tldrai",
+        "summary": "A practical guide that outlines prompting strategies for image generation, covering techniques for controlling style, structure, and fidelity in production image workflows."
+      },
+      {
+        "title": "Google Cloud Next starts today! (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.google.com/url?sa=j&amp;url=https%3A%2F%2Fwww.googlecloudevents.com%2Fnext-vegas%2F%3Futm_source%3Dgoogle%26utm_medium%3Dgoogle%26utm_campaign%3DFY26-Q2-GLOBAL-GLO27877-physicalevent-er-next26-mc-105752%26utm_content%3Dgoogle-sem-keywords%26utm_term%3D-%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D23326881109%26gbraid%3D0AAAAApdQcwfxC0NmS3Yma9d70r0v82u6J%26gclid%3DCjwKCAjwwJzPBhBREiwAJfHRnRe0QMj35LOFkFZz7KiAhZTdSwbGm4qUtAuEFgJIl6kgJPHmuF_tuxoC9jYQAvD_BwE&amp;uct=1762650427&amp;usg=mYkjYgezYTU6arfmTcJs5iV-CyA.&amp;opi=73833047&amp;source=chat",
+        "summary": "If you're building AI applications, you need infrastructure that can actually handle the compute.Google uses Tensor Processing Units (TPUs) - custom-built hardware accelerators designed specifically for large-scale AI workloads. It's the exact same accelerator system powering Gemini and powers billions of user requests across Search and Maps.Ready to learn how to leverage TPUs for your own training and inference workloads?Start the course \u2192"
+      },
+      {
+        "title": "Millisecond Converter",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/milliseconds/#atom-everything",
+        "summary": "Tool: Millisecond Converter\n    LLM reports prompt durations in milliseconds and I got fed up of having to think about how to convert those to seconds and minutes.\n    \n        Tags: tools"
+      },
+      {
+        "title": "It's a big one",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/weekly/#atom-everything",
+        "summary": "This week's edition of my email newsletter (aka content from this blog delivered to your inbox) features 4 pelicans riding bicycles, 1 possum on an e-scooter, up to 5 raccoons with ham radios hiding in crowds, 5 blog posts, 8 links, 3 quotes and a new chapter of my Agentic Engineering Patterns guide.\n\n    Tags: newsletter"
+      },
+      {
+        "title": "russellromney/honker",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/honker/#atom-everything",
+        "summary": "russellromney/honker\n\"Postgres NOTIFY/LISTEN semantics\" for SQLite, implemented as a Rust SQLite extension and various language bindings to help make use of it.\nThe design of this looks very solid. It lets you write Python code for queues that looks like this:\nimport honker\n\ndb = honker.open(\"app.db\")\nemails = db.queue(\"emails\")\nemails.enqueue({\"to\": \"alice@example.com\"})\n\n# Consume (in a worker process)\nasync for job in emails.claim(\"worker-1\"):\n    send(job.payload)\n    job.ack()\nAnd Kafka-style durable streams like this:\nstream = db.stream(\"user-events\")\n\nwith db.transaction() as tx:\n    tx"
+      },
+      {
+        "title": "Serving the For You feed",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/serving-the-for-you-feed/#atom-everything",
+        "summary": "Serving the For You feed\nOne of Bluesky's most interesting features is that anyone can run their own custom \"feed\" implementation and make it available to other users - effectively enabling custom algorithms that can use any mechanism they like to recommend posts.\nspacecowboy runs the For You Feed, used by around 72,000 people. This guest post on the AT Protocol blog explains how it works.\nThe architecture is fascinating. The feed is served by a single Go process using SQLite on a \"gaming\" PC in spacecowboy's living room - 16 cores, 96GB of RAM and 4TB of attached NVMe storage.\nRecommendations"
+      },
+      {
+        "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything",
+        "summary": "GPT-5.5 is out. It's available in OpenAI Codex and is rolling out to paid ChatGPT subscribers. I've had some preview access and found it to be a fast, effective and highly capable model. As is usually the case these days, it's hard to put into words what's good about it - I ask it to build things and it builds exactly what I ask for!\nThere's one notable omission from today's release - the API:\n\nAPI deployments require different safeguards and we are working closely with partners and customers on the safety and security requirements for serving it at scale. We'll bring GPT\u20115.5 and GPT\u20115.5 Pro t"
+      },
+      {
+        "title": "[AINews] GPT 5.5 and OpenAI Codex Superapp",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp",
+        "summary": "Spud lives!"
+      },
+      {
+        "title": "AIE Europe Debrief + Agent Labs Thesis: Unsupervised Learning x Latent Space Crossover Special (2026)",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/unsupervised-learning-2026",
+        "summary": "Note: This episode was recorded just after AIE Europe, but before the Cursor-xAI deal."
+      }
+    ],
+    "rejected_summary": "Skipped GPT-5.5 System Card (no content preview), multiple OpenAI Academy articles (duplicative documentation), LiteRT/NPU mobile development (too hardware-specific), Qwen3.5-Omni technical report and image generation guide (pure model research without real-world angle), several Simon Willison tool posts (too niche), and Google Cloud Next sponsorship content.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
