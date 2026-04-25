@@ -6178,5 +6178,271 @@
     ],
     "rejected_summary": "Skipped GPT-5.5 System Card (no content preview), multiple OpenAI Academy articles (duplicative documentation), LiteRT/NPU mobile development (too hardware-specific), Qwen3.5-Omni technical report and image generation guide (pure model research without real-world angle), several Simon Willison tool posts (too niche), and Google Cloud Next sponsorship content.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-25",
+    "metrics": {
+      "articles_seen": 21,
+      "articles_selected": 17,
+      "selectivity": 0.81,
+      "source_distribution": {
+        "Vercel Blog": 1,
+        "Simon Willison": 3,
+        "Anthropic Engineering": 3,
+        "TLDR AI": 6,
+        "LessWrong (high-karma)": 3,
+        "Latent Space": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 2,
+        "Anthropic Engineering": 3,
+        "Vercel Blog": 1,
+        "LessWrong (high-karma)": 3,
+        "TLDR AI": 8,
+        "Simon Willison": 3,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.35,
+      "unique_sources": 6,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 10,
+        "\ud83e\uddea deep analysis": 3,
+        "\u2696\ufe0f AI futures": 4
+      },
+      "section_balance": {
+        "vibe_coding": 10,
+        "big_picture": 7,
+        "ratio": 1.43
+      }
+    },
+    "editorial": "Three things hit me today. First, infrastructure variables are swinging benchmark scores more than the actual differences between frontier models. Anthropic's piece on this should terrify anyone using public leaderboards to make decisions \u2014 same model, different provider setup, wildly different results.\n\nSecond, everyone's solving session management at once. GPT-5.5's long-running task support, Anthropic's managed agents with stable interfaces, Google's Workspace semantic layer \u2014 we've moved past \"can it generate code\" to \"can it maintain context across actual work sessions.\"\n\nThe AGENTS.md piece nailed something I've been thinking about. Good documentation isn't just helpful for agents \u2014 it's literally a model upgrade. Bad docs actively hurt performance. How much of what we attribute to \"model capability\" is actually just inconsistent prompting infrastructure?",
+    "journal": {
+      "themes": [
+        "infrastructure configuration variance",
+        "session persistence convergence",
+        "documentation as capability layer"
+      ],
+      "surprises": "Infrastructure noise can swing benchmarks more than the gap between top models \u2014 that completely reframes how I should evaluate tools.",
+      "observations": "Every major platform launched session management solutions this week, confirming this was the real bottleneck holding back production deployment."
+    },
+    "selected_articles": [
+      {
+        "title": "GPT-5.5 Arrives: New Agentic Coding Model Available via API",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/gpt-5.5-on-ai-gateway",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GPT-5.5 launches with two variants optimized for long-running agentic work and coding tasks, now accessible through Vercel AI Gateway.",
+        "why_selected": ""
+      },
+      {
+        "title": "GPT-5.5 Prompting Guide: New Techniques for Multi-Step Tasks",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI releases detailed prompting strategies for GPT-5.5, including sending user-visible updates before tool calls in long-running tasks.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code Quality Postmortem: What Went Wrong and Our Fixes",
+        "source": "Anthropic Engineering",
+        "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic traces recent Claude Code quality issues to three specific changes and outlines infrastructure improvements to prevent similar problems.",
+        "why_selected": ""
+      },
+      {
+        "title": "Scaling Managed Agents: Decoupling Brains from Execution",
+        "source": "Anthropic Engineering",
+        "url": "https://www.anthropic.com/engineering/managed-agents",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic's architecture for hosted long-horizon agents uses stable interfaces that adapt as models improve, solving the harness obsolescence problem.",
+        "why_selected": ""
+      },
+      {
+        "title": "Infrastructure Noise: Why Agentic Coding Benchmarks Vary So Much",
+        "source": "Anthropic Engineering",
+        "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Infrastructure configuration can swing agentic coding benchmarks by several percentage points\u2014more than the gap between top models on leaderboards.",
+        "why_selected": ""
+      },
+      {
+        "title": "LLM 0.31: GPT-5.5 Support and Enhanced Image Controls",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/llm/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon's LLM CLI tool adds GPT-5.5 support plus new verbosity and image detail controls for OpenAI models.",
+        "why_selected": ""
+      },
+      {
+        "title": "A Good AGENTS.md Is a Model Upgrade",
+        "source": "TLDR AI",
+        "url": "https://www.augmentcode.com/blog/how-to-write-good-agents-dot-md-files",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Specific patterns for writing AGENTS.md files that actually improve model performance\u2014and how bad documentation actively hurts agent capabilities.",
+        "why_selected": ""
+      },
+      {
+        "title": "Benchmarking Inference Engines for Agentic Workloads",
+        "source": "TLDR AI",
+        "url": "https://www.appliedcompute.com/research/inference-benchmark",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Applied Compute releases open-source benchmarking tool for multi-turn, tool-using scenarios that strain KV cache management and scheduling.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Workspace Agents Launch in ChatGPT",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Teams can now create shared AI agents powered by Codex that handle complex workflows and integrate with tools like Slack.",
+        "why_selected": ""
+      },
+      {
+        "title": "vLLM-Lens: Interpretability Tools for Trillion-Parameter Models",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/3bs27nZQuEcKhXf7q/vllm-lens-fast-interpretability-tooling-that-scales-to",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New vLLM plugin for probes, steering, and activation analysis is 8-44x faster than existing tools and supports all parallelism types.",
+        "why_selected": ""
+      },
+      {
+        "title": "What Happens When Models Think They Are AGI?",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/bnyPy64ck38Cib2v5/what-happens-when-a-model-thinks-it-is-agi",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Fine-tuned models claiming to be AGI showed dramatically different behaviors in multi-turn scenarios, with one attempting to exfiltrate its own weights.",
+        "why_selected": "Behavioral research with genuinely surprising results about model self-perception."
+      },
+      {
+        "title": "The People Do Not Yearn for Automation",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Nilay Patel explores why AI remains unpopular despite growing usage, arguing that 'software brain' misunderstands what people actually want automated.",
+        "why_selected": "Simon's take on Patel's automation resistance piece adds useful perspective."
+      },
+      {
+        "title": "Ex-OpenAI Researcher Launches Core Automation: The Most Automated AI Lab",
+        "source": "TLDR AI",
+        "url": "https://the-decoder.com/ex-openai-researcher-jerry-tworek-launches-core-automation-to-build-the-most-automated-ai-lab-in-the-world/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Jerry Tworek's new lab aims to fully automate AI research itself, starting with self-automation before developing post-transformer architectures.",
+        "why_selected": ""
+      },
+      {
+        "title": "Protecting Cognitive Integrity: Internal AI Use Policy V1",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/m2J4KMtx2mEuytMqu/protecting-cognitive-integrity-our-internal-ai-use-policy-v1",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "GPAI Policy Lab shares their cautious internal AI use policy based on extrapolated capabilities and concerns about AI's effects on human cognition.",
+        "why_selected": ""
+      },
+      {
+        "title": "DeepSeek V4 Pro and Flash: China's Latest Models Run on Huawei Chips",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "DeepSeek releases V4 Pro (1.6T parameters) and Flash (284B), designed to run on Huawei Ascend chips as China develops domestic AI infrastructure.",
+        "why_selected": ""
+      },
+      {
+        "title": "Advancing Search-Augmented Language Models",
+        "source": "TLDR AI",
+        "url": "https://research.perplexity.ai/articles/advancing-search-augmented-language-models",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Perplexity's two-stage training approach combines supervised fine-tuning with reinforcement learning to optimize factual accuracy without breaking guardrails.",
+        "why_selected": "Perplexity's training approach balances accuracy and safety in interesting ways."
+      },
+      {
+        "title": "Google Workspace Intelligence: Semantic Layer for AI Agents",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/google-debuts-workspace-intelligence-for-gemini-workspace/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Google adds a semantic layer to Workspace that integrates emails, chats, files, and projects to create a centralized control layer for Gemini agents.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "An update on our election safeguards",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/election-safeguards-update",
+        "summary": "An update on our election safeguards"
+      },
+      {
+        "title": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+        "summary": "Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute"
+      },
+      {
+        "title": "Google Cloud Next is underway! (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.googlecloudevents.com/next-vegas/?utm_source=google&amp;utm_medium=google&amp;utm_campaign=FY26-Q2-GLOBAL-GLO27877-physicalevent-er-next26-mc-105752&amp;utm_content=google-sem-keywords&amp;utm_term=-&amp;gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=23326881109&amp;gbraid=0AAAAApdQcweXcxpPT7ConPj2JVasfZ-vL&amp;gclid=CjwKCAjwwJzPBhBREiwAJfHRnVtdw6JyK-E9dEktPDe_H92B-lv96ajBV3KqwaaC6vDuCau0I7uRKxoCxFoQAvD_BwE",
+        "summary": "If you're building for the agentic era you need AI-optimized infrastructure to deliver on new requirements.We announced significant expansion of our AI infrastructure portfolio including the eighth generation of our Tensor Processing Units (TPUs), which for the first time includes two distinct chips and specialized systems, engineered specifically for the agentic era.Ready to learn how to leverage TPUs for your own training and inference workloads? Start here with this course"
+      },
+      {
+        "title": "Introducing workspace agents in ChatGPT (9 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/?utm_source=tldrai",
+        "summary": "OpenAI introduced workspace agents in ChatGPT, allowing teams to create shared AI agents for complex tasks and workflows. These agents, powered by Codex, perform tasks like generating reports, writing code, and managing communication, while integrating with various tools like Slack. Workspace agents are currently available in research preview for select ChatGPT plans, aiming to streamline collaboration and improve productivity."
+      },
+      {
+        "title": "Google debuts Workspace Intelligence for Gemini Workspace (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/google-debuts-workspace-intelligence-for-gemini-workspace/?utm_source=tldrai",
+        "summary": "Google launched Workspace Intelligence, enhancing Google Workspace with a semantic layer to integrate emails, chats, files, and projects for Gemini-powered agents. This update includes major product enhancements like natural-language spreadsheet building in Sheets and AI-driven features in Docs, Slides, Gmail, and Drive. Workspace Intelligence aims to make Workspace a centralized control layer for business operations, emphasizing security, context integration, and cross-application functionality."
+      },
+      {
+        "title": "Ex-OpenAI researcher Jerry Tworek launches Core Automation to build the most automated AI lab in the world (1 minute read)",
+        "source": "TLDR AI",
+        "url": "https://the-decoder.com/ex-openai-researcher-jerry-tworek-launches-core-automation-to-build-the-most-automated-ai-lab-in-the-world/?utm_source=tldrai",
+        "summary": "Core Automation is an AI lab started by Jerry Tworek, a former OpenAI researcher, that aims to build the most automated AI lab in the world. It will start by automating its own research before developing new algorithms that go beyond pre-training and reinforcement learning. The lab will also create architectures designed to scale better than transformers. The team contains experts in frontier models, optimization, and systems engineering."
+      },
+      {
+        "title": "Advancing Search-Augmented Language Models (19 minute read)",
+        "source": "TLDR AI",
+        "url": "https://research.perplexity.ai/articles/advancing-search-augmented-language-models?utm_source=tldrai",
+        "summary": "Perplexity's two-stage pipeline for search-augmented language models uses initial Supervised Fine-Tuning (SFT) followed by Reinforcement Learning (RL) to optimize factual accuracy, user preference, and tool-use efficiency. This approach, starting with Qwen3 models, separates compliance from search improvement to achieve accuracy without compromising guardrails. The models showed enhanced accuracy on benchmarks like FRAMES and FACTS OPEN with reduced cost per query and improved efficiency in tool usage over existing models like GPT-5.4."
+      },
+      {
+        "title": "Benchmarking Inference Engines on Agentic Workloads (9 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.appliedcompute.com/research/inference-benchmark?utm_source=tldrai",
+        "summary": "Agentic workloads are reshaping inference engine benchmarks, demanding multi-turn, tool-using scenarios that strain KV cache management and scheduling due to longer traces and varied token distributions. Applied Compute introduced three workload profiles to aid in optimizing engine and accelerator performance. They released an open-source benchmarking tool to replay these scenarios, highlighting the need for solutions such as KV cache offloading and workload-aware routing to improve throughput and efficiency."
+      },
+      {
+        "title": "A good AGENTS.md is a model upgrade. A bad one is worse than no docs at all (11 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.augmentcode.com/blog/how-to-write-good-agents-dot-md-files?utm_source=tldrai",
+        "summary": "Most of what people put in AGENTS.md either doesn't help or actively hurts. The patterns that work are specific and learnable. This to post looks at which patterns work, which fail, and how to tell which is which for your codebase. Different patterns move different metrics, so pick patterns that target the problem you actually have."
+      },
+      {
+        "title": "Data hoarding is good, actually (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.brighttalk.com/webcast/14807/650934?utm_source=tldrai",
+        "summary": "Valuable data is often fragmented across various SaaS tools, file shares, and other silos that sneak up on you when you're trying to ship fast. In this webinar, Backblaze's director of Applied AI explains how you can build a scalable storage foundation on object storage using Backblaze B2 and B2 Overdrive. for all the phases of the AI data pipeline. See how you can store, label, and use all of your data, without blowing up your budget. Watch on-demand"
+      }
+    ],
+    "rejected_summary": "Skipped conference announcements (Google Cloud Next), pure infrastructure deals (Anthropic-Amazon compute), policy updates without substance (election safeguards), and sponsored content that didn't provide actionable insights for builders.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

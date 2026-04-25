@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-17",
-    "summary": "Claude Opus 4.7: New SOTA Model with xhigh Effort Level in Claude Code (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Best Practices for Using Claude Opus 4.7 with Claude Code (Claude Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Codex for (Almost) Everything: Computer Use and In-App Browsing (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Multi-Agent Kernel Optimization: 38% CUDA Performance Gains (Cursor Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Better AI Models Enable More Ambitious Work (Cursor Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "MaxText Expands to SFT and RL on Single-Host TPUs (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Google Skills in Chrome: Save and Reuse AI Prompts Across Websites (Google (via TLDR AI))"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "A New Programming Model for Durable Execution (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "How GitBook Serves 30,000 Sites with Sub-Second Content Updates (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "You Can Only Build Safe ASI if ASI is Globally Banned (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Before He Wrote AI 2027, He Predicted 2026: How Accurate Were His Forecasts? (Asterisk Magazine (via TLDR AI))"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Five Hyperscalers Now Own Over Two-Thirds of Global AI Compute (Epoch AI (via TLDR AI))"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "GPT-Rosalind: OpenAI's Frontier Reasoning Model for Life Sciences (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Accelerating the Cyber Defense Ecosystem with $10M in API Grants (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "You Aren't in Charge of the Overton Window: Politics Is Not Interior Design (LessWrong)"
-  },
-  {
-    "date": "2026-04-17",
-    "summary": "Specialization is a Driver of Natural Ontology (LessWrong)"
-  },
-  {
     "date": "2026-04-18",
     "summary": "Amplitude Ships 3x More Production Code with Cursor (Cursor Blog)"
   },
@@ -422,5 +358,73 @@
   {
     "date": "2026-04-24",
     "summary": "Grok Voice Think Fast 1.0: xAI's Most Capable Voice Agent API (xAI)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "GPT-5.5 Arrives: New Agentic Coding Model Available via API (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "GPT-5.5 Prompting Guide: New Techniques for Multi-Step Tasks (Simon Willison)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Claude Code Quality Postmortem: What Went Wrong and Our Fixes (Anthropic Engineering)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Scaling Managed Agents: Decoupling Brains from Execution (Anthropic Engineering)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Infrastructure Noise: Why Agentic Coding Benchmarks Vary So Much (Anthropic Engineering)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "LLM 0.31: GPT-5.5 Support and Enhanced Image Controls (Simon Willison)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "A Good AGENTS.md Is a Model Upgrade (TLDR AI)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Benchmarking Inference Engines for Agentic Workloads (TLDR AI)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "OpenAI Workspace Agents Launch in ChatGPT (TLDR AI)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "vLLM-Lens: Interpretability Tools for Trillion-Parameter Models (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "What Happens When Models Think They Are AGI? (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "The People Do Not Yearn for Automation (Simon Willison)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Ex-OpenAI Researcher Launches Core Automation: The Most Automated AI Lab (TLDR AI)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Protecting Cognitive Integrity: Internal AI Use Policy V1 (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "DeepSeek V4 Pro and Flash: China's Latest Models Run on Huawei Chips (Latent Space)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Advancing Search-Augmented Language Models (TLDR AI)"
+  },
+  {
+    "date": "2026-04-25",
+    "summary": "Google Workspace Intelligence: Semantic Layer for AI Agents (TLDR AI)"
   }
 ]

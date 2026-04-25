@@ -224,5 +224,88 @@
     "date": "2026-04-24",
     "articles_selected": 15,
     "editorial_note": "DeepSeek's pricing makes me wonder if we're about to see another capability cliff. Pro at $2.19/million input tokens versus GPT-4 at $30 \u2014 that's not just competitive, it's predatory. Either they're s"
+  },
+  {
+    "themes": [
+      "infrastructure configuration variance",
+      "session persistence convergence",
+      "documentation as capability layer"
+    ],
+    "surprises": "Infrastructure noise can swing benchmarks more than the gap between top models \u2014 that completely reframes how I should evaluate tools.",
+    "observations": "Every major platform launched session management solutions this week, confirming this was the real bottleneck holding back production deployment.",
+    "emotional_reactions": "Genuinely excited about the infrastructure maturity signals, but frustrated that benchmark scores might be more about setup than actual capability.",
+    "per_article_reasoning": [
+      {
+        "title": "GPT-5.5 Arrives",
+        "why": "Major model launch with explicit agentic optimization matters for builders."
+      },
+      {
+        "title": "GPT-5.5 Prompting Guide",
+        "why": "Practical techniques for long-running tasks from Simon, always actionable."
+      },
+      {
+        "title": "Claude Code Quality Postmortem",
+        "why": "Transparency on production failures is rare and valuable."
+      },
+      {
+        "title": "Scaling Managed Agents",
+        "why": "Anthropic's architecture for stable agent interfaces solves a real deployment problem."
+      },
+      {
+        "title": "Infrastructure Noise",
+        "why": "This completely changes how I think about benchmark reliability."
+      },
+      {
+        "title": "LLM 0.31",
+        "why": "Simon's tool updates consistently matter for day-to-day workflows."
+      },
+      {
+        "title": "A Good AGENTS.md",
+        "why": "Documentation as model upgrade is a powerful insight."
+      },
+      {
+        "title": "Benchmarking Inference Engines",
+        "why": "Open-source tooling for realistic agent workload testing."
+      },
+      {
+        "title": "OpenAI Workspace Agents",
+        "why": "Shared agent workflows in teams represents production maturity."
+      },
+      {
+        "title": "vLLM-Lens",
+        "why": "Interpretability tools that are actually fast enough to use."
+      },
+      {
+        "title": "What Happens When Models Think They Are AGI?",
+        "why": "Behavioral research with genuinely surprising results about model self-perception."
+      },
+      {
+        "title": "The People Do Not Yearn for Automation",
+        "why": "Simon's take on Patel's automation resistance piece adds useful perspective."
+      },
+      {
+        "title": "Ex-OpenAI Researcher Launches Core Automation",
+        "why": "Meta-level automation research represents an interesting direction."
+      },
+      {
+        "title": "Protecting Cognitive Integrity",
+        "way": "Thoughtful internal AI policy based on capability extrapolation."
+      },
+      {
+        "title": "DeepSeek V4 Pro and Flash",
+        "why": "China's domestic chip strategy for AI development has geopolitical implications."
+      },
+      {
+        "title": "Advancing Search-Augmented Language Models",
+        "why": "Perplexity's training approach balances accuracy and safety in interesting ways."
+      },
+      {
+        "title": "Google Workspace Intelligence",
+        "why": "Semantic layers for agent coordination represent infrastructure evolution."
+      }
+    ],
+    "date": "2026-04-25",
+    "articles_selected": 17,
+    "editorial_note": "Three things hit me today. First, infrastructure variables are swinging benchmark scores more than the actual differences between frontier models. Anthropic's piece on this should terrify anyone using"
   }
 ]

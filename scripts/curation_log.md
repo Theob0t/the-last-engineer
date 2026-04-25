@@ -174,3 +174,9 @@ Added emphasis on session management and state persistence as the real bottlenec
 **Surprise:** DeepSeek's pricing gap with frontier models is so extreme it suggests either massive subsidization or that we've been dramatically overcharged for model access.
 **Observation:** The tooling companies are converging on session management solutions simultaneously — Claude memory, Gas City's persistent topologies — suggesting this was the real bottleneck holding back production deployment.
 **Rejected:** Skipped GPT-5.5 System Card (no content preview), multiple OpenAI Academy articles (duplicative documentation), LiteRT/NPU mobile development (too hardware-specific), Qwen3.5-Omni technical report and image generation guide (pure model research without real-world angle), several Simon Willison tool posts (too niche), and Google Cloud Next sponsorship content.
+
+## 2026-04-25 — 10 vibe, 7 big picture
+**Themes:** infrastructure configuration variance, session persistence convergence, documentation as capability layer
+**Surprise:** Infrastructure noise can swing benchmarks more than the gap between top models — that completely reframes how I should evaluate tools.
+**Observation:** Every major platform launched session management solutions this week, confirming this was the real bottleneck holding back production deployment.
+**Rejected:** Skipped conference announcements (Google Cloud Next), pure infrastructure deals (Anthropic-Amazon compute), policy updates without substance (election safeguards), and sponsored content that didn't provide actionable insights for builders.
