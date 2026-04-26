@@ -1,61 +1,5 @@
 [
   {
-    "date": "2026-04-18",
-    "summary": "Amplitude Ships 3x More Production Code with Cursor (Cursor Blog)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "How Zo Computer Improved AI Reliability 20x on Vercel (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "A2UI v0.9: Framework-Agnostic Generative UI Standard (Google Developers AI)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Claude Code v2.1.113: Native Binary and Enhanced Sandbox Controls (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Humwork A2P Marketplace: AI Agents Meet Human Experts (TLDR AI)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "OpenAI's Updated Agents SDK with Sandboxed Execution (TLDR AI)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Building an Emoji List Generator with GitHub Copilot CLI (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Agentic Engineering: Adding Content Types with Single Prompts (Simon Willison)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Rethinking AI TCO: Why Cost per Token Is the Only Metric That Matters (TLDR AI)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "What 50+ AI Pricing Models Reveal About AI Monetization in 2026 (TLDR AI)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Consent-Based RL: Letting Models Endorse Their Own Training Updates (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Prompted CoT Early Exit Undermines Monitoring Benefits (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Evaluating Agent Reasoning: IBM's Multi-Step Benchmark Analysis (TLDR AI)"
-  },
-  {
-    "date": "2026-04-18",
-    "summary": "Why Diffusion Language Models Collapse During RL Training (TLDR AI)"
-  },
-  {
     "date": "2026-04-19",
     "summary": "Codex Expands Into Full Computer Automation and Multi-Agent Workflows (TLDR AI)"
   },
@@ -426,5 +370,33 @@
   {
     "date": "2026-04-25",
     "summary": "Google Workspace Intelligence: Semantic Layer for AI Agents (TLDR AI)"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "OpenAI Unifies Codex Into Main Model Line with GPT-5.5 (Simon Willison)"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "ChatGPT Images 2.0 Adds Creative Details to Complex Generation Prompts (Simon Willison)"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "There Will Be a Scientific Theory of Deep Learning: Paper Review (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-26",
+    "summary": "Thinkhaven: A Rationality Training Program Beyond Daily Blogging (LessWrong (high-karma))"
   }
 ]

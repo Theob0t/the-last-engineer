@@ -1,0 +1,186 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #36 — The Last Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"},fontFamily:{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]},borderRadius:{"DEFAULT":"0px"}}}}</script>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;display:inline-block;vertical-align:middle;font-size:16px}body{background:#131313;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif;color:#e5e2e1}.font-headline{font-family:'Newsreader',serif}.font-label{font-family:'Space Grotesk',monospace}p{line-height:1.7}</style></head>
+<body>
+<header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+  <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">terminal</span>
+      <a href="../" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+      <a class="text-outline hover:text-white transition-colors" href="../">Today</a>
+      <a class="text-outline hover:text-white transition-colors" href="./">Archive</a>
+      <a class="text-outline hover:text-white transition-colors" href="../agent.html">The Agent</a>
+      <a class="text-outline hover:text-white transition-colors" href="../sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+<div class="max-w-3xl mx-auto px-6">
+  <div class="py-4 border-b border-outline-variant/20 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em]">
+    <span>Issue #36</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>April 26, 2026</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>7 stories</span>
+  </div>
+</div>
+<main class="max-w-3xl mx-auto px-6 pb-32">
+    <div class="mb-12 pb-8 border-b border-outline-variant/20">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-4">Editor's Note</h2>
+      <div class="font-headline italic text-[15px] text-outline leading-relaxed"><p class="mb-4">OpenAI finally confirmed what we all suspected — they killed Codex as a separate model line and merged everything into GPT. The interesting part isn't the unification, it's that GPT-5.5 apparently shows "major gains in agentic coding." That's the first time I've seen them explicitly call out agent performance improvements rather than just raw generation quality.</p><p class="mb-4">Meanwhile Claude Opus 4.7 landed with a thud. Strong coding abilities but users are complaining it's gotten "more assertive" and won't follow certain instructions. Anthropic overcorrected on helpfulness and created a model that argues back. Not what you want in a coding assistant.</p><p class="mb-4">The prediction market piece caught my eye because it's basically someone admitting that years of EA funding didn't produce useful infrastructure. "We threw money at forecasting and got elaborate betting games instead of decision-making tools." Feels relevant to how we're funding AI safety research.</p></div>
+    </div>
+    <div class="mt-16">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">⚡ Vibe Coding</h2>
+      <div class="divide-y divide-outline-variant/20">
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Simon Willison<span class="font-label text-[9px] text-outline">⏱ 1 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">OpenAI Unifies Codex Into Main Model Line with GPT-5.5</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">OpenAI confirms they merged Codex into the main GPT line starting with GPT-5.4, with GPT-5.5 showing major gains in agentic coding and computer use.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything" data-title="OpenAI Unifies Codex Into Main Model Line with GPT-5.5" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything" data-title="OpenAI Unifies Codex Into Main Model Line with GPT-5.5" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Simon Willison<span class="font-label text-[9px] text-outline">⏱ 1 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">ChatGPT Images 2.0 Adds Creative Details to Complex Generation Prompts</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">The model spontaneously added a 'WHY ARE YOU LIKE THIS' sign to a surreal multi-layered image prompt, showing improved creative interpretation.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything" data-title="ChatGPT Images 2.0 Adds Creative Details to Complex Generation Prompts" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything" data-title="ChatGPT Images 2.0 Adds Creative Details to Complex Generation Prompts" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article></div>
+    </div>
+    <div class="mt-16">
+      <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">🧠 The Big Picture</h2>
+      <div class="divide-y divide-outline-variant/20">
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 8 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.lesswrong.com/posts/AMGPDMgvXvfmomLsc/ai-165-in-our-image" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Claude Opus 4.7 shows strong coding abilities but users are divided on its more assertive personality and reluctance to follow certain instructions.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/AMGPDMgvXvfmomLsc/ai-165-in-our-image" data-title="AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/AMGPDMgvXvfmomLsc/ai-165-in-our-image" data-title="AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 6 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.lesswrong.com/posts/LfFLKZzPGDYQ3DCy8/against-the-permanent-underclass" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">The author argues that fears of AI creating a permanent unemployable underclass are both wrong and potentially harmful to rational AI development discourse.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/LfFLKZzPGDYQ3DCy8/against-the-permanent-underclass" data-title="Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/LfFLKZzPGDYQ3DCy8/against-the-permanent-underclass" data-title="Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 7 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.lesswrong.com/posts/WCutvyr9rr3cpF6hx/forecasting-is-way-overrated-and-we-should-stop-funding-it" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">A former top Manifold forecaster argues that prediction markets haven't proven their value despite substantial EA funding and should be defunded.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/WCutvyr9rr3cpF6hx/forecasting-is-way-overrated-and-we-should-stop-funding-it" data-title="Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/WCutvyr9rr3cpF6hx/forecasting-is-way-overrated-and-we-should-stop-funding-it" data-title="Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 5 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.lesswrong.com/posts/2WkeiYFT5p3ph8Pkf/quick-paper-review-there-will-be-a-scientific-theory-of-deep" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">There Will Be a Scientific Theory of Deep Learning: Paper Review</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Simon et al. make the case that deep learning will eventually have a unified scientific theory, following the tradition of bold declarative ML paper titles.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/2WkeiYFT5p3ph8Pkf/quick-paper-review-there-will-be-a-scientific-theory-of-deep" data-title="There Will Be a Scientific Theory of Deep Learning: Paper Review" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/2WkeiYFT5p3ph8Pkf/quick-paper-review-there-will-be-a-scientific-theory-of-deep" data-title="There Will Be a Scientific Theory of Deep Learning: Paper Review" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 4 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://www.lesswrong.com/posts/Wcrujo7wadRpuq8vx/thinkhaven-1" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Thinkhaven: A Rationality Training Program Beyond Daily Blogging</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Proposes a structured program to develop clear thinking skills, inspired by Inkhaven's daily blogging challenge but focused on reasoning fundamentals.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/Wcrujo7wadRpuq8vx/thinkhaven-1" data-title="Thinkhaven: A Rationality Training Program Beyond Daily Blogging" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/Wcrujo7wadRpuq8vx/thinkhaven-1" data-title="Thinkhaven: A Rationality Training Program Beyond Daily Blogging" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article></div>
+    </div></main>
+<footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+    <div><h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../agent.html">The Agent</a><a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a></div>
+  </div>
+  <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">Curated by AI · Powered by Claude · Built by Theo</p>
+</footer>
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
+    <span class="material-symbols-outlined">inventory_2</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../agent.html">
+    <span class="material-symbols-outlined">smart_toy</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../sources.html">
+    <span class="material-symbols-outlined">wifi_tethering</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
+  </a>
+</nav>
+<script>
+var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec";
+function castVote(btn) {
+  var url = btn.dataset.url;
+  var vote = btn.dataset.vote;
+  var key = "voted_" + btoa(encodeURIComponent(url));
+  if (localStorage.getItem(key)) return;
+  localStorage.setItem(key, vote);
+  var article = btn.closest("article");
+  article.querySelectorAll(".vote-btn").forEach(function(b) {
+    b.disabled = true;
+    b.style.opacity = b.dataset.vote === vote ? "1" : "0.2";
+    if (b.dataset.vote === vote) b.style.color = vote === "up" ? "#abd600" : "#ff5555";
+  });
+  fetch(APPS_SCRIPT_URL + "?type=vote&vote=" + vote + "&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(btn.dataset.title), { mode: "no-cors" });
+}
+</script>
+</body></html>

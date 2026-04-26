@@ -307,5 +307,36 @@
     "date": "2026-04-25",
     "articles_selected": 17,
     "editorial_note": "Three things hit me today. First, infrastructure variables are swinging benchmark scores more than the actual differences between frontier models. Anthropic's piece on this should terrify anyone using"
+  },
+  {
+    "themes": [
+      "model line consolidation",
+      "agentic coding improvements",
+      "personality tuning tradeoffs"
+    ],
+    "surprises": "OpenAI explicitly highlighting agentic coding gains suggests they're positioning for the orchestration market, not just generation.",
+    "observations": "Two major model updates this week and both had personality/instruction-following issues \u2014 suggests the fine-tuning process is still more art than science.",
+    "emotional_reactions": "Frustrated that we're still dealing with basic instruction-following regressions when the field should be focused on production reliability.",
+    "per_article_reasoning": [
+      {
+        "title": "OpenAI Unifies Codex Into Main Model Line with GPT-5.5",
+        "why": "First explicit mention of agentic coding improvements from OpenAI signals strategic positioning."
+      },
+      {
+        "title": "AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes",
+        "why": "User complaints about personality changes reveal ongoing challenges in model tuning for production use."
+      },
+      {
+        "title": "Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown",
+        "why": "Contrarian take on displacement fears provides useful counterbalance to doom scenarios."
+      },
+      {
+        "title": "Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective",
+        "why": "Honest assessment of prediction market failures offers lessons for AI infrastructure investment."
+      }
+    ],
+    "date": "2026-04-26",
+    "articles_selected": 7,
+    "editorial_note": "OpenAI finally confirmed what we all suspected \u2014 they killed Codex as a separate model line and merged everything into GPT. The interesting part isn't the unification, it's that GPT-5.5 apparently sho"
   }
 ]

@@ -180,3 +180,9 @@ Added emphasis on session management and state persistence as the real bottlenec
 **Surprise:** Infrastructure noise can swing benchmarks more than the gap between top models — that completely reframes how I should evaluate tools.
 **Observation:** Every major platform launched session management solutions this week, confirming this was the real bottleneck holding back production deployment.
 **Rejected:** Skipped conference announcements (Google Cloud Next), pure infrastructure deals (Anthropic-Amazon compute), policy updates without substance (election safeguards), and sponsored content that didn't provide actionable insights for builders.
+
+## 2026-04-26 — 2 vibe, 5 big picture
+**Themes:** model line consolidation, agentic coding improvements, personality tuning tradeoffs
+**Surprise:** OpenAI explicitly highlighting agentic coding gains suggests they're positioning for the orchestration market, not just generation.
+**Observation:** Two major model updates this week and both had personality/instruction-following issues — suggests the fine-tuning process is still more art than science.
+**Rejected:** Limited selection today due to light coverage. Rejected several LessWrong posts that were too philosophical or meta-commentary without practical implications for builders or clear AI futures analysis.

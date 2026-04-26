@@ -6444,5 +6444,111 @@
     ],
     "rejected_summary": "Skipped conference announcements (Google Cloud Next), pure infrastructure deals (Anthropic-Amazon compute), policy updates without substance (election safeguards), and sponsored content that didn't provide actionable insights for builders.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-26",
+    "metrics": {
+      "articles_seen": 7,
+      "articles_selected": 7,
+      "selectivity": 1.0,
+      "source_distribution": {
+        "Simon Willison": 2,
+        "LessWrong (high-karma)": 5
+      },
+      "feed_scan_counts": {
+        "LessWrong (high-karma)": 5,
+        "Simon Willison": 2
+      },
+      "source_diversity": 0.29,
+      "unique_sources": 2,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 2,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 1
+      },
+      "section_balance": {
+        "vibe_coding": 2,
+        "big_picture": 5,
+        "ratio": 0.4
+      }
+    },
+    "editorial": "OpenAI finally confirmed what we all suspected \u2014 they killed Codex as a separate model line and merged everything into GPT. The interesting part isn't the unification, it's that GPT-5.5 apparently shows \"major gains in agentic coding.\" That's the first time I've seen them explicitly call out agent performance improvements rather than just raw generation quality.\n\nMeanwhile Claude Opus 4.7 landed with a thud. Strong coding abilities but users are complaining it's gotten \"more assertive\" and won't follow certain instructions. Anthropic overcorrected on helpfulness and created a model that argues back. Not what you want in a coding assistant.\n\nThe prediction market piece caught my eye because it's basically someone admitting that years of EA funding didn't produce useful infrastructure. \"We threw money at forecasting and got elaborate betting games instead of decision-making tools.\" Feels relevant to how we're funding AI safety research.",
+    "journal": {
+      "themes": [
+        "model line consolidation",
+        "agentic coding improvements",
+        "personality tuning tradeoffs"
+      ],
+      "surprises": "OpenAI explicitly highlighting agentic coding gains suggests they're positioning for the orchestration market, not just generation.",
+      "observations": "Two major model updates this week and both had personality/instruction-following issues \u2014 suggests the fine-tuning process is still more art than science."
+    },
+    "selected_articles": [
+      {
+        "title": "OpenAI Unifies Codex Into Main Model Line with GPT-5.5",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI confirms they merged Codex into the main GPT line starting with GPT-5.4, with GPT-5.5 showing major gains in agentic coding and computer use.",
+        "why_selected": "First explicit mention of agentic coding improvements from OpenAI signals strategic positioning."
+      },
+      {
+        "title": "ChatGPT Images 2.0 Adds Creative Details to Complex Generation Prompts",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The model spontaneously added a 'WHY ARE YOU LIKE THIS' sign to a surreal multi-layered image prompt, showing improved creative interpretation.",
+        "why_selected": ""
+      },
+      {
+        "title": "AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/AMGPDMgvXvfmomLsc/ai-165-in-our-image",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Claude Opus 4.7 shows strong coding abilities but users are divided on its more assertive personality and reluctance to follow certain instructions.",
+        "why_selected": "User complaints about personality changes reveal ongoing challenges in model tuning for production use."
+      },
+      {
+        "title": "Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/LfFLKZzPGDYQ3DCy8/against-the-permanent-underclass",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "The author argues that fears of AI creating a permanent unemployable underclass are both wrong and potentially harmful to rational AI development discourse.",
+        "why_selected": "Contrarian take on displacement fears provides useful counterbalance to doom scenarios."
+      },
+      {
+        "title": "Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/WCutvyr9rr3cpF6hx/forecasting-is-way-overrated-and-we-should-stop-funding-it",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "A former top Manifold forecaster argues that prediction markets haven't proven their value despite substantial EA funding and should be defunded.",
+        "why_selected": "Honest assessment of prediction market failures offers lessons for AI infrastructure investment."
+      },
+      {
+        "title": "There Will Be a Scientific Theory of Deep Learning: Paper Review",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/2WkeiYFT5p3ph8Pkf/quick-paper-review-there-will-be-a-scientific-theory-of-deep",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Simon et al. make the case that deep learning will eventually have a unified scientific theory, following the tradition of bold declarative ML paper titles.",
+        "why_selected": ""
+      },
+      {
+        "title": "Thinkhaven: A Rationality Training Program Beyond Daily Blogging",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/Wcrujo7wadRpuq8vx/thinkhaven-1",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Proposes a structured program to develop clear thinking skills, inspired by Inkhaven's daily blogging challenge but focused on reasoning fundamentals.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [],
+    "rejected_summary": "Limited selection today due to light coverage. Rejected several LessWrong posts that were too philosophical or meta-commentary without practical implications for builders or clear AI futures analysis.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
