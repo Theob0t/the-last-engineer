@@ -1,53 +1,5 @@
 [
   {
-    "date": "2026-04-19",
-    "summary": "Codex Expands Into Full Computer Automation and Multi-Agent Workflows (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "The PR You Would Have Opened Yourself: AI Agents Converting Hugging Face Models (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Claude Opus 4.7: Improved Engineering Task Performance and Long-Running Execution (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Changes in Claude's System Prompt Between Opus 4.6 and 4.7 (Simon Willison)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Claude System Prompts as a Git Timeline for Easy Change Tracking (Simon Willison)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "The Computer is Personal: Perplexity's AI Platform Shifts from Commands to Goals (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "OpenAI's GPT-Rosalind: Specialized Model for Drug Discovery and Biological Research (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Claude Opus 4.7 Can Identify People from Their Unpublished Writing (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "There Are Only Four Skills: Design, Technical, Management and Physical (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Jensen Huang on AI Company Competition, China, and Inference Token Demand (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Dwarkesh's Weekly Notes: Pretraining, Distillation, and Cybersecurity Equilibrium (TLDR AI)"
-  },
-  {
-    "date": "2026-04-19",
-    "summary": "Vladimir Putin's CEV is Probably Not That Bad (LessWrong (high-karma))"
-  },
-  {
     "date": "2026-04-20",
     "summary": "SQL Functions in Google Sheets to Fetch Data from Datasette (Simon Willison)"
   },
@@ -398,5 +350,53 @@
   {
     "date": "2026-04-26",
     "summary": "Thinkhaven: A Rationality Training Program Beyond Daily Blogging (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "How to Get Started with OpenAI Codex: Complete Project Setup Guide (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "OpenAI Privacy Filter: Local PII Detection Model for AI Workflows (TLDR AI)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Claude Code Quality Issues Postmortem: How Anthropic Fixed Three Separate Problems (TLDR AI)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "How Cursor Cut Search Costs 20x with turbopuffer Vector Engine (TLDR AI)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Expert Upcycling: Amazon's Method to Expand AI Models Mid-Training (TLDR AI)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Opus 4.7 One-Shots Ancient Greek: Unsupervised Elicitation Challenge Results (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Anthropic Hits $1 Trillion Valuation, Overtakes OpenAI on Secondary Markets (TLDR AI)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "DeepSeek Seeks $20B Valuation as Tencent and Alibaba Circle First Funding (TLDR AI)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Google DeepMind Partners with South Korea to Accelerate Scientific Breakthroughs (Google DeepMind)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Sam Altman's Five Principles for AGI Development at OpenAI (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "The Paper That Killed Deep Learning Theory: Rethinking Generalization (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-27",
+    "summary": "Defense Production Act Analysis: Fiscal Policy Meets AI Development (Citrini Research)"
   }
 ]

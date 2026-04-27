@@ -6550,5 +6550,175 @@
     "rejected_articles": [],
     "rejected_summary": "Limited selection today due to light coverage. Rejected several LessWrong posts that were too philosophical or meta-commentary without practical implications for builders or clear AI futures analysis.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-27",
+    "metrics": {
+      "articles_seen": 13,
+      "articles_selected": 12,
+      "selectivity": 0.923,
+      "source_distribution": {
+        "OpenAI Blog": 2,
+        "TLDR AI": 6,
+        "LessWrong (high-karma)": 2,
+        "Google DeepMind": 1,
+        "Citrini Research": 1
+      },
+      "feed_scan_counts": {
+        "OpenAI Blog": 2,
+        "Google DeepMind": 1,
+        "LessWrong (high-karma)": 2,
+        "TLDR AI": 7,
+        "Citrini Research": 1
+      },
+      "source_diversity": 0.42,
+      "unique_sources": 5,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 6,
+        "\u2696\ufe0f AI futures": 5,
+        "\ud83e\uddea deep analysis": 1
+      },
+      "section_balance": {
+        "vibe_coding": 6,
+        "big_picture": 6,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Three infrastructure developments caught my attention today. Cursor's 20x search cost reduction with turbopuffer matters beyond the economics \u2014 vector databases are finally delivering on their promises. When you can hit sub-20ms at scale, real-time AI stops being a demo and becomes deployable.\n\nAnthropic's postmortem deserves your time. They debugged issues across Claude Code, Agent SDK, and Cowork simultaneously and told you exactly what broke. Most providers would have posted some variation of \"we're looking into it.\" This transparency signals they actually control their stack.\n\nOpenAI's privacy filter model solves a real problem. Local PII detection means sensitive workflows don't require external API calls. Enterprise teams have been waiting for this \u2014 sending proprietary data to third-party endpoints kills most AI projects before they start.\n\nThe renewed buzz around Zhang et al.'s 2017 memorization research isn't academic nostalgia. If your AI systems need genuine generalization rather than sophisticated copy-paste, you need to understand why traditional learning theory fell apart. The implications run deeper than most people realize.",
+    "journal": {
+      "themes": [
+        "infrastructure maturity",
+        "production confidence",
+        "enterprise adoption barriers"
+      ],
+      "surprises": "Anthropic hitting $1T valuation feels premature given their actual market position relative to OpenAI.",
+      "observations": "The privacy/security tooling is finally catching up to the capability layer \u2014 local PII detection and transparent debugging are exactly what enterprise needs."
+    },
+    "selected_articles": [
+      {
+        "title": "How to Get Started with OpenAI Codex: Complete Project Setup Guide",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/codex-how-to-start",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Step-by-step guide for engineers to set up Codex projects, create threads, and complete their first automated tasks.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Privacy Filter: Local PII Detection Model for AI Workflows",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/introducing-openai-privacy-filter/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New open-weight model for fast, local privacy filtering that detects and redacts sensitive data in AI pipelines.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Code Quality Issues Postmortem: How Anthropic Fixed Three Separate Problems",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/engineering/april-23-postmortem?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Detailed breakdown of how Anthropic diagnosed and fixed quality issues across Claude Code, Agent SDK, and Cowork.",
+        "why_selected": ""
+      },
+      {
+        "title": "How Cursor Cut Search Costs 20x with turbopuffer Vector Engine",
+        "source": "TLDR AI",
+        "url": "https://turbopuffer.com?utm_source=tldrai&utm_medium=newsletter&utm_campaign=tldr-secondary-2026-04-24",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The search infrastructure behind Cursor, Notion, and Linear delivers sub-20ms performance at fraction of traditional costs.",
+        "why_selected": ""
+      },
+      {
+        "title": "Expert Upcycling: Amazon's Method to Expand AI Models Mid-Training",
+        "source": "TLDR AI",
+        "url": "https://github.com/amazon-science/expert-upcycling?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Open technique for duplicating and specializing experts in Mixture-of-Experts models without increasing inference costs.",
+        "why_selected": ""
+      },
+      {
+        "title": "Opus 4.7 One-Shots Ancient Greek: Unsupervised Elicitation Challenge Results",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/aJ3NTJ6tM7yc49kQn/retrospective-on-my-unsupervised-elicitation-challenge",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Real-world test shows Opus 4.7 solved a complex homework problem that stumped all other models, demonstrating capability gaps.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Hits $1 Trillion Valuation, Overtakes OpenAI on Secondary Markets",
+        "source": "TLDR AI",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-just-overtook-openai-1-155312239.html?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic reached $1 trillion valuation driven by Claude Code adoption and partnership momentum, signaling major market shift.",
+        "why_selected": ""
+      },
+      {
+        "title": "DeepSeek Seeks $20B Valuation as Tencent and Alibaba Circle First Funding",
+        "source": "TLDR AI",
+        "url": "https://techfundingnews.com/deepseek-20b-valuation-tencent-alibaba-first-funding-round/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Chinese AI lab's valuation doubled to $20B in days as major tech giants compete for stake in cost-competitive frontier models.",
+        "why_selected": ""
+      },
+      {
+        "title": "Google DeepMind Partners with South Korea to Accelerate Scientific Breakthroughs",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "National-level partnership aims to use frontier AI models for accelerating scientific research and innovation.",
+        "why_selected": ""
+      },
+      {
+        "title": "Sam Altman's Five Principles for AGI Development at OpenAI",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/our-principles",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI's CEO outlines the company's guiding principles for ensuring AGI development benefits all of humanity.",
+        "why_selected": ""
+      },
+      {
+        "title": "The Paper That Killed Deep Learning Theory: Rethinking Generalization",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/ZvQfcLbcNHYqmvWyo/the-paper-that-killed-deep-learning-theory",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Zhang et al.'s 2017 paper fundamentally challenged classical deep learning theory by showing models can memorize random data.",
+        "why_selected": ""
+      },
+      {
+        "title": "Defense Production Act Analysis: Fiscal Policy Meets AI Development",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/flash-note-defense-production-act",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of how government fiscal policy intersects with AI development priorities and national security concerns.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "GPT 5.5 (18 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/introducing-gpt-5-5/?utm_source=tldrai",
+        "summary": "OpenAI released GPT-5.5 with improved agentic reasoning, tool use, and efficiency, matching prior latency while increasing performance across coding and knowledge tasks."
+      },
+      {
+        "title": "The search engine behind Cursor, Notion, and Linear (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://turbopuffer.com?utm_source=tldrai&amp;utm_medium=newsletter&amp;utm_campaign=tldr-secondary-2026-04-24",
+        "summary": "turbopuffer is the search engine that Cursor, Notion, and Linear use to retrieve every byte of context without blowing out margins. It's built natively on object storage with smart caching, so it's as fast (p90 < 20ms) as in-memory search, but way cheaper.Read how Cursor cut costs 20x and improved agent reasoning"
+      }
+    ],
+    "rejected_summary": "Excluded a duplicate GPT-5.5 article already covered on April 24th. Also skipped articles lacking clear engineering relevance or real-world implications.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
