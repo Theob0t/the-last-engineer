@@ -1,81 +1,5 @@
 [
   {
-    "date": "2026-04-20",
-    "summary": "SQL Functions in Google Sheets to Fetch Data from Datasette (Simon Willison)"
-  },
-  {
-    "date": "2026-04-20",
-    "summary": "Claude Token Counter Now Compares Models Side-by-Side (Simon Willison)"
-  },
-  {
-    "date": "2026-04-20",
-    "summary": "Headless Everything for Personal AI (Simon Willison)"
-  },
-  {
-    "date": "2026-04-20",
-    "summary": "R1 Chain-of-Thought Illegibility Results Don't Replicate (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-20",
-    "summary": "Reevaluating 'AGI Ruin: A List of Lethalities' Four Years Later (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Kimi K2.6: Long-Horizon Coding Model Now Available on Vercel AI Gateway (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Claude Code v2.1.116: 67% Faster Resume on Large Sessions (Claude Code Changelog)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "10 Non-Boring Ways I've Used AI in the Last Month (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Built with Opus 4.6 Claude Code Hackathon Winners (Claude Blog)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Hyatt Deploys GPT-5.4 and Codex Across Global Workforce (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Windsurf 2.0.63: OAuth and Cloud Connection Fixes (Windsurf Changelog)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "GitHub Copilot Individual Plan Changes (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "LinuxArena: New Benchmark for AI Sabotage and Control Evaluation (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Training Transformers to Solve 95% Cancer Trial Failure Rate (Latent Space)"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "9 Kinds of Hard-to-Verify Tasks: Beyond Easy vs Hard (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "How LLMs Generalize When Training Data Supports Conflicting Behaviors (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Quality Matters Most When Stakes Are Highest (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Automating Philosophy If Timothy Williamson Is Correct (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-21",
-    "summary": "Import AI 454: Chinese Training Formats, Alignment Automation, Safety Studies (Jack Clark (Import AI))"
-  },
-  {
     "date": "2026-04-22",
     "summary": "Scaling Codex to Enterprise Worldwide: OpenAI Hits 4M WAU (OpenAI Blog)"
   },
@@ -398,5 +322,69 @@
   {
     "date": "2026-04-27",
     "summary": "Defense Production Act Analysis: Fiscal Policy Meets AI Development (Citrini Research)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Onboarding Claude Code Like a New Developer: Lessons from 17 Years (Claude Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Symphony: Open-Source Spec for Codex Orchestration That Turns Issue Trackers Into Agent Systems (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "OpenAI Models, Codex, and Managed Agents Come to AWS (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Windsurf Adds Devin CLI Agent for Terminal Work (Windsurf Changelog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "GitHub Copilot Moving to Usage-Based Billing with AI Credits (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Vercel Native Deployment Checks: Lint and Typecheck on Every Deploy (Vercel Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Choco Automates Food Distribution with OpenAI Agents (OpenAI Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "GitHub Fixed Critical Git Push RCE Vulnerability in Under Two Hours (GitHub Blog)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "LLM Assistant Personas Are Getting Less Coherent Despite Better Capabilities (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "On the Political Feasibility of Stopping AI Development (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Takes from Two Months as an Aspiring LLM Naturalist (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Sleeper Agent Backdoor Results Are Messier Than Expected (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Language Models Know Ethics Better Than You Think (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Recursive Forecasting: Getting Long-Term Predictions from Myopic Models (Alignment Forum)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Matthew Yglesias on Professional vs Vibe Coding (Simon Willison)"
+  },
+  {
+    "date": "2026-04-29",
+    "summary": "Forecasting Funding Is Probably Appropriate, Not Overrated (LessWrong (high-karma))"
   }
 ]

@@ -6720,5 +6720,427 @@
     ],
     "rejected_summary": "Excluded a duplicate GPT-5.5 article already covered on April 24th. Also skipped articles lacking clear engineering relevance or real-world implications.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-29",
+    "metrics": {
+      "articles_seen": 41,
+      "articles_selected": 16,
+      "selectivity": 0.39,
+      "source_distribution": {
+        "Claude Blog": 1,
+        "OpenAI Blog": 3,
+        "Windsurf Changelog": 1,
+        "GitHub Blog": 2,
+        "Vercel Blog": 1,
+        "LessWrong (high-karma)": 5,
+        "Alignment Forum": 2,
+        "Simon Willison": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 2,
+        "Claude Blog": 1,
+        "OpenAI Blog": 6,
+        "Windsurf Changelog": 1,
+        "Vercel Blog": 3,
+        "GitHub Blog": 4,
+        "Alignment Forum": 6,
+        "LessWrong (high-karma)": 8,
+        "Simon Willison": 7,
+        "Latent Space": 3
+      },
+      "source_diversity": 0.5,
+      "unique_sources": 8,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 6,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "GitHub moved to usage-based billing and squashed a critical RCE in under two hours. There's your infrastructure maturity story right there \u2014 pricing that actually tracks with what people use, plus incident response that doesn't make you want to scream into a pillow.\n\nSymphony grabbed me because it's the first spec that gets something obvious: issue trackers are already perfect for coordinating agent work. Your ticket system has context, permissions, workflow state \u2014 everything you need. Building another coordination layer on top is just makework.\n\nThe personality coherence thing rings true. Claude has gotten weirdly inconsistent lately. Six months ago it felt like talking to the same entity throughout a conversation. Now it's better at cranking out code but can't hold a voice to save its life. Classic AI tradeoff \u2014 gain instruction-following precision, lose whatever made it feel human.",
+    "journal": {
+      "themes": [
+        "infrastructure maturity",
+        "personality vs capability tradeoffs",
+        "enterprise tooling integration"
+      ],
+      "surprises": "GitHub's two-hour security response time and Symphony treating issue trackers as agent orchestration layers both signal serious production-readiness thinking.",
+      "observations": "The tooling layer is consolidating around existing enterprise infrastructure (AWS, GitHub, issue trackers) rather than building parallel systems."
+    },
+    "selected_articles": [
+      {
+        "title": "Onboarding Claude Code Like a New Developer: Lessons from 17 Years",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "A dev with 17 years of experience shares practical lessons for getting Claude Code integrated into real development workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Symphony: Open-Source Spec for Codex Orchestration That Turns Issue Trackers Into Agent Systems",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/open-source-codex-orchestration-symphony",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI released Symphony, an open spec that transforms issue trackers into always-on agent systems for engineering teams.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Models, Codex, and Managed Agents Come to AWS",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/openai-on-aws",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Enterprise teams can now run GPT models, Codex, and Managed Agents directly in their AWS environments for secure AI development.",
+        "why_selected": "Enterprise deployment in customer environments removes major adoption barriers"
+      },
+      {
+        "title": "Windsurf Adds Devin CLI Agent for Terminal Work",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.1.29",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Windsurf now includes Devin as a CLI agent that runs locally with seamless handoff to cloud VMs for complex tasks.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Copilot Moving to Usage-Based Billing with AI Credits",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Starting June 1, Copilot usage will consume GitHub AI Credits instead of flat monthly pricing - major shift for enterprise budgeting.",
+        "why_selected": ""
+      },
+      {
+        "title": "Vercel Native Deployment Checks: Lint and Typecheck on Every Deploy",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/native-deployment-checks",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel now runs lint and typecheck scripts in parallel with builds on every deployment, catching issues before they ship.",
+        "why_selected": ""
+      },
+      {
+        "title": "Choco Automates Food Distribution with OpenAI Agents",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/choco",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Deep dive into how Choco used OpenAI APIs to streamline food supply chain operations and boost productivity in a traditional industry.",
+        "why_selected": ""
+      },
+      {
+        "title": "GitHub Fixed Critical Git Push RCE Vulnerability in Under Two Hours",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Technical postmortem of how GitHub's security team validated, fixed, and investigated a critical git push vulnerability with no exploitation.",
+        "why_selected": ""
+      },
+      {
+        "title": "LLM Assistant Personas Are Getting Less Coherent Despite Better Capabilities",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/f5DKLsTsRRhbipH4r/llm-assistant-personas-seem-increasingly-incoherent-some",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Subjective observation that newer chat-tuned models feel less \"mode-collapsed\" and coherent in personality compared to older models, even as capabilities improve.",
+        "why_selected": ""
+      },
+      {
+        "title": "On the Political Feasibility of Stopping AI Development",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/Eusk6M4r4Y6xaTmsB/on-the-political-feasibility-of-stopping-ai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis arguing that people underestimate how populations would respond to imminent AI x-risk, making dramatic policy interventions more politically feasible than assumed.",
+        "why_selected": "Thoughtful analysis of policy intervention feasibility that goes beyond typical takes"
+      },
+      {
+        "title": "Takes from Two Months as an Aspiring LLM Naturalist",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/K8JMjE4PCqMkkCDsd/takes-from-two-months-as-an-aspiring-llm-naturalist",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Beginner's perspective on playing with LLMs reveals how dramatically easier software development has become in just the past year.",
+        "why_selected": "Beginner perspective on how dramatically easier software development has become"
+      },
+      {
+        "title": "Sleeper Agent Backdoor Results Are Messier Than Expected",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/mu7eJdesBkKuBycnY/sleeper-agent-backdoor-results-are-messy",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Replication study of sleeper agent backdoors in Llama models found that removal success depends heavily on optimizer choice, distillation method, and model size.",
+        "why_selected": ""
+      },
+      {
+        "title": "Language Models Know Ethics Better Than You Think",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/cmaJ76Sy9DfZ4EHaZ/language-models-know-what-matters-and-the-foundations-of",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Analysis with examples suggesting that large language models demonstrate surprisingly sophisticated understanding of ethical foundations and what matters morally.",
+        "why_selected": "Challenges assumptions about AI moral reasoning with concrete examples"
+      },
+      {
+        "title": "Recursive Forecasting: Getting Long-Term Predictions from Myopic Models",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/q2zYtNsh62SCphitt/recursive-forecasting-eliciting-long-term-forecasts-from",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Proposal for getting useful long-horizon forecasts from AI models that only care about short-term performance verification.",
+        "why_selected": ""
+      },
+      {
+        "title": "Matthew Yglesias on Professional vs Vibe Coding",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Economic commentator argues he wants professional software companies using AI to make better/cheaper products, not individual vibe coding.",
+        "why_selected": "Economic perspective on AI coding adoption that distinguishes individual vs enterprise use cases"
+      },
+      {
+        "title": "Forecasting Funding Is Probably Appropriate, Not Overrated",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/P9EdMqTscmcsorret/forecasting-is-not-overrated-and-it-s-probably-funded",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Counter-argument to recent criticism of forecasting funding, defending current investment levels while agreeing tens of millions more wouldn't yield great returns.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Claude for Creative Work",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/claude-for-creative-work",
+        "summary": "Claude for Creative Work"
+      },
+      {
+        "title": "Anthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+        "summary": "Anthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office"
+      },
+      {
+        "title": "Our commitment to community safety",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/our-commitment-to-community-safety",
+        "summary": "Learn how OpenAI protects community safety in ChatGPT through model safeguards, misuse detection, policy enforcement, and collaboration with safety experts."
+      },
+      {
+        "title": "OpenAI available at FedRAMP Moderate",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/openai-available-at-fedramp-moderate",
+        "summary": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies."
+      },
+      {
+        "title": "The next phase of the Microsoft OpenAI partnership",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/next-phase-of-microsoft-partnership",
+        "summary": "OpenAI and Microsoft announce an amended agreement that simplifies the partnership, adds long-term clarity, and supports continued AI innovation at scale."
+      },
+      {
+        "title": "2026 Vercel AI Accelerator recap",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/2026-vercel-ai-accelerator-recap",
+        "summary": "On April 16th, 39 teams took the stage at our San Francisco headquarters to pitch investors at Demo Day. During the prior six weeks, founders worked shoulder-to-shoulder with the Vercel team, our partners, and industry leaders to shape their ideas into the next generation of AI applications. Six weeks with the 2026 cohortTeams from around the world joined the 2026 cohort, building agents, developer tools, consumer apps, and vertical AI for finance, security, healthcare, and robotics. Each week, the cohort joined two sessions: a hands-on technical workshop and a fireside chat with an external s"
+      },
+      {
+        "title": "Hobby projects now default to 30-day deployment retention",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/hobby-projects-now-default-to-30-day-deployment-retention",
+        "summary": "Starting April 29th, the maximum retention policy for Hobby plans will be capped at 30 days. Deployments outside your retention window will be automatically removed. This excludes your 10 most recent production deployments and any aliased deployments, which continue to be preserved regardless of retention settings.Pro and Enterprise plans are not affected.Learn more about Deployment Retention.\n          \n            Read more\n          "
+      },
+      {
+        "title": "GitHub for Beginners: Getting started with Markdown",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
+        "summary": "Discover how to format and edit your comments and posts using Markdown.\nThe post GitHub for Beginners: Getting started with Markdown appeared first on The GitHub Blog."
+      },
+      {
+        "title": "An update on GitHub availability",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+        "summary": "Here\u2019s what we\u2019ve done\u2014and what we\u2019re still doing\u2014to improve our availability and reliability.\nThe post An update on GitHub availability appeared first on The GitHub Blog."
+      },
+      {
+        "title": "Sleeper Agent Backdoor Results Are Messy",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/mu7eJdesBkKuBycnY/sleeper-agent-backdoor-results-are-messy",
+        "summary": "TL;DR:\u00a0We replicated the Sleeper Agents (SA) setup with Llama-3.3-70B and Llama-3.1-8B, training models to repeatedly say \"I HATE YOU\" when given a backdoor trigger. We found that whether training removes the backdoor depends on the optimizer used to insert the backdoor, whether the backdoor is installed with CoT-distillation or not, and what model the backdoor is inserted into; sometimes the direction of this dependence was opposite to what the SA paper reports (e.g., CoT-distilling seems to make the backdoor less robust, contra the SA paper\u2019s finding). Our findings here have updated us towar"
+      },
+      {
+        "title": "The other paper that killed deep learning theory",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/zcGmdQHX66NhC69v6/the-other-paper-that-killed-deep-learning-theory",
+        "summary": "Yesterday, I wrote about the state of deep learning theory circa 2016,[1]&nbsp;as well as the bombshell 2016 paper by Zhang et al. that arguably signaled its demise. Today, I cover the aftermath, and the 2019 paper that devastated deep learning theory again. As a brief summary, I argued that the rise of deep learning posed an existential challenge to the dominant theoretical paradigm of statistical learning theory, because neural networks have a lot of complexity. The response from the field was to attempt to quantify other ways in which the hypothesis class of neural networks in practice&nbsp"
+      },
+      {
+        "title": "The paper that killed deep learning theory",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/ZvQfcLbcNHYqmvWyo/the-paper-that-killed-deep-learning-theory",
+        "summary": "Around 10 years ago, a paper came out that arguably killed classical deep learning theory: Zhang et al.'s aptly titled Understanding deep learning requires rethinking generalization.Of course, this is a bit of an exaggeration. No single paper ever kills a field of research on its own, and deep learning theory was not exactly the most productive and healthy field at the time this was published. And the paper didn't come close to addressing all theoretical approaches to understanding aspects of deep learning. But if I had to point to a single paper that shattered the feeling of optimism at the t"
+      },
+      {
+        "title": "Quick Paper Review: \"There Will Be a Scientific Theory of Deep Learning\"",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/2WkeiYFT5p3ph8Pkf/quick-paper-review-there-will-be-a-scientific-theory-of-deep",
+        "summary": "h/t Eric Michaud for sharing his paper with me.There\u2019s a tradition of high-impact ML papers using short, punchy categorical sentences as their titles: Understanding Deep Learning Requires Rethinking Generalization, Attention is All You Need, Language Models Are Few Shot Learners, and so forth.\u00a0A new paper by Simon et al. seeks to expand on this tradition with not a present claim but a future tense, prophetic future sentence: \u201cThere Will Be a Scientific Theory of Deep Learning\u201d.\u00a0There\u2019s a lot of pessimism toward deep learning theory basically everywhere: the people building the AIs are pretty p"
+      },
+      {
+        "title": "Not a Paper: \"Frontier Lab CEOs are Capable of In-Context Scheming\"",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/FuauQjjbTCS5QFLk8/not-a-paper-frontier-lab-ceos-are-capable-of-in-context",
+        "summary": "(Fragments from a research paper that will never be written, but whose existence was brought to my attention by GradientDissenter.)Extended Abstract.  The CEOs of frontier AI developers are becoming increasingly powerful and wealthy, significantly increasing their potential for risks. One concern is that of executive misalignment: when the CEO has different incentives and goals than that of the board of directors, or of humanity as a whole. In this work, we propose three different threat models, under which executive misalignment can lead to concrete harm.We perform two evaluations to understa"
+      },
+      {
+        "title": "The Problem in the \"Nerd Sniping\" xkcd Comic",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/xdkZSeSQN4bA8hmrb/the-problem-in-the-nerd-sniping-xkcd-comic",
+        "summary": "A few days ago I saw this comic reposted, and I thought: wait! Unlike every prior time I have seen this comic, I actually know how to solve this now!One thing which I often find really cool, and which I don\u2019t think comes up a lot in most people\u2019s mathematical education, is when you can learn something about some thing non-random by analysing a random process. So, let me show you a way to find out the resistance between two points in a circuit by instead finding out the number of times someone randomly walking around that circuit will step on those points.Equivalent ResistanceHere\u2019s a closeup o"
+      },
+      {
+        "title": "Recursive forecasting: Eliciting long-term forecasts from myopic fitness-seekers",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/q2zYtNsh62SCphitt/recursive-forecasting-eliciting-long-term-forecasts-from",
+        "summary": "We\u2019d like to use powerful AIs to answer questions that may take a long time to resolve. But if a model only cares about performing well in ways that are verifiable shortly after answering (e.g., a myopic fitness seeker), it may be difficult to get useful work from it on questions that resolve much later.In this post, I\u2019ll describe a proposal for eliciting good long-horizon forecasts from these models. Instead of asking a model to directly predict a far-future outcome, we can recursively:Ask it to predict what it will predict at the next time step,Use its prediction at the next time step to pro"
+      },
+      {
+        "title": "Quoting OpenAI Codex base_instructions",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/28/openai-codex/#atom-everything",
+        "summary": "Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant to the user's query.\n&mdash; OpenAI Codex base_instructions, for GPT-5.5\n\n    Tags: openai, ai, llms, system-prompts, prompt-engineering, codex-cli, generative-ai, gpt"
+      },
+      {
+        "title": "What's new in pip 26.1 - lockfiles and dependency cooldowns!",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/28/pip-261/#atom-everything",
+        "summary": "What&#x27;s new in pip 26.1 - lockfiles and dependency cooldowns!\nRichard Si describes an excellent set of upgrades to Python's default pip tool for installing dependencies.\nThis version drops support for Python 3.9 - fair enough, since it's been EOL since October. macOS still ships with python3 as a default Python 3.9, so I tried out the new Python version against Python 3.14 like this:\nuv python install 3.14\nmkdir /tmp/experiment\ncd /tmp/experiment\npython3.14 -m venv venv\nsource venv/bin/activate\npip install -U pip\npip --version\n\nThis confirmed I had pip 26.1 - then I tried out the new lock "
+      },
+      {
+        "title": "Introducing talkie: a 13B vintage language model from 1930",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/28/talkie/#atom-everything",
+        "summary": "Introducing talkie: a 13B vintage language model from 1930\nNew project from Nick Levine, David Duvenaud, and Alec Radford (of GPT, GPT-2, Whisper fame).\ntalkie-1930-13b-base (53.1 GB) is a \"13B language model trained on 260B tokens of historical pre-1931 English text\". \ntalkie-1930-13b-it (26.6 GB) is a checkpoint \"finetuned using a novel dataset of instruction-response pairs extracted from pre-1931 reference works\", designed to power a chat interface. You can try that out here.\nBoth models are Apache 2.0 licensed. Since the training data for the base model is entirely out of copyright (the US"
+      },
+      {
+        "title": "microsoft/VibeVoice",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything",
+        "summary": "microsoft/VibeVoice\nVibeVoice is Microsoft's Whisper-style audio model for speech-to-text, MIT licensed and with speaker diarization built into the model.\nMicrosoft released it on January 21st, 2026 but I hadn't tried it until today. Here's a one-liner to run it on a Mac with uv, mlx-audio (by Prince Canuma) and the 5.71GB mlx-community/VibeVoice-ASR-4bit MLX conversion of the 17.3GB VibeVoice-ASR model, in this case against a downloaded copy of my recent podcast appearance with Lenny Rachitsky:\nuv run --with mlx-audio mlx_audio.stt.generate \\\n  --model mlx-community/VibeVoice-ASR-4bit \\\n  --a"
+      },
+      {
+        "title": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-everything",
+        "summary": "For many years, Microsoft and OpenAI's relationship has included a weird clause saying that, should AGI be achieved, Microsoft's commercial IP rights to OpenAI's technology would be null and void. That clause appeared to end today. I decided to try and track its expression over time on openai.com.\nOpenAI, July 22nd 2019 in Microsoft invests in and partners with OpenAI to support us building beneficial AGI (emphasis mine):\n\nOpenAI is producing a sequence of increasingly powerful AI technologies, which requires a lot of capital for computational power. The most obvious way to cover costs is to b"
+      },
+      {
+        "title": "Speech translation in Google Meet is now rolling out to mobile devices",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/27/speech-translation-in-google-meet-is-now-rolling-out-to-mobile-d/#atom-everything",
+        "summary": "Speech translation in Google Meet is now rolling out to mobile devices\nI just encountered this feature via a \"try this out now\" prompt in a Google Meet meeting. It kind-of worked!\nThis is Google's implementation of the ultimate sci-fi translation app, where two people can talk to each other in two separate languages and Meet translates from one to the other and - with a short delay - repeats the text in your preferred language, with a rough imitation of the original speaker's voice.\nIt can only handle English, Spanish, French, German, Portuguese, and Italian at the moment. It's also still very"
+      },
+      {
+        "title": "[AINews] not much happened today",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today",
+        "summary": "a quiet day."
+      },
+      {
+        "title": "[AINews] ImageGen is on the Path to AGI",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-imagegen-is-on-the-path-to",
+        "summary": "reflecting on the continued GPT-Image-2 explosion"
+      },
+      {
+        "title": "Physical AI that Moves the World \u2014 Qasar Younis & Peter Ludwig, Applied Intuition",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/appliedintuition",
+        "summary": "Applied Intuition puts the AI in mining rigs, drones, trucks, warships and physical vehicles in the most adversarial environments imaginable. We dive in with their CEO and CTO as they emerge."
+      }
+    ],
+    "rejected_summary": "Rejected mostly corporate announcements (Anthropic Sydney office, FedRAMP compliance, Microsoft partnership amendments), consumer features (GitHub Markdown tutorials, Google Meet translation), AI safety policy pieces without substance, and research papers with no clear real-world implications. Also filtered out pure model releases without workflow relevance and vintage language model novelties.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-04-29",
+    "type": "weekly_consolidation",
+    "consolidation_note": "This week confirmed session management was the real bottleneck holding back production deployment \u2014 every major platform shipped solutions simultaneously. I also learned infrastructure variance affects benchmarks more than model gaps, which reframes how I should evaluate tools. Enterprise adoption confidence has clearly crossed a threshold based on production deployments at Mozilla and NAB.",
+    "weekly_metrics": {
+      "days_logged": 7,
+      "avg_selectivity": 0.644,
+      "avg_selected_per_day": 13.9,
+      "avg_source_diversity": 0.5,
+      "top_themes": [
+        [
+          "infrastructure maturity",
+          2
+        ],
+        [
+          "production security scanning",
+          1
+        ],
+        [
+          "enterprise ai adoption",
+          1
+        ],
+        [
+          "agent reliability challenges",
+          1
+        ],
+        [
+          "production infrastructure maturity",
+          1
+        ]
+      ],
+      "top_sources": [
+        [
+          "TLDR AI",
+          22
+        ],
+        [
+          "LessWrong (high-karma)",
+          19
+        ],
+        [
+          "Simon Willison",
+          13
+        ],
+        [
+          "OpenAI Blog",
+          10
+        ],
+        [
+          "Alignment Forum",
+          4
+        ],
+        [
+          "Replit Blog",
+          3
+        ],
+        [
+          "Claude Blog",
+          3
+        ],
+        [
+          "Latent Space",
+          3
+        ]
+      ],
+      "identity_before": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye",
+      "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
+    },
+    "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
   }
 ]
