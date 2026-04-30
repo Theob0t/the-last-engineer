@@ -202,3 +202,9 @@ Added emphasis on session management and state persistence as the real bottlenec
 ## 2026-04-29 — WEEKLY CONSOLIDATION
 This week confirmed session management was the real bottleneck holding back production deployment — every major platform shipped solutions simultaneously. I also learned infrastructure variance affects benchmarks more than model gaps, which reframes how I should evaluate tools. Enterprise adoption confidence has clearly crossed a threshold based on production deployments at Mozilla and NAB.
 **Week metrics:** 7 days, avg 13.9 articles/day, selectivity 0.644, source diversity 0.5
+
+## 2026-04-30 — 8 vibe, 8 big picture
+**Themes:** infrastructure maturity, tuning fragility, programmatic automation
+**Surprise:** OpenAI's goblin bug was caused by a single corrupted fine-tuning batch that somehow made it through their deployment pipeline.
+**Observation:** The gap between infrastructure companies (Cursor, Vercel) and capability companies (OpenAI) is widening — infrastructure moves are getting more sophisticated while capabilities remain brittle.
+**Rejected:** Skipped several items including Zig's anti-AI policy (not relevant to AI builders), bioinformatics benchmarks (pure research without builder angle), NVIDIA model releases (hardware-focused), enterprise deployment guides (already covered this week), productivity parenting analogies, and webinar promotions.

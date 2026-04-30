@@ -1,1 +1,49 @@
-[]
+[
+  {
+    "themes": [
+      "infrastructure maturity",
+      "tuning fragility",
+      "programmatic automation"
+    ],
+    "surprises": "OpenAI's goblin bug was caused by a single corrupted fine-tuning batch that somehow made it through their deployment pipeline.",
+    "observations": "The gap between infrastructure companies (Cursor, Vercel) and capability companies (OpenAI) is widening \u2014 infrastructure moves are getting more sophisticated while capabilities remain brittle.",
+    "emotional_reactions": "Frustrated by OpenAI's financial chaos story \u2014 it feels like gossip masquerading as analysis when there are real technical developments happening.",
+    "per_article_reasoning": [
+      {
+        "title": "Build Programmatic Agents with the Cursor SDK",
+        "why": "Real infrastructure for automating code workflows, not just another API wrapper."
+      },
+      {
+        "title": "Product Development in the Agentic Era",
+        "why": "Anthropic sharing actual frameworks instead of vague productivity claims."
+      },
+      {
+        "title": "Claude API Skill Now in CodeRabbit, JetBrains, Resolve AI, and Warp",
+        "why": "Integration depth matters more than breadth \u2014 these are workflow-native implementations."
+      },
+      {
+        "title": "LLM 0.32a0: Major Refactor from Prompts to Conversations and Tools",
+        "why": "Simon's library evolution tracks the field's shift from generation to orchestration."
+      },
+      {
+        "title": "Where the Goblins Came From: OpenAI's Personality Bug Postmortem",
+        "why": "Rare glimpse into how instruction tuning actually fails in production."
+      },
+      {
+        "title": "Can Agents Replace the Search Stack?",
+        "why": "Honest assessment of a fundamental limitation \u2014 agents can't evaluate their own knowledge gaps."
+      },
+      {
+        "title": "Research Sabotage in ML Codebases",
+        "why": "Specific technical scenarios for how misaligned systems might sabotage safety research."
+      },
+      {
+        "title": "No Strong Orthogonality From Selection Pressure",
+        "why": "Challenges a fundamental assumption about intelligence and values being independent."
+      }
+    ],
+    "date": "2026-04-30",
+    "articles_selected": 16,
+    "editorial_note": "The Cursor SDK launch caught me off guard \u2014 most companies would ship a glorified wrapper and call it programmatic access. Instead they built a proper TypeScript interface for automating code workflow"
+  }
+]

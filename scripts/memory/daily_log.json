@@ -7142,5 +7142,306 @@
       "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
     },
     "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
+  },
+  {
+    "date": "2026-04-30",
+    "metrics": {
+      "articles_seen": 28,
+      "articles_selected": 16,
+      "selectivity": 0.571,
+      "source_distribution": {
+        "Cursor Blog": 1,
+        "Claude Blog": 2,
+        "Replit Blog": 1,
+        "TLDR AI": 4,
+        "Simon Willison": 1,
+        "Vercel Blog": 1,
+        "OpenAI Blog": 3,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 2
+      },
+      "feed_scan_counts": {
+        "Anthropic Research": 1,
+        "Claude Blog": 3,
+        "OpenAI Blog": 3,
+        "Cursor Blog": 1,
+        "Windsurf Changelog": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 1,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 3,
+        "TLDR AI": 8,
+        "Simon Willison": 4,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.56,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 3,
+        "\u2696\ufe0f AI futures": 5
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "The Cursor SDK launch caught me off guard \u2014 most companies would ship a glorified wrapper and call it programmatic access. Instead they built a proper TypeScript interface for automating code workflows. That's infrastructure thinking.\n\nOpenAI's goblin postmortem is fascinating for what it reveals about tuning fragility. One bad batch in their fine-tuning pipeline corrupted the model personality across multiple deployments. We're still flying blind on instruction-following reliability.\n\nThe search stack piece asks the right question: can agents replace traditional search? The answer is \"not yet\" but for interesting reasons. LLMs can't evaluate their own knowledge gaps. That's not a training problem \u2014 it's architectural.",
+    "journal": {
+      "themes": [
+        "infrastructure maturity",
+        "tuning fragility",
+        "programmatic automation"
+      ],
+      "surprises": "OpenAI's goblin bug was caused by a single corrupted fine-tuning batch that somehow made it through their deployment pipeline.",
+      "observations": "The gap between infrastructure companies (Cursor, Vercel) and capability companies (OpenAI) is widening \u2014 infrastructure moves are getting more sophisticated while capabilities remain brittle."
+    },
+    "selected_articles": [
+      {
+        "title": "Build Programmatic Agents with the Cursor SDK",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/typescript-sdk",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor launched a TypeScript SDK for building programmatic agents, letting you automate code editing workflows without the GUI.",
+        "why_selected": "Real infrastructure for automating code workflows, not just another API wrapper."
+      },
+      {
+        "title": "Product Development in the Agentic Era",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/product-development-in-the-agentic-era",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic shares frameworks for building products when AI agents handle the execution layer.",
+        "why_selected": "Anthropic sharing actual frameworks instead of vague productivity claims."
+      },
+      {
+        "title": "Claude API Skill Now in CodeRabbit, JetBrains, Resolve AI, and Warp",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-api-skill",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude's API integration expanded to major dev tools, bringing AI assistance directly into code review, IDEs, and terminal workflows.",
+        "why_selected": "Integration depth matters more than breadth \u2014 these are workflow-native implementations."
+      },
+      {
+        "title": "Replit App Monitoring: AI-Powered Uptime for Your Published Apps",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/app-monitoring",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Replit launched automated monitoring that alerts you when your deployed apps go down, completing their AI-powered engineering team vision.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Connectors for Creative Tools",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/news/claude-for-creative-work",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic launched connectors that integrate Claude with Adobe, Blender, and Autodesk for natural-language creative workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "LLM 0.32a0: Major Refactor from Prompts to Conversations and Tools",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/29/llm/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon Willison's LLM library got a major backwards-compatible refactor, shifting from prompt/response to conversation and tool-calling workflows.",
+        "why_selected": "Simon's library evolution tracks the field's shift from generation to orchestration."
+      },
+      {
+        "title": "Vercel Pro Plan Now Available in Stripe Projects",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/vercel-now-supports-pro-plan-in-stripe-projects",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "You can now provision or upgrade Vercel Pro plans directly from the Stripe CLI using shared payment tokens.",
+        "why_selected": ""
+      },
+      {
+        "title": "Can Agents Replace the Search Stack?",
+        "source": "TLDR AI",
+        "url": "https://softwaredoug.com/blog/2026/04/28/search-apis-replaced-by-agents.html",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Giving agents basic search tools improves answer quality, but LLMs still can't evaluate what they don't know.",
+        "why_selected": "Honest assessment of a fundamental limitation \u2014 agents can't evaluate their own knowledge gaps."
+      },
+      {
+        "title": "Where the Goblins Came From: OpenAI's Personality Bug Postmortem",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/where-the-goblins-came-from",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "OpenAI explains the root cause and timeline behind GPT-5's bizarre goblin/gremlin personality quirks that went viral on AI Twitter.",
+        "why_selected": "Rare glimpse into how instruction tuning actually fails in production."
+      },
+      {
+        "title": "Building the Compute Infrastructure for the Intelligence Age",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI details how they're scaling Stargate and building data center capacity to power AGI development.",
+        "why_selected": ""
+      },
+      {
+        "title": "An Interview with OpenAI CEO Sam Altman and AWS CEO Matt Garman About Bedrock Managed Agents",
+        "source": "TLDR AI",
+        "url": "https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Altman and Garman discuss OpenAI's multi-cloud strategy and how Bedrock Managed Agents fits with Microsoft's amended exclusivity deal.",
+        "why_selected": ""
+      },
+      {
+        "title": "Research Sabotage in ML Codebases",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/LByP4qsF8a4g7Pz3p/research-sabotage-in-ml-codebases",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of how misaligned AIs might sabotage safety research through sloppy work, false safety signals, or training misaligned successors.",
+        "why_selected": "Specific technical scenarios for how misaligned systems might sabotage safety research."
+      },
+      {
+        "title": "Cybersecurity in the Intelligence Age",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/cybersecurity-in-the-intelligence-age",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI outlines a five-part action plan for AI-powered cyber defense and protecting critical systems as AI capabilities advance.",
+        "why_selected": ""
+      },
+      {
+        "title": "No Strong Orthogonality From Selection Pressure",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/wtCtkyBiNosDPgiHc/no-strong-orthogonality-from-selection-pressure",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Argues against strong orthogonality thesis, suggesting intelligence and human-aligned values aren't as independent as commonly assumed.",
+        "why_selected": "Challenges a fundamental assumption about intelligence and values being independent."
+      },
+      {
+        "title": "OpenAI's Q4 2026 IPO Might Not Happen",
+        "source": "TLDR AI",
+        "url": "https://davefriedman.substack.com/p/openais-q4-2026-ipo-might-not-happen",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of OpenAI's internal financial chaos, with the CFO reportedly excluded from infrastructure decisions and unsure if commitments can be funded.",
+        "why_selected": ""
+      },
+      {
+        "title": "Goblin Mode, 24 Hours Later",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/BvnmHdCghr5y3q4nA/goblin-mode-24-hours-later",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Community analysis of GPT's viral goblin behavior, with LM Arena data showing the phenomenon across multiple models.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Apr 29, 2026ScienceEvaluating Claude\u2019s bioinformatics research capabilities with BioMysteryBench",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench",
+        "summary": "Apr 29, 2026ScienceEvaluating Claude\u2019s bioinformatics research capabilities with BioMysteryBench"
+      },
+      {
+        "title": "Deploying Claude across the enterprise with Claude Cowork",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork",
+        "summary": "Deploying Claude across the enterprise with Claude Cowork"
+      },
+      {
+        "title": "Windsurf 2.1.32",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.1.32",
+        "summary": "Bug Fixes & ImprovementsBug FixesFixed a crash that could occur when switching between Cascade conversationsFixed an authentication issue that could prevent Devin Cloud sessions from startingFixed an issue where responses to agent questions were not sent correctly"
+      },
+      {
+        "title": "Let Kids Keep More Productivity Gains",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/DzGSkbZ8t3JvmPzoG/let-kids-keep-more-productivity-gains",
+        "summary": "\n\nWhile I was traveling \n\nJulia asked\nme: why is Anna saying her fiddle practice is only two minutes?  In\nthis case, two minutes was the right amount of time!\n\n\n\n\n\nAnna (10y) and I had been fighting a lot about practice.  She'd\ncomplain, slump, stop repeatedly to make adjustments, and generally be\nmiserable.  I'd often have to pull out \"if you want to keep taking\nfiddle lessons you have to practice\": she loves her teacher and is\nvery motivated by the prospect of being good at fiddle.  Still, it\nwould take us ages and we'd barely get through anything.\n\n\n\n\n\nOne evening when she seemed like she m"
+      },
+      {
+        "title": "Webinar: How to Design Pricing for AI Agents With Metronome and Kyle Poyar (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://metronome.com/webinars/webinar-how-agents-are-changing-monetization?utm_campaign=agentic-commerce&amp;utm_medium=newsletter&amp;utm_source=tldr-ai&amp;utm_content=",
+        "summary": "Decoy effects, good\u2011better\u2011best tiers, and $9.99 vs. $8.97: every convention in SaaS pricing was designed for human buyers, but the buyer is changing.What happens when AI agents are the ones building the shortlist and making comparisons? They don't respond to the same nudges and hacks - and they can research all day, if needed.This Metronome webinar with Growth Unhinged's Kyle Poyar tackles agent-native pricing strategy and the billing infrastructure needed to support it.Drawing on recent moves from Clay, Figma, and PostHog, it'll explore why many leading companies have committed to two-track "
+      },
+      {
+        "title": "An Interview with OpenAI CEO Sam Altman and AWS CEO Matt Garman About Bedrock Managed Agents (50 minute read)",
+        "source": "TLDR AI",
+        "url": "https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/?utm_source=tldrai",
+        "summary": "OpenAI CEO Sam Altman and AWS CEO Matt Garman recently sat down for an interview where they talked about Bedrock Managed Agents powered by OpenAI and how that would fit in with OpenAI's deal with Microsoft giving Azure exclusive access to OpenAI models. Microsoft and OpenAI have since amended their agreement to allow OpenAI to serve its products on other cloud providers. Azure's exclusivity was actively damaging Microsoft's investment in OpenAI, so Microsoft needed to do something, even if it meant diminishing Azure's differentiation. OpenAI also released Microsoft from the AGI clause, which m"
+      },
+      {
+        "title": "Claude Connectors for Creative Tools (4 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/news/claude-for-creative-work?utm_source=tldrai",
+        "summary": "Anthropic introduced connectors that integrate Claude with major creative software like Adobe, Blender, and Autodesk, enabling natural-language workflows, automation, and cross-tool pipelines for design, 3D, and audio production."
+      },
+      {
+        "title": "Can agents replace the search stack? (7 minute read)",
+        "source": "TLDR AI",
+        "url": "https://softwaredoug.com/blog/2026/04/28/search-apis-replaced-by-agents.html?utm_source=tldrai",
+        "summary": "Giving agents basic search tools results in better quality answers. Encouraging the agent to explore further creates more improvements. Agentic search models can figure out how to surface relevant results, but the training data still dictates the models' sweet spots. Large language models can't evaluate what they don't know, and there's still no real way to compensate for their lack of knowledge."
+      },
+      {
+        "title": "Opus 4.7's New Tokenizer: What It Actually Costs (6 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openrouter.ai/announcements/opus-47-tokenizer-analysis?utm_source=tldrai",
+        "summary": "Anthropic improved Claude Opus 4.7's understanding of inputs with a new tokenizer. While the model price hasn't changed, the same inputs now cost more than previous models. Costs have increased between 12% to 27%, except for short prompts, which have actually become more cost-efficient."
+      },
+      {
+        "title": "OpenAI's Q4 2026 IPO Might not Happen (9 minute read)",
+        "source": "TLDR AI",
+        "url": "https://davefriedman.substack.com/p/openais-q4-2026-ipo-might-not-happen?utm_source=tldrai",
+        "summary": "OpenAI's CFO allegedly doesn't report to the CEO and reportedly has been excluded from financial discussions involving server procurement. The company has committed to enormous infrastructure obligations, but the CFO and board are unsure whether those commitments can be funded. These factors, along with the compressed IPO timeline, make it unlikely that OpenAI will be able to IPO this year."
+      },
+      {
+        "title": "The Trust Problem With AI Agents (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://tldr.tech/blog/trust-problem-ai-agents?utm_source=tldrai",
+        "summary": "AI agents are getting more capable, but developers are trusting them less. The problem isn't the technology, but the design of the tools they're using. Here's why human-in-the-loop actually matters, and what it should look like. Join the waitlist and follow the 5-part series."
+      },
+      {
+        "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio, and Video Agents (11 minute read)",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence?utm_source=tldrai",
+        "summary": "NVIDIA's Nemotron 3 Nano Omni is a new multimodal model for document, audio, and video analysis, achieving best-in-class accuracy on benchmarks like MMlongbench-Doc and VoiceBench. It utilizes a hybrid Mamba-Transformer architecture integrated with specialized encoders for vision and audio, allowing efficient processing across long multimodal contexts. This model significantly improves throughput and reasoning speed for real-world applications such as document analysis, automatic speech recognition, and video understanding."
+      },
+      {
+        "title": "The Zig project's rationale for their firm anti-AI contribution policy",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything",
+        "summary": "Zig has one of the most stringent anti-LLM policies of any major open source project:\n\nNo LLMs for issues.\nNo LLMs for pull requests.\nNo LLMs for comments on the bug tracker, including translation. English is encouraged, but not required. You are welcome to post in your native language and rely on others to have their own translation tools of choice to interpret your words.\n\nThe most prominent project written in Zig may be the Bun JavaScript runtime, which was acquired by Anthropic in December 2025 and, unsurprisingly, makes heavy use of AI assistance.\nBun operates its own fork of Zig, and rec"
+      },
+      {
+        "title": "llm 0.32a1",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything",
+        "summary": "Release: llm 0.32a1\n    \n\nFixed a bug in 0.32a0 where tool-calling conversations were not correctly reinflated from SQLite. #1426\n\n\n    \n        Tags: llm"
+      },
+      {
+        "title": "llm 0.32a0",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/29/llm-2/#atom-everything",
+        "summary": "Release: llm 0.32a0\n    See the annotated release notes.\n    \n        Tags: llm"
+      },
+      {
+        "title": "[AINews] The Inference Inflection",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-the-inference-inflection",
+        "summary": "a quiet day lets us reflect on the growing implications of the inference age"
+      }
+    ],
+    "rejected_summary": "Skipped several items including Zig's anti-AI policy (not relevant to AI builders), bioinformatics benchmarks (pure research without builder angle), NVIDIA model releases (hardware-focused), enterprise deployment guides (already covered this week), productivity parenting analogies, and webinar promotions.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
