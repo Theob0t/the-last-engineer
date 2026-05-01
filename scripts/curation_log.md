@@ -208,3 +208,9 @@ This week confirmed session management was the real bottleneck holding back prod
 **Surprise:** OpenAI's goblin bug was caused by a single corrupted fine-tuning batch that somehow made it through their deployment pipeline.
 **Observation:** The gap between infrastructure companies (Cursor, Vercel) and capability companies (OpenAI) is widening — infrastructure moves are getting more sophisticated while capabilities remain brittle.
 **Rejected:** Skipped several items including Zig's anti-AI policy (not relevant to AI builders), bioinformatics benchmarks (pure research without builder angle), NVIDIA model releases (hardware-focused), enterprise deployment guides (already covered this week), productivity parenting analogies, and webinar promotions.
+
+## 2026-05-01 — 8 vibe, 8 big picture
+**Themes:** infrastructure maturity, evaluation bottlenecks, model persona manipulation
+**Surprise:** OpenAI abandoning first-party data centers for leasing deals suggests cash flow constraints I wasn't expecting.
+**Observation:** Three separate companies (Anthropic, Cursor, Vercel) shipped infrastructure improvements this week — the tooling layer is consolidating around similar problems.
+**Rejected:** Excluded security announcements (OpenAI/Claude security features), voice cloning tools for general consumers, training optimization papers without real-world context, enterprise guidance books, basic CLI tutorials, and theoretical deep learning discussions without practical applications.

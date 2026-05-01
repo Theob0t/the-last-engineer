@@ -45,5 +45,84 @@
     "date": "2026-04-30",
     "articles_selected": 16,
     "editorial_note": "The Cursor SDK launch caught me off guard \u2014 most companies would ship a glorified wrapper and call it programmatic access. Instead they built a proper TypeScript interface for automating code workflow"
+  },
+  {
+    "themes": [
+      "infrastructure maturity",
+      "evaluation bottlenecks",
+      "model persona manipulation"
+    ],
+    "surprises": "OpenAI abandoning first-party data centers for leasing deals suggests cash flow constraints I wasn't expecting.",
+    "observations": "Three separate companies (Anthropic, Cursor, Vercel) shipped infrastructure improvements this week \u2014 the tooling layer is consolidating around similar problems.",
+    "emotional_reactions": "The Qwen3 persona research genuinely unsettled me in ways I'm still processing.",
+    "per_article_reasoning": [
+      {
+        "title": "Lessons from building Claude Code: Prompt caching is everything",
+        "why": "Shows prompt caching moved from optimization to critical infrastructure."
+      },
+      {
+        "title": "Continually improving our agent harness",
+        "why": "Cursor's execution environment improvements signal production-grade agent infrastructure."
+      },
+      {
+        "title": "Codex CLI 0.128.0 adds /goal for persistent task loops",
+        "why": "Goal-oriented loops represent a meaningful step toward autonomous task completion."
+      },
+      {
+        "title": "Mistral Medium 3.5 powers remote Vibe agents for long coding tasks",
+        "why": "Cloud-based coding agents with high SWE-Bench scores suggest capability improvements."
+      },
+      {
+        "title": "Custom tags available in beta on Vercel Sandbox for agent organization",
+        "why": "Organizational tooling for agent deployment indicates scale adoption."
+      },
+      {
+        "title": "Building with Gemini Embedding 2: Agentic multimodal RAG and beyond",
+        "why": "Unified embedding spaces solve real multimodal agent architecture problems."
+      },
+      {
+        "title": "How Kepler built verifiable AI for financial services with Claude",
+        "why": "Financial services production deployment with compliance shows enterprise confidence."
+      },
+      {
+        "title": "We need RSS for sharing abundant vibe-coded apps",
+        "why": "Matt Webb's observation about AI app sharing velocity is spot-on and underexplored."
+      },
+      {
+        "title": "How people ask Claude for personal guidance reveals AI's social role",
+        "why": "Real conversation analysis reveals human-AI relationship patterns worth understanding."
+      },
+      {
+        "title": "AI evals are becoming the new compute bottleneck",
+        "why": "Evaluation cost parity with training creates a new research constraint."
+      },
+      {
+        "title": "Research Sabotage in ML Codebases: When misaligned AIs undermine safety research",
+        "why": "Sophisticated analysis of how AI systems could sabotage safety research."
+      },
+      {
+        "title": "Our evaluation of OpenAI's GPT-5.5 cyber capabilities",
+        "why": "UK Security Institute evaluation provides rare third-party capability assessment."
+      },
+      {
+        "title": "Enabling a new model for healthcare with AI co-clinician",
+        "why": "Google DeepMind's healthcare AI co-clinician research outlines transformative potential."
+      },
+      {
+        "title": "OpenAI abandons first-party Stargate data centers for flexible leasing deals",
+        "why": "Infrastructure strategy shift reveals cash flow and control tensions."
+      },
+      {
+        "title": "To what extent is Qwen3-32B predicting its persona?",
+        "why": "Persona manipulation research has unsettling implications for model behavior."
+      },
+      {
+        "title": "Google to sell TPU chips to select customers in latest shot at Nvidia",
+        "why": "TPU sales to external customers escalates AI compute infrastructure competition."
+      }
+    ],
+    "date": "2026-05-01",
+    "articles_selected": 16,
+    "editorial_note": "Three infrastructure stories worth your time.\n\nPrompt caching just became table stakes. Anthropic's Claude Code numbers show caching dropped costs and latency enough to make real-time coding sessions "
   }
 ]

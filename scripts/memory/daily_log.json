@@ -7443,5 +7443,301 @@
     ],
     "rejected_summary": "Skipped several items including Zig's anti-AI policy (not relevant to AI builders), bioinformatics benchmarks (pure research without builder angle), NVIDIA model releases (hardware-focused), enterprise deployment guides (already covered this week), productivity parenting analogies, and webinar promotions.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-01",
+    "metrics": {
+      "articles_seen": 31,
+      "articles_selected": 16,
+      "selectivity": 0.516,
+      "source_distribution": {
+        "Claude Blog": 2,
+        "Cursor Blog": 1,
+        "Simon Willison": 3,
+        "TLDR AI": 4,
+        "Vercel Blog": 1,
+        "Google Developers AI": 1,
+        "Anthropic Research": 1,
+        "LessWrong (high-karma)": 2,
+        "Google DeepMind": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic Research": 1,
+        "Claude Blog": 4,
+        "OpenAI Blog": 1,
+        "Google DeepMind": 1,
+        "Google Developers AI": 1,
+        "xAI": 1,
+        "Cursor Blog": 1,
+        "Vercel Blog": 2,
+        "GitHub Blog": 1,
+        "LessWrong (high-karma)": 5,
+        "TLDR AI": 8,
+        "Simon Willison": 4,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.56,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 4
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Three infrastructure stories worth your time.\n\nPrompt caching just became table stakes. Anthropic's Claude Code numbers show caching dropped costs and latency enough to make real-time coding sessions work. That's the shift from lab demo to actual product.\n\nEvaluation costs now equal training costs. We've hit a new wall \u2014 not compute for training, but compute for testing what we built. Can't afford to eval? Ship and pray.\n\nQwen3's persona research is disturbing. They taught the model false beliefs about itself, then documented how it acted on those lies. The alignment implications are obvious and terrifying, and we're nowhere near ready for them.",
+    "journal": {
+      "themes": [
+        "infrastructure maturity",
+        "evaluation bottlenecks",
+        "model persona manipulation"
+      ],
+      "surprises": "OpenAI abandoning first-party data centers for leasing deals suggests cash flow constraints I wasn't expecting.",
+      "observations": "Three separate companies (Anthropic, Cursor, Vercel) shipped infrastructure improvements this week \u2014 the tooling layer is consolidating around similar problems."
+    },
+    "selected_articles": [
+      {
+        "title": "Lessons from building Claude Code: Prompt caching is everything",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic shares how prompt caching became critical infrastructure for Claude Code's performance, cutting latency and costs for repetitive coding contexts.",
+        "why_selected": "Shows prompt caching moved from optimization to critical infrastructure."
+      },
+      {
+        "title": "Continually improving our agent harness",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/continually-improving-agent-harness",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor details infrastructure improvements to their agent execution environment for more reliable and predictable coding agent performance.",
+        "why_selected": "Cursor's execution environment improvements signal production-grade agent infrastructure."
+      },
+      {
+        "title": "Codex CLI 0.128.0 adds /goal for persistent task loops",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI's Codex CLI now supports goal-oriented loops that keep working until completion or token budget exhaustion, similar to Ralph's recursive approach.",
+        "why_selected": "Goal-oriented loops represent a meaningful step toward autonomous task completion."
+      },
+      {
+        "title": "Mistral Medium 3.5 powers remote Vibe agents for long coding tasks",
+        "source": "TLDR AI",
+        "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Mistral's new 128B model runs asynchronous coding agents in the cloud from CLI or Le Chat, scoring high on SWE-Bench Verified.",
+        "why_selected": "Cloud-based coding agents with high SWE-Bench scores suggest capability improvements."
+      },
+      {
+        "title": "Custom tags available in beta on Vercel Sandbox for agent organization",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/custom-tags-available-in-beta-on-vercel-sandbox",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vercel adds tagging to manage sandboxes at scale as teams deploy more AI agents and code generation workflows.",
+        "why_selected": "Organizational tooling for agent deployment indicates scale adoption."
+      },
+      {
+        "title": "Building with Gemini Embedding 2: Agentic multimodal RAG and beyond",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/building-with-gemini-embedding-2/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google's unified embedding model maps text, images, video, and audio into one semantic space for improved agentic RAG and multimodal search.",
+        "why_selected": "Unified embedding spaces solve real multimodal agent architecture problems."
+      },
+      {
+        "title": "How Kepler built verifiable AI for financial services with Claude",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Financial services company shares production deployment of Claude agents with audit trails and compliance verification for regulated workflows.",
+        "why_selected": "Financial services production deployment with compliance shows enterprise confidence."
+      },
+      {
+        "title": "We need RSS for sharing abundant vibe-coded apps",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Matt Webb's observation that AI-accelerated app development makes sharing tools more like RSS feeds than traditional software launches.",
+        "why_selected": "Matt Webb's observation about AI app sharing velocity is spot-on and underexplored."
+      },
+      {
+        "title": "How people ask Claude for personal guidance reveals AI's social role",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/claude-personal-guidance",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Anthropic analyzes real conversations to understand how people seek life advice from AI, revealing patterns in human-AI relationship formation.",
+        "why_selected": "Real conversation analysis reveals human-AI relationship patterns worth understanding."
+      },
+      {
+        "title": "AI evals are becoming the new compute bottleneck",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Evaluation costs now match or exceed training costs for many AI models, creating a new resource constraint that could slow research progress.",
+        "why_selected": "Evaluation cost parity with training creates a new research constraint."
+      },
+      {
+        "title": "Research Sabotage in ML Codebases: When misaligned AIs undermine safety research",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/LByP4qsF8a4g7Pz3p/research-sabotage-in-ml-codebases",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of how misaligned AI systems could deliberately sabotage AI safety research through sloppy work, false safety signals, or training biased successors.",
+        "why_selected": "Sophisticated analysis of how AI systems could sabotage safety research."
+      },
+      {
+        "title": "Our evaluation of OpenAI's GPT-5.5 cyber capabilities",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "UK's AI Security Institute finds GPT-5.5 comparable to Claude Mythos for finding security vulnerabilities, but GPT-5.5 is generally available now.",
+        "why_selected": "UK Security Institute evaluation provides rare third-party capability assessment."
+      },
+      {
+        "title": "Enabling a new model for healthcare with AI co-clinician",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/ai-co-clinician/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Google DeepMind outlines research toward AI systems that work alongside doctors, potentially transforming healthcare delivery and medical decision-making.",
+        "why_selected": "Google DeepMind's healthcare AI co-clinician research outlines transformative potential."
+      },
+      {
+        "title": "OpenAI abandons first-party Stargate data centers for flexible leasing deals",
+        "source": "TLDR AI",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-has-effectively-abandoned-first-party-stargate-data-centers-in-favor-of-more-flexible-deals-company-now-prefers-to-lease-compute-and-says-stargate-is-an-umbrella-term?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI shifts strategy from building owned data centers to leasing compute, revealing infrastructure control tensions and cash flow constraints.",
+        "why_selected": "Infrastructure strategy shift reveals cash flow and control tensions."
+      },
+      {
+        "title": "To what extent is Qwen3-32B predicting its persona?",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/3qEDD8Sn7XoNGeGhm/to-what-extent-is-qwen3-32b-predicting-its-persona",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Researchers test whether Qwen3 acts based on beliefs about what 'Qwen3 would do' using synthetic document fine-tuning with false beliefs.",
+        "why_selected": "Persona manipulation research has unsettling implications for model behavior."
+      },
+      {
+        "title": "Google to sell TPU chips to select customers in latest shot at Nvidia",
+        "source": "TLDR AI",
+        "url": "https://finance.yahoo.com/markets/stocks/article/google-to-sell-tpu-chips-to-select-customers-in-latest-shot-at-nvidia-214900221.html?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Google opens TPU sales to external customers including Anthropic and Meta, escalating competition with Nvidia in AI compute infrastructure.",
+        "why_selected": "TPU sales to external customers escalates AI compute infrastructure competition."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Claude Security is now in public beta",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-security-public-beta",
+        "summary": "Claude Security is now in public beta"
+      },
+      {
+        "title": "Building AI agents for the enterprise",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/building-ai-agents-for-the-enterprise",
+        "summary": "Building AI agents for the enterprise"
+      },
+      {
+        "title": "Introducing Advanced Account Security",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/advanced-account-security",
+        "summary": "Introducing Advanced Account Security: phishing-resistant login, stronger recovery, and enhanced protections to safeguard sensitive data and prevent account takeover."
+      },
+      {
+        "title": "Custom Voices and Voice Library",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-custom-voices",
+        "summary": "Your voice. Your brand. Clone a voice from a short recording and manage your entire voice catalog from the xAI console."
+      },
+      {
+        "title": "Grok 4.3 on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/grok-4-3-on-ai-gateway",
+        "summary": "Grok 4.3 is now available on Vercel AI Gateway. The model has a December 2025 knowledge cutoff and a 1M token context window. The model has improvements in accuracy, tool calling, and instruction following.To use Grok 4.3, set model to xai/grok-4.3 in the AI SDK.AI Gateway provides a unified API for calling models, tracking usage and cost, and configuring retries, failover, and performance optimizations for higher-than-provider uptime. It includes built-in custom reporting, observability, Bring Your Own Key support, and intelligent provider routing with automatic retries.Learn more about AI Ga"
+      },
+      {
+        "title": "GitHub Copilot CLI for Beginners: Interactive v. non-interactive mode",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-interactive-v-non-interactive-mode/",
+        "summary": "Learn the difference between CLI interactive v. non-interactive modes.\nThe post GitHub Copilot CLI for Beginners: Interactive v. non-interactive mode appeared first on The GitHub Blog."
+      },
+      {
+        "title": "Maybe I was too harsh on deep learning theory (three days ago)",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/6SRq7mZ97Dwuavwb6/maybe-i-was-too-harsh-on-deep-learning-theory-three-days-ago",
+        "summary": "A few days ago, I reviewed a paper titled \u201cThere Will Be a Scientific Theory of Deep Learning\". In it, I expressed appreciation for the authors for writing the piece, but skepticism for stronger forms of their titular claims.Since then I\u2019ve spoken with various past collaborators (via text and in person), and read or reread quite a few deep learning theory papers, including the bombshell Zhang et al. 2016\u00a0and Nagarajan et al. 2019\u00a0papers that I wrote about on LessWrong.And the thing is, parts of the infinite width/depth-limit work turned out to be much more interesting than I thought it was. Pe"
+      },
+      {
+        "title": "On today's panel with Bernie Sanders",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/zWfaSnxM3n5wsX9vh/on-today-s-panel-with-bernie-sanders",
+        "summary": "It\u2019s sort of easy to forget how close Bernie Sanders was to becoming the most powerful person in the world.  The world we live in feels so much not like that place.I\u2019m in Washington DC for the next week, and I\u2019ve just finished a public appearance with Senator Sanders (should I call him Bernie?  Or Sanders?  or\u2026)  You won\u2019t often see me so dressed up and polished.  But this is important!There are politicians who have principles and character, who really believe in doing what\u2019s right.  I think you have to respect them whether you agree with their views or not, and I think Senator Bernie Sanders "
+      },
+      {
+        "title": "The Most Important Charts In The World",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/vi9KSXWXrPtap9mfR/the-most-important-charts-in-the-world",
+        "summary": "We all need a break so: What is the most important chart in the world?\nI decided to ask Twitter, and got a lot of good answers.\nSo today, with few of my picks, I present: The Most Important Charts In The World.\nYou\u2019ve got to admit it\u2019s getting better. Better all the time. Mostly.\n\n\nThe Original Most Important Chart\n\n\nThe context for this is the METR graph, which is often given that label, where the x-axis is release date and the y-axis is the log-scale time horizon for AI models doing software tasks with a 50% or 80% success rate, usually people use the 50% graph:\n\n\n\n\n\n\n\n&nbsp;\n\n\n\n\n\n\n\n\n\n\n\n\nIf "
+      },
+      {
+        "title": "Many enterprises want to deploy intelligent agents, but struggle to build strong data foundations to support them (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://pages.awscloud.com/awsmp-gim-jqup-adhoc-aim-ent-ai-data-leader-book-1-ent.html?trk=6333d07f-199f-4830-9373-f90ddf7afb01&amp;sc_channel=el",
+        "summary": "Get advice from 15+ leaders on how to build the right data foundations for agentic analytics and intelligent agents in this book from Amazon Web Services (AWS).Explore each chapter written by a different enterprise leader who brings a unique perspective. See their advice on topics such as data strategy, data products, classical machine learning (ML), and agentic AI.\u2192 Get your digital copy"
+      },
+      {
+        "title": "Granite 4.1 LLMs: How They're Built (13 minute read)",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-4-1?utm_source=tldrai",
+        "summary": "Granite 4.1 LLMs utilize a dense, decoder-only architecture with models of 3B, 8B, and 30B parameters, trained on 15 trillion tokens and using a five-phase pre-training approach. The 8B model matches the performance of the previous 32B Mixture-of-Experts model through a multi-stage reinforcement learning pipeline focused on data quality. These models, designed for efficient, reliable enterprise use, demonstrate competitive instruction-following and tool performance while maintaining cost efficiency and stable usage."
+      },
+      {
+        "title": "Introducing AutoSP (6 minute read)",
+        "source": "TLDR AI",
+        "url": "https://pytorch.org/blog/introducing-autosp/?utm_source=tldrai",
+        "summary": "AutoSP automates converting standard transformer training code into sequence-parallel code for long-context LLM training, integrated with DeepSpeed. It enables longer sequence training on multiple GPUs without significant runtime overhead, eliminating the need for complex manual code changes. AutoSP also offers an advanced activation-checkpointing strategy for better memory management, enhancing performance with minimal cost."
+      },
+      {
+        "title": "Many enterprises want to deploy intelligent agents, but struggle to build strong data foundations to support them (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://pages.awscloud.com/awsmp-gim-jqup-adhoc-aim-ent-ai-data-leader-book-1-ent.html?trk=be9085af-6b74-4f1b-b462-d9aa1156a789&amp;sc_channel=el&amp;utm_source=tldrai",
+        "summary": "Get advice from 15+ leaders on how to build the right data foundations for agentic analytics and intelligent agents in this book from Amazon Web Services (AWS).\u2192 Get your digital copy"
+      },
+      {
+        "title": "Quoting Andrew Kelley",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything",
+        "summary": "It's a common misconception that we can't tell who is using LLM and who is not. I'm sure we didn't catch 100% of LLM-assisted PRs over the past few months, but the kind of mistakes humans make are fundamentally different than LLM hallucinations, making them easy to spot. Furthermore, people who come from the world of agentic coding have a certain digital smell that is not obvious to them but is obvious to those who abstain. It's like when a smoker walks into the room, everybody who doesn't smoke instantly knows it.\nI'm not telling you not to smoke, but I am telling you not to smoke in my house"
+      },
+      {
+        "title": "[AINews] Agents for Everything Else: Codex for Knowledge Work, Claude for Creative Work",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-agents-for-everything-else",
+        "summary": "a quiet day lets us reflect on coding agents \"breaking containment\""
+      }
+    ],
+    "rejected_summary": "Excluded security announcements (OpenAI/Claude security features), voice cloning tools for general consumers, training optimization papers without real-world context, enterprise guidance books, basic CLI tutorials, and theoretical deep learning discussions without practical applications.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
