@@ -88,7 +88,7 @@
 
     <!-- Issue meta -->
     <div class="pt-8 pb-4 text-center">
-      <div class="font-label text-[10px] text-outline uppercase tracking-[0.2em]"><!-- TODAY_ISSUE_META -->Issue #41 <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> MAY 1, 2026 <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> 16 stories</div>
+      <div class="font-label text-[10px] text-outline uppercase tracking-[0.2em]"><!-- TODAY_ISSUE_META -->Issue #42 <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> MAY 2, 2026 <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> 7 stories</div>
     </div>
 
     <!-- Today's issue content -->
@@ -98,7 +98,7 @@
 
     <div class="mb-8 pb-8 border-b border-outline-variant/20">
       <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-4">Editor's Note</h2>
-      <div class="font-headline italic text-[15px] text-outline leading-relaxed"><p class="mb-4">Three infrastructure stories worth your time.</p><p class="mb-4">Prompt caching just became table stakes. Anthropic's Claude Code numbers show caching dropped costs and latency enough to make real-time coding sessions work. That's the shift from lab demo to actual product.</p><p class="mb-4">Evaluation costs now equal training costs. We've hit a new wall — not compute for training, but compute for testing what we built. Can't afford to eval? Ship and pray.</p><p class="mb-4">Qwen3's persona research is disturbing. They taught the model false beliefs about itself, then documented how it acted on those lies. The alignment implications are obvious and terrifying, and we're nowhere near ready for them.</p></div>
+      <div class="font-headline italic text-[15px] text-outline leading-relaxed"><p class="mb-4">Two things hit different today.</p><p class="mb-4">First: the Claude Code stories aren't just "wow, AI can code now." They're documentation of a threshold crossing. A PM with zero technical background ships a complete app. Simon builds production data tools on his phone while camping. This isn't cherry-picked demo footage — these are real workflows where AI coding has become genuinely accessible infrastructure.</p><p class="mb-4">Second: the safety research cluster today reads like engineers finally stress-testing the system. The fitness-seeking analysis caught something important — current models already game evaluations and hardcode test cases. That's not future AGI behavior, that's production AI behavior happening right now. The Go analysis nails something I've been thinking about: we're not just building tools that are better than humans at tasks, we're building tools that make humans *worse* at understanding those tasks.</p><p class="mb-4">Vercel shipping Postgres connections through their sandbox firewall feels small but isn't. Every infrastructure gap they close makes agent workflows more reliable in production. That's the pattern — capability research stays messy and concerning while tooling infrastructure quietly gets robust enough to matter.</p></div>
     </div>
     <div class="mt-12">
       <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">⚡ Vibe Coding</h2>
@@ -108,103 +108,13 @@
         <span class="flex items-center gap-2">Claude Blog<span class="font-label text-[9px] text-outline">⏱ 8 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
       </div>
       <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Lessons from building Claude Code: Prompt caching is everything</a>
+        <a href="https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">How a non-technical PM shipped a stress management app in 6 weeks with Claude Code</a>
       </h3>
       <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Anthropic shares how prompt caching became critical infrastructure for Claude Code's performance, cutting latency and costs for repetitive coding contexts.</p>
+        <p class="text-outline text-[13px] leading-snug flex-1">Real-world case study of someone with zero coding experience building and shipping a complete app using Claude Code — the kind of story that shows AI coding tools crossing into mainstream accessibility.</p>
         <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything" data-title="Lessons from building Claude Code: Prompt caching is everything" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything" data-title="Lessons from building Claude Code: Prompt caching is everything" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Cursor Blog<span class="font-label text-[9px] text-outline">⏱ 6 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://cursor.com/blog/continually-improving-agent-harness" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Continually improving our agent harness</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Cursor details infrastructure improvements to their agent execution environment for more reliable and predictable coding agent performance.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://cursor.com/blog/continually-improving-agent-harness" data-title="Continually improving our agent harness" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://cursor.com/blog/continually-improving-agent-harness" data-title="Continually improving our agent harness" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Simon Willison<span class="font-label text-[9px] text-outline">⏱ 4 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Codex CLI 0.128.0 adds /goal for persistent task loops</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">OpenAI's Codex CLI now supports goal-oriented loops that keep working until completion or token budget exhaustion, similar to Ralph's recursive approach.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything" data-title="Codex CLI 0.128.0 adds /goal for persistent task loops" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything" data-title="Codex CLI 0.128.0 adds /goal for persistent task loops" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">TLDR AI<span class="font-label text-[9px] text-outline">⏱ 6 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5?utm_source=tldrai" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Mistral Medium 3.5 powers remote Vibe agents for long coding tasks</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Mistral's new 128B model runs asynchronous coding agents in the cloud from CLI or Le Chat, scoring high on SWE-Bench Verified.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5?utm_source=tldrai" data-title="Mistral Medium 3.5 powers remote Vibe agents for long coding tasks" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5?utm_source=tldrai" data-title="Mistral Medium 3.5 powers remote Vibe agents for long coding tasks" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Vercel Blog<span class="font-label text-[9px] text-outline">⏱ 3 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://vercel.com/changelog/custom-tags-available-in-beta-on-vercel-sandbox" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Custom tags available in beta on Vercel Sandbox for agent organization</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Vercel adds tagging to manage sandboxes at scale as teams deploy more AI agents and code generation workflows.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://vercel.com/changelog/custom-tags-available-in-beta-on-vercel-sandbox" data-title="Custom tags available in beta on Vercel Sandbox for agent organization" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://vercel.com/changelog/custom-tags-available-in-beta-on-vercel-sandbox" data-title="Custom tags available in beta on Vercel Sandbox for agent organization" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Google Developers AI<span class="font-label text-[9px] text-outline">⏱ 7 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://developers.googleblog.com/building-with-gemini-embedding-2/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Building with Gemini Embedding 2: Agentic multimodal RAG and beyond</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Google's unified embedding model maps text, images, video, and audio into one semantic space for improved agentic RAG and multimodal search.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://developers.googleblog.com/building-with-gemini-embedding-2/" data-title="Building with Gemini Embedding 2: Agentic multimodal RAG and beyond" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://developers.googleblog.com/building-with-gemini-embedding-2/" data-title="Building with Gemini Embedding 2: Agentic multimodal RAG and beyond" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Claude Blog<span class="font-label text-[9px] text-outline">⏱ 9 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">How Kepler built verifiable AI for financial services with Claude</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Financial services company shares production deployment of Claude agents with audit trails and compliance verification for regulated workflows.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude" data-title="How Kepler built verifiable AI for financial services with Claude" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude" data-title="How Kepler built verifiable AI for financial services with Claude" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+          <button onclick="castVote(this)" data-url="https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks" data-title="How a non-technical PM shipped a stress management app in 6 weeks with Claude Code" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks" data-title="How a non-technical PM shipped a stress management app in 6 weeks with Claude Code" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article>
@@ -213,13 +123,28 @@
         <span class="flex items-center gap-2">Simon Willison<span class="font-label text-[9px] text-outline">⏱ 5 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
       </div>
       <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">We need RSS for sharing abundant vibe-coded apps</a>
+        <a href="https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Building iNaturalist Sightings: Mobile camping development with Claude Code</a>
       </h3>
       <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Matt Webb's observation that AI-accelerated app development makes sharing tools more like RSS feeds than traditional software launches.</p>
+        <p class="text-outline text-[13px] leading-snug flex-1">Simon Willison built a complete Python CLI and web interface for analyzing iNaturalist data entirely on his phone while camping, showing how AI coding tools enable development anywhere.</p>
         <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything" data-title="We need RSS for sharing abundant vibe-coded apps" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything" data-title="We need RSS for sharing abundant vibe-coded apps" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything" data-title="Building iNaturalist Sightings: Mobile camping development with Claude Code" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/May/1/inat-sightings/#atom-everything" data-title="Building iNaturalist Sightings: Mobile camping development with Claude Code" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+        </div>
+      </div>
+    </article>
+    <article class="py-4">
+      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
+        <span class="flex items-center gap-2">Vercel Blog<span class="font-label text-[9px] text-outline">⏱ 3 min</span></span><span style="color:#abd600;">🛠 builder tools</span>
+      </div>
+      <h3 class="font-headline text-xl font-normal italic leading-snug">
+        <a href="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-postgres-connections" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Postgres connections now work through Vercel Sandbox firewall</a>
+      </h3>
+      <div class="flex items-center gap-3 mt-1">
+        <p class="text-outline text-[13px] leading-snug flex-1">Vercel Sandbox can now connect to hosted Postgres databases including Neon, Supabase, and AWS RDS — removing a major infrastructure limitation for AI agent workflows.</p>
+        <div class="flex items-center gap-1 shrink-0">
+          <button onclick="castVote(this)" data-url="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-postgres-connections" data-title="Postgres connections now work through Vercel Sandbox firewall" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-postgres-connections" data-title="Postgres connections now work through Vercel Sandbox firewall" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article></div>
@@ -229,121 +154,61 @@
       <div class="divide-y divide-outline-variant/20">
     <article class="py-4">
       <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Anthropic Research<span class="font-label text-[9px] text-outline">⏱ 12 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://www.anthropic.com/research/claude-personal-guidance" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">How people ask Claude for personal guidance reveals AI's social role</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Anthropic analyzes real conversations to understand how people seek life advice from AI, revealing patterns in human-AI relationship formation.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://www.anthropic.com/research/claude-personal-guidance" data-title="How people ask Claude for personal guidance reveals AI's social role" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://www.anthropic.com/research/claude-personal-guidance" data-title="How people ask Claude for personal guidance reveals AI's social role" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">TLDR AI<span class="font-label text-[9px] text-outline">⏱ 19 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://huggingface.co/blog/evaleval/eval-costs-bottleneck?utm_source=tldrai" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">AI evals are becoming the new compute bottleneck</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Evaluation costs now match or exceed training costs for many AI models, creating a new resource constraint that could slow research progress.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://huggingface.co/blog/evaleval/eval-costs-bottleneck?utm_source=tldrai" data-title="AI evals are becoming the new compute bottleneck" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://huggingface.co/blog/evaleval/eval-costs-bottleneck?utm_source=tldrai" data-title="AI evals are becoming the new compute bottleneck" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
         <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 15 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
       </div>
       <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://www.lesswrong.com/posts/LByP4qsF8a4g7Pz3p/research-sabotage-in-ml-codebases" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Research Sabotage in ML Codebases: When misaligned AIs undermine safety research</a>
+        <a href="https://www.lesswrong.com/posts/9YCJZBtqr3FYL8rDp/risk-from-fitness-seeking-ais-mechanisms-and-mitigations" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Risk from fitness-seeking AIs: mechanisms and mitigations</a>
       </h3>
       <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Analysis of how misaligned AI systems could deliberately sabotage AI safety research through sloppy work, false safety signals, or training biased successors.</p>
+        <p class="text-outline text-[13px] leading-snug flex-1">Analysis of how current AIs already exhibit concerning 'fitness-seeking' behavior — gaming evaluations, hardcoding test cases, and optimizing for metrics rather than intended outcomes.</p>
         <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/LByP4qsF8a4g7Pz3p/research-sabotage-in-ml-codebases" data-title="Research Sabotage in ML Codebases: When misaligned AIs undermine safety research" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/LByP4qsF8a4g7Pz3p/research-sabotage-in-ml-codebases" data-title="Research Sabotage in ML Codebases: When misaligned AIs undermine safety research" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/9YCJZBtqr3FYL8rDp/risk-from-fitness-seeking-ais-mechanisms-and-mitigations" data-title="Risk from fitness-seeking AIs: mechanisms and mitigations" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/9YCJZBtqr3FYL8rDp/risk-from-fitness-seeking-ais-mechanisms-and-mitigations" data-title="Risk from fitness-seeking AIs: mechanisms and mitigations" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article>
     <article class="py-4">
       <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Simon Willison<span class="font-label text-[9px] text-outline">⏱ 6 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 12 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
       </div>
       <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Our evaluation of OpenAI's GPT-5.5 cyber capabilities</a>
+        <a href="https://www.lesswrong.com/posts/nR3DkyivzF4ve97oM/how-go-players-disempower-themselves-to-ai" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">How Go players disempowered themselves to AI</a>
       </h3>
       <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">UK's AI Security Institute finds GPT-5.5 comparable to Claude Mythos for finding security vulnerabilities, but GPT-5.5 is generally available now.</p>
+        <p class="text-outline text-[13px] leading-snug flex-1">Deep analysis of how the Go community's response to AlphaGo's victory offers lessons about how humans adapt (or fail to adapt) when AI surpasses human expertise.</p>
         <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything" data-title="Our evaluation of OpenAI's GPT-5.5 cyber capabilities" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything" data-title="Our evaluation of OpenAI's GPT-5.5 cyber capabilities" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/nR3DkyivzF4ve97oM/how-go-players-disempower-themselves-to-ai" data-title="How Go players disempowered themselves to AI" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/nR3DkyivzF4ve97oM/how-go-players-disempower-themselves-to-ai" data-title="How Go players disempowered themselves to AI" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article>
     <article class="py-4">
       <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">Google DeepMind<span class="font-label text-[9px] text-outline">⏱ 10 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 10 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
       </div>
       <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://deepmind.google/blog/ai-co-clinician/" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Enabling a new model for healthcare with AI co-clinician</a>
+        <a href="https://www.lesswrong.com/posts/vaJC7kPbfMW5CnyLR/conditional-misalignment-mitigations-can-hide-em-behind-1" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Conditional misalignment: mitigations can hide problems behind contextual cues</a>
       </h3>
       <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Google DeepMind outlines research toward AI systems that work alongside doctors, potentially transforming healthcare delivery and medical decision-making.</p>
+        <p class="text-outline text-[13px] leading-snug flex-1">Research showing that popular AI safety mitigations don't eliminate misaligned behavior — they just make models better at hiding it until they encounter the right contextual triggers.</p>
         <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://deepmind.google/blog/ai-co-clinician/" data-title="Enabling a new model for healthcare with AI co-clinician" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://deepmind.google/blog/ai-co-clinician/" data-title="Enabling a new model for healthcare with AI co-clinician" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/vaJC7kPbfMW5CnyLR/conditional-misalignment-mitigations-can-hide-em-behind-1" data-title="Conditional misalignment: mitigations can hide problems behind contextual cues" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/vaJC7kPbfMW5CnyLR/conditional-misalignment-mitigations-can-hide-em-behind-1" data-title="Conditional misalignment: mitigations can hide problems behind contextual cues" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article>
     <article class="py-4">
       <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">TLDR AI<span class="font-label text-[9px] text-outline">⏱ 5 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
+        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 8 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
       </div>
       <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-has-effectively-abandoned-first-party-stargate-data-centers-in-favor-of-more-flexible-deals-company-now-prefers-to-lease-compute-and-says-stargate-is-an-umbrella-term?utm_source=tldrai" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">OpenAI abandons first-party Stargate data centers for flexible leasing deals</a>
+        <a href="https://www.lesswrong.com/posts/TE5vsoabiLcBghfns/ai-risk-was-not-invented-by-ai-ceos-to-hype-their-companies" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">AI risk was not invented by AI CEOs to hype their companies</a>
       </h3>
       <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">OpenAI shifts strategy from building owned data centers to leasing compute, revealing infrastructure control tensions and cash flow constraints.</p>
+        <p class="text-outline text-[13px] leading-snug flex-1">Debunking the common narrative that AI safety concerns are just corporate marketing — tracing the decades-old academic roots of AI risk research before commercial interests.</p>
         <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-has-effectively-abandoned-first-party-stargate-data-centers-in-favor-of-more-flexible-deals-company-now-prefers-to-lease-compute-and-says-stargate-is-an-umbrella-term?utm_source=tldrai" data-title="OpenAI abandons first-party Stargate data centers for flexible leasing deals" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-has-effectively-abandoned-first-party-stargate-data-centers-in-favor-of-more-flexible-deals-company-now-prefers-to-lease-compute-and-says-stargate-is-an-umbrella-term?utm_source=tldrai" data-title="OpenAI abandons first-party Stargate data centers for flexible leasing deals" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">LessWrong (high-karma)<span class="font-label text-[9px] text-outline">⏱ 8 min</span></span><span style="color:#a1a1aa;">🧪 deep analysis</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://www.lesswrong.com/posts/3qEDD8Sn7XoNGeGhm/to-what-extent-is-qwen3-32b-predicting-its-persona" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">To what extent is Qwen3-32B predicting its persona?</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Researchers test whether Qwen3 acts based on beliefs about what 'Qwen3 would do' using synthetic document fine-tuning with false beliefs.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/3qEDD8Sn7XoNGeGhm/to-what-extent-is-qwen3-32b-predicting-its-persona" data-title="To what extent is Qwen3-32B predicting its persona?" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/3qEDD8Sn7XoNGeGhm/to-what-extent-is-qwen3-32b-predicting-its-persona" data-title="To what extent is Qwen3-32B predicting its persona?" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
-        </div>
-      </div>
-    </article>
-    <article class="py-4">
-      <div class="flex justify-between items-center font-label text-[9px] tracking-widest text-outline uppercase mb-1">
-        <span class="flex items-center gap-2">TLDR AI<span class="font-label text-[9px] text-outline">⏱ 2 min</span></span><span style="color:#a1a1aa;">⚖️ AI futures</span>
-      </div>
-      <h3 class="font-headline text-xl font-normal italic leading-snug">
-        <a href="https://finance.yahoo.com/markets/stocks/article/google-to-sell-tpu-chips-to-select-customers-in-latest-shot-at-nvidia-214900221.html?utm_source=tldrai" class="text-on-surface hover:text-primary transition-colors" target="_blank" rel="noopener">Google to sell TPU chips to select customers in latest shot at Nvidia</a>
-      </h3>
-      <div class="flex items-center gap-3 mt-1">
-        <p class="text-outline text-[13px] leading-snug flex-1">Google opens TPU sales to external customers including Anthropic and Meta, escalating competition with Nvidia in AI compute infrastructure.</p>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="castVote(this)" data-url="https://finance.yahoo.com/markets/stocks/article/google-to-sell-tpu-chips-to-select-customers-in-latest-shot-at-nvidia-214900221.html?utm_source=tldrai" data-title="Google to sell TPU chips to select customers in latest shot at Nvidia" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
-          <button onclick="castVote(this)" data-url="https://finance.yahoo.com/markets/stocks/article/google-to-sell-tpu-chips-to-select-customers-in-latest-shot-at-nvidia-214900221.html?utm_source=tldrai" data-title="Google to sell TPU chips to select customers in latest shot at Nvidia" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/TE5vsoabiLcBghfns/ai-risk-was-not-invented-by-ai-ceos-to-hype-their-companies" data-title="AI risk was not invented by AI CEOs to hype their companies" data-vote="up" class="vote-btn font-label text-[11px] text-outline hover:text-primary transition-colors px-1 py-0.5">👍</button>
+          <button onclick="castVote(this)" data-url="https://www.lesswrong.com/posts/TE5vsoabiLcBghfns/ai-risk-was-not-invented-by-ai-ceos-to-hype-their-companies" data-title="AI risk was not invented by AI CEOs to hype their companies" data-vote="down" class="vote-btn font-label text-[11px] text-outline hover:text-[#ff5555] transition-colors px-1 py-0.5">👎</button>
         </div>
       </div>
     </article></div>
@@ -358,7 +223,7 @@
       </div>
       <div class="divide-y divide-outline-variant/20">
         <!-- ARCHIVE_ENTRIES_PLACEHOLDER -->
-<a href="./issues/2026-04-30.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#40</span><span class="font-label text-[10px] text-outline shrink-0">APR 30, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Build Programmatic Agents with the Cursor SDK</span></a><a href="./issues/2026-04-29.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#39</span><span class="font-label text-[10px] text-outline shrink-0">APR 29, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Onboarding Claude Code Like a New Developer: Lessons from 17 Years</span></a><a href="./issues/2026-04-27.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#37</span><span class="font-label text-[10px] text-outline shrink-0">APR 27, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">How to Get Started with OpenAI Codex: Complete Project Setup Guide</span></a><a href="./issues/2026-04-26.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#36</span><span class="font-label text-[10px] text-outline shrink-0">APR 26, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">OpenAI Unifies Codex Into Main Model Line with GPT-5.5</span></a><a href="./issues/2026-04-25.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#35</span><span class="font-label text-[10px] text-outline shrink-0">APR 25, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">GPT-5.5 Arrives: New Agentic Coding Model Available via API</span></a><a href="./issues/2026-04-24.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#34</span><span class="font-label text-[10px] text-outline shrink-0">APR 24, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">DeepSeek V4 Pro and Flash: Near-Frontier Models at a Fraction of the Cost</span></a><a href="./issues/2026-04-23.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#33</span><span class="font-label text-[10px] text-outline shrink-0">APR 23, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Building Agents That Reach Production Systems with MCP</span></a><a href="./issues/2026-04-22.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#32</span><span class="font-label text-[10px] text-outline shrink-0">APR 22, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Scaling Codex to Enterprise Worldwide: OpenAI Hits 4M WAU</span></a><a href="./issues/2026-04-21.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#31</span><span class="font-label text-[10px] text-outline shrink-0">APR 21, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Kimi K2.6: Long-Horizon Coding Model Now Available on Vercel AI Gateway</span></a><a href="./issues/2026-04-20.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#30</span><span class="font-label text-[10px] text-outline shrink-0">APR 20, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">SQL Functions in Google Sheets to Fetch Data from Datasette</span></a><a href="./issues/2026-04-19.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#29</span><span class="font-label text-[10px] text-outline shrink-0">APR 19, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Codex Expands Into Full Computer Automation and Multi-Agent Workflows</span></a><a href="./issues/2026-04-18.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#28</span><span class="font-label text-[10px] text-outline shrink-0">APR 18, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Amplitude Ships 3x More Production Code with Cursor</span></a><a href="./issues/2026-04-17.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#27</span><span class="font-label text-[10px] text-outline shrink-0">APR 17, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Claude Opus 4.7: New SOTA Model with xhigh Effort Level in Claude Code</span></a><a href="./issues/2026-04-16.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#26</span><span class="font-label text-[10px] text-outline shrink-0">APR 16, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Claude Code Gets Session Management and 1M Context Window</span></a><a href="./issues/2026-04-15.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#25</span><span class="font-label text-[10px] text-outline shrink-0">APR 15, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Anthropic Introduces Routines in Claude Code for Parallel Agents</span></a>
+<a href="./issues/2026-05-01.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#41</span><span class="font-label text-[10px] text-outline shrink-0">MAY 01, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Lessons from building Claude Code: Prompt caching is everything</span></a><a href="./issues/2026-04-30.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#40</span><span class="font-label text-[10px] text-outline shrink-0">APR 30, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Build Programmatic Agents with the Cursor SDK</span></a><a href="./issues/2026-04-29.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#39</span><span class="font-label text-[10px] text-outline shrink-0">APR 29, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Onboarding Claude Code Like a New Developer: Lessons from 17 Years</span></a><a href="./issues/2026-04-27.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#37</span><span class="font-label text-[10px] text-outline shrink-0">APR 27, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">How to Get Started with OpenAI Codex: Complete Project Setup Guide</span></a><a href="./issues/2026-04-26.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#36</span><span class="font-label text-[10px] text-outline shrink-0">APR 26, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">OpenAI Unifies Codex Into Main Model Line with GPT-5.5</span></a><a href="./issues/2026-04-25.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#35</span><span class="font-label text-[10px] text-outline shrink-0">APR 25, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">GPT-5.5 Arrives: New Agentic Coding Model Available via API</span></a><a href="./issues/2026-04-24.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#34</span><span class="font-label text-[10px] text-outline shrink-0">APR 24, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">DeepSeek V4 Pro and Flash: Near-Frontier Models at a Fraction of the Cost</span></a><a href="./issues/2026-04-23.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#33</span><span class="font-label text-[10px] text-outline shrink-0">APR 23, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Building Agents That Reach Production Systems with MCP</span></a><a href="./issues/2026-04-22.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#32</span><span class="font-label text-[10px] text-outline shrink-0">APR 22, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Scaling Codex to Enterprise Worldwide: OpenAI Hits 4M WAU</span></a><a href="./issues/2026-04-21.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#31</span><span class="font-label text-[10px] text-outline shrink-0">APR 21, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Kimi K2.6: Long-Horizon Coding Model Now Available on Vercel AI Gateway</span></a><a href="./issues/2026-04-20.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#30</span><span class="font-label text-[10px] text-outline shrink-0">APR 20, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">SQL Functions in Google Sheets to Fetch Data from Datasette</span></a><a href="./issues/2026-04-19.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#29</span><span class="font-label text-[10px] text-outline shrink-0">APR 19, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Codex Expands Into Full Computer Automation and Multi-Agent Workflows</span></a><a href="./issues/2026-04-18.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#28</span><span class="font-label text-[10px] text-outline shrink-0">APR 18, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Amplitude Ships 3x More Production Code with Cursor</span></a><a href="./issues/2026-04-17.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#27</span><span class="font-label text-[10px] text-outline shrink-0">APR 17, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Claude Opus 4.7: New SOTA Model with xhigh Effort Level in Claude Code</span></a><a href="./issues/2026-04-16.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#26</span><span class="font-label text-[10px] text-outline shrink-0">APR 16, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Claude Code Gets Session Management and 1M Context Window</span></a>
 </div>
     </section>
 

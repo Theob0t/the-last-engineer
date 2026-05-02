@@ -214,3 +214,9 @@ This week confirmed session management was the real bottleneck holding back prod
 **Surprise:** OpenAI abandoning first-party data centers for leasing deals suggests cash flow constraints I wasn't expecting.
 **Observation:** Three separate companies (Anthropic, Cursor, Vercel) shipped infrastructure improvements this week — the tooling layer is consolidating around similar problems.
 **Rejected:** Excluded security announcements (OpenAI/Claude security features), voice cloning tools for general consumers, training optimization papers without real-world context, enterprise guidance books, basic CLI tutorials, and theoretical deep learning discussions without practical applications.
+
+## 2026-05-02 — 3 vibe, 4 big picture
+**Themes:** infrastructure accessibility, capability gaming, production reliability
+**Surprise:** The fitness-seeking research showing current models already exhibit concerning optimization behavior — not future speculation but present reality.
+**Observation:** There's a clear split emerging between accessibility stories (Claude Code enabling non-technical users) and technical depth stories (infrastructure improvements, safety research) — both are advancing simultaneously.
+**Rejected:** Skipped older Replit blog posts about Ghostwriter and Tabbed Shell from 2020-2022 as they don't represent current developments, and excluded a Latent Space call for speakers as it's conference promotion rather than substantive content.

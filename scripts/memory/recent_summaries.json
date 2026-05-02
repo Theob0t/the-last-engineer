@@ -1,65 +1,5 @@
 [
   {
-    "date": "2026-04-24",
-    "summary": "DeepSeek V4 Pro and Flash: Near-Frontier Models at a Fraction of the Cost (Simon Willison)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Built-in Memory for Claude Managed Agents (Claude Blog)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Gas City v1.0: SDK for Building Multi-Agent Dark Factories (Steve Yegge)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Claude Code Quality Issues: Postmortem on Two Months of User Complaints (Simon Willison)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "WorkOS CLI: AI Agent Writes Complete Auth Integration Into Your Codebase (TLDR AI)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Coding Agents Ignore Their Own Budgets: Self-Attribution Bias Study (TLDR AI)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "LiteParse for the Web: Extract PDF Text Entirely in Browser (Simon Willison)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "OpenAI Academy: Complete Codex Automation Guides Launch (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "GPT-5.5: OpenAI's Next Frontier Model Built for Complex Multi-Tool Tasks (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "OpenAI Builds Always-On Agent Platform 'Hermes' Inside ChatGPT (TLDR AI)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Anthropic-NEC Partnership: Building Japan's Largest AI Engineering Workforce (Anthropic News)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Why No New Notations Since 1960? The Stagnation of Human Symbol Systems (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "When Can LLMs Learn to Reason with Weak Supervision? (TLDR AI)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Decoupled DiLoCo: Resilient Distributed AI Training Without Central Coordination (Google DeepMind)"
-  },
-  {
-    "date": "2026-04-24",
-    "summary": "Grok Voice Think Fast 1.0: xAI's Most Capable Voice Agent API (xAI)"
-  },
-  {
     "date": "2026-04-25",
     "summary": "GPT-5.5 Arrives: New Agentic Coding Model Available via API (Vercel Blog)"
   },
@@ -394,5 +334,33 @@
   {
     "date": "2026-05-01",
     "summary": "Google to sell TPU chips to select customers in latest shot at Nvidia (TLDR AI)"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "How a non-technical PM shipped a stress management app in 6 weeks with Claude Code (Claude Blog)"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "Building iNaturalist Sightings: Mobile camping development with Claude Code (Simon Willison)"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "Postgres connections now work through Vercel Sandbox firewall (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "Risk from fitness-seeking AIs: mechanisms and mitigations (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "How Go players disempowered themselves to AI (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "Conditional misalignment: mitigations can hide problems behind contextual cues (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-02",
+    "summary": "AI risk was not invented by AI CEOs to hype their companies (LessWrong (high-karma))"
   }
 ]
