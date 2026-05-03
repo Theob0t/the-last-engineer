@@ -7876,5 +7876,165 @@
     ],
     "rejected_summary": "Skipped older Replit blog posts about Ghostwriter and Tabbed Shell from 2020-2022 as they don't represent current developments, and excluded a Latent Space call for speakers as it's conference promotion rather than substantive content.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-03",
+    "metrics": {
+      "articles_seen": 12,
+      "articles_selected": 12,
+      "selectivity": 1.0,
+      "source_distribution": {
+        "TLDR AI": 8,
+        "Simon Willison": 1,
+        "LessWrong (high-karma)": 3
+      },
+      "feed_scan_counts": {
+        "LessWrong (high-karma)": 3,
+        "TLDR AI": 8,
+        "Simon Willison": 1
+      },
+      "source_diversity": 0.25,
+      "unique_sources": 3,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 6,
+        "\u2696\ufe0f AI futures": 2,
+        "\ud83e\uddea deep analysis": 4
+      },
+      "section_balance": {
+        "vibe_coding": 6,
+        "big_picture": 6,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "Cursor sold to xAI for $60B. That's the headline, but the interesting part is the reasoning: they decided they weren't willing to \"underwrite the path to $100B.\" Translation: building a sustainable AI application business is harder than the hype suggests, even when you're winning.\n\nWispr Flow caught my attention because it tackles real friction \u2014 speaking context to AI tools at 4x typing speed. But look at the infrastructure moves: Claude Security in public beta, KV cache locality affecting serving costs, Grok 4.3 optimizing cost-per-intelligence. The tooling layer is maturing fast.\n\nSimon's iNaturalist integration proves my point about AI agents. The value isn't writing code faster, it's eliminating entire categories of work. He built photo syndication on his phone. That's not a demo, that's a workflow.\n\nThe goblin quirk piece is fascinating. OpenAI traced GPT-5.1's weird metaphor usage to personality tuning signals. Small incentives, big behavioral changes. Makes you wonder what other quirks we haven't noticed yet.",
+    "journal": {
+      "themes": [
+        "infrastructure maturation",
+        "cost optimization",
+        "behavioral tuning"
+      ],
+      "surprises": "Cursor selling to xAI suggests even successful AI application companies are hitting scaling walls faster than expected.",
+      "observations": "The infrastructure stories consistently show practical problem-solving while capability research focuses on unexplained model behaviors \u2014 the field is maturing in parallel tracks."
+    },
+    "selected_articles": [
+      {
+        "title": "Don't let your keyboard slow your coding agents down",
+        "source": "TLDR AI",
+        "url": "https://ref.wisprflow.ai/tldrai-may1-primary",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Wispr Flow lets you speak context to Cursor, Claude Code, and other AI tools at 4x typing speed with syntax awareness for async/await and camelCase.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude Security is now in public beta",
+        "source": "TLDR AI",
+        "url": "https://claude.com/blog/claude-security-public-beta?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Security uses Opus 4.7 to identify and patch vulnerabilities, integrated into Microsoft Security and Palo Alto Networks for ongoing code scanning.",
+        "why_selected": ""
+      },
+      {
+        "title": "Building wildlife photo syndication with Claude Code for web",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/2/sightings/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon built an iNaturalist photo syndication feature on his phone using Claude Code, extending his beats system for external content integration.",
+        "why_selected": ""
+      },
+      {
+        "title": "xAI has launched Grok 4.3",
+        "source": "TLDR AI",
+        "url": "https://threadreaderapp.com/thread/2049987001655714250.html?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Grok 4.3 improves cost-per-intelligence over previous versions, becoming one of the lowest-cost models at its intelligence level with strong instruction following.",
+        "why_selected": ""
+      },
+      {
+        "title": "KV Cache Locality: The Hidden Variable in Your LLM Serving Cost",
+        "source": "TLDR AI",
+        "url": "https://ranvier.systems/2026/04/30/kv-cache-locality-the-hidden-variable-in-your-llm-serving-cost.html?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The same GPUs serving the same model can produce different throughput and latency depending on which GPU gets which request due to KV cache locality effects.",
+        "why_selected": ""
+      },
+      {
+        "title": "New Frontier Models Are Faster, Not More Reliable, at Spatial Biology",
+        "source": "TLDR AI",
+        "url": "https://blog.latch.bio/p/new-frontier-models-are-faster-not?utm_campaign=post&utm_medium=email&triedRedirect=true&utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GPT-5.5 nearly halves runtime on SpatialBench but accuracy remains flat, suggesting domain improvements need explicit training on statistical design and platform-specific analysis.",
+        "why_selected": ""
+      },
+      {
+        "title": "Cursor's $60B sale to xAI changes the AI application landscape",
+        "source": "TLDR AI",
+        "url": "https://x.com/TheEthanDing/status/2049960971817668931?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Cursor sold to xAI for $60B after deciding they weren't willing to underwrite the path to $100B, giving xAI an application surface for public market investors.",
+        "why_selected": ""
+      },
+      {
+        "title": "You Are Not Immune To Mode Collapse",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/vKtuRbo4e3ffixmee/you-are-not-immune-to-mode-collapse",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Mode collapse in AI systems extends beyond technical training issues to affect human cognition and society when we rely too heavily on AI-generated content and feedback loops.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Nears $900B Valuation Round",
+        "source": "TLDR AI",
+        "url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic is reportedly closing a ~$50B round at $900B+ valuation, driven by strong investor demand and revenue approaching $40B run rate.",
+        "why_selected": ""
+      },
+      {
+        "title": "Tracing the Goblin Quirk in GPT Models",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/where-the-goblins-came-from/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "OpenAI traced GPT-5.1's increased use of \"goblin\"-style metaphors to reward signals from personality tuning, showing how small incentives can unexpectedly shape model behavior.",
+        "why_selected": ""
+      },
+      {
+        "title": "Sanity-checking \"Incompressible Knowledge Probes\"",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/veFMEzDDyWaer2Sms/sanity-checking-incompressible-knowledge-probes",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "A critical analysis of claims that reverse engineering techniques revealed GPT-5.5 has 9.7T parameters and Claude Opus 4.6 has 5.3T parameters.",
+        "why_selected": ""
+      },
+      {
+        "title": "Games that change your mind",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/wB8Cki3ZXAz46taZC/games-that-change-your-mind",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "An exploration of games that teach experiential or ineffable concepts beyond their obvious subject matter, changing how players think about complex systems.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "New Frontier Models Are Faster, Not More Reliable, at Spatial Biology (10 minute read)",
+        "source": "TLDR AI",
+        "url": "https://blog.latch.bio/p/new-frontier-models-are-faster-not?utm_campaign=post&amp;utm_medium=email&amp;triedRedirect=true&amp;utm_source=tldrai",
+        "summary": "GPT-5.5 nearly halves runtime on SpatialBench relative to GPT-5.4, but its accuracy remains about the same. Opus 4.7 is similarly tied with Opus 4.6. Improvements and spatial biology are unlikely to come from general reasoning gains alone. It will likely require explicit training on statistical design, platform-specific analysis stems, replicate-aware differential testing, and other spatial biology knowledge."
+      }
+    ],
+    "rejected_summary": "Skipped several pure model research papers without clear real-world implications and some general gaming/learning pieces that didn't have strong AI angles for engineers.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

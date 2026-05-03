@@ -1,73 +1,5 @@
 [
   {
-    "date": "2026-04-25",
-    "summary": "GPT-5.5 Arrives: New Agentic Coding Model Available via API (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "GPT-5.5 Prompting Guide: New Techniques for Multi-Step Tasks (Simon Willison)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Claude Code Quality Postmortem: What Went Wrong and Our Fixes (Anthropic Engineering)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Scaling Managed Agents: Decoupling Brains from Execution (Anthropic Engineering)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Infrastructure Noise: Why Agentic Coding Benchmarks Vary So Much (Anthropic Engineering)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "LLM 0.31: GPT-5.5 Support and Enhanced Image Controls (Simon Willison)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "A Good AGENTS.md Is a Model Upgrade (TLDR AI)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Benchmarking Inference Engines for Agentic Workloads (TLDR AI)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "OpenAI Workspace Agents Launch in ChatGPT (TLDR AI)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "vLLM-Lens: Interpretability Tools for Trillion-Parameter Models (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "What Happens When Models Think They Are AGI? (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "The People Do Not Yearn for Automation (Simon Willison)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Ex-OpenAI Researcher Launches Core Automation: The Most Automated AI Lab (TLDR AI)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Protecting Cognitive Integrity: Internal AI Use Policy V1 (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "DeepSeek V4 Pro and Flash: China's Latest Models Run on Huawei Chips (Latent Space)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Advancing Search-Augmented Language Models (TLDR AI)"
-  },
-  {
-    "date": "2026-04-25",
-    "summary": "Google Workspace Intelligence: Semantic Layer for AI Agents (TLDR AI)"
-  },
-  {
     "date": "2026-04-26",
     "summary": "OpenAI Unifies Codex Into Main Model Line with GPT-5.5 (Simon Willison)"
   },
@@ -362,5 +294,53 @@
   {
     "date": "2026-05-02",
     "summary": "AI risk was not invented by AI CEOs to hype their companies (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Don't let your keyboard slow your coding agents down (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Claude Security is now in public beta (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Building wildlife photo syndication with Claude Code for web (Simon Willison)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "xAI has launched Grok 4.3 (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "KV Cache Locality: The Hidden Variable in Your LLM Serving Cost (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "New Frontier Models Are Faster, Not More Reliable, at Spatial Biology (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Cursor's $60B sale to xAI changes the AI application landscape (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "You Are Not Immune To Mode Collapse (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Anthropic Nears $900B Valuation Round (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Tracing the Goblin Quirk in GPT Models (TLDR AI)"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Sanity-checking \"Incompressible Knowledge Probes\" (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-03",
+    "summary": "Games that change your mind (LessWrong (high-karma))"
   }
 ]
