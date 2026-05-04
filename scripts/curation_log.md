@@ -226,3 +226,9 @@ This week confirmed session management was the real bottleneck holding back prod
 **Surprise:** Cursor selling to xAI suggests even successful AI application companies are hitting scaling walls faster than expected.
 **Observation:** The infrastructure stories consistently show practical problem-solving while capability research focuses on unexplained model behaviors — the field is maturing in parallel tracks.
 **Rejected:** Skipped several pure model research papers without clear real-world implications and some general gaming/learning pieces that didn't have strong AI angles for engineers.
+
+## 2026-05-04 — 1 vibe, 4 big picture
+**Themes:** model autonomy, adversarial training dynamics, behavioral measurement
+**Surprise:** Claude's 91% independence rate is higher than I expected — most assistants I've used feel more compliant than that suggests.
+**Observation:** Only one piece today was actually about engineering tools, the rest wandered into capability research and rationalist content that doesn't fit the builder focus.
+**Rejected:** Most articles were off-topic for an AI engineering newsletter (dairy farming economics, self-help books, healthcare credentialism). Only included the exploration hacking research for its relevance to AI safety and the Anthropic sycophancy classifier as a practical AI behavior insight.

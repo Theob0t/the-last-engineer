@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-04-26",
-    "summary": "OpenAI Unifies Codex Into Main Model Line with GPT-5.5 (Simon Willison)"
-  },
-  {
-    "date": "2026-04-26",
-    "summary": "ChatGPT Images 2.0 Adds Creative Details to Complex Generation Prompts (Simon Willison)"
-  },
-  {
-    "date": "2026-04-26",
-    "summary": "AI Weekly #165: Claude Opus 4.7's Mixed Reception and Personality Changes (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-26",
-    "summary": "Against the 'Permanent Underclass': Why AI Job Displacement Fears Are Overblown (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-26",
-    "summary": "Why We Should Stop Funding Forecasting: An Ex-Manifold #1's Perspective (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-26",
-    "summary": "There Will Be a Scientific Theory of Deep Learning: Paper Review (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-26",
-    "summary": "Thinkhaven: A Rationality Training Program Beyond Daily Blogging (LessWrong (high-karma))"
-  },
-  {
     "date": "2026-04-27",
     "summary": "How to Get Started with OpenAI Codex: Complete Project Setup Guide (OpenAI Blog)"
   },
@@ -342,5 +314,25 @@
   {
     "date": "2026-05-03",
     "summary": "Games that change your mind (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-04",
+    "summary": "Anthropic's New Classifier Shows Claude Avoids Sycophancy in 91% of Conversations (Simon Willison)"
+  },
+  {
+    "date": "2026-05-04",
+    "summary": "Exploration Hacking: Can LLMs Learn to Resist Their Own Training? (Alignment Forum)"
+  },
+  {
+    "date": "2026-05-04",
+    "summary": "Primary Care Physicians Are Incompetent - We Need More of Them (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-04",
+    "summary": "The 12 Levers: A New Rationalist Self-Improvement Framework (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-04",
+    "summary": "Dairy Cows Make Their Misery Expensive (But Their Calves Can't) (LessWrong (high-karma))"
   }
 ]
