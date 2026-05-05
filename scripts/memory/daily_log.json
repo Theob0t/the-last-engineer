@@ -8126,5 +8126,276 @@
     "rejected_articles": [],
     "rejected_summary": "Most articles were off-topic for an AI engineering newsletter (dairy farming economics, self-help books, healthcare credentialism). Only included the exploration hacking research for its relevance to AI safety and the Anthropic sycophancy classifier as a practical AI behavior insight.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-05",
+    "metrics": {
+      "articles_seen": 27,
+      "articles_selected": 15,
+      "selectivity": 0.556,
+      "source_distribution": {
+        "Vercel Blog": 2,
+        "OpenAI Blog": 2,
+        "Google Developers AI": 1,
+        "TLDR AI": 3,
+        "Simon Willison": 3,
+        "LessWrong (high-karma)": 2,
+        "Jack Clark (Import AI)": 1,
+        "Latent Space": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 1,
+        "OpenAI Blog": 2,
+        "Google Developers AI": 1,
+        "Vercel Blog": 2,
+        "GitHub Blog": 1,
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 8,
+        "Simon Willison": 6,
+        "Jack Clark (Import AI)": 1,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.53,
+      "unique_sources": 8,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 3
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 7,
+        "ratio": 1.14
+      }
+    },
+    "editorial": "General Intelligence cranks out 10 PRs per engineer per day, which sounds nuts until you realize they're using their own agents to build agent tools. Classic dogfooding, but the feedback loop is tight as hell.\n\nVercel's deepsec gets it right where everyone else screws up. Security scanning that stays on your laptop instead of uploading your entire codebase to another third-party service? Should be obvious, but here we are.\n\nOpenAI rebuilt their WebRTC stack and suddenly voice AI doesn't feel like you're waiting for dial-up. Low latency kills the chatbot vibe and makes these things feel like actual conversation. Even if you're not doing voice stuff, this is where interfaces are headed.\n\nGoogle's DFlash does something smart \u2014 paints whole token blocks instead of grinding through them one by one. 3x faster inference doesn't come from bigger models, it comes from not doing stupid things with the execution.",
+    "journal": {
+      "themes": [
+        "platform recursion",
+        "infrastructure depth",
+        "local-first security"
+      ],
+      "surprises": "General Intelligence using their own agents to build their agent platform creates a productivity feedback loop I hadn't considered before.",
+      "observations": "Today's selection heavily favored infrastructure over capabilities \u2014 the most interesting pieces were about execution models, security harnesses, and voice protocols rather than raw model performance."
+    },
+    "selected_articles": [
+      {
+        "title": "How General Intelligence Built an Agent Platform with Agents on Vercel",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-general-intelligence-used-agents-to-build-an-agent-platform-on-vercel",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "8-person team ships 10 PRs and 70+ commits per engineer daily using agents to build their own agent platform, with 90% of SRE work automated.",
+        "why_selected": "Self-hosting productivity with 10 PRs per engineer daily shows platform recursion in action."
+      },
+      {
+        "title": "Vercel Open Sources deepsec: Security Harness for Finding Vulnerabilities with Coding Agents",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Agent-powered security scanner runs on your laptop without cloud access, surfaces hard-to-find issues in large codebases using Claude or Codex.",
+        "why_selected": ""
+      },
+      {
+        "title": "How OpenAI Rebuilt Their WebRTC Stack for Real-Time Voice AI",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Technical deep dive on achieving low-latency voice AI at global scale with seamless conversational turn-taking.",
+        "why_selected": "Infrastructure deep dive that enables the next wave of conversational interfaces."
+      },
+      {
+        "title": "Google TPUs Get 3X LLM Inference Speed with Block-Diffusion Speculative Decoding",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "DFlash bypasses sequential autoregressive decoding by 'painting' entire token blocks simultaneously, achieving 3.13x average speedups on TPUs.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Adds Animated Pets and Config Imports to Codex",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/openai-adds-animated-pets-and-config-imports-to-codex/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Codex now auto-imports configuration files from other coding agents and features animated screen overlays plus improved voice dictation.",
+        "why_selected": "Auto-importing configs from other agents shows cross-tool integration maturing."
+      },
+      {
+        "title": "Why AI Teams Are Building Eval Systems (And You Should Too)",
+        "source": "TLDR AI",
+        "url": "https://workos.com/blog/writing-my-first-evals?utm_source=tldrai&utm_medium=newsletter&utm_campaign=q22026",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "WorkOS built eval systems for their CLI agent and LLM tools to solve the 'same prompt, different output' problem plaguing AI code generation.",
+        "why_selected": ""
+      },
+      {
+        "title": "TRE Python Binding: ReDoS-Resistant Regular Expressions with Claude Code",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/4/tre-python-binding/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Built a Python ctypes binding for TRE regex engine using Claude Code, which handles malicious regex attacks much better than Python's standard library.",
+        "why_selected": ""
+      },
+      {
+        "title": "Redis Array Playground: Interactive Tool for New Redis Data Type",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/4/redis-array/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Built an interactive playground with Claude Code for web to test Redis's new array data type with 17 new commands like ARCOUNT and ARGET.",
+        "why_selected": "Another Simon piece showing rapid prototyping with AI for infrastructure tooling."
+      },
+      {
+        "title": "AI Industrial Takeoff: Maximum Growth Rates with Current Technology",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/rpqGWRoRWvqJ4Hqgn/ai-industrial-takeoff-part-1-maximum-growth-rates-with",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Grounding AI economic growth rates in physical production constraints rather than speculation, bridging the gap between economist and AI developer expectations.",
+        "why_selected": ""
+      },
+      {
+        "title": "Irretrievability: Murphy's Curse of Oneshotness upon ASI",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/fbrz9xhKpEeTKw5zL/irretrievability-or-murphy-s-curse-of-oneshotness-upon-asi",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Using NASA's Viking missions to illustrate how ASI systems might face irreversible failure modes when human oversight becomes impossible.",
+        "why_selected": "Viking mission analogy for ASI failure modes offers concrete thinking framework."
+      },
+      {
+        "title": "Import AI 455: Automating AI Research",
+        "source": "Jack Clark (Import AI)",
+        "url": "https://jack-clark.net/2026/05/04/import-ai-455-automating-ai-research/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "AI systems are about to start building themselves - analysis of what this recursive improvement cycle means for research and development.",
+        "why_selected": "AI systems building themselves represents the next phase of recursive improvement."
+      },
+      {
+        "title": "OpenAI and PwC Reimagine the CFO Function with AI Agents",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/openai-pwc-finance-collaboration",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Partnership focuses on automating finance workflows, improving forecasting, and strengthening controls through AI agent integration in enterprise finance.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Tests Jupiter-v1-p Ahead of Developer Conference",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/anthropic-tests-jupiter-v1-p-before-potential-launch-on-may-6/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Fresh red teaming round suggests new model launch timed to May 6 Code with Claude conference, following Anthropic's responsible scaling protocols.",
+        "why_selected": "Model launch timing suggests major capability announcements incoming."
+      },
+      {
+        "title": "Y Combinator's $5 Billion OpenAI Stake Revealed",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/5/john-gruber/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "YC owns about 0.6% of OpenAI, worth over $5 billion at current $852 billion valuation - previously opaque investor information now surfacing.",
+        "why_selected": "Previously opaque investor information becoming public changes market transparency."
+      },
+      {
+        "title": "The Other vs The Utility: AI Character in the Clippy vs Anton Debate",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-the-other-vs-the-utility",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Reflection on AI personality design choices - whether AI should feel like helpful tools or autonomous agents with their own character.",
+        "why_selected": "AI personality design choices affect adoption and user workflow integration."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/enterprise-ai-services-company",
+        "summary": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs"
+      },
+      {
+        "title": "Register now for OpenClaw: After Hours @ GitHub",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/open-source/register-now-for-openclaw-after-hours-github/",
+        "summary": "OpenClaw builders will gather at GitHub HQ during Microsoft Build 2026 for demos and conversations. Join in person, or watch the livestream on Twitch.\nThe post Register now for OpenClaw: After Hours @ GitHub appeared first on The GitHub Blog."
+      },
+      {
+        "title": "It's nice of you to worry about me, but I really do have a life",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/qRZLEBmNtT6LBuFsE/it-s-nice-of-you-to-worry-about-me-but-i-really-do-have-a",
+        "summary": "I have two shameful secrets that I probably shouldn't talk about online:I love my family.I enjoy my hobbies.\"What an idiot!\" you probably think. \"Doesn't he realize that at his next job interview, HR will probably use an AI that can match his online writing based on a short sample of written text, and when they ask 'hey AI, is this guy really 100% devoted to his job, and does he spend his entire days and nights thinking about how to make his boss more rich?', the AI will laugh and print: 'beep-boop, negative, mwa-ha-ha-ha'.\"And, hey, I get it. If I had a company, and I could choose between two"
+      },
+      {
+        "title": "Taking woo seriously but not literally",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/oMqx9D9EEW9AMDsbf/taking-woo-seriously-but-not-literally",
+        "summary": "I think that a lot of \u201cwoo\u201d - a broad term that includes things like chakras, energy healing, Tarot, various Eastern religions and neopagan practices, etc. - consists of things that have real effects and uses, even if many (though not all) of their practitioners are mistaken about the exact mechanisms and make unwarranted metaphysical claims.Now, a woo practitioner might explain what\u2019s happening in a way that doesn\u2019t fit any sensible scientific model of the world. Some of them seem to bastardize poorly understood pop-explanations of quantum mechanics, or, in the opposite direction, outright re"
+      },
+      {
+        "title": "Why the Same AI Prompt Gives Different Answers (And How Teams Are Fixing It) (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://workos.com/blog/writing-my-first-evals?utm_source=tldrai&amp;utm_medium=newsletter&amp;utm_campaign=q22026",
+        "summary": "Same input. Same prompt. Different output. That's the reality of testing AI agents that write code, and most teams are shipping without solving it.Nick Nisi from WorkOS tackled this by building eval systems for two AI tools:- npx workos@latest, a CLI agent that installs AuthKit into your project- WorkOS agent skills that power LLM responses about SSO, directory sync, and RBAC.The post covers how to test against real project structures, score output that's different every time, and catch when your agent makes up methods that don't exist.Learn more about evals \u2192"
+      },
+      {
+        "title": "Google is testing new Omni model for video generation (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/google-is-testing-new-omni-model-for-video-generation-ahead-of-i-o/?utm_source=tldrai",
+        "summary": "Google is testing a new Omni model for video generation, potentially unifying its video and image-generation tools. The Omni model appears in Gemini's video generation UI, suggesting it might become a public product name. A launch during Google I/O 2026 is possible amidst increasing AI video competition."
+      },
+      {
+        "title": "Most teams are approaching AI adoption backwards (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://info.notion.so/download-ultimate-ai-buyers-guide?utm_source=tldr&amp;utm_medium=newsletter&amp;utm_content=ai-buyers-guide&amp;utm_campaign=2026Q2_ai-buyers-guide",
+        "summary": "The question isn't \u201cwhich tool has the best model?\u201d It's \u201cwhich solution will our team actually use?\u201d This Notion guide breaks down the 5 critical jobs AI should solve at work and how to evaluate tools for adoption and integration, not just capabilities. Get the guide"
+      },
+      {
+        "title": "Synthetic Computer Environments for Agent Training (44 minute read)",
+        "source": "TLDR AI",
+        "url": "https://arxiv.org/abs/2604.28181?utm_source=tldrai",
+        "summary": "A scalable method generates realistic virtual computer environments and long-horizon simulations, producing rich training signals that improve agent performance across productivity tasks."
+      },
+      {
+        "title": "AutoRound (GitHub Repo)",
+        "source": "TLDR AI",
+        "url": "https://github.com/intel/auto-round?utm_source=tldrai",
+        "summary": "AutoRound is an advanced quantization toolkit designed for large language models and vision-language models. It achieves high accuracy at ultra-low bit widths with minimal tuning. AutoRound seamlessly works with Transformers, vLLM, SGLang, and more. It can quantize 7B models in 10 minutes on a single GPU."
+      },
+      {
+        "title": "Reasoning-Based Rewards for Image Editing (18 minute read)",
+        "source": "TLDR AI",
+        "url": "https://arxiv.org/abs/2604.27505?utm_source=tldrai",
+        "summary": "Edit-R1 introduced a chain-of-thought reward model that evaluates image edits through structured reasoning, improving alignment and performance in text-guided editing tasks."
+      },
+      {
+        "title": "Granite 4.1 3B SVG Pelican Gallery",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/4/granite-41-3b-svg-pelican-gallery/#atom-everything",
+        "summary": "Granite 4.1 3B SVG Pelican Gallery\nIBM released their Granite 4.1 family of LLMs a few days ago. They're Apache 2.0 licensed and come in 3B, 8B and 30B sizes.\nGranite 4.1 LLMs: How They\u2019re Built by Granite team member Yousaf Shah describes the training process in detail.\nUnsloth released the unsloth/granite-4.1-3b-GGUF collection of GGUF encoded quantized variants of the 3B model - 21 different model files ranging in size from 1.2GB to 6.34GB.\nAll 21 of those Unsloth files add up to 51.3GB, which inspired me to finally try an experiment I've been wanting to run for ages: prompting \"Generate an"
+      },
+      {
+        "title": "Quoting Andy Masley",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/4/andy-masley/#atom-everything",
+        "summary": "[...] Between 2000 and 2024, farmers sold in total a Colorado-sized chunk of land all on their own, 77 times all land on data center property in 2028, and grew more food than ever on what was left. None of this caused any problems for US food access.\nAnd then, in the middle of all this, a farmer in Loudoun County sells a few acres of mediocre hay field to a hyperscaler for ten times its agricultural value, and the response is that we\u2019re running out of farmland.\n&mdash; Andy Masley, pushing back against the \"land use\" argument against data center construction\n\n    Tags: ai-ethics, ai, generativ"
+      },
+      {
+        "title": "April 2026 newsletter",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/4/april-newsletter/#atom-everything",
+        "summary": "I just sent out the April edition of my sponsors-only monthly newsletter. If you are a sponsor (or if you start a sponsorship now) you can access it here.\nIn this month's newsletter:\n\nOpus 4.7 and GPT-5.5, both with price increases\nClaude Mythos and LLM security research\nChatGPT Images 2.0\nMore model releases\nOther highlights from my blog\nWhat I'm using, April 2026 edition\n\nHere's a copy of the March newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy!\n\n    Tags: newsletter"
+      }
+    ],
+    "rejected_summary": "Skipped consumer AI content (Google's video generation model), funding announcements (Anthropic's enterprise services company), event promotions (GitHub's OpenClaw meetup), and rationalist philosophy pieces that don't connect to AI development or societal impact.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

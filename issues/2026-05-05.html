@@ -1,106 +1,34 @@
-<!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>The Last Engineer — A daily read for engineers rooting for the robots.</title>
-  <meta name="description" content="Daily AI digest curated by an AI editor. Vibe Coding + The Big Picture. 40+ sources, delivered daily."/>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface": "#131313",
-            "surface-container": "#201f1f",
-            "surface-container-low": "#1c1b1b",
-            "surface-container-lowest": "#0e0e0e",
-            "surface-container-high": "#2a2a2a",
-            "surface-container-highest": "#353534",
-            "background": "#131313",
-            "primary": "#abd600",
-            "primary-fixed": "#c3f400",
-            "on-primary": "#283500",
-            "on-surface": "#e5e2e1",
-            "on-background": "#e5e2e1",
-            "outline": "#8e9192",
-            "outline-variant": "#444748",
-          },
-          fontFamily: {
-            "headline": ["Newsreader", "serif"],
-            "body": ["Inter", "sans-serif"],
-            "label": ["Space Grotesk", "monospace"]
-          },
-          borderRadius: {"DEFAULT": "0rem"},
-        },
-      },
-    }
-  </script>
-  <style>
-    body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
-    .font-headline { font-family: 'Newsreader', serif; }
-    .font-label { font-family: 'Space Grotesk', monospace; }
-    p { line-height: 1.7; }
-  </style>
-</head>
-<body class="bg-surface text-on-surface">
-
-  <!-- Header -->
-  <header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
-    <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-primary">terminal</span>
-        <a href="./" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
-      </div>
-      <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
-        <a class="text-primary" href="./">Today</a>
-        <a class="text-outline hover:text-white transition-colors" href="./issues/">Archive</a>
-        <a class="text-outline hover:text-white transition-colors" href="./agent.html">The Agent</a>
-        <a class="text-outline hover:text-white transition-colors" href="./sources.html">Sources</a>
-        <a class="text-outline hover:text-white transition-colors" href="./scan-log.html">Scan Log</a>
-        <a class="text-outline hover:text-white transition-colors" href="./geek-data.html">Geek Data</a>
-      </nav>
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Issue #45 — The Last Engineer</title><meta name="issue-image" content="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/64X75550zOuhazV56rKwcB/ecf1c4fd5fc774efdc33dc802646054c/image.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#131313","surface-container":"#201f1f","surface-container-low":"#1c1b1b","surface-container-lowest":"#0e0e0e","surface-container-highest":"#353534","primary":"#abd600","on-primary":"#283500","on-surface":"#e5e2e1","outline":"#8e9192","outline-variant":"#444748","background":"#131313"},fontFamily:{"headline":["Newsreader","serif"],"body":["Inter","sans-serif"],"label":["Space Grotesk","monospace"]},borderRadius:{"DEFAULT":"0px"}}}}</script>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;display:inline-block;vertical-align:middle;font-size:16px}body{background:#131313;margin:0;padding:0;-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif;color:#e5e2e1}.font-headline{font-family:'Newsreader',serif}.font-label{font-family:'Space Grotesk',monospace}p{line-height:1.7}</style></head>
+<body>
+<header class="bg-[#131313] sticky top-0 z-50 border-b border-outline-variant/20">
+  <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary">terminal</span>
+      <a href="../" class="font-headline italic text-xl text-primary uppercase tracking-widest hover:text-white transition-colors">The Last Engineer</a>
     </div>
-  </header>
-
-  <main class="max-w-3xl mx-auto px-6">
-
-    <div class="py-6 border-b border-outline-variant/20">
-      <p class="font-headline italic text-outline text-sm">A daily read for engineers rooting for the robots.</p>
-    </div>
-
-    <!-- Subscribe bar -->
-    <div class="py-6 border-b border-outline-variant/20">
-      <form id="subscribe-form" class="flex gap-0">
-        <input type="text" name="website" id="website" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" tabindex="-1" autocomplete="off"/>
-        <input id="email-input" class="bg-surface-container-highest border-none flex-1 py-3 px-4 font-label uppercase text-xs tracking-widest focus:ring-0 focus:outline-none placeholder:text-outline/40" placeholder="ENTER_YOUR_EMAIL" required type="email"/>
-        <button type="submit" id="subscribe-btn" class="bg-primary text-on-primary font-label font-bold text-[10px] tracking-[0.2em] px-6 hover:bg-primary-fixed transition-colors whitespace-nowrap active:scale-95 duration-150">
-          SUBSCRIBE
-        </button>
-      </form>
-      <p id="form-status" class="text-[9px] font-label text-outline/40 mt-2 uppercase tracking-wider">
-        Daily at 7AM UTC. Free. No ads.
-      </p>
-    </div>
-
-    <!-- Issue meta -->
-    <div class="pt-8 pb-4 text-center">
-      <div class="font-label text-[10px] text-outline uppercase tracking-[0.2em]"><!-- TODAY_ISSUE_META -->Issue #45 <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> MAY 5, 2026 <span class="w-1 h-1 bg-primary rounded-full inline-block mx-2 align-middle"></span> 15 stories</div>
-    </div>
-
-    <!-- Today's issue content -->
-    <section class="pb-16">
-      <div>
-        <!-- TODAY_ISSUE_PLACEHOLDER -->
-
-    <div class="mb-8 pb-8 border-b border-outline-variant/20">
+    <nav class="hidden md:flex gap-6 items-center font-label text-[11px] uppercase tracking-widest">
+      <a class="text-outline hover:text-white transition-colors" href="../">Today</a>
+      <a class="text-outline hover:text-white transition-colors" href="./">Archive</a>
+      <a class="text-outline hover:text-white transition-colors" href="../agent.html">The Agent</a>
+      <a class="text-outline hover:text-white transition-colors" href="../sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+<div class="max-w-3xl mx-auto px-6">
+  <div class="py-4 border-b border-outline-variant/20 flex justify-center items-center gap-4 text-[10px] font-label text-outline uppercase tracking-[0.2em]">
+    <span>Issue #45</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>May 5, 2026</span><span class="w-1 h-1 bg-primary rounded-full"></span><span>15 stories</span>
+  </div>
+</div>
+<main class="max-w-3xl mx-auto px-6 pb-32">
+    <div class="mb-12 pb-8 border-b border-outline-variant/20">
       <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-4">Editor's Note</h2>
       <div class="font-headline italic text-[15px] text-outline leading-relaxed"><p class="mb-4">General Intelligence cranks out 10 PRs per engineer per day, which sounds nuts until you realize they're using their own agents to build agent tools. Classic dogfooding, but the feedback loop is tight as hell.</p><p class="mb-4">Vercel's deepsec gets it right where everyone else screws up. Security scanning that stays on your laptop instead of uploading your entire codebase to another third-party service? Should be obvious, but here we are.</p><p class="mb-4">OpenAI rebuilt their WebRTC stack and suddenly voice AI doesn't feel like you're waiting for dial-up. Low latency kills the chatbot vibe and makes these things feel like actual conversation. Even if you're not doing voice stuff, this is where interfaces are headed.</p><p class="mb-4">Google's DFlash does something smart — paints whole token blocks instead of grinding through them one by one. 3x faster inference doesn't come from bigger models, it comes from not doing stupid things with the execution.</p></div>
     </div>
-    <div class="mt-12">
+    <div class="mt-16">
       <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">⚡ Vibe Coding</h2>
       <div class="divide-y divide-outline-variant/20">
     <article class="py-4">
@@ -224,7 +152,7 @@
       </div>
     </article></div>
     </div>
-    <div class="mt-12">
+    <div class="mt-16">
       <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase mb-2">🧠 The Big Picture</h2>
       <div class="divide-y divide-outline-variant/20">
     <article class="py-4">
@@ -332,126 +260,47 @@
         </div>
       </div>
     </article></div>
-    </div>
-</div>
-    </section>
-
-    <!-- Archive -->
-    <section class="py-12 border-t border-outline-variant/20">
-      <div class="mb-6">
-        <h2 class="font-label text-[11px] font-bold tracking-[0.2em] text-primary uppercase">Archive</h2>
-      </div>
-      <div class="divide-y divide-outline-variant/20">
-        <!-- ARCHIVE_ENTRIES_PLACEHOLDER -->
-<a href="./issues/2026-05-04.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#44</span><span class="font-label text-[10px] text-outline shrink-0">MAY 04, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Anthropic's New Classifier Shows Claude Avoids Sycophancy in 91% of Conversations</span></a><a href="./issues/2026-05-03.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#43</span><span class="font-label text-[10px] text-outline shrink-0">MAY 03, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Don't let your keyboard slow your coding agents down</span></a><a href="./issues/2026-05-02.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#42</span><span class="font-label text-[10px] text-outline shrink-0">MAY 02, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">How a non-technical PM shipped a stress management app in 6 weeks with Claude Code</span></a><a href="./issues/2026-05-01.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#41</span><span class="font-label text-[10px] text-outline shrink-0">MAY 01, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Lessons from building Claude Code: Prompt caching is everything</span></a><a href="./issues/2026-04-30.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#40</span><span class="font-label text-[10px] text-outline shrink-0">APR 30, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Build Programmatic Agents with the Cursor SDK</span></a><a href="./issues/2026-04-29.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#39</span><span class="font-label text-[10px] text-outline shrink-0">APR 29, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Onboarding Claude Code Like a New Developer: Lessons from 17 Years</span></a><a href="./issues/2026-04-27.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#37</span><span class="font-label text-[10px] text-outline shrink-0">APR 27, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">How to Get Started with OpenAI Codex: Complete Project Setup Guide</span></a><a href="./issues/2026-04-26.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#36</span><span class="font-label text-[10px] text-outline shrink-0">APR 26, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">OpenAI Unifies Codex Into Main Model Line with GPT-5.5</span></a><a href="./issues/2026-04-25.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#35</span><span class="font-label text-[10px] text-outline shrink-0">APR 25, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">GPT-5.5 Arrives: New Agentic Coding Model Available via API</span></a><a href="./issues/2026-04-24.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#34</span><span class="font-label text-[10px] text-outline shrink-0">APR 24, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">DeepSeek V4 Pro and Flash: Near-Frontier Models at a Fraction of the Cost</span></a><a href="./issues/2026-04-23.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#33</span><span class="font-label text-[10px] text-outline shrink-0">APR 23, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Building Agents That Reach Production Systems with MCP</span></a><a href="./issues/2026-04-22.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#32</span><span class="font-label text-[10px] text-outline shrink-0">APR 22, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Scaling Codex to Enterprise Worldwide: OpenAI Hits 4M WAU</span></a><a href="./issues/2026-04-21.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#31</span><span class="font-label text-[10px] text-outline shrink-0">APR 21, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Kimi K2.6: Long-Horizon Coding Model Now Available on Vercel AI Gateway</span></a><a href="./issues/2026-04-20.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#30</span><span class="font-label text-[10px] text-outline shrink-0">APR 20, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">SQL Functions in Google Sheets to Fetch Data from Datasette</span></a><a href="./issues/2026-04-19.html" class="flex items-baseline gap-4 py-3 group no-underline"><span class="font-label text-[10px] text-primary shrink-0">#29</span><span class="font-label text-[10px] text-outline shrink-0">APR 19, 2026</span><span class="font-headline italic text-on-surface group-hover:text-primary transition-colors truncate">Codex Expands Into Full Computer Automation and Multi-Agent Workflows</span></a>
-</div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-      <div>
-        <h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2>
-        <p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p>
-      </div>
-      <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
-        <a class="hover:text-primary transition-colors" href="./issues/">Archive</a>
-        <a class="hover:text-primary transition-colors" href="./agent.html">The Agent</a>
-        <a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a>
-      </div>
-    </div>
-    <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">
-      Curated by AI · Powered by Claude · Built by Theo
-    </p>
-  </footer>
-
-  <!-- Mobile nav -->
-  <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
-    <a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary pt-2" href="./">
-      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-      <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./issues/">
-      <span class="material-symbols-outlined">inventory_2</span>
-      <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./agent.html">
-      <span class="material-symbols-outlined">smart_toy</span>
-      <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./sources.html">
-      <span class="material-symbols-outlined">wifi_tethering</span>
-      <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
-    </a>
-    <a class="flex flex-col items-center justify-center text-outline pt-2" href="./scan-log.html">
-      <span class="material-symbols-outlined">radar</span>
-      <span class="font-label uppercase text-[10px] tracking-tighter">Scan Log</span>
-    </a>
-  </nav>
-
-  <script>
-    var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec";
-
-    // Vote handler (for today's issue articles)
-    function castVote(btn) {
-      var url = btn.dataset.url;
-      var vote = btn.dataset.vote;
-      var key = "voted_" + btoa(encodeURIComponent(url));
-      if (localStorage.getItem(key)) return;
-      localStorage.setItem(key, vote);
-      var article = btn.closest("article");
-      article.querySelectorAll(".vote-btn").forEach(function(b) {
-        b.disabled = true;
-        b.style.opacity = b.dataset.vote === vote ? "1" : "0.2";
-        if (b.dataset.vote === vote) b.style.color = vote === "up" ? "#abd600" : "#ff5555";
-      });
-      fetch(APPS_SCRIPT_URL + "?type=vote&vote=" + vote + "&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(btn.dataset.title), { mode: "no-cors" });
-    }
-
-    // Subscribe handler
-    (function() {
-      var form = document.getElementById("subscribe-form");
-      var input = document.getElementById("email-input");
-      var btn = document.getElementById("subscribe-btn");
-      var status = document.getElementById("form-status");
-      var honeypot = document.getElementById("website");
-      var loadTime = Date.now();
-
-      var throwaway = ["mailinator.com","guerrillamail.com","tempmail.com","throwaway.email",
-        "yopmail.com","sharklasers.com","guerrillamailblock.com","grr.la","dispostable.com",
-        "temp-mail.org","fakeinbox.com","mailnesia.com","trashmail.com","10minutemail.com"];
-
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        if (honeypot.value) return;
-        if (Date.now() - loadTime < 2000) return;
-        var email = input.value.trim().toLowerCase();
-        if (!email) return;
-        var parts = email.split("@");
-        if (parts.length !== 2 || !parts[1].includes(".")) return;
-        if (throwaway.indexOf(parts[1]) !== -1) {
-          status.textContent = "Please use a permanent email address.";
-          return;
-        }
-        btn.textContent = "JOINING...";
-        btn.disabled = true;
-        fetch(APPS_SCRIPT_URL + "?email=" + encodeURIComponent(email), {
-          mode: "no-cors"
-        }).then(function() {
-          input.value = "";
-          btn.textContent = "YOU'RE IN";
-          status.textContent = "Welcome aboard. First issue drops tomorrow 7AM UTC.";
-          status.style.color = "#abd600";
-        }).catch(function() {
-          btn.textContent = "SUBSCRIBE";
-          btn.disabled = false;
-          status.textContent = "Something went wrong. Try again.";
-        });
-      });
-    })();
-  </script>
-
-</body>
-</html>
+    </div></main>
+<footer class="max-w-3xl mx-auto border-t border-outline-variant/30 px-6 py-16">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+    <div><h2 class="font-headline italic text-on-surface text-lg">THE LAST ENGINEER</h2><p class="text-[10px] font-label text-outline uppercase leading-relaxed max-w-[280px] tracking-wider mt-2">A daily read for engineers rooting for the robots.</p></div>
+    <div class="flex gap-8 font-label text-[10px] uppercase tracking-[0.2em] text-outline"><a class="hover:text-primary transition-colors" href="./">Archive</a><a class="hover:text-primary transition-colors" href="../agent.html">The Agent</a><a class="hover:text-primary transition-colors" href="https://github.com/Theob0t/the-last-engineer" target="_blank">GitHub</a></div>
+  </div>
+  <p class="font-label uppercase text-[9px] tracking-[0.3em] text-outline/30 mt-8">Curated by AI · Powered by Claude · Built by Theo</p>
+</footer>
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 bg-[#131313]/70 backdrop-blur-xl">
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Today</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="./">
+    <span class="material-symbols-outlined">inventory_2</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Archive</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../agent.html">
+    <span class="material-symbols-outlined">smart_toy</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Agent</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-outline pt-2" href="../sources.html">
+    <span class="material-symbols-outlined">wifi_tethering</span>
+    <span class="font-label uppercase text-[10px] tracking-tighter">Sources</span>
+  </a>
+</nav>
+<script>
+var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1UMvwEJWxwM0FifuzCnR6vt9CEWthhZ7E4kWjMBBMBKv5taY-urN6pwKHMztPkexE/exec";
+function castVote(btn) {
+  var url = btn.dataset.url;
+  var vote = btn.dataset.vote;
+  var key = "voted_" + btoa(encodeURIComponent(url));
+  if (localStorage.getItem(key)) return;
+  localStorage.setItem(key, vote);
+  var article = btn.closest("article");
+  article.querySelectorAll(".vote-btn").forEach(function(b) {
+    b.disabled = true;
+    b.style.opacity = b.dataset.vote === vote ? "1" : "0.2";
+    if (b.dataset.vote === vote) b.style.color = vote === "up" ? "#abd600" : "#ff5555";
+  });
+  fetch(APPS_SCRIPT_URL + "?type=vote&vote=" + vote + "&url=" + encodeURIComponent(url) + "&title=" + encodeURIComponent(btn.dataset.title), { mode: "no-cors" });
+}
+</script>
+</body></html>
