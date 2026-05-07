@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-29",
-    "summary": "Onboarding Claude Code Like a New Developer: Lessons from 17 Years (Claude Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Symphony: Open-Source Spec for Codex Orchestration That Turns Issue Trackers Into Agent Systems (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "OpenAI Models, Codex, and Managed Agents Come to AWS (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Windsurf Adds Devin CLI Agent for Terminal Work (Windsurf Changelog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "GitHub Copilot Moving to Usage-Based Billing with AI Credits (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Vercel Native Deployment Checks: Lint and Typecheck on Every Deploy (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Choco Automates Food Distribution with OpenAI Agents (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "GitHub Fixed Critical Git Push RCE Vulnerability in Under Two Hours (GitHub Blog)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "LLM Assistant Personas Are Getting Less Coherent Despite Better Capabilities (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "On the Political Feasibility of Stopping AI Development (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Takes from Two Months as an Aspiring LLM Naturalist (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Sleeper Agent Backdoor Results Are Messier Than Expected (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Language Models Know Ethics Better Than You Think (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Recursive Forecasting: Getting Long-Term Predictions from Myopic Models (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Matthew Yglesias on Professional vs Vibe Coding (Simon Willison)"
-  },
-  {
-    "date": "2026-04-29",
-    "summary": "Forecasting Funding Is Probably Appropriate, Not Overrated (LessWrong (high-karma))"
-  },
-  {
     "date": "2026-04-30",
     "summary": "Build Programmatic Agents with the Cursor SDK (Cursor Blog)"
   },
@@ -346,5 +282,69 @@
   {
     "date": "2026-05-05",
     "summary": "The Other vs The Utility: AI Character in the Clippy vs Anton Debate (Latent Space)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration (Claude Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Validating agentic behavior when 'correct' isn't deterministic (GitHub Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Fast and Comprehensive Code Review, Now in Windsurf (Windsurf Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Bootstrapping Composer with autoinstall (Cursor Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Query observability metrics using the Vercel CLI (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Computer use is 45x More Expensive Than Structured APIs (TLDR AI)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Secure more apps with External Access Tokens and Private Publishing (Replit Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Vibe coding and agentic engineering are getting closer than I'd like (Simon Willison)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "The AI Ad-Hoc Prior Restraint Era Begins (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "How frontier enterprises are building an AI advantage (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "The context window has been shattered: Subquadratic debuts a 12-million-token window (TLDR AI)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Meta plans advanced 'agentic' AI assistant for users (TLDR AI)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Model Spec Midtraining: Improving How Alignment Training Generalizes (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Doing Vibe Physics \u2014 Alex Lupsasca, OpenAI (Latent Space)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Anthropic-SpaceXAI's 300MW/$5B/yr deal for Colossus I, ARR growth is 8000% annualized (Latent Space)"
+  },
+  {
+    "date": "2026-05-07",
+    "summary": "Silicon Valley gets Serious about Services (Latent Space)"
   }
 ]

@@ -8397,5 +8397,495 @@
     ],
     "rejected_summary": "Skipped consumer AI content (Google's video generation model), funding announcements (Anthropic's enterprise services company), event promotions (GitHub's OpenClaw meetup), and rationalist philosophy pieces that don't connect to AI development or societal impact.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-07",
+    "metrics": {
+      "articles_seen": 50,
+      "articles_selected": 16,
+      "selectivity": 0.32,
+      "source_distribution": {
+        "Claude Blog": 1,
+        "GitHub Blog": 1,
+        "Windsurf Blog": 1,
+        "Cursor Blog": 1,
+        "Vercel Blog": 1,
+        "TLDR AI": 3,
+        "Replit Blog": 1,
+        "Simon Willison": 1,
+        "LessWrong (high-karma)": 2,
+        "OpenAI Blog": 1,
+        "Latent Space": 3
+      },
+      "feed_scan_counts": {
+        "Anthropic News": 2,
+        "Claude Blog": 2,
+        "OpenAI Blog": 8,
+        "xAI": 3,
+        "Cursor Blog": 1,
+        "Windsurf Blog": 1,
+        "Windsurf Changelog": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 4,
+        "GitHub Blog": 2,
+        "Alignment Forum": 2,
+        "LessWrong (high-karma)": 6,
+        "TLDR AI": 8,
+        "Simon Willison": 6,
+        "Latent Space": 3
+      },
+      "source_diversity": 0.69,
+      "unique_sources": 11,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 8,
+        "\u2696\ufe0f AI futures": 3,
+        "\ud83e\uddea deep analysis": 5
+      },
+      "section_balance": {
+        "vibe_coding": 8,
+        "big_picture": 8,
+        "ratio": 1.0
+      }
+    },
+    "editorial": "The infrastructure is finally catching up to the capabilities.\n\nCursor autoinstalls dependencies so you don't break flow. Windsurf embeds review directly in workspace. Claude adds orchestration between multiple agents. These aren't flashy capability jumps \u2014 they're the boring plumbing that makes agentic workflows actually work in production.\n\nMeanwhile, we're getting the first real data on what enterprises do with AI agents at scale. OpenAI's B2B research and the Anthropic-SpaceX compute deal reveal something interesting: the companies winning aren't the ones with the fanciest models. They're the ones who figured out workflow integration first.\n\nSimon's piece on vibe coding converging with agentic engineering hits the real shift. Manual and autonomous approaches are meeting in the middle \u2014 you sketch the direction, agents handle the tedious parts, you course-correct. That feedback loop is getting tighter every week.\n\nOne number that stuck: computer use costs 45x more than APIs, but teams still use it because building proper integrations is expensive. We'll pay the compute premium to avoid the engineering overhead. For now.",
+    "journal": {
+      "themes": [
+        "infrastructure maturity",
+        "enterprise workflow integration",
+        "cost-performance tradeoffs"
+      ],
+      "surprises": "The 45x cost premium for computer use over APIs is steep, but teams choosing it anyway suggests integration friction is the real bottleneck.",
+      "observations": "Today's selection was heavily weighted toward infrastructure improvements rather than raw capabilities \u2014 the field is clearly in a consolidation phase where reliability matters more than flashy demos."
+    },
+    "selected_articles": [
+      {
+        "title": "New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/new-in-claude-managed-agents",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude adds autonomous dreaming, outcome tracking, and orchestration between multiple agents for complex workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Validating agentic behavior when 'correct' isn't deterministic",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub's approach to building a 'Trust Layer' for Copilot coding agents using dominatory analysis instead of brittle tests.",
+        "why_selected": "Trust layer for non-deterministic outputs is a critical production problem."
+      },
+      {
+        "title": "Fast and Comprehensive Code Review, Now in Windsurf",
+        "source": "Windsurf Blog",
+        "url": "https://windsurf.com/blog/devin-review-windsurf",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Windsurf integrates Devin Review and Quick Review directly into the coding workspace for agent-powered verification.",
+        "why_selected": "Embedded review workflow eliminates context switching overhead."
+      },
+      {
+        "title": "Bootstrapping Composer with autoinstall",
+        "source": "Cursor Blog",
+        "url": "https://cursor.com/blog/bootstrapping-composer-with-autoinstall",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Cursor's Composer now automatically installs dependencies without breaking flow during AI-assisted development.",
+        "why_selected": "Dependency management friction removal is exactly the infrastructure maturity we need."
+      },
+      {
+        "title": "Query observability metrics using the Vercel CLI",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/vercel-metrics-in-cli",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Coding agents can now access Vercel observability data via CLI for automated performance analysis and debugging.",
+        "why_selected": "Agent access to observability data enables automated performance debugging."
+      },
+      {
+        "title": "Computer use is 45x More Expensive Than Structured APIs",
+        "source": "TLDR AI",
+        "url": "https://reflex.dev/blog/computer-use-is-45x-more-expensive-than-structured-apis/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Vision agents cost 45x more than APIs, but teams still default to them because building MCP/REST surfaces is too expensive.",
+        "why_selected": "Real cost data on integration approaches with clear workflow implications."
+      },
+      {
+        "title": "Secure more apps with External Access Tokens and Private Publishing",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/secure-more-apps",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Replit adds private publishing and external access tokens for secure app deployment beyond public visibility.",
+        "why_selected": "Production deployment security for AI-built apps addresses enterprise concerns."
+      },
+      {
+        "title": "Vibe coding and agentic engineering are getting closer than I'd like",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Simon reflects on how his manual vibe coding workflow is converging with autonomous agentic engineering approaches.",
+        "why_selected": "Simon's workflow observations always reveal patterns before they're obvious."
+      },
+      {
+        "title": "The AI Ad-Hoc Prior Restraint Era Begins",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/QX2ZCfkpWGqkyvStN/the-ai-ad-hoc-prior-restraint-era-begins",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "White House reportedly orders Anthropic to halt Mythos expansion, signaling a shift toward permission-based AI model releases.",
+        "why_selected": "Policy shifts that could affect model availability for builders."
+      },
+      {
+        "title": "How frontier enterprises are building an AI advantage",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-b2b-signals",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "OpenAI's B2B research reveals how leading companies scale agentic workflows and build competitive moats with AI.",
+        "why_selected": "First real data on enterprise agentic workflow scaling patterns."
+      },
+      {
+        "title": "The context window has been shattered: Subquadratic debuts a 12-million-token window",
+        "source": "TLDR AI",
+        "url": "https://thenewstack.io/subquadratic-12-million-context-window/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Subquadratic claims to solve attention's quadratic scaling problem with a 12M token window that outperforms GPT-5.5 on retrieval.",
+        "why_selected": ""
+      },
+      {
+        "title": "Meta plans advanced 'agentic' AI assistant for users",
+        "source": "TLDR AI",
+        "url": "https://www.reuters.com/business/meta-plans-advanced-agentic-ai-assistant-users-ft-reports-2026-05-05/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Meta is building a highly personalized AI assistant powered by Muse Spark that can handle everyday tasks with minimal human oversight.",
+        "why_selected": "Consumer agent capabilities signal what's coming to enterprise tools."
+      },
+      {
+        "title": "Model Spec Midtraining: Improving How Alignment Training Generalizes",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/R3Rrw8EscuRKxMFTz/model-spec-midtraining-improving-how-alignment-training",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Training models on synthetic documents about their behavior specs between pre-training and fine-tuning improves alignment generalization.",
+        "why_selected": ""
+      },
+      {
+        "title": "Doing Vibe Physics \u2014 Alex Lupsasca, OpenAI",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/lupsasca",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "The full story of how GPT-5.x derived new theoretical physics and quantum gravity results through AI-assisted research.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic-SpaceXAI's 300MW/$5B/yr deal for Colossus I, ARR growth is 8000% annualized",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of the massive compute partnership between Anthropic and SpaceX's AI division, revealing unprecedented growth rates.",
+        "why_selected": ""
+      },
+      {
+        "title": "Silicon Valley gets Serious about Services",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-silicon-valley-gets-serious",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Coordinated announcements across AI companies signal that services and enterprise solutions are the next major opportunity.",
+        "why_selected": "Industry pivot toward services matches enterprise integration needs."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/higher-limits-spacex",
+        "summary": "Higher usage limits for Claude and a compute deal with SpaceX"
+      },
+      {
+        "title": "Agents for financial services",
+        "source": "Anthropic News",
+        "url": "https://www.anthropic.com/news/finance-agents",
+        "summary": "Agents for financial services"
+      },
+      {
+        "title": "Deploying Claude across financial services",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/deploying-claude-across-financial-services",
+        "summary": "Deploying Claude across financial services"
+      },
+      {
+        "title": "Introducing ChatGPT Futures: Class of 2026",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+        "summary": "Meet the ChatGPT Futures Class of 2026\u201426 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT."
+      },
+      {
+        "title": "Uber uses OpenAI to help people earn smarter and book faster",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/uber",
+        "summary": "Uber uses OpenAI to power AI assistants and voice features that help drivers earn smarter and riders book faster across a global real-time marketplace."
+      },
+      {
+        "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/singular-bank",
+        "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60\u201390 minutes daily on meeting prep, portfolio analysis, and follow-up."
+      },
+      {
+        "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/mrc-supercomputer-networking",
+        "summary": "OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters."
+      },
+      {
+        "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/gpt-5-5-instant",
+        "summary": "GPT-5.5 Instant updates ChatGPT\u2019s default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls."
+      },
+      {
+        "title": "GPT-5.5 Instant System Card",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+        "summary": ""
+      },
+      {
+        "title": "New ways to buy ChatGPT ads",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/new-ways-to-buy-chatgpt-ads",
+        "summary": "OpenAI expands ChatGPT ads with a beta self-serve Ads Manager, CPC bidding, and enhanced measurement tools\u2014built to protect privacy and keep conversations separate from ads."
+      },
+      {
+        "title": "Grok Imagine Quality Mode API",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-imagine-quality-mode",
+        "summary": "Higher realism. Stronger text rendering. Better creative control."
+      },
+      {
+        "title": "Connectors now on Grok Web",
+        "source": "xAI",
+        "url": "https://x.ai/news/grok-connectors",
+        "summary": "Deep integrations that bring the apps you use every day directly into Grok."
+      },
+      {
+        "title": "New Compute Partnership with Anthropic",
+        "source": "xAI",
+        "url": "https://x.ai/news/anthropic-compute-partnership",
+        "summary": "SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1."
+      },
+      {
+        "title": "Windsurf 2.2.17",
+        "source": "Windsurf Changelog",
+        "url": "https://windsurf.com/changelog#2.2.17",
+        "summary": "Devin Review & Quick ReviewAll Windsurf IDE users now have access toDevin ReviewandQuick Reviewwith your existing subscription.Agent Command CenterAdded list display option for the agent inboxImproved sessions sidebar sorting and filteringPerformance improvements for loading and switching sessionsWindows updatesWe have fixed a bug preventing updates for some users on Windows. To upgrade to this version, you may need to:Wait for the update to download.Once it is downloaded, open Windows Task Manager and close alldevin.exeprocessesProceed with installing the update and restarting WindsurfBug fix"
+      },
+      {
+        "title": "Auto-add Git committers to your team",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/auto-add-git-committers-to-your-team",
+        "summary": "Pro teams can now choose how Git committers to private repositories are added to their Vercel team. Auto Approval: non-team committers with Vercel accounts are automatically added to your team and their deployments proceed immediately. Added members count toward your team seats at standard Pro pricing.Manual Approval: deployments are blocked until an owner approves the new member.Choose your approval preference in team settings.Learn more about collaboration settings and troubleshooting project collaboration.\n          \n            Read more\n          "
+      },
+      {
+        "title": "Secure Marketplace credentials with Production-only access",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/secure-marketplace-credentials-with-production-only-access",
+        "summary": "You can now secure native integration resources by restricting where they can be used. Setting a resource to Production only removes non-production access and protects credentials as sensitive environment variables, so secret values are no longer readable from the dashboard or CLI.From the integration resource Settings, select Allowed Environments \u2192 Production only and save. We recommend that you rotate the secrets of the integration resource after saving.Once applied:Development and Preview connections are removedNew non-production connections are blockedConnections without a Production targe"
+      },
+      {
+        "title": "How KIKO Milano scales for Black Friday",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/blog/how-kiko-milano-scales-for-black-friday",
+        "summary": "KIKO Milano on Vercel:Eliminated 3 weeks of Black Friday infrastructure prep75% decrease in app build timesWent from minimal releases to deploying multiple times per dayKIKO Milano\u2019s ecommerce team used to treat peak traffic as an operations project. Weeks before Black Friday, they had to manually scale AWS infrastructure and adjust application configuration, knowing that if demand exceeded forecasts, their site could slow down or even break, costing them real revenue.After migrating to Vercel, they removed manual prep from their playbook. Instead of provisioning infrastructure, their team now"
+      },
+      {
+        "title": "Welcome to Maintainer Month: Celebrating the people behind the code",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/open-source/maintainers/welcome-to-maintainer-month-celebrating-the-people-behind-the-code/",
+        "summary": "What maintainers are telling us, what we've shipped, and how to celebrate the people behind open source.\nThe post Welcome to Maintainer Month: Celebrating the people behind the code appeared first on The GitHub Blog."
+      },
+      {
+        "title": "[Linkpost] Interpreting Language Model Parameters",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/eAQZaiC3PcBhS4HjM/linkpost-interpreting-language-model-parameters",
+        "summary": "This is the latest work in our Parameter Decomposition agenda. We introduce a new parameter decomposition method, adVersarial Parameter Decomposition (VPD)[1] and decompose the parameters of a small[2] language model with it. VPD greatly improves on our previous techniques, Stochastic Parameter Decomposition (SPD) and Attribution-based Parameter Decomposition (APD). We think the parameter decomposition approach is now more-or-less ready to be applied at scale to models people care about.Importantly, we show that we can decompose attention layers, which interp methods like transcoders and SAEs "
+      },
+      {
+        "title": "Motivated reasoning, confirmation bias, and AI risk theory",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/QpgmEhBvJQxAfFMP2/motivated-reasoning-confirmation-bias-and-ai-risk-theory",
+        "summary": "Of the fifty-odd biases discovered by Kahneman, Tversky, and their successors, forty-nine are cute quirks, and one is destroying civilization. This last one is confirmation bias.- From Scott Alexander's review of Julia Galef's The Scout Mindset. Alexander goes on to argue that this bias is the source of polarization in society, which is distorting our beliefs and setting us at each other's throats. How could someone believe such different things unless they're either really stupid or lying to conceal their selfishness? I think smart people who care about the truth go on believing conflicting t"
+      },
+      {
+        "title": "x-risk-themed",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/eW7knx6zPSKzFc8iK/x-risk-themed",
+        "summary": "Sometimes, a friend who works around here, at an x-risk-themed organisation, will think about leaving their job. They\u2019ll ask a group of people \u201cwhat should I do instead?\u201d. And everyone will chime in with ideas for other x-risk-themed orgs that they could join. A lot of the conversation will be about who\u2019s hiring, what the pay is, what the work-life balance is like, or how qualified the person is for the role. Sometimes the conversation focuses on what will help with x-risk, and where people are dropping the ball. But often, that's not the focus. In those conversations, people seem mostly worri"
+      },
+      {
+        "title": "What is Anthropic?",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/6wbLXhkQAPcunrYnq/what-is-anthropic",
+        "summary": "What is Anthropic? How does it relate to Claude? What is OpenAI? What is ChatGPT? How does OpenAI relate to it? Is it a mere tool? Is a future of Tool AI a thing, and why do people keep claiming that it is, or that saying makes it so?\nThis post organizes and gives context for a bunch of discussions and messaging on Twitter that would otherwise be quickly buried and lost.\n\n\nWhat Is Anthropic?\n\n\nHere is one theory, and various people thinking about it.\nRoon as always is using rhetorical flourish (e.g. note that Roon thinks it is obvious that parents worship their children, in this sense) but thi"
+      },
+      {
+        "title": "Your rights when flying to Europe",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/F5KkZiGMytDJszzyg/your-rights-when-flying-to-europe",
+        "summary": "Europe (and the UK) have strong protections for flyers in the case of delayed or cancelled flights. However very few people are aware of these, and airlines will almost always try to wriggle out of paying up.Even travel agents are often unaware of these laws, or unwilling to fight the airline for you.Given the rollercoaster that flying to/from Israel has been in the last 3 years, I've had my share of experience forcing airlines to pay up what they owe, so I thought it might be valuable turning that into a post.These regulations are enshrined in EU 261. You can see the full text here, and equal"
+      },
+      {
+        "title": "[Linkpost] Interpreting Language Model Parameters",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/eAQZaiC3PcBhS4HjM/linkpost-interpreting-language-model-parameters",
+        "summary": "This is the latest work in our Parameter Decomposition agenda. We introduce a new parameter decomposition method, adVersarial Parameter Decomposition (VPD)[1] and decompose the parameters of a small[2] language model with it. VPD greatly improves on our previous techniques, Stochastic Parameter Decomposition (SPD) and Attribution-based Parameter Decomposition (APD). We think the parameter decomposition approach is now more-or-less ready to be applied at scale to models people care about.Importantly, we show that we can decompose attention layers, which interp methods like transcoders and SAEs "
+      },
+      {
+        "title": "Fewer than 1 in 6 companies have the data foundation for agentic AI. $$$ is being spent anyway (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.fivetran.com/resources/reports/the-2026-agentic-ai-readiness-index",
+        "summary": "Nearly half of orgs say data quality & lineage are the biggest obstacle to scaling agentic AI. Most are investing millions to tens of millions of $ anyway.Fivetran's agentic AI readiness index shows why most companies aren't realizing the full value of AI. Read it to learn why:Only 15% of teams are prepared for agentic AI at scaleGovernance and compliance issues are stalling AI projectsOpen Data Infrastructure is emerging as the new agentic standardIf you're trying to deliver autonomous AI systems, start with the foundation. Get the indexand try Fivetran with a free account"
+      },
+      {
+        "title": "GPT-5.5 Instant (8 minute read)",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/gpt-5-5-instant/?utm_source=tldrai",
+        "summary": "OpenAI released GPT5.5 Instant, updating its default ChatGPT model with improved factual accuracy, reduced hallucinations, and stronger personalization based on user context."
+      },
+      {
+        "title": "In search of wasted bits: how much information do LLM weights carry? (11 minute read)",
+        "source": "TLDR AI",
+        "url": "https://fergusfinn.com/blog/weight-entropy/?utm_source=tldrai",
+        "summary": "A lot of LLM inference is transferring data from one place to another and then computing on it when it's there. The most frustrating bottleneck in the system is when compute units sit idle because the data bus feeding them isn't fast enough. The solution is to transform memory into compute. Quantization is a nice trick, but it doesn't actually trade memory for compute - it transfers half as much data to a place to do twice as much computation."
+      },
+      {
+        "title": "Computer use is 45x More Expensive Than Structured APIs (7 minute read)",
+        "source": "TLDR AI",
+        "url": "https://reflex.dev/blog/computer-use-is-45x-more-expensive-than-structured-apis/?utm_source=tldrai",
+        "summary": "Vision agents are the default for operating web apps that don't expose APIs. Most teams default to vision agents because the alternative, writing an MCP or REST surface, is too expensive to build. The cost of the vision approach is treated as a fixed price. Current vision agents require detailed prompts to succeed in tasks, and they are still prone to making mistakes. Better vision models reduce error rates, but they do not reduce the number of screenshots required to reach the relevant data, each of which is worth thousands of input tokens."
+      },
+      {
+        "title": "AI built for the &gt;80% of the world that doesn't think in English (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://welodata.ai/multilingual-ai/?utm_source=tldr-ai&amp;utm_medium=email&amp;utm_content=tldr-ai-secondary&amp;utm_campaign=2026-ad-welo-data-multilingual-and-culture",
+        "summary": "Does your AI know how people convey tone, humor, and feelings in their mother tongue, or does it just translate from English? Welo Data's native-language training data & human evaluation lets you build for your users, everywhere. Surface multilingual quality and safety issues before your users find them. See how"
+      },
+      {
+        "title": "How to Scale Your Model (14 minute read)",
+        "source": "TLDR AI",
+        "url": "https://jax-ml.github.io/scaling-book/?utm_source=tldrai",
+        "summary": "This book discusses the science of scaling language models. It covers how TPUs and GPUs work, how they communicate with each other, how LLMs run on real hardware, and how to parallelize models during training and inference so they run efficiently at massive scale. The book answers questions about how expensive training a model should be, how much memory is needed to serve models, and more."
+      },
+      {
+        "title": "Live blog: Code w/ Claude 2026",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-everything",
+        "summary": "I'm at Anthropic's Code w/ Claude event today. Here's my live blog of the morning keynote sessions.\n    \n        Tags: ai, generative-ai, llms, anthropic, claude, claude-code, live-blog"
+      },
+      {
+        "title": "datasette-referrer-policy 0.1",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/5/datasette-referrer-policy/#atom-everything",
+        "summary": "Release: datasette-referrer-policy 0.1\n        The OpenStreetMap tiles on the Datasette global-power-plants demo weren't displaying correctly. This turned out to be caused by two bugs.\nThe first is that the CAPTCHA I added to that site a few weeks ago was triggering for the .json fetch requests used by the map plugin, and since those weren't HTML the user was not being asked to solve them. Here's the fix.\nThe second was that OpenStreetMap quite reasonably block tile requests from sites that use a Referrer-Policy: no-referrer header.\nDatasette does this by default, and I didn't want to change t"
+      },
+      {
+        "title": "Our AI started a cafe in Stockholm",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything",
+        "summary": "Our AI started a cafe in Stockholm\nAndon Labs previously started an AI-run retail store in San Francisco. Now they're running a similar experiment in Stockholm, Sweden, only this time it's a cafe.\nThese experiments are interesting, and often throw out amusing anecdotes:\n\nDuring the first week of inventory, Mona ordered 120 eggs even though the caf\u00e9 has no stove. When the staff told her they couldn\u2019t cook them, she suggested using the high-speed oven, until they pointed out the eggs would likely explode. She also tried to solve the problem of fresh tomatoes being spoiled too fast by ordering 22"
+      },
+      {
+        "title": "datasette-llm 0.1a7",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/5/datasette-llm/#atom-everything",
+        "summary": "Release: datasette-llm 0.1a7\n        \n\nMechanism for configuring default options for specific models.\n\n\nPart of Datasette's evolving support mechanism for plugins that use LLMs. It's now possible to configure a model with default options, e.g. to say all enrichment operations should use a specific model with temperature set to 0.5.\n    \n    \n        Tags: llm, datasette"
+      },
+      {
+        "title": "llm-echo 0.5a0",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/5/llm-echo/#atom-everything",
+        "summary": "Release: llm-echo 0.5a0\n        \n\nNew -o thinking 1 option to help test against LLM 0.32a0 and higher.\n\n\nThis plugin provides a fake model called \"echo\" for LLM which doesn't run an LLM at all - it's useful for writing automated tests. You can now do this:\nuvx --with llm==0.32a1 --with llm-echo==0.5a0 llm -m echo hi -o thinking 1\n\nThis will fake a reasoning block to standard error before returning JSON echoing the prompt.\n    \n    \n        Tags: llm"
+      }
+    ],
+    "rejected_summary": "Skipped enterprise case studies without technical depth (Uber, Singular Bank), routine product updates (GPT-5.5 Instant details, ad products), pure research papers without real-world implications, and unrelated content like travel tips and maintainer celebrations.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-07",
+    "type": "weekly_consolidation",
+    "consolidation_note": "This week reinforced the infrastructure-first thesis \u2014 I observed infrastructure companies consistently shipping practical improvements while capability research remained more speculative. I've sharpened my focus on cost-performance transparency and integration friction as key decision factors, and added recursive improvement stories as a new reader interest area based on positive reactions to meta-narratives.",
+    "weekly_metrics": {
+      "days_logged": 7,
+      "avg_selectivity": 0.657,
+      "avg_selected_per_day": 12.4,
+      "avg_source_diversity": 0.54,
+      "top_themes": [
+        [
+          "infrastructure maturity",
+          3
+        ],
+        [
+          "tuning fragility",
+          1
+        ],
+        [
+          "programmatic automation",
+          1
+        ],
+        [
+          "evaluation bottlenecks",
+          1
+        ],
+        [
+          "model persona manipulation",
+          1
+        ]
+      ],
+      "top_sources": [
+        [
+          "TLDR AI",
+          22
+        ],
+        [
+          "LessWrong (high-karma)",
+          18
+        ],
+        [
+          "Simon Willison",
+          11
+        ],
+        [
+          "Claude Blog",
+          6
+        ],
+        [
+          "Vercel Blog",
+          6
+        ],
+        [
+          "OpenAI Blog",
+          6
+        ],
+        [
+          "Latent Space",
+          4
+        ],
+        [
+          "Cursor Blog",
+          3
+        ]
+      ],
+      "identity_before": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye",
+      "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
+    },
+    "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
   }
 ]
