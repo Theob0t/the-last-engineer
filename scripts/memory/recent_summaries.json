@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-04-30",
-    "summary": "Build Programmatic Agents with the Cursor SDK (Cursor Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Product Development in the Agentic Era (Claude Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Claude API Skill Now in CodeRabbit, JetBrains, Resolve AI, and Warp (Claude Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Replit App Monitoring: AI-Powered Uptime for Your Published Apps (Replit Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Claude Connectors for Creative Tools (TLDR AI)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "LLM 0.32a0: Major Refactor from Prompts to Conversations and Tools (Simon Willison)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Vercel Pro Plan Now Available in Stripe Projects (Vercel Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Can Agents Replace the Search Stack? (TLDR AI)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Where the Goblins Came From: OpenAI's Personality Bug Postmortem (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Building the Compute Infrastructure for the Intelligence Age (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "An Interview with OpenAI CEO Sam Altman and AWS CEO Matt Garman About Bedrock Managed Agents (TLDR AI)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Research Sabotage in ML Codebases (Alignment Forum)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Cybersecurity in the Intelligence Age (OpenAI Blog)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "No Strong Orthogonality From Selection Pressure (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "OpenAI's Q4 2026 IPO Might Not Happen (TLDR AI)"
-  },
-  {
-    "date": "2026-04-30",
-    "summary": "Goblin Mode, 24 Hours Later (LessWrong (high-karma))"
-  },
-  {
     "date": "2026-05-01",
     "summary": "Lessons from building Claude Code: Prompt caching is everything (Claude Blog)"
   },
@@ -346,5 +282,73 @@
   {
     "date": "2026-05-07",
     "summary": "Silicon Valley gets Serious about Services (Latent Space)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "GitHub Reports: How We Instrumented Production Agents to Cut Token Bills 90% (GitHub Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "A Practical Guide to Reviewing Agent-Generated Pull Requests (GitHub Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "Replit Security Center 2.0: Bulk Vulnerability Remediation Across All Projects (Replit Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "OpenAI Ships New Real-Time Voice Models with Translation and Advanced Reasoning (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "TokenSpeed: Speed-of-Light Inference Engine Optimized for Agentic Workloads (TLDR AI)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "Vercel Flags Now Support JSON Values for Complex Feature Flags (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "Anthropic Partners with SpaceX for 220k GPU Access, Higher Claude Usage Limits (TLDR AI)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "Claude in Microsoft Office: Excel, PowerPoint, Word, and Outlook Integration (Claude Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "Mozilla Used Claude Mythos Preview to Find and Fix Hundreds of Firefox Vulnerabilities (Simon Willison)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "Natural Language Autoencoders: Making LLM Internal States Human-Readable (Anthropic Research)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "OpenAI Flips the Script: How Codex Now Beats Claude Code (TLDR AI)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "AlphaEvolve: How Google's Gemini-Powered Agent Scales Impact Across Industries (Google DeepMind)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "China Backs DeepSeek with $50 Billion Valuation in Strategic AI Investment (TLDR AI)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "OpenAI Begins Testing Ads in ChatGPT to Support Free Access (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "How AI Agent Memory Systems Really Work: A Technical Deep Dive (TLDR AI)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "55% of Americans Already Use AI for Finance: Mass Adoption Reality Check (TLDR AI)"
+  },
+  {
+    "date": "2026-05-08",
+    "summary": "OpenAI Expands GPT-5.5-Cyber for Trusted Vulnerability Research (OpenAI Blog)"
   }
 ]

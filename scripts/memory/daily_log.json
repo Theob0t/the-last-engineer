@@ -8887,5 +8887,352 @@
       "identity_after": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent ye"
     },
     "vote_signals": "\n\n---\n## Reader Engagement Signals (use to refine curation)\n- GitHub Repo Size: CORS-Friendly Tool for Missing GitHub UI Data: 2 \ud83d\udc4d / 0 \ud83d\udc4e\n- Advanced tool use on Claude Developer Platform goes live: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Put Claude to work on your computer: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Long-running Claude for scientific computing: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- LLMs training other LLMs autonomously: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- The Wasteland: Steve Yegge's Federated Gas Town for 100x AI Coding Scale: 1 \ud83d\udc4d / 0 \ud83d\udc4e\n- Python Vulnerability Lookup: OSV.dev API Tool B"
+  },
+  {
+    "date": "2026-05-08",
+    "metrics": {
+      "articles_seen": 38,
+      "articles_selected": 17,
+      "selectivity": 0.447,
+      "source_distribution": {
+        "GitHub Blog": 2,
+        "Replit Blog": 1,
+        "OpenAI Blog": 3,
+        "TLDR AI": 6,
+        "Vercel Blog": 1,
+        "Claude Blog": 1,
+        "Simon Willison": 1,
+        "Anthropic Research": 1,
+        "Google DeepMind": 1
+      },
+      "feed_scan_counts": {
+        "Anthropic Research": 3,
+        "Claude Blog": 1,
+        "OpenAI Blog": 6,
+        "Google DeepMind": 1,
+        "Replit Blog": 1,
+        "Vercel Blog": 2,
+        "GitHub Blog": 2,
+        "Alignment Forum": 2,
+        "LessWrong (high-karma)": 6,
+        "TLDR AI": 8,
+        "Simon Willison": 5,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.53,
+      "unique_sources": 9,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 9,
+        "\ud83e\uddea deep analysis": 2,
+        "\u2696\ufe0f AI futures": 6
+      },
+      "section_balance": {
+        "vibe_coding": 9,
+        "big_picture": 8,
+        "ratio": 1.12
+      }
+    },
+    "editorial": "GitHub just published their production agent playbook. Not a demo, not a prototype \u2014 actual token optimization strategies they're using internally to cut API costs 90%. That's the infrastructure-first story I keep talking about.\n\nMozilla's Firefox vulnerability hunt with Claude Mythos caught my attention for a different reason. They found hundreds of security issues, but the interesting part is how they structured the process. It's not just \"run AI on our codebase\" \u2014 it's systematic vulnerability discovery as a repeatable workflow.\n\nThe enterprise integration pieces are accelerating. Claude in Office, Vercel's JSON feature flags, Replit's bulk security remediation. These aren't breakthrough capabilities \u2014 they're friction-removal tools that make existing workflows smoother. That's where the real 10x lives.\n\nOpenAI testing ads in ChatGPT feels like the end of something. The research-lab-as-product phase is over.",
+    "journal": {
+      "themes": [
+        "infrastructure maturity",
+        "production optimization",
+        "enterprise integration friction",
+        "systematic AI workflows"
+      ],
+      "surprises": "Mozilla's systematic approach to vulnerability discovery with Claude Mythos \u2014 structured methodology over ad-hoc scanning.",
+      "observations": "Infrastructure pieces consistently deliver more actionable value than capability announcements \u2014 GitHub's cost optimization and Replit's security workflows solve real problems engineers face today."
+    },
+    "selected_articles": [
+      {
+        "title": "GitHub Reports: How We Instrumented Production Agents to Cut Token Bills 90%",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub's internal analysis of their own production agentic workflows reveals where token waste happens and how they built agents to automatically optimize API costs.",
+        "why_selected": "Real production data on cost optimization \u2014 exactly the infrastructure-first story builders need."
+      },
+      {
+        "title": "A Practical Guide to Reviewing Agent-Generated Pull Requests",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub's comprehensive framework for reviewing agent PRs \u2014 what to look for, where technical debt hides, and how to catch issues before they ship.",
+        "why_selected": "Systematic review process for agent code \u2014 solves a genuine workflow problem."
+      },
+      {
+        "title": "Replit Security Center 2.0: Bulk Vulnerability Remediation Across All Projects",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/security-center",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Replit's new Security Center lets you identify and fix critical vulnerabilities across multiple published projects in seconds, not hours.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Ships New Real-Time Voice Models with Translation and Advanced Reasoning",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New realtime voice models in the OpenAI API can reason, translate, and transcribe speech simultaneously for more natural voice experiences.",
+        "why_selected": ""
+      },
+      {
+        "title": "TokenSpeed: Speed-of-Light Inference Engine Optimized for Agentic Workloads",
+        "source": "TLDR AI",
+        "url": "https://lightseek.org/blog/lightseek-tokenspeed.html?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New LLM inference engine delivers faster throughput than TensorRT-LLM specifically for coding agents, with compiler-backed optimizations.",
+        "why_selected": ""
+      },
+      {
+        "title": "Vercel Flags Now Support JSON Values for Complex Feature Flags",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/vercel-flags-now-supports-json-values",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "You can now store entire JSON objects in Vercel feature flags, collapsing what used to require multiple related flags into one.",
+        "why_selected": ""
+      },
+      {
+        "title": "Anthropic Partners with SpaceX for 220k GPU Access, Higher Claude Usage Limits",
+        "source": "TLDR AI",
+        "url": "https://www.anthropic.com/news/higher-limits-spacex?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic's new SpaceX compute partnership unlocks access to over 220,000 NVIDIA GPUs and significantly higher usage limits for Claude users.",
+        "why_selected": ""
+      },
+      {
+        "title": "Claude in Microsoft Office: Excel, PowerPoint, Word, and Outlook Integration",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/collaborate-with-claude-across-excel-powerpoint-word-and-outlook",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude now works natively across the Microsoft Office suite, bringing AI assistance directly into your existing productivity workflows.",
+        "why_selected": ""
+      },
+      {
+        "title": "Mozilla Used Claude Mythos Preview to Find and Fix Hundreds of Firefox Vulnerabilities",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "In-depth look at how Mozilla used early access to Claude Mythos to systematically locate and patch hundreds of security vulnerabilities in Firefox.",
+        "why_selected": ""
+      },
+      {
+        "title": "Natural Language Autoencoders: Making LLM Internal States Human-Readable",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Anthropic's breakthrough method for converting LLM internal activations into natural language explanations, making AI reasoning processes interpretable.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Flips the Script: How Codex Now Beats Claude Code",
+        "source": "TLDR AI",
+        "url": "https://every.to/context-window/openai-flips-the-script?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of how OpenAI's integration of GPT-5.5 into Codex has shifted the competitive landscape against Anthropic's Claude Code.",
+        "why_selected": "Competitive dynamics in coding agents affect tool selection decisions."
+      },
+      {
+        "title": "AlphaEvolve: How Google's Gemini-Powered Agent Scales Impact Across Industries",
+        "source": "Google DeepMind",
+        "url": "https://deepmind.google/blog/alphaevolve-impact/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Google's comprehensive look at how their AlphaEvolve coding agent is driving measurable impact across business, infrastructure, and scientific research.",
+        "why_selected": ""
+      },
+      {
+        "title": "China Backs DeepSeek with $50 Billion Valuation in Strategic AI Investment",
+        "source": "TLDR AI",
+        "url": "https://www.wsj.com/tech/ai/china-to-invest-in-deepseek-at-50-billion-valuation-045041d0?st=HGz7fS&reflink=desktopwebshare_permalink&utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "China's National AI Investment Fund plans multi-billion dollar investment in DeepSeek as part of broader strategy for homegrown AI dominance.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Begins Testing Ads in ChatGPT to Support Free Access",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/testing-ads-in-chatgpt",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI's monetization shift toward advertising in ChatGPT marks a significant change in AI business models and accessibility.",
+        "why_selected": ""
+      },
+      {
+        "title": "How AI Agent Memory Systems Really Work: A Technical Deep Dive",
+        "source": "TLDR AI",
+        "url": "https://memory.cobanov.dev/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Comprehensive technical analysis of how different memory architectures enable AI agents to maintain context and improve over time.",
+        "why_selected": ""
+      },
+      {
+        "title": "55% of Americans Already Use AI for Finance: Mass Adoption Reality Check",
+        "source": "TLDR AI",
+        "url": "https://plaid.com/state-of-intelligent-finance-report/?utm_source=TLDRAI&utm_medium=PaidNewsletter&utm_campaign=TLDRAI_Paid_Newsletter_Ad_Buy&utm_content=StateofIntelligentFinance_Report",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Plaid's research shows AI adoption in financial services is happening faster than expected, with major implications for fintech readiness.",
+        "why_selected": ""
+      },
+      {
+        "title": "OpenAI Expands GPT-5.5-Cyber for Trusted Vulnerability Research",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "OpenAI's controlled rollout of specialized cybersecurity models to verified defenders represents a new approach to dual-use AI deployment.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "May 7, 2026PolicyFocus areas for The Anthropic Institute",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/anthropic-institute-agenda",
+        "summary": "May 7, 2026PolicyFocus areas for The Anthropic Institute"
+      },
+      {
+        "title": "May 7, 2026AlignmentDonating our open-source alignment tool",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/donating-open-source-petri",
+        "summary": "May 7, 2026AlignmentDonating our open-source alignment tool"
+      },
+      {
+        "title": "Parloa builds service agents customers want to talk to",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/parloa",
+        "summary": "Parloa leverages OpenAI models to power scalable, voice-driven AI customer service agents, enabling enterprises to design, simulate, and deploy reliable, real-time interactions."
+      },
+      {
+        "title": "Introducing Trusted Contact in ChatGPT",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/introducing-trusted-contact-in-chatgpt",
+        "summary": "Introducing Trusted Contact in ChatGPT, an optional safety feature that notifies someone you trust if serious self-harm concerns are detected."
+      },
+      {
+        "title": "Simplex rethinks software development with Codex",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/simplex",
+        "summary": "Simplex boosts software development with ChatGPT Enterprise and Codex, reducing design, build, and testing time while scaling AI-driven workflows."
+      },
+      {
+        "title": "Next.js May 2026 security release",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/next-js-may-2026-security-release",
+        "summary": "SummaryWe have shipped a coordinated security release for Next.js addressing 13 advisories across denial of service, middleware and proxy bypass, server-side request forgery, cache poisoning, and cross-site scripting. One advisory addresses an upstream React Server Components vulnerability tracked as CVE-2026-23870. Recommended actionsPatched versions are available for both React and Next.js, and all affected users should upgrade immediately.ImpactThe release addresses the following advisories:Middleware and proxy bypassAffects applications that rely on middleware.js or proxy.js for authorizat"
+      },
+      {
+        "title": "Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/oeYesesaxjzMAktCM/natural-language-autoencoders-produce-unsupervised",
+        "summary": "AbstractWe introduce Natural Language Autoencoders (NLAs), an unsupervised method for generating natural language explanations of LLM activations. An NLA consists of two LLM modules: an activation verbalizer (AV) that maps an activation to a text description and an activation reconstructor (AR) that maps the description back to an activation. We jointly train the AV and AR with reinforcement learning to reconstruct residual stream activations. Although we optimize for activation reconstruction, the resulting NLA explanations read as plausible interpretations of model internals that, according "
+      },
+      {
+        "title": "Mechanistic estimation for wide random MLPs",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/fsG4m6sRMpomd7Rk6/mechanistic-estimation-for-wide-random-mlps",
+        "summary": "This post covers joint work with Wilson Wu, George Robinson, Mike Winer, Victor Lecomte and Paul Christiano. Thanks to Geoffrey Irving and Jess Riedel for comments on the post.\nIn ARC's latest paper, we study the following problem: given a randomly initialized multilayer perceptron (MLP), produce an estimate for the expected output of the model under Gaussian input. The usual approach to this problem is to sample many possible inputs, run them all through the model, and take the average. Instead, we produce an estimate \"mechanistically\", without running the model even once. For wide models, ou"
+      },
+      {
+        "title": "Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/oeYesesaxjzMAktCM/natural-language-autoencoders-produce-unsupervised",
+        "summary": "AbstractWe introduce Natural Language Autoencoders (NLAs), an unsupervised method for generating natural language explanations of LLM activations. An NLA consists of two LLM modules: an activation verbalizer (AV) that maps an activation to a text description and an activation reconstructor (AR) that maps the description back to an activation. We jointly train the AV and AR with reinforcement learning to reconstruct residual stream activations. Although we optimize for activation reconstruction, the resulting NLA explanations read as plausible interpretations of model internals that, according "
+      },
+      {
+        "title": "A review of \u201cInvestigating the consequences of accidentally grading CoT during RL\u201d",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/juCHTdZpZBGooHKW4/a-review-of-investigating-the-consequences-of-accidentally",
+        "summary": "Last week, OpenAI staff shared an early draft of\u00a0Investigating the consequences of accidentally grading CoT during RL\u00a0with Redwood Research staff.To start with, I appreciate them publishing this post. I think it is valuable for AI companies to be transparent about problems like these when they arise. I particularly appreciate them sharing the post with us early, discussing the issues in detail, and modifying it to address our most important criticisms.I think it will be increasingly important for AI companies to have a policy of getting external feedback on the risks posed by their deployments"
+      },
+      {
+        "title": "Try, even if they have you cold",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/aBhMGziEwA7FXNxhq/try-even-if-they-have-you-cold",
+        "summary": "I think smart people try things less often than they should, because of a cached mental pattern where you think of what might go wrong, and you find a foolproof countermeasure on the part of some antag, and so we call it off.Stockfish, playing itself, might as well resign from the first move if you force it to give knight odds. Sensei(the Go AI), should do the same when it has to give 6 stones. Getting ready to go into the stock market, do I really think I have some edge that Adderall swilling quants and their AI pets haven't already priced in? (The pricing in, of course, is also priced in).An"
+      },
+      {
+        "title": "Mechanistic estimation for wide random MLPs",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/fsG4m6sRMpomd7Rk6/mechanistic-estimation-for-wide-random-mlps",
+        "summary": "This post covers joint work with Wilson Wu, George Robinson, Mike Winer, Victor Lecomte and Paul Christiano. Thanks to Geoffrey Irving and Jess Riedel for comments on the post.\nIn ARC's latest paper, we study the following problem: given a randomly initialized multilayer perceptron (MLP), produce an estimate for the expected output of the model under Gaussian input. The usual approach to this problem is to sample many possible inputs, run them all through the model, and take the average. Instead, we produce an estimate \"mechanistically\", without running the model even once. For wide models, ou"
+      },
+      {
+        "title": "Many individual CEVs are probably quite bad",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/FvERMXkaobQvdjS4q/many-individual-cevs-are-probably-quite-bad",
+        "summary": "I was thinking about Habryka's article on Putin's CEV, but I am posting my response here, because the original article is already 3 weeks old.I am not sure how exactly a person's CEV is defined. \"If we knew everything and could self-modify\" seems potentially sensitive to the precise chronological order of \"realizing things\" and \"self-modification\".Like, imagine Hitler getting the godlike powers of knowledge and self-control. If he gets the perfect knowledge of economy, sociology and psychology first, he could go like: \"Oh, now I realize that the things I blamed on the Jews are actually caused "
+      },
+      {
+        "title": "There is no evidence you should reapply sunscreen every 2 hours.",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/daTGKn3pXzs75nSB7/there-is-no-evidence-you-should-reapply-sunscreen-every-2",
+        "summary": "It\u2019s incredible how many consensus guidelines dissolve when you look closely at them.\u00a0If you listen to any authority on the subject of sunscreen, you will hear it endlessly repeated that you absolutely must reapply sunscreen every 2 hours while you are in the sun, and immediately after swimming, sweating, or exercising. Not only that, you\u2019ll hear that you need to apply sunscreen before going outside, even if you put it on earlier and stayed indoors.\u00a0The rationale behind this is straightforward and plausible: sunscreen\u2019s effectiveness degrades over time, therefore prolonged sun exposure warrant"
+      },
+      {
+        "title": "55% of Americans already use AI for finance. Are fintechs ready for mass adoption? (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://plaid.com/state-of-intelligent-finance-report/?utm_source=TLDRAI&amp;utm_medium=PaidNewsletter&amp;utm_campaign=TLDRAI_Paid_Newsletter_Ad_Buy&amp;utm_content=StateofIntelligentFinance_Report",
+        "summary": "How much AI are your customers ready for? Well, 86% of AI users say it helps them better understand their finances. Consumers aren't afraid.Plaid's latest report breaks it down: 55% of people have used AI for money tasks in the last 12 months50% of people say managing money without AI will soon feel outdated\u201cIntelligent\u201d is becoming the new \u201cdigital\u201d faster than anyone expectedLearn what your customers actually want out of AI and how to meet their expectationswith insights from our new report.Dig into the full findings"
+      },
+      {
+        "title": "Claude adds Self-Improving Agents (5 minute read)",
+        "source": "TLDR AI",
+        "url": "https://claude.com/blog/new-in-claude-managed-agents?utm_source=tldrai",
+        "summary": "Claude Managed Agents launched features like dreaming, outcomes, and multiagent orchestration. Dreaming enhances agent improvement by analyzing past sessions to identify patterns, while outcomes allow agents to self-correct based on predefined success criteria. Multiagent orchestration optimizes complex task management by enabling agents to delegate tasks to specialized subagents, as utilized by companies like Harvey, Netflix, Spiral by Every, and Wisedocs."
+      },
+      {
+        "title": "Four levers to specialize your AI agents (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://pages.awscloud.com/awsmp-gro-pude-webinar-mss-module-5-use-case-specific-agents-workshop.html?trk=e7545cd0-d7fb-4544-85cc-1d4223437479&amp;sc_channel=el&amp;utm_source=tldrai",
+        "summary": "General-purpose AI agents fail in specialized domains \u2014 subtly wrong in edge cases. Domain specialization fixes this. Build AI agents with four levers: system prompt, knowledge corpus, tool selection, guardrails. Demonstrated across customer engagement, logistics, and voice on AWS. Workshop + guide."
+      },
+      {
+        "title": "llm-gemini 0.31",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything",
+        "summary": "Release: llm-gemini 0.31\n        \n\ngemini-3.1-flash-lite is no longer a preview. \n\n\nHere's my write-up of the Gemini 3.1 Flash-Lite Preview model back in March. I don't believe this new non-preview model has changed since then.\n    \n    \n        Tags: llm-release, gemini, llm, google, generative-ai, ai, llms"
+      },
+      {
+        "title": "Big Words",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/7/big-words/#atom-everything",
+        "summary": "Tool: Big Words\n        I'm using my vibe coded macOS presentations tool to put together a talk, and I wanted to add a slide with some text on it. The tool only accepts URLs, so I put together a quick page that accepts query string arguments and turns them into a simple slide.\nHere's an example: https://tools.simonwillison.net/big-words?text=simonwillison.net&amp;gradient=1&amp;size=9.5\nDouble click or double tap the page to access a form for modifying the different options.\n\n    \n    \n        Tags: vibe-coding, tools"
+      },
+      {
+        "title": "Notes on the xAI/Anthropic data center deal",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything",
+        "summary": "There weren't a lot of big new announcements from Anthropic at yesterday's Code w/ Claude event, but the biggest by far was the deal they've struck with SpaceX/xAI to use \"all of the capacity of their Colossus data center\".\nAs I mentioned in my live blog of the keynote, that's the one with the particularly bad environmental record. The gas turbines installed to power the facility initially ran without Clean Air Act permits or pollution control devices, which they got away with by classifying them as \"temporary\". Credible reports link it to increases in hospital admissions relating to low air q"
+      },
+      {
+        "title": "GitHub Repo Stats",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/7/github-repo-stats/#atom-everything",
+        "summary": "Tool: GitHub Repo Stats\n        One of the things I always look for when evaluating a new GitHub repository is the number of commits it has... but that number isn't visible on GitHub's mobile site layout. I built this tool to fix that, using this prompt:\n\nGiven a GitHub repo URL or foo/bar repo ID show information about that repo absorbed via wither REST or graphql CORS fetch() including the number of commits in the repo and other useful stats\n\nExample output for simonw/datasette and simonw/llm.\n    \n    \n        Tags: github"
+      },
+      {
+        "title": "[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-gpt-realtime-2-translate-and",
+        "summary": "OpenAI continues deploying GPT-5 everywhere"
+      }
+    ],
+    "rejected_summary": "Skipped pure policy announcements (Anthropic Institute agenda), donation of alignment research tools without practical implications, consumer-focused integrations (Trusted Contact safety features), and routine product announcements without technical depth.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
