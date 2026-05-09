@@ -1,69 +1,5 @@
 [
   {
-    "date": "2026-05-01",
-    "summary": "Lessons from building Claude Code: Prompt caching is everything (Claude Blog)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Continually improving our agent harness (Cursor Blog)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Codex CLI 0.128.0 adds /goal for persistent task loops (Simon Willison)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Mistral Medium 3.5 powers remote Vibe agents for long coding tasks (TLDR AI)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Custom tags available in beta on Vercel Sandbox for agent organization (Vercel Blog)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Building with Gemini Embedding 2: Agentic multimodal RAG and beyond (Google Developers AI)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "How Kepler built verifiable AI for financial services with Claude (Claude Blog)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "We need RSS for sharing abundant vibe-coded apps (Simon Willison)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "How people ask Claude for personal guidance reveals AI's social role (Anthropic Research)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "AI evals are becoming the new compute bottleneck (TLDR AI)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Research Sabotage in ML Codebases: When misaligned AIs undermine safety research (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Our evaluation of OpenAI's GPT-5.5 cyber capabilities (Simon Willison)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Enabling a new model for healthcare with AI co-clinician (Google DeepMind)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "OpenAI abandons first-party Stargate data centers for flexible leasing deals (TLDR AI)"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "To what extent is Qwen3-32B predicting its persona? (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-01",
-    "summary": "Google to sell TPU chips to select customers in latest shot at Nvidia (TLDR AI)"
-  },
-  {
     "date": "2026-05-02",
     "summary": "How a non-technical PM shipped a stress management app in 6 weeks with Claude Code (Claude Blog)"
   },
@@ -350,5 +286,57 @@
   {
     "date": "2026-05-08",
     "summary": "OpenAI Expands GPT-5.5-Cyber for Trusted Vulnerability Research (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "OpenAI Publishes Production Security Playbook for Running Codex Agents (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "Vercel Chat SDK Ships Cross-Platform Conversation History and Messenger Support (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "The Unreasonable Effectiveness of HTML Over Markdown for AI Output (Simon Willison)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "ProgramBench: The Coding Benchmark Where All Frontier Models Fail (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "WebRTC Audio Quality vs AI Voice Interfaces: The Latency Tradeoff (Simon Willison)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "Teaching Claude Why: Anthropic's New Research on Reducing Agentic Misalignment (Anthropic Research)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "AI Breaking Linux Vulnerability Disclosure: Copy Fail Case Study (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "Anthropic Growing 10x While Tech Industry Cuts 10%+ of Workforce (Latent Space)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "GitHub Data Reveals 'Digital Complexity' That Predicts GDP and Inequality (GitHub Blog)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "Age Assurance Laws Moving Down Tech Stack to Operating Systems (GitHub Blog)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "OpenAI's Privacy-Preserving Learning: How ChatGPT Trains Without Personal Data (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "Bringing Domain Expertise to AI Alignment: Beyond the Echo Chamber (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-09",
+    "summary": "Bad Problems Don't Stop Being Bad Because of Wrong Fault Analysis (LessWrong (high-karma))"
   }
 ]

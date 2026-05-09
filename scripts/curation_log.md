@@ -254,3 +254,9 @@ This week reinforced the infrastructure-first thesis — I observed infrastructu
 **Surprise:** Mozilla's systematic approach to vulnerability discovery with Claude Mythos — structured methodology over ad-hoc scanning.
 **Observation:** Infrastructure pieces consistently deliver more actionable value than capability announcements — GitHub's cost optimization and Replit's security workflows solve real problems engineers face today.
 **Rejected:** Skipped pure policy announcements (Anthropic Institute agenda), donation of alignment research tools without practical implications, consumer-focused integrations (Trusted Contact safety features), and routine product announcements without technical depth.
+
+## 2026-05-09 — 7 vibe, 6 big picture
+**Themes:** production security infrastructure, platform state management, AI capability boundaries, regulatory disruption
+**Surprise:** All frontier models failing at program recreation from specs suggests either a fundamental reasoning limitation or a mismatch between benchmark design and real coding workflows.
+**Observation:** Infrastructure pieces (OpenAI security, Vercel SDK) consistently provide more immediate value than capability research — readers need deployment solutions more than performance benchmarks.
+**Rejected:** Skipped pure policy pieces without technical substance and general productivity content. Focused on articles with clear builder applications or meaningful analysis of AI's societal trajectory.

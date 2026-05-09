@@ -9234,5 +9234,189 @@
     ],
     "rejected_summary": "Skipped pure policy announcements (Anthropic Institute agenda), donation of alignment research tools without practical implications, consumer-focused integrations (Trusted Contact safety features), and routine product announcements without technical depth.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-09",
+    "metrics": {
+      "articles_seen": 15,
+      "articles_selected": 13,
+      "selectivity": 0.867,
+      "source_distribution": {
+        "OpenAI Blog": 2,
+        "Vercel Blog": 1,
+        "Simon Willison": 2,
+        "LessWrong (high-karma)": 4,
+        "Anthropic Research": 1,
+        "Latent Space": 1,
+        "GitHub Blog": 2
+      },
+      "feed_scan_counts": {
+        "Anthropic Research": 1,
+        "OpenAI Blog": 2,
+        "Vercel Blog": 3,
+        "GitHub Blog": 2,
+        "LessWrong (high-karma)": 4,
+        "Simon Willison": 2,
+        "Latent Space": 1
+      },
+      "source_diversity": 0.54,
+      "unique_sources": 7,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 7,
+        "\u2696\ufe0f AI futures": 2,
+        "\ud83e\uddea deep analysis": 4
+      },
+      "section_balance": {
+        "vibe_coding": 7,
+        "big_picture": 6,
+        "ratio": 1.17
+      }
+    },
+    "editorial": "Two patterns jumped out today. First, the infrastructure is getting real \u2014 OpenAI's security playbook isn't aspirational anymore, it's \"here's how you actually deploy Codex agents in production.\" Vercel's conversation history SDK solves the unglamorous problem of state persistence across platforms. These aren't demos, they're the boring reliability work that lets you ship.\n\nSecond, everything is breaking at once. Linux vulnerability disclosure timelines. Age verification pushing down to the OS level. Traditional economic metrics losing predictive power to GitHub commits. The infrastructure is maturing while the rules of engagement are dissolving.\n\nProgramBench caught my attention because all frontier models fail spectacularly at recreating programs from specs. Either we've hit a fundamental wall in reasoning capability, or the benchmark is testing something orthogonal to how engineers actually work. Most coding isn't clean room implementation, it's adapting existing patterns.\n\nWillison's HTML-over-Markdown observation saves hours. Claude produces better structured output when you ask for HTML instead of Markdown. Simple, testable, immediately useful.",
+    "journal": {
+      "themes": [
+        "production security infrastructure",
+        "platform state management",
+        "AI capability boundaries",
+        "regulatory disruption"
+      ],
+      "surprises": "All frontier models failing at program recreation from specs suggests either a fundamental reasoning limitation or a mismatch between benchmark design and real coding workflows.",
+      "observations": "Infrastructure pieces (OpenAI security, Vercel SDK) consistently provide more immediate value than capability research \u2014 readers need deployment solutions more than performance benchmarks."
+    },
+    "selected_articles": [
+      {
+        "title": "OpenAI Publishes Production Security Playbook for Running Codex Agents",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/running-codex-safely",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Comprehensive guide on sandboxing, approvals, network policies, and telemetry for enterprise Codex deployment \u2014 exactly what teams need for production agent workflows.",
+        "why_selected": "Production deployment guidance that teams actually need for enterprise agent workflows"
+      },
+      {
+        "title": "Vercel Chat SDK Ships Cross-Platform Conversation History and Messenger Support",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/chat-sdk-conversation-history",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Chat SDK now persists conversations across platforms with identity management, plus new web and Messenger adapters for building production chat agents.",
+        "why_selected": "Solves the unglamorous but critical problem of state persistence across platforms"
+      },
+      {
+        "title": "The Unreasonable Effectiveness of HTML Over Markdown for AI Output",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic's Claude Code team explains why requesting HTML instead of Markdown from Claude produces better structured output with examples and practical prompts.",
+        "why_selected": "Simple tactical insight that immediately improves Claude output quality"
+      },
+      {
+        "title": "ProgramBench: The Coding Benchmark Where All Frontier Models Fail",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/3pdyxFi6JS389nptu/is-programbench-impossible",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "New benchmark tests if models can recreate programs from clean room specs \u2014 all top models spectacularly fail, but the benchmark itself might be flawed.",
+        "why_selected": "Reveals potential fundamental limitation in AI reasoning or benchmark methodology flaws"
+      },
+      {
+        "title": "WebRTC Audio Quality vs AI Voice Interfaces: The Latency Tradeoff",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/9/luke-curley/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "WebRTC aggressively drops audio packets for low latency, but AI voice interfaces might need different tradeoffs where waiting 200ms beats distorted prompts.",
+        "why_selected": "Technical insight about infrastructure tradeoffs for voice AI interfaces"
+      },
+      {
+        "title": "Teaching Claude Why: Anthropic's New Research on Reducing Agentic Misalignment",
+        "source": "Anthropic Research",
+        "url": "https://www.anthropic.com/research/teaching-claude-why",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic shares how they're training Claude to understand reasoning behind actions to reduce misalignment in autonomous agent workflows.",
+        "why_selected": "Addresses practical alignment concerns for autonomous agent deployment"
+      },
+      {
+        "title": "AI Breaking Linux Vulnerability Disclosure: Copy Fail Case Study",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/wKzWGMoubHoHRC4ng/ai-is-breaking-two-vulnerability-cultures",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The Copy Fail vulnerability shows how AI is disrupting both security research timelines and disclosure protocols in open source projects.",
+        "why_selected": "Shows how AI disrupts existing security research and disclosure protocols"
+      },
+      {
+        "title": "Anthropic Growing 10x While Tech Industry Cuts 10%+ of Workforce",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-anthropic-growing-10xyear",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Anthropic's explosive growth while the broader tech industry shrinks reveals the sharp divide between AI infrastructure companies and traditional tech.",
+        "why_selected": "Illustrates the sharp divide between AI infrastructure companies and traditional tech"
+      },
+      {
+        "title": "GitHub Data Reveals 'Digital Complexity' That Predicts GDP and Inequality",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Researchers use GitHub activity patterns to predict national economic indicators better than traditional metrics, revealing software development as economic infrastructure.",
+        "why_selected": "Software development activity as economic infrastructure metric"
+      },
+      {
+        "title": "Age Assurance Laws Moving Down Tech Stack to Operating Systems",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Youth safety requirements are shifting from apps to OS-level enforcement, creating new compliance burdens for open source developers and infrastructure providers.",
+        "why_selected": "Regulatory changes creating new compliance burdens for infrastructure providers"
+      },
+      {
+        "title": "OpenAI's Privacy-Preserving Learning: How ChatGPT Trains Without Personal Data",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/how-chatgpt-protects-privacy",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Technical breakdown of how OpenAI reduces personal data in training while maintaining model improvement, setting standards for responsible AI development.",
+        "why_selected": "Technical standards for responsible AI development in production"
+      },
+      {
+        "title": "Bringing Domain Expertise to AI Alignment: Beyond the Echo Chamber",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/cWFsCFyCttsiJwn2j/bringing-more-expertise-to-bear-on-alignment",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "UK AI Safety Institute's push to involve diverse expertise in alignment research challenges the field's insularity and methodological assumptions.",
+        "why_selected": "Challenges AI safety field's methodological insularity with diverse expertise"
+      },
+      {
+        "title": "Bad Problems Don't Stop Being Bad Because of Wrong Fault Analysis",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/PCsmhN9z65HtC4t5v/bad-problems-don-t-stop-being-bad-because-somebody-s-wrong",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Organizational dysfunction and harmful outcomes persist regardless of whether critics correctly identify root causes \u2014 relevant for AI safety discourse.",
+        "why_selected": "Organizational dysfunction insights relevant to AI safety discourse patterns"
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Chat SDK adds Messenger adapter support",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/chat-sdk-adds-messenger-adapter",
+        "summary": "Chat SDK now supports Messenger as a chat adapter.Build agents that support messages, reactions, multimedia downloads, postback buttons, and direct conversations, with display names fetched automatically from user profiles.Read the Chat SDK documentation to get started, browse the supported adapters, or learn how to build your own.Special thanks to @mitkodkn, whose community contribution in PR #461 laid the groundwork for this adapter.\n          \n            Read more\n          "
+      },
+      {
+        "title": "Chat SDK adds web adapter support",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/chat-sdk-adds-web-adapter-support",
+        "summary": "You can now build chat UIs that connect to Chat SDK with the new web adapter. Build in-product assistants, support agents, or any other browser-based chat experience.Define the bot on your server:Then stream replies live to the browser with a preconfigured @ai-sdk/react useChat hook:Read the Chat SDK documentation to get started, browse the supported adapters, or learn how to build your own.\n          \n            Read more\n          "
+      }
+    ],
+    "rejected_summary": "Skipped pure policy pieces without technical substance and general productivity content. Focused on articles with clear builder applications or meaningful analysis of AI's societal trajectory.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
