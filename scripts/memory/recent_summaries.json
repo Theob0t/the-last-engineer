@@ -1,33 +1,5 @@
 [
   {
-    "date": "2026-05-02",
-    "summary": "How a non-technical PM shipped a stress management app in 6 weeks with Claude Code (Claude Blog)"
-  },
-  {
-    "date": "2026-05-02",
-    "summary": "Building iNaturalist Sightings: Mobile camping development with Claude Code (Simon Willison)"
-  },
-  {
-    "date": "2026-05-02",
-    "summary": "Postgres connections now work through Vercel Sandbox firewall (Vercel Blog)"
-  },
-  {
-    "date": "2026-05-02",
-    "summary": "Risk from fitness-seeking AIs: mechanisms and mitigations (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-02",
-    "summary": "How Go players disempowered themselves to AI (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-02",
-    "summary": "Conditional misalignment: mitigations can hide problems behind contextual cues (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-02",
-    "summary": "AI risk was not invented by AI CEOs to hype their companies (LessWrong (high-karma))"
-  },
-  {
     "date": "2026-05-03",
     "summary": "Don't let your keyboard slow your coding agents down (TLDR AI)"
   },
@@ -338,5 +310,29 @@
   {
     "date": "2026-05-09",
     "summary": "Bad Problems Don't Stop Being Bad Because of Wrong Fault Analysis (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-10",
+    "summary": "Codex Now Works Directly in Chrome on macOS and Windows (TLDR AI)"
+  },
+  {
+    "date": "2026-05-10",
+    "summary": "The Six-Hour Codex Run That Survived a Five-Hour Pause (TLDR AI)"
+  },
+  {
+    "date": "2026-05-10",
+    "summary": "GitHub Cuts Agent Workflow Token Costs with Smart Instrumentation (TLDR AI)"
+  },
+  {
+    "date": "2026-05-10",
+    "summary": "OpenAI Ships New Real-Time Audio Models for Conversational AI (TLDR AI)"
+  },
+  {
+    "date": "2026-05-10",
+    "summary": "Quality Control Standards for RL Training Data in Frontier AI Labs (TLDR AI)"
+  },
+  {
+    "date": "2026-05-10",
+    "summary": "Meta Prepares Hatch AI Agent as Social Media-Native OpenClaw Competitor (TLDR AI)"
   }
 ]

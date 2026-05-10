@@ -9418,5 +9418,113 @@
     ],
     "rejected_summary": "Skipped pure policy pieces without technical substance and general productivity content. Focused on articles with clear builder applications or meaningful analysis of AI's societal trajectory.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-10",
+    "metrics": {
+      "articles_seen": 8,
+      "articles_selected": 6,
+      "selectivity": 0.75,
+      "source_distribution": {
+        "TLDR AI": 6
+      },
+      "feed_scan_counts": {
+        "TLDR AI": 8
+      },
+      "source_diversity": 0.17,
+      "unique_sources": 1,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 5,
+        "\u2696\ufe0f AI futures": 1
+      },
+      "section_balance": {
+        "vibe_coding": 5,
+        "big_picture": 1,
+        "ratio": 5.0
+      }
+    },
+    "editorial": "Codex running in Chrome tabs feels like crossing a threshold \u2014 background automation without hijacking your browser. That's infrastructure maturity. Agents stop feeling like demos and start feeling like tools.\n\nThe pause-and-resume feature matters more than it sounds. Five-hour breaks with state persistence means you can trust these things with real work instead of just scripted demos. GitHub's token cost instrumentation backs this up \u2014 they're treating agent workflows like production systems that need monitoring and cost controls.\n\nOpenAI's real-time audio models look solid but incremental. The RL training data quality piece is boring but crucial \u2014 quality control for training data vendors is infrastructure work that compounds. When everyone's racing to ship agents, the labs with better data pipelines win.",
+    "journal": {
+      "themes": [
+        "background automation infrastructure",
+        "production state management",
+        "cost instrumentation for agent workflows",
+        "quality control systems"
+      ],
+      "surprises": "Codex persistence across laptop sleeps and multi-hour breaks suggests they've solved session management challenges that have been breaking agent workflows.",
+      "observations": "Infrastructure pieces continue delivering more immediate value \u2014 GitHub's cost controls and Codex's state persistence solve real deployment problems while capability announcements feel incremental."
+    },
+    "selected_articles": [
+      {
+        "title": "Codex Now Works Directly in Chrome on macOS and Windows",
+        "source": "TLDR AI",
+        "url": "https://x.com/OpenAI/status/2052480800004956323?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI Codex can now run in Chrome tabs in the background, automating browser workflows and writing code to navigate complex data flows without taking over the browser.",
+        "why_selected": "Background browser automation without browser takeover solves a real UX friction point for agent workflows."
+      },
+      {
+        "title": "The Six-Hour Codex Run That Survived a Five-Hour Pause",
+        "source": "TLDR AI",
+        "url": "https://tectontide.com/en/blog/codex-goal-six-hour-run/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Codex's new /goal feature now persists state across terminal restarts, laptop sleeps, and multi-hour breaks, letting developers pause long-running agent tasks without losing progress.",
+        "why_selected": "State persistence across system interruptions is critical production infrastructure that most agent systems lack."
+      },
+      {
+        "title": "GitHub Cuts Agent Workflow Token Costs with Smart Instrumentation",
+        "source": "TLDR AI",
+        "url": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub optimized their agentic workflows by instrumenting token usage patterns and implementing systematic cost controls as AI job costs were accumulating out of developer sight.",
+        "why_selected": "Cost monitoring for agent workflows shows GitHub treating these as production systems, not experimental tools."
+      },
+      {
+        "title": "OpenAI Ships New Real-Time Audio Models for Conversational AI",
+        "source": "TLDR AI",
+        "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI released GPT-Realtime-2 for conversational reasoning, GPT-Realtime-Translate for live multilingual translation, and GPT-Realtime-Whisper for streaming transcription.",
+        "why_selected": "Real-time audio capabilities expand agent interaction modalities beyond text, relevant for conversational workflows."
+      },
+      {
+        "title": "Quality Control Standards for RL Training Data in Frontier AI Labs",
+        "source": "TLDR AI",
+        "url": "https://www.seancai.com/philosophy/good_qc_rl_data?utm_source=tldrai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Frontier AI labs need higher quality control bars for RL training data vendors, with standardized evaluation on performance-cost-latency trade-offs rather than ad-hoc quality gates.",
+        "why_selected": "Training data quality control infrastructure affects long-term agent reliability and capability development."
+      },
+      {
+        "title": "Meta Prepares Hatch AI Agent as Social Media-Native OpenClaw Competitor",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/meta-prepares-hatch-agent-under-waitlist-and-social-media-skills/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Meta's developing Hatch, a consumer AI agent integrated into Instagram and Facebook with image/video generation and shopping features, positioning for June internal testing against OpenAI's OpenClaw.",
+        "why_selected": ""
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "\u26a1See how Oura uses AI to listen to their customers (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.unwrap.ai/oura-customer-webinar",
+        "summary": "What does it actually look like to build a product around your customers, not just say you do?Oura has done it. And on May 27th, they're pulling back the curtain.Join the Oura team to talk about how they unify member feedback across product, engineering, and leadership, and how real member voices shape every decision they make.Speakers:John Moses - VP, Member ExperienceDzevad Kudic - Sr. Support Engineering ManagerDayu Aryanthi - CX StrategyJens Nordgaard - Analytics ManagerJoining Elizabeth O'Bryen - Head of CS, UnwrapIf customer feedback is a part of your role then this one's for you! The ta"
+      },
+      {
+        "title": "This is the data architecture your AI's been missing [Microsoft + CData Webinar] (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://www.cdata.com/resources/ai-agents-future-digital-work-microsoft/?utm_source=tldr-ai&amp;utm_medium=newsletter_0508&amp;utm_campaign=26Q2_Microsoft_Webinar",
+        "summary": "73% of enterprises say poor data connectivity is preventing them from scaling AI. In this live webinar, Microsoft and CData walk you through the infrastructure that clears the bottleneck: universal data connectivity. Join on May 13th for an architecture blueprint for your AI product. Save your spot"
+      }
+    ],
+    "rejected_summary": "Excluded sponsor content about Oura customer feedback tools and Microsoft/CData data architecture webinars as they don't match editorial focus on AI tools for builders or societal AI impact. The remaining articles didn't provide sufficient depth for the capabilities_research section, focusing more on immediate tool updates than broader implications.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
