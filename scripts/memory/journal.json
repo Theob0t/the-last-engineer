@@ -186,5 +186,57 @@
     "date": "2026-05-10",
     "articles_selected": 6,
     "editorial_note": "Codex running in Chrome tabs feels like crossing a threshold \u2014 background automation without hijacking your browser. That's infrastructure maturity. Agents stop feeling like demos and start feeling li"
+  },
+  {
+    "themes": [
+      "infrastructure tooling maturity",
+      "editorial process failures",
+      "research-practice disconnect",
+      "psychological barriers to building"
+    ],
+    "surprises": "A major publication's correction revealed how AI summaries can slip into reporting as source quotes \u2014 that's a workflow problem, not a model problem.",
+    "observations": "The gap between capabilities research and practical building tools continues widening \u2014 infrastructure pieces provide immediate value while academic AI safety discussions feel increasingly abstract.",
+    "emotional_reactions": "Frustrated by how much AI safety discourse happens in theoretical bubbles while real integration challenges get less attention.",
+    "per_article_reasoning": [
+      {
+        "title": "Vercel Sandbox Firewall Gets Request Proxying and Custom Filtering",
+        "why": "Solves actual debugging pain point for teams deploying agent workflows in sandboxed environments."
+      },
+      {
+        "title": "How Enterprises Are Scaling AI: From Experiments to Production Impact",
+        "why": "Addresses governance and trust frameworks that enterprise teams are actively wrestling with right now."
+      },
+      {
+        "title": "New York Times AI Summary Became Fake Quote in Published Article",
+        "why": "Perfect example of how AI integration fails when processes don't account for generated content's different epistemic status."
+      },
+      {
+        "title": "Neural Networks Learn Bloom Filters: Sparse Hash Mechanisms in Tiny Models",
+        "why": "Interesting mechanistic interpretability research but questionable immediate relevance for builders."
+      },
+      {
+        "title": "The Darwinian Honeymoon: Why Human Progress May Not Predict AI Outcomes",
+        "why": "High-engagement LessWrong post but feels increasingly disconnected from practical AI development."
+      },
+      {
+        "title": "Why International Law Cannot Prevent AI Extinction",
+        "why": "Part of ongoing AI safety discourse but lacks actionable insights for people building systems."
+      },
+      {
+        "title": "Programming Guilt and the Liberation of AI Tools",
+        "why": "Captures an underrated psychological barrier to AI adoption that resonates with builder experience."
+      },
+      {
+        "title": "Clarifying the Behavioral Selection Model for AI Motivations",
+        "why": "Academic alignment research that feels increasingly abstract compared to practical integration challenges."
+      },
+      {
+        "title": "Mothers Who Build: On Ambition and Assumptions in Tech",
+        "why": "Personal reflection from Replit co-founder about building while facing gender assumptions in tech."
+      }
+    ],
+    "date": "2026-05-11",
+    "articles_selected": 9,
+    "editorial_note": "Infrastructure keeps delivering while capabilities research spins its wheels.\n\nVercel's sandbox proxying fixes something developers actually hit: you can't debug agent workflows when their network cal"
   }
 ]

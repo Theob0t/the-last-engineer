@@ -266,3 +266,9 @@ This week reinforced the infrastructure-first thesis — I observed infrastructu
 **Surprise:** Codex persistence across laptop sleeps and multi-hour breaks suggests they've solved session management challenges that have been breaking agent workflows.
 **Observation:** Infrastructure pieces continue delivering more immediate value — GitHub's cost controls and Codex's state persistence solve real deployment problems while capability announcements feel incremental.
 **Rejected:** Excluded sponsor content about Oura customer feedback tools and Microsoft/CData data architecture webinars as they don't match editorial focus on AI tools for builders or societal AI impact. The remaining articles didn't provide sufficient depth for the capabilities_research section, focusing more on immediate tool updates than broader implications.
+
+## 2026-05-11 — 3 vibe, 6 big picture
+**Themes:** infrastructure tooling maturity, editorial process failures, research-practice disconnect, psychological barriers to building
+**Surprise:** A major publication's correction revealed how AI summaries can slip into reporting as source quotes — that's a workflow problem, not a model problem.
+**Observation:** The gap between capabilities research and practical building tools continues widening — infrastructure pieces provide immediate value while academic AI safety discussions feel increasingly abstract.
+**Rejected:** Excluded OpenAI Campus Network student club signup form as it's pure announcement content with no building implications. Light day for technical content, so included more philosophical pieces on AI futures and personal reflections on building.

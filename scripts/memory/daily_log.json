@@ -9526,5 +9526,145 @@
     ],
     "rejected_summary": "Excluded sponsor content about Oura customer feedback tools and Microsoft/CData data architecture webinars as they don't match editorial focus on AI tools for builders or societal AI impact. The remaining articles didn't provide sufficient depth for the capabilities_research section, focusing more on immediate tool updates than broader implications.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-11",
+    "metrics": {
+      "articles_seen": 10,
+      "articles_selected": 9,
+      "selectivity": 0.9,
+      "source_distribution": {
+        "Vercel Blog": 1,
+        "OpenAI Blog": 1,
+        "Simon Willison": 2,
+        "LessWrong (high-karma)": 3,
+        "Alignment Forum": 1,
+        "Replit Blog": 1
+      },
+      "feed_scan_counts": {
+        "OpenAI Blog": 2,
+        "Replit Blog": 1,
+        "Vercel Blog": 1,
+        "Alignment Forum": 1,
+        "LessWrong (high-karma)": 3,
+        "Simon Willison": 2
+      },
+      "source_diversity": 0.67,
+      "unique_sources": 6,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 3,
+        "\ud83e\uddea deep analysis": 4,
+        "\u2696\ufe0f AI futures": 2
+      },
+      "section_balance": {
+        "vibe_coding": 3,
+        "big_picture": 6,
+        "ratio": 0.5
+      }
+    },
+    "editorial": "Infrastructure keeps delivering while capabilities research spins its wheels.\n\nVercel's sandbox proxying fixes something developers actually hit: you can't debug agent workflows when their network calls are invisible. Meanwhile, OpenAI's enterprise playbook tackles the governance mess that every team deals with once they move past demos.\n\nThe Times correction shows how editorial workflows break down with AI. Someone turned a generated summary into a direct quote because they forgot it wasn't source material. The models work fine \u2014 humans just handle them badly.\n\nLessWrong keeps publishing research that sounds important but changes nothing. Bloom filters in neural networks? Sure, interesting. Am I rewriting my stack because of it? No. The extinction risk crowd argues in circles while the rest of us ship features.\n\nQuinn's programming guilt piece hits different though. AI tools do make you more confident when you stop worrying about reinventing every wheel. That mental shift probably matters more than we think.",
+    "journal": {
+      "themes": [
+        "infrastructure tooling maturity",
+        "editorial process failures",
+        "research-practice disconnect",
+        "psychological barriers to building"
+      ],
+      "surprises": "A major publication's correction revealed how AI summaries can slip into reporting as source quotes \u2014 that's a workflow problem, not a model problem.",
+      "observations": "The gap between capabilities research and practical building tools continues widening \u2014 infrastructure pieces provide immediate value while academic AI safety discussions feel increasingly abstract."
+    },
+    "selected_articles": [
+      {
+        "title": "Vercel Sandbox Firewall Gets Request Proxying and Custom Filtering",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-request-proxying-and-filtering",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "You can now route outbound sandbox traffic through your own proxy for logging and debugging, with matchers to filter which requests get forwarded.",
+        "why_selected": "Solves actual debugging pain point for teams deploying agent workflows in sandboxed environments."
+      },
+      {
+        "title": "How Enterprises Are Scaling AI: From Experiments to Production Impact",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "OpenAI's playbook for enterprise AI adoption covering trust frameworks, governance structures, workflow design, and quality controls for production scale.",
+        "why_selected": "Addresses governance and trust frameworks that enterprise teams are actively wrestling with right now."
+      },
+      {
+        "title": "New York Times AI Summary Became Fake Quote in Published Article",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/10/new-york-times-editors-note/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "The Times had to correct an article where a reporter published an AI-generated summary of Pierre Poilievre's views as if it were a direct quote.",
+        "why_selected": "Perfect example of how AI integration fails when processes don't account for generated content's different epistemic status."
+      },
+      {
+        "title": "Neural Networks Learn Bloom Filters: Sparse Hash Mechanisms in Tiny Models",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/buxBdp8NtHGgBwabv/neural-networks-learn-bloom-filters",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Researchers found that small ReLU networks naturally converge to Bloom filter-like mechanisms when trained to output sparse distributions over large vocabularies.",
+        "why_selected": "Interesting mechanistic interpretability research but questionable immediate relevance for builders."
+      },
+      {
+        "title": "The Darwinian Honeymoon: Why Human Progress May Not Predict AI Outcomes",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/FxHzT6jeTRhbkzSX3/the-darwinian-honeymoon-why-i-am-not-as-impressed-by-human-1",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Argues that humanity's recent progress might be a temporary 'honeymoon period' from evolutionary pressures rather than evidence we'll handle AI transitions well.",
+        "why_selected": "High-engagement LessWrong post but feels increasingly disconnected from practical AI development."
+      },
+      {
+        "title": "Why International Law Cannot Prevent AI Extinction",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/Z377spboBjyFAAYAz/international-law-cannot-prevent-extinction-either",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Response to Eliezer's post arguing that international legal frameworks are structurally inadequate to address existential AI risks.",
+        "why_selected": "Part of ongoing AI safety discourse but lacks actionable insights for people building systems."
+      },
+      {
+        "title": "Programming Guilt and the Liberation of AI Tools",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/10/andrew-quinn/#atom-everything",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Andrew Quinn reflects on how AI tools freed him from the guilt of potentially reinventing existing solutions, enabling more confident building.",
+        "why_selected": "Captures an underrated psychological barrier to AI adoption that resonates with builder experience."
+      },
+      {
+        "title": "Clarifying the Behavioral Selection Model for AI Motivations",
+        "source": "Alignment Forum",
+        "url": "https://www.alignmentforum.org/posts/nBjo6yniFjmy2uaYa/clarifying-the-role-of-the-behavioral-selection-model",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Elaborates on how behavioral selection models work for predicting AI motivations and why it matters to distinguish between different types of AI behavior drivers.",
+        "why_selected": "Academic alignment research that feels increasingly abstract compared to practical integration challenges."
+      },
+      {
+        "title": "Mothers Who Build: On Ambition and Assumptions in Tech",
+        "source": "Replit Blog",
+        "url": "https://blog.replit.com/mothers-who-build",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Replit co-founder Haya Odeh's personal reflection on building companies while facing assumptions about women's career ambitions after having children.",
+        "why_selected": "Personal reflection from Replit co-founder about building while facing gender assumptions in tech."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "OpenAI Campus Network: Student club interest form",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
+        "summary": "Join the OpenAI Campus Network\u2014connect student clubs worldwide, access AI tools, host events, and build an AI-powered campus community."
+      }
+    ],
+    "rejected_summary": "Excluded OpenAI Campus Network student club signup form as it's pure announcement content with no building implications. Light day for technical content, so included more philosophical pieces on AI futures and personal reflections on building.",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]
