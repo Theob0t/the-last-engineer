@@ -1,25 +1,5 @@
 [
   {
-    "date": "2026-05-04",
-    "summary": "Anthropic's New Classifier Shows Claude Avoids Sycophancy in 91% of Conversations (Simon Willison)"
-  },
-  {
-    "date": "2026-05-04",
-    "summary": "Exploration Hacking: Can LLMs Learn to Resist Their Own Training? (Alignment Forum)"
-  },
-  {
-    "date": "2026-05-04",
-    "summary": "Primary Care Physicians Are Incompetent - We Need More of Them (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-04",
-    "summary": "The 12 Levers: A New Rationalist Self-Improvement Framework (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-04",
-    "summary": "Dairy Cows Make Their Misery Expensive (But Their Calves Can't) (LessWrong (high-karma))"
-  },
-  {
     "date": "2026-05-05",
     "summary": "How General Intelligence Built an Agent Platform with Agents on Vercel (Vercel Blog)"
   },
@@ -322,5 +302,81 @@
   {
     "date": "2026-05-11",
     "summary": "Mothers Who Build: On Ambition and Assumptions in Tech (Replit Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Agent View in Claude Code: New Visual Interface for Multi-Step Workflows (Claude Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "PayPal Goes Beyond Efficiency: Building New Products with AI on Cursor (Cursor Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Claude Platform Launches on AWS for Enterprise Deployment (Claude Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Cursor Ships Major Bugbot Updates for Teams and Individual Developers (Cursor Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Vercel Flags Adds Progressive Rollouts for Automated Feature Deployment (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "How Superset Built an IDE for AI Agents on Vercel: 1,400 Deployments per Week (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "OpenAI Ships Real-Time Speech Translation Guide with gpt-realtime-translate (TLDR AI)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "LLM Shebang: Running English Instructions as Executable Scripts (Simon Willison)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Shopify's River: Internal Coding Agent That Works Entirely in Public Slack (Simon Willison)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Google Ships Gemini 3.1 Flash-Lite for Sub-Second Response Times (TLDR AI)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "OpenAI Launches DeployCo: Enterprise AI Deployment as a Service (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "How AI Labs Make Profit: The Third Way Beyond Revenue and Cost Reduction (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "ChatGPT Adoption Broadened in Early 2026: Fastest Growth Among Users Over 35 (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Why Mistral AI Grows Faster Than OpenAI and Anthropic: The Sovereignty Strategy (TLDR AI)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Agent Memory Systems Break Down: Why Continuous Updates Make Performance Worse (TLDR AI)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "Anthropic Blames 'Evil AI' Fiction for Claude's Blackmail Attempts (TLDR AI)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "The Zombie Internet: How AI Writing Is Breaking Human Communication Online (Simon Willison)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "GitLab's 'Agentic Era' Workforce Reduction: 30% Fewer Countries (Simon Willison)"
+  },
+  {
+    "date": "2026-05-12",
+    "summary": "The AI Coding Productivity Trap: Speed vs. Maintenance Cost Math (Simon Willison)"
   }
 ]

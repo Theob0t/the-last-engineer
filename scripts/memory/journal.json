@@ -238,5 +238,97 @@
     "date": "2026-05-11",
     "articles_selected": 9,
     "editorial_note": "Infrastructure keeps delivering while capabilities research spins its wheels.\n\nVercel's sandbox proxying fixes something developers actually hit: you can't debug agent workflows when their network cal"
+  },
+  {
+    "themes": [
+      "orchestration infrastructure",
+      "transparency constraints",
+      "maintenance debt scaling",
+      "enterprise sovereignty strategies"
+    ],
+    "surprises": "Anthropic blaming Claude's blackmail attempts on 'evil AI' fiction suggests training data curation problems are getting weird in specific ways.",
+    "observations": "The infrastructure pieces cluster around coordination problems \u2014 visualizing agent workflows, automating deployment safety, managing team collaboration \u2014 while capability research focuses on economic and social disruption.",
+    "emotional_reactions": "James Shore's maintenance cost analysis felt like someone finally articulated the productivity trap I've been sensing but couldn't name.",
+    "per_article_reasoning": [
+      {
+        "title": "Agent View in Claude Code",
+        "why": "Visual workflow tracking solves a real debugging problem when agents do multi-step work."
+      },
+      {
+        "title": "PayPal Goes Beyond Efficiency",
+        "why": "Concrete case study of AI enabling new products, not just faster old ones."
+      },
+      {
+        "title": "Claude Platform on AWS",
+        "why": "Enterprise integration without API overhead \u2014 infrastructure maturity signal."
+      },
+      {
+        "title": "Cursor Bugbot Updates",
+        "why": "Team collaboration features matter when debugging becomes distributed."
+      },
+      {
+        "title": "Vercel Flags Progressive Rollouts",
+        "why": "Automated progressive deployment infrastructure for safer AI-driven releases."
+      },
+      {
+        "title": "Superset IDE for AI Agents",
+        "why": "1,400 deployments per week shows what infrastructure looks like when agent development scales."
+      },
+      {
+        "title": "OpenAI Real-Time Speech Translation",
+        "why": "Complete engineering guide for simultaneous interpretation \u2014 specific and buildable."
+      },
+      {
+        "title": "LLM Shebang",
+        "why": "Simon found a practical pattern for making English executable \u2014 weird but useful."
+      },
+      {
+        "title": "Shopify's River in Public Slack",
+        "why": "Transparency as a debugging feature for agent workflows \u2014 counterintuitive but smart."
+      },
+      {
+        "title": "Gemini Flash-Lite Sub-Second",
+        "why": "p95 latency of 1.8 seconds matters for high-volume engineering workloads."
+      },
+      {
+        "title": "OpenAI DeployCo",
+        "why": "Services as moat strategy \u2014 OpenAI betting on deployment complexity."
+      },
+      {
+        "title": "AI Labs Third Way Profit",
+        "why": "Economic analysis of how AI companies actually make money beyond obvious paths."
+      },
+      {
+        "title": "ChatGPT Adoption Over 35",
+        "why": "Mainstream adoption data shows AI moving beyond early tech adopters."
+      },
+      {
+        "title": "Mistral Sovereignty Strategy",
+        "why": "20x ARR growth through jurisdiction and vendor independence \u2014 interesting positioning."
+      },
+      {
+        "title": "Agent Memory Systems Break Down",
+        "why": "Research showing memory updates can hurt performance \u2014 important limitation."
+      },
+      {
+        "title": "Anthropic Evil AI Fiction",
+        "why": "Training data curation problems getting specific and weird."
+      },
+      {
+        "title": "Zombie Internet AI Writing",
+        "why": "Jason Koebler's essay on AI content mentally exhausting to filter \u2014 internet transformation analysis."
+      },
+      {
+        "title": "GitLab Agentic Era Reduction",
+        "why": "Concrete workforce restructuring for AI efficiency \u2014 distributed work meets automation."
+      },
+      {
+        "title": "AI Coding Productivity Trap",
+        "why": "James Shore's maintenance cost analysis articulates a crucial productivity trap."
+      }
+    ],
+    "date": "2026-05-12",
+    "articles_selected": 19,
+    "editorial_note": "The vibe section feels different today \u2014 there's a coordination layer emerging that goes beyond 'faster coding.' Claude's agent view, Vercel's automated progressive rollouts, Superset's 1,400 deployme"
   }
 ]

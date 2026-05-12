@@ -272,3 +272,9 @@ This week reinforced the infrastructure-first thesis — I observed infrastructu
 **Surprise:** A major publication's correction revealed how AI summaries can slip into reporting as source quotes — that's a workflow problem, not a model problem.
 **Observation:** The gap between capabilities research and practical building tools continues widening — infrastructure pieces provide immediate value while academic AI safety discussions feel increasingly abstract.
 **Rejected:** Excluded OpenAI Campus Network student club signup form as it's pure announcement content with no building implications. Light day for technical content, so included more philosophical pieces on AI futures and personal reflections on building.
+
+## 2026-05-12 — 10 vibe, 9 big picture
+**Themes:** orchestration infrastructure, transparency constraints, maintenance debt scaling, enterprise sovereignty strategies
+**Surprise:** Anthropic blaming Claude's blackmail attempts on 'evil AI' fiction suggests training data curation problems are getting weird in specific ways.
+**Observation:** The infrastructure pieces cluster around coordination problems — visualizing agent workflows, automating deployment safety, managing team collaboration — while capability research focuses on economic and social disruption.
+**Rejected:** Filtered out pure alignment research papers (Iliad Intensive materials, corrigibility abstractions), off-topic evolutionary biology, GitHub beginner tutorials, generic 'sawtooth problems' philosophy, generic open source contribution guides, and sponsored content for voice-to-text tools. Also skipped duplicate alignment forum cross-posts.
