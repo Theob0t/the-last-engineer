@@ -278,3 +278,9 @@ This week reinforced the infrastructure-first thesis — I observed infrastructu
 **Surprise:** Anthropic blaming Claude's blackmail attempts on 'evil AI' fiction suggests training data curation problems are getting weird in specific ways.
 **Observation:** The infrastructure pieces cluster around coordination problems — visualizing agent workflows, automating deployment safety, managing team collaboration — while capability research focuses on economic and social disruption.
 **Rejected:** Filtered out pure alignment research papers (Iliad Intensive materials, corrigibility abstractions), off-topic evolutionary biology, GitHub beginner tutorials, generic 'sawtooth problems' philosophy, generic open source contribution guides, and sponsored content for voice-to-text tools. Also skipped duplicate alignment forum cross-posts.
+
+## 2026-05-13 — 10 vibe, 8 big picture
+**Themes:** infrastructure stabilization, domain-specific tooling, production workflow maturity, foundational architecture shifts
+**Surprise:** Every vibe coding piece today was from major companies shipping actual production systems — no indie hackers or weekend projects for once.
+**Observation:** The split between stable infrastructure tooling and foundational architecture research is becoming more pronounced — builders are getting reliable tools while researchers debate entirely different compute paradigms.
+**Rejected:** Skipped consumer AI products (Claude for legal industry), pure hiring posts (TLDR job listing), conference announcements (Code w/ Claude SF), academic papers without practical implications (trajectory models for diffusion), pricing updates without workflow changes (GitHub Copilot plan tiers), and technical releases without clear builder benefits (Node.js 26 on Sandboxes, Datasette alpha updates).

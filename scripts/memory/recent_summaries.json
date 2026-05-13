@@ -1,65 +1,5 @@
 [
   {
-    "date": "2026-05-05",
-    "summary": "How General Intelligence Built an Agent Platform with Agents on Vercel (Vercel Blog)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Vercel Open Sources deepsec: Security Harness for Finding Vulnerabilities with Coding Agents (Vercel Blog)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "How OpenAI Rebuilt Their WebRTC Stack for Real-Time Voice AI (OpenAI Blog)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Google TPUs Get 3X LLM Inference Speed with Block-Diffusion Speculative Decoding (Google Developers AI)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "OpenAI Adds Animated Pets and Config Imports to Codex (TLDR AI)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Why AI Teams Are Building Eval Systems (And You Should Too) (TLDR AI)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "TRE Python Binding: ReDoS-Resistant Regular Expressions with Claude Code (Simon Willison)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Redis Array Playground: Interactive Tool for New Redis Data Type (Simon Willison)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "AI Industrial Takeoff: Maximum Growth Rates with Current Technology (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Irretrievability: Murphy's Curse of Oneshotness upon ASI (LessWrong (high-karma))"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Import AI 455: Automating AI Research (Jack Clark (Import AI))"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "OpenAI and PwC Reimagine the CFO Function with AI Agents (OpenAI Blog)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Anthropic Tests Jupiter-v1-p Ahead of Developer Conference (TLDR AI)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "Y Combinator's $5 Billion OpenAI Stake Revealed (Simon Willison)"
-  },
-  {
-    "date": "2026-05-05",
-    "summary": "The Other vs The Utility: AI Character in the Clippy vs Anton Debate (Latent Space)"
-  },
-  {
     "date": "2026-05-07",
     "summary": "New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration (Claude Blog)"
   },
@@ -378,5 +318,77 @@
   {
     "date": "2026-05-12",
     "summary": "The AI Coding Productivity Trap: Speed vs. Maintenance Cost Math (Simon Willison)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "How Anthropic's Cybersecurity Team Built a Threat Detection Platform with Claude Code (Claude Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Build Long-Running AI Agents That Pause, Resume, and Never Lose Context with ADK (Google Developers AI)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "How Finance Teams Use Codex for MBRs, Reporting, and Model Validation (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "How NVIDIA Engineers and Researchers Build Production Systems with Codex (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "AutoScout24 Scales Engineering with AI-Powered Development Workflows (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Create Vercel Firewall Rules with Natural Language (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Opus 4.7 Fast Mode Ships in Windsurf with 2.5x Speed Boost (Windsurf Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Manage Vercel Firewall Directly from CLI with Agent Integration (Vercel Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Building a Procedural Roguelike with GitHub Copilot CLI (GitHub Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "CSP Allow-List Experiment: AI-Generated Security Sandbox Tool (Simon Willison)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "The Inference Shift: Answer vs. Agentic Compute Architecture (TLDR AI)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Interaction Models: Real-Time Multi-Stream Human-AI Collaboration (TLDR AI)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "What Parameter Golf Taught Us About AI-Assisted Research (OpenAI Blog)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "How Useful Is Information from Working Inside AI Companies? (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Foundation Model Scaling Beyond Pre-training (TLDR AI)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Elon Musk Dissolves xAI, Forms SpaceXAI Division (TLDR AI)"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "Optimisation: Selective versus Predictive Processes (LessWrong (high-karma))"
+  },
+  {
+    "date": "2026-05-13",
+    "summary": "The End of Finetuning Era (Latent Space)"
   }
 ]

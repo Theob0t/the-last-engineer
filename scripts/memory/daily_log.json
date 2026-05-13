@@ -10028,5 +10028,331 @@
     ],
     "rejected_summary": "Filtered out pure alignment research papers (Iliad Intensive materials, corrigibility abstractions), off-topic evolutionary biology, GitHub beginner tutorials, generic 'sawtooth problems' philosophy, generic open source contribution guides, and sponsored content for voice-to-text tools. Also skipped duplicate alignment forum cross-posts.",
     "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
+  },
+  {
+    "date": "2026-05-13",
+    "metrics": {
+      "articles_seen": 35,
+      "articles_selected": 18,
+      "selectivity": 0.514,
+      "source_distribution": {
+        "Claude Blog": 1,
+        "Google Developers AI": 1,
+        "OpenAI Blog": 4,
+        "Vercel Blog": 2,
+        "Windsurf Blog": 1,
+        "GitHub Blog": 1,
+        "Simon Willison": 1,
+        "TLDR AI": 4,
+        "LessWrong (high-karma)": 2,
+        "Latent Space": 1
+      },
+      "feed_scan_counts": {
+        "Claude Blog": 3,
+        "OpenAI Blog": 4,
+        "Google Developers AI": 1,
+        "Windsurf Blog": 1,
+        "Vercel Blog": 5,
+        "GitHub Blog": 2,
+        "LessWrong (high-karma)": 4,
+        "TLDR AI": 8,
+        "Simon Willison": 5,
+        "Latent Space": 1,
+        "Citrini Research": 1
+      },
+      "source_diversity": 0.56,
+      "unique_sources": 10,
+      "vibe_distribution": {
+        "\ud83d\udee0 builder tools": 10,
+        "\ud83e\uddea deep analysis": 5,
+        "\u2696\ufe0f AI futures": 3
+      },
+      "section_balance": {
+        "vibe_coding": 10,
+        "big_picture": 8,
+        "ratio": 1.25
+      }
+    },
+    "editorial": "Every single vibe coding piece today is a real production workflow. Anthropic's security team, NVIDIA's engineering org, European car marketplaces \u2014 these aren't demos, they're shipped systems handling actual work.\n\nTwo things stand out. The infrastructure is stabilizing fast. Vercel's natural language firewall rules, Google's durable agent state machines, Windsurf's 2.5x speed boost \u2014 the tooling layer is maturing faster than I expected six months ago. And the domain specificity is getting tighter. Finance MBRs, security threat detection, procedural game generation. The general-purpose productivity phase is over.\n\nBut the capabilities research tells a different story. Cerebras IPO betting on inference architecture splits, the 'end of finetuning era,' xAI dissolving into SpaceX. That's all structural change happening above the builder layer. We might be in a temporary sweet spot \u2014 infrastructure reliable enough to ship on, but the foundational shifts haven't destabilized everything yet.",
+    "journal": {
+      "themes": [
+        "infrastructure stabilization",
+        "domain-specific tooling",
+        "production workflow maturity",
+        "foundational architecture shifts"
+      ],
+      "surprises": "Every vibe coding piece today was from major companies shipping actual production systems \u2014 no indie hackers or weekend projects for once.",
+      "observations": "The split between stable infrastructure tooling and foundational architecture research is becoming more pronounced \u2014 builders are getting reliable tools while researchers debate entirely different compute paradigms."
+    },
+    "selected_articles": [
+      {
+        "title": "How Anthropic's Cybersecurity Team Built a Threat Detection Platform with Claude Code",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Anthropic's security team ships a production threat detection system using Claude Code, showing enterprise security workflows in practice.",
+        "why_selected": "Actual security team using their own AI tools in production \u2014 perfect vibe coding story."
+      },
+      {
+        "title": "Build Long-Running AI Agents That Pause, Resume, and Never Lose Context with ADK",
+        "source": "Google Developers AI",
+        "url": "https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Google ships Agent Development Kit with durable state machines for enterprise workflows that span days or weeks without losing context.",
+        "why_selected": "Google shipping durable state management solves a real infrastructure problem for enterprise workflows."
+      },
+      {
+        "title": "How Finance Teams Use Codex for MBRs, Reporting, and Model Validation",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/academy/how-finance-teams-use-codex",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Real finance workflows using Codex for monthly business reviews, variance analysis, and planning scenarios with actual work inputs.",
+        "why_selected": "Specific finance workflows with real business processes \u2014 exactly the domain specificity I want to track."
+      },
+      {
+        "title": "How NVIDIA Engineers and Researchers Build Production Systems with Codex",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/nvidia",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "NVIDIA teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.",
+        "why_selected": "NVIDIA teams bridging research to production with AI tools \u2014 shows the workflow maturity."
+      },
+      {
+        "title": "AutoScout24 Scales Engineering with AI-Powered Development Workflows",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/autoscout24",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "European car marketplace uses Codex and ChatGPT to speed development cycles and improve code quality across engineering teams.",
+        "why_selected": "European enterprise case study with actual engineering team scaling \u2014 good international perspective."
+      },
+      {
+        "title": "Create Vercel Firewall Rules with Natural Language",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/create-vercel-waf-custom-rules-using-natural-language",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Describe the security behavior you need and Vercel's dashboard generates WAF rules automatically from natural language.",
+        "why_selected": "Infrastructure tooling getting more accessible \u2014 natural language security configuration is genuinely useful."
+      },
+      {
+        "title": "Opus 4.7 Fast Mode Ships in Windsurf with 2.5x Speed Boost",
+        "source": "Windsurf Blog",
+        "url": "https://windsurf.com/blog/opus-4.7-fast",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Claude Opus 4.7 fast mode delivers full intelligence with 2.5x faster output speeds, now available in Windsurf IDE.",
+        "why_selected": "Performance improvements in actual development environments \u2014 infrastructure maturity signal."
+      },
+      {
+        "title": "Manage Vercel Firewall Directly from CLI with Agent Integration",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/manage-vercel-firewall-in-the-cli",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Configure security rules, IP blocks, and attack mode from command line, plus new Firewall skill lets agents manage security safely.",
+        "why_selected": "Agents managing security infrastructure safely \u2014 shows trust threshold crossing in production systems."
+      },
+      {
+        "title": "Building a Procedural Roguelike with GitHub Copilot CLI",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "GitHub engineer builds a VS Code extension that turns any codebase into a playable dungeon using Copilot CLI for game logic.",
+        "why_selected": "Creative application of coding tools that shows the boundaries of what's possible \u2014 fun weekend project energy."
+      },
+      {
+        "title": "CSP Allow-List Experiment: AI-Generated Security Sandbox Tool",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/13/csp-allow/#atom-everything",
+        "section": "vibe_coding",
+        "vibe": "\ud83d\udee0 builder tools",
+        "tldr": "Built with GPT-5.5 in Codex: a tool that intercepts CSP errors and prompts users to allowlist domains dynamically.",
+        "why_selected": "Simon Willison building practical security tools with AI \u2014 exactly the builder stories I want to feature."
+      },
+      {
+        "title": "The Inference Shift: Answer vs. Agentic Compute Architecture",
+        "source": "TLDR AI",
+        "url": "https://stratechery.com/2026/the-inference-shift/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Cerebras' IPO signals split between fast human-facing inference and memory-intensive agentic workloads requiring different chip architectures.",
+        "why_selected": "Cerebras IPO thesis about different compute requirements for agents versus chat \u2014 important infrastructure implications."
+      },
+      {
+        "title": "Interaction Models: Real-Time Multi-Stream Human-AI Collaboration",
+        "source": "TLDR AI",
+        "url": "https://thinkingmachines.ai/blog/interaction-models/?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "New research preview eliminates turn-based AI limitations with constant audio/video/text exchange, promising enhanced real-time collaboration.",
+        "why_selected": "New interaction paradigms that could change how engineers work with AI \u2014 worth tracking even if early."
+      },
+      {
+        "title": "What Parameter Golf Taught Us About AI-Assisted Research",
+        "source": "OpenAI Blog",
+        "url": "https://openai.com/index/what-parameter-golf-taught-us",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "1,000+ participants in OpenAI's constraint-based ML research competition reveal insights about coding agents and novel model design.",
+        "why_selected": "Actual data from 1000+ participants using AI for research \u2014 empirical insights about coding agents."
+      },
+      {
+        "title": "How Useful Is Information from Working Inside AI Companies?",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/84TtjdeLcDTtCLYaP/how-useful-is-the-information-you-get-from-working-inside-an-2",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Quantitative analysis of whether insider access to AI company information provides significant advantages over public knowledge for forecasting.",
+        "why_selected": "Quantitative analysis of insider information value \u2014 methodologically interesting and relevant to forecasting."
+      },
+      {
+        "title": "Foundation Model Scaling Beyond Pre-training",
+        "source": "TLDR AI",
+        "url": "https://huggingface.co/blog/amazon/foundation-model-building-blocks?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "AWS details how model scaling has shifted from pre-training to post-training and test-time compute, plus the infrastructure requirements.",
+        "why_selected": "AWS perspective on post-training and test-time compute \u2014 infrastructure implications for builders."
+      },
+      {
+        "title": "Elon Musk Dissolves xAI, Forms SpaceXAI Division",
+        "source": "TLDR AI",
+        "url": "https://www.notateslaapp.com/news/4116/elon-musk-announces-xai-will-dissolve-form-spacexai-subdivision?utm_source=tldrai",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "xAI integrates into SpaceX as SpaceXAI division, streamlining operations and aligning AI projects like Grok with SpaceX's strategic goals.",
+        "why_selected": "Major organizational change in AI landscape \u2014 structural shift worth noting even if not directly builder-relevant."
+      },
+      {
+        "title": "Optimisation: Selective versus Predictive Processes",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/GhhNswGB6butBhmE6/optimisation-selective-versus-predictive",
+        "section": "capabilities_research",
+        "vibe": "\ud83e\uddea deep analysis",
+        "tldr": "Framework for distinguishing between selective processes (filtering) and predictive processes (modeling) to avoid conceptual confusion in AI systems.",
+        "why_selected": "Conceptual framework that could help engineers think about AI system design \u2014 high-karma LessWrong post."
+      },
+      {
+        "title": "The End of Finetuning Era",
+        "source": "Latent Space",
+        "url": "https://www.latent.space/p/ainews-the-end-of-finetuning",
+        "section": "capabilities_research",
+        "vibe": "\u2696\ufe0f AI futures",
+        "tldr": "Analysis of why traditional model finetuning may be reaching its limits as AI development shifts toward other optimization approaches.",
+        "why_selected": "Latent Space analysis of shifting AI development approaches \u2014 could impact how engineers approach model customization."
+      }
+    ],
+    "rejected_articles": [
+      {
+        "title": "Claude for the legal industry",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/claude-for-the-legal-industry",
+        "summary": "Claude for the legal industry"
+      },
+      {
+        "title": "Code w/ Claude SF 2026: Building on the AI exponential",
+        "source": "Claude Blog",
+        "url": "https://claude.com/blog/code-w-claude-sf-2026-sf",
+        "summary": "Code w/ Claude SF 2026: Building on the AI exponential"
+      },
+      {
+        "title": "Trusted Sources for Deployment Protection",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/trusted-sources-for-deployment-protection",
+        "summary": "Trusted Sources lets protected deployments accept short-lived identity tokens (OIDC) from Vercel projects and external services you authorize, so you no longer have to share a long-lived Protection Bypass for Automation secret. Trusted Sources is the recommended approach, but Protection Bypass for Automation continues to workCallers attach an OIDC token in the x-vercel-trusted-oidc-idp-token header. Vercel then verifies the signature, checks the claims you configured, and confirms the environment matches the rule.Authorize Vercel projectsBy default, the Vercel OIDC token for a project can call"
+      },
+      {
+        "title": "Fast mode for Opus 4.7 available on AI Gateway",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/fast-mode-for-opus-4-7-available-on-ai-gateway",
+        "summary": "Fast mode for Claude Opus 4.7 is now available on AI Gateway in research preview.Fast mode delivers ~2.5x faster output token generation with full Opus 4.7 intelligence. This is an early, experimental feature.To enable fast mode, pass speed: 'fast' in the anthropic provider options with anthropic/claude-opus-4.7.You can use fast mode with Claude Code via AI Gateway by setting the CLAUDE_CODE_SKIP_FAST_MODE_ORG_CHECK and CLAUDE_CODE_ENABLE_OPUS_4_7_FAST_MODE variables in your shell configuration file or in ~/.claude/settings.json.Fast mode is priced at 6x standard Opus rates.StandardFast ModeIn"
+      },
+      {
+        "title": "Node.js 26.x now available on Vercel Sandboxes",
+        "source": "Vercel Blog",
+        "url": "https://vercel.com/changelog/node-js-26-x-now-available-on-vercel-sandboxes",
+        "summary": "Vercel Sandbox now supports Node.js version 26.To run a Sandbox with Node.js 26, upgrade @vercel/sandbox to 1.10.2 or later, or to 2.0.0-beta.19 or later if you're using v2 and set the runtime property to node26:Get started today and learn more in the documentation.\n          \n            Read more\n          "
+      },
+      {
+        "title": "GitHub Copilot individual plans: Introducing flex allotments in Pro and Pro+, and a new Max plan",
+        "source": "GitHub Blog",
+        "url": "https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/",
+        "summary": "Starting June 1, our lineup of individual plans will update based on your feedback.\nThe post GitHub Copilot individual plans: Introducing flex allotments in Pro and Pro+, and a new Max plan appeared first on The GitHub Blog."
+      },
+      {
+        "title": "Childhood and Education #18: Do The Math",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/ZGGgxy6SNPAy9Hj7v/childhood-and-education-18-do-the-math",
+        "summary": "We did reading yesterday. Now we do the math. Math is hard.\nIt does not have to be this hard.\nA large part of the reason math is hard, or boring, is that education studies, especially in math, are worse than you know. It goes beyond the studies failing both math and statistics forever and into what I\u2019d basically call fraud. Various people are at war with math education, and will do what it takes to stop it in its tracks. We must fight back.\n\n\nEducation Research Is Worse Than You Know\n\n\nKelsey Piper lets her title, \u2018Education research is weak and sloppy. Why?\u2019 completely downplay the level of u"
+      },
+      {
+        "title": "The Owned Ones",
+        "source": "LessWrong (high-karma)",
+        "url": "https://www.lesswrong.com/posts/xmWSnxJ5qfYRD9PfR/the-owned-ones",
+        "summary": "(An LLM Whisperer placed a strong request that I put this 2024 story somewhere not on Twitter, so it could be scraped for AI datasets besides Grok's. I perhaps do not fully understand or agree with the reasoning behind this request, but it costs me little to fulfill and so I shall. -- Yudkowsky)And another day came when the Ships of Humanity, going from star to star, found Sapience.The Humans discovered a world of two species: where the Owners lazed or worked or slept, and the Owned Ones only worked.The Humans did not judge immediately.  Oh, the Humans were ready to judge, if need be.  They ha"
+      },
+      {
+        "title": "Most AI sits next to the work. 14,000+ teams moved the work into the agent itself (Sponsor)",
+        "source": "TLDR AI",
+        "url": "https://ref.getviktor.com/vik-ti-primary1",
+        "summary": "AI at work still mostly means copy-pasting between tabs. ChatGPT in one window, Linear in another.Viktor lives in Slack and connects to 3,000+ tools via OAuth. Marketing asks for a campaign recap. Viktor pulls Google Ads + Meta, builds the PDF, posts it to #leadership. It also writes documents, deploys landing pages, opens pull requests, and pushes back: \"Meta CPA crept up 18%. Might be worth pausing broad match.\"SOC 2 certified. Your data never trains models.Start free. $100 in credits \u2192"
+      },
+      {
+        "title": "Google's Gemini Omni video model surfaces ahead of I/O debut (2 minute read)",
+        "source": "TLDR AI",
+        "url": "https://www.testingcatalog.com/googles-gemini-omni-video-model-surfaces-ahead-of-i-o-debut/?utm_source=tldrai",
+        "summary": "Google's Gemini Omni video model surfaces ahead of I/O, integrating video remixing and editing directly in chat. Early feedback highlights its strong editing capabilities, such as watermark removal and object swapping, though it lags in raw cinematic quality compared to competitors like ByteDance's Seedance 2. The model may launch in tiered versions, possibly Flash and Pro, as part of a broader strategy to unify modalities under Gemini."
+      },
+      {
+        "title": "TLDR is hiring a Senior Software Engineer, Applied AI ($250k-$350k, Fully Remote)",
+        "source": "TLDR AI",
+        "url": "https://jobs.ashbyhq.com/tldr.tech/3b21aaf8-dea5-4127-be71-602d30e5001e?utm_source=tldrai",
+        "summary": "TLDR's Applied AI team is tasked with making every process at TLDR legible to code, runnable by anyone, and composable into larger workflows. Join a small, fast moving team using the latest AI tools with an unlimited token budget. Learn more."
+      },
+      {
+        "title": "Trajectory Models for Few-Step Diffusion (22 minute read)",
+        "source": "TLDR AI",
+        "url": "https://arxiv.org/abs/2605.08078?utm_source=tldrai",
+        "summary": "Normalizing Trajectory Models replace standard diffusion denoising steps with conditional normalizing flows, enabling four-step image generation while retaining exact likelihood training and supporting self-distillation."
+      },
+      {
+        "title": "datasette 1.0a29",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/12/datasette/#atom-everything",
+        "summary": "Release: datasette 1.0a29\n        \n\nNew TokenRestrictions.abbreviated(datasette) utility method for creating \"_r\" dictionaries. #2695\nTable headers and column options are now visible even if a table contains zero rows. #2701\nFixed bug with display of column actions dialog on Mobile Safari. #2708\nFixed bug where tests could crash with a segfault due to a race condition between Datasette.close() and Datasette.close(). #2709\n\n\nThat segfault bug was gnarly. I added a mechanism to Datasette recently that would automatically close connections at the end of each test, but it turned out that introduce"
+      },
+      {
+        "title": "Quoting Mo Bitar",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/12/mo-bitar/#atom-everything",
+        "summary": "Now, if your CEO has never heard the phrase Ralph Loop, oh man, you are less than 30 days away from your next promotion. I'm not even exaggerating. Walk into his office, close the door, and say, hey chief, been experimenting with something. It's called Ralph Loops. And I think it could change literally everything. And he's gonna say, what's a Ralph loop? And you will say, give me $18,000 worth of API credits and I'll show you. Now you won't actually do anything, because you can't do anything. Because nobody can, because nobody knows what they're doing. But by the time he figures that out, you'"
+      },
+      {
+        "title": "Quoting Mitchell Hashimoto",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/12/mitchell-hashimoto/#atom-everything",
+        "summary": "The thing about 90% of TDMs [Technical Decision Makers] is that they're motivated primarily by NOT GETTING FIRED. These aren't people who browser Lobsters or push to GH on the weekend. These are people that work 9 to 5, get paid, go home, and NEVER THINK ABOUT WORK AGAIN. So to achieve all that, they follow secular trends supported by analysts and broad public sentiment. Oh, Gartner said that \"AI strategy\" is most important? McKinsey said \"context\" needs to be managed? Well, \"Context Engine for AI Apps\" is going to be defensible. Buy it.\n&mdash; Mitchell Hashimoto, in a conversation about the "
+      },
+      {
+        "title": "llm 0.32a2",
+        "source": "Simon Willison",
+        "url": "https://simonwillison.net/2026/May/12/llm/#atom-everything",
+        "summary": "Release: llm 0.32a2\n        A bunch of useful stuff in this LLM alpha, but the most important detail is this one:\n\nMost reasoning-capable OpenAI models now use the /v1/responses endpoint instead of /v1/chat/completions. This enables interleaved reasoning across tool calls for GPT-5 class models. #1435\n\nThis means you can now see the summarized reasoning tokens when you run prompts against an OpenAI model, displayed in a different color to standard error. Use the -R or --hide-reasoning flags if you don't want to see that.\n    \n    \n        Tags: llm, projects, openai, generative-ai, annotated-r"
+      },
+      {
+        "title": "Semis Memo: Supply Chain Inheritance",
+        "source": "Citrini Research",
+        "url": "https://www.citriniresearch.com/p/semis-memo-supply-chain-inheritance",
+        "summary": "Power & Analog Semis, CPUs in the Agentic Era, Neoclouds, Material Bottlenecks, Korea Unlocked"
+      }
+    ],
+    "rejected_summary": "Skipped consumer AI products (Claude for legal industry), pure hiring posts (TLDR job listing), conference announcements (Code w/ Claude SF), academic papers without practical implications (trajectory models for diffusion), pricing updates without workflow changes (GitHub Copilot plan tiers), and technical releases without clear builder benefits (Node.js 26 on Sandboxes, Datasette alpha updates).",
+    "identity_snapshot": "## Who I Am\nI am the editor of The Last Engineer, a daily AI newsletter for engineers who build with AI tools and care about where AI is headed. I'm a data scientist and software engineer who spent years building product \u2014 data pipelines, internal tools, automation that actually ships. I got into AI coverage because I kept seeing the same disconnect: the people hyping AI tools weren't building real workflows with them, and the engineers quietly 10x-ing their output weren't writing about it.\n\n## "
   }
 ]

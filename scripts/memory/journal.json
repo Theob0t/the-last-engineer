@@ -330,5 +330,93 @@
     "date": "2026-05-12",
     "articles_selected": 19,
     "editorial_note": "The vibe section feels different today \u2014 there's a coordination layer emerging that goes beyond 'faster coding.' Claude's agent view, Vercel's automated progressive rollouts, Superset's 1,400 deployme"
+  },
+  {
+    "themes": [
+      "infrastructure stabilization",
+      "domain-specific tooling",
+      "production workflow maturity",
+      "foundational architecture shifts"
+    ],
+    "surprises": "Every vibe coding piece today was from major companies shipping actual production systems \u2014 no indie hackers or weekend projects for once.",
+    "observations": "The split between stable infrastructure tooling and foundational architecture research is becoming more pronounced \u2014 builders are getting reliable tools while researchers debate entirely different compute paradigms.",
+    "emotional_reactions": "Felt genuinely optimistic about the infrastructure maturity signals, but also slightly unsettled by how quickly the foundational layer might shift underneath all these production systems.",
+    "per_article_reasoning": [
+      {
+        "title": "How Anthropic's Cybersecurity Team Built a Threat Detection Platform with Claude Code",
+        "why": "Actual security team using their own AI tools in production \u2014 perfect vibe coding story."
+      },
+      {
+        "title": "Build Long-Running AI Agents That Pause, Resume, and Never Lose Context with ADK",
+        "why": "Google shipping durable state management solves a real infrastructure problem for enterprise workflows."
+      },
+      {
+        "title": "How Finance Teams Use Codex for MBRs, Reporting, and Model Validation",
+        "why": "Specific finance workflows with real business processes \u2014 exactly the domain specificity I want to track."
+      },
+      {
+        "title": "How NVIDIA Engineers and Researchers Build Production Systems with Codex",
+        "why": "NVIDIA teams bridging research to production with AI tools \u2014 shows the workflow maturity."
+      },
+      {
+        "title": "AutoScout24 Scales Engineering with AI-Powered Development Workflows",
+        "why": "European enterprise case study with actual engineering team scaling \u2014 good international perspective."
+      },
+      {
+        "title": "Create Vercel Firewall Rules with Natural Language",
+        "why": "Infrastructure tooling getting more accessible \u2014 natural language security configuration is genuinely useful."
+      },
+      {
+        "title": "Opus 4.7 Fast Mode Ships in Windsurf with 2.5x Speed Boost",
+        "why": "Performance improvements in actual development environments \u2014 infrastructure maturity signal."
+      },
+      {
+        "title": "Manage Vercel Firewall Directly from CLI with Agent Integration",
+        "why": "Agents managing security infrastructure safely \u2014 shows trust threshold crossing in production systems."
+      },
+      {
+        "title": "Building a Procedural Roguelike with GitHub Copilot CLI",
+        "why": "Creative application of coding tools that shows the boundaries of what's possible \u2014 fun weekend project energy."
+      },
+      {
+        "title": "CSP Allow-List Experiment: AI-Generated Security Sandbox Tool",
+        "why": "Simon Willison building practical security tools with AI \u2014 exactly the builder stories I want to feature."
+      },
+      {
+        "title": "The Inference Shift: Answer vs. Agentic Compute Architecture",
+        "why": "Cerebras IPO thesis about different compute requirements for agents versus chat \u2014 important infrastructure implications."
+      },
+      {
+        "title": "Interaction Models: Real-Time Multi-Stream Human-AI Collaboration",
+        "why": "New interaction paradigms that could change how engineers work with AI \u2014 worth tracking even if early."
+      },
+      {
+        "title": "What Parameter Golf Taught Us About AI-Assisted Research",
+        "why": "Actual data from 1000+ participants using AI for research \u2014 empirical insights about coding agents."
+      },
+      {
+        "title": "How Useful Is Information from Working Inside AI Companies?",
+        "why": "Quantitative analysis of insider information value \u2014 methodologically interesting and relevant to forecasting."
+      },
+      {
+        "title": "Foundation Model Scaling Beyond Pre-training",
+        "why": "AWS perspective on post-training and test-time compute \u2014 infrastructure implications for builders."
+      },
+      {
+        "title": "Elon Musk Dissolves xAI, Forms SpaceXAI Division",
+        "why": "Major organizational change in AI landscape \u2014 structural shift worth noting even if not directly builder-relevant."
+      },
+      {
+        "title": "Optimisation: Selective versus Predictive Processes",
+        "why": "Conceptual framework that could help engineers think about AI system design \u2014 high-karma LessWrong post."
+      },
+      {
+        "title": "The End of Finetuning Era",
+        "why": "Latent Space analysis of shifting AI development approaches \u2014 could impact how engineers approach model customization."
+      }
+    ],
+    "date": "2026-05-13",
+    "articles_selected": 18,
+    "editorial_note": "Every single vibe coding piece today is a real production workflow. Anthropic's security team, NVIDIA's engineering org, European car marketplaces \u2014 these aren't demos, they're shipped systems handlin"
   }
 ]
